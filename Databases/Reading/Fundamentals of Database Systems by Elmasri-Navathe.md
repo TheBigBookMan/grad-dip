@@ -76,3 +76,5 @@ These are applied dependent on the business rules
 - **deductive database systems** complex rules that can be determined by deduction in the database
 - **triggers**- when certain stuff happems in the fields, then something else can get triggered and cause a field to be updated
 - **stored procedures** - these are done when certain conditions are met within the database
+
+test
