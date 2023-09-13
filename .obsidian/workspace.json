@@ -18,30 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c42fbb4b3d639592",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "756becb645c65f32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -93,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -173,8 +150,9 @@
   "active": "ebf888deeafbfdf5",
   "lastOpenFiles": [
     "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
-    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+    "Databases/Learning Outcomes.pdf",
     "Databases/Topic 1.md",
+    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
     "2023-08-18.md",
     "Databases/Readings.md",
     "Databases/Reading",

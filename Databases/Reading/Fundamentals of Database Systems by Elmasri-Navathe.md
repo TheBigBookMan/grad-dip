@@ -77,4 +77,17 @@ These are applied dependent on the business rules
 - **triggers**- when certain stuff happems in the fields, then something else can get triggered and cause a field to be updated
 - **stored procedures** - these are done when certain conditions are met within the database
 
-test
+# Chapter 2- Database System Concepts and Architecture
+
+Databases used to be a part of the monolithic system but now theres more broken down database architecture eg- web servers, database saervers, file servers, application servers etc
+
+**CLoud computing** environments usually have thousand of alrge servers to manage big data
+
+## Client/Server architecture
+- **Client Module** -designed so it can run on mobile device, user workstation and PC. Application programs and UI like priovindg the GUI, forms, mobile device apps.
+- **SErver module**- handles data storage, access, search and other functions
+
+## Data Models, Schemas and Instances
+- **Data abstraction** - being able to hide a lot of the complex business logic and organisation and storage.
+- **Data model** - collection of concepts that describe the structure of the database- data types, relationships and constraints and operaions for updates based on circumstances
+- pg 62
