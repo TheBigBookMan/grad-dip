@@ -105,6 +105,7 @@ Databases used to be a part of the monolithic system but now theres more broken 
 	 - **index**- putting an index or key term on data to allow for quicker organisation and finding
  - **Representational/implementation data models**- a mix of inbetween, where easily understood by end users but not too far from being computer specialist.
 	 - *Relational data model*- most commonly used in DBMSs- sometimes called record-based models
+	 - Will usually have explicit names for attributes and fields as well as data types
  - **Self-describing data models**- data that is stored in the database and has a key-value pairs that have a description of the data within the data themselves- *descriptive*
 
 ## Schemas, Instances and Database state
@@ -112,3 +113,4 @@ Databases used to be a part of the monolithic system but now theres more broken 
 - **Schema construct**- Each object in the schema is a schema construct (Student, Course)
 - **Database state/snapshot**- the current state of how the database is at any given moment in time when there is not an **occurrence/instance** happening (insert, update, delete etc) is what that current database state is. It can change all the time and therefore the sdatabase state is changing.
 - How they connect are that the database *schema* is how the data model is defined and this controls how the state will look and ensure its integrity. When the database schema has been defined the database *state* is empty until first **populated/loadad** with data and the state has changed. The DBMS needs to ensure that the current state is of the right integrity based on the schema, this is **valid state**. Creating a correct schema is important and writing the details in the data catalog for correct usage.
+pg 66
