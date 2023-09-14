@@ -89,5 +89,26 @@ Databases used to be a part of the monolithic system but now theres more broken 
 
 ## Data Models, Schemas and Instances
 - **Data abstraction** - being able to hide a lot of the complex business logic and organisation and storage.
-- **Data model** - collection of concepts that describe the structure of the database- data types, relationships and constraints and operaions for updates based on circumstances
-- pg 62
+- **Data model** - collection of concepts that describe the structure of the database- data types, relationships and constraints and operaions for updates based on circumstances. Providing the layout and structure for how the database will be
+- **dynamic aspect**- can provide details about more complex operations that may be special in particular to that database- eg calculate_GPA, rather than insert/delete etc
+
+## Categories of data models
+ - **High-level/conceptual data models**- Provide the concepts that are closer to how users perceive data
+	 - **entities**- represents a real-world objet or concept (employee/ project)
+	 - **attribute**- represents some field that describes the entity (emploeeName, salary)
+	 - **relationship**- how two entities are associated together (employee works on project)
+	 - **Object-data model**- Newer version of high-level data model
+		- **Object Data Management Group (ODMG)**-
+ - **Low-level/physical data models**- Provide concepts that are more representational to people with good understanding of computers/database already
+	 - Describes data stored as files in the computer by using recording formats and acces spaths.
+	 - **Access paths**- search structure for how the database searches through records faster
+	 - **index**- putting an index or key term on data to allow for quicker organisation and finding
+ - **Representational/implementation data models**- a mix of inbetween, where easily understood by end users but not too far from being computer specialist.
+	 - *Relational data model*- most commonly used in DBMSs- sometimes called record-based models
+ - **Self-describing data models**- data that is stored in the database and has a key-value pairs that have a description of the data within the data themselves- *descriptive*
+
+## Schemas, Instances and Database state
+- **Database Schema**- the description of how the database design is, utilises the **schema diagram** to show users how the data fields and attriutes will be laid out using the names of the database fields and their attributes. Not all bits of data information will be in the schema diagram, it is more of just a basic layout for how the fields and attributes will work. Usually no relationship eonnectors, constraints or data type. Usually the dataqbase schema does not change but when a new field is added to a table it is called **schema evolution**.
+- **Schema construct**- Each object in the schema is a schema construct (Student, Course)
+- **Database state/snapshot**- the current state of how the database is at any given moment in time when there is not an **occurrence/instance** happening (insert, update, delete etc) is what that current database state is. It can change all the time and therefore the sdatabase state is changing.
+- How they connect are that the database *schema* is how the data model is defined and this controls how the state will look and ensure its integrity. When the database schema has been defined the database *state* is empty until first **populated/loadad** with data and the state has changed. The DBMS needs to ensure that the current state is of the right integrity based on the schema, this is **valid state**. Creating a correct schema is important and writing the details in the data catalog for correct usage.
