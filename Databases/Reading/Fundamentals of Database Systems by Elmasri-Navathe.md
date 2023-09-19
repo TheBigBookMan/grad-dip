@@ -119,7 +119,7 @@ Databases used to be a part of the monolithic system but now theres more broken 
 ## Three-schema architecture and Data Independence
 IMportant characterists of the database, good for visualisation of the database in different schema levels. Process of transforming requests and results between levels are called **mappinngs**.
 1. catalog to store database description (schema) so its self-describing
-2. insulation of praograms and data (program-data independence) so change in data doesn't impact programs
+2. insulation of programs and data (program-data independence) so change in data doesn't impact programs
 3. support musltipl users- so different viewers can do different interactions with data
 **Three-Schema Architecture**- split the applications from physical database
 1. internal level has internal schema, describes the physical storage of the daabase, physical data model and describes the access paths for the database (low-level)
@@ -139,4 +139,17 @@ DBMS must  provide eppropriate langauges and itnerfaces for users to be able to 
 	- The DBMS uses a **data manuplation language (DML)**  for insertion, deletion, retrievel and modification
 	- SQL does basically everything above and is the main way to talk to the DB, there are other ways though to do low-level database storage as thats different to the conceptual database storage
 - *Interfaces*
-	- 
+	- **Menuu based interfaces for web clients**- Menu type of list of options that allows the user to select the query that they want to use, reduces the complexity of syuntax memorisation of SQL
+	- **Mobile apps**- applications on the phone that allow the user to be able to access databases- eg banking on phone
+	- **Forms-based Interface**- Providfes end users an easier way to fill out information to be added to the database, *forms specification languages*
+	- **GUI**- Some sort of graphical way that has forms and menus for the user
+	- **Natural langauge interfaces**- uses a natural language (english) for the end user to create a query through matching the words to a dictionary from the conceptual schema, it tries to create the query through this, the user can write it in asentence (return all users that went to UNley high)
+	- **Keyword-based database search**- Similar to how web search works with strings of natural language and will match them with a keyword to return the value
+	- **Speech input and output**- similar to natural language interface where the user will speak a sentence and the words will match up to sepcifed schema in the application to create the query
+
+## Database System Environment
+How the whole DMBS is split into different components that do separate things and combine together to make it all work
+- Database and DBMS catalog is stored on the disk and controlled by the OS, disk read/write
+- **Stored data manager**- module ofg the DBMS controls access to DBMS information that is stored on the disk
+- The users (DBA staff, casual users, application programmers etc)- will forumlate queries through programming languages, applications, data entry through parametric transactions.
+- The users queries will then be compiled by processing the schema definitions and stored meta data iof the description in the DBMS catalog, which inlcudes names, file sizer,, mapping data, constraints
