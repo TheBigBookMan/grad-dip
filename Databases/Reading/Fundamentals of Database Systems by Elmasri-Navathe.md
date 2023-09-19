@@ -107,10 +107,36 @@ Databases used to be a part of the monolithic system but now theres more broken 
 	 - *Relational data model*- most commonly used in DBMSs- sometimes called record-based models
 	 - Will usually have explicit names for attributes and fields as well as data types
  - **Self-describing data models**- data that is stored in the database and has a key-value pairs that have a description of the data within the data themselves- *descriptive*
+ - **Hierarcal data model**- like a tree structure with the parent-chiold relationships, parent can have multiple children but child can only have one parent
+ - **Network data model**- more complex relationships between data, same as tree structure
 
 ## Schemas, Instances and Database state
 - **Database Schema**- the description of how the database design is, utilises the **schema diagram** to show users how the data fields and attriutes will be laid out using the names of the database fields and their attributes. Not all bits of data information will be in the schema diagram, it is more of just a basic layout for how the fields and attributes will work. Usually no relationship eonnectors, constraints or data type. Usually the dataqbase schema does not change but when a new field is added to a table it is called **schema evolution**.
 - **Schema construct**- Each object in the schema is a schema construct (Student, Course)
 - **Database state/snapshot**- the current state of how the database is at any given moment in time when there is not an **occurrence/instance** happening (insert, update, delete etc) is what that current database state is. It can change all the time and therefore the sdatabase state is changing.
 - How they connect are that the database *schema* is how the data model is defined and this controls how the state will look and ensure its integrity. When the database schema has been defined the database *state* is empty until first **populated/loadad** with data and the state has changed. The DBMS needs to ensure that the current state is of the right integrity based on the schema, this is **valid state**. Creating a correct schema is important and writing the details in the data catalog for correct usage.
-pg 66
+
+## Three-schema architecture and Data Independence
+IMportant characterists of the database, good for visualisation of the database in different schema levels. Process of transforming requests and results between levels are called **mappinngs**.
+1. catalog to store database description (schema) so its self-describing
+2. insulation of praograms and data (program-data independence) so change in data doesn't impact programs
+3. support musltipl users- so different viewers can do different interactions with data
+**Three-Schema Architecture**- split the applications from physical database
+1. internal level has internal schema, describes the physical storage of the daabase, physical data model and describes the access paths for the database (low-level)
+2. conceptual level has conceptual schema where describes structure of the whole database for users which makes it readable to non-tech people. Usually hides the complexities of the storage and makes the description more abstract.  (high level)
+3. external level with external schemas or user views, describes the particular part of the database that that user uses and then hides the rest, usually using a representation model in a high level format for the end user to understand
+
+**Data Independence**- Being able to change the data on one level without having to change it on another level.
+- **Logical data independence**- having the data in the schema for specific tables and relationships, and being able to change something (add new table, column, field, row) or create relationships without impacing the other data and the applications that represent the data.
+- **Physical data independence**- changing the physical storage of data (disks, cloud, database type- NOSQL, SQL) without data being skewed or changed or location of the data on storage (maybe change for speed by compression etc)
+
+## Database Languages and Interfaces
+DBMS must  provide eppropriate langauges and itnerfaces for users to be able to use without trouble and not cause data integrity problems
+- *Languages*
+	- **data definition language (DDL)**- define the schemas and creates a description across all the levels as most DBMS dont have a clear separation of the levels listed above
+	- In DBMS where clear separation of the levels ism the DDL specifies the conceptual schema only and another the **storage definiton language (SDL)** is used to specify the interal schema.
+	- To be able to view the user views and their mappings to the conceptual schema- use SQL
+	- The DBMS uses a **data manuplation language (DML)**  for insertion, deletion, retrievel and modification
+	- SQL does basically everything above and is the main way to talk to the DB, there are other ways though to do low-level database storage as thats different to the conceptual database storage
+- *Interfaces*
+	- 
