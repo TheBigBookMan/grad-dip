@@ -164,4 +164,36 @@ These utilities help the DBA manage the database system, basically through funct
 - **Performance monitoring**- monitors database usage and statistics to the DBA on how the CPU etc are being used and if things need changing
 
 ## Tools, application environments and communication facilities
+- **Information repository**- is an expanded data dictionary that also has meta data information about design decisions, application program descriptions and user information. Can be accessed by the DBA or user
+- **COmmunication software**- software packages that allow for communicating to the database from a remote location through termainsl, workstations or PCs. Usually using stff like interet routers, local networks etc. Called DB/DC and can also be used through LANs.
+
+## Centralized DBMs Architecture
+- Having all the features of the DBMS on one processing machine, like a PC or mobile phone.
+- Would hav ethe DBMS functionality, application program execution and user interface processing all in one
+- was because PC computers hardware became cheaper and could move from the terminal to having a graphical interface
+
+## Basic client/server Architectures
+- Usually mobile phones and PCs are client side only machines because they are handling most client rendering, while a server hosting backend stuff- API, databases would be hosting that
+- The client usually uses some sort of local server in the device to allow functionality to produce client side stuff, but once it needs backend things it will connect to the server through wireless networks or LANs
+- The server is hardware that contains software which is specific for providing services to the client
+- Some machines only install client software, some only server software and some bboth
+
+## Two-tier Client/SErver Architecture for DBMs
+- Using two-tier mainly in an RDMS due to SQL providing more logical divide between server and client, the server side can be called **query server/transaction server/SQL server**.
+- The user interface programs and app programs run on client side. The standard of **Open Database Connectivity (ODBC)** is used to create the API for the client side to talk to the DBMS server.
+- Both client and server need the relavant software for the connection to happen
+
+## Three-Tier and n-Tier Architectures for Web Apps
+- many web apps use the three tier, add an intermediate layer between client and server
+- **Application server/web server**- the middle layer where a lot of the business logic is made to be able to determine the correct querying for the database, this is due to the clients request, where it will then be handled by the business logic in the middle and then send request to the DBMS
+- There is good security in the middle layer where users credentials can be checked on the request before any request to the database will be made
+
+## Classifications of Database Management Systems
+- **Data model**- NOSQL, SQL, hierachal, object-relationa:- based on how the data will be represented
+- **Number of users**- single-user systems like a PC or miltiuser-system like a DBMS that allows concurrent multiple users
+- **Nmber of sites distributed**- If the DBMS is crentralized then the data is stored on the single computer, can support miu;tiple users but relies on always using that one site. **distributed DBMS (DDBMS)** has the database and software distributed over many sites connected by the computer network.
+	- **Homogenous DDBMSs**- use same DBMS software at all the sites on a distributed sites
+	- **Heterogenous DDBMSs**- can use different DBMS software at each site and have midleware software can access several different databases, which is a **federated DBMS/Multidatabase system**- allowing for each database to have some sort of autonomy
+- **Cost**- Some software like MySQL, PostgreSQL are open source and then there are some other DBMS services which are paid. SOme have licenses that allow certain amoun of usage
+- **Types access paths**- DBMS can be created for a general purpose or a speci;liased purpose. **specialised purpose**- the DBMS cannot be used for other applications without major changes, these are **Online transaction processing (OLTP)**
 
