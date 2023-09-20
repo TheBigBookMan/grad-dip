@@ -27,7 +27,7 @@
 
 ### Actors on the scene
 Many different job titles manage the database
-**Database admin**- AUthorizes access to the DB, monitoring and acquiring software and hardware resources for the DBM.
+**Database admin(DBA)**- AUthorizes access to the DB, monitoring and acquiring software and hardware resources for the DBM.
 **Database Designers**- Choosing appropriate structures for representing and storing the data.
 **End users**- People usually querying the databse
 	- Casual: Occasionaly access thdatabase using query interface
@@ -153,3 +153,15 @@ How the whole DMBS is split into different components that do separate things an
 - **Stored data manager**- module ofg the DBMS controls access to DBMS information that is stored on the disk
 - The users (DBA staff, casual users, application programmers etc)- will forumlate queries through programming languages, applications, data entry through parametric transactions.
 - The users queries will then be compiled by processing the schema definitions and stored meta data iof the description in the DBMS catalog, which inlcudes names, file sizer,, mapping data, constraints
+- **Query optimizer**- takes the internal query ad will do the rearrangements and algorithms to reduce redundency and make the checks against the system catalog for stored data
+- Even if an application is written in a language like Java, C++ etc the **precompiler** will extract the DML commands and sent to the DML compiler
+
+## Database SYstem Utilities
+These utilities help the DBA manage the database system, basically through functions and certain operations
+- **Loading**- Being able to load existing data files that are in a specific format into the database, there would be specific utilities that require specific file types, using conversion tools
+- **Backup**- backup of the database which is stored on some storage area in ccase of needing to reimplement it
+- **Database storage reorganization**- reorganise set of database files into different file organisations and creat new access paths for performacen imporvement
+- **Performance monitoring**- monitors database usage and statistics to the DBA on how the CPU etc are being used and if things need changing
+
+## Tools, application environments and communication facilities
+
