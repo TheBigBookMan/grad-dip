@@ -196,4 +196,5 @@ These utilities help the DBA manage the database system, basically through funct
 	- **Heterogenous DDBMSs**- can use different DBMS software at each site and have midleware software can access several different databases, which is a **federated DBMS/Multidatabase system**- allowing for each database to have some sort of autonomy
 - **Cost**- Some software like MySQL, PostgreSQL are open source and then there are some other DBMS services which are paid. SOme have licenses that allow certain amoun of usage
 - **Types access paths**- DBMS can be created for a general purpose or a speci;liased purpose. **specialised purpose**- the DBMS cannot be used for other applications without major changes, these are **Online transaction processing (OLTP)**
+  
 
