@@ -198,3 +198,27 @@ These utilities help the DBA manage the database system, basically through funct
 - **Types access paths**- DBMS can be created for a general purpose or a speci;liased purpose. **specialised purpose**- the DBMS cannot be used for other applications without major changes, these are **Online transaction processing (OLTP)**
   
 
+# Chapter 3- Data Modeling Using the Entity-Relationship (ER) Model
+
+## Using High lievel Coneptal Data models for Database Design
+- **Requirements collection and analysis**- first step when designing a database is getting the user to explain their **data requirements** which need to be in detail and as complete as possible
+- Need to also specify the **functional requirements**- that are the transactions and operations that are happpening withi nhe database- retrievals and updates
+- THen once getting a broad overview, need to create the **conceptual schema** which is a high level data model of the **conceptual design** of the data. Detail descriptions of entity types, relationships and constraints.
+- **Logical design/Data model Mappeing**- implementing the data design into a DBMS, transforming the conceptual schema into the implementation data model.
+- Last step ius the **Pshycial design**- when internal storage structure, file organisaztions, indexes and access paths are implementd.
+
+## Entity Types, Entity Sets, Attributes and Keys
+**Entities**- are specific instances of an object- Employee, Manager, Department etc
+**Entity Attributes**- each entity will have attributes- firstname, lastname, id number etc
+- **Composite/atomic attributes** 
+	- **Composite Attributes**- When an attribiute can be broken down into multiple parts, eg- persons address (street, suburb, city, country). This then can also be broken down more in the street composite attribute- forming a **composite hierarchy** (streetNum, streetName). Don't always need to break down if not going to be referencing the indibidual broken down composite attributes. 
+	- Attributes that cant be broken down are **atomic attributes/simple attributes
+- **Single valued/multivalued attrbiutes**
+	- **multibvalued valued attributes**- when an attribute can end up having different amount of values, eg- a attribute called numDegrees- where some people may have 0, some 1, me 3- there can sometimes be constraints on what the values can be or be between
+	- **single valued**- when there is only going to be one value for that attribute- age, height, weight
+-  **Stored/derived attributes**
+	- **stored attributes**- are attributes that are created by hard data- eg birth date
+	- **derived attributes**- are data that are made by a certain measurement- eg someones age based on the current date and their birth date. 
+- **Null values**- This is just non applicable, can be used **TWO** cicrumstance- when the attribute is not applicable to that entity, or when the value for that entity is unknown
+- **Complex attributes**- nesting of composite attributes and multivalued attributes, using () and {}
+- **Entity Types/Entity sets**- These are similar to tables and instances of the entities, but they are a more abstractr representation. Entity type is the schema for how an entity will be created, it defines the atributes and the title for the entity, while the entity set is a collection of entities that are created through that entity type schema- eg type (Employee), set ((Ben Smerd, 27), (Jack Morgan, 28))
