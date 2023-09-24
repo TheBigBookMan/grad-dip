@@ -249,3 +249,9 @@ Entities that have no key attributes are **weak entity types** and ones that do 
 ## Relationships Types of Degree Higher than Two
 Different type of relationship entity degree, before explained binary where there were two entities that formed a relationship, ternary (or more) are **higher degree relationships**
 
+# Chapter 5- The Relational Data Model and Relational Database Constraints
+## Domains, Attributes, Tuples and Relations
+- **Domain (*D*)**- values that are restricted to certain guidleines- 10 digit phone numbers. Can also have specific measuremtns for helping guide the value representation, like $ for dollar as it could also be euros or other currencies
+- **Relation Schema (*R*)**- Describing a relation by describing the attributes of that relation. The **degree of relation** is number of attributes of its relation schema 
+- **Tuple (*t*)**- are the fields of that entry that would be added as an instance to the entity, essentially the row of values that match up to the attribtues. usually Tuples are ordered in sequency of how the attributes are displauyed in the table, however you can make them unordered by making it a key=value pair
+- **Values and Nulls in tuples**- the values have to be atomic, meaning cant be broken down in composite or multivalue, called **flat relational model**, any mulivalue values have to be represented by a separate relation. **NULL** is when the value is unkown for that specific entity or the attribute is non applicable
