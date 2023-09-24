@@ -224,3 +224,28 @@ These utilities help the DBA manage the database system, basically through funct
 - **Entity Types/Entity sets**- These are similar to tables and instances of the entities, but they are a more abstractr representation. Entity type is the schema for how an entity will be created, it defines the atributes and the title for the entity, while the entity set is a collection of entities that are created through that entity type schema- eg type (Employee), set ((Ben Smerd, 27), (Jack Morgan, 28))
 - **Key attributes of entity type**- a unique attribute where every entity will have a different value for that specific attribute- this could be an email address, ID, name etc. **Composite key**- is the grouping of values to form a unique key
 - **Value sets (domains) of attributes**- can be a sort of constraint on the value by setting it a specific range or data type- age has to be anumber between 12-70
+
+## Relationship Degree, Role names and Recursive Relatoships-
+**Degree of relationship**- is determined by amount of entitity types that are participating
+- **Binary**- when there are two types- eg a Student and Course where they are Enrolled
+- **Ternary**- When there are three types- eg Student, Course, Teacher in a Classroom
+**Relationships as attributes**- either direction of the binary relationship can be represented as an attribute- Student is enrolled in Course, a Course has Students enrolled
+**Role Names and Recursive Relationships**- **Role names** help to identify the attributes plying role in the relationship (its not necessary but can provide a more detailed explanation for what they do)
+- **Recursive relationships**- are when entities within their own type participate in more than one role, for example an employee can be a supervisor while also being supervised
+**Constraints on Binary relationship types**- 
+- **Cardinality ratios for binary relationships**- Identfying the amount of times an entity can have a relationships with another entity, eg an Employee can only be in one Department but a Department can have many EMployees- E 1:N D
+- **Participation Constraints**- 
+	- **Minimum cardinality constraint/total participation/existence dependency**- when an entity can only existence when it is related to another one- eg an Employee entity can only exist if it is related to a Department, so any employees must be related to deparments via the works_for entity
+	- **partial cardinality**- some of the set of  entities are related to another entity, eg. the Employees only have some that are Managers
+	- Both equal the **structural constraints**
+- **Attributes of relationship types**- these are attributes that are in the relationship type between the entities that are involved eg. an Employee WORKS_IN a Department and the WORKS_IN relationship type may have an attribute about Department_Start_date that has the Employee and Department relationship. These relationship type attributes could also be migrated to either entity depending on suitability
+
+## Weak Entity Types
+Entities that have no key attributes are **weak entity types** and ones that do have key atributes are **strong entity types**
+- **Strong entity type**- have primary keys and attributes that can be used to identify the entity
+- **Weak entity type**- relies on other entities to identify the the entity, its relation to the entity that is used is called the **owner entity type**, it also has a **participation constraint** as it is dependent on the owner entity types existence
+	- Weak entity has the **partial key** where there is the relating attribute to the owner entity type used to identify the entity, sometimes needs a composite key
+
+## Relationships Types of Degree Higher than Two
+Different type of relationship entity degree, before explained binary where there were two entities that formed a relationship, ternary (or more) are **higher degree relationships**
+
