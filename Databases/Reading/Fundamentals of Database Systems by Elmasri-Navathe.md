@@ -255,3 +255,19 @@ Different type of relationship entity degree, before explained binary where ther
 - **Relation Schema (*R*)**- Describing a relation by describing the attributes of that relation. The **degree of relation** is number of attributes of its relation schema 
 - **Tuple (*t*)**- are the fields of that entry that would be added as an instance to the entity, essentially the row of values that match up to the attribtues. usually Tuples are ordered in sequency of how the attributes are displauyed in the table, however you can make them unordered by making it a key=value pair
 - **Values and Nulls in tuples**- the values have to be atomic, meaning cant be broken down in composite or multivalue, called **flat relational model**, any mulivalue values have to be represented by a separate relation. **NULL** is when the value is unkown for that specific entity or the attribute is non applicable
+
+## Relational Model Constraints and Relational Database Schemas
+THree different types of constraints
+1. **Inherent model based constraints/implicit constraints**- inherent in the data model
+2. **Schema based/explicit constraints**- Directly expressed in the schemas
+3. **Application based/semantic/business rules**- cant be expressed in the schema and need to be enforced by the actual application
+- **Suerpkey**- is the attribute that uniquely identifies an entity (like an ID) and 
+- **Candidate key**- is when multiple fields together are joined to create a uniqueness of identifying
+Any database has the database schema and state, if the current state of the database doesnt hold up the integrity of the database schema it is called **not valid state** 
+- **Entity integrity constraint**- a primary key *CANNOT* be NULL
+- **Referential integrity constraint**- if a relation between two tuples in two relations, that the tuple that is relating must relate to an existing entity
+
+## Update operations, transactions and dealing with constraint violations
+- **Retrievals**- relational algebraic expression to query database for data creates a new relation
+- **Result relation**- is the result from the relational operators to retrieve the data
+- **cascading**- when a violation has occured with modification of some sort, the tuples that are involved with relations with the modified record will have their own values or something changed due to the changing situation to hold up data integrity
