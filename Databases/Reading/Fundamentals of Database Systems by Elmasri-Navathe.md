@@ -277,4 +277,10 @@ Any database has the database schema and state, if the current state of the data
 	- **Nullify**- if removing an item from a relation then we can set it so that value in the forein key tuple will be set to NULL
 	- **Restricted**- if the item being deleted has a reference (**referential integrity constraint**) then the item cannot be deleted. Throw an error when trying to delete it, can force it to go through though and then do something like  cascade and delete the referetnial table
 
-## Chapter 9- Relational Database Design by ER- and EER-to-Relational Mapping
+# Chapter 9- Relational Database Design by ER- and EER-to-Relational Mapping
+Designing an relational database schema based on conceptual schemas. This step of the database design process is the **logical database design/data model mapping** where we are transferring the concepts of what is wanted for the businesses and creating a form of table and relational schema with entitities and relationships.
+- **Conceptual schema diagram**- usually is a some sort of links between diagram shapes with titles
+- **Entity-relational diagram**- entity tables (2-dimensional tables with rows/records and columns/attributes) which will have the relationships between the bits of data presented within keys (primary and foreign), which is showing how the entity and referential integrity is created.
+	- **Integrity constraints**- **Entity integrity constraint** is shown by the primary keys that are drawn with the line under. **Referential integrity constraint** is shown by the relationship that one entity is referencing another by the foreign key
+
+## Steps to creating transofrmation from conceptual to ER diagrams
