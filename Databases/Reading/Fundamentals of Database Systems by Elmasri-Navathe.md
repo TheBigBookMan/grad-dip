@@ -284,3 +284,16 @@ Designing an relational database schema based on conceptual schemas. This step o
 	- **Integrity constraints**- **Entity integrity constraint** is shown by the primary keys that are drawn with the line under. **Referential integrity constraint** is shown by the relationship that one entity is referencing another by the foreign key
 
 ## Steps to creating transofrmation from conceptual to ER diagrams
+1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key)
+2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one). 
+3. **Mapping of binary 1:1 relationship types**- 3 possible approaches to create a 1:1 relationship type:
+	1. **Foreign key approach**- the entity that is not dependent on the other entity will be chosen to have its main attributes as the relation attribute because it is not reliant on another entity for existence. Having the foreign keys in the relation
+	2. **Merged relation approach**- mergin the two entity types and the relationship into a single relation, would need both participants being total
+	3. **Cross-refernce or relationship relation approach**- adding in the relationship relation as a third table that would have both primary keys of the other two relations to be as foreign keys within it
+4. **Mapping of binary 1:N Relationship types**- 2 possible approaches to create a 1:N relationship type
+	1. **Foreign key approach**- add in the primary key of the entity that is going to have multiple instances, so for example if its an Employee that will have Shifts, have each primary key of the Employee as a foreign key in the Shift entity
+	2. **Relationship relation approach**- creating the third relation **relationship relation** and this has the foreign keys as the primary keys of the entities
+5. **Mapping of binary M:N relationshiup types**- must use the **relationship relation/cross-reference option**- as the third relationship is the only possible way to store multiple instances of an entity comprising of two participating entitities. Have both relations primary keys as foreign keys within the relationship relation as well as the attributes 
+6. **Mapping of multivalued attributes**- when an attribute has multi values, create a new relation which will be the instance of that value, and make the primary key of the relation entity as the foreign key in the new relation
+7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys
+- having the foreign key in the relation allows for a natural join (**EQUIJOIN**) of that sharing attribute from both entities, but then when there is a relationship entity it requires 2 joins for M:N as the relationship entity wil lrequired a join from both of the participating entitites and a N-ary relationship entity will have n joins as it will have to get all of the entitties to match the attribute of the foreign key
