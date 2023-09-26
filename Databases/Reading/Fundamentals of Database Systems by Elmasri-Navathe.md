@@ -261,8 +261,10 @@ THree different types of constraints
 1. **Inherent model based constraints/implicit constraints**- inherent in the data model
 2. **Schema based/explicit constraints**- Directly expressed in the schemas
 3. **Application based/semantic/business rules**- cant be expressed in the schema and need to be enforced by the actual application
-- **Suerpkey**- is the attribute that uniquely identifies an entity (like an ID) and can identify alone- similar to primary key 
-- **Candidate key**- is when multiple fields together are joined to create a uniqueness of identifying and if one of the keys is gone then they dont work, so need all to work together
+- **Primary key**- singular or multiple attributes/columns in a table to identify a record uniqurly identifies- can be singular like a superkey or multiple like a composite key
+- **Suerpkey**- is the attribute that uniquely identifies an entity (like an ID) and can identify alone-  least amount of superkeys that can uniquely identify a record, 
+- **Composite key**- is when multiple fields together are joined to create a uniqueness of identifying and if one of the keys is gone then they dont work, so need all to work together, can find the least amomunt to identify the uniqueness
+- **Candidate Key**- same as composite key but each key is unique in itself
 Any database has the database schema and state, if the current state of the database doesnt hold up the integrity of the database schema it is called **not valid state** 
 - **Entity integrity constraint**- a primary key *CANNOT* be NULL
 - **Referential integrity constraint**- if a relation between two tuples in two relations, that the tuple that is relating must relate to an existing entity
@@ -270,5 +272,9 @@ Any database has the database schema and state, if the current state of the data
 ## Update operations, transactions and dealing with constraint violations
 - **Retrievals**- relational algebraic expression to query database for data creates a new relation
 - **Result relation**- is the result from the relational operators to retrieve the data
-- **cascading**- when a violation has occured with modification of some sort, the tuples that are involved with relations with the modified record will have their own values or something changed due to the changing situation to hold up data integrity
-- **Nullify**- if removing an item from a relation then we can set it so that value in the forein key tuple will be set to NULL
+- If performing a **DELETE** command these are the types of constratins you can apply on delete:
+	- **cascading**- when a violation has occured with modification of some sort, the tuples that are involved with relations with the modified record will have their own values or something changed due to the changing situation to hold up data integrity. So if you are deleting a row from the entity with the primary key, then it will delete the row in a entity model that holds it as a foreign key and delete that row
+	- **Nullify**- if removing an item from a relation then we can set it so that value in the forein key tuple will be set to NULL
+	- **Restricted**- if the item being deleted has a reference (**referential integrity constraint**) then the item cannot be deleted. Throw an error when trying to delete it, can force it to go through though and then do something like  cascade and delete the referetnial table
+
+## Chapter 9- Relational Database Design by ER- and EER-to-Relational Mapping
