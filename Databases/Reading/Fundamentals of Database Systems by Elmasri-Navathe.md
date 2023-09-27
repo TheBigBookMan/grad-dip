@@ -226,9 +226,11 @@ These utilities help the DBA manage the database system, basically through funct
 - **Value sets (domains) of attributes**- can be a sort of constraint on the value by setting it a specific range or data type- age has to be anumber between 12-70
 
 ## Relationship Degree, Role names and Recursive Relatoships-
-**Degree of relationship**- is determined by amount of entitity types that are participating
+**Degree of relationship**- is determined by amount of entitity types that are participating, more amount of enetities being involved in the relationship mean a greater degree of the relationship
+- **Unary**- when an entity can have a relationship with itself, eg- Person can be a Parent of another Person
 - **Binary**- when there are two types- eg a Student and Course where they are Enrolled
 - **Ternary**- When there are three types- eg Student, Course, Teacher in a Classroom
+- **N-ary**- When there are more than 3 entities creating a relationship
 **Relationships as attributes**- either direction of the binary relationship can be represented as an attribute- Student is enrolled in Course, a Course has Students enrolled
 **Role Names and Recursive Relationships**- **Role names** help to identify the attributes plying role in the relationship (its not necessary but can provide a more detailed explanation for what they do)
 - **Recursive relationships**- are when entities within their own type participate in more than one role, for example an employee can be a supervisor while also being supervised
@@ -278,13 +280,41 @@ Any database has the database schema and state, if the current state of the data
 	- **Restricted**- if the item being deleted has a reference (**referential integrity constraint**) then the item cannot be deleted. Throw an error when trying to delete it, can force it to go through though and then do something like  cascade and delete the referetnial table
 
 # Chapter 9- Relational Database Design by ER- and EER-to-Relational Mapping
-Designing an relational database schema based on conceptual schemas. This step of the database design process is the **logical database design/data model mapping** where we are transferring the concepts of what is wanted for the businesses and creating a form of table and relational schema with entitities and relationships.
+Designing an relational database schema based on conceptual schemas. This step of the database design process is the **logical database design/data model mapping** where we are transferring the concepts of what is wanted for the businesses and creating a form of table and relational schema with entitities and relationships. It's bridging the gap between having a conceptual diagram of overall concepts and then creating the tables to establish entity attributes and relationships.
 - **Conceptual schema diagram**- usually is a some sort of links between diagram shapes with titles
 - **Entity-relational diagram**- entity tables (2-dimensional tables with rows/records and columns/attributes) which will have the relationships between the bits of data presented within keys (primary and foreign), which is showing how the entity and referential integrity is created.
 	- **Integrity constraints**- **Entity integrity constraint** is shown by the primary keys that are drawn with the line under. **Referential integrity constraint** is shown by the relationship that one entity is referencing another by the foreign key
 
-## Steps to creating transofrmation from conceptual to ER diagrams
-1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key)
+## Conceptual ER- diagrams
+- WHen drawing an **entity** it is important to have it as a square with the entity name in the middle and then **attributes** are drawn as a circle with the attribute name in the middle, linked by a line
+- **primary keys** are identified by having an underline of the word in the attribute in a circle
+- **foreign keys** are identified by being in italics
+- Most **attributes** are **atomic/simple** in that they are singular valued and cannot be broken down, however if the attribute is **composite** it can be broken down (address: (number, street name, postcode, state)) and this can be represented by each of the sub-attributes of the composute attribute being represented by more circles with the attribute text in the middle
+- **multi-valued attributes**- attributes that the instance of the entity can have multiple values for- degrees (RMIT, flinders, la trobe) and this represented by the attribute being in a cirlce with another circle around it
+- **derived atributes**- are attributes that has their values based on another attribute- an age can be derived from someones birth (current date - birthdate) and this is represented by the attribute circle being dotted lined
+- **Relationships**- relationship entitties are represented with a diamond with the relationship entity name in the middle
+	**Cardinality**- representing the relationship between the two entities and how many instances of one will there be an instance of the other entity, it also shows the minimum and maximum number as constraints
+	-  1:N relationship is represented by a 1 on one entity and N on the other, with the min-max cardinality values being represented on the lines between entitiy to relationship entity, eg (0,N means that the entity on the left can have minimum teaching 0 subjects or being teaching infitnite amount of subjects), while on the other end the subjects entity (1,1 means that the subject can only have minmum 1 teacher (this is dependent on the teacher entity being existant- **total participation**) and maximim 1 teacher (as a class can only have one teacher))
+	- IMPORTANT to map out the min-max to figure out if one entity is reliant on the other entity for being existant- their level of participation (**total**- if the entity is reliant on the other entity existing for that entity to exist (represented by a double line on the diagram), **partial**- if the entity is not dependent on the existence of the other entity (represented as just the normal straight line)). the min-max deteremines the amont of instance existence that entity has in relation to the other entity, through the relationship entity- so looking at the min-max on the Teacher side represents the minimum amount of Subjets they can teach and the maximum amount of Subjects they can teach- so it represents the other entity
+	- **Participation constraints**- represents if aan entity can exist without the existence of the other entity (**partial**) like the Teacher entity witht the Teaches relationship entity (a teacher doesnt need to teach a subject), while the Subject entity is only in existence to the Teaces relationship entity (**total**) if there is a Teacher that can be teaching the course (as a subject needs a teacher to teach it)
+	- ***TIP*** - can determine the **cardinality participation** by looking at the minimum cardinality- if it is zero then it is **partial** participantion and if it is a number not zero then it is **total** 
+	- The **weak entity** is an entity that is total dependent on the other entity and only exists because of that **owner-entity**
+
+## Step to draw ER diagram
+1. **identify enttities**- incluring the weak entitites
+2. Represent each entity graphically by a rectangle
+3. Search for reltaionships between entitties and represent them graphically by a diamond (check for degree of relationship- unary, binary, ternary, n)
+4. Identify constraints on each relationship
+	1. Cardinatlity (1:1, 1:M, M:N) and min-max
+	2. Participation- Total or Partial and make either the double or singular line
+5. Identify all attributes and underline the priumary keuy
+## Top-Down approach transform Data Model into Relationsl Logical Model
+Transforming the relational model into an ER diagram of relational tables
+- **Moddeling**- looking at the problem description in a natural language (english) and modelling the problems into an ER diagram--- doing the tranformation mapping above
+- **Design**- Creating the actual diagram (the UML diagram like on the Lucidchart)
+
+## Steps to creating transofrmation from conceptual to ER diagrams- 7 step mapping algorithm
+1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database
 2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one). 
 3. **Mapping of binary 1:1 relationship types**- 3 possible approaches to create a 1:1 relationship type:
 	1. **Foreign key approach**- the entity that is not dependent on the other entity will be chosen to have its main attributes as the relation attribute because it is not reliant on another entity for existence. Having the foreign keys in the relation
@@ -297,3 +327,5 @@ Designing an relational database schema based on conceptual schemas. This step o
 6. **Mapping of multivalued attributes**- when an attribute has multi values, create a new relation which will be the instance of that value, and make the primary key of the relation entity as the foreign key in the new relation
 7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys
 - having the foreign key in the relation allows for a natural join (**EQUIJOIN**) of that sharing attribute from both entities, but then when there is a relationship entity it requires 2 joins for M:N as the relationship entity wil lrequired a join from both of the participating entitites and a N-ary relationship entity will have n joins as it will have to get all of the entitties to match the attribute of the foreign key
+
+## Mapping EER Model constructs to relations
