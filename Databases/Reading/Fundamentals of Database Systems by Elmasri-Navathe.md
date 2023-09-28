@@ -251,6 +251,30 @@ Entities that have no key attributes are **weak entity types** and ones that do 
 ## Relationships Types of Degree Higher than Two
 Different type of relationship entity degree, before explained binary where there were two entities that formed a relationship, ternary (or more) are **higher degree relationships**
 
+# Chapter 4- The Enhanced Entity-Relationship (EER) Model
+EER is a more advanced way to create a database design when there is more complex data (complex businesses)
+## Subclasses, Superclasses and Inheritance
+EER model contains everything the same from ER model
+- **Subclass/subtype**- A subgroup entity that is derived from the parent entity, for example the parent entity (**superclass/supertype**) called Employee and the child centity (**subclass/subtype**) called Engineer, Admin, Clerk, Developer, SalariedEMployee, HourlyEmployee etc. the relationship between the **superclass** and the **subclass** is called the **class/subclass relationshiup**. The child subclass may have a certain record of the parent superclass to be able to recognise its relationship.
+- IMPORTANT- an entity cannot exist in the database as only a subclass, it also needs to become a member of the parent entity (superclass)
+- The superclass entity can then be optionally added in to a subclass if they meet the descriptiong
+- An entity can be a member of multiple subclasses
+- The subclass **inherits** all the attributes and relationships from the parent class and this can mean that subclass can also be known as its own entity type
+
+## Specialization and Generalization
+- **Specialization**- A specific type of subclass that can be a part of the parent class, for exampl (RELATED TO EMPLOYEE ABOVE)- may have the subclasses (Engineer, Admin, Clerk, Developer) that are *job type* and then (Developer, Engineer) are *engineer type* and (HourlyEmployee, SalariedEmployee) might be *method of pay type* 
+- THe sepcialisation on the diagram will be split from the parent Entity and then have the subclasses branching off of that
+- Attributes that are attached to Subclass are called **specific/local attributes** 
+- Subclasses can also participate in relationships called **specific relationship types** 
+- It looks like a 1:1 relationship between entities but it is actually the same entity being represented within the superclass and the subclass because they are instances of both entities (an instance of the subclass has to be an instance of the parent class) as they are playing a **specialized role**
+- Use of specilizations is in case there are certain subclasses that have specific attributes that other entities would find redundant
+- Also important to be able to create entity specific relationships that would be unecessary with other entities
+- **Generalization**- Essentially the reverse of the specialiszatio, where you find entitties that have common attributes (or similar) aand then create a superclass entity that will have the common attributes and then the former 2 separate entities are now subclasses of the **generalized superclass** 
+- Can view the Employee entity as a generalization of the Engineer and Secratry entities or we can view the Engineer and Secretary entities as specializations of the EMployee entitity
+
+## Constraints and Characteristics of Sepcialization and Generalization Hierarchies
+
+
 # Chapter 5- The Relational Data Model and Relational Database Constraints
 ## Domains, Attributes, Tuples and Relations
 - **Domain (*D*)**- values that are restricted to certain guidleines- 10 digit phone numbers. Can also have specific measuremtns for helping guide the value representation, like $ for dollar as it could also be euros or other currencies
@@ -314,18 +338,18 @@ Transforming the relational model into an ER diagram of relational tables
 - **Design**- Creating the actual diagram (the UML diagram like on the Lucidchart)
 
 ## Steps to creating transofrmation from conceptual to ER diagrams- 7 step mapping algorithm
-1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database
-2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one). 
+1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database. Underline the primary key. Only add the simple attributes (no multivalue or composite etc)
+2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one). Make the primary key of te weak entity also the foreign key from the owner-entity
 3. **Mapping of binary 1:1 relationship types**- 3 possible approaches to create a 1:1 relationship type:
-	1. **Foreign key approach**- the entity that is not dependent on the other entity will be chosen to have its main attributes as the relation attribute because it is not reliant on another entity for existence. Having the foreign keys in the relation
+	1. **Foreign key approach**- the entity that is not dependent on the other entity will be chosen to have its main attributes as the relation attribute because it is not reliant on another entity for existence. Having the foreign keys in the relation. Entity that is total pariticipation indluces the foreign key which is the primary key of the other relation
 	2. **Merged relation approach**- mergin the two entity types and the relationship into a single relation, would need both participants being total
 	3. **Cross-refernce or relationship relation approach**- adding in the relationship relation as a third table that would have both primary keys of the other two relations to be as foreign keys within it
 4. **Mapping of binary 1:N Relationship types**- 2 possible approaches to create a 1:N relationship type
-	1. **Foreign key approach**- add in the primary key of the entity that is going to have multiple instances, so for example if its an Employee that will have Shifts, have each primary key of the Employee as a foreign key in the Shift entity
+	1. **Foreign key approach**- add in the primary key of the entity that is going to have multiple instances, so for example if its an Employee that will have Shifts, have each primary key of the Employee as a foreign key in the Shift entity. Whatever is the Many (M) will have the primary key of the 1 in their foreign key
 	2. **Relationship relation approach**- creating the third relation **relationship relation** and this has the foreign keys as the primary keys of the entities
 5. **Mapping of binary M:N relationshiup types**- must use the **relationship relation/cross-reference option**- as the third relationship is the only possible way to store multiple instances of an entity comprising of two participating entitities. Have both relations primary keys as foreign keys within the relationship relation as well as the attributes 
 6. **Mapping of multivalued attributes**- when an attribute has multi values, create a new relation which will be the instance of that value, and make the primary key of the relation entity as the foreign key in the new relation
-7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys
+7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys and as the primary keys as all of these will be considered to make up the uniqueness of each entity (**composite key**) , if there isnt one of the other relation primary key then the relation fails
 - having the foreign key in the relation allows for a natural join (**EQUIJOIN**) of that sharing attribute from both entities, but then when there is a relationship entity it requires 2 joins for M:N as the relationship entity wil lrequired a join from both of the participating entitites and a N-ary relationship entity will have n joins as it will have to get all of the entitties to match the attribute of the foreign key
 
 ## Mapping EER Model constructs to relations
