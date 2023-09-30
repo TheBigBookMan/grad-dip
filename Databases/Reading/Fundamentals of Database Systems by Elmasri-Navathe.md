@@ -273,6 +273,7 @@ EER model contains everything the same from ER model
 - Can view the Employee entity as a generalization of the Engineer and Secratry entities or we can view the Engineer and Secretary entities as specializations of the EMployee entitity
 
 ## Constraints and Characteristics of Sepcialization and Generalization Hierarchies
+- **Constraionts on specilizations and generalization**- 
 
 
 # Chapter 5- The Relational Data Model and Relational Database Constraints
