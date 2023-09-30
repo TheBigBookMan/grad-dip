@@ -315,6 +315,12 @@ EER model contains everything the same from ER model
 
 ## Constraints and Characteristics of Sepcialization and Generalization Hierarchies
 
+-   **Predicate-defined/condition-defiend subclass**- when the subclass has a predefined condition that must be met to be able to become part of that subclass, which is a **constraint**.
+-   The **Predicate constraint** is presented on the line joining the parentclass to the subclass with the title of what must be met by the subclass, for example the Employee parent has the **predicate constraint** that each subclass must have a job_type value- this connects them to the Employee entity
+-   If all the **specilisation attribute** are of the same for each subclass then its called the **attribute-defined specialization** and the attribute is called **defining attribute**.
+-   If no **condition** to determine membership in subclass then the subclass called **user-defined** where it is determined by the user applying the operation to the subclass
+-   **Disjointness constraint**- defines that a subclass of a specializaton can be a member of at most ONE subclass
+
 # Chapter 5- The Relational Data Model and Relational Database Constraints
 
 ## Domains, Attributes, Tuples and Relations
