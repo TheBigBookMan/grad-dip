@@ -296,6 +296,7 @@ EER is a more advanced way to create a database design when there is more comple
 EER model contains everything the same from ER model
 
 -   **Subclass/subtype**- A subgroup entity that is derived from the parent entity, for example the parent entity (**superclass/supertype**) called Employee and the child centity (**subclass/subtype**) called Engineer, Admin, Clerk, Developer, SalariedEMployee, HourlyEmployee etc. the relationship between the **superclass** and the **subclass** is called the **class/subclass relationshiup**. The child subclass may have a certain record of the parent superclass to be able to recognise its relationship.
+- Instance of the superclass can be members of multiple subclasses and not all instances of the superclass need to be an instance of a subclass
 -   IMPORTANT- an entity cannot exist in the database as only a subclass, it also needs to become a member of the parent entity (superclass)
 -   The superclass entity can then be optionally added in to a subclass if they meet the descriptiong
 -   An entity can be a member of multiple subclasses
@@ -305,13 +306,22 @@ EER model contains everything the same from ER model
 
 -   **Specialization**- A specific type of subclass that can be a part of the parent class, for exampl (RELATED TO EMPLOYEE ABOVE)- may have the subclasses (Engineer, Admin, Clerk, Developer) that are _job type_ and then (Developer, Engineer) are _engineer type_ and (HourlyEmployee, SalariedEmployee) might be _method of pay type_
 -   THe sepcialisation on the diagram will be split from the parent Entity and then have the subclasses branching off of that
--   Attributes that are attached to Subclass are called **specific/local attributes**
+-   Attributes that are attached to Subclass are called **specific/local attributes** meaning that any attribute that is specifically to the subclass is that, eg attributes to Engineer but arent attributes to Secrarty
 -   Subclasses can also participate in relationships called **specific relationship types**
 -   It looks like a 1:1 relationship between entities but it is actually the same entity being represented within the superclass and the subclass because they are instances of both entities (an instance of the subclass has to be an instance of the parent class) as they are playing a **specialized role**
 -   Use of specilizations is in case there are certain subclasses that have specific attributes that other entities would find redundant
 -   Also important to be able to create entity specific relationships that would be unecessary with other entities
 -   **Generalization**- Essentially the reverse of the specialiszatio, where you find entitties that have common attributes (or similar) aand then create a superclass entity that will have the common attributes and then the former 2 separate entities are now subclasses of the **generalized superclass**
 -   Can view the Employee entity as a generalization of the Engineer and Secratry entities or we can view the Engineer and Secretary entities as specializations of the EMployee entitity
+- In a diagram, a **specialization** is represented by a circle using a singular or double line (*depending on completeness constraint*) connected to the superclass\
+- **Completedness constraint**- if a specialisation is total or partial partiticpation
+	- **Total participation**- if the superclass has a total participation to the specialisation then every member of the superclass MUST BE a member of  atleast one subclass in the specialisation
+	- **Partial particiaption**- the superclass has a partial participation to the speclisation and therefore can have the option of being NONE of the members of the subclass to the specialisation
+- A 'U' shape is on the line from the circle (listed above) and the child entity with the U pointing towards the parent entity
+- in the middle of the circle is either 'o' or 'd' represented for **overlapping** or **disjointed**. 
+	- Overlap (o) means that an entity from the superclass can belong to more than one of the subclasses where it can have attributes and characterstics of multiple subclasses simultaneously. This means that the entity Employee that has subclasses of Secretary, Engineer and Technician, that an instance of Employee can be a Secretary OR an Engineer OR a technician OR can be a multiple of them-eg Secratrey AND Engineer
+	- The disjointed (d)  means that an entity from the superclass can belong to only one of the subclasses and that they are mutually exclusive. A specialisation has to be either one. This means that they can only be one subclass at max so a Secretary OR Engineer OR Technician
+- 
 
 ## Constraints and Characteristics of Sepcialization and Generalization Hierarchies
 
@@ -412,5 +422,45 @@ Transforming the relational model into an ER diagram of relational tables
 7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys and as the primary keys as all of these will be considered to make up the uniqueness of each entity (**composite key**) , if there isnt one of the other relation primary key then the relation fails
 
 -   having the foreign key in the relation allows for a natural join (**EQUIJOIN**) of that sharing attribute from both entities, but then when there is a relationship entity it requires 2 joins for M:N as the relationship entity wil lrequired a join from both of the participating entitites and a N-ary relationship entity will have n joins as it will have to get all of the entitties to match the attribute of the foreign key
+
+## Transformation of Specialisations in EER diagram
+Transforming the diagram into the set of relational tables in step 8 of the transformation. Can have one of the 4 options from the **completedness** and the **disjointeed** constraits. 
+1. Disjointed and total participation
+2. Disjointed and partial participation
+3. Overlapping and total participation
+4. Overlapping and partial participation
+Depending on the selection one of those 4 and other considertaion need to decide on one of these for creating the tables
+- **Option 8A- Multiple tables**- *Superclass and subclasses*- 
+	- Relation for superclass that contains PK and all other superclass attributes
+	- Create relation for each subclass which includes all attributes of that subclass and PK is the PK from superclass which also makes the PK in the subclasses and FK
+	- Option is suitable for any specialisation combination
+- **Option 8B- Multiple tables**- *subclasses only*- 
+	- Create relation for each subclass that contains superclass attrbitues and the attributes of that subclass, PK is PK of superclass
+	- Option only works for specialisation whose subclasses are total participation (everu entity in the superclass must belong to a subclass)
+	- If specialisation is overlapping, entity may be duplicated in several relations
+	- The difference here is that the subclass tables are not foreign keys as they dont refer to the superclass table primary key anymore
+- **Option 8C- Single table with one attribute**- 
+	- Single relation that has its attributes and all attributes of the superclass, plus all attributes of each of the subclasses and an attribute called 'type'
+	- 'type' attribute is what identifies the subclass apart for each tuple. PK is the PK of the superclass
+	- Option only works for specialisation whose subclasses are disjointed and has potential for generating many NULL values if many specific attributes exist in the subcasses
+	- Does NOT work for overlapping specialisation where an entity can be multiple subclasses as the 'type' attribute would only have one value where it is an OR entity of the subclass
+- **Option 8D- Single table with multiple type attributres**- 
+	- Create single relation with all attributes of superclass, plus attributes of each subclass, plus mutiple 'type' attributes. Each 'type' attribute is boolean indicating where tuple belongs to particular subclass
+	- Option only works for specialisations whose subclasses are overlapping but can also work for disjointed specialisation
+	- The attributes would be boolean and representative of each subclass that the entity could be
+How to choose which option to go with in step 8 of the transformation, good to remember these
+	- If specialisation is oberlapping, cannot use 8C as the 'type' attribute cannot accomodate instances with more than one subclass
+	- If specialisation is partial, cannot use 8B since partial specialisations might have instances at the superclass lbel that dont belong to any subclass. Does not create any superclass table which creates problems for any superclass lebvel instances
+	- If alot of local attributes (attributes only at that subclass level) then going for the single table option (8C or 8D) might not be good because you would get a lot of NULL values (as they are referred to NULL if that tuiple instance is not related to the that specific subclass attributes)
+	- If a lot of superclass attributes then not good idea to go wuith 8B as end up copying attributes across the subclass tables as well as if the superclass has relationships with other entities they need to be considered as well
+
+## Union Relationship
+Having just the one superclass is where we have the **specialisation/generalisation** but when there is multiple superclasses that don't have any relation, but we want to create a subclass from multiple superclasses is called a **Union type/category**.
+- Category member must exist in a least one of its superclasses
+- Represented in the diagram by a 'U' inside the circle that connects the subclass with multiple superclasses (similar to 'd' or 'o' in specilisations)
+- **IS-A test**- from the direction of the child to the parent ask if they are a a valid relationship from them to the parent, eg a parent Employee and subclass Salaried Employee- IS A Salaried Emploee AN EMployee, asnwer is YES so valid relationship then with the Employee as the parent and Salaried EMployee as Subclass because the EMployee could be Salaried or Hourly
+- 
+
+
 
 ## Mapping EER Model constructs to relations
