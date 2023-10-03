@@ -318,9 +318,9 @@ EER model contains everything the same from ER model
 	- **Total participation**- if the superclass has a total participation to the specialisation then every member of the superclass MUST BE a member of  atleast one subclass in the specialisation
 	- **Partial particiaption**- the superclass has a partial participation to the speclisation and therefore can have the option of being NONE of the members of the subclass to the specialisation
 - A 'U' shape is on the line from the circle (listed above) and the child entity with the U pointing towards the parent entity
-- in the middle of the circle is either 'o' or 'd' represented for **overlapping** or **disjointed**. 
+- in the middle of the circle is either 'o' or 'd' represented for **overlapping** or **disjointed**. Can't have one for a singular subclass as the whole point of the o or d is to determine how many superclasses can also be a part of the subclass, so if theres just one then it is not needed
 	- Overlap (o) means that an entity from the superclass can belong to more than one of the subclasses where it can have attributes and characterstics of multiple subclasses simultaneously. This means that the entity Employee that has subclasses of Secretary, Engineer and Technician, that an instance of Employee can be a Secretary OR an Engineer OR a technician OR can be a multiple of them-eg Secratrey AND Engineer
-	- The disjointed (d)  means that an entity from the superclass can belong to only one of the subclasses and that they are mutually exclusive. A specialisation has to be either one. This means that they can only be one subclass at max so a Secretary OR Engineer OR Technician
+	- The disjointed (d)  means that an entity from the superclass can belong to only one of the subclasses and that they are mutually exclusive. A specialisation has to be either one. This means that they can only be one subclass at max so a Secretary OR Engineer OR Technician. 
 - 
 
 ## Constraints and Characteristics of Sepcialization and Generalization Hierarchies
@@ -417,37 +417,45 @@ Don't need to consider children entities in step 1, only until step 8 start look
 4. **Mapping of binary 1:N Relationship types**- 2 possible approaches to create a 1:N relationship type
     1. **Foreign key approach**- add in the primary key of the entity that is going to have multiple instances, so for example if its an Employee that will have Shifts, have each primary key of the Employee as a foreign key in the Shift entity. Whatever is the Many (M) will have the primary key of the 1 in their foreign key
     2. **Relationship relation approach**- creating the third relation **relationship relation** and this has the foreign keys as the primary keys of the entities
-5. **Mapping of binary M:N relationshiup types**- must use the **relationship relation/cross-reference option**- as the third relationship is the only possible way to store multiple instances of an entity comprising of two participating entitities. Have both relations primary keys as foreign keys within the relationship relation as well as the attributes
+5. **Mapping of binary M:N relationshiup types**- must use the **relationship relation/cross-reference option**- as the third relationship is the only possible way to store multiple instances of an entity comprising of two participating entitities. Have both relations primary keys as foreign keys within the relationship relation as well as the attributes. THe primary keys create a composite key as they are a combination of both primary keys
 6. **Mapping of multivalued attributes**- when an attribute has multi values, create a new relation which will be the instance of that value, and make the primary key of the relation entity as the foreign key in the new relation
 7. **Mapping of N-ary relationship types**- using the **relationship relation option**- this is where there are more than 2 entitities in a relationship and therefore will need a relationship relation whjich will store the primary keys of each entity as foreign keys and as the primary keys as all of these will be considered to make up the uniqueness of each entity (**composite key**) , if there isnt one of the other relation primary key then the relation fails
 
 -   having the foreign key in the relation allows for a natural join (**EQUIJOIN**) of that sharing attribute from both entities, but then when there is a relationship entity it requires 2 joins for M:N as the relationship entity wil lrequired a join from both of the participating entitites and a N-ary relationship entity will have n joins as it will have to get all of the entitties to match the attribute of the foreign key
 
+Step 1-7 is for ER and 8 and 9 are for EER
 ## Transformation of Specialisations in EER diagram
 Transforming the diagram into the set of relational tables in step 8 of the transformation. Can have one of the 4 options from the **completedness** and the **disjointeed** constraits. 
 1. Disjointed and total participation
 2. Disjointed and partial participation
 3. Overlapping and total participation
 4. Overlapping and partial participation
-Depending on the selection one of those 4 and other considertaion need to decide on one of these for creating the tables
+Depending on the selection one of those 4 and other considertaion need to decide on one of these for creating the tables. MORE Efficient to go with single tables, but if not applicable then fine with multiple tables
 - **Option 8A- Multiple tables**- *Superclass and subclasses*- 
 	- Relation for superclass that contains PK and all other superclass attributes
 	- Create relation for each subclass which includes all attributes of that subclass and PK is the PK from superclass which also makes the PK in the subclasses and FK
 	- Option is suitable for any specialisation combination
+	- Creating a table for each superclass and its subclass where the primary key of the superclass will be the foreign and primary key in the subclasses
+	- not good if the subclasses have no attributes as extra tables for no reason
 - **Option 8B- Multiple tables**- *subclasses only*- 
 	- Create relation for each subclass that contains superclass attrbitues and the attributes of that subclass, PK is PK of superclass
-	- Option only works for specialisation whose subclasses are total participation (everu entity in the superclass must belong to a subclass)
+	- Option only works for specialisation whose subclasses are total participation (everu entity in the superclass must belong to a subclass) because there wouldnt be a table for the superclass that isnt a subclass
 	- If specialisation is overlapping, entity may be duplicated in several relations
 	- The difference here is that the subclass tables are not foreign keys as they dont refer to the superclass table primary key anymore
+	- No superclass, just the subclasses and each subclass will have what was the superclass PK as their PK along with the attributes inherited from the superclass and their own local attributes
+	- can never be with partial
+	- probably not good idea to be used when the parent has many attributes as each child table would have to repeat all the attributes
 - **Option 8C- Single table with one attribute**- 
 	- Single relation that has its attributes and all attributes of the superclass, plus all attributes of each of the subclasses and an attribute called 'type'
 	- 'type' attribute is what identifies the subclass apart for each tuple. PK is the PK of the superclass
 	- Option only works for specialisation whose subclasses are disjointed and has potential for generating many NULL values if many specific attributes exist in the subcasses
 	- Does NOT work for overlapping specialisation where an entity can be multiple subclasses as the 'type' attribute would only have one value where it is an OR entity of the subclass
+	- can never be with overlapping, use for disjoint and 8D for overlappying
 - **Option 8D- Single table with multiple type attributres**- 
 	- Create single relation with all attributes of superclass, plus attributes of each subclass, plus mutiple 'type' attributes. Each 'type' attribute is boolean indicating where tuple belongs to particular subclass
-	- Option only works for specialisations whose subclasses are overlapping but can also work for disjointed specialisation
+	- Option only works for specialisations whose subclasses are overlapping but can also work for disjointed specialisation as you can have a boolean for each subclass
 	- The attributes would be boolean and representative of each subclass that the entity could be
+	- Never use with disjoint, use 8C, use this for overlapping
 How to choose which option to go with in step 8 of the transformation, good to remember these
 	- If specialisation is oberlapping, cannot use 8C as the 'type' attribute cannot accomodate instances with more than one subclass
 	- If specialisation is partial, cannot use 8B since partial specialisations might have instances at the superclass lbel that dont belong to any subclass. Does not create any superclass table which creates problems for any superclass lebvel instances
@@ -466,4 +474,7 @@ Having just the one superclass is where we have the **specialisation/generalisat
 - Cannot use the defining keys from any of the subclasses because each one is different and cannot be used exclusively to identifiy all entities in the union
 - The union/category becomes an entity with the surrogate key and the surrogate key becomes the FK in the defining superclasses
 - If defining superclasses have the same key then that key becomes the PK of the union/category
+
+## once finished wih step-9 then go step2-7 again to tidy up, rinse and repeat
+
 ## Mapping EER Model constructs to relations
