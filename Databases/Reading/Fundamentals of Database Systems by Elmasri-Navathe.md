@@ -407,7 +407,7 @@ Transforming the relational model into an ER diagram of relational tables
 -   **Design**- Creating the actual diagram (the UML diagram like on the Lucidchart)
 
 ## Steps to creating transofrmation from conceptual to ER diagrams- 7 step mapping algorithm
-
+Don't need to consider children entities in step 1, only until step 8 start looking into the children entities and their relationships.
 1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database. Underline the primary key. Only add the simple attributes (no multivalue or composite etc)
 2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one). Make the primary key of te weak entity also the foreign key from the owner-entity
 3. **Mapping of binary 1:1 relationship types**- 3 possible approaches to create a 1:1 relationship type:
@@ -461,6 +461,9 @@ Having just the one superclass is where we have the **specialisation/generalisat
 - **IS-A test**- from the direction of the child to the parent ask if they are a a valid relationship from them to the parent, eg a parent Employee and subclass Salaried Employee- IS A Salaried Emploee AN EMployee, asnwer is YES so valid relationship then with the Employee as the parent and Salaried EMployee as Subclass because the EMployee could be Salaried or Hourly
 - 
 
-
-
+## Transformation of Union Step 9 types
+- When the Union (Category) has superclasses with different keys, need to make a new key attribute called **surrogate key** when creating the relation corresponding to the union/categroy.
+- Cannot use the defining keys from any of the subclasses because each one is different and cannot be used exclusively to identifiy all entities in the union
+- The union/category becomes an entity with the surrogate key and the surrogate key becomes the FK in the defining superclasses
+- If defining superclasses have the same key then that key becomes the PK of the union/category
 ## Mapping EER Model constructs to relations
