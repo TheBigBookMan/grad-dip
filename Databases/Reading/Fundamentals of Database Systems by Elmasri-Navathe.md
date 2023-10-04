@@ -515,3 +515,5 @@ Relational tables have multiple attributes and the table itself is what creates 
 	- **Partial Dependency**- This is where the right hand side of the FD is only dependent on some of the valiues on the left hand side. eg LecturerId, SubjectCode -> LecturerName- we can know the LecturerName by ONLY knowing the LecturerId and not knowing the SubjectCode
 	- **Transitive Dependency**- When you have two attributes and then a third intermediary attribute that links the two. If we want to find the Tutor and we have the lectureId but they are not related then eg LecturerId -> SubjetCode (need the LectureId to get SubjectCode) SubjectCode -> Tutor (Need the SubjectCode to get the Tutor) then transitively LecturerId -> Tutor (we can use the LceturerId to get the Tutor) = Tutor is transitively dependent on LecturerId
 
+## Normalisation using Functional Dependencies (FDs)
+Functional dependencies can be used to deicide whether a shcema is well designed
