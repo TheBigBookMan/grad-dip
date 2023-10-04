@@ -408,8 +408,8 @@ Transforming the relational model into an ER diagram of relational tables
 
 ## Steps to creating transofrmation from conceptual to ER diagrams- 7 step mapping algorithm
 Don't need to consider children entities in step 1, only until step 8 start looking into the children entities and their relationships.
-1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database. Underline the primary key. Only add the simple attributes (no multivalue or composite etc)
-2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner0entity type** and the partial key of the weak type (if it has one) (COMPOSITE KEY). Make the primary key of te weak entity also the foreign key from the owner-entity
+1. **Mapping of regular entity types**- find the **strong entity types** (ones that have primary keys) and start to identify which key would be the primary- (may be an individual key or composite key). These are the main entities that represent the core conceptual objects in the database. Underline the primary key. Only add the simple attributes (no multivalue or composite etc). NOT CHILD ENTITIES, this is the reason why coming back to step 2 is important after step 9 because you have formed new regular entities by looking at cardinality, union, specilisation and coming back here is to find new entities
+2. **Mapping of weak entity types**- the **weak entity types** (do not have keys) and find the relation, create the relation primary key to be the **owner-entity type** and the partial key of the weak type (if it has one) (COMPOSITE KEY). Make the primary key of te weak entity also the foreign key from the owner-entity
 3. **Mapping of binary 1:1 relationship types**- 3 possible approaches to create a 1:1 relationship type: Try and pick the side that would have more rows in the database as the one that will have their primary key as the FK as it will change way less rows than the other
     1. **Foreign key approach**- the entity that is not dependent on the other entity will be chosen to have its main attributes as the relation attribute because it is not reliant on another entity for existence. Having the foreign keys in the relation. Entity that is total pariticipation indluces the foreign key which is the primary key of the other relation
     2. **Merged relation approach**- mergin the two entity types and the relationship into a single relation, would need both participants being total
@@ -462,12 +462,13 @@ How to choose which option to go with in step 8 of the transformation, good to r
 	- If alot of local attributes (attributes only at that subclass level) then going for the single table option (8C or 8D) might not be good because you would get a lot of NULL values (as they are referred to NULL if that tuiple instance is not related to the that specific subclass attributes)
 	- If a lot of superclass attributes then not good idea to go wuith 8B as end up copying attributes across the subclass tables as well as if the superclass has relationships with other entities they need to be considered as well
 
+- **IS-A test**- from the direction of the child to the parent ask if they are a a valid relationship from them to the parent, eg a parent Employee and subclass Salaried Employee- IS A Salaried Emploee AN EMployee, asnwer is YES so valid relationship then with the Employee as the parent and Salaried EMployee as Subclass because the EMployee could be Salaried or Hourly
+	- Always asking the IS-A question from a child to parent in a union should always have response YES and from parent to child NO 
 ## Union Relationship
 Having just the one superclass is where we have the **specialisation/generalisation** but when there is multiple superclasses that don't have any relation, but we want to create a subclass from multiple superclasses is called a **Union type/category**.
 - Category member must exist in a least one of its superclasses
 - Represented in the diagram by a 'U' inside the circle that connects the subclass with multiple superclasses (similar to 'd' or 'o' in specilisations)
-- **IS-A test**- from the direction of the child to the parent ask if they are a a valid relationship from them to the parent, eg a parent Employee and subclass Salaried Employee- IS A Salaried Emploee AN EMployee, asnwer is YES so valid relationship then with the Employee as the parent and Salaried EMployee as Subclass because the EMployee could be Salaried or Hourly
-- 
+- In a specialisation usually the subclasses would inherit the primary key from the superclass, while in the union that cannot happen as the superclasses would have their own unique keys that would cause confusion. Union create the surrogate key which is their own PK and put that PK as a FK in the superclasses
 
 ## Transformation of Union Step 9 types
 - When the Union (Category) has superclasses with different keys, need to make a new key attribute called **surrogate key** when creating the relation corresponding to the union/categroy.
@@ -476,5 +477,13 @@ Having just the one superclass is where we have the **specialisation/generalisat
 - If defining superclasses have the same key then that key becomes the PK of the union/category
 
 ## once finished wih step-9 then go step2-7 again to tidy up, rinse and repeat
+Because in step 1 you are finding the regular entities (ones that dont have children) amd then once found cardinality, specialisation and union, there will be clearly entitites without children as the entities have been made, so repeat is important as the diagram has evolved from children entitties into regular entitities.
+- After step 8 you find out about the cardinality and children because you are looking at those concepts
+- So even if tghere is an entity that has a relationship for step 4, if it also has union or speiclicastion it cannot be done because it is not at that step yet, so this is why important t ogo through multiplte times as things clear up
 
-## Mapping EER Model constructs to relations
+## Final step of transformation
+HAVE TO LIST THE FINAL TABLES
+- must write down the whole procedure of transforming the tables to show steps, so its important to show the finbal tables as its the final product
+
+
+
