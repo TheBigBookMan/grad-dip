@@ -486,4 +486,32 @@ HAVE TO LIST THE FINAL TABLES
 - must write down the whole procedure of transforming the tables to show steps, so its important to show the finbal tables as its the final product
 
 
+# Chapter 14- Basics of Functional Dependencies and Normalization for Relational Databases
+# Module 3- Normalisation and Data Manipulation using Relational Algebra
+Two approaches to database deisgn- top-down (ER/EER diagram listed above) and bottom-up (normalisation)
+Bottom-up uses user views and nomralisation of these user-views (user registration form, student enrolment form) to come up with relatonal tables
+
+## Normalisation 
+- **Normalisation**- process that produces set of relational tables that do not contain any problems (anomalies)
+- Usually best for when there is not a text description of the businesses needs, can look at things like forms or some other sort of way that the data has prebviously been stored and described
+- **user-view** is some sort of perspective that users have had when interacting with the companies data (filling out a form for something the company does eg filling a form to hire a care at a car hire shop- can see the important needed data on that form)
+- **Normalisation steps**- 
+	1. Represent all user views as a collection of relations (eg forms, reports)
+	2. Normalise these relations, user view by user view
+	3. Combine relations that have exactly the same primary keys
+
+## Functional Dependencies
+Relational tables have multiple attributes and the table itself is what creates the relation between each attribute
+- **Functional dependency (FD)**- Expressed using a left-hand side, right-hand side and arrow. There can be multiple attributes on either side and these determine the importance of dependency. If there ar emultiple on the left hand side then that means to find out the right hand side attributes we must know the left hand side first. EmployeeID - > EMployeeName
+	- This means that if there is an EmployeeId, there is an EmployeeName
+	- This means that the EmployeeName is determined by the EmployeeId
+	- This means that the EmployeeName is uniquely determined by the EmployeeeId
+	- This means that he EmployeeName depends on the EmployeeId
+	- It would not work if it was EmployeeName - > EmployeeID, because in any set of instances, the EmployeeName is not unique to be able to determine someones EmployeeId, while an EmployeeId is unique to then be able to identify the EmployeeName
+	- EmployeeId determines the value of EmployeeName, the expression then is a **valid functional dependency**
+	- Both EmployeeId and EmployeeName are made up of attributes in a **functional dependency** 
+- Different types of functional dependencies
+	- **Full Dependency**- The right hand side of the FD depends on the entire left hand side, all of the left hand side attributes need to be known to be able to know what the values iof the right hand side attributes are, eg LabTime, SubjetCode -> Tutor- here we need to know both LabTime AND SubjectCode to be able to determine what the value of the Tutor is
+	- **Partial Dependency**- This is where the right hand side of the FD is only dependent on some of the valiues on the left hand side. eg LecturerId, SubjectCode -> LecturerName- we can know the LecturerName by ONLY knowing the LecturerId and not knowing the SubjectCode
+	- **Transitive Dependency**- When you have two attributes and then a third intermediary attribute that links the two. If we want to find the Tutor and we have the lectureId but they are not related then eg LecturerId -> SubjetCode (need the LectureId to get SubjectCode) SubjectCode -> Tutor (Need the SubjectCode to get the Tutor) then transitively LecturerId -> Tutor (we can use the LceturerId to get the Tutor) = Tutor is transitively dependent on LecturerId
 
