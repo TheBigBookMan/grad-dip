@@ -516,4 +516,49 @@ Relational tables have multiple attributes and the table itself is what creates 
 	- **Transitive Dependency**- When you have two attributes and then a third intermediary attribute that links the two. If we want to find the Tutor and we have the lectureId but they are not related then eg LecturerId -> SubjetCode (need the LectureId to get SubjectCode) SubjectCode -> Tutor (Need the SubjectCode to get the Tutor) then transitively LecturerId -> Tutor (we can use the LceturerId to get the Tutor) = Tutor is transitively dependent on LecturerId
 
 ## Normalisation using Functional Dependencies (FDs)
-Functional dependencies can be used to deicide whether a shcema is well designed
+Functional dependencies can be used to deicide whether a shcema is well designed, **anomalies** which are problems arise when poorly dfesigned data has queries on them
+- **Insertion anomaly**- If there is an etity with an attribute that can be NULL but is also a primary key then this is an entity integrity constraint and an example of an **insertion anomaly** because trying to insert something that is NULL and a PK is invalid
+- **Update anomaly**- If you are trying to update a specific value for a row but that value change doest change consistently if there are multiple rows with that same initial value then this is an **update anomaly**
+- **Deletion anomaly**- If a row is deleted and it has a primary key as a foreihn key in aother row, then that row as well could be deleted which is a problem, this is a **deletion anomaly**
+
+## Removal of anomlaies
+Decomposing relations can remove anomalies to result into  **normal forms**
+- **Major/main normal forms**- **First (1NF)**, **Second (2NF)**, **Third (3NF)** and **BoyceCodd (BCNF)**. 
+- **Higher/advanced normal forms**- **Fourth (4NF)**, **Fifth (5NF)**
+- Forms are increasingly strict (more errorfree), **advanced forms** are nased on more complex kinds of dependencies and functional dependencies
+- Because 4NF and 5NF rarely have problems and industry don't need to worry about highest possible NF for practical reasons, just use 3NF and BCNF
+
+## Normal Forms defined
+Increasingle less errors as the number increases
+- **Unnormalised form**- Put every available piece of information in that user-view into one single relation, this is **UNF**
+- **First Normal Form**- 
+	- Relation is 1NF only if there are no repeating groups (meaning that data is constantly repeated in columns eg item1, item2, item3 etc), have each row to determine the item, 
+	- PK has been identified for the relation, 
+	- all attributes are functionally dependent on the entire key, or part of the key.
+	- Any row that doesnt have a PK violates 1NF. 
+	- Cannot use row order to determine information
+	- Mixing data types in a column is invalid
+- **Second Normal FOrm**- 
+	- A relation is 2NF if only the relation is in 1NF(already satisfies the requirements of the 1NF) 
+	- and all non-key attributes are fully functionally dependent on the entire key (ie if there were any partial dependency in 1NF, its been removed (partial dependency is if the attribute can be recognised through only part of the primary keys)). 
+	- If an attribute is not fully dependent (needs both PK to be recognised) then it will be removed into its own table
+- **Third Normal Form**-
+	- A relation is 3NF if the relation is in 2NF (satisfies all criteria of 2NF), all transitive dependencies on the PK have been removed (note to quickly identify transitive dependency in a relation is to look for functional dependencies between non-key attributes) so if a pair of attributes depend on each other and none of them are part of the key, they have a transitive dependency between them, and the dependence must be removed for table to be in 3NF
+	- Move to a new table
+	- Third Normal FOrm- Every non-key atribute should depend on the key
+	- Boyce-Codd Normal Form- Every attribute in a table should depnd on the key
+- **Remove dependency**- decompose a relation to multiple relations so the partial/transitive dependencies dont exit anymore in the new formed tables
+
+## Normalisation Process
+1. Identifying UNF
+	- **Unnormalised form**- all attributes in one relation that is in the user-view
+	- **Repeating group**- when an instance of a relation can be repeated within a single isntance of an entity (a order number and customer number can then represent multiple orders (item, quantity, date) so therefore the orders are the repeating group). They are represented by being in brackets in the UNF- ORDER(ORder#, Customer#, CustpomerName, CustomerAddress, (DateOrdered, ProductName, Quantity))
+	- Not a requirement to identify PK
+2. Transform to 1NF
+	- Have to remove the repeating group and identify the PK
+	- So have two separate tables ORDER(<u>Order#</u>, Customer#, CustomerNae, CustomerAddress) and ORDER_PRODUCT(*<u>Order#</u>FK*, <u>Product#</u>, ProductName, Quantity)
+	- So to remove the repeating group, have to create a new table and have the PK from the other table as the PK (along with the PK for new table) and FK
+	- This is holding up referential integiry constraints as well as entity integrity constraints
+	- Identify the **Insert**, **Updaet** and **Delete** anomaloies
+3. Transform to 2NF
+	- 
