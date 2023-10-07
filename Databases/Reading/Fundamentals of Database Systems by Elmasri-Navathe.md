@@ -561,4 +561,16 @@ Increasingle less errors as the number increases
 	- This is holding up referential integiry constraints as well as entity integrity constraints
 	- Identify the **Insert**, **Updaet** and **Delete** anomaloies
 3. Transform to 2NF
+	- Need to make sure that all non-key attriutes are fully dependent on the entire key (could be two primary keys (composite))
+	- If they are only dependent on one part of the key they are **partially dependent**
+	- Need to create a new relation that consists of parts of the keys (which became the PK of the new relation) and all non-key attributes that are dependent on that partial key
+	- Separating ORDER_PRODUCT(*<u>Order#</u>FK*, <u>Product#</u>, ProductName, Quantity) into two relations- PRODUCT(<u>*Product#*</u> , ProductName, price) ORDER_PRODUCT(<u>*Order#*</u>, <u>*Product#*</u>, Quantity)
+	- The Product table now has the attributes that had dependency on Product# PK
+	- Don't need to keep the attributes in multiple ables
+	- If the table has one PK and the attributes are full-dependency on it then don't need to break it down more
+4. Transform to 3NF
+	- Cannot have transitive dependencies- where a non-key attribute is dependent on another non-key attribute
+	- ORDER(<u>Order#</u>, Customer#, CustomerNae, CustomerAddress) changes into  new relation- CUSTOMER(<u>Customer#</u>, CustoerName, CustomerAddress) and ORDER(<u>Order#</u>, <u>*CustomerName*</u>, CustomerName, OrderDate)
+	- So the Customer became a new relation and the Customer# will now be a PK and FK in the Order relation
+	- CUSTOMER table now has the attributes that had dependency on CUstomer#
 	- 
