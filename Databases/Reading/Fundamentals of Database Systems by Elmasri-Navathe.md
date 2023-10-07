@@ -550,6 +550,7 @@ Increasingle less errors as the number increases
 - **Remove dependency**- decompose a relation to multiple relations so the partial/transitive dependencies dont exit anymore in the new formed tables
 
 ## Normalisation Process
+When normalising multiple user-views, focus on ONE user-view at a time and at the end combine the tables that have the same PK
 1. Identifying UNF
 	- **Unnormalised form**- all attributes in one relation that is in the user-view
 	- **Repeating group**- when an instance of a relation can be repeated within a single isntance of an entity (a order number and customer number can then represent multiple orders (item, quantity, date) so therefore the orders are the repeating group). They are represented by being in brackets in the UNF- ORDER(ORder#, Customer#, CustpomerName, CustomerAddress, (DateOrdered, ProductName, Quantity))
@@ -574,3 +575,4 @@ Increasingle less errors as the number increases
 	- So the Customer became a new relation and the Customer# will now be a PK and FK in the Order relation
 	- CUSTOMER table now has the attributes that had dependency on CUstomer#
 	- IMPORTANT to identify the non-key attributes that are related where one is needed to identify another (something like a code/number to identify a name/address etc) as this is transitive- create separate relation
+
