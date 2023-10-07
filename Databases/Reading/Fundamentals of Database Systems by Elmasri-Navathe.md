@@ -573,4 +573,4 @@ Increasingle less errors as the number increases
 	- ORDER(<u>Order#</u>, Customer#, CustomerNae, CustomerAddress) changes into  new relation- CUSTOMER(<u>Customer#</u>, CustoerName, CustomerAddress) and ORDER(<u>Order#</u>, <u>*CustomerName*</u>, CustomerName, OrderDate)
 	- So the Customer became a new relation and the Customer# will now be a PK and FK in the Order relation
 	- CUSTOMER table now has the attributes that had dependency on CUstomer#
-	- 
+	- IMPORTANT to identify the non-key attributes that are related where one is needed to identify another (something like a code/number to identify a name/address etc) as this is transitive- create separate relation
