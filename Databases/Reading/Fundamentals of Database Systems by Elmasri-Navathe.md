@@ -598,4 +598,24 @@ This **expression** has two **operators** a **projection** (π) and **selection*
 	- English- Select the names of the students who suburb is Bundoora
 	- Relational Algebra- πName(σSuburb='Bundoora'(Student))
 	- So it will select rows that have the attribute of Suburb value as Bundoora and from those rows it will select the tuple value for the Name attribute and return the values
-- **Union**- 
+- **Union (U)**- Combining the tuples from one relation with another to produce a third relation, the two relations have to be compatible to do so. This is adding the first relation with the second relation when the columns are the same, the rows are being combined together, no duplicates.
+	- **π SID (σ SNo=21 (Takes)) U π SID (σ SNo=29 (Takes))** 
+	- Above in the first relation it gets the StudentNomber equal to 21 from the Takes table and then gets the SID of that tuple row, while in the second relation it gets the StudentNumber equal to 29 from the Takes relation and then gets the SID of that tuple row. The union then combines these two SID column rows together to form a relation that contains both of the SIDs
+- **Intersection (∩)**- Where a third relation is created between an intersection of two other relations (that have to be compatible like a union), the third relation contains common tuples
+	- Similar to the Union, in that it has two compativle relations, but the Intersection will find the common tuples and then the third relation will have the resulting similar tuples
+	- **π SID (σ SNo=21 (Takes))** ∩ **π SID (σ SNo=23 (Takes))**
+	- In above the relation1 will look for the SubjectNumber of 21 in the Takes relation and then gets the SIDs (1108, 8507) and the second relation looks for SUbjectNumber of 23 in Takes relation and gets the SIDs (1108) and then creating the intersection the third relation will just have the SID of 1108 because that is the common one between the two relations
+- **Difference (-)**- Where the third relation is the difference between relation 1 and 2, so the tuples that occur in relation 1, but not in relation 2- they both must be union compatible (so matching attribute columns)
+	- so if have Names(Ben, Andy, Kieran) in relation 1 and relation 2 Names(Andy, Justin, Kieran) then the third relation would be Names(Ben)
+	- **π Name(σ Group='BigBoy'(FriendGroups))** - ** **π Name(σ Group='NotBig'(FriendGroups))** ** 
+- **Cartesian Product (X)**- This is where every tuple from relation 1 is combined with the tuple from relation 2 even if they are not union compatible.
+	- This causes a lot of useless data as combining relations together with every possible attribute combination makes no sense sometimes
+	- Names(Ben, Andy, Kieran) and Numbers (1, 3, 5) = tuple1(Ben, 1) tuple2(Ben, 3) tuple3(Ben, 5) tuple4(Andy, 1) tuple5(Andy, 3) etc
+- Join ([X]) - This joins the two relations together where there is a compatible column and provides all the tuples from both relations that are related to the condition
+	- πName (σ Course = '113'(Enrol) [X] SID = ID Student )
+	- This is first getting the tuples that have the Course = 113 in the Enrol table, and then joining that relation to the tuple in the Student table where the SID in the first relation is equal to the ID in the second relation of table Student, it has then all the tuples from both relations where the SID from table Enrol is matched with the ID ion table Student, it then looks for the Name in those tuples
+	- Think of it like joining two tables together based on the common attribute and then having all the tuples from those two relations based on the condition, and then you can select the one attribute that you want or multiple
+- **Outer Joines**- Similar to the natural join (above) but instead of listing all the matching tuples of the join condition, it will list both matched and unmatched- results in NULL values for unmatched
+	- **Left Outer Join ([=X]) ** - Retains the unmatched tuples from left hand side relation of opoeratoer
+	- **Right Outer Join ([X=])**- Retains the unmatched tuples from the right hand side relation of operatior
+	- **Full Outer Join ([=X=])**- Retains unmatched tuples from both sides of the operator
