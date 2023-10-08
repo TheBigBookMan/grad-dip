@@ -576,3 +576,26 @@ When normalising multiple user-views, focus on ONE user-view at a time and at th
 	- CUSTOMER table now has the attributes that had dependency on CUstomer#
 	- IMPORTANT to identify the non-key attributes that are related where one is needed to identify another (something like a code/number to identify a name/address etc) as this is transitive- create separate relation
 
+# Data Manipulation Using Relational Algebra
+Wanting to be able to get specific tuples from a row you need to build a query, relqational algebra is the maths behind the queries as the query needs to query a table or multiple tables to return information
+Each operation (algebra operation forms a relational algebraic expression that also results in a relation) takes a relation (two relations sometimes) as input and produces a relation as output
+**π Name (σ Suburb=’Bundoora’ (Student))**
+This **expression** has two **operators** a **projection** (π) and **selection** (σ) and they take thje Student relation as the **input** and then gives back the **output** (which is also a relation (table))- so in this case it would return the relation with the column of Name with the Names as rows that match to the Suburb='Bundoora'
+- **Set** in relational algebra is a table that has no values that are the same
+
+## Relational Algebra Operations
+- **Projection (π- pi)**- An operation that selects specified attributes from a relation, it is classified as a **Vertical subset** of a relation
+	- English- Find the names of all the students from a database
+	- Relational Algebra- πName(Student)
+	- THe pi symbol is signifying that we are making a projection with the Name being the spot where you want the attributes you are choosing to return, with the table that you want the attributes to be selected from within the ()
+	- **Projection** removes any duplicate tuples that are a result from the projection- HOWEVER if there are duplicate tuples within one attribute but the corresponding tuple has a different attribute as well, then both would return eg the **projection** πSubjectName, Course (Subject) outputs- (tuple1(Algebra, Maths) tuple2(Algebra, CompSci)) both would return if wanting to get the attribute SubjectName and Course, but if just wanting to get the SubjectName  then it would return (tuple1(Algebra)) because the tuple2 would be (Algebra) anmd thats a repeat from that relation
+- **Selection (σ- sigma)**- An operation that is classified as a **Horizontal subset** of a relation, it implies creating a condition on which the returning tuple must be met to be returned
+	- English- Select names that are equal to Ben from student database
+	- Relational Algebra- σName = 'Ben'(Student)
+	- This returns all the tuples that would have the attribute of Name equal to Ben, this returns all the attributes, eg (Name='Ben', age=27, course='Grad dip'), this returned the other attributes along with the Name as it is the whole tuple
+	- Selection can also remove duplicates if every tuple in the two rows are exact same
+- **Projection and Selection**- The  selection will identify the rows that match the condition and then the projection will identify the tuples value that have that attribute. It is important about order of operations, so expression in the brackets is performed first and then outside of brackets. 
+	- English- Select the names of the students who suburb is Bundoora
+	- Relational Algebra- πName(σSuburb='Bundoora'(Student))
+	- So it will select rows that have the attribute of Suburb value as Bundoora and from those rows it will select the tuple value for the Name attribute and return the values
+- **Union**- 
