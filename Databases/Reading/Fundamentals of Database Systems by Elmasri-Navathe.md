@@ -619,3 +619,4 @@ This **expression** has two **operators** a **projection** (π) and **selection*
 	- **Left Outer Join ([=X]) ** - Retains the unmatched tuples from left hand side relation of opoeratoer
 	- **Right Outer Join ([X=])**- Retains the unmatched tuples from the right hand side relation of operatior
 	- **Full Outer Join ([=X=])**- Retains unmatched tuples from both sides of the operator
+
