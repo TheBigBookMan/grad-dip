@@ -544,6 +544,7 @@ Increasingle less errors as the number increases
 	- If an attribute is not fully dependent (needs both PK to be recognised) then it will be removed into its own table
 - **Third Normal Form**-
 	- A relation is 3NF if the relation is in 2NF (satisfies all criteria of 2NF), all transitive dependencies on the PK have been removed (note to quickly identify transitive dependency in a relation is to look for functional dependencies between non-key attributes) so if a pair of attributes depend on each other and none of them are part of the key, they have a transitive dependency between them, and the dependence must be removed for table to be in 3NF
+	- If you find two non-key attributes and one is dependent on the other then that will be a transitive dependency and needs to be moved to a new relation
 	- Move to a new table
 	- Third Normal FOrm- Every non-key atribute should depend on the key
 	- Boyce-Codd Normal Form- Every attribute in a table should depnd on the key
