@@ -464,6 +464,11 @@ How to choose which option to go with in step 8 of the transformation, good to r
 
 - **IS-A test**- from the direction of the child to the parent ask if they are a a valid relationship from them to the parent, eg a parent Employee and subclass Salaried Employee- IS A Salaried Emploee AN EMployee, asnwer is YES so valid relationship then with the Employee as the parent and Salaried EMployee as Subclass because the EMployee could be Salaried or Hourly
 	- Always asking the IS-A question from a child to parent in a union should always have response YES and from parent to child NO 
+
+## Finding Cardinality
+- **Union Cardinality**- when the entity is a relationship to itself (Person entity can be a parent to itself (parent and child are both Person)) and this would just look at (how many children can a parent have M, how many parents can a child have M)
+- **Ternary Cardinality**- When there are three relations in the relationship, just use two to find the cardinality of the other one (do this for each relation of the ternary)- (Employee and Product- how many Customers can be served by the  Employee to buy the Product M, Product and Customer- how many Products can a Customer buy M, Customer and Employee- How many customers can be served by an employee M). 
+- **Ternary Cardinality 1:1:M**- if there are two relations that are 1 cardinality then break down into two or three binary relationships to make it easier and ternary might not be the best answer
 ## Union Relationship
 Having just the one superclass is where we have the **specialisation/generalisation** but when there is multiple superclasses that don't have any relation, but we want to create a subclass from multiple superclasses is called a **Union type/category**.
 - Category member must exist in a least one of its superclasses
@@ -548,10 +553,13 @@ Increasingle less errors as the number increases
 	- Move to a new table
 	- Third Normal FOrm- Every non-key atribute should depend on the key
 	- Boyce-Codd Normal Form- Every attribute in a table should depnd on the key
+		- If an attribute that is non-key can also identify a key attribute then that breaks the boyce-codd normal form and to solve it you break the relation into two relations- one where the non-key (but has dependency) is the PK and the attribute that was the key (was dependend) and that becomes a non-key attribute. The PK in that new relation is now the FK and PK in the other relation with another key attribute
+		- very rare to have this problem though
 - **Remove dependency**- decompose a relation to multiple relations so the partial/transitive dependencies dont exit anymore in the new formed tables
 
 ## Normalisation Process
 When normalising multiple user-views, focus on ONE user-view at a time and at the end combine the tables that have the same PK
+- If multiple user-view,s treat each one separately when making the normal form process. Look for tables that have the same primary key and combine them into one table by getting the tbale with the most information
 1. Identifying UNF
 	- **Unnormalised form**- all attributes in one relation that is in the user-view
 	- **Repeating group**- when an instance of a relation can be repeated within a single isntance of an entity (a order number and customer number can then represent multiple orders (item, quantity, date) so therefore the orders are the repeating group). They are represented by being in brackets in the UNF- ORDER(ORder#, Customer#, CustpomerName, CustomerAddress, (DateOrdered, ProductName, Quantity))
@@ -576,6 +584,7 @@ When normalising multiple user-views, focus on ONE user-view at a time and at th
 	- So the Customer became a new relation and the Customer# will now be a PK and FK in the Order relation
 	- CUSTOMER table now has the attributes that had dependency on CUstomer#
 	- IMPORTANT to identify the non-key attributes that are related where one is needed to identify another (something like a code/number to identify a name/address etc) as this is transitive- create separate relation
+	- Sometimes dont need to create an extra table with both PK from the deprecated tables, can just have the PK of one in the other- look at the cardinality, if M:N then create the extra table if 1:M then the PK of the 1 as a FK in the M
 
 # Data Manipulation Using Relational Algebra
 Wanting to be able to get specific tuples from a row you need to build a query, relqational algebra is the maths behind the queries as the query needs to query a table or multiple tables to return information
