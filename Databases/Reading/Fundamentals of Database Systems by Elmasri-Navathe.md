@@ -474,6 +474,8 @@ Having just the one superclass is where we have the **specialisation/generalisat
 - Category member must exist in a least one of its superclasses
 - Represented in the diagram by a 'U' inside the circle that connects the subclass with multiple superclasses (similar to 'd' or 'o' in specilisations)
 - In a specialisation usually the subclasses would inherit the primary key from the superclass, while in the union that cannot happen as the superclasses would have their own unique keys that would cause confusion. Union create the surrogate key which is their own PK and put that PK as a FK in the superclasses
+- Use over a specialisation when each of the superclasses has a unique ID 
+- Also use when each of the superclasses can NOT be part of the child, so the IS-A rule
 
 ## Transformation of Union Step 9 types
 - When the Union (Category) has superclasses with different keys, need to make a new key attribute called **surrogate key** when creating the relation corresponding to the union/categroy.
