@@ -632,3 +632,86 @@ This **expression** has two **operators** a **projection** (π) and **selection*
 	- **Right Outer Join ([X=])**- Retains the unmatched tuples from the right hand side relation of operatior
 	- **Full Outer Join ([=X=])**- Retains unmatched tuples from both sides of the operator
 
+# Structured Query Language (SQL)
+Standard language to perform CRUD with relational databases
+Different DBMS use different versions of SQL (Mysql, postgresql, oracle) and this can be a bit difficult because some write their queries with diifferent syntax
+- **Data Definition Language (DDL)**- Create tables with the proper structure
+- **Create Table command**- "CREATE TABLE tableName
+						(field1 dataType constraint check,
+						field2 dataType constraint check,
+						PRIMARY KEY (uniqueField),
+						FOREIGN KEY(foreingField) REFERENCES associatedTable(foreginField)
+						);"
+	- **Constraint**- are checks for things like NOT NULL
+	- **Check**- are more checks for specific conditions like cant be less than X number etc- basically give a **set** of values that the value for this data HAS TO BE- write like "gender VARCHAR2(10) CHECK (gender IN ('Male', 'Female', 'Other'))"- the IN basically means Male OR Female OR Other
+	- **Foreign Key**- the foreign key (primary key from another table) the table with it as the PK has to have been created already so it can be referred in the new table and hold up referential integrity. Spelling of the FK can be different but it must reference the same spelling
+	- **Primary Key**- WHen creating a composite key for the primary key in the CREATE TABLE command just need to have them together PRIMARY KEY (firstKey, secondKey)- same as FK if the PK is also a FK from another table that table MUST exist before this table using their FK as a PK for referential integrity
+		- MUST MAKE THE PRIMARY KEYS NOT NULL CONSTRAINT SO IMPORTANT!!!
+
+## Data Types
+- **VARCHAR2**- basically a string max 4000 chars, you can set a limit VARCHAR(24)
+	- VARCHAR2- the 2 NEED TO USE because VARCHAR has a limitation with nulls and empty strings MUST DO!!!!!!!
+	- Must specify the length when using VARCHAR2
+	- No trailing whitespaces so the length of the string will take up that amount based on amount of characters, so if you had VARCHAR(20) and the string was 'Ben' it would still take up 3 spaces
+-  **Char**-  When have a very simple explanation like a singular character use **Char(1)** eg Gender(M, F, U, B)
+	- Char would take up the amount specified so same example as above CHAR(20) and value is 'Ben' it would still take up 20 spaces 
+- **NCHAR**- Supports 16 digit binary character codes, stuff for things like Japanese alphabet and other long things
+- **LONG**- Store up to 2GB of variable length data
+	- Each table cna only have ONE LONG field in the table
+- **NUMBER**- Precision- number of digits on either side of the decimal point. Scale- number of digits on right side of the decimal point
+	- Defined like variableName NUMBER (precision, scale)
+	- **INTEGER**- whole number with no digits to the right so 0 scale so when identifying an integer number for the datatype it would be "variableName NUMBER (2)" where the 2 represents precision but no scale. Singular number in the bracket wll immediately be an integer. Writing NUMBER (2) means it can be 2 digits as a whole max so (99) is the maximum number that the Number can be because precision is 2 which is max amount of numbers in the number
+	- **Fixed point numbers** The precision defines how many numbers are in the NUMBER and the scale defines where the split between the decimal will be with the number indicating how many on the right of the decimal, eg (7, 3) 7(precision) 3(scale) so 7 digits with 3 of those digits on the right of the decimal (9999.999)
+	- **Floating Point numbers**- Precision and scale are omitted, contains a variable number of decimal places
+- **DATE**- started 1/1/4712BC to 12/31/4712AD lel
+	- default date DD-MON-YYYY (05-MAR-2016) different databases can have different default dates
+	- can also store time values- default time format HH:MI:SS A.M.
+	- If notime given on date insert the default value is 12:00:00 A.M.
+	- If no date value is given when it is inserted the default date is first day of current moneth
+	- the two queries to use for dates are to_date() and to_char()
+
+## Integrity Constraints
+- **Value constraints**- restricts data values that can be inserted into a field
+	- Types- the CHECK condition- eg gender CHAR(1) CHECK((gender = 'M' OR (genfer = 'F')))- to make sure that any value going into the field of gender that is a CHAR of 1 length has to be either an M or an F
+	- NOT NULL- specifiying that the field cannot be null when entering something name VARCHAR(30) NOT NULL
+
+## Drop Commands
+Deleting a table
+- **Restrict**- specified then the table can only be dropped if it is not referenced by any other table
+- **Cascade**- is specified then all references/dependents will also be dropped- like a domino effect where the table is dropped then wherever the PK was a FK it will be dropped in there as well (the FK will be dropped)
+- **Recycle Bin**- SHOW RECYCLEBIN to see the recyclebin if you want to maybe bring the dropped tbale back to life
+- **Retrieve table**- FLASHBACK TABLE tableName TO BEFORE DROP- brings the table back to life from the recyclebin
+- **Delete table**- PURGE TABLE tableName- to permanently delete the table from the recycle bin
+
+## Data Manipulation Language Statements (DML)
+- **Insertion**- can do two different methods to insert
+	- This is for when you are inbserting all the values into the table- 
+		- "INSERT INTO tableName
+			  VALUES (col1 value, col2 value etc...)"
+	  - THis is for when inserting only some values into the table, the order of fields is relevant to the order of the values inserted so MAKE SURE IN ORDER, leaves the other fields as NULL if they are not added in the query=
+		  - "INSERT INTO tableName (field1, field2)
+			  VALUES (col1 value, col2 value etc...)"
+- **Insertion with Date**- if inputting date data in that does NOT follow the formatted date 'dd-Mon-yyyy' and you want it to be a specific date format
+	- **to_date()**- Takes a string and converts it into the DATE format to_date('01/01/2020', 'DD/MM/yyyy') first arg takes the date string and second arg is the format you want- "INSERT INTO E
+								VALUES ('E1', to_date('01/01/2020', 'dd/mm/yyy'));"
+	- **to_char()**- the opposite of the to_date where it turns a date into a string "SELECT DOB FROM tableName WHERE field = 'condition'" it would return the date in the default format but if you want to get a specific part of the date like the month you could use to_char(). to_char(DOB, 'Mon') fuirst arg is the field and second is the format (this case is name of month)
+- **Select**- "SELECT attribute FROM tableName WHERE attribute = 'condition';"
+	- Many **operators** to determine the WHERE clause condition-
+		- = equals
+		- < less than
+		- > greater than
+		- <= less than or equals
+		- >= greater than or equals
+		- <> not equal to
+		- LIKE wildcard- can say you want a specific match of something so can say '%en%' this means any values that contains the substring of 'en' with as many chars on either side- 'r%' means must begin with r and '%i' means must end in i- WHERE firstName LIKE '%en%'- return rows where firstname has the 'en' in the name- case sensitive
+			- also has NOT LIKE '%k%'- meaning no character can be a k- inverse of the wildcard
+		- IN test for in an enumerated list- WHERE deptName IN ('Comp Sci, Physicas') so it has to be in those values- can do NOT IN as well so its the inverse
+		- OR becomes an either condition- WHERE name = 'ben' OR name = 'adam'; name can be either adam or ben
+		- AND same as OR but returns both of the rows that match the values- WHERE firstname = 'ben' and lastname = 'gary'- get the 2 rows where one has firstname of ben and the row of lastname equal to gary
+	- SQL does not remove duplicates, can explicitly ask to remove- SELECT DISTINCT employee WHERE firstname= 'ben'-
+	- **Order by**- SELECT employeNo, LastName FROM Employee ORDER BY LastName- orders the return values to have descending (defualt ascending) and DESC at end of query
+	- **No Grouping**- **Aggregate function**- 
+		- **count**- returns the number of rows- SELECT count(\*\) FROM Employee, the \*\ returns all the rows, can do SELECT count(deptNum) FROM EMployee- this stil lreturns same amount because it would be same amount of rows, unless the value is empty then that row will not be returned
+	- **Grouping**- Group By-
+		- **Group by**- SELECT deptNum, count(\*\) FROM EMployee GROUP BY deptNumber"- this will return the number of groups based on the condition, so for each deptNumber that a row shares that will count for that number group and it will return a table that has the deptNumber name and the number of instances it has
+		- **Restrict group by**- SELECT deptNumber, count(\*\) FROM EMployee GROUP BY deptNumber HAVING count(\*\)>2; so this will return whatever group has more count numbers than 2, so its kind of the WHERE clause for the returned value table of the counts, WHERE clause targets individual rows, where HAVING targets groups- can combine both to really restrict down what searching for- WHERE clause saying which rows will be counted based on the condition and HAVING determines which group will be returned back based on the condition
