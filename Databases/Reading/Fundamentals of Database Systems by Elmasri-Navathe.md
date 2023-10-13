@@ -710,8 +710,44 @@ Deleting a table
 		- AND same as OR but returns both of the rows that match the values- WHERE firstname = 'ben' and lastname = 'gary'- get the 2 rows where one has firstname of ben and the row of lastname equal to gary
 	- SQL does not remove duplicates, can explicitly ask to remove- SELECT DISTINCT employee WHERE firstname= 'ben'-
 	- **Order by**- SELECT employeNo, LastName FROM Employee ORDER BY LastName- orders the return values to have descending (defualt ascending) and DESC at end of query
+	- **ALias**- using AS as a alias so can rename whatever you are doing, if making a count can say COUNT(\*\) AS total_thing 
 	- **No Grouping**- **Aggregate function**- 
 		- **count**- returns the number of rows- SELECT count(\*\) FROM Employee, the \*\ returns all the rows, can do SELECT count(deptNum) FROM EMployee- this stil lreturns same amount because it would be same amount of rows, unless the value is empty then that row will not be returned
 	- **Grouping**- Group By-
 		- **Group by**- SELECT deptNum, count(\*\) FROM EMployee GROUP BY deptNumber"- this will return the number of groups based on the condition, so for each deptNumber that a row shares that will count for that number group and it will return a table that has the deptNumber name and the number of instances it has
 		- **Restrict group by**- SELECT deptNumber, count(\*\) FROM EMployee GROUP BY deptNumber HAVING count(\*\)>2; so this will return whatever group has more count numbers than 2, so its kind of the WHERE clause for the returned value table of the counts, WHERE clause targets individual rows, where HAVING targets groups- can combine both to really restrict down what searching for- WHERE clause saying which rows will be counted based on the condition and HAVING determines which group will be returned back based on the condition
+		- **Aggregate function**- Have these to create new columns with **Aliases**- work well with the **grouping**
+			- **Sum**- Returns the sum of the values in a specified column (numeric column)- like a total amount
+			- **Min**- returns the min value in a specified column
+			- **Max**- returns the max value from specified column
+			- **Avg**- returns the average of the values in specified column
+- **Nested Queries/Subqueries**-
+	- SQL statement embedded within another SELECT statement- the result of the inner SELECT statement is used in the outer statement to help determine the contents of the final result
+		- **subquery with equality**- "SELECT firstName, lastName 
+			FROM Employee 
+			WHERE deptNum = 
+				(SELECT deptNum 
+				From Department
+				WHERE mailNum = 30)"
+		- It's like finding a value that you wouldnt know, but you know the condition in the WHERE close for the inner statement which will give you the result to then be able to select in the outer query
+		- **subquery with IN**- using the IN instead of = to find a nested value if it is a member of a set--- better than equality when you have a set of valiues that you want it to be
+		- **subquery with aggregate function**- can use an aggregrate function as the subquery to be able to find the specific value in the nested query- like count or sum etc
+- **Joins**- Multi table queries when joining the attributes together
+	- **Simple join**- Use a **prefix** to signify the table that you want that specific attribute to be from and then signify which attributes are mataching up
+		- "SELECT E.firstName, E.lastName, D.deptName 
+			FROM EMployee E, Department D
+			WHERE E.deptName = D.deptName";
+			- THis is choosing the attributes firstName and lastName from the Employee tanble and the attribute deptName from Department table and they are joined by the Department attribute deptName to the FK in the Emaployee as deptName
+			- **aliases**- GOOD TO DO
+		- Simple join returns every row and attribute back selected from the two tables, no row will be brought back if it isnt matching to the other
+	- **Left outer join**- considers all the rows on the left hand side even if they are not matched
+	- **right outer join**- consders all the rows on the right hand side even if they are not matched
+	- **full outer join**- considers all the rows even if they are not matched
+	- IMPLEMENTING THE outer joines- in Oracle put a plus on the opposire side that you want to join for the value---- suss online when doing
+	- **Multi join query**- joining multiple tables- used for when joining a M:N relationships where a new table was created to pair two tables together who dont have the PK and FK in each other but in the third table
+		- "SELECT E.firstName, E.lastName, P.projTitle
+			FROM EMployee E, Works_On W, Project P
+			WHERE E.employeeNo = W.employeeNo
+			AND W.projNo = P.projNo"
+		- See how the Works_On W is the middle man to merge the other two teogether by matching them up
+- **Exists**- Used with nested queries- this returns true if there exists atleast one row in te result table returned by the subquery, it is false if it returns an empty table
