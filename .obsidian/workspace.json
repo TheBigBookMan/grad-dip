@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ebf888deeafbfdf5",
+            "id": "14dfd8e31d6a5066",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+                "file": "Databases/Relational Algebra and SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+                "file": "Databases/Relational Algebra and SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+                "file": "Databases/Relational Algebra and SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md"
+                "file": "Databases/Relational Algebra and SQL.md"
               }
             }
           }
@@ -147,26 +147,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ebf888deeafbfdf5",
+  "active": "14dfd8e31d6a5066",
   "lastOpenFiles": [
+    "Pasted image 20231013194403.png",
+    "Pasted image 20231013194527.png",
+    "Databases/Relational Algebra and SQL.md",
+    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+    "Databases/Normalization.md",
+    "Databases/ER+EER Models.md",
+    "Databases/Introduction to databases.md",
+    "Databases/Topic 1.md",
+    "Databases/Learning Outcomes.pdf",
+    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
     "Databases/drawio/Assess2EERDiagram.pdf",
     "Databases/drawio/Assess2Final.drawio",
-    "Pasted image 20231013194527.png",
-    "Pasted image 20231013194403.png",
     "Databases/drawio/Assessment2.drawio",
     "Databases/drawio/Untitled Diagram.drawio",
     "Databases/drawio",
-    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-    "Untitled.md",
-    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
-    "Databases/Learning Outcomes.pdf",
-    "Databases/Topic 1.md",
     "2023-08-18.md",
     "Databases/Readings.md",
     "Databases/Reading",
     "Human Computer Interaction",
     "Networking",
-    "Object Oriented Programming",
-    "Databases"
+    "Object Oriented Programming"
   ]
 }
