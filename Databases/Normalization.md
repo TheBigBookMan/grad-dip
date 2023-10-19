@@ -42,9 +42,10 @@ Decomposing relations can remove anomalies to result into  **normal forms**
 
 ## Normal Forms defined
 Increasingle less errors as the number increases
+IMPORTANT TO LOOK AT NOTES ON THE PICTURE AS THIS CAN HAVE AN INFLUENCE ON THE PROCESS
 - **Unnormalised form**- Put every available piece of information in that user-view into one single relation, this is **UNF**
 - **First Normal Form**- 
-	- Relation is 1NF only if there are no repeating groups (meaning that data is constantly repeated in columns eg item1, item2, item3 etc), have each row to determine the item, 
+	- Relation is 1NF only if there are no repeating groups (meaning that data is constantly repeated in columns eg item1, item2, item3 etc), have each row to determine the item, - usually the repeating group will then have the PK of the table it was originally in as the FK PK in it- SAME AS 1:M relationship
 	- PK has been identified for the relation, 
 	- all attributes are functionally dependent on the entire key, or part of the key.
 	- Any row that doesnt have a PK violates 1NF. 
