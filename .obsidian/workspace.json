@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "25655b6e6b1dff27",
+        "id": "41092ce55b2ff8d6",
         "type": "tabs",
         "children": [
           {
-            "id": "14dfd8e31d6a5066",
+            "id": "bad8cf9a34ca86e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/Introduction to databases.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/Introduction to databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/Introduction to databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md"
+                "file": "Databases/Introduction to databases.md"
               }
             }
           }
@@ -147,23 +146,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "14dfd8e31d6a5066",
+  "active": "bad8cf9a34ca86e1",
   "lastOpenFiles": [
-    "Pasted image 20231013194403.png",
-    "Pasted image 20231013194527.png",
+    "Databases/Normalization.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-    "Databases/Normalization.md",
-    "Databases/ER+EER Models.md",
     "Databases/Introduction to databases.md",
-    "Databases/Topic 1.md",
-    "Databases/Learning Outcomes.pdf",
-    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
+    "Databases/ER+EER Models.md",
     "Databases/drawio/Assess2EERDiagram.pdf",
     "Databases/drawio/Assess2Final.drawio",
+    "Pasted image 20231013194527.png",
+    "Pasted image 20231013194403.png",
     "Databases/drawio/Assessment2.drawio",
     "Databases/drawio/Untitled Diagram.drawio",
     "Databases/drawio",
+    "Untitled.md",
+    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
+    "Databases/Learning Outcomes.pdf",
+    "Databases/Topic 1.md",
     "2023-08-18.md",
     "Databases/Readings.md",
     "Databases/Reading",
