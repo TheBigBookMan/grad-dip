@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/Normalization.md",
+                "file": "Databases/ER+EER Models.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/Normalization.md",
+                "file": "Databases/ER+EER Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databases/Normalization.md",
+                "file": "Databases/ER+EER Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databases/Normalization.md"
+                "file": "Databases/ER+EER Models.md"
               }
             }
           }
@@ -149,11 +149,11 @@
   },
   "active": "14dfd8e31d6a5066",
   "lastOpenFiles": [
+    "Databases/Normalization.md",
     "Databases/Relational Algebra and SQL.md",
     "Pasted image 20231013194403.png",
     "Pasted image 20231013194527.png",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-    "Databases/Normalization.md",
     "Databases/ER+EER Models.md",
     "Databases/Introduction to databases.md",
     "Databases/Topic 1.md",
