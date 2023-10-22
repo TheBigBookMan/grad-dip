@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/ER+EER Models.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/ER+EER Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md",
+                "file": "Databases/ER+EER Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databases/Relational Algebra and SQL.md"
+                "file": "Databases/ER+EER Models.md"
               }
             }
           }
@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "268209ae4f737be3",
+  "active": "27350124771f594f",
   "lastOpenFiles": [
-    "Databases/Normalization.md"
+    "Databases/Normalization.md",
+    "Databases/ER+EER Models.md",
+    "Databases/Introduction to databases.md",
+    "Databases/Relational Algebra and SQL.md"
   ]
 }
