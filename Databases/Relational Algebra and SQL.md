@@ -188,4 +188,10 @@ Deleting a table
 	- Can also control the access for a user by creating the query with spefic things to return and this can make it easy for specific users to see certain things without having to keep writing new queries
 - **Query by example**- Query ois defined byu filling in a template
 	- Basically a template of what rows you want to see and can put in names that you want to return for specific columns- set out like the table you want to return basically
-- 
+
+## Using APEX Oracle
+- Create tables
+- can describe tables to show info- DESCRIBE tblName
+	- Use the Object Browser functionality in the APEX as it is quick and shows the information
+
+# Week 5- SQL Applied Practice and Basic PL/SQL

@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "25655b6e6b1dff27",
+        "id": "d88d591e137e6e17",
         "type": "tabs",
         "children": [
           {
-            "id": "14dfd8e31d6a5066",
+            "id": "cf46c1c20c054d72",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/Normalization.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f19ef8fb7c99dbdb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databases/ER+EER Models.md",
+                "file": "Databases/Relational Algebra and SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,8 +147,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "268209ae4f737be3",
+  "active": "cf46c1c20c054d72",
   "lastOpenFiles": [
-    "Databases/Normalization.md"
+    "Databases/ER+EER Models.md",
+    "Databases/Normalization.md",
+    "Databases/Introduction to databases.md",
+    "Databases/Relational Algebra and SQL.md",
+    "Pasted image 20231013194403.png",
+    "Pasted image 20231013194527.png",
+    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+    "Databases/Topic 1.md",
+    "Databases/Learning Outcomes.pdf",
+    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
+    "Databases/drawio/Assess2EERDiagram.pdf",
+    "Databases/drawio/Assess2Final.drawio",
+    "Databases/drawio/Assessment2.drawio",
+    "Databases/drawio/Untitled Diagram.drawio",
+    "Databases/drawio",
+    "2023-08-18.md",
+    "Databases/Readings.md",
+    "Databases/Reading",
+    "Human Computer Interaction",
+    "Networking",
+    "Object Oriented Programming"
   ]
 }
