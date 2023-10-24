@@ -195,3 +195,55 @@ Deleting a table
 	- Use the Object Browser functionality in the APEX as it is quick and shows the information
 
 # Week 5- SQL Applied Practice and Basic PL/SQL
+- PL- procedural language programming in sql
+	- Will have a DECLARE space that starts with the DECLARE word- declare any local variables we want to be computed in the task
+	- program body begins with BEGIN and ends with END- where the body code will be executed. after END need ; and /
+	- Cannot use DDL (CREATE TABLE etc) but can use DML (SEELCT, inSERT etc) in the body
+	- THe point is to create a procedural function that will do things with the data and do a specific execution like print
+	- "declare
+			v_age NUMBER(2);
+			v_name VARCHAR(20);
+			v_city CHAR(3);
+		body
+			SELECT first_name
+			INTO v_name
+			FROM STUDENT
+			WHERE student_id = '101';
+
+			DBMS_OUTPUR.PUT_LINE(v_firstName || 'is a good boyy')
+		end;
+		/"
+	- adding in the INTO v_name is storing the returned value from the SQL statement into that variable
+	- DBMS_OUTPUT.PUT_LINE('message here') is the console.log for it and use || to concatenate variables/string
+- **Local variables**- classic variables to be able to make some sort of functionality on it
+	- **simple variables**- regular variables that store one single value at a time
+		- has types so var_age NUMBER;
+		- acnhored data type- uses the data type of a specific column from a table- "var_age TBLNAME.attribute%TYPE;"
+		- assigning a variable uses := so var_age:=24;
+	- **cursor variable**- for when you want multiple values, and multiple cant be stored in a simple variable. Cursor stores multiple values- a collection of data
+		- in the declare block- "Cursor studentNames is
+							SELECT firstName, lastName 
+							FROM Student
+							WHERE Department = 'COmps cioence';"
+		- THis will put the values of the select statement in the devlare block it will store them values into the cursor variable
+		- Cursor has a loop-
+			- In the body part- "for student IN studentNames loop
+				 student.firstName
+			end loop;"
+			- very basic loop, kida like a python loop
+	- Need to put the ouput for SQL on if the output isnt printing anything by using- SQL> SET SERVEROUTPUT ON;
+- **If-THEN-ELSE statement**- standard IF-ELSE statement
+	- "IF variable < 50 THEN
+		v_newthing :=20;
+		ELSE
+			v_newthing:=10;
+		END IF;"
+	- get errprs if things fail
+- **looping**- create basically a while loop (LOOP)-
+	- "Begin
+		LOOP
+			code here
+		END LOOP
+	END;"
+- Can make a while loop as well which would be more based on a condition to stop
+- Can put a statement like INSERT with the variable to be assigned as the insert attribute value based on conditions or whatever
