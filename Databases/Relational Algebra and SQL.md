@@ -216,7 +216,7 @@ Deleting a table
 	- adding in the INTO v_name is storing the returned value from the SQL statement into that variable
 	- DBMS_OUTPUT.PUT_LINE('message here') is the console.log for it and use || to concatenate variables/string
 - **Local variables**- classic variables to be able to make some sort of functionality on it
-	- **simple variables**- regular variables that store one single value at a time
+	- **simple variables**- regular variables that store one single value at a time- BEST TO DECLARE THE TYPE WITH THE ANCHORED TYPE INCASE OF ANY CHANGE IN THE TABLE ATTRIBUTE TYPE SO IT CAN DYNAMICALLY CHANGE
 		- has types so var_age NUMBER;
 		- acnhored data type- uses the data type of a specific column from a table- "var_age TBLNAME.attribute%TYPE;"
 		- assigning a variable uses := so var_age:=24;
