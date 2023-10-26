@@ -125,7 +125,7 @@ Deleting a table
 		- **count**- returns the number of rows- SELECT count(\*\) FROM Employee, the \*\ returns all the rows, can do SELECT count(deptNum) FROM EMployee- this stil lreturns same amount because it would be same amount of rows, unless the value is empty then that row will not be returned-  the * as the parameter will return ANY row that iexists while if you put in a parameter it will count the row if the value is NOT NULL
 	- **Grouping**- Group By-
 		- **Group by**- SELECT deptNum, count(\*\) FROM EMployee GROUP BY deptNumber"- this will return the number of groups based on the condition, so for each deptNumber that a row shares that will count for that number group and it will return a table that has the deptNumber name and the number of instances it has- THIS wih count essentially will count the amount of rows that are matching within a specific attribute and then group them into groups of the matching value
-		- **Restrict group by**- SELECT deptNumber, count(\*\) FROM EMployee GROUP BY deptNumber HAVING count(\*\)>2; so this will return whatever group has more count numbers than 2, so its kind of the WHERE clause for the returned value table of the counts, WHERE clause targets individual rows, where HAVING targets groups- can combine both to really restrict down what searching for- WHERE clause saying which rows will be counted based on the condition and HAVING determines which group will be returned back based on the condition- adds on to the GROUP BY by creating another clause to the result you want back matching a condition-- filtering the groups
+		- **Having group by**- SELECT deptNumber, count(\*\) FROM EMployee GROUP BY deptNumber HAVING count(\*\)>2; so this will return whatever group has more count numbers than 2, so its kind of the WHERE clause for the returned value table of the counts, WHERE clause targets individual rows, where HAVING targets groups- can combine both to really restrict down what searching for- WHERE clause saying which rows will be counted based on the condition and HAVING determines which group will be returned back based on the condition- adds on to the GROUP BY by creating another clause to the result you want back matching a condition-- filtering the groups
 		- **Aggregate function**- Have these to create new columns with **Aliases**- work well with the **grouping**
 			- **Sum**- Returns the sum of the values in a specified column (numeric column)- like a total amount
 			- **Min**- returns the min value in a specified column
@@ -247,3 +247,26 @@ Deleting a table
 	END;"
 - Can make a while loop as well which would be more based on a condition to stop
 - Can put a statement like INSERT with the variable to be assigned as the insert attribute value based on conditions or whatever
+
+## Stored Procedures and Stored Functions
+- **Stored procedure**- the prcoedure is stored in the database and persistent so if you leave the application and come back it will still be there
+	- GRoups a set of SQL statements and it can accept parameters, perform operations and return to the caller, need to encapsulate the statement into the stored procedure
+	- Same syntax as the PL but it replaces the DECLARE block
+	- Need to have the parameters as anchored types
+	- "CREATE OR REPLACE PROCEDURE procdeureName(
+			p_ID TABLENAME.attribute%TYPE,
+			p_firstName TABLENAME.first_name%TYPE,
+			) AS"
+	- And then have the other variable declaration in this blcok before the BEGIN block starts
+	- Have the logic- so the logic is the functionality of the procedure so could be an insert, so this block takes the parameters from abocve and then put the parameters into the INSERT query then END tableName; 
+		/
+	- That slash is the end of the command IMPORTANT
+	- To call the procudre do "EXECUTE procedureName(arguements);"
+	- Basically a function but you will have SQL queries in the BEGIN -end block
+	- LEAVE MODE DONT REALLY NEED TO USE IN THIS COURSE
+	- optionally add in a **MODE**- default is IN OUT but can have IN or OUT or IN OUT- this goes next to the parameter name and type- "p_ID modehere TABLENAME.attribute%TYPE"
+		- If it is IN then you cannot write to it only read the parameter, so can assign another variable to the variable with IN mode and work on that newly assigned variable but NOT on the one that was brought in through the parameter. Cannot assign the variable to somehint else
+		- If it is OUT, you can write to it but cannot read from it, so you can assign it to other value but cannot assign a variable to it as reading it
+		- IN OUT is allowing to do both to it
+	- **Exception**- within the BEGIN-END body after the logic section at the end of it- This is like a fall back functionality if the code block before doesnt work-- KINDA LIKE A TRY/CATCH BLOCK- so once making some sort of statement like SELECT/INSERT/UPDATE and it doesnt work then the EXCEPTION block will execute
+		- good idea if the data doesnt exist to then insert the data
