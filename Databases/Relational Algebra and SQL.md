@@ -294,3 +294,9 @@ Deleting a table
 		FROM Classes"
 		- it can also be called from the WHERE or HAVING clause and essentially the value returned from the stored function will then be the valuie for that clause
 	- Can also be used in a stored procedure to get a value and then use that value within the stored procedure, just need to add in the function call and parameters- this is good for getting a value within  some if clause maybe in a for loop or something like that
+-  When to use a stored procedure/functuoin- usually if you have a complete/single focused task to complete
+	- Can use regular SQL statements for a lot of things, so its important when to use these over procedures/functions
+- Security is helped by using the stored procedure as it restricts the amount of database connecting that a user has, if you just have one function call compared to multiple queries- creating a stored procedure for a specific person in the company to use which allows access to certain attributes rather than access to all the attributes of a table
+- Can use the stored procedures in multiple applications to reduce repetitive code
+
+## Triggers
