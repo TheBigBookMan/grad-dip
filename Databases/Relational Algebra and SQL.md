@@ -270,3 +270,9 @@ Deleting a table
 		- IN OUT is allowing to do both to it
 	- **Exception**- within the BEGIN-END body after the logic section at the end of it- This is like a fall back functionality if the code block before doesnt work-- KINDA LIKE A TRY/CATCH BLOCK- so once making some sort of statement like SELECT/INSERT/UPDATE and it doesnt work then the EXCEPTION block will execute
 		- good idea if the data doesnt exist to then insert the data
+		- This is good example of being able to do something that you cant do with just SQL, do it with PL/SQL- if a question asks to update something but if it doesnt exist then add it in- cannot do with SQL, need PL/SQL for the exception
+	- **Procedure- Cursosr**- can use the cursors as well within a procedure- so could have some sort of value as the paremeter and then use a SQL query with the paremeter to return a set of values WITHIN the cursor in the DECLARE block and then have some sort of loop do the execution over it in the BEING/END block
+		- Good if need to get a group of something that will then have some sort of action (INSERT, UPDATE) etc that will be executed based on some sort of condition for each item in the set
+	- **Execute Stored Procedure**- "EXECUTE procedureName(param1, param2)"
+	- **DROP STORED PRCEDURE**- to drop it you just write "DROP PRODCEDURE prcedurename";
+	- 
