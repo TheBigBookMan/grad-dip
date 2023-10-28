@@ -249,7 +249,7 @@ Deleting a table
 - Can put a statement like INSERT with the variable to be assigned as the insert attribute value based on conditions or whatever
 
 ## Stored Procedures and Stored Functions
-- **Stored procedure**- the prcoedure is stored in the database and persistent so if you leave the application and come back it will still be there
+- **Stored procedure**- the prcoedure is stored in the database and persistent so if you leave the application and come back it will still be there- nothing will be returned back to the caller
 	- GRoups a set of SQL statements and it can accept parameters, perform operations and return to the caller, need to encapsulate the statement into the stored procedure
 	- Same syntax as the PL but it replaces the DECLARE block
 	- Need to have the parameters as anchored types
@@ -257,6 +257,11 @@ Deleting a table
 			p_ID TABLENAME.attribute%TYPE,
 			p_firstName TABLENAME.first_name%TYPE,
 			) AS"
+	- and then when selecting the variables in the BEGIN END body you need to put them INTO the DECALRED variables
+		- "SELECT firstName, lastName, age 
+			**INTO** v_firstName, v_lastName, v_age
+			FROM Employee
+			WHERE EmployeeId = employy_num";
 	- And then have the other variable declaration in this blcok before the BEGIN block starts
 	- Have the logic- so the logic is the functionality of the procedure so could be an insert, so this block takes the parameters from abocve and then put the parameters into the INSERT query then END tableName; 
 		/
@@ -275,4 +280,17 @@ Deleting a table
 		- Good if need to get a group of something that will then have some sort of action (INSERT, UPDATE) etc that will be executed based on some sort of condition for each item in the set
 	- **Execute Stored Procedure**- "EXECUTE procedureName(param1, param2)"
 	- **DROP STORED PRCEDURE**- to drop it you just write "DROP PRODCEDURE prcedurename";
-	- 
+- **Stored Functions**- same as a stored procedure except that this can return a valuie back to the caller
+	- "CREATE OR REPLACE FUNCTION functionName
+		  (parameter IN OUT type.
+		  parameter2 IN OUT type)
+		  RETURN type IS
+		  declare variables here
+		  BEGIN
+		  END functionname;
+		  /"
+	- So basically the same except you change the name PROCEDURE with FUNCTION and you have RETURN type IS instead of AS
+	- calling the stored function is in the clause so like "SELECT department, course, StoredFcuntionName(department, course)
+		FROM Classes"
+		- it can also be called from the WHERE or HAVING clause and essentially the value returned from the stored function will then be the valuie for that clause
+	- Can also be used in a stored procedure to get a value and then use that value within the stored procedure, just need to add in the function call and parameters- this is good for getting a value within  some if clause maybe in a for loop or something like that
