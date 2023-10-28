@@ -300,3 +300,21 @@ Deleting a table
 - Can use the stored procedures in multiple applications to reduce repetitive code
 
 ## Triggers
+- Similar to the stored procedures/functions in that it is a stored object iwthin the database, however these are not executed explicitily.
+- These are triggered automatically when a certain query has been executed- related to a speicifc table and if something like a INSERT, UPDATE or DELETE are used on that table, then these TRIGGERS occur
+- Users cant execute a TRIGGER, it is triggered by the RDMS system ONLY when the table gets actioned
+- "CREATE OR REPLACE TRIGGER triggerName
+	[BEFORE | AFTER | INSTEAD OF] {UPDATE | INSERT | DELETE}
+		{OF attributeName} ON tableName
+		FOR EACH ROW
+		DECLARE
+		localVariabvle
+			BEGIN
+			END triggerName;
+		/"
+	- Must choose ONE of the BEFORE or AFTER or INSTEAD OF to determine when the trigger will be executed
+	- Trigger mst be associated with one or more events on one table- can even be attributes of a table (optional): the OF attributeName is optional if applying it to attributes- for events INSERT, UPDATE and DELETE- eg a BEFORE INSERT will trigger before an insert happens
+	- The line FOR EACH ROW is optional and deteremines if its a statement trigger or row trigger- if its present then it will be a ROW trigger and if absent then a STATEMENT trigger
+		- **Row trigger**- will trigger for every row that is affected by the clause
+		- **Statement trigger**- will trigger once irrespective of how many rows are impacted
+	- In the body of the trigger between BEGIN END have access to context variables
