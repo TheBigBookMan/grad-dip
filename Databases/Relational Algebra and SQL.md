@@ -334,3 +334,8 @@ Deleting a table
 		5. What should the trigger do when fired
 	- UPDATING, DELETING, INSERTING are keywords in Oracle which can be used inside a trigger to check which operation is currently taking place in the associated table and is responsible for firing the trigger
 	- Can have the trigger work on multiple operations just need to use OR- "AFTER DELETE OR INSERT OR UPDATE OF attribute ON tableName"
+- **Raising an application error**- this is to set the database to throw an error if a condition is met and this will stop executing the trigger- this is important for the BEFORE clause because it will stop the actual operation happening
+	- "IF empCount > 0 THEN
+		RAISE_APPLICATION_ERROR(-2000, 'Cannot delete an emploee who is a manager');
+		END IF;"
+	- THis is basically a way to set business logic conditions, but it MUST BE DONE WITH THE BEFORE as you can't do it AFTER a certain operation as the operation has already been made
