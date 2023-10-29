@@ -314,7 +314,23 @@ Deleting a table
 		/"
 	- Must choose ONE of the BEFORE or AFTER or INSTEAD OF to determine when the trigger will be executed
 	- Trigger mst be associated with one or more events on one table- can even be attributes of a table (optional): the OF attributeName is optional if applying it to attributes- for events INSERT, UPDATE and DELETE- eg a BEFORE INSERT will trigger before an insert happens
+		- **INSTEAD OF**- works in that the operation on the table is not executed but the trigger code block is executed. Good way to stop users from executing commands that the data admin would not want that particular individual to execute- especially on specific tables
 	- The line FOR EACH ROW is optional and deteremines if its a statement trigger or row trigger- if its present then it will be a ROW trigger and if absent then a STATEMENT trigger
 		- **Row trigger**- will trigger for every row that is affected by the clause
 		- **Statement trigger**- will trigger once irrespective of how many rows are impacted
 	- In the body of the trigger between BEGIN END have access to context variables
+	- **Database sequence objects**- persistent objects in the database that help generate sequential numbers.
+		- "CREATE SEQUENCE sequenceName START WITH 1 INCREMENT BY 1;"
+		- Us this in an INSERT query as its good for making primary keys for tables- "INSERT INTO Client(ClientId, clientName) VALUES(sequenceName.nextval, 'Ben Smeeeed');"
+	- **Context variables**- These are essentially only for the ROW trigger where there is an OLD (value before trigger) and NEW (value after trigger) variables which represented those values for a column
+		- NEW is not available in a DELETE operation and OLD is not available inside an INSERT operation (because they dont exist)
+		- Use an OLD context variable ":OLD.columnName"
+		- Use a NEW context variable ":NEW.columnName"
+	- **How to design a trigger**-
+		1. Which table should the trigger be associated with
+		2. Which operation should fire the trigger
+		3. When should the trigger be fired
+		4. How many times should the trigger be fired (once for a stement or once for each affected row)
+		5. What should the trigger do when fired
+	- UPDATING, DELETING, INSERTING are keywords in Oracle which can be used inside a trigger to check which operation is currently taking place in the associated table and is responsible for firing the trigger
+	- Can have the trigger work on multiple operations just need to use OR- "AFTER DELETE OR INSERT OR UPDATE OF attribute ON tableName"
