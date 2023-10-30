@@ -30,3 +30,9 @@ WHERE D.StoreID = 'S001';
 
 c. List the franchise application details for each department of H2H along with the department ID and title. Include the departments that have not received any applications yet.
 
+// returning 60 rows when there are like 42 departments, think this is right, may need to suss again
+
+SELECT FA.AppNumber, FA.AppDate, FA.DecisionDate, FA.Status, FA.DepartmentID, FA.TeamId, D.DepartmentID, D.DepartmentTitle
+FROM Department D
+LEFT JOIN Franchise_App FA
+ON FA.DepartmentID = D.DepartmentID;
