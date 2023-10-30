@@ -1,0 +1,32 @@
+Assessment 4- Ben Smerd
+
+Task 1:
+a. Show the store information – along with its departments – for all stores that open the latest during weekends
+
+// this one the max isnt right in this query, needs to return the open the latest so ones that close the latest
+
+SELECT * FROM Store s
+JOIN Department d 
+ON s.StoreId = d.StoreId
+WHERE (s.StoreId, s.WeekendHours) IN (
+    SELECT s1.StoreId,
+    MAX(s1.WeekendHours) AS WeekendHoursMax
+    FROM Store s1
+    GROUP BY s1.StoreId
+);
+
+SELECT * FROM Store s
+JOIN Department d 
+ON s.StoreId = d.StoreId
+WHERE WeekendHours = '08:00 AM - 06:00 PM';
+
+b.Show the name and address of all team members for store S001
+
+SELECT E.EName, E.EAddress
+FROM Employee E
+INNER JOIN Department D
+ON E.DepartmentID = D.DepartmentID
+WHERE D.StoreID = 'S001';
+
+c. List the franchise application details for each department of H2H along with the department ID and title. Include the departments that have not received any applications yet.
+
