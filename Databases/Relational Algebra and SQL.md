@@ -124,7 +124,10 @@ Deleting a table
 	- **No Grouping**- **Aggregate function**- 
 		- **count**- returns the number of rows- SELECT count(\*\) FROM Employee, the \*\ returns all the rows, can do SELECT count(deptNum) FROM EMployee- this stil lreturns same amount because it would be same amount of rows, unless the value is empty then that row will not be returned-  the * as the parameter will return ANY row that iexists while if you put in a parameter it will count the row if the value is NOT NULL
 	- **Grouping**- Group By-
+		- **EVERY ATTRIBUTE IN THE GROUP BY STATEMENT HAS TO BE IN THE SELECT STATEMENT AS WELL**
 		- **Group by**- SELECT deptNum, count(\*\) FROM EMployee GROUP BY deptNumber"- this will return the number of groups based on the condition, so for each deptNumber that a row shares that will count for that number group and it will return a table that has the deptNumber name and the number of instances it has- THIS wih count essentially will count the amount of rows that are matching within a specific attribute and then group them into groups of the matching value
+			- The count can be for the field and then need to creat the group by to be to a specific field 
+			- In the having clause usually can have something like a nested statement for a specific selection back
 		- **Having group by**- SELECT deptNumber, count(\*\) FROM EMployee GROUP BY deptNumber HAVING count(\*\)>2; so this will return whatever group has more count numbers than 2, so its kind of the WHERE clause for the returned value table of the counts, WHERE clause targets individual rows, where HAVING targets groups- can combine both to really restrict down what searching for- WHERE clause saying which rows will be counted based on the condition and HAVING determines which group will be returned back based on the condition- adds on to the GROUP BY by creating another clause to the result you want back matching a condition-- filtering the groups
 		- **Aggregate function**- Have these to create new columns with **Aliases**- work well with the **grouping**
 			- **Sum**- Returns the sum of the values in a specified column (numeric column)- like a total amount
