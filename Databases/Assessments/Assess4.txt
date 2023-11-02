@@ -1,38 +1,289 @@
-Assessment 4- Ben Smerd
+-- Assessment 4- Ben Smerd
 
-Task 1:
-a. Show the store information – along with its departments – for all stores that open the latest during weekends
+-- Task 1:
+-- a. Show the store information – along with its departments – for all stores that open the latest during weekends
 
-// this one the max isnt right in this query, needs to return the open the latest so ones that close the latest
+SELECT s.StoreID, s.StoreAddress, s.WeekDaysHours, s.WeekendHours,
+d.DepartmentID, d.DepartmentTitle, d.NoOfEmployees, d.AccountNo, d.StoreId, d.FranchiseTeamID
+FROM Store s, Department d
+WHERE s.StoreID = d.StoreID
+AND s.WeekendHours = (
+    SELECT MAX(WeekendHours)
+    FROM Store
+)
 
-SELECT * FROM Store s
-JOIN Department d 
-ON s.StoreId = d.StoreId
-WHERE (s.StoreId, s.WeekendHours) IN (
-    SELECT s1.StoreId,
-    MAX(s1.WeekendHours) AS WeekendHoursMax
-    FROM Store s1
-    GROUP BY s1.StoreId
-);
-
-SELECT * FROM Store s
-JOIN Department d 
-ON s.StoreId = d.StoreId
-WHERE WeekendHours = '08:00 AM - 06:00 PM';
-
-b.Show the name and address of all team members for store S001
+-- b.Show the name and address of all team members for store S001
+-- Was confused by the wording of the question so did it two ways
 
 SELECT E.EName, E.EAddress
 FROM Employee E
-INNER JOIN Department D
+LEFT JOIN Department D
 ON E.DepartmentID = D.DepartmentID
 WHERE D.StoreID = 'S001';
 
-c. List the franchise application details for each department of H2H along with the department ID and title. Include the departments that have not received any applications yet.
+---- OR
 
-// returning 60 rows when there are like 42 departments, think this is right, may need to suss again
+SELECT DISTINCT NVL(E.EName, SH.SHName) AS TeamMemberName, NVL(E.EAddress, SH.SHAddress) AS TeamMemberAddress
+FROM Department D
+LEFT JOIN Membership M ON D.FranchiseTeamID = M.TeamID
+LEFT JOIN Shareholder SH ON SH.MemberID = M.MemberID
+LEFT JOIN Full_Time_Employee FE ON FE.MemberID = M.MemberID 
+LEFT JOIN Employee E ON E.EmployeeID = FE.EmployeeID
+WHERE D.StoreID = 'S001'
+
+-- c. List the franchise application details for each department of H2H along with the department ID and title. Include the departments that have not received any applications yet.
 
 SELECT FA.AppNumber, FA.AppDate, FA.DecisionDate, FA.Status, FA.DepartmentID, FA.TeamId, D.DepartmentID, D.DepartmentTitle
 FROM Department D
 LEFT JOIN Franchise_App FA
 ON FA.DepartmentID = D.DepartmentID;
+
+-- d. Show the team information and number of members for all successful franchise applications.
+
+SELECT T.TeamID, T.TeamName, T.TeamLeaderId, FA.Status, COUNT(M.MemberID) AS NumMembersInTeam
+FROM Team T
+JOIN Franchise_App FA 
+ON T.TeamID = FA.TeamID
+LEFT JOIN Membership M
+ON T.TeamID = M.TeamID
+WHERE FA.Status = 'Granted'
+GROUP BY T.TeamID, T.TeamName, T.TeamLeaderId, FA.Status;
+
+e. Show the details of the franchise application that took the longest time to reach a decision.
+
+// THESE ARE AS CLOSE AS I CAN GET SO FAR
+// this is too much like chatgpt as its using something we didnt learn FETCH FIRST 1 ROW ONLY
+
+SELECT AppNumber, AppDate, DecisionDate, Status, DepartmentID, TeamID, (DecisionDate - AppDate) AS DateDifference
+FROM Franchise_App
+ORDER BY DateDifference DESC
+FETCH FIRST 1 ROW ONLY;
+
+-- f. List the team member details (including shareholder and employee details such as ID, name, phone and email) for all team members who are part of a franchise team of a successful application. For each of the members, also include the date on which their franchise application was granted. 
+
+// think this is right
+// need to get the team leader
+
+SELECT FA.DecisionDate, FA.Status, M.TeamID, T.TeamName, SH.SHID, SH.SHName, SH.SHEmail, M.MemberID, E.EmployeeID, E.EName, E.EEmail, SH.SHPhone,  E.EPhone
+FROM Franchise_App FA
+JOIN Membership M
+ON FA.TeamID = M.TeamID
+JOIN Team T ON T.TeamID = M.TeamID
+LEFT JOIN Shareholder SH ON SH.MemberID = M.MemberID
+LEFT JOIN Full_Time_Employee FE ON FE.MemberID = M.MemberID
+LEFT JOIN Employee E ON E.EmployeeID = FE.EmployeeID
+WHERE FA.Status = 'Granted';
+
+
+-- g. List the details (shareholder/employee details) of the team member who has the maximum credit to their name, based on their percentage of share in the team and the positive account balance of the franchising department.(Hint: Account balance can be found in the account table.)
+
+SELECT  M.TeamID, M.MemberID, M.PercentageOfShare, T.TeamName, NVL(SH.SHID, E.EmployeeID) AS TeamMemberID,
+NVL(SH.SHName,  E.EName) AS TeamMemberName, NVL(SH.SHEmail, E.EEmail) AS TeamMemberEmail,
+NVL(SH.SHPhone, E.EPhone) AS TeamMemberPhone 
+FROM Membership M
+JOIN Team T ON T.TeamID = M.TeamID
+LEFT JOIN Shareholder SH ON SH.MemberID = M.MemberID
+LEFT JOIN Full_Time_Employee FE ON FE.MemberID = M.MemberID
+LEFT JOIN Employee E ON E.EmployeeID = FE.EmployeeID
+WHERE M.MemberId = (
+
+    SELECT M1.MemberID
+    FROM Membership M1
+    JOIN Team T ON T.TeamID = M1.TeamID
+    JOIN Department D ON D.FranchiseTeamID = T.TeamID
+    JOIN Account A ON A.AccountNo = D.AccountNo
+    WHERE (M1.PercentageOfShare / 100) * A.Balance = (
+
+        SELECT MAX((M1.PercentageOfShare / 100) * A.Balance) AS MemberCredit
+        FROM Membership M1
+        JOIN Team T ON T.TeamID = M1.TeamID
+        LEFT JOIN Department D ON D.FranchiseTeamID = T.TeamID
+        LEFT JOIN Account A ON A.AccountNo = D.AccountNo
+    )
+);
+
+-- h. Show the top four employees (name, salary earned) that have earned the highest salary from January– December 2017. Assume that all casual employees work 12 hours per week and there are 45 working weeks a year
+
+-- got the top four but seems kinda hacky???
+
+SELECT E.EName, COALESCE(PE.Salary, FE.Salary, (CE.HourlyRate * 12 * 45)) AS SalaryEarned
+FROM Employee E
+LEFT JOIN Full_Time_Employee FE ON E.EmployeeID = FE.EmployeeID
+LEFT JOIN Part_Time_Employee PE ON E.EmployeeID = PE.EmployeeID
+LEFT JOIN Casual_Employee CE ON E.EmployeeID = CE.EmployeeID
+ORDER BY SalaryEarned DESC
+FETCH FIRST 4 ROW ONLY;
+
+
+-- TASK 2
+-- a.Write a procedure that takes two dates as input (a duration) and updates the commission amount of every weekly report for which the start date falls within this duration. The commission amount is the result of multiplication of sale amount and commission rate (percentage). The procedure also generates an output in the following format for every affected row: "The commission amount for report <ReportID> has been updated to <ComAmount> dollars, which is <ComRate>%
+of the total sale amount of <SaleAmount> dollars."
+
+// works fine
+
+-- Implement-
+CREATE OR REPLACE PROCEDURE updateCommission(
+	p_Date1 DATE,
+	p_Date2 DATE 
+) 
+AS
+CURSOR ReportDetails IS
+	SELECT ReportID, ComAmount, ComRate, SaleAmount, StartDate
+	FROM Weekly_Sales_Report
+    WHERE StartDate BETWEEN p_Date1 AND p_Date2;
+
+    NewComAmount NUMBER;
+BEGIN
+
+    FOR ptr IN ReportDetails LOOP
+        NewComAmount := (ptr.SaleAmount * ptr.ComRate / 100);
+        
+        UPDATE Weekly_Sales_Report SET ComAmount = NewComAmount
+        WHERE ReportID = ptr.ReportID;
+
+        DBMS_OUTPUT.PUT_LINE('The commission amount for report ' || ptr.ReportID || ' has been updated to ' || NewComAmount || ' dollars, which is ' || ptr.ComRate || '% of the total sale amount of ' || ptr.SaleAmount || ' dollars.');
+
+    END LOOP;
+
+END updateCommission;
+/
+
+-- Test Execute-
+BEGIN
+	updateCommission(TO_DATE('02-Apr-2018', 'DD-Mon-YYYY'), TO_DATE('11-Apr-2018', 'DD-Mon-YYYY'));
+END;
+/
+
+-- b. Write a procedure that takes an employee ID as argument and lists the details of an employee’s department and reporting boss. Note that an employee’s reporting boss is the person who has the highest percentage of share in the franchise team. The reporting boss can be either a full-time employee or a shareholder. If the reporting boss is a shareholder, display the number of shares along with contact details. If the boss is an employee, mention their DOB, gender and joining date along with their contact information.
+
+-- Implement-
+
+CREATE OR REPLACE PROCEDURE employeeDetails(
+	p_EmployeeID Employee.EmployeeID%TYPE
+)
+AS
+CURSOR DepartmentDetails IS
+    SELECT D.DepartmentID, D.DepartmentTitle, D.NoOfEmployees, D.AccountNo, 
+    D.StoreID, D.FranchiseTeamID, E.EmployeeID, E.EName
+    FROM Department D, Employee E
+    WHERE D.DepartmentID = E.DepartmentID
+    AND E.EmployeeID = p_EmployeeID;
+
+v_BossID Employee.EmployeeID%TYPE;
+v_BossPercentageShare Membership.PercentageOfShare%TYPE;
+v_BossName Employee.EName%TYPE;
+v_BossEmail Employee.EEmail%TYPE;
+v_BossPhone Employee.EPhone%TYPE;
+v_BossAddress Employee.EAddress%TYPE;
+
+v_BossDOB Employee.EDOB%TYPE;
+v_BossGender Employee.EGender%TYPE;
+v_BossJoinDate Employee.JoiningDate%TYPE;
+
+v_BossNumShares Shareholder.NoOfShares%TYPE;
+
+v_isFullTimeEmployee CHAR(1);
+
+v_DepartmentID Department.DepartmentID%TYPE;
+v_DepartmentTitle Department.DepartmentTitle%TYPE;
+v_DepartmentNumEmployees Department.NoOfEmployees%TYPE;
+v_DepartmentAccountNo Department.AccountNo%TYPE;
+v_DepartmentStoreID Department.StoreID%TYPE;
+v_DepartmentFranchiseTeamID Department.FranchiseTeamID%TYPE;
+v_EmployeeID Employee.EmployeeID%TYPE;
+v_EmployeeName Employee.EName%TYPE;
+
+BEGIN
+
+    OPEN DepartmentDetails;
+    FETCH DepartmentDetails INTO v_DepartmentID, v_DepartmentTitle, v_DepartmentNumEmployees, v_DepartmentAccountNo, 
+    v_DepartmentStoreID, v_DepartmentFranchiseTeamID, v_EmployeeID, v_EmployeeName;
+
+    SELECT M.MemberID, M.PercentageOfShare
+    INTO v_BossID, v_BossPercentageShare
+    FROM Membership M
+    JOIN Department D ON D.FranchiseTeamID = M.TeamID
+    WHERE D.DepartmentID = v_DepartmentID
+    AND M.PercentageOfShare = (
+        SELECT MAX(M.PercentageOfShare)
+        FROM Membership M
+        JOIN Department D ON D.FranchiseTeamID = M.TeamID
+        WHERE DepartmentID = v_DepartmentID
+    );
+
+    SELECT COUNT(*)
+    INTO v_isFullTimeEmployee
+    FROM Full_Time_Employee
+    WHERE MemberID = v_BossID;
+
+    IF v_isFullTimeEmployee > 0 THEN
+
+        SELECT E.EName, E.EPhone, E.EEmail, E.EDOB, E.EGender, E.JoiningDate
+        INTO v_BossName, v_BossPhone, v_BossEmail, v_BossDOB, v_BossGender, v_BossJoinDate
+        FROM Membership M
+        JOIN Full_Time_Employee FE ON M.MemberID = FE.MemberID
+        JOIN Employee E ON E.EmployeeID = FE.EmployeeID
+        WHERE M.MemberID = v_BossID;
+
+        DBMS_OUTPUT.PUT_LINE('Boss is a Full Time Employee');
+        DBMS_OUTPUT.PUT_LINE('DepartmentID: ' || v_DepartmentID);
+        DBMS_OUTPUT.PUT_LINE('Department Title: ' || v_DepartmentTitle);
+        DBMS_OUTPUT.PUT_LINE('Department Number of Employees: ' || v_DepartmentNumEmployees);
+        DBMS_OUTPUT.PUT_LINE('Department Account No: ' || v_DepartmentAccountNo);
+        DBMS_OUTPUT.PUT_LINE('Store ID: ' || v_DepartmentStoreID);
+        DBMS_OUTPUT.PUT_LINE('Franchise Team ID of Department: ' || v_DepartmentFranchiseTeamID);
+        DBMS_OUTPUT.PUT_LINE('Employee ID: ' || v_EmployeeID);
+        DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_EmployeeName);
+
+        DBMS_OUTPUT.PUT_LINE('Boss ID: ' || v_BossID);
+        DBMS_OUTPUT.PUT_LINE('Boss Name: ' || v_BossName);
+        DBMS_OUTPUT.PUT_LINE('Boss Email: ' || v_BossEmail);
+        DBMS_OUTPUT.PUT_LINE('Boss Phone: ' || v_BossPhone);
+        DBMS_OUTPUT.PUT_LINE('Boss DOB: ' || v_BossDOB);
+        DBMS_OUTPUT.PUT_LINE('Boss Gender: ' || v_BossGender);
+        DBMS_OUTPUT.PUT_LINE('Boss Joining Date: ' || v_BossJoinDate);
+        
+    ELSE 
+
+        SELECT SH.SHName, SH.SHPhone, SH.SHEmail, SH.SHAddress, SH.NoOfShares
+        INTO v_BossName, v_BossPhone, v_BossEmail, v_BossAddress, v_BossNumShares
+        FROM Membership M
+        JOIN Shareholder SH ON M.MemberID = SH.MemberID
+        WHERE M.MemberID = v_BossID;
+
+        DBMS_OUTPUT.PUT_LINE('Boss is a Shareholder');
+        DBMS_OUTPUT.PUT_LINE('DepartmentID: ' || v_DepartmentID);
+        DBMS_OUTPUT.PUT_LINE('Department Title: ' || v_DepartmentTitle);
+        DBMS_OUTPUT.PUT_LINE('Department Number of Employees: ' || v_DepartmentNumEmployees);
+        DBMS_OUTPUT.PUT_LINE('Department Account No: ' || v_DepartmentAccountNo);
+        DBMS_OUTPUT.PUT_LINE('Store ID: ' || v_DepartmentStoreID);
+        DBMS_OUTPUT.PUT_LINE('Franchise Team ID of Department: ' || v_DepartmentFranchiseTeamID);
+        DBMS_OUTPUT.PUT_LINE('Employee ID: ' || v_EmployeeID);
+        DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_EmployeeName);
+
+        DBMS_OUTPUT.PUT_LINE('Boss ID: ' || v_BossID);
+        DBMS_OUTPUT.PUT_LINE('Boss Name: ' || v_BossName);
+        DBMS_OUTPUT.PUT_LINE('Boss Email: ' || v_BossEmail);
+        DBMS_OUTPUT.PUT_LINE('Boss Phone: ' || v_BossPhone);
+        DBMS_OUTPUT.PUT_LINE('Boss Address: ' || v_BossAddress);
+        DBMS_OUTPUT.PUT_LINE('Boss Num Of Shares: ' || v_BossNumShares);
+
+    END IF;
+
+END employeeDetails;
+/
+
+-- Test Execute- uncomment out which one to test, either shareholder boss or full time employee boss
+BEGIN
+-- shareholder boss
+    -- employeeDetails('E027');
+
+    -- full-time-employee
+    employeeDetails('E055');
+
+END employeeDetails;
+/
+
+-- c.  Write a function that takes an employee ID and a month-year (date in ‘MON-YYYY’ format) and returns the total bonus amount the employee has earned by making exceptional sales during that month. If the employee was not awarded a bonus for that month, the function should return zero. For the execution of the function, write a procedure that accepts as input an employee ID and a month (in the same format) and calls the function to get the employee’s bonus amount and prints the following message: The employee named <employee name> has earned a total bonus amount of <calculated amount> for the month of <the full name of the month> by making outstanding sales. Hint: Although we did not maintain referential integrity constraint between EMPLOYEE and WEEKLY_SALES_REPORT, you can safely assume that the employee listed as the best performing employee in a sales report is a valid employee, who is present in the employee table.
+
+-- Implement-
