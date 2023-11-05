@@ -1,7 +1,7 @@
 -- Assessment 4- Ben Smerd
 
 -- Task 1:
--- a. Show the store information – along with its departments – for all stores that open the latest during weekends
+-- a. 
 
 SELECT s.StoreID, s.StoreAddress, s.WeekDaysHours, s.WeekendHours,
 d.DepartmentID, d.DepartmentTitle, d.NoOfEmployees, d.AccountNo, d.StoreId, d.FranchiseTeamID
@@ -12,7 +12,7 @@ AND s.WeekendHours = (
     FROM Store
 )
 
--- b.Show the name and address of all team members for store S001
+-- b.
 -- Was confused by the wording of the question so did it two ways
 
 SELECT E.EName, E.EAddress
@@ -31,14 +31,14 @@ LEFT JOIN Full_Time_Employee FE ON FE.MemberID = M.MemberID
 LEFT JOIN Employee E ON E.EmployeeID = FE.EmployeeID
 WHERE D.StoreID = 'S001'
 
--- c. List the franchise application details for each department of H2H along with the department ID and title. Include the departments that have not received any applications yet.
+-- c. 
 
 SELECT FA.AppNumber, FA.AppDate, FA.DecisionDate, FA.Status, FA.DepartmentID, FA.TeamId, D.DepartmentID, D.DepartmentTitle
 FROM Department D
 LEFT JOIN Franchise_App FA
 ON FA.DepartmentID = D.DepartmentID;
 
--- d. Show the team information and number of members for all successful franchise applications.
+-- d. 
 
 SELECT T.TeamID, T.TeamName, T.TeamLeaderId, FA.Status, COUNT(M.MemberID) AS NumMembersInTeam
 FROM Team T
@@ -49,20 +49,14 @@ ON T.TeamID = M.TeamID
 WHERE FA.Status = 'Granted'
 GROUP BY T.TeamID, T.TeamName, T.TeamLeaderId, FA.Status;
 
-e. Show the details of the franchise application that took the longest time to reach a decision.
-
-// THESE ARE AS CLOSE AS I CAN GET SO FAR
-// this is too much like chatgpt as its using something we didnt learn FETCH FIRST 1 ROW ONLY
+e. 
 
 SELECT AppNumber, AppDate, DecisionDate, Status, DepartmentID, TeamID, (DecisionDate - AppDate) AS DateDifference
 FROM Franchise_App
 ORDER BY DateDifference DESC
 FETCH FIRST 1 ROW ONLY;
 
--- f. List the team member details (including shareholder and employee details such as ID, name, phone and email) for all team members who are part of a franchise team of a successful application. For each of the members, also include the date on which their franchise application was granted. 
-
-// think this is right
-// need to get the team leader
+-- f. 
 
 SELECT FA.DecisionDate, FA.Status, M.TeamID, T.TeamName, SH.SHID, SH.SHName, SH.SHEmail, M.MemberID, E.EmployeeID, E.EName, E.EEmail, SH.SHPhone,  E.EPhone
 FROM Franchise_App FA
@@ -75,7 +69,7 @@ LEFT JOIN Employee E ON E.EmployeeID = FE.EmployeeID
 WHERE FA.Status = 'Granted';
 
 
--- g. List the details (shareholder/employee details) of the team member who has the maximum credit to their name, based on their percentage of share in the team and the positive account balance of the franchising department.(Hint: Account balance can be found in the account table.)
+-- g. 
 
 SELECT  M.TeamID, M.MemberID, M.PercentageOfShare, T.TeamName, NVL(SH.SHID, E.EmployeeID) AS TeamMemberID,
 NVL(SH.SHName,  E.EName) AS TeamMemberName, NVL(SH.SHEmail, E.EEmail) AS TeamMemberEmail,
@@ -102,9 +96,7 @@ WHERE M.MemberId = (
     )
 );
 
--- h. Show the top four employees (name, salary earned) that have earned the highest salary from January– December 2017. Assume that all casual employees work 12 hours per week and there are 45 working weeks a year
-
--- got the top four but seems kinda hacky???
+-- h. 
 
 SELECT E.EName, COALESCE(PE.Salary, FE.Salary, (CE.HourlyRate * 12 * 45)) AS SalaryEarned
 FROM Employee E
@@ -116,10 +108,7 @@ FETCH FIRST 4 ROW ONLY;
 
 
 -- TASK 2
--- a.Write a procedure that takes two dates as input (a duration) and updates the commission amount of every weekly report for which the start date falls within this duration. The commission amount is the result of multiplication of sale amount and commission rate (percentage). The procedure also generates an output in the following format for every affected row: "The commission amount for report <ReportID> has been updated to <ComAmount> dollars, which is <ComRate>%
-of the total sale amount of <SaleAmount> dollars."
-
-// works fine
+-- a.
 
 -- Implement-
 CREATE OR REPLACE PROCEDURE updateCommission(
@@ -154,7 +143,7 @@ BEGIN
 END;
 /
 
--- b. Write a procedure that takes an employee ID as argument and lists the details of an employee’s department and reporting boss. Note that an employee’s reporting boss is the person who has the highest percentage of share in the franchise team. The reporting boss can be either a full-time employee or a shareholder. If the reporting boss is a shareholder, display the number of shares along with contact details. If the boss is an employee, mention their DOB, gender and joining date along with their contact information.
+-- b. 
 
 -- Implement-
 
@@ -284,6 +273,169 @@ BEGIN
 END employeeDetails;
 /
 
--- c.  Write a function that takes an employee ID and a month-year (date in ‘MON-YYYY’ format) and returns the total bonus amount the employee has earned by making exceptional sales during that month. If the employee was not awarded a bonus for that month, the function should return zero. For the execution of the function, write a procedure that accepts as input an employee ID and a month (in the same format) and calls the function to get the employee’s bonus amount and prints the following message: The employee named <employee name> has earned a total bonus amount of <calculated amount> for the month of <the full name of the month> by making outstanding sales. Hint: Although we did not maintain referential integrity constraint between EMPLOYEE and WEEKLY_SALES_REPORT, you can safely assume that the employee listed as the best performing employee in a sales report is a valid employee, who is present in the employee table.
+-- c. 
 
 -- Implement-
+CREATE OR REPLACE FUNCTION employeeBonus(
+    p_EmployeeID Employee.EmployeeID%TYPE,
+    p_PerformanceDate DATE
+)
+RETURN NUMBER IS
+
+v_EmployeeBonus Weekly_Sales_Report.EBonus%TYPE;
+
+BEGIN
+
+    SELECT SUM(EBonus)
+    INTO v_EmployeeBonus
+    FROM Weekly_Sales_Report
+    WHERE TO_DATE(TO_CHAR(p_PerformanceDate, 'Mon-YYYY'), 'Mon-YYYY') 
+    BETWEEN TO_DATE(TO_CHAR(StartDate, 'Mon-YYYY'), 'Mon-YYYY')
+    AND TO_DATE(TO_CHAR(EndDate, 'Mon-YYYY'), 'Mon-YYYY')
+    AND EmployeeID = p_EmployeeID;
+    
+    IF v_EmployeeBonus > 0 THEN
+        RETURN v_EmployeeBonus;
+    ELSE
+        RETURN 0;
+    END IF;
+
+END employeeBonus;
+/
+
+
+CREATE OR REPLACE PROCEDURE getEmployeeBonusAmount(
+    p_EmployeeID Employee.EmployeeID%TYPE,
+    p_Month DATE
+) AS
+
+v_EmployeeName Employee.EName%TYPE;
+v_BonusTotal NUMBER;
+v_MonthName VARCHAR2(10);
+
+BEGIN
+
+    SELECT EName, employeeBonus(p_EmployeeID, p_Month)
+    INTO v_EmployeeName, v_BonusTotal
+    FROM Employee
+    WHERE EmployeeID = p_EmployeeID;
+
+    DBMS_OUTPUT.PUT_LINE('The employee named ' || v_EmployeeName || ' has earned a total bonus amount of ' || v_BonusTotal ||
+    ' for the month of ' || to_char(p_Month, 'Month') || ' by making outstanding sales.');
+
+END getEmployeeBonusAmount;
+/
+
+-- Execute
+BEGIN
+
+    getEmployeeBonusAmount('E004', TO_DATE('01-Apr-2018', 'DD-MON-YYYY'));
+
+END;
+
+
+-- Task 3.
+-- a. 
+
+-- Implement
+
+CREATE OR REPLACE TRIGGER fullTimeEmployeeExpCheck
+BEFORE INSERT ON Franchise_App FOR EACH ROW
+DECLARE
+
+    CURSOR Team_Members IS
+    SELECT MemberID
+    FROM Membership
+    WHERE TeamID = :NEW.TeamID;
+
+    v_FTEmployeeJoiningDate Employee.JoiningDate%TYPE; 
+    v_currentDate DATE;
+
+BEGIN
+    FOR member IN Team_Members LOOP
+        v_currentDate := SYSDATE;
+
+        SELECT E.JoiningDate
+        INTO v_FTEmployeeJoiningDate
+        FROM Employee E
+        LEFT JOIN Full_Time_Employee FE ON FE.EmployeeID = E.EmployeeID
+        LEFT JOIN Membership M ON M.MemberID = FE.MemberID
+        WHERE M.MemberID = member.MemberID
+        AND TeamID = :NEW.TeamID;
+
+        IF EXTRACT(YEAR FROM v_currentDate) - EXTRACT(YEAR FROM v_FTEmployeeJoiningDate) >= 10 THEN
+            DBMS_OUTPUT.PUT_LINE('Current date is approximately 10 years or more from ' || v_FTEmployeeJoiningDate);
+        
+        ELSE 
+            RAISE_APPLICATION_ERROR(-20001, 'Validation failed for ' || member.MemberID || ' as they have not worked here for 10 years or more.');
+        END IF;
+
+    END LOOP;
+
+END fullTimeEmployeeExpCheck;
+/
+
+-- DML Statement to INSERT and check if it was created or not
+
+INSERT INTO Franchise_App (AppNumber, DepartmentID, TeamID)
+VALUES('testno', 'D023', 'T014');
+
+SELECT * FROM Franchise_App WHERE AppNumber = 'testno';
+
+
+-- b. 
+
+-- Create BackupReport Table
+
+CREATE TABLE BackupReport(
+    ReportID VARCHAR2(10) NOT NULL, 
+    StartDate DATE, 
+    EndDate DATE, 
+    SaleAmount NUMBER(8, 2),
+    PRIMARY KEY (ReportID)
+);
+
+-- Implement
+
+CREATE OR REPLACE TRIGGER backUpSalesReport
+AFTER INSERT ON Weekly_Sales_report FOR EACH ROW
+
+DECLARE
+
+    v_numReports NUMBER;
+
+    v_oldReportID Weekly_Sales_Report.ReportID%TYPE;
+    v_oldReportStartDate Weekly_Sales_Report.StartDate%TYPE;
+    v_oldReportEndDate Weekly_Sales_Report.EndDate%TYPE;
+    v_oldReportSaleAmount Weekly_Sales_Report.SaleAmount%TYPE;
+
+BEGIN
+
+    SELECT COUNT(*)
+    INTO v_numReports
+    FROM Weekly_Sales_Report
+    WHERE DepartmentID = :NEW.DepartmentID;
+
+    IF v_numReports > 30 THEN
+
+        SELECT ReportID, StartDate, EndDate, SaleAmount
+        INTO v_oldReportID, v_oldReportStartDate, v_oldReportEndDate, v_oldReportSaleAmount
+        FROM Weekly_Sales_Report
+        WHERE DepartmentID = :NEW.DepartmentID
+        AND StartDate = (
+            SELECT MIN(StartDate)
+            FROM Weekly_Sales_Report
+            WHERE DepartmentID = :NEW.DepartmentID
+        );
+
+        INSERT INTO BackupReport
+        VALUES(v_oldReportID, v_oldReportStartDate, v_oldReportEndDate, v_oldReportSaleAmount);
+
+    END IF;
+
+END backUpSalesReport;
+/
+
+-- DML Query
+INSERT INTO Weekly_Sales_Report(ReportID, StartDate, EndDate, SaleAmount, DepartmentID)
+VALUES('test100', TO_DATE('01-Mar-2013', 'DD-Mon-YYYY'), TO_DATE('08-Mar-2013', 'DD-Mon-YYYY'), 230000, 'D001');
