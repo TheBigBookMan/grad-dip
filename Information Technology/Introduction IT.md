@@ -4,3 +4,5 @@
 - **Stored Program COmputers**- Problem with first machines that could process digitized information was it was all hardwarr
 	- The big break was creating the first lots of "software" programs that used bits instead of wires for memory
 	- Building CPU to intepret instructions for the computers
+- **Switch to transistors**- Moving from large vacuum tubes to the smaller transistors made computers much smaller, cheaper and more reliable.
+- **Integrated Circuits**- 
