@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "47bc15e37e383040",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Human Computer Interface.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction IT.md",
+                "file": "Human Computer Interface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction IT.md",
+                "file": "Human Computer Interface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction IT.md"
+                "file": "Human Computer Interface.md"
               }
             }
           }
@@ -147,8 +160,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aacc1a0225f911fb",
+  "active": "47bc15e37e383040",
   "lastOpenFiles": [
-    "Introduction IT.md"
+    "Introduction IT.md",
+    "Human Computer Interface.md"
   ]
 }
