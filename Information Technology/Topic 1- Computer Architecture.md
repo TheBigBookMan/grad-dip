@@ -1,0 +1,137 @@
+## Information
+- **Data**- data is meaningful information and represenst values associated
+- **Knowldge**- tyhings we know
+- Methods for conveying info- sound, text, image, light, moving pics
+- IT is computers to store, retrieve, transmit and maniuplation data usually in context of business
+- **Computer**- electronic device that operates under control of instructions using memory, accept data input and process the data according to specific rules nad then produce information output and store information for future useage- PC, mobile device, IOT
+- User-> Application sogftweare -> System software -> Hardware
+
+##  Computer Hardware
+- Parts that make up the actual desktop of a computer- memeory module, processor, battery, sound card, processor, heat sink and fan, hard disk, integrated sound ports and circuitry
+- **Motherboard**- Conects components together, many different connectors to connect to external devices such as monitors, keytboards and speakers. Data wires connect components together called **BUS**
+	- **Bus**- essentially the wires that are connecting all the different components on the motherboard to work
+- **Adapter Cards**- Internal expansion card that allows computer to commuinicate with other preipheral, like video cards or monitors- extensions to allow for more components to the computer
+- **CPU (Central Processing Unit)**- Need this for all decision making for the computer, performs buillions of instructions per second, multiple instructions at same time and need CPU as controlled by a porgram.
+	- Speed measured in gigahertz GHz, clock speed (VERY FAST)
+	- **Processors**- Componenets of the CPU
+		- Control unit- directos and coodirdations most of the operations in computer
+		- arithmetic logic unit ALU- performs arithmetic comparson and other operations
+		- registers- temporary storage (smaller and fastest), smaller and faster than the cache
+	- Input device registers data and the CPU does the processing and then does the output
+	- Machine cycle will each instruction repeats 4 steps
+		- Fetch instructions and data by control unit
+		- interpret by control unit
+		- perform calculation by ALU
+		- Store results
+	- **Memory**- Data representation in bits and bytes binary
+		- Electronic components that store
+			- Instructions- waiting to be executed by the processor
+			- Data needed by those instructions
+			- Results of processing the data
+		- Address of each stored byte
+		- Types memeory-
+			- Volatile- needs power to retain, power of machine off and gone
+				- Static RAM (SRAM)- expensive, low power cost- CPU cache, less frequently reenergised, expensive
+				- Dynamiuc RAM (DRAM)- cheaper, higher power cost computer memory, constant reenergised
+			- Non-vlatile- holds conent when not power
+				- ROM (Read only memory)
+				- Flash memeory
+		- Main memory vs CPU cache-
+			- 3 levels of cache from CPU to main memory
+			- Each level is slower as is closer to the main memory, so data that is needed quicker will be stored in closer to CPU cache
+			- Things like opening an application will use RAM and once turn the computer off the application is killed, so once reboot it will need to restard
+			- ROM is used for things like data storage on disks and USBs
+- Haredware COmponent- RAM
+	- Computer needs to store data somewhere while its being processed by CPU
+	- RAM is very fast and not presistent (data gone when computer turned odd)
+	- modern computer have between 4GB - 32GB RAM
+- Hardware component- ROM
+	- Read only memory
+	- persistent and not erased when loses power
+	- common type of ROM is DVD-ROM (a movie is saved on the disk)
+	- Repgoram ROM chips like EPROM
+- Hardweare component- Harddrive
+	- much higher capacity than RAM but a lot slower
+	- More expensive byut much faster than hard drives
+	- connect to the motherboard via SATA cables
+	- persistent remembers after reboot
+	- the platter rotates around 7200 RPM and arm must move out to read the data on the disk
+	- high latency, takes time for arm to move into position to read data from platter
+- Hardware component- SSD
+	- Sokid state drive used like hard drives to store long term data
+	- No moving parts (like a arm or spinning disc)
+	- Low latency because dont have arm moving to get data
+	- More expensive per GB than hard drives but cost is rapidly decreasing, hard drives will be repaced by SSD within years
+	- Much more solid connection of a stable hardware, compared to a disk with an arm
+- Hardware Components- optical drive
+	- Use lasers to read digital data from plastic disk
+	- CD-ROM disks
+	- Compact disk coudl store 700MB data, DVD 4-9GB and blueray gfor 25GB etc used for more HD
+	- Less popular because of low performance and physical size, because hard drives can store way more and take up less space
+- Hardware- External peripherals
+	- COmponents that live outside the computer chassis
+		- MOnitor/screen- provicdes visual output to user
+		- keyboard/mouse- allow user to provide input
+- Hardware- Ports
+	- USB- universal serial bus
+		- high speed connecting port to other devices
+	- PS/2-
+		- used for keyboard and most, mostly replaces by USB
+	- Ethernet-
+		- used to communicate to network devices and other computers
+		- used to access internet
+	- DVI/HDMI-
+		- Digivital visual interface, used to connect PC to TV
+		- Compatability is weird
+		- Compatible with VGA
+	- Display port-
+		- supports higher resultions than HDMI
+	- PCI Express
+		- Peripeheral component interconnect express
+		- very fast and comes in multiple sizes
+		- RAIDs Used for different cards like data managing multiple hard drves
+		- RAIDs are used for data redundency if data can be mirrored to ensure data is preserved in case of a drive failure
+	- SATA
+		- Used to connect hard drives and SSDs to the motherboard
+	- M.2 connector-
+		- used to connect SSDs directly to motherboard
+		- use SATA or PCIe as communication protocol
+	- VGA-
+		- used for display, but replaced by HDMI
+	- Parallel port-
+		- used for printers, USB and network printing better
+	- Game port- 
+		- used for jsticks and other gamepades, replaced by USB
+	- PCI/AGP
+		- obseleted by PCI express
+	- Speed comparisons-
+		- SSD using PCIe- 0.025 ms
+		- SSD using SATA- 0.05ms
+		- Hard drive using SATA
+- **Transistor**- logic gate that allows electricity to pass through- 0/1
+	- Electrical flow through gate and the silicon will insulate the transistor to be on
+	- PMOS- swittches on when lower voltage
+	- NMOS- switches on when high voltage
+	- NAND Gates (not AND)- high voltage (1), low voltage (0)- the way for electricity to flow from one end to the other with the gates
+	- Using symbols to symbolise what type of gate something is
+- Data representated by binary 0/1
+	- Decimal system is base 10 0-9
+	- Octet is 8 bits long = 1 byte
+	- Word is a basic unit storage that uses 64 bits
+	- **Hexadecimal**- Base 16 0-F
+		- 1 hex digit is exactly 4 bits
+		- hex is often denoted by starting with 0x
+	- **ASCII**- the standard for things to mean the same thing across different encodings- "A" == 00100100 (probs)
+		- Table to view it all
+	- Unicode- 1 byte per character only allows 256 possible characters
+		- UTF-16 used 2 bytes per character
+	- **Images**- written in hex using 6 characters (3 numbers in hex) to represent RGB
+		- the different brightness levels of RGB generate different pixel colors
+	- **Data types**- types of data we want to store so need to tell the computer what we want to store
+		- Integer- whole numbers
+		- string- sequence of chatacters
+		- float- decimal numbers
+		- double- 8 bytes long float
+	- **Computer files**- different files to be decoded to do something- zip, gif, htmll, jpg, php etc
+		- File compression to make the file a lot smaller so it can move around easier and then recreate it
+	- **Computer algorithm**- Input and then rules happen which creates an output
