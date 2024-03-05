@@ -8,6 +8,7 @@
 
 ##  Computer Hardware
 - Parts that make up the actual desktop of a computer- memeory module, processor, battery, sound card, processor, heat sink and fan, hard disk, integrated sound ports and circuitry
+- **Von Neumann architecture**- Electronic digital computer with subvisions of processing unit consiting of rithmetic logic unit and processor registers, control unit containing instruction register and program counter and a memory to store both data and instructions andinput/output mechanisms.
 - **Motherboard**- Conects components together, many different connectors to connect to external devices such as monitors, keytboards and speakers. Data wires connect components together called **BUS**
 	- **Bus**- essentially the wires that are connecting all the different components on the motherboard to work
 - **Adapter Cards**- Internal expansion card that allows computer to commuinicate with other preipheral, like video cards or monitors- extensions to allow for more components to the computer
@@ -17,7 +18,7 @@
 		- Control unit- directos and coodirdations most of the operations in computer
 		- arithmetic logic unit ALU- performs arithmetic comparson and other operations
 		- registers- temporary storage (smaller and fastest), smaller and faster than the cache
-	- Input device registers data and the CPU does the processing and then does the output
+	- Input device registers data and the CPU does the processing and then does the output- control unit tells arithmetic logic unit ALU what opoeration to perform on the data and the ALU stores the result in an ouput register, the control unit moves the data between these registers, the ALU and memory
 	- Machine cycle will each instruction repeats 4 steps
 		- Fetch instructions and data by control unit
 		- interpret by control unit
@@ -29,9 +30,12 @@
 			- Data needed by those instructions
 			- Results of processing the data
 		- Address of each stored byte
+		- **access a memeory address**-
+			- **Logical addresses**- Theres are essentially virutal addresses made by the program that is running, is it used as a reference to access the physical memeory location by the CPI. Memory management unit MMU is used to map the logical address to the corresponding physical address. Page table is data structure used by virtual memeory system to store the mapping between virtual and physical
+			- **Physuical addresses**- Physica location of required data in memeory. Never directly deals with physical locatioin just the logical location associated to thge physical. This is why the logical needs to be mapped to the physical
 		- Types memeory-
 			- Volatile- needs power to retain, power of machine off and gone
-				- Static RAM (SRAM)- expensive, low power cost- CPU cache, less frequently reenergised, expensive
+				- Static RAM (SRAM)- expensive, low power cost- CPU cache, less frequently reenergised, expensive- computer needs to store data somewhere while CPU is processing it- in RAM
 				- Dynamiuc RAM (DRAM)- cheaper, higher power cost computer memory, constant reenergised
 			- Non-vlatile- holds conent when not power
 				- ROM (Read only memory)
@@ -59,6 +63,7 @@
 	- high latency, takes time for arm to move into position to read data from platter
 - Hardware component- SSD
 	- Sokid state drive used like hard drives to store long term data
+	- Uses instantly accessible memroy chips
 	- No moving parts (like a arm or spinning disc)
 	- Low latency because dont have arm moving to get data
 	- More expensive per GB than hard drives but cost is rapidly decreasing, hard drives will be repaced by SSD within years
@@ -84,15 +89,20 @@
 		- Digivital visual interface, used to connect PC to TV
 		- Compatability is weird
 		- Compatible with VGA
+		- high-definition multimedia interface- HDMI can deliver sound, DVI cannot
 	- Display port-
 		- supports higher resultions than HDMI
 	- PCI Express
 		- Peripeheral component interconnect express
+		- high speed serial computer expansion BUS standard designed to replace older PCI and bus standards
+		- Common motherboard interface for PC graphics cards and hard disk, WIFI and ethernet
+		- x16 for graphics cards, 4x for RAID cards, x1 for lowe speed like sound cards
 		- very fast and comes in multiple sizes
 		- RAIDs Used for different cards like data managing multiple hard drves
 		- RAIDs are used for data redundency if data can be mirrored to ensure data is preserved in case of a drive failure
 	- SATA
 		- Used to connect hard drives and SSDs to the motherboard
+		- computer bus interface connects host bus adapters to mass storage devices like hard disk drives, optical drives and SSD
 	- M.2 connector-
 		- used to connect SSDs directly to motherboard
 		- use SATA or PCIe as communication protocol
@@ -120,17 +130,20 @@
 	- Word is a basic unit storage that uses 64 bits
 	- **Hexadecimal**- Base 16 0-F
 		- 1 hex digit is exactly 4 bits
+		- 1 byte is 2 hex digits- very easy for larger numbers as well
+		- 0-9, A(10)-F(15)
 		- hex is often denoted by starting with 0x
-	- **ASCII**- the standard for things to mean the same thing across different encodings- "A" == 00100100 (probs)
+	- **ASCII**- the standard for things to mean the same thing across different encodings- "A" == 00100100 (probs)- uses 1 byte per character
 		- Table to view it all
 	- Unicode- 1 byte per character only allows 256 possible characters
 		- UTF-16 used 2 bytes per character
 	- **Images**- written in hex using 6 characters (3 numbers in hex) to represent RGB
 		- the different brightness levels of RGB generate different pixel colors
 	- **Data types**- types of data we want to store so need to tell the computer what we want to store
-		- Integer- whole numbers
+		- Integer- whole numbers, usually 4 bytes long
+		- char- single characters 'G' usually 1 byte long
 		- string- sequence of chatacters
-		- float- decimal numbers
+		- float- decimal numbers, normally 4 bytes
 		- double- 8 bytes long float
 	- **Computer files**- different files to be decoded to do something- zip, gif, htmll, jpg, php etc
 		- File compression to make the file a lot smaller so it can move around easier and then recreate it
