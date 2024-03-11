@@ -122,8 +122,15 @@
 	- Electrical flow through gate and the silicon will insulate the transistor to be on
 	- PMOS- swittches on when lower voltage
 	- NMOS- switches on when high voltage
-	- NAND Gates (not AND)- high voltage (1), low voltage (0)- the way for electricity to flow from one end to the other with the gates
+	- Gates-high voltage (1), low voltage (0)- the way for electricity to flow from one end to the other with the gates, the two inputs will determine by the logic if the output is a 1 or 0
+		- NAND Gates (not AND)- opposite of AND, if both inputs are both 1 then output 0, otherwise outputs 1
+		- AND- both inputs are 1 then output 1 otherwise output 0
+		- OR- if any of the input is one then it outputs 1
+		- XOR (exclusive OR)-  if two inputs are different then output 1, otherwise 0
 	- Using symbols to symbolise what type of gate something is
+	- **Half adder**- half adder has two inputs and then two ouputs which are the, takes single bit numbers and doesnt take the CARRY from previous sum. These are the two outputs where it will determine if the output for both is a 1 or 0
+		- **Sum (S)**- the results of the two binaries that are input together eg 1 + 0 = 1
+		- **Carry (C)**- the left over logic bit, so if 1 + 1 = 0 SUM with CARRY of 1 (in binary so cant have a 2, needs to carry over)
 - Data representated by binary 0/1
 	- Decimal system is base 10 0-9
 	- Octet is 8 bits long = 1 byte
@@ -139,6 +146,7 @@
 		- UTF-16 used 2 bytes per character
 	- **Images**- written in hex using 6 characters (3 numbers in hex) to represent RGB
 		- the different brightness levels of RGB generate different pixel colors
+		- each pixel on the screen comprises of three small dots of compounds called phosphors surrounded by a black mask
 	- **Data types**- types of data we want to store so need to tell the computer what we want to store
 		- Integer- whole numbers, usually 4 bytes long
 		- char- single characters 'G' usually 1 byte long
@@ -147,4 +155,26 @@
 		- double- 8 bytes long float
 	- **Computer files**- different files to be decoded to do something- zip, gif, htmll, jpg, php etc
 		- File compression to make the file a lot smaller so it can move around easier and then recreate it
+		- important to be able to identify what type of file it is so the computer can know what program to open to use the file
+		- Two main files
+			- **Binary files**- include EXE, DOXS, JPEG, PNG, BMP, ZIP, WAV, MP3 format 
+				- Wav- waveform audio file format, lossless audio format that does not compress original anolog audio recording
+				- Zip- file format to compress one or more files together into a single location
+				- bmp - graphics image file to store bitmap digital images
+				- Jpeg- saved using lossy JPEG compression
+				- mp3 - lossy audio, digital audio file that has been compressed to manageable size for storage, streaming and download
+				- png - portable network graphic, lossless compressed image format
+				- - Exe- executable for windows, standard file extension used by windows programs
+				- - docx- word document contains text, newer version of Doc
+			- **Plain text**- TXT, HTML
+				- - txt - standard text document containing plain text
+		- File types have special bytes near start of the file to help identiofy the file type if file extension is missing or incorrect
+		- File compression allows files to take up less spave that it would typically
+			- **Lossless compression**- file can be compressed into smaller file and later decompressed back into original file without loss of data
+				- This is done by creating a dictionary of common phrases or things in the file, so words/senteces or common patterns are converted to singular digits etc- ZIP, PNG, 7z files
+			- **Lossy compression**- file is compressed by removing data and canot be reversed
+				- Jpeg as iomage quality is reduced in a way tat cannot be undone, same with MP3
+				- Compression depends on the algorithm being used, how much data is in patterns, and if the file is alreadyu compressed
 	- **Computer algorithm**- Input and then rules happen which creates an output
+		- Set of instructions for performing computation for solivng a problem
+		- 
