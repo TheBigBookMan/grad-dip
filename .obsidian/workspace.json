@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0f56ac3aba6d3017",
+        "id": "6b0762db6ded2e95",
         "type": "tabs",
         "children": [
           {
-            "id": "fce4c73664481fb0",
+            "id": "bcb12f1672d71773",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Information Technology/Topic 2- Networks.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 259.5,
+    "collapsed": true
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Information Technology/Topic 2- Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Information Technology/Topic 2- Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Information Technology/Topic 2- Networks.md"
+              }
             }
           }
         ]
@@ -138,8 +147,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fce4c73664481fb0",
+  "active": "bcb12f1672d71773",
   "lastOpenFiles": [
+    "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/Assessments/Assess4.txt",
     "Databases/Assessments",
