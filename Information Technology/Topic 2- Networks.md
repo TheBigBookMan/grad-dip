@@ -27,23 +27,41 @@
 				2. Single-mode fibre optic cable,smaller diameter core and only allows one possible path for the light. Can handle higher speeds over long distances, like 40km at 10gbps, requires more precise connections and powerful transmitters so higher cost than multi-mode,
 			- Fibre is immune to electromagnetic interferece and can do higher speed over greater distances than copper but its more expensive. Rrequires special training and expensive equipment so not usually worth it for less than 100m
 		- **Coaxial cable**- Used as a transmission line for radio frequency signals
-		- **802.11 wi-fi**- wireless tech to connect all devices to internet
+		- **802.11 wi-fi**- wireless tech to connect all devices to ethernet networks they physically cant connect to, cheap and easy to implement
+			- Ethernet good for LAN by not for larger networks like the internet
+			- Ethernet and 802.11 both have compatible layer 2 MAC address schemes
+			- Max distance is 50 metres
+			- Wi-Fi has multiple protocol standards-
+				- 802.11b- first versions of wi-f-, up to 11Mbps
+				- 802.11g- very popular, 54Mbps
+				- 802.11n- major revision of wi-fi, 5GHz or 2.4GHz, 300Mbps
+				- 802.11ac- latest revision, 1000Mbps
+			- **Wireless Access Point (WAP)**- device allows wireless devices to connect to wired devices, no ethernort port. 
+				- Will emit wi-fi signals for wireless devices to connect to
+				- Wi-fi has no collisions because the WAP allocates time for each client to transmit
+				- WAP is connected to the ethernet switch which is connected to the wired devices through ethernet. the frames are sent from wired to the switch to the WAP and then wirelessly transported to the wireless devices
+			- Wireless devices connect to the WAP and frames are sent between wireless and wired devices, process transparent that devices cannot distinguish between wired and wireless devices
 	2. **Data Link Layer**- controls who can transmit on the medium at any given time
 		- data- frames
 		- Layer- MAC and LLC (physucal addressing)
 	3. **Network Layer**- establishes pathways between devicves
 		- data- packets
 		- layer- path determination and IP (logical addressing)
-	4. **Transport Layer**- error correction and flow control
+			- Host addressing and how packets are sent between networks
+			- **Internet Protocol Version 4 (IPv4)**- Most popular layer 3 protocol
+				- Offers global addressing and allows hosts to send data to other hosts around the world
+				- **IP Addresses**- generally writtedn as dotted decimal number like 192.168.0.1- each number is 8-bit cant exceed 255. IP Address assignment done by comany called ICANN that set up policy for global Domain Name System
+				- The IP data is stored in the **frame** data within the packet
+	1. **Transport Layer**- error correction and flow control
 		- data- segments
 		- layer- end to end connections and reliability
-	5. **Session Layer**- provides APIs for aplpication software to manage the connection
+	2. **Session Layer**- provides APIs for aplpication software to manage the connection
 		- data- data
 		- layer- interhost communication
-	6. **Presentation Layer**- compression and encryption
+	3. **Presentation Layer**- compression and encryption
 		- data- data
 		- layer- data representation and encryption
-	7. **Application Layer**- application that isusing the data (web browsers etc)
+	4. **Application Layer**- application that isusing the data (web browsers etc)
 		- data- data
 		- layer- network process to application
 	- Common protocols for each layer
@@ -69,6 +87,7 @@
 							- In ethernet network each **Network Interface Card (NIC)** of all hosts has a uniqie MAX address in the hardware
 							- Uses hexadecimal number- A3:B4:27:AF:2E
 							- When hosts receives packer on the network, it looks to see if the destination MAC address of the packet matches its own MAX address, if not then it ignores the packet/frame
+							- MAC Table can handle around 8000 MAC Addresses so it's not great for very large networks
 						- **Payload**- the data to be sent
 						- **CRC Checksum**- provices information to check if data has been corrupted
 				- **Ethernet Hub**- accept data on one port and send data out all other ports
@@ -82,6 +101,10 @@
 					- Learn what MAC Addresses are on which ports, the address is stored in the MAC Table in switch, once the MAC Address has learnt what port the host is on, any data specified for that host will only be sent to that port that the hose is attached to
 					- If it doesnt know what port a destination MAC address is then it will send out to all ports (like a hub), the non-matching MAC will ignore the frame
 					- Any sending of the frame will store the MAC address  in the switch ready for future use
+					- Can manage a switch and configure it, will have a port called Console
+				- **Collision Domain**- network segment connected by shared medium where simlutaneous data transmissionc ollide with one another
+					- Hubs- all hosts must wait for collision to be resolved, whole network is a collision domain as if one collision happens then everything waits
+					- Switches- Confined to individual connections so if one collision then only that singular host.
 				
 			- 802.11 (wi-fi)
 			- bluetooth
