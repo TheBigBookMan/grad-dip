@@ -41,53 +41,32 @@
 				- Wi-fi has no collisions because the WAP allocates time for each client to transmit
 				- WAP is connected to the ethernet switch which is connected to the wired devices through ethernet. the frames are sent from wired to the switch to the WAP and then wirelessly transported to the wireless devices
 			- Wireless devices connect to the WAP and frames are sent between wireless and wired devices, process transparent that devices cannot distinguish between wired and wireless devices
-	2. **Data Link Layer**- controls who can transmit on the medium at any given time
+		-  **Eethernet**- (over fibre or unshielded twisted pair)
+			- Common set of layer1/2 protocols
+			- Layer 1 it usually uses copper wire but can use fibre optic
+			- Consists of over 50 protocols of different mediums and speeds
+			- used to use **Bus topology**- 
+				- Uussed to use coaxial cable
+				-  betweeen all hosts in network (**bus topology)**- 
+				- all nodes are connected to a single cable, if one cable is broken then entire segment breaks
+				- Many  collisions can happen with this netwrosk
+			- Moved to **Star Topology**- 
+				- with hub in the middel connecting the hosts,
+				- implenments the spoke-hub paradigm where every host is connected to the central hub and this decides what messages to transmit-- most common paradigm
+				- Cable usually UTP
+				- Collision still an issue
+			
+	1. **Data Link Layer**- controls who can transmit on the medium at any given time
 		- data- frames
-		- Layer- MAC and LLC (physucal addressing)
-	3. **Network Layer**- establishes pathways between devicves
-		- data- packets
-		- layer- path determination and IP (logical addressing)
-			- Host addressing and how packets are sent between networks
-			- **Internet Protocol Version 4 (IPv4)**- Most popular layer 3 protocol
-				- Offers global addressing and allows hosts to send data to other hosts around the world
-				- **IP Addresses**- generally writtedn as dotted decimal number like 192.168.0.1- each number is 8-bit cant exceed 255. IP Address assignment done by comany called ICANN that set up policy for global Domain Name System
-				- The IP data is stored in the **frame** data within the packet
-	1. **Transport Layer**- error correction and flow control
-		- data- segments
-		- layer- end to end connections and reliability
-	2. **Session Layer**- provides APIs for aplpication software to manage the connection
-		- data- data
-		- layer- interhost communication
-	3. **Presentation Layer**- compression and encryption
-		- data- data
-		- layer- data representation and encryption
-	4. **Application Layer**- application that isusing the data (web browsers etc)
-		- data- data
-		- layer- network process to application
-	- Common protocols for each layer
-		1. **Physiucal/DataLink layers (1, 2)**- 
-			- **Eethernet**- (over fibre or unshielded twisted pair)
-				- Common set of layer1/2 protocols
-				- Layer 1 it usually uses copper wire but can use fibre optic
-				- Consists of over 50 protocols of different mediums and speeds
-				- used to use **Bus topology**- 
-					- Uussed to use coaxial cable
-					-  betweeen all hosts in network (**bus topology)**- 
-					- all nodes are connected to a single cable, if one cable is broken then entire segment breaks
-					- Many  collisions can happen with this netwrosk
-				- Moved to **Star Topology**- 
-					- with hub in the middel connecting the hosts,
-					- implenments the spoke-hub paradigm where every host is connected to the central hub and this decides what messages to transmit-- most common paradigm
-					- Cable usually UTP
-					- Collision still an issue
-				-  **Ethernet frame**- Pack of data at layer 2 called frame
+		-  **Ethernet frame**- Pack of data at layer 2 called frame
 					- contains three main sections
 						- **Header**- contains information about the frame (metadata) and includes which host the frame is intended for (Destination MAC Address), who sent it (Source MAC Address) and what kind of data the payload contains (Ether Type)
-							- **MAC (Media Access Control) Address**- contained in the header and are used to identify different hosts on the network
+							- **Data-Link Lyaer- MAC (Media Access Control) Address**- contained in the header and are used to identify different hosts on the network
 							- In ethernet network each **Network Interface Card (NIC)** of all hosts has a uniqie MAX address in the hardware
 							- Uses hexadecimal number- A3:B4:27:AF:2E
 							- When hosts receives packer on the network, it looks to see if the destination MAC address of the packet matches its own MAX address, if not then it ignores the packet/frame
 							- MAC Table can handle around 8000 MAC Addresses so it's not great for very large networks
+							- Host needs to know the MAC address of another host to send 
 						- **Payload**- the data to be sent
 						- **CRC Checksum**- provices information to check if data has been corrupted
 				- **Ethernet Hub**- accept data on one port and send data out all other ports
@@ -105,6 +84,64 @@
 				- **Collision Domain**- network segment connected by shared medium where simlutaneous data transmissionc ollide with one another
 					- Hubs- all hosts must wait for collision to be resolved, whole network is a collision domain as if one collision happens then everything waits
 					- Switches- Confined to individual connections so if one collision then only that singular host.
+	2. **Network Layer**- establishes pathways between devicves
+		- data- packets
+		- layer- path determination and IP (logical addressing)
+			- Host addressing and how packets are sent between networks
+			- **Internet Protocol Version 4 (IPv4)**- Most popular layer 3 protocol
+				- Offers global addressing and allows hosts to send data to other hosts around the world
+				- **IP Addresses**- generally writtedn as dotted decimal number like 192.168.0.1- each number is 8-bit cant exceed 255. IP Address assignment done by comany called ICANN that set up policy for global Domain Name System
+				- The IP data is stored in the **frame** data within the packet
+				- If a  host doesnt know the MAC address of where it weants to send something, then an **ARP (Address Resolution Protocol)** will be sent out to all hosts with given IP addresses, the ARP will have a **broadcast address** as the destination in the packet and the switch will send out the ARP to all ports, and if the host (whos MAC address is unkown) has the matching IP address it returns its MAC Address to the switch to save to MAC Table
+				- Once ARP is done the sending host will save the MAC address and IP address (now a match) in its ARP Table (for future sending reference)
+				- ARP can be poisoned because MAC addresses can be hacked
+			- **Routers**- Working on a higher level of network layer 3 than switches (layer 2)
+				- Switches make decisions based on MAC addresses and routers make decisions according to IP addresses
+				- Routers have different MAC addresses and IP addresses on each port
+				- Make decisions based on IP addresses (not MAC) and this means it can make more complex networking decisions and enforce security rules
+				- Less ports than switches and do not forward broadcasts or ARP messages
+				- 3 in one- switch, router and WAP
+				- Routers can have ports which connect to multiple switches, this separates hosts to be able to work more efficiently than cramming itall (done by IP addresses and MAC Addresses to each switch inside the Router)- IP address for hosts (192.43.43.11, 192.43.43.12) on the switch with related IP (192.43.43.1) (NOTICE THAT THE IP IS A BEGINNIN FIRST FEW NUMBERS THE SAME)  will remain on that switch and not go to the other- this makes the MAC addresses useless outside of a network segment
+				- ARPs are meant for identifying addresses on a particular segment, not across networks, the router is what will determine which segment the packet will go to
+				- **Broadcast domain**- Area that broadcast message can be propgated by network, (similar to collision concept)- like switches it breaks up the broadcast domains into smaller groups (the groups of IP addresses/switches/hosts)- MAC addresses are only important within each segment, not in its entirety
+				- For all of the below to work, the ARP depends on broadcasts, so broadcast stays within segment
+				- The broadcast has a message asking for IP address and the return message responds saying they do have that IP address to match up to the MAC address
+				- **Packets** that have the source IP and destination IP are put into the **Frame** that has the source MAC and destination MAC  and message in a data payload
+				- The data-link layer works by having the MAC addresses for the localised hosts to talk with the data payload, it then has the network layer which adds on the packet of ip addresses to allow for transfer over the internet
+				- Steps for IPv4 working in network- 
+					- Hosts with empty ARP tables need to send out an ARP to learn the routers MAC Address so it will send an ARP 
+					- The switch takes the ARP and can log the sender hosts MAC address to a port. This then sends out the ARP to all connected ports (as listed above, non-matching will ignoring and matching will work)
+					- This will send to the routers IP (as said above where only the host with a matching IP will respond) if the routers IP matches and then sends the ARP gets sent back to the source segment, not other segments- router knows the 
+					- The ARP table in the router knows the source host IP address and MAC address so it knows which port to send to for future reference
+					- The response from the router is returned to the host source and it can save the IP address and MAC address of the router in its ARP table so it knows where to send a frame with data
+					- The host can now try target another host in another segment because it knows the routers IP/MAC address
+					- The router gets the new packet and because it doesnt know where the destination IP adress is, it needs to send out an ARP to the other segments (matching IP addresses) to find the connecting hosts MAC address that is on that same IP address
+					- The packet of data is stored in the router while it sends an ARP to find the switch with the correct IP
+					- Same as before where the ARP goes out to the switch on this new IP address which then sends out ARP to all hosts to find the matching one (same as above where the matching will return a response, non-matcxhing ignore)
+					- Now the switch has the matching IP/MAC address and returns the ARP to the router where it can save the IP address and MAC address to the ARP table
+					- Now the router can send the previously saved message that was sent from the source MAC address to the destination MAC address on the newly found IP address where the host is located on
+					- If the destination host wants to respond it will be a lot faster because all the switches and routers have the addresses saved so they know which port to send the packet through
+			- **Multiple Routers**- If there are multiple routers there needs to be a **Routing Table**
+				- **Routing Table**- contains a list of all known networks and what router used to get to them, systems usually have a default gatewat/route which will be used if it does not have nay other routes
+				- **Subnet masks**- Defines ranges of IP addresses which can tell the host if the given IP address is in a particular network segment
+				- **Bitwise AND &**- compares each bit of the first operand to corresponding bit of the second operand. If both bits are 1 then result is 1 otherwise 0
+				- **Bitwise OR |**- returns 1 in each bit position for which corresponding bits of either or both operands are 1s otherwise 0- check the index position and if a 1 in either then return the 1
+				- **Bitwise NOT !**- return 1 when bit of operand is 0 and returns 0 when bit of operand is 1- basically a reverse of the 4 bits
+	1. **Transport Layer**- error correction and flow control
+		- data- segments
+		- layer- end to end connections and reliability
+	2. **Session Layer**- provides APIs for aplpication software to manage the connection
+		- data- data
+		- layer- interhost communication
+	3. **Presentation Layer**- compression and encryption
+		- data- data
+		- layer- data representation and encryption
+	4. **Application Layer**- application that isusing the data (web browsers etc)
+		- data- data
+		- layer- network process to application
+	- Common protocols for each layer
+		1. **Physiucal/DataLink layers (1, 2)**- 
+			-
 				
 			- 802.11 (wi-fi)
 			- bluetooth
