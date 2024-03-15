@@ -127,6 +127,25 @@
 				- **Bitwise AND &**- compares each bit of the first operand to corresponding bit of the second operand. If both bits are 1 then result is 1 otherwise 0
 				- **Bitwise OR |**- returns 1 in each bit position for which corresponding bits of either or both operands are 1s otherwise 0- check the index position and if a 1 in either then return the 1
 				- **Bitwise NOT !**- return 1 when bit of operand is 0 and returns 0 when bit of operand is 1- basically a reverse of the 4 bits
+				- In the **IPv4 the network** has the IP address which is alwas the first IP of the network, it should never be allocated to a host- its calculated by taking the IP address and performing a bitwise AND with the boinary mask
+				- COnverts the IP address and mask into binary, this can be written in a length prefix- if there are X amount of 1s in the binary representing the mask then it will be "/X"
+					- Consider the IP address 192.168.0.11 with a mask of 255.255.255.0. We need to first convert the addresses and mask into binary:
+					- 192.168.0.11 = 11000000. 10101000.00000000.00001011
+					- 255.255.255.0 = 11111111.11111111.11111111.00000000
+					- Because masks are always a string of 1s, they are often written using a slash and the number of 1s. For this mask it would be written as /24, because it has 24 1s.
+					- Now we perform the bitwise AND operation for the IP address and the mask.
+					- The result is 11000000.10101000.00000000.00000000, which is 192.168.0.0.
+					- So, we now know that the network address of our network is 192.168.0.0.
+				- **Broadcast address calculation**- Highest IP address in a network is a broadcast address. it is reserved and cannot be used by a PC and the data it receives it sends out to all hosts on the network. Compute the broadcast address need to get the subnet mask and invert the bits and perform bitwise OR with IP address
+					- To compute the broadcast address, we need to get the subnet mask and invert the bits (swap the ones with zeros) and then perform a bitwise OR with the IP address. 
+					- Broadcast address = IP address | ! subnet mask
+					- Consider the IP address 192.168.0.11 with a mask of 255.255.255.0.
+					- We need to first convert the address and mask into binary:
+					- 192.168.0.11 = 11000000. 10101000.00000000.00001011
+					- 255.255.255.0 = 11111111.11111111.11111111.00000000
+					- Then we flip the mask bits: 00000000.00000000.00000000.11111111.
+					- Now we perform the bitwise OR operation for the IP address and the flipped mask. The result is 11000000.10101000.00000000.11111111 = 192.168.0.255. So we now know that the broadcast address of our network is 192.168.0.255.
+				- **IP Range**- Can have a maximum number of 254 hosts in a network as the first and last IP addresses are reserved so the other 254 are free for hosts
 	1. **Transport Layer**- error correction and flow control
 		- data- segments
 		- layer- end to end connections and reliability
