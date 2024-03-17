@@ -1,9 +1,17 @@
+- **Topology**- layoutr of a network
+- **Medium**- physical means that network uses to send/recieve data- fibre optic/copper cable
+- **Packet**- discreet amount of data that needs to be sent over the network, packet is part of a frame
+- **Host**- any device that participates in the network
+- 10Mbps = 10 megaBITS per second
+- 10MBps = 10 megaBYTES per second
 - **Local area network (LAN)**- having computers being connected to each other through a Ethernet cable, so the cable transfers data between each other
 	- Data can be transferred between each computer through the ethernet 
 	- **Mac address**- headers have a prefix for data being sent so each computer in the LAN can see if the data is meant for them. Each computer has a MAC address
 	- Carrier will be what sends the data between each computer, however if too many computers trying to send data at same time it can end up in a collision of data and things get messy
 	- **Ethernet**- transmitting computers have a random period of waiting for the carrier to be silent so it can start transmitting again
 	- **Collision domain**- the network for a particular gtroup of computers, having a switch which can split up the collision domains so multiple networks can be split up to allow concurrent talking between different networks. If collision happens then the packet of data is sent back
+	- **Collision detection**- notify all hosts of the collision and the hosts have to wait a random pedior of time before trying to send again
+		- **Backoff time**- the time a hosts waits before resending is called backoff itme, this uses the half-dueplex and only one host can transmit at a time
 	- **Exponential backpff**- the seconds that the collision will wait after a collision before trying again, it exponential (times by 2 everytime) as well as arandom number of seconds
 	- **Half-duplex**- only one host can transmit at a time, data can be sent both directions but not at the same tiime
 - **Routing**- connecting distinct computers/netwrosk-
@@ -20,17 +28,22 @@
 		- Layer- Media, signal and binary transmission
 		- Used to send and receive data, these are the actual wires used to send the data 
 		- **UTP unshielded twisted pair**- commonl used physical medium where wires are twisted to reduce the intereference (Cat5e- max 100 metres/100Mbps, Cat6- maz 100 metres/1Gbps, Cat6a- 100 metres/1Gbps, Cat7)
+			- should be using category 6 minimum
+			- higher categories are more expensive
 		- **STP Shielded twisted pair**- Same as UTP but contains extra shielding material (foil) which reduces interference
 		- **Fibre Option**- Small tube of glass where the light bounces off the walls of the tube, only 6- micrometres wide
 			- Two main types-
 				1. Multi-mode fibre optic cable, has multiple potential paths for the light  and some paths are longer or shorter than others and at high speed the photons can be distorted of on/off so thats why 10gbps is has a shorter max distance- 550m
 				2. Single-mode fibre optic cable,smaller diameter core and only allows one possible path for the light. Can handle higher speeds over long distances, like 40km at 10gbps, requires more precise connections and powerful transmitters so higher cost than multi-mode,
-			- Fibre is immune to electromagnetic interferece and can do higher speed over greater distances than copper but its more expensive. Rrequires special training and expensive equipment so not usually worth it for less than 100m
-		- **Coaxial cable**- Used as a transmission line for radio frequency signals
+			- Fibre is immune to electromagnetic interferece
+			- can do higher speed over greater distances than copper but its more expensive. 
+			- Rrequires special training and expensive equipment so not usually worth it for less than 100m
+		- **Coaxial cable**- Used as a transmission line for radio frequency signals, normally copper
 		- **802.11 wi-fi**- wireless tech to connect all devices to ethernet networks they physically cant connect to, cheap and easy to implement
 			- Ethernet good for LAN by not for larger networks like the internet
 			- Ethernet and 802.11 both have compatible layer 2 MAC address schemes
 			- Max distance is 50 metres
+			- No collisions- WAP allocates time for each client to transmit
 			- Wi-Fi has multiple protocol standards-
 				- 802.11b- first versions of wi-f-, up to 11Mbps
 				- 802.11g- very popular, 54Mbps
@@ -46,7 +59,7 @@
 			- Layer 1 it usually uses copper wire but can use fibre optic
 			- Consists of over 50 protocols of different mediums and speeds
 			- used to use **Bus topology**- 
-				- Uussed to use coaxial cable
+				- Uussed to use coaxial cable which is more expensive than UTP cable
 				-  betweeen all hosts in network (**bus topology)**- 
 				- all nodes are connected to a single cable, if one cable is broken then entire segment breaks
 				- Many  collisions can happen with this netwrosk
@@ -55,51 +68,60 @@
 				- implenments the spoke-hub paradigm where every host is connected to the central hub and this decides what messages to transmit-- most common paradigm
 				- Cable usually UTP
 				- Collision still an issue
+			- **Ethernet speeds**- 
+				- 10BASE-T- most hubs use this, 10Mbps
+				- 10GBase-T- supports 1-Gbps over UTP
+				- Fireb opetic cable- 10GBASE-LR- 10,000 Mbps over fibre
 			
 	1. **Data Link Layer**- controls who can transmit on the medium at any given time
 		- data- frames
 		-  **Ethernet frame**- Pack of data at layer 2 called frame
-					- contains three main sections
-						- **Header**- contains information about the frame (metadata) and includes which host the frame is intended for (Destination MAC Address), who sent it (Source MAC Address) and what kind of data the payload contains (Ether Type)
-							- **Data-Link Lyaer- MAC (Media Access Control) Address**- contained in the header and are used to identify different hosts on the network
-							- In ethernet network each **Network Interface Card (NIC)** of all hosts has a uniqie MAX address in the hardware
-							- Uses hexadecimal number- A3:B4:27:AF:2E
-							- When hosts receives packer on the network, it looks to see if the destination MAC address of the packet matches its own MAX address, if not then it ignores the packet/frame
-							- MAC Table can handle around 8000 MAC Addresses so it's not great for very large networks
-							- Host needs to know the MAC address of another host to send 
-						- **Payload**- the data to be sent
-						- **CRC Checksum**- provices information to check if data has been corrupted
-				- **Ethernet Hub**- accept data on one port and send data out all other ports
-					- Act in collision detection and act as signal booster allows networks to span large distances but dont have any memoery, always limited 10Mbps
-					- Hub will receive the frame/packet from the Source MAC Address and then send it to each other host (except source). Each other host will check the Destination MAC Address on the frame/packet and if correct then it will analyse, if it doesn't match then it ignores the frame
-					- Security issue because it sends all data out of its ports and all hosts can read all traffic on the network, so any host can easily collect confidential data
-					- Performance issue as only one host can send data at a time and if hundreds of hosts on large nework, there will be lots of collisions, and hubs limited to 10Mbps
-				- **Ethernet Switches**- address limitations of hubs
-					- Layer 2 devices that function like hub but switches have memory and can store frames, hold frame until the medium is clear to send so it gets rid of the collision problem
-					- Allow **full-duplex**- hosts can send and recieve dat at the same time (compared to half-duplex which could only do one at a time)
-					- Learn what MAC Addresses are on which ports, the address is stored in the MAC Table in switch, once the MAC Address has learnt what port the host is on, any data specified for that host will only be sent to that port that the hose is attached to
-					- If it doesnt know what port a destination MAC address is then it will send out to all ports (like a hub), the non-matching MAC will ignore the frame
-					- Any sending of the frame will store the MAC address  in the switch ready for future use
-					- Can manage a switch and configure it, will have a port called Console
-				- **Collision Domain**- network segment connected by shared medium where simlutaneous data transmissionc ollide with one another
-					- Hubs- all hosts must wait for collision to be resolved, whole network is a collision domain as if one collision happens then everything waits
-					- Switches- Confined to individual connections so if one collision then only that singular host.
-	2. **Network Layer**- establishes pathways between devicves
+			- **Simplex**- simplext is data trem that only goes in one direction- like a TV broadcast
+			- **Half duplex**- data sent in both directions but not sae time like a walkie talkie
+			- **Full deplex**- received and sent concurrently like a telephone call, internet
+			- contains three main sections
+				- **Header**- contains information about the frame (metadata) and includes which host the frame is intended for (Destination MAC Address), who sent it (Source MAC Address) and what kind of data the payload contains (Ether Type)
+					- **Data-Link Lyaer- MAC (Media Access Control) Address**- contained in the header and are used to identify different hosts on the network
+					- In ethernet network each **Network Interface Card (NIC)** of all hosts has a uniqie MAX address in the hardware
+					- Uses hexadecimal number- A3:B4:27:AF:2E
+					- When hosts receives packer on the network, it looks to see if the destination MAC address of the packet matches its own MAX address, if not then it ignores the packet/frame
+					- MAC Table can handle around 8000 MAC Addresses so it's not great for very large networks
+					- Host needs to know the MAC address of another host to send 
+				- **Payload**- the data to be sent
+				- **CRC Checksum**- provices information to check if data has been corrupted
+		- **Ethernet Hub**- accept data on one port and send data out all other ports
+			- Act in collision detection and act as signal booster allows networks to span large distances but dont have any memoery, always limited 10Mbps
+			- Hub will receive the frame/packet from the Source MAC Address and then send it to each other host (except source). Each other host will check the Destination MAC Address on the frame/packet and if correct then it will analyse, if it doesn't match then it ignores the frame
+			- Security issue because it sends all data out of its ports and all hosts can read all traffic on the network, so any host can easily collect confidential data
+			- Performance issue as only one host can send data at a time and if hundreds of hosts on large nework, there will be lots of collisions, and hubs limited to 10Mbps
+		- **Ethernet Switches**- address limitations of hubs
+			- Layer 2 devices that function like hub but switches have memory and can store frames, hold frame until the medium is clear to send so it gets rid of the collision problem
+			- Allow **full-duplex**- hosts can send and recieve dat at the same time (compared to half-duplex which could only do one at a time)
+			- Learn what MAC Addresses are on which ports, the address is stored in the MAC Table in switch, once the MAC Address has learnt what port the host is on, any data specified for that host will only be sent to that port that the hose is attached to
+			- If it doesnt know what port a destination MAC address is then it will send out to all ports (like a hub), the non-matching MAC will ignore the frame
+			- Any sending of the frame will store the MAC address  in the switch ready for future use
+			- Can manage a switch and configure it, will have a port called Console
+		- **Collision Domain**- network segment connected by shared medium where simlutaneous data transmissionc ollide with one another
+			- Hubs- all hosts must wait for collision to be resolved, whole network is a collision domain as if one collision happens then everything waits
+			- Switches- Confined to individual connections so if one collision then only that singular host.
+	1. **Network Layer**- establishes pathways between devicves
 		- data- packets
 		- layer- path determination and IP (logical addressing)
 			- Host addressing and how packets are sent between networks
 			- **Internet Protocol Version 4 (IPv4)**- Most popular layer 3 protocol
 				- Offers global addressing and allows hosts to send data to other hosts around the world
-				- **IP Addresses**- generally writtedn as dotted decimal number like 192.168.0.1- each number is 8-bit cant exceed 255. IP Address assignment done by comany called ICANN that set up policy for global Domain Name System
+				- **IP Addresses**- generally writtedn as dotted decimal number like 192.168.0.1- each number is 8-bit cant exceed 255 (255.255.255.255. IP Address assignment done by comany called ICANN that set up policy for global Domain Name System
+				- Router needs the IP address and Switch needs MAC Address
 				- The IP data is stored in the **frame** data within the packet
 				- If a  host doesnt know the MAC address of where it weants to send something, then an **ARP (Address Resolution Protocol)** will be sent out to all hosts with given IP addresses, the ARP will have a **broadcast address** as the destination in the packet and the switch will send out the ARP to all ports, and if the host (whos MAC address is unkown) has the matching IP address it returns its MAC Address to the switch to save to MAC Table
-				- Once ARP is done the sending host will save the MAC address and IP address (now a match) in its ARP Table (for future sending reference)
+				- Once ARP is done the sending host will save the MAC address and IP address (now a match) in its **ARP Table** (for future sending reference)
 				- ARP can be poisoned because MAC addresses can be hacked
 			- **Routers**- Working on a higher level of network layer 3 than switches (layer 2)
 				- Switches make decisions based on MAC addresses and routers make decisions according to IP addresses
 				- Routers have different MAC addresses and IP addresses on each port
 				- Make decisions based on IP addresses (not MAC) and this means it can make more complex networking decisions and enforce security rules
 				- Less ports than switches and do not forward broadcasts or ARP messages
+				- Routers connect to each other and then connect to a switch which then connects to multiple hosts
 				- 3 in one- switch, router and WAP
 				- Routers can have ports which connect to multiple switches, this separates hosts to be able to work more efficiently than cramming itall (done by IP addresses and MAC Addresses to each switch inside the Router)- IP address for hosts (192.43.43.11, 192.43.43.12) on the switch with related IP (192.43.43.1) (NOTICE THAT THE IP IS A BEGINNIN FIRST FEW NUMBERS THE SAME)  will remain on that switch and not go to the other- this makes the MAC addresses useless outside of a network segment
 				- ARPs are meant for identifying addresses on a particular segment, not across networks, the router is what will determine which segment the packet will go to
@@ -123,12 +145,18 @@
 					- If the destination host wants to respond it will be a lot faster because all the switches and routers have the addresses saved so they know which port to send the packet through
 			- **Multiple Routers**- If there are multiple routers there needs to be a **Routing Table**
 				- **Routing Table**- contains a list of all known networks and what router used to get to them, systems usually have a default gatewat/route which will be used if it does not have nay other routes
-				- **Subnet masks**- Defines ranges of IP addresses which can tell the host if the given IP address is in a particular network segment
+					- the destination IP address in the router will be compared against each subnet for the stored route IP addresses to find the correct port which the data will take
+					- if there is no match then it will go through the default port
+				- **Subnet**- having multiple segments of a network broken down to reduce any sort of collision plus because networks may only have a max amount of hosts on them so breaking it down can be simpler for data transferring, and for the router to know which PORT the data packet is going to it needs to identifyu the ip address network through the subnet masking
+				- **Subnet masks**- Defines ranges of IP addresses which can tell the host if the given IP address is in a particular network segment, define ranges of IP addresses
+					- lower subnet number /22 means more hosts can happen on that network
+					- this means IP address could have lkike 1.1.1.1 to 1.1.2.1 etc
 				- **Bitwise AND &**- compares each bit of the first operand to corresponding bit of the second operand. If both bits are 1 then result is 1 otherwise 0
 				- **Bitwise OR |**- returns 1 in each bit position for which corresponding bits of either or both operands are 1s otherwise 0- check the index position and if a 1 in either then return the 1
 				- **Bitwise NOT !**- return 1 when bit of operand is 0 and returns 0 when bit of operand is 1- basically a reverse of the 4 bits
 				- In the **IPv4 the network** has the IP address which is alwas the first IP of the network, it should never be allocated to a host- its calculated by taking the IP address and performing a bitwise AND with the boinary mask
-				- COnverts the IP address and mask into binary, this can be written in a length prefix- if there are X amount of 1s in the binary representing the mask then it will be "/X"
+				- **Network address calculation**- only reason to use a bitwise calculation, COnverts the IP address and mask into binary, this can be written in a length prefix- if there are X amount of 1s in the binary representing the mask then it will be "/X". Network address is the gateway address to all of the hosts on the network
+					- Network address always 192.168.0.0 (has the 0 on the end)
 					- Consider the IP address 192.168.0.11 with a mask of 255.255.255.0. We need to first convert the addresses and mask into binary:
 					- 192.168.0.11 = 11000000. 10101000.00000000.00001011
 					- 255.255.255.0 = 11111111.11111111.11111111.00000000
@@ -136,7 +164,8 @@
 					- Now we perform the bitwise AND operation for the IP address and the mask.
 					- The result is 11000000.10101000.00000000.00000000, which is 192.168.0.0.
 					- So, we now know that the network address of our network is 192.168.0.0.
-				- **Broadcast address calculation**- Highest IP address in a network is a broadcast address. it is reserved and cannot be used by a PC and the data it receives it sends out to all hosts on the network. Compute the broadcast address need to get the subnet mask and invert the bits and perform bitwise OR with IP address
+				- **Broadcast address calculation**- Highest IP address in a network is a broadcast address. it is reserved and cannot be used by a PC and the data it receives it sends out to all hosts on the network. Compute the broadcast address need to get the subnet mask and invert the bits and perform bitwise OR with IP address. This is if the broadcast address is the destination address then it knows to send a broadcast out
+					- Broadcast address always 192.168.0.255 (has the 255 on the end)
 					- To compute the broadcast address, we need to get the subnet mask and invert the bits (swap the ones with zeros) and then perform a bitwise OR with the IP address. 
 					- Broadcast address = IP address | ! subnet mask
 					- Consider the IP address 192.168.0.11 with a mask of 255.255.255.0.
@@ -145,23 +174,83 @@
 					- 255.255.255.0 = 11111111.11111111.11111111.00000000
 					- Then we flip the mask bits: 00000000.00000000.00000000.11111111.
 					- Now we perform the bitwise OR operation for the IP address and the flipped mask. The result is 11000000.10101000.00000000.11111111 = 192.168.0.255. So we now know that the broadcast address of our network is 192.168.0.255.
-				- **IP Range**- Can have a maximum number of 254 hosts in a network as the first and last IP addresses are reserved so the other 254 are free for hosts
+				- **IP Range**- Can have a maximum number of 254 hosts in a network as the first and last IP addresses are reserved so the other 254 are free for hosts, network and broadcast address taken (0, 255) on a network IP
+					- This is needed to be determine how many IP addresses are on the network because its the difference between the network address and broadcast address
+					- Having the network and broadcas address then can detemine the amount of ip addresses range on the network
+					- if its a /24 network then 2(32-24) = 256 ip addresses (254 minus broadcast and network)
+				- Most home networks will be a /24 subnet mask
+				- **Default Gateway**- Setting a router to send any packets it doesnt know what to with to a specific address, manually configred routes are called **static routes**. route with a mask of 0 will match every possible IP
+					- Specifically saying which IP address the default gateway i is, then any packets that dont match any addresses in the table will then go to that default port
 	1. **Transport Layer**- error correction and flow control
 		- data- segments
 		- layer- end to end connections and reliability
-	2. **Session Layer**- provides APIs for aplpication software to manage the connection
+		- **Reliability**- making sure the packets arrive and in the correct order
+		- **flow control**- make sure packets are not being sent too fast
+		- **Multiplexing**- allows multiple applications to run in the same IP, each app is allocated a port number and a host can have up to 65000 ports open at same time on one IP address
+		- TCP and UDP are different protocols of internet protocol suite TCP/IP
+		- Which one is used is made chocie by the app developer
+		- **TCP**-  
+			- gaurantee everything is complete
+			- sends to singular host (unicast)
+			- can be ysed to send to multiple hosts as well
+			- Port numbers so multiple applcations can share an IP address, adds reliability to unreliable IP packets
+			- each packet is numbered using sequence numbers
+			- can detect if packets are missing and resend them, can detect if arrived in wrong order and correc it
+			- defined start and end when using TCP
+			- **Reliability**- detect packets are loist and resend them
+			- **Reordering**- detect packets are arriving in wrong order and correct them
+			- **Flow control**- detect if receiver is being overloaded and slow down
+			- **error detection**- checksums on all segments
+			- **Security**- sequence numbering is difficult to falsfiy a TCP packet
+			- **Connection- ireinted**- each connection must perform a three-way handshak
+			- All handled at OS level so app programmer doesnt have to do this, its all automatic
+			- **Popular protocls based on TCP**-
+				- HTTP- hypertext transfer protocol port 80
+				- HTTPS- hypertest transfer protocol secure port 443
+				- FTP- file transfer protocol port 21
+				- SMTP- simple mail transfer protocol port 25
+				- POP3- post office proptocol port 110
+				- SSH- secure shell port 22
+			- **TCP Handshake**- each packet has a sequence number and allwos TCP to detect if packet has gone missing, both sender and reciever have their own sequence numbers
+				- it akncolwedges the numbers and will send a message back to the sender saying it received that number segment
+				- sequence numbers are 32-bit and imprve securty of system
+				- TCP needs to create a aonnection first
+				- Synchronizing the seuqnce numbers-
+					- SYN: sender initiates a connection with SYN packet, which contains port information and the senders starting sequence number
+						- the sender is sending a message to the reciever saying it wants to open a connection with it
+						- sender randomly chooses a port bumber to use as the source port and initial sequence number is chosen at random
+					- SYN-ACK: receiver will send back a SYN-ACK with its own sequence number
+						- receiving host can choose to accept the connection by sending the SYN-ACK back to the client
+						- The sercver picks its own initial sequence and aknowledges the senders sequence number increading it by 1
+					- ACK: finally the sender will send a ACK to aknowldge the connection has started
+						- Connection now is established and the seuqnece number increased by 1
+				- After this ACK back to acknowhldgfe the connection is made then the sender can send a message it wanted to send
+			- This handshake is why TCP can only have a connection between two parties at the same time and not multiple
+		- **UDP**- 
+			- Has poirt numbers like TCP however its unreliable, if a packet goes missing it will not be resent autpomatically, it diesbt gave sequence numbers which means easier to fake UDP packets
+			- Good for small requests that need low latency and need really fast responses, things like streaming 
+			- Can broadcast to all devices on the network
+			- sends out multiple packs to multiple hosts
+			- sends to all (broadcast) or several (multicast)
+			- UDP protocols
+				- DNS- domain name system port 53
+				- DHCP- dynamic host configuration protocl ports 67/68
+				- OpenVPN-  port 1194
+				- VOIP -voice over IP
+			- Most multiplayer games are UDP but game might implenent its own scheme for resending lost packets
+		- Both UDP and TCP are part of the IP packet which is part of the link frame data
+	1. **Session Layer**- provides APIs for aplpication software to manage the connection
 		- data- data
 		- layer- interhost communication
-	3. **Presentation Layer**- compression and encryption
+	2. **Presentation Layer**- compression and encryption
 		- data- data
 		- layer- data representation and encryption
-	4. **Application Layer**- application that isusing the data (web browsers etc)
+	3. **Application Layer**- application that isusing the data (web browsers etc)
 		- data- data
 		- layer- network process to application
 	- Common protocols for each layer
 		1. **Physiucal/DataLink layers (1, 2)**- 
-			-
-				
+			- Ethernet				
 			- 802.11 (wi-fi)
 			- bluetooth
 		2. **Network layer (3)**- 
@@ -174,3 +263,4 @@
 			- HTTP- hypertext transfer protocol- transmit websites
 			- DNS- domain name system- convert domain name into IP address
 			- SMTP- simple mail transfer protocol- email servers
+	
