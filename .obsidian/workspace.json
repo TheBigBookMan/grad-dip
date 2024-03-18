@@ -8,18 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bcb12f1672d71773",
+            "id": "bae3faeca3ea40aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information Technology/Topic 2- Networks.md",
+                "file": "Information Technology/Topic 3- Databases.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "84d2d8ec49211225",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 2- Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +111,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 2- Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +132,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Information Technology/Topic 2- Networks.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,8 +152,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bcb12f1672d71773",
+  "active": "99211eb9a8982c37",
   "lastOpenFiles": [
+    "Information Technology/Topic 3- Databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/Assessments/Assess4.txt",
