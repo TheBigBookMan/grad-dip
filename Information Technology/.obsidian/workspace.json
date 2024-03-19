@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3a6cc0bf12788b10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Topic 1- Computer Architecture.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7edcec627002965f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Topic 2- Networks.md",
+                "file": "Topic 3- Databases.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Topic 1- Computer Architecture.md",
+                "file": "Topic 3- Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Topic 1- Computer Architecture.md",
+                "file": "Topic 3- Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Topic 1- Computer Architecture.md"
+                "file": "Topic 3- Databases.md"
               }
             }
           }
@@ -159,10 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a6cc0bf12788b10",
+  "active": "7edcec627002965f",
   "lastOpenFiles": [
     "Topic 2- Networks.md",
     "Topic 1- Computer Architecture.md",
+    "Topic 3- Databases.md",
     "Pasted image 20240304194618.png",
     "Pasted image 20240304194536.png",
     "Human Computer Interface.md",

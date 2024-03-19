@@ -23,12 +23,15 @@
             "id": "84d2d8ec49211225",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Databases/Introduction to databases.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Information Technology/Topic 3- Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Information Technology/Topic 3- Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Information Technology/Topic 3- Databases.md"
+              }
             }
           }
         ]
@@ -152,8 +159,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99211eb9a8982c37",
+  "active": "bae3faeca3ea40aa",
   "lastOpenFiles": [
+    "Databases/Introduction to databases.md",
     "Information Technology/Topic 3- Databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
@@ -161,7 +169,6 @@
     "Databases/Assessments",
     "Databases/ER+EER Models.md",
     "Databases/Normalization.md",
-    "Databases/Introduction to databases.md",
     "Pasted image 20231013194403.png",
     "Pasted image 20231013194527.png",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",

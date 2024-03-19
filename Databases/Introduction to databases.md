@@ -5,6 +5,7 @@
 -   Represesnts aspects of the real world through raw data (facts)
 -   Logical collection of data with inherent meaning
 -   Data is build and designed for a specific purpose (business )
+- Data can be stored as a set of documents usually represented in JSON or XML format
 
 ### DBMS
 
