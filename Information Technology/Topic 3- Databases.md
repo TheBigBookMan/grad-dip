@@ -1,4 +1,10 @@
 -  data is stored as set of documents usually like JSON or XML format
+- Steps to database design
+	1. Model the problem into an entity relationship diagram
+	2. Convert ERD into a set of tables
+	3. create tables into the database using SQL
+	4. import the data
+	5. create queries to extract information
 ## **DBMS**
 -  storing and managing databases, is the inbetween end-user and database allows for create, read, update, delete data
 	- data storage, retrieval and update- core functionality
