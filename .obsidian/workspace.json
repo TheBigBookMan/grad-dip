@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ac60cf966e0ffb35",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md"
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md"
               }
             }
           }
@@ -147,10 +160,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bae3faeca3ea40aa",
+  "active": "ac60cf966e0ffb35",
   "lastOpenFiles": [
-    "Databases/Introduction to databases.md",
     "Information Technology/Topic 3- Databases.md",
+    "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+    "Databases/Introduction to databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/Assessments/Assess4.txt",

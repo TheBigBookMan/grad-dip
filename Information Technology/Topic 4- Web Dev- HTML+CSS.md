@@ -1,0 +1,77 @@
+- **WWW World Wide Web**- is information system where documents and other web resources are identified by **uniform resource locaters (URL)** which can be interlinked by hypertext and are accessible over the internet
+- Internet is global network of networks, while the web is a collection of information that is accessed via the intenet
+- WWW is most common known network, but there are more like a military network and education networks
+- **4 steps of web development**- 
+	- Developng a website with tools
+	- deploying the website on a web server
+	- transmitting data via the internet
+	- viewing the website via web brwosers/apps
+## HTML 
+- **Hyper text markup language (HTML)**- Standard language for creating websites using plain text files containing ASCII characters
+	- The files contain **tags** which have special meaning in the HTML stadard, HTML is controlled by World Wide Web Consortium (W3C)
+	- Currently at HTML 5 and is aiming to reduce the dependence on external add-on programs like Flash and ActiveX
+	- HTML doc is a text file but with tags to distinguish specific elements and is compatible with web brwosers
+	- **Document Object Model (DOM)**- webpage consists of elements that indicate to the browser the structure of the webpage, HTML is built on top of it
+		- Structured like a tree, where the Document -> Root html -> body etc. 
+	- Webpages source code contains text marked up wih the HTML tags that sintruct the browser how to display that content.
+	- Three parts to a document
+		- Doctype- the version of HTML using
+			- `<!DOCTYPE HTML>` represents that this document will be using HTML5 (dont need the 5)
+		- Head- the metadata of the document
+			- `/<head></head>` is the metadata element tags and you would have the metadata descriptions within this
+			- This data helps search engines, provides a title for the page and extra information that may help tjhe brwoser, tag is often used for code like JS and CSS
+		- Body- the displayable content
+			- `<body></body>` has the display elements inbetween these tags to be displayed in the browser. Common tags within the body
+				- `<b>`- bold text
+				- `<i>`- italic text
+				- `<p>`- paragraph
+				- `<u>`- underline text
+				- `<h1>`- heading
+				- `<h2><h3>etc`- subheading
+				- `<br/>`- break line for page (doesnt need closing tag)
+				- `<a>`- anchor to link to other pages
+	- **Tags**- elements can have attrivutes which provide more information about a tag
+		- Usually like `<element attribute="value"`
+		- **id**- a unique identifier for an element to be able to select it later with CSS and JS
+		- **Void element**- dont have a closing tag, just a /- `<br/><img/><input/>` etc
+		- **Table**- can contain nything that you can put into an HTML document, like text, graphics, videos and nested tables
+			- `<caption>Text</caption>`- give the table a heading
+			- `<th>Header text</th>`- give the table a column or row heaing
+			- `<tr><td>Cell text</td></tr>`- tr is for a row and the td is for data within that cell... can also put the th in the td as a heading
+			- `<td colspan="2"</td>`- showing that you want the colum to be 2 columns wide 
+			- `<td rowspan="2"</td>`- showing you want the row to be 2 rows wide
+			- `<table border="3" width="80%">`- styling the table a bit and saying how wide of the screen you want it to be
+	- **Hyperlink**- click on to be taken to another page
+		- `<a href='www.your/link.com'>Click</a>`- this take you to an exteral URL website
+		- `<a href='your_file.pdf'>Click here</a>`- this opens a local file
+		- Absolute URL is full URL `www.google.com/welcome`
+		- or relative URL `/clients/clientId`- this is relative to the current page
+			- `/mypage.com`- in web root
+			- `../mypage.com`- in parent directory
+			- `mypage.com`- in current directory
+			- These are cponverted to absolute URLS by the browser
+		- Can do hash routing, where you jump to a section on a page `<a href="#idofsection">Click</a>` the hash id in the href needs to link to an ID on the page
+	- **Image**- `<img src="my_image.png" width="20  height="20"/>` shows the image that is within this location and gives a height and width of  20px
+		- src attribute is the URL of the image
+	- **Lists**- to be able to list items and each have the items listed like `<li>Text</li>` can nest these lists as well
+		- **unordered List (dot points)**- `<ul></ul>` this will list without any ordering, just dot points next to it
+		- **ordered list (numbered)**- `<ol></ol>` this will list with numbers to create an order
+	- **HTML Entities**- if you want to show a html tag in content as the actual tag string itself
+		- need to use the actual ascii eg "<" = &#60 
+	- **Comments**- `<!-- -->` used to be able to comment (doesnt impact actual code, just human readable stuff)
+## CSS
+- **Cascading Style Sheet (CSS)**- used for styling a webpage
+- Describes the look and formatting, its used to separate the content from presentation and so we can attach things like font colours out of HTML and into CSS
+- Usually be in a different file .css
+- `selector {property: value;}`
+- **Selector**- used to target elements
+	- `.className`- targets all elements with class='className'
+	- `#idname` - targets the element with the id='idName'
+	- `*`- selects all elements
+	- `elementName`- selects all elements that are named 'elementName'
+	- `elementOne, elementTwo` - selects all elements which are either of those elements
+- **CSS Types**- you can add in CSS in different ways to the HTML content
+	- **Inline**- `<div style="color:red">This text is red</div>`- it is used as the same inline as whatever the html code is
+	- **Internal**- within the `<style></style>` tags that are within the `<head></head> tags` in the HTMl you can put it in there `<style type="text/css>h1 {color: blue;}</style>`
+	- **External**- in a separate file with extension .css, need to link it within the `<head><link rel='stylesheet' type='text-/css' href='css/link_to_file.css'/></head>`- this will then be able to import the css file and the matching of elements can happen
+- **CSS Comment**- use the `/* comment here */`
