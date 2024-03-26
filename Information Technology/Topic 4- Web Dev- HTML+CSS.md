@@ -75,3 +75,27 @@
 	- **Internal**- within the `<style></style>` tags that are within the `<head></head> tags` in the HTMl you can put it in there `<style type="text/css>h1 {color: blue;}</style>`
 	- **External**- in a separate file with extension .css, need to link it within the `<head><link rel='stylesheet' type='text-/css' href='css/link_to_file.css'/></head>`- this will then be able to import the css file and the matching of elements can happen
 - **CSS Comment**- use the `/* comment here */`
+- **Adding styles**- using CSS to create specific styling for the html elements
+	- **Text Color**- need to use US Spelling- color, can use either color names (red, blue), hex value (#000000, #1111111), rgb (rgb(0,0,224))
+	- **CSS Backgrounds**- can add in different properties for bakground
+		- Color- `background-color: green;`
+		- Image- `background-image: url("url/here/pic.jpg"`);
+		- Shorthand- `background: blue url(link.jog) no-repeat left top;`
+	- **Font**- Properties for font styling
+		- Family- `font-family: Arial;`
+		- Size- `font-size: small;`
+		- Weight- `font-weight: bold;`
+	- **Box model**- box wrapping around every html element consisting of margin, border, padding and content
+		- Content- where text and images appear
+		- Padding- area around the content
+		- Border- border around the padding and content
+		- Margin- outside the border
+	- **CSS List**- apply styling to lists
+		- Unordered- `<ul style="list-style:circle"></ul>`- to make the dots a circle
+		- Ordered- `<ol style="list-style:lower-roman></ol>`- make the numbers in roman numerals
+		- Image icon- `<ol style="list-style-image:url("link/to/image.png")></ol>`
+	- **Tables style**- 
+		- `table, th, td {border: 1px solid black;}`
+	- **Display- block/inline**- 
+		- **Block**- take up the whole line like a div and h1
+		- **Inline**- take up as much as space as content like a span- cannot specify width or height to inline element
