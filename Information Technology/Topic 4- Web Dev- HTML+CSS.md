@@ -99,3 +99,38 @@
 	- **Display- block/inline**- 
 		- **Block**- take up the whole line like a div and h1
 		- **Inline**- take up as much as space as content like a span- cannot specify width or height to inline element
+	- **CSS Overflow**- decide what to do with content when it starts to go outside an element
+		- `overflow: visibile;`- overflow is not clipped and renders outside the elements box
+		- `overflow: hidden;`- the rest of the overflow is hidden from view
+		- `overflow: scroll;`- scrollbar is added to see rest of content
+		- `overflow: auto;`- only adds scrollbar when necessary
+	- **Compound selectors**- target specific elements without giving a class or id
+		- `#navbar a {color: green;}`- this matches all the anchors that are children to the id navbar
+		- `p.sidebar a {color: blue;}`- this selects all anchros that are children in any p tags with the class 'sidebar'
+	- **CSS Precendence**- When there are multiple CSS properties applicable to an element, these rules apply
+		- Inline styles (HTML style attribute) will override internal styles (CSS styles) and external style files
+		- Internal styles will override external styles
+		- CSS properties with the `!important` flag will override all other properties
+	- **CSS Units**- Specify distances in CSS
+		- **Pixels**- number of on-screen pixels- `width: 400px;`
+		- **Percent**- percentage of the parent elements size- `width: 50%;`
+		- **Em**- a special unit that s based on the size of letter M- `width: 5em;`
+	- **User agent stylesheet**- browsers have a built-in style sheet they apply by default and you can override this, some browsers have different defaulst- causes developers to provide CSS resets for browsers to start from scratch
+	- **Inspect Element**- inspect the pages CSS
+
+## Webpage Design
+- **Layout design**- websites are important and need goor navigation otherwise people leave
+- Usually have this layout
+	- **Header**- top of he webpage, contains logo, call to action and contact info
+	- **Navbar**- on left or top of page, can have mu;tiple levels of navigation bars, sometimes content may need its own nav
+	- **Main area**- content display
+	- **Footer**- bottom of page, contains copyright notice, link to provacy policy, sitemap, logo, contant info, social media icons, email sign up form
+- **Developing a webpage**- 
+	- Have the main containr of content `<div class='containter'`
+	- And then add in each division of the headerm navbar, conent and footer each having their unique id to that div
+	- Can then specify the content for each section easier in the CSS file
+	- `overflow: auto;` to the container div will get rid of whitespace
+	- can give the background color to body as it will give the webpage more color
+	- center the page `#container {max-width: 60em; margin-left: auto; margin-right: auto;}` center the content into the middle with margins
+	- navbar items will have links to the other pages and can inline them with a `#navbar li {text-align: center; display: inline;}` and then the anchros can be `#navbar a {display: inline-block; width: 5em; background-color: yellow;}`
+	- 

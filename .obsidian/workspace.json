@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6b0762db6ded2e95",
+        "id": "c4423e6ddccb55de",
         "type": "tabs",
         "children": [
           {
-            "id": "bae3faeca3ea40aa",
+            "id": "813bb73b08657cf6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information Technology/Topic 3- Databases.md"
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md"
               }
             }
           }
@@ -147,21 +147,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bae3faeca3ea40aa",
+  "active": "813bb73b08657cf6",
   "lastOpenFiles": [
+    "Information Technology/Activity-2/images/orange.jpg",
+    "Information Technology/Activity-2/images/apple.jpg",
+    "Information Technology/Activity-2/images",
+    "Information Technology/Activity-2/page.html",
+    "Information Technology/Activity-2/orange.jpg",
+    "Information Technology/Activity-2/mystyle.css",
+    "Information Technology/Activity-2/apple.jpg",
+    "Information Technology/Activity-2",
+    "Information Technology/Topic 3- Databases.md",
+    "Information Technology/~WRL3117.tmp",
+    "Information Technology/~WRD3105.tmp",
     "Information Technology/~WRL3909.tmp",
     "Information Technology/~WRD3901.tmp",
     "Information Technology/~WRL2009.tmp",
     "Information Technology/~WRD2001.tmp",
-    "Information Technology/~WRL1133.tmp",
-    "Information Technology/~WRD1125.tmp",
-    "Information Technology/~WRL0430.tmp",
-    "Information Technology/~WRD0422.tmp",
     "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
-    "Information Technology/~$sessment 2.docx",
-    "Information Technology/~WRL1443.tmp",
-    "Information Technology/~WRD1431.tmp",
-    "Information Technology/Topic 3- Databases.md",
     "Databases/Introduction to databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
