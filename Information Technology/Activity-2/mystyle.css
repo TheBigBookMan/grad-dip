@@ -1,0 +1,43 @@
+#main {
+    background-color: #eeeeee;
+    padding: 10px;
+}
+
+#header {
+    background-color: yellow;
+
+    /* Task 1 here */
+    text-align: center;
+}
+
+ul {
+    list-style-type: square;
+}
+
+body {
+    background-color: #cccccc;
+}
+
+.imageleft {
+    float: left;
+}
+
+#navbar {
+    background-color: green;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    background-color: red;
+    width: 6em;
+    display: inline-block;
+    text-align: center;
+    line-height: 2em;
+}
+
+#navbar a:hover {
+    background-color: white;
+}

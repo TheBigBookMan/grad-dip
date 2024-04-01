@@ -133,4 +133,16 @@
 	- can give the background color to body as it will give the webpage more color
 	- center the page `#container {max-width: 60em; margin-left: auto; margin-right: auto;}` center the content into the middle with margins
 	- navbar items will have links to the other pages and can inline them with a `#navbar li {text-align: center; display: inline;}` and then the anchros can be `#navbar a {display: inline-block; width: 5em; background-color: yellow;}`
-	- 
+## Website Deployment
+- **WEb clients and web servers**- 
+	- Client- web browser or an extension and helper application that enhance the browser to support special services from the site- us the http and html
+		- communicate with the web server to download html and css and render the website for user to view
+	- Server- software and hardware that uses HTTP and other protocls to respond to client requests made on WWW, main job to display web content through storing, processing and delivering webpages
+- **Uniform Resource Locator (URL)**- reference to a resource that specifies te location on a computer network and mechianism for retrieving it. URLs usually are reference to webpages HTTP, file transfer FTP, email MAILTO, database access JDBS and other applications
+	- the URL displays multiple aspects 'http' the protocol, 'www.mywebpsite.com' the domain name, 'index.html' the webpage type
+- **Hyper text transfer protocol HTTP**- application layer ptocol for transmitting hypermedia documents like html, designed for communication between eb browsers and web servers
+	- click the link in a browser
+	- browsers sends HTTP request to web server (URL is a way of identifying what the user wants)
+	- web server locates the file on HDD hard disk drive on server
+	- if access permissions are correct, it sends the requested file over HTTP to the browser
+	- browser interprets the HTTP response and show the HTML codes as webpage for user view

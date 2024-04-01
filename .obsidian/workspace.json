@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "eb0ee4e1b84bd8b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md"
+                "file": "Information Technology/Topic 5- Web Dev- PHP.md"
               }
             }
           }
@@ -147,31 +160,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "813bb73b08657cf6",
+  "active": "eb0ee4e1b84bd8b4",
   "lastOpenFiles": [
-    "Information Technology/Activity-2/images/orange.jpg",
-    "Information Technology/Activity-2/images/apple.jpg",
-    "Information Technology/Activity-2/images",
-    "Information Technology/Activity-2/page.html",
-    "Information Technology/Activity-2/orange.jpg",
-    "Information Technology/Activity-2/mystyle.css",
-    "Information Technology/Activity-2/apple.jpg",
-    "Information Technology/Activity-2",
-    "Information Technology/Topic 3- Databases.md",
-    "Information Technology/~WRL3117.tmp",
-    "Information Technology/~WRD3105.tmp",
-    "Information Technology/~WRL3909.tmp",
-    "Information Technology/~WRD3901.tmp",
-    "Information Technology/~WRL2009.tmp",
-    "Information Technology/~WRD2001.tmp",
     "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+    "Information Technology/Topic 5- Web Dev- PHP.md",
+    "Information Technology/Web_Assignment/ViewOrderDetails.php",
+    "Information Technology/Web_Assignment/ViewCart.php",
+    "Information Technology/Web_Assignment/SignUp.php",
+    "Information Technology/Web_Assignment/ProcessOrder.php",
+    "Information Technology/Web_Assignment/Homepage.php",
+    "Information Technology/Web_Assignment/functions.php",
+    "Information Technology/Web_Assignment/EmptyCart.php",
+    "Information Technology/Web_Assignment/AddToCart.php",
+    "Information Technology/Web_Assignment/AddNewCustomer.php",
+    "Information Technology/Web_Assignment",
+    "Information Technology/fruitpics/apple-small.jpg",
+    "Information Technology/Activity-2/images/orange.jpg",
+    "Information Technology/Activity-2/images/apple-small.jpg",
+    "Information Technology/Activity-2/images/apple.jpg",
+    "Information Technology/fruitpics/apple.jpg",
+    "Information Technology/fruitpics/orange.jpg",
+    "Information Technology/Activity-2/orange.jpg",
+    "Information Technology/Activity-2/apple.jpg",
+    "Pasted image 20240401123143.png",
+    "Information Technology/Topic 3- Databases.md",
     "Databases/Introduction to databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/ER+EER Models.md",
     "Databases/Normalization.md",
     "Pasted image 20231013194403.png",
-    "Pasted image 20231013194527.png",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
     "Databases/Topic 1.md",
     "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
