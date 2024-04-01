@@ -1,0 +1,27 @@
+- **Dynamic content**- usually websites dont have any change when a user inputs something, so important to create dynamic webages where they can change based on some sort of user input
+	- **Client-side programming**- executes inside the browser and can do this without reloading the page, mainly javascript- used to control dynamic website content
+	- **Server-side programming**- executes on the web server and results (usually in html format) are sent to web browser, the code is never present on the browser, but the results from the code show up on the browser
+- **PHP**- Server side language which means 'Personal Home Page' now 'PHP: Hypertext Preprocessor'
+	- server must be configured to run PHP and its primary job is to generate HTML for web browsers, can also generate other file types like iamges etc
+	- does not need compiling or anything extra, just files in the web directory
+	- file end with .php which tells the IDE to to execute the code with the PHP interpeter
+	- any code in the HTML that has PHP in it will be executed on the server and the result of the php will return within the html which is shown in the browser
+	- `var_dump()` function takes a variable and ouptuts its value and data type, handy when dont know data type or value
+	- `==` matches the values while `===` matches the value and data type
+	- Two ways to get output with PHP-
+		- `echo $vairable;` 
+		- `print $variale;`
+	- **constant variable**- a simple value which cannot be changed during the script
+		- `define(nameOfVariable, valueOfVariable, case-sensitive);`
+		- case-sensitive is default false
+	- **functions**- some functions return a value that can be stored in a variable or directly display result in browser
+	- `<?php ?>` for any php code within a file, needs to be in html as well
+	- **logical operators**- 
+		- `And` = and
+		- `Or` = or
+		- `xor` = xor
+		- `&&` = and
+		- `||` = or
+		- `!` = not
+	- **do, while loop**- executes a code first and then loops through, while normal while loop just executes
+	- **string using ""**- convert escape sequences into their equivalent like `" hey there\n hwy"` will give the new line with `\n`. also converts variables into their values
