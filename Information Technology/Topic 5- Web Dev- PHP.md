@@ -36,3 +36,10 @@
         -   POST parameters are passed through the HTTP POST method
         -   POST data is invisible to others as its embedded within the body of the HTTP request, and no limits to amount of information to send-- impossible to bookmark page because the parameters are not in the URL
         -   `<form method="GET" action="submit.php">` and add the input elements inbetween open and clsoe tag
+	- **Checkboxes**- `<input type="checkbox" name="box1" id="box1" />`
+		- checkboxes only send to the server if they are checked
+		- so can use the `isset` function to check if it is set and then produce a value and then an else statement for if it is not checked and return a value
+	- **Radio**- `<input type="radio" name="fruit" id="b1" value="Apple" />` repeat with different id and value
+		- have the labal match the id `<label for="b1">Apple</label>`
+		- use the `isset()` function and then can determne what to do based on the radio, can use if/else to deteremine it
+	- 
