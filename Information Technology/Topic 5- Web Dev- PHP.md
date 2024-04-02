@@ -25,3 +25,10 @@
 		- `!` = not
 	- **do, while loop**- executes a code first and then loops through, while normal while loop just executes
 	- **string using ""**- convert escape sequences into their equivalent like `" hey there\n hwy"` will give the new line with `\n`. also converts variables into their values
+	- **Forms**- browser send extra data to the web server in the URL
+		- GET parameters are within the URL- query string `mypage.php?var1=awe&var2=asd`, limit of around 2000 characters-- never for sending sensitive data
+		- query string contains set of key=>value pairs separated by &
+		- When retrieving in backend, good to use `isset($_GET['varName'])` and check if true to first get the passed parameter and echo back validation if they did not pass a parameter
+		- POST parameters are passed through the HTTP POST method
+		- POST data is invisible to others as its embedded within the body of the HTTP request, and no limits to amount of information to send-- impossible to bookmark page because the parameters are not in the URL
+		- `<form method="GET" action="submit.php">` and add the input elements inbetween open and clsoe tag 
