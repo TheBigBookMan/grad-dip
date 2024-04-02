@@ -53,7 +53,13 @@
 		- browser sends the cookies back each time it requests a page and is used for tracking users as they browse
 		- cookies are stored on the client compujter
 		- simple a piece of text data taht is stored in the browser and issued by the server in a HTTP header, the browser will keep track of the cookie and send to the server inside every HTTP request
-		- 
+		- send a cookie to browser using php `setcookie("cookieName", "cokieValue", unixtimestamp)` before the `<html>` tag- this defines a cookie to be sent along with the rest of the HTTP headers. must be sent before any output from your script (protocol restriction) and this requires that you place calls to this function prior to anyu output
+		- the unix timestamp will determine when the cookie will expire
+		- can delete the cookie by setting the timestamp to the past, and setting the value to nothing
+		- retrieve the cookie value using `$_COOKIE['value']` as it is a superglobal variable and can be accessed anywehere
+		- good to use `isset($_COOKIE['keyName'])` in an if else staement to make sure whatever the cookie does is properly authenticating
+		- if a shopping cart example, adding any new additions to the cookie wll have the productId as a string divided by a comma with productIds
+		- grab the string and explode() by the commas and then loop over each one in the array and call the DB
 	- Server Side- Store data in a SQL database on the server
 		- can also store data in a text file which is good for small volumes of data
 		- both methods are reasonably secure from tampering by clients
