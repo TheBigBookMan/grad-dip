@@ -1,31 +1,38 @@
-- **Dynamic content**- usually websites dont have any change when a user inputs something, so important to create dynamic webages where they can change based on some sort of user input
-	- **Client-side programming**- executes inside the browser and can do this without reloading the page, mainly javascript- used to control dynamic website content
-	- **Server-side programming**- executes on the web server and results (usually in html format) are sent to web browser, the code is never present on the browser, but the results from the code show up on the browser
-- **PHP**- Server side language which means 'Personal Home Page' now 'PHP: Hypertext Preprocessor'
-	- server must be configured to run PHP and its primary job is to generate HTML for web browsers, can also generate other file types like iamges etc
-	- does not need compiling or anything extra, just files in the web directory
-	- file end with .php which tells the IDE to to execute the code with the PHP interpeter
-	- any code in the HTML that has PHP in it will be executed on the server and the result of the php will return within the html which is shown in the browser
-	- `var_dump()` function takes a variable and ouptuts its value and data type, handy when dont know data type or value
-	- `==` matches the values while `===` matches the value and data type
-	- Two ways to get output with PHP-
-		- `echo $vairable;` 
-		- `print $variale;`
-	- **constant variable**- a simple value which cannot be changed during the script
-		- `define(nameOfVariable, valueOfVariable, case-sensitive);`
-		- case-sensitive is default false
-	- **functions**- some functions return a value that can be stored in a variable or directly display result in browser
-	- `<?php ?>` for any php code within a file, needs to be in html as well
-	- **logical operators**- 
-		- `And` = and
-		- `Or` = or
-		- `xor` = xor
-		- `&&` = and
-		- `||` = or
-		- `!` = not
-	- **do, while loop**- executes a code first and then loops through, while normal while loop just executes
-	- **string using ""**- convert escape sequences into their equivalent like `" hey there\n hwy"` will give the new line with `\n`. also converts variables into their values
-	- **Inlcude statement**- important code from other files ito the current one
-		- put code like the navbar in the include statement and it can appear onto the other files
-		- `include "page/path.php";` have this in the php section and it will import the php
-		- can have variables declared before the include and then that works in the included file as well- good for dynamic content like page title which can happen on any page
+-   **Dynamic content**- usually websites dont have any change when a user inputs something, so important to create dynamic webages where they can change based on some sort of user input
+    -   **Client-side programming**- executes inside the browser and can do this without reloading the page, mainly javascript- used to control dynamic website content
+    -   **Server-side programming**- executes on the web server and results (usually in html format) are sent to web browser, the code is never present on the browser, but the results from the code show up on the browser
+-   **PHP**- Server side language which means 'Personal Home Page' now 'PHP: Hypertext Preprocessor'
+    -   server must be configured to run PHP and its primary job is to generate HTML for web browsers, can also generate other file types like iamges etc
+    -   does not need compiling or anything extra, just files in the web directory
+    -   file end with .php which tells the IDE to to execute the code with the PHP interpeter
+    -   any code in the HTML that has PHP in it will be executed on the server and the result of the php will return within the html which is shown in the browser
+    -   `var_dump()` function takes a variable and ouptuts its value and data type, handy when dont know data type or value
+    -   `==` matches the values while `===` matches the value and data type
+    -   Two ways to get output with PHP-
+        -   `echo $vairable;`
+        -   `print $variale;`
+    -   **constant variable**- a simple value which cannot be changed during the script
+        -   `define(nameOfVariable, valueOfVariable, case-sensitive);`
+        -   case-sensitive is default false
+    -   **functions**- some functions return a value that can be stored in a variable or directly display result in browser
+    -   `<?php ?>` for any php code within a file, needs to be in html as well
+    -   **logical operators**-
+        -   `And` = and
+        -   `Or` = or
+        -   `xor` = xor
+        -   `&&` = and
+        -   `||` = or
+        -   `!` = not
+    -   **do, while loop**- executes a code first and then loops through, while normal while loop just executes
+    -   **string using ""**- convert escape sequences into their equivalent like `" hey there\n hwy"` will give the new line with `\n`. also converts variables into their values
+    -   **Inlcude statement**- important code from other files ito the current one
+        -   put code like the navbar in the include statement and it can appear onto the other files
+        -   `include "page/path.php";` have this in the php section and it will import the php
+        -   can have variables declared before the include and then that works in the included file as well- good for dynamic content like page title which can happen on any page
+    -   **Forms**- browser send extra data to the web server in the URL
+        -   GET parameters are within the URL- query string `mypage.php?var1=awe&var2=asd`, limit of around 2000 characters-- never for sending sensitive data
+        -   query string contains set of key=>value pairs separated by &
+        -   When retrieving in backend, good to use `isset($_GET['varName'])` and check if true to first get the passed parameter and echo back validation if they did not pass a parameter
+        -   POST parameters are passed through the HTTP POST method
+        -   POST data is invisible to others as its embedded within the body of the HTTP request, and no limits to amount of information to send-- impossible to bookmark page because the parameters are not in the URL
+        -   `<form method="GET" action="submit.php">` and add the input elements inbetween open and clsoe tag
