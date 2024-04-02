@@ -42,4 +42,18 @@
 	- **Radio**- `<input type="radio" name="fruit" id="b1" value="Apple" />` repeat with different id and value
 		- have the labal match the id `<label for="b1">Apple</label>`
 		- use the `isset()` function and then can determne what to do based on the radio, can use if/else to deteremine it
-	- 
+	- **Multiple Checkboxes**- similar to regular checkboxes but used if you want to be able to select multiple checkboex
+		- `<input type="checkbox" name="fruit[]" id="b1" />` need the square brackets in the name attribute
+		- after the `isset($_GET)` function on the get request, then run a foreach over the list of multiple checkboxes
+		- foreach will only work on each checkbox that was checked
+## Cookies and Databases
+- HTTP reqiests are stateless meaning that once the PHP files are finished executing, then all the variables are deleted and forgotten
+- **Data PErsistence**-
+	- Client Side- clients can remember data via **cookies**, they are small pieces of data the server sends to the browser in the header
+		- browser sends the cookies back each time it requests a page and is used for tracking users as they browse
+		- cookies are stored on the client compujter
+		- simple a piece of text data taht is stored in the browser and issued by the server in a HTTP header, the browser will keep track of the cookie and send to the server inside every HTTP request
+		- 
+	- Server Side- Store data in a SQL database on the server
+		- can also store data in a text file which is good for small volumes of data
+		- both methods are reasonably secure from tampering by clients
