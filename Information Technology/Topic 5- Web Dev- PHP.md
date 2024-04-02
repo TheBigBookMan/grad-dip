@@ -25,3 +25,7 @@
 		- `!` = not
 	- **do, while loop**- executes a code first and then loops through, while normal while loop just executes
 	- **string using ""**- convert escape sequences into their equivalent like `" hey there\n hwy"` will give the new line with `\n`. also converts variables into their values
+	- **Inlcude statement**- important code from other files ito the current one
+		- put code like the navbar in the include statement and it can appear onto the other files
+		- `include "page/path.php";` have this in the php section and it will import the php
+		- can have variables declared before the include and then that works in the included file as well- good for dynamic content like page title which can happen on any page
