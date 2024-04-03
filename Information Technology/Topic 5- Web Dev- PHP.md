@@ -63,3 +63,17 @@
 	- Server Side- Store data in a SQL database on the server
 		- can also store data in a text file which is good for small volumes of data
 		- both methods are reasonably secure from tampering by clients
+		- PHP can read and write to files
+			- `fopen("file_path.txt", "type")`- can either read R (starts at beginning of file), write W (if file exists it will be over written and any existing contents deleted, if not exists it will be created), append A (used to add new data to an existing file, if not exist then file will be created)
+			- `fread()`- reads from an open file
+			- `fwrite()`- write to an open file
+			- `fclose()`- closes an open file pointer, file must be `fopen()` before being able to close
+		- can write things like new lines as well like `fwrite($file, "\r\n")`
+		- Problem with file storage is its unsuitable for large or complex datasets
+			- **Corruption issues**- if two php scripts try to edit a file at te same time, or server crashses while editing the file
+			- **Performance issues**- lacks data indexing and caching
+		- Daqtbases used for concurrency and crash recovery to the database server
+		- **PHP data objects (PDO)**- PDO librarby consists of functions to connect and interact with different database servers
+	- **SQLIte Datbaase**- use PDO to access SQLite
+		- can use phpLiteAdmin as a GUI to see the database rather than command line
+		- 
