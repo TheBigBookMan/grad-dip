@@ -33,6 +33,7 @@
         -   GET parameters are within the URL- query string `mypage.php?var1=awe&var2=asd`, limit of around 2000 characters-- never for sending sensitive data
         -   query string contains set of key=>value pairs separated by &
         -   When retrieving in backend, good to use `isset($_GET['varName'])` and check if true to first get the passed parameter and echo back validation if they did not pass a parameter
+	        - DO THIS FOR EVERY PARAMETER PASSED IN ONE thing `isset($_POST['var1'], $_POST['var2'], $_POST['var3'])`
         -   POST parameters are passed through the HTTP POST method
         -   POST data is invisible to others as its embedded within the body of the HTTP request, and no limits to amount of information to send-- impossible to bookmark page because the parameters are not in the URL
         -   `<form method="GET" action="submit.php">` and add the input elements inbetween open and clsoe tag
@@ -76,4 +77,20 @@
 		- **PHP data objects (PDO)**- PDO librarby consists of functions to connect and interact with different database servers
 	- **SQLIte Datbaase**- use PDO to access SQLite
 		- can use phpLiteAdmin as a GUI to see the database rather than command line
-		- 
+		- PDO to create the connection and add attributes for things like error logging and then make the SQL query and then loop through the response
+		- `$db = new PDO("sqlconnection.db");`
+		- `$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);`
+		- `$stmt = $db->prepare("QUERY STATEMENT");`
+		- `$stmt->execute();`
+		- `while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {do things}`
+		- avoid SQL injection with the bindValue in order
+			- `$stmt->bindValue(1, $_POST['val1'])`
+			- `$stmt->bindValue(2, $_POST['val2'])`
+			- `if($stmt->execute()){ $newId = $db->lastInsertId()}`
+			- Above is binding the parameters to the `?` in the SQL statement and then executing with a success and retrieving the new Id of the recently inserted item
+			- `$stmt = $db->prepare("UPDATE SQL STATEMENT")`
+			- bindValue 
+			- stmt execute
+			- `$rowsChanged = $stmt->rowCount();`
+			- Above will retur the amount of rows changed (1) after the update `echo "Impacted $rowsChanged rows"`
+			- 
