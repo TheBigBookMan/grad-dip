@@ -93,4 +93,28 @@
 			- stmt execute
 			- `$rowsChanged = $stmt->rowCount();`
 			- Above will retur the amount of rows changed (1) after the update `echo "Impacted $rowsChanged rows"`
-			- 
+			- when doing a search for a name that may contain some input like "Dan" in "Daniel" etc then can do `SELECT FirstName FROM Customers WHERE FirstName LIKE '%Dan%'` but with the non sql injection etc
+			- `SELECT * FROM Product LIMIT 10 OFFSET ?`- this can be used for pagination and have siome sort of logic in the API when clicked to make the page number increase the OFFSET by 10 everytime 
+				- This goes with the API php clicking "Next Page" will have a API call with the page number that could be the OFFSET number multiplied by 10?
+## Web Security
+- **Trusted Data**- 
+	- program code that is written directly into the program can be assumed to be strusted
+	- data tat has passed through correct validation
+- **Untrusted Data**- 
+	- Data originally from outside the syste
+	- Data from external database
+	- Anything from a web browser (form inputs, URL parameters)
+	- anything from a SERVER request (get, post, cookie)
+- **Data filtering**-
+	- **Input Sanitisation**- removing or escaping unwanted characters
+		- characters and html tags like angle brackets that get converted into html entity format, wont check the data are correct
+		- sanitise an email address it will remove the characters that are inappropraite for an email address but will not check that it is a valid email address 
+	- **Input Validation**- checking user input
+		- Is the data what is expected
+		- is the data formatted correctly
+		- if the input is supposed to be an email address, what happens if its a phone number
+		- it makes sure that improper data does not alter the data, it just throws an error message to the user
+- **SQL Injection**- Never put a variable in the SQL query
+	- a variable can be untrusted data that is made by the user inputting- can be malicious
+	- `<input type="password"/>`- input element that can hide the input as stars
+	- 
