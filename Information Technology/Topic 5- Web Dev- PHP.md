@@ -117,4 +117,23 @@
 - **SQL Injection**- Never put a variable in the SQL query
 	- a variable can be untrusted data that is made by the user inputting- can be malicious
 	- `<input type="password"/>`- input element that can hide the input as stars
-	- 
+	- in a database, the password should never be just clear text, needs to be hashed and salted etc
+	- **parameterised query**- good way of defence against SQL injection
+		- sending the SQL code to the database first
+		- database interprets the SQL and forms an execution plan
+		- untrusted data is sent to the database in a spearate packet
+		- no opportunity for the untrusted data to affect the sql interpreter
+		- keepuing the untrusted data away from the actual SQL query
+- **Cross-site Scripting (XSS)**- malicious user is able to enter HTML into a website and have website echo back on the page
+	- involves posting HTML text to a vuilnerable website like a comment box
+	- javascript will do the malicious work, when someone views the page the browser will execute the code
+	- untrsuted data is displayed o the webpage without being sanitised
+	- malicious javascripot can ro many things
+		- stealing session cookies and senfing them back to the attackers website, so they can see the details of the accoutn logged in
+		- can login as someone else from those cookie credentials
+		- posting a comment using your account
+		- redirecting the browser to a different website
+		- altering a page in some way
+	- having things like non-sanitised data can cause javascript to get triggered things on the page if left unchecked, like somsone leaving a html/javascript code in a comment or something that isnt sanitised (like in a .txt file)
+	- **XSS Defence**- main way for defence is escaping the untrusted data
+		- php function `htmlspecialchars($line, ENT_QUOTES, "UTF-8);` will convert special characters like < > into the html entities codes
