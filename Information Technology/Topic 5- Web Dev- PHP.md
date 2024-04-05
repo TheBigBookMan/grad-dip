@@ -1,6 +1,12 @@
 -   **Dynamic content**- usually websites dont have any change when a user inputs something, so important to create dynamic webages where they can change based on some sort of user input
     -   **Client-side programming**- executes inside the browser and can do this without reloading the page, mainly javascript- used to control dynamic website content
+	    - usability- modify page withouth ave to post back to server- fast UI
+	    - efficiency- can make small, quick changes to a page without waiting for a server
+	    - event-driven: can respond to user actions like clicks and key presses
     -   **Server-side programming**- executes on the web server and results (usually in html format) are sent to web browser, the code is never present on the browser, but the results from the code show up on the browser
+	    - security- has access to servers private data, client cant see source dode
+	    - compatability- not subject to browser compatability issues
+	    - power- can write filesm open connection to servers, connect to databases
 -   **PHP**- Server side language which means 'Personal Home Page' now 'PHP: Hypertext Preprocessor'
     -   server must be configured to run PHP and its primary job is to generate HTML for web browsers, can also generate other file types like iamges etc
     -   does not need compiling or anything extra, just files in the web directory
@@ -8,7 +14,7 @@
     -   any code in the HTML that has PHP in it will be executed on the server and the result of the php will return within the html which is shown in the browser
     -   `var_dump()` function takes a variable and ouptuts its value and data type, handy when dont know data type or value
     -   `==` matches the values while `===` matches the value and data type
-    -   Two ways to get output with PHP-
+    -   Two ways to get output with PHP into the browser-
         -   `echo $vairable;`
         -   `print $variale;`
     -   **constant variable**- a simple value which cannot be changed during the script
