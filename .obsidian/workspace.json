@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information Technology/Topic 5- Web Dev- PHP.md"
+                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md"
               }
             }
           }
@@ -160,37 +159,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eb0ee4e1b84bd8b4",
+  "active": "813bb73b08657cf6",
   "lastOpenFiles": [
-    "Information Technology/phpliteadmin.php",
-    "Information Technology/phpliteadmin.config.sample.php",
-    "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
     "Information Technology/Topic 5- Web Dev- PHP.md",
-    "Information Technology/Web_Assignment/ViewOrderDetails.php",
-    "Information Technology/Web_Assignment/ViewCart.php",
-    "Information Technology/Web_Assignment/SignUp.php",
-    "Information Technology/Web_Assignment/ProcessOrder.php",
-    "Information Technology/Web_Assignment/Homepage.php",
-    "Information Technology/Web_Assignment/functions.php",
-    "Information Technology/Web_Assignment/EmptyCart.php",
-    "Information Technology/Web_Assignment/AddToCart.php",
-    "Information Technology/Web_Assignment/AddNewCustomer.php",
-    "Information Technology/fruitpics/apple-small.jpg",
-    "Information Technology/Activity-2/images/orange.jpg",
-    "Information Technology/Activity-2/images/apple-small.jpg",
-    "Information Technology/Activity-2/images/apple.jpg",
-    "Information Technology/fruitpics/apple.jpg",
-    "Information Technology/fruitpics/orange.jpg",
-    "Information Technology/Activity-2/orange.jpg",
-    "Information Technology/Activity-2/apple.jpg",
-    "Pasted image 20240401123143.png",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8808992994350.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8808992831907.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8808992111351.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8717185446500.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8714574525808.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8712581638665.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8712581631994.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8712581631901.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8712581628383.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures/8712581605100.jpg",
+    "Information Technology/week5/IFU_Assets/ProductPictures",
+    "Information Technology/week5/IFU_Assets/BrandPictures",
+    "Information Technology/week5/IFU_Assets",
+    "Information Technology/IFU_Assets/ProductPictures",
+    "Information Technology/IFU_Assets/BrandPictures",
+    "Information Technology/IFU_Assets",
+    "Information Technology/week5/database/phpliteadmin.php",
+    "Information Technology/week5/database/phpliteadmin.config.php",
+    "Information Technology/week5/database",
+    "Information Technology/week5/ViewProduct.php",
+    "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
     "Information Technology/Topic 3- Databases.md",
     "Databases/Introduction to databases.md",
     "Information Technology/Topic 2- Networks.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/ER+EER Models.md",
     "Databases/Normalization.md",
-    "Pasted image 20231013194403.png",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
     "Databases/Topic 1.md",
     "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
