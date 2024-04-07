@@ -31,4 +31,15 @@
 	- **Long Date**- Thursday, 31 January 2020
 	- Can create own custom format- can do this from the 'Format Cells' display window
 ## Spreadsheet Functions
-- 
+- Function is predefined formula that performs calculations using values in particular order, things like sum, average, count, max/min value of range of cells
+	- return a single value which is the result of calculation
+	- function is part of the formula of a cell
+	- result of the function is displayed in the cell the forumla is in
+- in the brackets after te function name there may be 0 or more arguments to determine specific things the function should do (providing how many cells will be i nthe range functions)
+- **SUM**- add up a range of numbers and provide the total sum of them
+	- `=SUM(B2:B6)`- all the cells added together between B2 and B6 cells
+- **Average**- `=AVERAGE(B2:B6)`- the average of all the cells between
+- **MIN**- `=MIN(B2:B6)`- the minimum value from the range given
+- **MAX**- `=MAX(B2:B6)`- the max value fro mthe range given
+- **COUNT**- `=COUNT(B2:B6)`- the number of non-blank cells in the given range
+- blank or text cells are not included in the results from the functions
