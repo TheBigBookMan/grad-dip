@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 4px;
+}
+
+#direct-page {
+    display: flex;
+    padding: 4px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#direct-page a {
+    background-color: lightblue;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#direct-page a:hover {
+    background-color: blue;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#add-to-cart {
+    text-decoration: none;
+    padding: 4px;
+    border: solid blue 2px;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+#add-to-cart:hover {
+    background-color: #007bff;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    border-color: #007bff;
+}
+
+.productBox {
+    border: lightgray solid 2px;
+    border-radius: 8px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.23);
+    margin-bottom: 8px;
+}
+
+#product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {
+    padding: 4px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-bottom: slategray 2px solid;
+    margin-bottom: 8px;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#navbar li {
+    background-color: lightblue;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar li:hover {
+    background-color: #007bff;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border: black solid 2px;
+}
+
+.order-product {
+    border: lightgray solid 2px;
+    border-radius: 8px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.23);
+    margin-bottom: 8px;
+}
+
+.sales-item {
+    border: lightblue 2px solid;
+    border-radius: 4px;
+    background-color: lightblue;
+}
+
+.sales-item img {
+    border-radius: 4px;
+}
+
+#sales-box {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    list-style-type: none;
+    gap: 4px;
+    padding: 6px;
+}
+
+#brand-box {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    height: 240px;
+    width: 100%;
+    list-style-type: none;
+    gap: 4px;
+    padding: 6px;
+}

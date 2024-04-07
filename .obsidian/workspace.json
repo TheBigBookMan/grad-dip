@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information Technology/Topic 5- Web Dev- PHP.md",
+                "file": "Information Technology/Topic 3- Databases.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+                "file": "Information Technology/Topic 3- Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+                "file": "Information Technology/Topic 3- Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information Technology/Topic 4- Web Dev- HTML+CSS.md"
+                "file": "Information Technology/Topic 3- Databases.md"
               }
             }
           }
@@ -159,29 +160,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "813bb73b08657cf6",
+  "active": "eb0ee4e1b84bd8b4",
   "lastOpenFiles": [
+    "Information Technology/Assessment3.zip",
+    "Information Technology/Week5_PracticeClass.zip",
+    "Information Technology/Week5_PracticeClass/BusinessPage.php",
+    "Information Technology/Week5_PracticeClass/OrderList.php",
+    "Information Technology/Week5_PracticeClass/CustomerList.php",
+    "Information Technology/Week5_PracticeClass/shopstyle.css",
+    "Information Technology/Week5_PracticeClass/Homepage.php",
+    "Information Technology/Week5_PracticeClass/ViewOrderDetails.php",
+    "Information Technology/Week5_PracticeClass/ProcessOrder.php",
+    "Information Technology/Week5_PracticeClass/ViewBrandProducts.php",
+    "Information Technology/Week5_PracticeClass/SignUp.php",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/WAUL8A.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/V4RB9I.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/W48UGR.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/BEK1EE.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/W5GMI8.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/73BBUI.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/FTBPJW.jpg",
     "Information Technology/Topic 5- Web Dev- PHP.md",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8808992994350.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8808992831907.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8808992111351.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8717185446500.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8714574525808.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8712581638665.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8712581631994.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8712581631901.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8712581628383.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures/8712581605100.jpg",
-    "Information Technology/week5/IFU_Assets/ProductPictures",
-    "Information Technology/week5/IFU_Assets/BrandPictures",
-    "Information Technology/week5/IFU_Assets",
-    "Information Technology/IFU_Assets/ProductPictures",
-    "Information Technology/IFU_Assets/BrandPictures",
-    "Information Technology/IFU_Assets",
-    "Information Technology/week5/database/phpliteadmin.php",
-    "Information Technology/week5/database/phpliteadmin.config.php",
-    "Information Technology/week5/database",
-    "Information Technology/week5/ViewProduct.php",
     "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
     "Information Technology/Topic 3- Databases.md",
     "Databases/Introduction to databases.md",
