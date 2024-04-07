@@ -1,0 +1,34 @@
+## Excel Spreadsheets
+- Spreadhseets are used for solving calculations with rows and columns of data
+- Each cell can hold different values for specific use cases-
+	- **NUmbers**- can be used like regular ints, floars and percentage (45% eg)
+	- **Text**- individual characters and not interpreted like a number. to make sure a number is represented as a ates (like a phone number, add ' at the start) '12323
+	- **Dates/Times**- can be entered in many formats
+		- interpreted depending on the regional settings of the computer
+	- **Formulas**- start with the = sign
+		- refer to values in other cells that may be used as operators and functions `=B3+B5`- this will get values from B3 and B5 cells and add them together
+		- press F2 to edit a cell content, Esc to exit cell mode
+- **Arithmetic Operators**- order of operators is important in the result of the calculation
+	- order of them- brackets:`()`, negative number: `-`, percentage:  `%`, exponent:  `^`, multiply or divide: `* or /`, add or subtract: `+ or -`
+	- When evaluating a formula, the order of operators determines the order of caluclations
+	- Can select a cell and click 'Evaluate Formula' to see the step-by-step process for evaluating it
+- **Specyfing range of cells**- can refer to a range of cells, and they must be in adjacent positions- rows, columns, blocks of rows/columns
+	- can select a block of cells (B1, B2, B3, B4, C1, C2, C3, C4, D1, D2, D3, D4)
+- **ABsolute and relative cell references**- copying a forumla into many cells
+	- can find a forumla of cells already and then kind of copy the reference for another type of cells that are next to it (kinda weird??/)
+	- absolute references do not change when they are copied
+	- relative references are automatically adjusted as they are copied, just depends on the direction they are copied in
+- **Formatting Cells**- better formatting can make the spreadsheet easier to understand
+	- only changes how the value in the cell is displayed, not the actual value in the cell- eg could have the same value in each cell but displayed differently (64.2, 64.2000, 64.19)
+	- **General**- no specific format, number of decimals displayed depends on the space available (column width)- 12,345.678
+	- **Number**- two decimal places, a comma may optionally be used- 12,345.68
+	- **Currency**- $, commas, 2 decimal places- $12,2345.68
+	- **Accounting**- $, commas, 2 decimal places, sign and $ left justified- $12,345.68
+	- **Scientific**- 2 decimal places, E, signed exponent- 1.23E+04
+	- **Percentage**- 2 decimal places, trailing %- 0.05752 or 5.5752% woulc be 5.75%
+- **Formatting Dates**- example 31-Jan-2020
+	- **Short Date**- 31/01/2020
+	- **Long Date**- Thursday, 31 January 2020
+	- Can create own custom format- can do this from the 'Format Cells' display window
+## Spreadsheet Functions
+- 
