@@ -43,3 +43,21 @@
 - **MAX**- `=MAX(B2:B6)`- the max value fro mthe range given
 - **COUNT**- `=COUNT(B2:B6)`- the number of non-blank cells in the given range
 - blank or text cells are not included in the results from the functions
+- **Date/Time Functions**- functions above work for numbers, need for date and time as importnat
+	- the functions dont contain any arguements as they dont need to be supplied with any information, gets the date/time from the system
+	- `=TODAY()`: the current date
+	- `=NOW()`: the current date and time
+	- can produce results to many decimal places, but numbers need to be nearest whole number or cent etc
+	- `=ROUND(number, num-of-digits)`- the num-of-digits will specify amount of digits to round to, if it's a negative number then it will round to that many places from left of the decimal
+		- - =ROUND(123456,-3) = 123,000
+		- - =ROUND(123.49,0) = 123
+		- - =ROUND(60.234,2) = 60.23
+	- `=MROUND(number, multiplied)`- this rounds to the nearest multiple to the number
+		- - =MROUND(A4,0.01) = (if A4 is 60.2353, result is 60.24)
+		- - =MROUND(123.50,1) = 124
+		- - =MROUND(123456,1000) = 123,000
+- **IF Function**- using conditions to determine the result of a cell value, useful if the function can have different results depending on whether there are two or more alternatives to what the result could be (depending on other results)
+	- `=IF(logical-test, value-if-true, value-if-false)`
+	- eg `=IF(B1<B3, B1, B3)`- this would check if the value in B1 is less than B3 and if true then return B1 if not then return B3
+	- **Nested IFs**- nesting an IF statement in another which can create more dynamic and complex results `=IF(B2<0, "Negative", IF(B2=0,"Zero","Positive"))`- this will check if B2 is less than 0 and return Negative if true, if false then it will check if B2 = 0 and if it does then return Zero, if false then return Positive
+- **VLOOKUP Functions**- 
