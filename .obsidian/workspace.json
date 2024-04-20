@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "076756c0dcf10e9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RAG/RAG Langchain.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/Intro to Networks.md",
+                "file": "RAG/RAG Langchain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/Intro to Networks.md",
+                "file": "RAG/RAG Langchain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking/Intro to Networks.md"
+                "file": "RAG/RAG Langchain.md"
               }
             }
           }
@@ -147,10 +160,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e6b05e4d467992bd",
+  "active": "076756c0dcf10e9e",
   "lastOpenFiles": [
-    "Information Technology/Topic 1- Computer Architecture.md",
     "Networking/Intro to Networks.md",
+    "RAG/RAG Langchain.md",
+    "RAG",
+    "Information Technology/Topic 1- Computer Architecture.md",
     "Information Technology/Topic 2- Networks.md",
     "Information Technology/Topic 3- Databases.md",
     "Information Technology/Topic 5- Web Dev- PHP.md",
@@ -167,7 +182,6 @@
     "Information Technology/Week5_PracticeClass/Homepage.php",
     "Information Technology/Week5_PracticeClass/ViewOrderDetails.php",
     "Information Technology/Week5_PracticeClass/ProcessOrder.php",
-    "Information Technology/Week5_PracticeClass/ViewBrandProducts.php",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
