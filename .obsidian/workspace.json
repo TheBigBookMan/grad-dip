@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e6b05e4d467992bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Intro to Networks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "076756c0dcf10e9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "RAG/RAG Langchain.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf263b4abb086de7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AWS Skill Builder/Services.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RAG/RAG Langchain.md",
+                "file": "AWS Skill Builder/Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RAG/RAG Langchain.md",
+                "file": "AWS Skill Builder/Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RAG/RAG Langchain.md"
+                "file": "AWS Skill Builder/Services.md"
               }
             }
           }
@@ -160,10 +160,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "076756c0dcf10e9e",
+  "active": "bf263b4abb086de7",
   "lastOpenFiles": [
-    "Networking/Intro to Networks.md",
     "RAG/RAG Langchain.md",
+    "AWS Skill Builder/Services.md",
+    "AWS Skill Builder",
+    "Networking/Intro to Networks.md",
     "RAG",
     "Information Technology/Topic 1- Computer Architecture.md",
     "Information Technology/Topic 2- Networks.md",
@@ -181,7 +183,6 @@
     "Information Technology/Week5_PracticeClass/shopstyle.css",
     "Information Technology/Week5_PracticeClass/Homepage.php",
     "Information Technology/Week5_PracticeClass/ViewOrderDetails.php",
-    "Information Technology/Week5_PracticeClass/ProcessOrder.php",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
