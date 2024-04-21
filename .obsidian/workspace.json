@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/Services.md",
+                "file": "RAG/RAG Langchain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Skill Builder/Services.md",
+                "file": "RAG/RAG Langchain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Skill Builder/Services.md"
+                "file": "RAG/RAG Langchain.md"
               }
             }
           }
@@ -160,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf263b4abb086de7",
+  "active": "076756c0dcf10e9e",
   "lastOpenFiles": [
-    "RAG/RAG Langchain.md",
     "AWS Skill Builder/Services.md",
+    "RAG/RAG Langchain.md",
     "AWS Skill Builder",
     "Networking/Intro to Networks.md",
     "RAG",
