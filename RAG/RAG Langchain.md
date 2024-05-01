@@ -29,3 +29,17 @@ https://www.youtube.com/watch?v=sVcwVQRHIc8
 		- give the normal context and then the step back context and it can then find the answer from both and combine both
 		- could be good for if someone questions "how do i make a roster from the 23rd of march to the 28th of march for my client", can make it to be more abstract like "how to make a roster for a client"- which would be a lot easier fo opensearch to find
 	- **HyDE**- 
+		- simpele flow takes a document and embeddes it and then takes an embedded question and compares it to the embedded document
+		- creates a hypothetical document based on general knoweldge and then uses that in tandem with the question and the context brought back by the search query to find the response
+		- Good for helping with general knowledge, but not ideal when the knoweldge base is something super specific and general knoweldge from the outside world won't help
+
+## Routing
+- logical or semantic routing
+- routing the decomposed question to the right source, which could be a different database (relevant data source)
+- **Logical routing**- give LLM knoweldge of the various datasources and let LLM determine which one to send the question to- applies logic to it
+	- give the llm the names of the datasources with information that can be a set of rules that describe what information could be in those data sources or not in the data sources
+	- a classification that can produce a structured output which then will determine what functions get called (opensearch, database call etc)
+	- for example have data sources- documents (opensearch), clientInfo (MySQL), notes (MongoDB) and the query can then determine what is best for the task- eg 'how do i create a client?' (documents- opensearch); 'how old is Jane Doe?' (clientInfo- MySQL)
+	- can have the LLM use a **function schema** where the LLM which execute a function within the response- to return maybe JSON of the data source wanting to be used
+- **Semantic routing**- embed the question and embed prompts, compute the similarity between the question and prompt and then choose a prompt based on the similarities of the question to the prompt
+	- embedding the different prompts you could have and then embedding the question and seeing similarities between the embeddings and returning the highest score prompt with the query 
