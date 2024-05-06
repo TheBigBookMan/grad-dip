@@ -11,6 +11,10 @@
 - **Session Manager**- allows the session to begin connetion through client or SSH
 - Terminal is used to talk with the EC2 instance
 
+## Amazon Machine Image (AMI)
+- Template image that stores the software configuration
+- Stores information about what sort of OS, application server and applications are on this virtual server
+
 ## Elastic Block Store (EBS)
 - The hardware storage thats used in tandem with the EC2 instance 
 - this is where you store your database and S3 stuff etc
@@ -26,3 +30,12 @@
 ## Systems Manager
 - able to view how the EC2 instances are working in terms of analytics
 - able to control what sort of server and application management happen on the system
+
+## Pricing Calculator
+- Can make pricing estimates for aws use cases
+- can make calculations based on how much usage estimating some services will have at periods of time (eg EC2 instances lower usage during weekends)
+
+## Virtual Private Cloud (VPC)
+- private cloud within the aws cloud and is virtual
+- virtual network
+- cofigure route tables, ip addresses, firewalls, subnets etc
