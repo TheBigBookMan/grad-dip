@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "076756c0dcf10e9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RAG/RAG Langchain.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "bf263b4abb086de7",
             "type": "leaf",
             "state": {
@@ -30,9 +18,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3d4fa56b867b1307",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AWS Skill Builder/Architecture.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -162,8 +161,11 @@
   },
   "active": "bf263b4abb086de7",
   "lastOpenFiles": [
-    "RAG/RAG Langchain.md",
+    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/Services.md",
+    "Untitled.md",
+    "Pasted image 20240401123143.png",
+    "RAG/RAG Langchain.md",
     "AWS Skill Builder",
     "Networking/Intro to Networks.md",
     "RAG",
@@ -192,7 +194,6 @@
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/BEK1EE.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/W5GMI8.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/73BBUI.jpg",
-    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/FTBPJW.jpg",
     "Databases/Introduction to databases.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/ER+EER Models.md",
