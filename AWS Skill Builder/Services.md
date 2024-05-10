@@ -12,15 +12,19 @@
 - Terminal is used to talk with the EC2 instance
 - **INstance types**- 
 	- General purpose- good balance computte, memoery and networking resources- good for web service or code repo
-	- Compute optimised- intensive tasks like game servers, high perofrmance computing and scientific modeling
-	- Memory optimised- memory-intensive tasks, floating point calculations, graphics processing, data pattern matching
+	- Compute optimised- intensive tasks like game servers, high perofrmance computing and scientific modeling, better for batch processing- group data processing
+	- Memory optimised- memory-intensive tasks, floating point calculations, graphics processing, data pattern matching, better for processing large datasets in memory
 	- Storage optimized- high performance for locally stored data
 - **EC2 Pricing**-
-	- On-demand- pay for duration that instance runs for- ideal for short term and irregular workloads that cant be interrupted
-	- Savings plan- low prices on EC2 usage for a commitment to consistent amount of usage- reduce your EC2 instance cost when making hourly spend commitment to instance family and region for 1-3 year planb
-	- Reserved Instances- predictable usage and steady-state workloads- good for when you know the amount of usage and type, covered for 1 year or 3 year
+	- On-demand- pay for duration that instance runs for- ideal for short term and irregular workloads that cant be interrupted, utilise unused capacity at a discounted rate. No long-term commitment or upfront paments
+	- Savings plan- low prices on EC2 usage for a commitment to consistent amount of usage- reduce your EC2 instance cost when making hourly spend commitment to instance family and region for 1-3 year planb, enter contract to get discounted rate
+	- Reserved Instances- predictable usage and steady-state workloads- good for when you know the amount of usage and type, covered for 1 year or 3 year. Pay up front and reserve for one or 3 year
 	- Spot instances- request for spare EC2 computing capacity- 90% off on-0demand price- AWS can reclaim the service anytime
-- **EC2 Auto-scaling**- 
+	- Dedicated hosts- pay for physical host that is fully dedicated to running instance- pay by the hour for the instances that run on single-tenant hardware
+- **Scale horizontally**- launch new EC2 instances and add to the pool
+- **Scale vertically**- resize the instance
+- **EC2 Auto-scaling**-
+	- For horizontal scaling
 	- having the beginning resources you have and then making it automatically scale responding to demand upwards or downwards
 	- Not over paying for unused resources or having not enough resources at a high-deman period
 	- **Dynamic scaling**- responds to changing demand
