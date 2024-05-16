@@ -1,0 +1,13 @@
+- Working on models straight off the shelf
+- sagemaker offers more finetuned models than bedrock
+- a lot easier for doing the sentiment model and keeping notes, tracking etc and practicing it all
+- good for these model pipelines
+- can store multiple modals based on different weight trainings etc
+- important to have a data training pipeline AND an inference pipeline
+- Sagemaker Python SDK is better than Boto3 for using sagemaker in python
+- canvas for no-code low-code
+- studio is for more notebooks- more for data analystics then???
+	- Good for labeling data as well
+	- preparing data
+	- data training for models
+-![[Pasted image 20240516111751.png]]

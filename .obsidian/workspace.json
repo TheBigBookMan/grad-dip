@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "076756c0dcf10e9e",
+            "id": "41e19daa2ef791a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RAG/RAG Langchain.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf263b4abb086de7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS Skill Builder/Services.md",
+                "file": "AWS Skill Builder/SageMaker.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RAG/RAG Langchain.md",
+                "file": "AWS Skill Builder/SageMaker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RAG/RAG Langchain.md",
+                "file": "AWS Skill Builder/SageMaker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RAG/RAG Langchain.md"
+                "file": "AWS Skill Builder/SageMaker.md"
               }
             }
           }
@@ -159,11 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "076756c0dcf10e9e",
+  "active": "41e19daa2ef791a7",
   "lastOpenFiles": [
-    "AWS Skill Builder/Architecture.md",
+    "Pasted image 20240516111751.png",
     "AWS Skill Builder/Services.md",
+    "AWS Skill Builder/SageMaker.md",
     "RAG/RAG Langchain.md",
+    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder",
     "Networking/Intro to Networks.md",
     "RAG",
