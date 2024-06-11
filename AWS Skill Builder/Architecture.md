@@ -63,3 +63,12 @@
 	- AWS Direct Connect- establush a completely private and dedicated fiber connection from data center to AWS
 		- Physical line connecting your network to your AWS VPC
 		- good for compliuance security
+- Use subnets to control the traffic permissions
+- **Network Access Control List (ACL)**- the packets that are within the message from the internet will be checked against the ACL to see if it has permission to enter or lave the network
+	- This controls the in and out for a subnet
+	- stateless, so it will check every packet coming
+- Different instances may have different specifics about who can send them requests or recieve so need instance level network security
+	- instances have security groups
+	- doesnt allow any traffic into the instance by default, all ports blocked and all IP addresses are blocked
+	- have to configure what incoming traffic you want
+	- 
