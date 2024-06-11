@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS Skill Builder/Workshops GenAI.md",
+                "file": "AWS Skill Builder/Architecture.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "af9f1667da6da560",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AWS Skill Builder/Services.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/Workshops GenAI.md",
+                "file": "AWS Skill Builder/Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Skill Builder/Workshops GenAI.md",
+                "file": "AWS Skill Builder/Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Skill Builder/Workshops GenAI.md"
+                "file": "AWS Skill Builder/Architecture.md"
               }
             }
           }
@@ -149,15 +161,15 @@
   },
   "active": "41e19daa2ef791a7",
   "lastOpenFiles": [
+    "AWS Skill Builder/Services.md",
+    "AWS Skill Builder/Architecture.md",
+    "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
     "Pasted image 20240523133829.png",
     "Pasted image 20240523133758.png",
     "Pasted image 20240523103754.png",
     "Pasted image 20240516111751.png",
-    "AWS Skill Builder/Services.md",
-    "AWS Skill Builder/Workshops GenAI.md",
     "RAG/RAG Langchain.md",
-    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder",
     "Networking/Intro to Networks.md",
     "RAG",
@@ -182,7 +194,6 @@
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/WAUL8A.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/V4RB9I.jpg",
-    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/W48UGR.jpg",
     "Databases/Introduction to databases.md",
     "Databases/Relational Algebra and SQL.md",
     "Databases/ER+EER Models.md",

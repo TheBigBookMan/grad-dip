@@ -102,3 +102,34 @@
 - private cloud within the aws cloud and is virtual
 - virtual network
 - cofigure route tables, ip addresses, firewalls, subnets etc
+
+## CloudFront 
+- a CDN that will host things in a specific location that may be closer to another location for faster delivery speeds
+- Separate from regions so its not taking up as many resources and costing as it would to serve a whole isntance in another region
+- They are sites
+
+## Elastic Beanstalk 
+- helps with orchestrating multiple services together
+- give it the application code and desired configurations and beanstalk will build and save the environment for easier deployment
+- gives convenience of not provisioning and managing all the pieces separately while still giving visibility of underlying resources
+- Adjust capacity, load balancing, automatic scaling, application health monitoring
+
+## Cloudformation
+- Infrastructure as code tool that defines variety of AWS resources using JSON or YAML- rather than using the GUI
+- performs automatic for replicating the exact infrastructure environment
+- specify what you want built without the details of how to build it
+- it calls the APIs to get everything built
+- Define the resources into a template and this template will be parsed and built the infrastructure
+- replicating the infrastructure across multiple places if you want- removes human error chances for duplicating infrastructure
+
+## Outposts
+- an on-premise data center that can offer extending your resource allocation by having a specific device 
+- This will act like a data-center, and may be beneficial if need another data center in a specific spot
+- acts like an edge location
+
+## Virtual Private Cloud (VPC)
+- provision isolated section of the AWS cloud where can launch AWS resources in a virtual network that you define
+- can be public facing with internet access or private facing with no internet access
+- private and public grouping of resources is known as subnets and they are ranges of IP addresses in the VPC
+- public subnet can be for interacting with the internet or client interaction
+- private subnet can be for things you dont want touching the internet or clients directly
