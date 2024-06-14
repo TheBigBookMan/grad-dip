@@ -97,12 +97,6 @@
 ## Pricing Calculator
 - Can make pricing estimates for aws use cases
 - can make calculations based on how much usage estimating some services will have at periods of time (eg EC2 instances lower usage during weekends)
-
-## Virtual Private Cloud (VPC)
-- private cloud within the aws cloud and is virtual
-- virtual network
-- cofigure route tables, ip addresses, firewalls, subnets etc
-
 ## CloudFront 
 - a CDN that will host things in a specific location that may be closer to another location for faster delivery speeds
 - Separate from regions so its not taking up as many resources and costing as it would to serve a whole isntance in another region
@@ -128,6 +122,9 @@
 - acts like an edge location
 
 ## Virtual Private Cloud (VPC)
+- private cloud within the aws cloud and is virtual
+- virtual network
+- cofigure route tables, ip addresses, firewalls, subnets etc
 - provision isolated section of the AWS cloud where can launch AWS resources in a virtual network that you define
 - can be public facing with internet access or private facing with no internet access
 - private and public grouping of resources is known as subnets and they are ranges of IP addresses in the VPC

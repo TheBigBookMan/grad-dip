@@ -64,12 +64,26 @@
 		- Physical line connecting your network to your AWS VPC
 		- good for compliuance security
 - Use subnets to control the traffic permissions
+	- traffioc permissions will not look at the contents of the packet, just the sender to see if on the approved list
 - subnets can pass packets of information from one another, depending if the instance of that subnet allows it
 - **Network Access Control List (ACL)**- the packets that are within the message from the internet will be checked against the ACL to see if it has permission to enter or lave the network
+	- Is a virtual firewall controlling inbound and outbound traffic
 	- This controls the in and out for a subnet
 	- stateless, so it will check every packet coming
+	- it will check both outgoing and incoming
+	- Important to know that even if an ACL from a different subnet granted permission for it to leave that subnet, an incoming ACL doesn't automatically give it permission to enter that subnet
+	- by default it allows all incoming and outgoing traffic so need to configure what it doesnt allow
 - Different instances may have different specifics about who can send them requests or recieve so need instance level network security
 	- instances have security groups
-	- doesnt allow any traffic into the instance by default, all ports blocked and all IP addresses are blocked
-	- have to configure what incoming traffic you want
-	- all traffic can go out of the security group, no restrictions on outbound
+		- doesnt allow any traffic into the instance by default, all ports blocked and all IP addresses are blocked
+		- have to configure what incoming traffic you want
+		- all traffic can go out of the security group, no restrictions on outbound
+		- security groups are stateful so has some memory about who to allow in or out
+		- security groups by default allow all return trafiic (from the stateful memory)
+	- Can have a different security group for different EC2 instances within the same subnet
+- **Public Subnets**- 
+	- resources accessible for the public like internet- APIs, client
+- **Private Subnets**-
+	- resoruces only to interact with through private network like adatabase through API
+- Can have a public subnet talk to a pirvate subnet (API to database)
+- 
