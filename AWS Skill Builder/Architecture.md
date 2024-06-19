@@ -62,7 +62,7 @@
 		- only comes through if its coming from an approved network
 	- AWS Direct Connect- establush a completely private and dedicated fiber connection from data center to AWS
 		- Physical line connecting your network to your AWS VPC
-		- good for compliuance security
+		- good for compliuance securityn
 - Use subnets to control the traffic permissions
 	- traffioc permissions will not look at the contents of the packet, just the sender to see if on the approved list
 - subnets can pass packets of information from one another, depending if the instance of that subnet allows it
@@ -86,4 +86,6 @@
 - **Private Subnets**-
 	- resoruces only to interact with through private network like adatabase through API
 - Can have a public subnet talk to a pirvate subnet (API to database)
-- 
+- **Domain Name System (DNS)**- 
+	- request goes from the client to the Customer DNS resolver which then gets then forwards the request to the DNS server to return the IP address based on the DNS name
+	- the request returned from the IP address then goes to cloudfront to connect to load balancer which sends the packet to an EC2 instance

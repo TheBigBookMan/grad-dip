@@ -100,7 +100,8 @@
 ## CloudFront 
 - a CDN that will host things in a specific location that may be closer to another location for faster delivery speeds
 - Separate from regions so its not taking up as many resources and costing as it would to serve a whole isntance in another region
-- They are sites
+- They are sites which hold the storage
+- they are located closer to where users are, so for example because im in adelaide, could have one closer to me like in adelaide as well or Melbourne (even though there is a region there)
 
 ## Elastic Beanstalk 
 - helps with orchestrating multiple services together
@@ -130,3 +131,10 @@
 - private and public grouping of resources is known as subnets and they are ranges of IP addresses in the VPC
 - public subnet can be for interacting with the internet or client interaction
 - private subnet can be for things you dont want touching the internet or clients directly
+
+## Route 53
+- AWS domain name service (DNS)
+- translates the website name into an IP for computers to read
+- Route 53 can direct traiffic to different endpoints using a routing policy like geolocation- this helps routing to closer regions from where the customer is
+- can buy and register your own domain names
+- works with the load balanacers and EC2 instances
