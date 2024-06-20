@@ -1,6 +1,26 @@
 ## Simple Storage Service (S3)
-- Stores any type of data as an object
+- Stores any type of data (like a file) as an object, and the object is stored in a bucket (like a directory)
+- Object storage has the data, metadata (info of where the data is, how it is used, object size etc) and key (unique identifier)
+- changing a part of an object will change the whole object
+- max file size to store is 5 terabytes
+- can version objects and create multiple buckets and store them across different classes or tiers of data
+- create permissions for who can read/write objects
+- stores unlimited amount of data at any scale
 - Can be even static files like html, videos, images, stylesheets etc
+- **Storage Class**- Different tiers for how often the data needs to be retrieved (frequently or stored for several years)
+	- **S3 Standard**- 11 99.9 of probability it will remain intact after 1 year
+		- good for quick retrieval
+		- data is stored in at least three AZ so multiple copies across locations
+		- statis website hosting like HTML files can be stored in here
+	- **S3 Standard-Infrequent Access (S3 Standard-IA)**- data that is less accessed frequently but requires rapid access when needed
+		- good for storing backups, disaster recovery files and objects that require long-term storage
+	- **S3 Glacier Flexible Retrieval**- good for storing things for a very long time- takes a while to retrieve though
+		- create a vault and populate it with archives
+		- can specify many rules around it in terms of write once, rean many, lock any future edits
+	- **Lifecycle Policy**- policies created that can move data automatically between the tiers
+		- eg if you want some data to be in the S3 standard for 90 days and then move to the S3 standard IA for 30 days and then to the Glacier
+		- Dont have to change the code of the application or manually move them
+
 
 ## Elastic Compute Cloud (EC2)
 - virtual server
@@ -80,9 +100,20 @@
 
 ## Elastic Block Store (EBS)
 - The hardware storage thats used in tandem with the EC2 instance 
+- virtual hard drives
+- persists between stopping and starting EC2 instances
 - this is where you store your database and S3 stuff etc
-- Solid state drive and hard disk storage selections
+- Solid state drive and hard disk storage selections for persistent data
+- **Snapshots**- which are incremental backups of your data, important to take regular snapshots of EBS volumes to store any corrupt data
+	- incremental backing up means that only the new data will be added to the snapshot, rather than the copying non-changed data that has already been backed up
 - storage remains even if the EC2 instance has stopped
+- stores the files that are series of byters stored on blocks on disc
+- **Volumes (instance store)** are a local storage to the isntance EC2 that was instantiated- physically attached- these ARE NOT ELB just another storage that works with the instance for temporary data
+	- can write to it
+	- since its attached to underlying physical host if you terminate the EC2 instance then the data on the volume will be deleted
+	- useful for situations where you can lose data and recreate that data easily without consequence
+	- so dont write important data to these
+	- because stopping an EC2 instance and starting a new one it might start on a different host, where a store volume did not previously exist
 
 ## Identity Access Management (IAM)
 - User permissions for restriction etc

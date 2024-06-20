@@ -89,3 +89,6 @@
 - **Domain Name System (DNS)**- 
 	- request goes from the client to the Customer DNS resolver which then gets then forwards the request to the DNS server to return the IP address based on the DNS name
 	- the request returned from the IP address then goes to cloudfront to connect to load balancer which sends the packet to an EC2 instance
+
+## Storage and Databases
+- 
