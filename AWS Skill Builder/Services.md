@@ -115,6 +115,14 @@
 	- so dont write important data to these
 	- because stopping an EC2 instance and starting a new one it might start on a different host, where a store volume did not previously exist
 
+## Elastic File System (EFS)
+- file system to have shared between applications for businesses
+- can have people from different areas of a business working on the same data as its shared
+- can have multiple instances reading and writing at the same time
+- automatically scales
+- good for when the use case is using large number of services and resources need access to the same data at the same time
+- stores data across multiple availability zones
+
 ## Identity Access Management (IAM)
 - User permissions for restriction etc
 - have the root owner and then they can provide permissions for workers to specific services
