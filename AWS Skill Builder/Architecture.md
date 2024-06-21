@@ -91,4 +91,21 @@
 	- the request returned from the IP address then goes to cloudfront to connect to load balancer which sends the packet to an EC2 instance
 
 ## Storage and Databases
-- 
+- **Relational Database Service (RDS)**
+	- relational database are managed here (MySQL, PostgreSQL, Oracle, Microsoft SQL server etc)
+	- this is the kind of outer layer which Aurora and others are managed in
+	- **Lift-and-Shift**- migrate your relational database to run on an EC2 instance
+		- Gives same control over the same variables like OS, memory, CPU, storage capacity
+	- this includes automated patching, backups, redundancy, failover, disaster recovery managed through AWS, rather than doing yourself
+	- **Aurora**- compatible with MySQL and PostgreSQL and is the AWS kind of version of a relational database
+- **Database Migration Service (DMS)**
+	- helps customers migrate their existing database onto AWS
+	- source database remains operational in the meantime while migrating to the target database on AWS
+	- **Homogenous migration**- migration of the same database type- MySQL -> RDS MySQL
+	- **Heterogenous migration**- migration of different database types
+		- Need to convert the data with AWS Schema Conversion Tool
+		- Then migrate the newly converted data
+	- **Development and test database migrations** - testing against production data without impacting production users
+	- D**atabase consolidation**- several databases you want to consolidate into one central database
+	- **Continous database replication**- use DMS to perform continous data replication for disaster recovery or geographic separation
+

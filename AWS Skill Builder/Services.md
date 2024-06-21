@@ -101,6 +101,7 @@
 ## Elastic Block Store (EBS)
 - The hardware storage thats used in tandem with the EC2 instance 
 - virtual hard drives
+- Must be stored in the same AZ as the EC2 instance it is attached to
 - persists between stopping and starting EC2 instances
 - this is where you store your database and S3 stuff etc
 - Solid state drive and hard disk storage selections for persistent data
@@ -177,3 +178,40 @@
 - Route 53 can direct traiffic to different endpoints using a routing policy like geolocation- this helps routing to closer regions from where the customer is
 - can buy and register your own domain names
 - works with the load balanacers and EC2 instances
+
+## Aurora
+- managed relational database option for MySQL and PostgreSQL
+- it is the AWS managed DB service which compatible with MySQL and PostgreSQL
+- costs 1/10th the price of commercial grade databases
+- 5x faster MySQL, 3x faster PostgreSQL
+- data replicated across AZ, so always having 6 copies at given time
+- can deploy up to 15 read replicas for scalability
+- continous backups to S3
+- point in time recovery- so can recover data from a specific period
+
+## DynamoDB
+- serverless database, dont need to manage infrastructure underlying instances
+- automatic scaling as the changes in capacity
+- because its a NoSQL it has no required schema like a relational
+- useful if you have heaps of fields that you are not necessarily querying by as they dont need to be relational to anything else, they can just be an extra attribute
+- create a table, have data organised into items which have attributes
+	- attributes are different features of the data
+- The data is redundantly across AZ and mirrors the data across multiple drives
+- NoSQL, uses keys as the primary keys to search for and returns the attributes
+
+## Redshift
+- data warehousing- good for multiple data types to store in one spot
+- good for storing large and long periods of data to perform business analytics that may require a long date range of data- historical analytics- looking backwards at data
+- good for data that is read only, as it is good for historical data "how many bags did we sell this week?" compared to a SQL which would be "how many bags in inventory?"
+- 10 times higher performance than traditional databases
+- rather than doing mul;tiple complex queries, can use a simple SQL query to return complex data
+
+## DocumentDB
+- noSQL good for larger data than DynamoDB
+- full content management system, great for content management, catalogs and user profiles
+- supports MongoDB
+
+## Neptune
+- graph database
+- good for social networking and recommendation engines and fraud detection
+
