@@ -137,6 +137,7 @@
 ## Pricing Calculator
 - Can make pricing estimates for aws use cases
 - can make calculations based on how much usage estimating some services will have at periods of time (eg EC2 instances lower usage during weekends)
+
 ## CloudFront 
 - a CDN that will host things in a specific location that may be closer to another location for faster delivery speeds
 - Separate from regions so its not taking up as many resources and costing as it would to serve a whole isntance in another region

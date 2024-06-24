@@ -109,3 +109,11 @@
 	- D**atabase consolidation**- several databases you want to consolidate into one central database
 	- **Continous database replication**- use DMS to perform continous data replication for disaster recovery or geographic separation
 
+## Security
+- **Shared responsibility model**- how AWS and customers work together to ensure top leve security
+	- AWS constrols security of the cloud, like data centers, services and all the layers 
+		- compute, storage, database, networking, regions, AZ, edge locations, global infrastructure
+	- Users control the security within the cloud
+		- in charge of the OS through the encryption key to login and create user accounts for an EC2 instance (AWS can only notify if the type of OS you are running is in-secure)
+		- customer data, platforms, applications, IAM, OS, network, firewall config, client-side data encryption, server-side encryption, network trafficking protection
+	
