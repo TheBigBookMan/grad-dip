@@ -130,3 +130,6 @@
 - **Key Management Service**- used to store encryption keys for transit between two servers
 - **Web Application Firewall (WAF)**- monitor network requests coming into web appliocations
 	- works together with Cloudfront and ALB
+
+## Monitoring and Analytics
+- able to monitor all the traffic that your services have
