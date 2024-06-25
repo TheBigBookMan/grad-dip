@@ -133,3 +133,6 @@
 
 ## Monitoring and Analytics
 - able to monitor all the traffic that your services have
+- can use the AWS Trusted Advisor for evaluating your seources against the five pillars- cost optimisation, performance, security, fault tolerance and service limits
+	- can check things like if y o have wasted resources in a not-turned off ec2 instance etc
+	- does checks to make sure everything is opztimise

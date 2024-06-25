@@ -247,4 +247,13 @@
 - good for social networking and recommendation engines and fraud detection
 
 ## Cloudwatch
-- 
+- monitor AWS infrastructure and applications in real time by tracking and monitoring metrics
+- can set an alarm to alert you when a certain criteria is met for a service
+- create an action in response to the alarm happening
+- integrate with SNS
+- has the dashboard feature to view all the metrics in one spot
+
+## Cloudtrail
+- API auditing tool
+- every request to AWS is logged n the CloudTrail engine- everything that happens in your AWS- who send it, what they did and when, state change, IP address etc
+- **Cloudtrail Insights**- can detect unusua; behavioiur in your metrics
