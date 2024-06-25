@@ -129,6 +129,18 @@
 - have the root owner and then they can provide permissions for workers to specific services
 - where all the users credentials and security are stored
 - important to be able to access specific services for things like read, write, delete etc
+- **IAM Policy**- JSON documenta that describes what API calls a user can or cannoyt make to AWS- attach the policies to users or groups
+- **IAM Group**- grouping of users that get policies attached to them, assign a user to a group that is specific to their needs and then they have the access of that group
+- **IAM Role**- used to gain access to speific services for a temporary amount of time- similar to a user however it is assigned to someone for temporary amount of time- can be on a role that can access only S3 for something in the morning and then arvo can only access EC2
+
+## Organisations
+- central location to manage multiple AWS accounts
+- manage billinc, access, compliance, security, share resources across AWS accounts
+- centralized management of all the AWS accounts- consolidated billing
+- make hierarchical groupings of the accounts for security, compliance and budgetary needs
+- control over the AWS services and API actions that each account can access 
+- group accounts in organisational units (OU)- make easier to manage accounts with similar business or security requirements- applying a policy to OU will make all accounts inherit that policy permissions
+- **SErvice control policies**- specify the max permissions for memeber accounts in organisation, can restrict AWS sercices, resources, API actioans, users and roles each member account can access
 
 ## Systems Manager
 - able to view how the EC2 instances are working in terms of analytics

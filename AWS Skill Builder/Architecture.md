@@ -116,4 +116,7 @@
 	- Users control the security within the cloud
 		- in charge of the OS through the encryption key to login and create user accounts for an EC2 instance (AWS can only notify if the type of OS you are running is in-secure)
 		- customer data, platforms, applications, IAM, OS, network, firewall config, client-side data encryption, server-side encryption, network trafficking protection
-	
+- **USer access**- 
+	- when creating AWS, you have a root user which is the main of the account and ownder and has permissiion to do anything they want
+	- create the IAM which has no permissions to start with and then add on- least privilege principle- give people access only to waht they need
+	- **MFA**- random code sent to phone for authentication- can be hardware security key or phone app
