@@ -120,3 +120,13 @@
 	- when creating AWS, you have a root user which is the main of the account and ownder and has permissiion to do anything they want
 	- create the IAM which has no permissions to start with and then add on- least privilege principle- give people access only to waht they need
 	- **MFA**- random code sent to phone for authentication- can be hardware security key or phone app
+- **Compliance**- company needs to ensure they are up to complaicen and auditing standards and regulations
+- **Customer Compliance Center**- contains resources to learn more about AWS compliance
+	- can access compliance whitepapers and documentation
+	- contains auditor learning path
+- **Distributed Denial of Service attach (DDOS)**- 
+	- the idea of the attack is to shutdown your application by overwhelming the system by shooting many requests
+	- use AWS Shield to protext against DDOS attacks
+- **Key Management Service**- used to store encryption keys for transit between two servers
+- **Web Application Firewall (WAF)**- monitor network requests coming into web appliocations
+	- works together with Cloudfront and ALB

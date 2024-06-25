@@ -142,6 +142,24 @@
 - group accounts in organisational units (OU)- make easier to manage accounts with similar business or security requirements- applying a policy to OU will make all accounts inherit that policy permissions
 - **SErvice control policies**- specify the max permissions for memeber accounts in organisation, can restrict AWS sercices, resources, API actioans, users and roles each member account can access
 
+## Artifact
+- gain access to compliance reports done by third parties
+- shows security and risk whitepapers
+- shows many whitepapers and documents needed by reglautors etc
+- **Artifact Agreements**- can review, accept and manage agreements for individual account and for all organisaiont accounts
+- **Artifact Reports**- provides compliance reports from third party auditors
+
+## Shield
+- protexts applcaitions against DDoS attacks
+- **Standard**- no cost protexts AWS customers and against the most common attacks
+- **Advanced**- paid service that provides detailed attack and detecting services
+	- integrates with cloudfront, route 53 and ELB
+
+## Web Application Firewall
+ - **Web Application Firewall (WAF)**- monitor network requests coming into web appliocations
+	- works together with Cloudfront and ALB
+- can configure specific IP addresses to not/can come through
+
 ## Systems Manager
 - able to view how the EC2 instances are working in terms of analytics
 - able to control what sort of server and application management happen on the system
