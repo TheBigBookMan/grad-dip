@@ -136,3 +136,36 @@
 - can use the AWS Trusted Advisor for evaluating your seources against the five pillars- cost optimisation, performance, security, fault tolerance and service limits
 	- can check things like if y o have wasted resources in a not-turned off ec2 instance etc
 	- does checks to make sure everything is opztimise
+
+## Pricing & Support
+- **Free Tier**- good for getting started
+	- Service 1- Alwasy free- doesnt expire, services will have a limit of free uses in a specific amount of time to use
+	- Service 2 - 12 months free- 12 months to try out the service after creating the account
+	- Service 3- trials- some services offer short-term free trial and then expire
+- **Pay-As-You-Go Pricing**- 
+	- Pay for what you use- pay exactly the amount of resources that you actually use without a long-term contract
+	- Pay less when you reserve- reservation options that offer big discount compared to On-Demand instance pricing
+	- Pay less with volume-based discounts when use more- sopme services offer tiered pricing, per-unit cost lower with usage (eg S3 storage, more space you use the less you pay for it)
+- **AWS Pricing Calculator**- create estimate cost for use cases
+	- good for selecting regions or instance types to suit the most cost-effective use case
+- **Billing Dashboard**- view all your billing like month-to-month spending
+- **Consolidating billing**- because there are multiple accounts shared under one business (organisation) you can consolidate all the billing into one bill for the main account to pay
+- **Budgets**- set custom budhets for variety of scenarios like cost and usage
+	- receive an alert when cost or usage exceed or are forecasted to exceed the budgeted amount
+- **Cost Explorer**- shows which services you are spending most money
+	- gives 12 months of historical data to track spending
+	- filter by tags on services (group services with tags for easier identifier)
+- **Support Plans**- help from AWS for your business needs
+	- **Basic Suppoert**- access support like 24/7 customer service access, documentation, whitepapers, support forums, Trusted Advisor AWS and AWS personal health dashboard (view of the health of AWS services and any alerts you recieve if resources are impacted)- all free for everyone
+	- **Developer Support**- includes everything in basic support, plan, plus can email customer support directly with 24 hour response time
+		- responses of less than 12 hours for system impairment
+	- **Business Support**- include everything from previous plans
+		- directo phone access to support team with 4 hour response time for system impair
+		- 1 hour response time if prod system is down
+		- access to infrastructure event management
+	- **Enterprise On-Ramp** for migrating business from development to production- 
+		- have 30 min response times for business critial workloads
+	- **Enterprise Support**- 15 minute response time for business and critical workloads
+		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
+		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
+- **Marketplace**- resource to find third-party software that runs on AWS
