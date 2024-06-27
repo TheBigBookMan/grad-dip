@@ -169,3 +169,43 @@
 		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
 - **Marketplace**- resource to find third-party software that runs on AWS
+
+## Migration and Innovation
+- moving from on-premise or another cloud to AWS
+- **Cloud Adoption Framework**- manage the process of migration
+	- 6 different perspectives of managing migration, these fall under peoples roles at the companies and how they can help
+	- **Business, People, Governence**- focus on the business capabilities
+	- **Platform, Security, Operations**- focus on the technical capabilities
+	- **Business**- ensures IT aliogns with business needs that IT investments link to key business reults
+		- Create strong business case for cloud adoption
+		- Business managers, finance managers, budget ownders, strategy stakeholders
+	- **People**- supports development of organisation-wide change strategyu
+		- evaluate organisational structures and roles
+		- HR, Staffing, People managers
+	- **Governance**- focuses on skills and processes to align IT with Business to maximise everything
+		- update the staffs skills and processes
+		- CIO, Program managers, Enterprise architects, business analysts
+	- **Platform**- principles and patterns for implementing new cloud solutions
+		- variety of architectural models to understand and communicate IT
+		- CTO, IT managers, Solutions architects
+	- **Security**- ensure organisation meets security objects for visibility, auditbaility, control and agility
+		- CAF to structure selection and implementation of security controls
+		- CISO, IT security managers and analysts
+	- **Operations**- run, use operate and recover IT workloads
+		- defin day-to0day and year-to-year business conducted, and help align all operations
+		- IT operations managers, suppoert managers
+- **Migrating Six R's**- deciding which option suits best based on time, cost, priority, criticality
+	- **Rehosting**- move applications as they are onto AWS
+		- can save up to 30% of total cost by rehosting 
+		- can optizimse applcaitons later once live in the cloud
+	- **Replatforming**- changing an application to something else through migration not redevelopment
+		- changing a MySQL into RDS MySQL
+	- **Retire**- some things are no longer needed
+		- 10-20 percent of companies applications are no longer being used
+		- get rid of end-of-life applications to save effort from the team
+	- **Retain**- some that are close to deprecation but you can save
+		- could be migrated over if it makes sense to the business
+	- **Repurchase**- abandon legacy software vendors and fresh start 
+		- some new packages are easy to implement, some arent
+	- **Refactoring**- writing new code
+		- changes to your architecture that can be beneficial
