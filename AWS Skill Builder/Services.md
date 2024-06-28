@@ -17,7 +17,8 @@
 	- **S3 Glacier Flexible Retrieval**- good for storing things for a very long time- takes a while to retrieve though
 		- create a vault and populate it with archives
 		- can specify many rules around it in terms of write once, rean many, lock any future edits
-	- **Lifecycle Policy**- policies created that can move data automatically between the tiers
+	- **Intelligent-Tiering**- policies created that can move data automatically between the tiers
+		- monitors object access patterns
 		- eg if you want some data to be in the S3 standard for 90 days and then move to the S3 standard IA for 30 days and then to the Glacier
 		- Dont have to change the code of the application or manually move them
 

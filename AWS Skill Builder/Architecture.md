@@ -163,9 +163,11 @@
 		- directo phone access to support team with 4 hour response time for system impair
 		- 1 hour response time if prod system is down
 		- access to infrastructure event management
+		- access to trusted advisor
 	- **Enterprise On-Ramp** for migrating business from development to production- 
 		- have 30 min response times for business critial workloads
 	- **Enterprise Support**- 15 minute response time for business and critical workloads
+		- - access to trusted advisor
 		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
 - **Marketplace**- resource to find third-party software that runs on AWS
@@ -209,3 +211,32 @@
 		- some new packages are easy to implement, some arent
 	- **Refactoring**- writing new code
 		- changes to your architecture that can be beneficial
+- **Snow Family**- devices help shipping data
+	- **Snowcone**- holds 8 TB of data and contains edge computing
+		- EC2 instances and IoT Greengrass
+		- order through management console
+		- data is copied to an S3 bucket
+	- **Snowball Edge**- comes in either compute or storage optimized
+		- compute- storage 80TB 
+		- storage- 80TB
+		- fit in existing server racks and can be clustered together
+		- works on infrastructure, lambda, AMI or IoT Greengrass
+		- good for shipping to remote locations
+	- **Snowmobile**- houses 100 PB ideal for largest migrations or data center shutdowns
+		- housed in a 45 foot shipping container and water and temparetuite proof
+
+## Cloud Journey
+- **Well-Architected Framework**- enable devs and architexts to build secure, high-performace, resilient and efficient infrastructure for apps. 6 pillars of excellence
+	- **Operational**- running and monitoring systems to deliver business value. Continually improcing processes and procedures with pipelines
+	- **Security**- integrity of data and protecting systems with encryption
+	- **Reliability**- recovery planning for node failure and how to change dynamically to meet customers demand
+	- **Performance Efficiency**- using IT and computing resources efficiently and making informed decisions with services
+	- **Cost Optimization**- controlling where the money is spent and making sure to not overestimate things
+	- **Sustainability**- minimizing environmental impacts of cloud workplaces and reducing energy consumption and increasing efficiency so we can use services that reduce resource usage
+- **Benefits of using AWS**-
+	- Paying is flexible with the amount of resources you use and not much up front cost and can change services to lower the cose
+	- Massive economies of scale, so when AWS expands more, then cost of things get less
+	- No need to guess the capacity as its elastic
+	- Increase in speed anad agility to try new things and return to normal if dont like- flexibility
+	- take away the heavy lifting of managing a data center
+	- globalised data in minutes so can access all around the world
