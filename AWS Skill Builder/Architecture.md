@@ -227,12 +227,42 @@
 
 ## Cloud Journey
 - **Well-Architected Framework**- enable devs and architexts to build secure, high-performace, resilient and efficient infrastructure for apps. 6 pillars of excellence
-	- **Operational**- running and monitoring systems to deliver business value. Continually improcing processes and procedures with pipelines
-	- **Security**- integrity of data and protecting systems with encryption
-	- **Reliability**- recovery planning for node failure and how to change dynamically to meet customers demand
-	- **Performance Efficiency**- using IT and computing resources efficiently and making informed decisions with services
-	- **Cost Optimization**- controlling where the money is spent and making sure to not overestimate things
+	- **Operational**- running and monitoring systems to deliver business value. Continually improcing processes and procedures with pipelines. Emphasie proactive operations management and ongoing imporovement
+		- **Operational Insights**- understanding how systems are performing and being able to respond to events
+		- **Prepare**- planning and preparing for opertaional excellence
+		- **Operate**- Operating applications and infratstrucute effectively
+		- **Evolve**- evolving operations to improve and achieve business outomes
+		- Example- using AWS Cloudwatch to monitor application logs and perforamcen metrics, setting up alarms to notify when certain threshold is exceeded
+	- **Security**- integrity of data and protecting systems, information and assets while delviering business value through risk assessments ad migitagtion strategies. Emphasies on safeguarding the architecture against security threats and vulnerabilities
+		- **IAM**- ensuring right people have right access to resources
+		- **Detective Controls**- using mechanisms to identify security events
+		- **Infrastructure Protection**- securing infrastucture resources
+		- **Data Protection**- ensuring data confidentiality and integrity
+		- **Incident Response**- preparing and responding to security incidents
+		- Example- using AWS Key Management (KMS) to encrypto data at rest and in transit
+	- **Reliability**- recovery planning for node failure and how to change dynamically to meet customers demand, ensureing a workload performs its intended function correctly and consistently when expected to. Emphasis design and operation of systems that can recover from failures and continue functioning well
+		- **Foundations**- ensuring infrastructure is designed to support the workload
+		- **Chagne Management**- managing changes to the system to prevent unintended disruptions
+		- **Failure Management**- planning for and recovering from failures
+		- Example- using auto-sclaing to aumotically number EC2 instances during demand spikes
+	- **Performance Efficiency**- using IT and computing resources efficiently and making informed decisions with services. Emphasis efficient allocation of resources to maintain performance while keeping costs manageable
+		- **Selection**- choosing the right resource types and configurations
+		- **Review**- continually reviewing and improving performance
+		- **Monitoring**- continuously monitoring performance of resources
+		- **Trade-offs**- making informed decisions to achieve performance objectives
+		- Example- using AWS Cost Explorer to analuze usage patterns and right-size EC2 sintances to match better workloads
+	- **Cost Optimization**- controlling where the money is spent and making sure to not overestimate things, aviding unnecessary costs and ensuring resources used effectively. Emphasis on management of costs and efficient use of resources to minimze expenses
+		- **Cost-Effective Resources**- using the most cost-effective resources
+		- **Demand and Supply**- matching supply with demand
+		- **Expenditure Awareness**- understanding and controlling where the money is being spent
+		- **Optimizing Over Time**- continously improving cost-efficiency
+		- Example- using Ec2 spot instances for non-critical workloads to reduce costs significantly
 	- **Sustainability**- minimizing environmental impacts of cloud workplaces and reducing energy consumption and increasing efficiency so we can use services that reduce resource usage
+		- **Energy Consumpion**- optomize workloads to use least amount of energy
+		- **Resource Optimization**- efficient use of computing resources to minimze waste
+		- **Sustainable Practices**- Incorporate sustainable practices in architecture, design and oeprations
+		- **Lifecycle Assessment**- consider environmental impact of resources throughout their lifecyele
+		- Example- Regularly review EC2 instances to ensure not over-provisioning, use AWS Cost Explorer to aalyze usage patterns
 - **Benefits of using AWS**-
 	- Paying is flexible with the amount of resources you use and not much up front cost and can change services to lower the cose
 	- Massive economies of scale, so when AWS expands more, then cost of things get less
@@ -240,3 +270,28 @@
 	- Increase in speed anad agility to try new things and return to normal if dont like- flexibility
 	- take away the heavy lifting of managing a data center
 	- globalised data in minutes so can access all around the world
+	- **High Scalability and Fault Tolerance**- ensuring no failures happen by expanding the amount of places running resources
+		- **Regions and AZ**- offer multiple regions worldwide, each with minimum AZ which allows for high availablilty and fault tolerance by deploying applications across different AZs
+		- **Redundancy**- each region is siolated and the AZ are physically independent of each other to ensure redundancy
+	- **Scalability**- allowing for increasing of resources
+		- **Elasticity**- automatic scaling of resources up or down based on demand, handling varying workloads efficiently and cost-effectively
+		- **Global reach**- global network of regions and edge locations to ensure applications can reach users globally
+	- **Performance**- ensuring good speed with accessing resources
+		- **Low Latency**- global network of AZ and edge locations ensuring low-latency
+		- **Edge Locations**- CLoudfront delivery network to deliver content faster through caching copied data closer to end-users
+	- **Security and Compliance**- safety of data and regularionts
+		- **Physical Security**- robust security measures including physical, infrastructure and operational security
+		- **Compliance**- Complies with multiple regulatory standards and frameworks so buiness meet compliance requirements
+	- **Disaster Recovery**- resources arent ruined by natural disasters
+		- **Geographic Diversity**- replicate data across multiple regions allow for robust disaster recovery
+		- **Backup and Restore**- S3, Glacier, AWS Backup options for backing up data and restoring quickly in case of disasters
+	- **Global Application Deployment**- global user access
+		- **Multi-region deployment**- apps deployed across multiple regions providing global presence and improving performance and reliability for users globally
+		- **Data Residency**- Customers can choose regions where their data is stored to meet data requirements
+	- **Cost Efficiency**- ensuring cost efficiency
+		- **Pay-as-you-go Pricing**- businesses to pay for only the resources they use
+		- **Resource Optimization**- AWS Cost Explorer and Trusted Advisor helpe optimze resource usage and cost
+	- **Innovation and Flexibility**- Meeting every need
+		- **Wide Range**- broad range of services to build innovative solutions
+		- **Flexibility**- many different types of customising to tailor infrastructure to every need
+		- **Agility**- being able to rapidly develop, test and deploy applications
