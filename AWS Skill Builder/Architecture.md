@@ -174,44 +174,73 @@
 
 ## Migration and Innovation
 - moving from on-premise or another cloud to AWS
+- **Database Replication**- using the Database Migration Service DMS to migrate databases to AWS with minimal downtime
 - **Cloud Adoption Framework**- manage the process of migration
-	- 6 different perspectives of managing migration, these fall under peoples roles at the companies and how they can help
+	- Helps providing a structure to help organisations plan and implement thror cloud adoption journey
+	- **Benefits of Cloud Adoption Framework**- 
+		- **Reduced Business Risk**
+			- **Risk Management**- organisations can better identify, evaluate and mitigate risks associated with cloud adoption
+			- **Compliance**- ensures compoiance with industry regulations and standards, reducing legal and operational risks
+		- **Improved Environmental, Social, Governence (ESG) Performance**-
+			- **Environmental Impact**- commitment to renewable energy and efficient data centers helps organisations reduce carbon footprint
+			- **Social Responsibility**- Enhance ability to support social initiatives through improved IT
+			- **Governance**- provide better control and governance over IT resources, alignment with organisation policies and goals
+		- **Increased Revenue**-
+			- **Business Agility**- faster time-to-market for new products and services due to scalable and flexible cloud infrastructure
+			- **Innovation**- providing access to cutting-edge technologies without significant upfront costs
+		- **Increased Operational Efficiency**-
+			- **Automation**- automate repititive tasks, processes and reducing manual efforts to increase productivity
+			- **Scalability**- easily scale resources up or down based on demand, optiomal utilization and cost efficiency
+			- **Global Reach**- expand market reach by leveraging the services
+	- 6 different perspectives of managing migration, these fall under peoples roles at the companies and how they can help- comprehensive cloud migration strategy
 	- **Business, People, Governence**- focus on the business capabilities
 	- **Platform, Security, Operations**- focus on the technical capabilities
 	- **Business**- ensures IT aliogns with business needs that IT investments link to key business reults
 		- Create strong business case for cloud adoption
-		- Business managers, finance managers, budget ownders, strategy stakeholders
+		- Who- Business managers, finance managers, budget ownders, strategy stakeholders
+		- Focus- business goals, outcomes and value realization
 	- **People**- supports development of organisation-wide change strategyu
-		- evaluate organisational structures and roles
-		- HR, Staffing, People managers
-	- **Governance**- focuses on skills and processes to align IT with Business to maximise everything
+		- evaluate organisational structures and roles and the human side of cloud adoption
+		- Who- HR, Staffing, People managers
+		- Focus- training, skill development, organisation change management
+	- **Governance**- focuses on skills and processes to align IT with Business strategy to ensure governance and compliance
 		- update the staffs skills and processes
-		- CIO, Program managers, Enterprise architects, business analysts
-	- **Platform**- principles and patterns for implementing new cloud solutions
+		- Who- CIO, Program managers, Enterprise architects, business analysts
+		- Focus- policies, risk management, decision making processes
+	- **Platform**- principles and patterns for implementing new cloud solutions and makes sure the technology is ready for cloud adoption
 		- variety of architectural models to understand and communicate IT
-		- CTO, IT managers, Solutions architects
-	- **Security**- ensure organisation meets security objects for visibility, auditbaility, control and agility
+		- Who- CTO, IT managers, Solutions architects
+		- Focus- cloud infrastructure, architecture and best practices
+	- **Security**- ensure organisation meets security objects for visibility, auditbaility, control and agility and compliance is met
 		- CAF to structure selection and implementation of security controls
-		- CISO, IT security managers and analysts
-	- **Operations**- run, use operate and recover IT workloads
+		- Who- CISO, IT security managers and analysts
+		- Focus- security policies, controls and risk management
+	- **Operations**- run, use operate and recover IT workloads and ensure ongoing management of cloud workloads
 		- defin day-to0day and year-to-year business conducted, and help align all operations
-		- IT operations managers, suppoert managers
-- **Migrating Six R's**- deciding which option suits best based on time, cost, priority, criticality
-	- **Rehosting**- move applications as they are onto AWS
+		- Who- IT operations managers, suppoert managers
+		- Focus- operations management, monitoring and incident response
+- **Migrating Six R's**- deciding which option suits best based on time, cost, priority, criticality- migration strategy
+	- **Rehosting (lift and shift)**- move applications as they are onto AWS
 		- can save up to 30% of total cost by rehosting 
 		- can optizimse applcaitons later once live in the cloud
-	- **Replatforming**- changing an application to something else through migration not redevelopment
-		- changing a MySQL into RDS MySQL
-	- **Retire**- some things are no longer needed
+		- Example- using AWS Server Migration Service to replication on-premise servers
+	- **Replatforming (lift, tinker and shift)**- changing an application to something else through migration not redevelopment, not changing the core architecture
+		- Example- changing a MySQL into RDS MySQL
+	- **Retire**- getting rid of some things are not longer needed
 		- 10-20 percent of companies applications are no longer being used
 		- get rid of end-of-life applications to save effort from the team
+		- Example- identifying obselete applications and shutting them down during the migration stage
 	- **Retain**- some that are close to deprecation but you can save
 		- could be migrated over if it makes sense to the business
-	- **Repurchase**- abandon legacy software vendors and fresh start 
+		- keeping them if they are critical or not yet ready for migration
+		- Example- delaying migration of certain applications due to compliance or a strategic reason
+	- **Repurchase (drop and shop)**- abandon legacy software vendors and fresh start 
 		- some new packages are easy to implement, some arent
-	- **Refactoring**- writing new code
-		- changes to your architecture that can be beneficial
-- **Snow Family**- devices help shipping data
+		- Example- replacing on-premise CRM with Salesforce
+	- **Refactoring/Re-architecting**- writing new code
+		- changes to your architecture that can be beneficial using cloud-native features
+		- Example- breaking monolithic application into microservices using Lamdba/Fargate
+- **Snow Family**- devices help shipping data physically, rather than relying on transferring over the internet
 	- **Snowcone**- holds 8 TB of data and contains edge computing
 		- EC2 instances and IoT Greengrass
 		- order through management console
