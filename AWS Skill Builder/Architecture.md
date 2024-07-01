@@ -113,14 +113,35 @@
 - **Shared responsibility model**- how AWS and customers work together to ensure top leve security
 	- AWS constrols security of the cloud, like data centers, services and all the layers 
 		- compute, storage, database, networking, regions, AZ, edge locations, global infrastructure
+		- managed services like RDS, Lamdba, AWS managers the underlying infrastructure, OS, patching and security configurations
 	- Users control the security within the cloud
-		- in charge of the OS through the encryption key to login and create user accounts for an EC2 instance (AWS can only notify if the type of OS you are running is in-secure)
+		- in charge of the OS, network and firewall configurations through the encryption key to login and create user accounts for an EC2 instance (AWS can only notify if the type of OS you are running is in-secure)
 		- customer data, platforms, applications, IAM, OS, network, firewall config, client-side data encryption, server-side encryption, network trafficking protection
+		- data protection through encryption and data integrity
+		- in charge of IAM
+		- in charge of audit logging and tracking security incidents and performance issues
+	- Shared responsibilities-
+		- Patching
+			- AWS patches underlying infrastructure and managed services
+			- User patches their application, middleware and OS
+		- Configuration Management
+			- AWS provides tools and services to help with confgiration management
+			- User configures services and applications securely using AWS tools and practices
+		- IAM
+			- AWS provides IAM tools and services
+			- User manages IAM roles, permissions and user access
+	- Shared responsibilities can shift based on services like EC2, RDS and Lamda- because there might be multiple important things needed to be taken care of from both sides (especially if serverless a lot more reliance on AWS with infrastructure etc)
 - **USer access**- 
 	- when creating AWS, you have a root user which is the main of the account and ownder and has permissiion to do anything they want
 	- create the IAM which has no permissions to start with and then add on- least privilege principle- give people access only to waht they need
 	- **MFA**- random code sent to phone for authentication- can be hardware security key or phone app
 - **Compliance**- company needs to ensure they are up to complaicen and auditing standards and regulations
+	- **AWS Compliance Programs**- provides a range of compliance programs and certifications that demonstrate adherence to global securtity and sompliance standards
+	- **AWS Artifcat**- self-service portal that provides access to AWS compliance documentation and agreements
+- **Governance**- ensuring that everything is being adhgered to
+	- **AWS Organisations**- help manage multiple AWS accounts, applying policies and ensuring compliance across organisation
+	- **Service Control Policies (SCPs)**- central control over the max available permissions for all accounts in an org
+	- **AWS Control Tower**- provide auto landing zones for setting up and governing a secure, milti acocunt aws environment
 - **Customer Compliance Center**- contains resources to learn more about AWS compliance
 	- can access compliance whitepapers and documentation
 	- contains auditor learning path
@@ -130,6 +151,29 @@
 - **Key Management Service**- used to store encryption keys for transit between two servers
 - **Web Application Firewall (WAF)**- monitor network requests coming into web appliocations
 	- works together with Cloudfront and ALB
+- **Benefits Cloud Security**-
+	- **Encryption**-
+		- **In Transit**- protects data as it moves between services using protocls like transport layer security TLS
+		- **At Rest**- protects stored data using encryption like AES-256
+		- **AWS Key Management Service (KMS)**- easily create and control the encryption keys used to encrypt data
+	- **Scalability and Automation**-
+		- **Automatic Security Udpates**- services are auto updated with latest security patches
+		- **Scalable Security Measures**- measures can scale auto with the workload
+	- **Comprehencsive security tools**-
+		- **AWS Security Hub**- comprehensive view of security alerts and compliance status across AWS accounts
+		- **AWS GuardDuty**- intelligent threat detection service that continously monitors for malicious activity and unathu behaviour
+	- **Shared Responsibility Model**-
+		- **Customer control**- customers retain control over their data and can implement security measures as needed
+- **Logs** -
+	- **CloudWatch**-
+		- **Logs**- centralized logging service to monitor, store and access log files from EC2 instances, CloutTrail and other AWS services. Logs like CPU, network traffic and can set alarms based on these
+		- **Metrics**- collects and tracks metrics, collects and monitors log files and sets alarms
+	- **Cloudtrail**
+		- **Event logging**- records AWS API calls and user activities to provide visibility into account activity, good to track what API usages have been called from users
+		- **Security Anlysis**- hlps detec unathu access and provides audit logs for compliance
+	- **Config**-
+		- **Configuration Tracking**- tracks aws resources configurations and changes over time, snapshots of configurations
+		- **Compliance auditing**- assesses compliance with internal policies and industry standards
 
 ## Monitoring and Analytics
 - able to monitor all the traffic that your services have
@@ -255,6 +299,11 @@
 		- housed in a 45 foot shipping container and water and temparetuite proof
 
 ## Cloud Journey
+- **Licensing Strategies**- 
+	- **Bring Your Own License (BYOL)**- use existing softweare linceses in the cloud like Micrsoft SQL server on AWS EC2 with pre-owned license. cost savings by leveraging existing investments in software lincenses
+	- **Included Licenses**- use cloud provided licenses as part of the service like RDS with a license included option for Micrsofot SQL server. Simplifies licensing management and ensures compliance
+- **Rightsizing**- matching cloud resources to actual needs to optimize performance and cost to avoid over-provisioning and reduce waste
+	- tools like Cost Explorer and Trusted Advisor help identify opportunities for rightsizing
 - **Well-Architected Framework**- enable devs and architexts to build secure, high-performace, resilient and efficient infrastructure for apps. 6 pillars of excellence
 	- **Operational**- running and monitoring systems to deliver business value. Continually improcing processes and procedures with pipelines. Emphasie proactive operations management and ongoing imporovement
 		- **Operational Insights**- understanding how systems are performing and being able to respond to events
