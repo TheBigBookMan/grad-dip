@@ -128,9 +128,30 @@
 ## Identity Access Management (IAM)
 - User permissions for restriction etc
 - have the root owner and then they can provide permissions for workers to specific services
+- Enable the MFA for additional layer security
+- Smart to use Root ONLY for a singular task required, use IAM for daily use
+	- ONLY Root can close AWS account, change contact info, payment method, certain S3 operaions related to bucket ownership
+- Smart to do regular audits on policies to ensure people dont have access they shouldnt use anymore
+- **IAM Single Sign-On**- centrally manage single sign on access to multiple AWS accounts and business applications
+	- single point of control for access management, easy for user to sign in with corporatae detaisl
+- **Access Management**-
+	- **Access Keys**- long-term credentials for IAM user or root user, use access keys for programmatic access, rotate them regular and never embed them in code
+	- **Password Policies**- rules that define password requirements, enforce strong password policies, require password rotation and use MFA
+	- **Credential Storage**- 
+		- **AWS Secrets Manager**- manage and retrieve seecrets like database credentials, API keys and sensitive info
+		- **AWS Systems Managet Parameter Store**- provide secure storage for config data and secrets management
+- **Authentication Methods**-
+	- **Multi Factor Auth (MFA)**- add extra layer of security by requireing second form of auth. protext roor account, critical IAM users and sensitive iperations
+	- **IAM Identity Center (SSO)**- Provides SSO access to multiple accounts and business applications, centralised access management and user provisioning
+	- **Cross Account IAM Roles**- allow users from one account to access resources in another account. Access control in multi-account environments and third party access
+- **Types of Identity Management**-
+	- **Federated Identity**- allow users to access AWS resources using external identities like corporate directotis or siocial identity providers, good for single sign on- AWS IAM Identity Centre, AWS Cognito
+	- **IAM Users and Groups**- manage identitites directly in AWS, direct management of access and permissions within AWS
 - where all the users credentials and security are stored
 - important to be able to access specific services for things like read, write, delete etc
 - **IAM Policy**- JSON documenta that describes what API calls a user can or cannoyt make to AWS- attach the policies to users or groups
+	- **Custom Policy**- created by a user to define specific actions
+	- **Managed Policy**- already made policies by AWS
 - **IAM Group**- grouping of users that get policies attached to them, assign a user to a group that is specific to their needs and then they have the access of that group
 - **IAM Role**- used to gain access to speific services for a temporary amount of time- similar to a user however it is assigned to someone for temporary amount of time- can be on a role that can access only S3 for something in the morning and then arvo can only access EC2
 
