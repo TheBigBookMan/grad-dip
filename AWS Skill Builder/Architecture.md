@@ -44,6 +44,18 @@
 - can work with the console in browser
 - or the AWS CLI with scripts and easier typing for managing resources over using a GUI as less human error
 - SDKs for any interaction with programming languages
+- **Management Console**- web based interfact to manage AWS services
+	- good for one time configurations, visusal monitoring, learning and experimentation
+- **Command Line Interface**- manage services from CL
+	- good for automation, integration with other applications, repetitive tasks
+- **SDK**- language specific APIs interact with services
+	-  good for automation, integration with other applications, repetitive tasks
+- **Infrastructure as Code**- Cloudformation, terraform, AWS CDK
+	- good for repeatable and consistent infrastructure provisioning, version control, and collab
+- **Elastic Beanstalk**- platform as a service for deploying applications
+- **OpsWorks**- configration management servce
+- **CloudShell**- web based comman line
+	-  good for automation, integration with other applications, repetitive tasks
 
 ## Networking
 - create a VPC to manage the networking for all your applications and servers
@@ -56,13 +68,14 @@
 	- internet gateway is how your network can interact with the internet
 - **Private facing**- 
 	- don't want anyone from anywhere to reach resources through an internet gateway
-	- use a Virtual Private Gateway which can create a VPN connection between a private network and VPC
+	- use a Virtual Private Gateway which can create a **VPN** connection between a on-premises network to a private network and VPC
 		- virtual private gateway is extra encryption and protection over any requests (VPN)
 		- problem with VPN is it can still be slow because it is still run through a public network (just with encryption)
 		- only comes through if its coming from an approved network
-	- AWS Direct Connect- establush a completely private and dedicated fiber connection from data center to AWS
+	- **AWS Direct Connect**- establush a completely private and dedicated fiber connection from data center to AWS
 		- Physical line connecting your network to your AWS VPC
 		- good for compliuance securityn
+	- **AWS Transit Gateway**- connect VPC and on-premise networks through central hub
 - Use subnets to control the traffic permissions
 	- traffioc permissions will not look at the contents of the packet, just the sender to see if on the approved list
 - subnets can pass packets of information from one another, depending if the instance of that subnet allows it
