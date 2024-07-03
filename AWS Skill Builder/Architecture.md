@@ -69,18 +69,20 @@
 - **Network Access Control List (ACL)**- the packets that are within the message from the internet will be checked against the ACL to see if it has permission to enter or lave the network
 	- Is a virtual firewall controlling inbound and outbound traffic
 	- This controls the in and out for a subnet
-	- stateless, so it will check every packet coming
-	- it will check both outgoing and incoming
+	- stateless, so it will check every packet outgoing and inbound
 	- Important to know that even if an ACL from a different subnet granted permission for it to leave that subnet, an incoming ACL doesn't automatically give it permission to enter that subnet
 	- by default it allows all incoming and outgoing traffic so need to configure what it doesnt allow
-- Different instances may have different specifics about who can send them requests or recieve so need instance level network security
+-  **Security Groups**- Different instances may have different specifics about who can send them requests or recieve so need instance level network security
 	- instances have security groups
-		- doesnt allow any traffic into the instance by default, all ports blocked and all IP addresses are blocked
-		- have to configure what incoming traffic you want
-		- all traffic can go out of the security group, no restrictions on outbound
-		- security groups are stateful so has some memory about who to allow in or out
-		- security groups by default allow all return trafiic (from the stateful memory)
+	- Virtual firewall to control inbound and outband traffic to AWS resources
+	- doesnt allow any traffic into the instance by default, all ports blocked and all IP addresses are blocked
+	- have to configure what incoming traffic you want
+	- all traffic can go out of the security group, no restrictions on outbound
+	- security groups are stateful so has some memory about who to allow in or out
+	- security groups by default allow all return trafiic (from the stateful memory)
 	- Can have a different security group for different EC2 instances within the same subnet
+- **Web Application Firewall (WAF)**- protects web apps from common web exploits
+	- filtering and monitoring HTTp/HTTPS requests
 - **Public Subnets**- 
 	- resources accessible for the public like internet- APIs, client
 - **Private Subnets**-
@@ -110,6 +112,20 @@
 	- **Continous database replication**- use DMS to perform continous data replication for disaster recovery or geographic separation
 
 ## Security
+- **Documentation by AWS**
+	- **Security Documentation**-
+		- comprehensive fuides, whitepapers, best practices for securing environments
+		- topics include identity managemenet, encryption, compliance and specific service security
+	- **AWS Compliance Reports**-
+		- access compliance reports and certifications via AWS Artifact
+		- documentation for SOC reports, ISO certs, PCI DSS, HIPAA more
+	- **AWS Security Blog**-
+		- regular updates on security best practices, new features and service announcements
+		- insights and expert advice on maintaining secure AWS environments
+	- **AWS Knowledge center**-
+		- repo of FAQs, how to guides, troubleshooting tips related to AWS security
+	- **AWS Security Centre**- 
+		- central hub for security resources, including documentation, tools and service updates
 - **Shared responsibility model**- how AWS and customers work together to ensure top leve security
 	- AWS constrols security of the cloud, like data centers, services and all the layers 
 		- compute, storage, database, networking, regions, AZ, edge locations, global infrastructure
@@ -180,6 +196,15 @@
 - can use the AWS Trusted Advisor for evaluating your seources against the five pillars- cost optimisation, performance, security, fault tolerance and service limits
 	- can check things like if y o have wasted resources in a not-turned off ec2 instance etc
 	- does checks to make sure everything is opztimise
+- **Trusted Advisor**- 
+	- provides real-time guidance to help improve security, performace and cost-efficieny
+	- security checks by identifying common security issues like exposed access keys, S3 bucket permissions and IAM usage
+- **GuardDUty**- 
+	- detects potential threats by analyzing continous streams of data from multiple aws sources
+	- provides actionable security findings and integrates with AWS Security Hub for centralized management
+- **Security Hub**-
+	- aggregatres and prioritizes security findings from multiple AWS services and third-party products
+	- assess compliance against industry standards like CIS AWS Foundations Benchmarks
 
 ## Pricing & Support
 - **Free Tier**- good for getting started
@@ -215,6 +240,7 @@
 		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
 - **Marketplace**- resource to find third-party software that runs on AWS
+	- things like antivirus software, intrusion detection systems like Mcafee, Palo Alto Networks etc
 
 ## Migration and Innovation
 - moving from on-premise or another cloud to AWS
