@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/Architecture.md",
+                "file": "AWS Skill Builder/Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Skill Builder/Architecture.md",
+                "file": "AWS Skill Builder/Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Skill Builder/Architecture.md"
+                "file": "AWS Skill Builder/Services.md"
               }
             }
           }
@@ -159,11 +160,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "41e19daa2ef791a7",
+  "active": "af9f1667da6da560",
   "lastOpenFiles": [
+    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/Services.md",
     "Untitled.md",
-    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
     "Pasted image 20240523133829.png",

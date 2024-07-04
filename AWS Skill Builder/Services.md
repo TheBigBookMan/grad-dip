@@ -22,6 +22,19 @@
 		- eg if you want some data to be in the S3 standard for 90 days and then move to the S3 standard IA for 30 days and then to the Glacier
 		- Dont have to change the code of the application or manually move them
 
+## Lightsail
+- simplified cloud platform for small apps anbd projects
+- easy-to-use virtual private server VPS
+- provides pre-confiugured bundles of compute power, storage and networking
+- easily manage IP addresses and domain names
+- good for hosting website and running small apps and dev environments
+
+## Batch
+- fully managed batch processing at any scale
+- running batch jobs and processing large datasets
+- submit jobs to queues and Batch handles the rest
+- dynamically provision the optinal quantity and type of compute resources
+- works with docker
 
 ## Elastic Compute Cloud (EC2)
 - virtual server
@@ -77,18 +90,23 @@
 
 ## Lambda
 - serverless functions that run code when the function is triggered by an event source
-- only pay for the compute time that you consume
+- only pay for the compute time that you consume with pay-as-you-go
+- automatically scales with the number of requests
 - good if a specific functionality isnt triggered all the time (eg some functions may only get triggered a few times during the day)
 - bad if the functions are triggered a lot- then better to just host it on an EC2 instance
+- good for event driven applications, microservices and automation tasks
 
 ## Elastic Container Service (ECS)
 - containerising application code and hosting on a server in AWS
 - supports Docker images, so can deploy in development with docker and then host in ECS for production
+- this is an aorchestration tool for running docker containers and microservices architectures
+- run through cluser of EC2 or fargate instances
 
 ## Elastic Kubernetes Service (EKS)
 - run Kubernetes on AWS
 - deploy and manage containerised applications at scale
 - making sure that any sort of containerisation 
+- run through nodes on EC2 or fargate
 
 ## Fargate
 - serverless compute engine for containers
@@ -198,6 +216,7 @@
 
 ## Elastic Beanstalk 
 - helps with orchestrating multiple services together
+- simplified application deployment and management
 - give it the application code and desired configurations and beanstalk will build and save the environment for easier deployment
 - gives convenience of not provisioning and managing all the pieces separately while still giving visibility of underlying resources
 - Adjust capacity, load balancing, automatic scaling, application health monitoring
@@ -232,6 +251,13 @@
 - can buy and register your own domain names
 - works with the load balanacers and EC2 instances
 
+## Relational Database Service
+- manage relational databases engines- mysql, postresql, mariadb, oracle, sql servier, amazon aurora
+- automated backups, patching and updates
+- multi AZ deploymenet and high availability
+- read replicas for read scaling
+- security and compliance support
+
 ## Aurora
 - managed relational database option for MySQL and PostgreSQL
 - it is the AWS managed DB service which compatible with MySQL and PostgreSQL
@@ -241,9 +267,12 @@
 - can deploy up to 15 read replicas for scalability
 - continous backups to S3
 - point in time recovery- so can recover data from a specific period
+- fully managed by RDS
+- fault tolerant and sel-healing storage system
 
 ## DynamoDB
 - serverless database, dont need to manage infrastructure underlying instances
+- Key:value type database
 - automatic scaling as the changes in capacity
 - because its a NoSQL it has no required schema like a relational
 - useful if you have heaps of fields that you are not necessarily querying by as they dont need to be relational to anything else, they can just be an extra attribute
@@ -251,6 +280,9 @@
 	- attributes are different features of the data
 - The data is redundantly across AZ and mirrors the data across multiple drives
 - NoSQL, uses keys as the primary keys to search for and returns the attributes
+- single-digit millisecond response times
+- buolt in support for ACID transactions
+- on-demand and proivisioned capacity modes
 
 ## Redshift
 - data warehousing- good for multiple data types to store in one spot
@@ -263,10 +295,25 @@
 - noSQL good for larger data than DynamoDB
 - full content management system, great for content management, catalogs and user profiles
 - supports MongoDB
+- document type database
+
+## Elasticache
+- in-memory data store service supported by Redis and Memcached
+- sub-millisecond latency
+- high throughput
+- fully managed, scalable and secure
+- used for caching, session management, real time analytics and leaderbords
 
 ## Neptune
-- graph database
+- graph database supporting highly connected data sets
 - good for social networking and recommendation engines and fraud detection
+- supports both RDF and Property Graph models
+- ACID transactions with full support for Gremlin and SPARQL
+
+## Timestream
+- managed time series database service for IoT and operational apps
+- fast ingestion and querying of time series data
+- built in data lifecycle management
 
 ## Cloudwatch
 - monitor AWS infrastructure and applications in real time by tracking and monitoring metrics

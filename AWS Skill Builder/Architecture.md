@@ -139,6 +139,13 @@
 	- **Development and test database migrations** - testing against production data without impacting production users
 	- D**atabase consolidation**- several databases you want to consolidate into one central database
 	- **Continous database replication**- use DMS to perform continous data replication for disaster recovery or geographic separation
+- **Schema Conversion Tool**-
+	- converts database schema from one database engine to an other
+	- generates reports to identify schema elements that require manual converting
+- **EC2 Hosted Database**- full control over database environment, custom database software and specific compliance requirements. requires manual setup, maintenance, bacups and scaling
+- **AWS Managed Databases**- simplified database management, automated backups, high availability, scaling and security
+	- RDS, DynamioDB etc
+	- less control over underlying infrastructure but signaficantly reduces operational overhead
 
 ## Security
 - **Documentation by AWS**
