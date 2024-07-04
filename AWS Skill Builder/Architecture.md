@@ -25,21 +25,37 @@
 
 ## Global Infrastructure and Reliability
 - having the availability of your resources all the time due to AWS having many places where resources are stored so if one goes down, then the other place can serve the resources
-- **Regions**- before choosing a region where you want resources to be stored, consider:
+- **Regions**- a geographic location, before choosing a region where you want resources to be stored, consider:
 	- Compliance- requirements in the region that you must adhere by eg the data must remain within your country
 	- Proximity- putting the resources closer to location of users to reduce any latency
 	- Availability- checking if the services you want to use are available in the specific region you want
 	- Pricing- different regions may require different costs so some are more expensive than others
 - **Availability Zones**- Many data centers (availability zones) are in a region which can helpe to also split up the resources
 	- availability zone is either a singular data center or a group of data centers
+	- physically separate data centers within a region with independent ppower, cooling and networking
 	- Always recommended to run across atleast 2 availability zones in a region
+	- enhances fault tolerance and high availability by distrubiting applications across multiple AZs within a region
 	- A region will contain minimum 3 avalability centers and these will be named like: region- North California (us-west-1), data center 1 (us-west-1a), data center 2 (us-west-1b), data center 3 (us-west-1c)
-- **Edge Locations**- being able to cache or store copies of your files into a closer location to where users are- using AWS Cloudfront as a content delivery network (CDN)
-	- They are sites deteremined by AWS that are different from regions
+	- Use Load balancer to distribute traffic across AZs
+	- use auto-scaling to adjust number of instances across AZs to maintain performacen and availability
+- **Edge Locations**- being able to cache or store copies of your files into a closer location to where users are- using AWS Cloudfront as a content delivery network (CDN) and AWS Global Accelerator
+	- **Cloudfront**- acts as the CDN delivering data 
+	- **Global Accelerator**- directs traffic through AWS global network by providing static IP addresses that act as a fixed entry point to apps in one or more regions
+	- They are sites deteremined by AWS that are different from regions, usually metro areas and major cities arund the world that dont have an availability centre
 	- good for if you want some particular data or files to be easier access to a certain location, than setting up a full region
 	- good for if your developing in another country thats far from where the userbase is
 	- Can use AWS Outposts which is setting up an edge location device to be closer to where you are (could be in your building etc)- on-premise data center
-
+- **Use multiple Regions**-
+	- **Disaster Recovery**- ensure business continuity by replicating apps and data across different regioins incase of region-wide failure another region can take over
+	- **Business Continuity**- maitain operations during region-specific outages by having standby resources in another region
+	- **Low Latency for end users**- deplyoing applications across multiple regions closer to end-users reduces latency
+	- **Data soverignty**- comply with legal and regulatory requirements by storing and processing data within speicif regions
+- **Wavelength Zones**- infrastructure deployments that embed AWS compute and storage services within telecommuncations providers dat centers at the edge of 5G network
+	- ultra-low latency apps, like AR, VR and real-time gaming
+	- brings AWS services closer to end-users on 5G networks so reduced latency
+- **AWS Local Zones**- extend AWS regions by placing compute, storage, database and other services closer to larger population, industry and IT centers
+	- apps requiring single-digit millisecond latency or local data processing
+	- improved performance for latency-sensitive apps, compliance with local data residency requirements
 ## Working with AWS
 - can work with the console in browser
 - or the AWS CLI with scripts and easier typing for managing resources over using a GUI as less human error
