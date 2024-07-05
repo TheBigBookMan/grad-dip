@@ -40,7 +40,7 @@
 	- use auto-scaling to adjust number of instances across AZs to maintain performacen and availability
 - **Edge Locations**- being able to cache or store copies of your files into a closer location to where users are- using AWS Cloudfront as a content delivery network (CDN) and AWS Global Accelerator
 	- **Cloudfront**- acts as the CDN delivering data 
-	- **Global Accelerator**- directs traffic through AWS global network by providing static IP addresses that act as a fixed entry point to apps in one or more regions
+	- **Global Accelerator**- directs traffic through AWS global network by providing static IP addresses that act as a fixed entry point to apps in one or more regions. Routes traffic to the optimal endpoint based on health, geography and policies
 	- They are sites deteremined by AWS that are different from regions, usually metro areas and major cities arund the world that dont have an availability centre
 	- good for if you want some particular data or files to be easier access to a certain location, than setting up a full region
 	- good for if your developing in another country thats far from where the userbase is
@@ -78,12 +78,19 @@
 - can have private for ones you dont want to be talking to clients or internet directly
 - public for ones you do want to be talking to clients and itnernet directly
 - control groups of servers with subnets that are groups of the IP addresses
-- **Public facing**- 
-	- directs traffic that flows through the network with internet gateway (IGW)
+- **Public facing- Internet Gateway** - 
+	- directs traffic that flows through the network with **Internet Gateway (IGW)**
+	- Internet gateway allows communication between instances in your VCP and the internet
+	- **NAT Gateyway**- enables instances in a private subnet to connect to the internet or other servicew hile preventing internet from initating connections with the instances
 	- without an internet gateway, no one can access the resources within the VPC
 	- internet gateway is how your network can interact with the internet
 - **Private facing**- 
 	- don't want anyone from anywhere to reach resources through an internet gateway
+	- **Virtual Private Network (VPN)**- 
+		- securely connects on-premise network or individual devices to AWS cloud
+		- site-to-site VPN for network-to-network connections by securely connecting on-premise network to your VPC (encrypted IPsec connections and supports redundatnt connections for high availability)
+		- client VPN for individual users by securely connecting individual users to your VPC from any location (encrypted connetions, integration with ACtive Directory and other identity providers)
+		- encrypted connections over the internet
 	- use a Virtual Private Gateway which can create a **VPN** connection between a on-premises network to a private network and VPC
 		- virtual private gateway is extra encryption and protection over any requests (VPN)
 		- problem with VPN is it can still be slow because it is still run through a public network (just with encryption)
@@ -91,9 +98,14 @@
 	- **AWS Direct Connect**- establush a completely private and dedicated fiber connection from data center to AWS
 		- Physical line connecting your network to your AWS VPC
 		- good for compliuance securityn
+		- suppots hybrid cloud architectures, lower latency and higher bandwith compared other internet connections
 	- **AWS Transit Gateway**- connect VPC and on-premise networks through central hub
-- Use subnets to control the traffic permissions
+- Use **Subnets** to control the traffic permissions
 	- traffioc permissions will not look at the contents of the packet, just the sender to see if on the approved list
+	- segment of VPC IP address range where can place groups of isolated recources
+	- create a public and proivate subnet for organising resources and controlling access
+- **Route Tables**- set of rules (routes) that used to determine where network traffic is directed
+	- control routing of traffic within the VPC and to/from the internet and other VPCs
 - subnets can pass packets of information from one another, depending if the instance of that subnet allows it
 - **Network Access Control List (ACL)**- the packets that are within the message from the internet will be checked against the ACL to see if it has permission to enter or lave the network
 	- Is a virtual firewall controlling inbound and outbound traffic

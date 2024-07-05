@@ -236,20 +236,25 @@
 
 ## Virtual Private Cloud (VPC)
 - private cloud within the aws cloud and is virtual
-- virtual network
+- virtual network where you can launch isolated AWS services
 - cofigure route tables, ip addresses, firewalls, subnets etc
 - provision isolated section of the AWS cloud where can launch AWS resources in a virtual network that you define
 - can be public facing with internet access or private facing with no internet access
 - private and public grouping of resources is known as subnets and they are ranges of IP addresses in the VPC
 - public subnet can be for interacting with the internet or client interaction
 - private subnet can be for things you dont want touching the internet or clients directly
+- define IP ranges, create subnets, route tables and gateways
+- contol inbound and outbound traffic with security groups and networks ACLs
 
 ## Route 53
 - AWS domain name service (DNS)
 - translates the website name into an IP for computers to read
 - Route 53 can direct traiffic to different endpoints using a routing policy like geolocation- this helps routing to closer regions from where the customer is
+- ensures your application endpoints are healkthy and accessible and will route traffic away from unhealthy endpoints based on configurable health checks
 - can buy and register your own domain names
 - works with the load balanacers and EC2 instances
+- supports latency-based routing, geo-routing and failover routing
+- integrates with other services for seamless domain management
 
 ## Relational Database Service
 - manage relational databases engines- mysql, postresql, mariadb, oracle, sql servier, amazon aurora
