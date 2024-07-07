@@ -122,7 +122,7 @@
 - virtual hard drives
 - Must be stored in the same AZ as the EC2 instance it is attached to
 - persists between stopping and starting EC2 instances
-- this is where you store your database and S3 stuff etc
+- this is where you store your database 
 - Solid state drive and hard disk storage selections for persistent data
 - **Snapshots**- which are incremental backups of your data, important to take regular snapshots of EBS volumes to store any corrupt data
 	- incremental backing up means that only the new data will be added to the snapshot, rather than the copying non-changed data that has already been backed up
