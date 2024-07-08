@@ -168,7 +168,7 @@
 	- ensure the backups meet regulatory requirements and compliance
 
 ## Security
-- **Documentation by AWS**
+- **Documentation by AWS**- comprehensive guides, API references, tutorials, best practices for all AWS services
 	- **Security Documentation**-
 		- comprehensive fuides, whitepapers, best practices for securing environments
 		- topics include identity managemenet, encryption, compliance and specific service security
@@ -182,6 +182,9 @@
 		- repo of FAQs, how to guides, troubleshooting tips related to AWS security
 	- **AWS Security Centre**- 
 		- central hub for security resources, including documentation, tools and service updates
+- **AWS Whitepapers**- detailed documents on architectural best practices, security, compliance and industry-specific solutiosn
+- **AWS Blogs**- articles on new services, features, case studies and technical tips
+- **AWS Prescriptive Guidance**- best practices, patterns and strategoies for deplying, migrating and managing apps
 - **Shared responsibility model**- how AWS and customers work together to ensure top leve security
 	- AWS constrols security of the cloud, like data centers, services and all the layers 
 		- compute, storage, database, networking, regions, AZ, edge locations, global infrastructure
@@ -296,20 +299,31 @@
 	- preconfigured views for common usage patterns
 	- cost and usage reports, filtering and grouping by various dimensions
 - **Support Plans**- help from AWS for your business needs
-	- **Basic Suppoert**- access support like 24/7 customer service access, documentation, whitepapers, support forums, Trusted Advisor AWS and AWS personal health dashboard (view of the health of AWS services and any alerts you recieve if resources are impacted)- all free for everyone
+	- **Basic Suppoert**- access support like 24/7 customer service access, documentation, whitepapers, support forums, Trusted Advisor AWS and AWS personal health dashboard (view of the health of AWS services and any alerts you recieve if resources are impacted)- 
+		- all free for everyone
 	- **Developer Support**- includes everything in basic support, plan, plus can email customer support directly with 24 hour response time
 		- responses of less than 12 hours for system impairment
+		- $29 per month
 	- **Business Support**- include everything from previous plans
 		- directo phone access to support team with 4 hour response time for system impair
 		- 1 hour response time if prod system is down
 		- access to infrastructure event management
 		- access to trusted advisor
+		- help with third-party software
+		- $100 per month
 	- **Enterprise On-Ramp** for migrating business from development to production- 
 		- have 30 min response times for business critial workloads
 	- **Enterprise Support**- 15 minute response time for business and critical workloads
+		- custom pricing
 		- - access to trusted advisor
 		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
+- **AWS Partner NEtwork (APN)**- global community of partners that leverage AWS
+	- **INdependent software vendors (ISVs)**- develop and sell software solutions oin AWS
+	- **System integrations (SIs)**- provide consulting and implementation services
+- **Trusted Advisor**- provides recommendation for cost optimzation, security, fault tolerance, performance improvements
+- **Health Dashboards**- display the health of AWS services and provides alerts and remediation guidance
+- **HEalth API**- programmatic access to health information for integration with internal systems
 - **Marketplace**- resource to find third-party software that runs on AWS
 	- things like antivirus software, intrusion detection systems like Mcafee, Palo Alto Networks etc
 - **Data Transfer Charges**- 
