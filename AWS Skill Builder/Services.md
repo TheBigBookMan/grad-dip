@@ -84,6 +84,16 @@
 - messages are the information related to data of what is being processed
 - the SQS is where the messages are stored in a queue
 - allows for queueing up of messages, when one service may be handling a lot of load, rather than waiting for it to finish to process the next load
+- decouples and scales microservers, distributed systems and serverless apps
+- ensures message delivery
+- asynchronous task processing, decoupling components and ensuring reliable communication between services
+
+## EventBridge
+- serverless event bus for integrating AWS services and third-party apps
+- event driven architecture
+- supports custom event buses and third-party event sources
+- schema registry and event replay
+- building decoupled applications, integrating SaaS apps and creating complex workflows
 
 ## Simple Notification Service (SNS)
 - used to send out messages to services or send notifications to users
@@ -93,6 +103,19 @@
 - subscribers can be endpoints such as SQS, lambda functions, https and web hooks
 - can be used for mobile push, SMS and email
 - subscribers can subscribe to a single topic or multiple topics- and will only receive messages about those topics
+
+## Connect
+- cloud-based contact service
+- omnichannel contact center (voice, chat)
+- easy to set up and scale
+- integrated with AWS AI like Lex
+- used for customer service, help desks and support centers
+
+## Simple Email Service
+- cloud-based email sending service
+- send and receive
+- supports SMTP and APIs
+- configurable sercurity and compliance
 
 ## Lambda
 - serverless functions that run code when the function is triggered by an event source
@@ -417,3 +440,96 @@
 - create and share interactive visualisations on dashboards
 - build in ML insights for anomoly detection and forecasting
 - serverless
+
+## Active for Startups
+- program offering startups resources and credits to get started AWS
+- training and support
+- access to AWS partner network
+
+## IQ
+- connecting customers with AWS Certified experts for peoject assistance
+- hire AWS freelancers and consultants
+- secure project management and paymwnt
+
+## Managed Services
+- provides ongoing management of infrastructure
+- operational excellence and best practices
+- proactive monitoring and incident management
+- compliance and security management
+
+## Support
+- technical support plas offering help with AWS sercices
+
+## AppConfig
+- service deploying application configurations
+- sage, rapid deployment
+- integration with AWS systems and custom apps
+- feature flag managemne,t configuration updates and app tuning
+
+## Cloud9
+- cloud-based IDE
+
+## Cloudshell
+- browser based shell for managing resources
+- pre-authenticated CLI
+- persistent storage
+- integrated with AWS tools
+
+## CodeArtifact
+- management for storing and sharing software packages
+- supports populat package formats (npm, pypi, maven)
+
+## Codebuild
+- build service
+- complies code, runs tests and produces packages
+
+## CodeCommit
+- source control service for Git repos
+
+## Codedeploy
+- automating code deployments
+- supports EC2 and lamdba
+- blue/green rolling deployments
+
+## Codepipeline
+- CI/DI service
+
+## Codestar
+- quickly develop, build and deploy apps
+- project management dashboard
+
+## X-ray
+- analysing and debugging distributed apps
+- end-to-end view and root cause analysis
+
+## AppStream 2.0
+- fully managed app streaming service
+- streams desktop apps to any device
+
+## Workspaces
+- desktop as a service solution
+- provides windows or linux desktops
+
+## Worskpaces WEb
+- low cost fully managed workspace browser
+
+## Amplify
+- set of tools and services for building mobile and web apps
+- hosting, auth, graphQL, api
+- CI/CD
+
+## AppSync
+- manage service for GraphQL APIs
+- real-time data synchronisation
+- offline capabilities
+
+## IoT Core
+- managed cloud service connected devices easily and secure interact with devices
+- device connetivitiy and messageing
+- data ingestion and processing
+- device management
+
+## IoT Greengrass
+- extends AWS to edge devices and can act locally on the data they generate while still using cloud for management, analytics and storage
+- local compute, messaging and data chacing
+- ML inference at the edge
