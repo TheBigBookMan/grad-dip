@@ -244,7 +244,7 @@
 ## Organisations
 - central location to manage multiple AWS accounts
 - manage billinc, access, compliance, security, share resources across AWS accounts
-- centralized management of all the AWS accounts- consolidated billing
+- centralized management of all the AWS accounts- **consolidated billing** 
 - make hierarchical groupings of the accounts for security, compliance and budgetary needs
 - control over the AWS services and API actions that each account can access 
 - group accounts in organisational units (OU)- make easier to manage accounts with similar business or security requirements- applying a policy to OU will make all accounts inherit that policy permissions
