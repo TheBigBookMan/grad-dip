@@ -158,6 +158,14 @@
 - **AWS Managed Databases**- simplified database management, automated backups, high availability, scaling and security
 	- RDS, DynamioDB etc
 	- less control over underlying infrastructure but signaficantly reduces operational overhead
+- **AWS Storage Gateway**- hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage. Good for data backaup and disaster recovery
+	- **File Gateway**- file interface and stores files as objects in S3
+	- **Volume Gateway**- cloud backed iSCSI block storage bvolumes to on-premise apps
+	- **Tape Gateway**- virtual tape library to back up data using existing tape based processes
+- **AWS Backup**- centralized backup service to automate and manage backups acrss AWS services
+	- can automate and manage backups across services
+	- scheudle the automatic backup
+	- ensure the backups meet regulatory requirements and compliance
 
 ## Security
 - **Documentation by AWS**

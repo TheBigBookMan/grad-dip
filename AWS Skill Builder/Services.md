@@ -14,11 +14,17 @@
 		- statis website hosting like HTML files can be stored in here
 	- **S3 Standard-Infrequent Access (S3 Standard-IA)**- data that is less accessed frequently but requires rapid access when needed
 		- good for storing backups, disaster recovery files and objects that require long-term storage
+		- lower cost than standard with the same high durability and availability
+	- **One Zone- IA**- infrequently accessed data stored in a single AZ
+		- lower cost, less resilient compared to Standard-IA
 	- **S3 Glacier Flexible Retrieval**- good for storing things for a very long time- takes a while to retrieve though
 		- create a vault and populate it with archives
 		- can specify many rules around it in terms of write once, rean many, lock any future edits
+		- **Glacier**- takes minutes to hours for data rarely accessed
+		- **Glacier Deep Archive**- takes hours but cheapest option
 	- **Intelligent-Tiering**- policies created that can move data automatically between the tiers
 		- monitors object access patterns
+		- moves between the frequent and infrequent tiers
 		- eg if you want some data to be in the S3 standard for 90 days and then move to the S3 standard IA for 30 days and then to the Glacier
 		- Dont have to change the code of the application or manually move them
 
@@ -137,11 +143,26 @@
 
 ## Elastic File System (EFS)
 - file system to have shared between applications for businesses
+- this is for linux based workloads
 - can have people from different areas of a business working on the same data as its shared
 - can have multiple instances reading and writing at the same time
 - automatically scales
 - good for when the use case is using large number of services and resources need access to the same data at the same time
 - stores data across multiple availability zones
+- supports peta-byte scale file systems
+- pay only for storage you use
+- data transfer to and from the file system usin AWS DataSync for automated and accelrated data transfer
+
+## FSx
+- full managed, highly performane file systems 
+- **For Windows File Server**-
+	- fully managed native Microsfto windos file system
+	- supports SMB protovol and windows based features like Acive Directory integration, user quotas, ad distributed file system
+	- good for home directories, user profiles and departmental shares
+	- micrsofot SQL server databases
+	- enterprise apps like sharepoint and .NET apps
+- **For Lustre**-
+	- fully managed lustre file system for high performance comuting
 
 ## Identity Access Management (IAM)
 - User permissions for restriction etc
