@@ -352,3 +352,68 @@
 - API auditing tool
 - every request to AWS is logged n the CloudTrail engine- everything that happens in your AWS- who send it, what they did and when, state change, IP address etc
 - **Cloudtrail Insights**- can detect unusua; behavioiur in your metrics
+
+## Sagemaker
+- fully managed service fr building, training and deploying ML modesl
+- **Studio**- integrated IDE for the ML models
+- can train and tune  with hyperparameter tuning
+- deployment with easy as one click
+- built in algorithms, custom algorithms and frameworks
+- can do predictive analysis, personalised recommendations and fraud detection
+
+## Lex
+- Building conversational interfaces using voice and text
+- speech recognition and natural language understanding
+- integration with AWS lambda
+- multi-language support and dialectrs
+
+## Kendra
+- intelligent search service
+- understands natural language queries
+- integrates with data sources like sharepointm databases and S3
+- adjusts relevance based on user feedback and tunes
+
+## Rekognition
+- service for image and video analysis
+- can do facial analyss with faces and recognising emotions
+- object and scene detection identifying objects, people, text, scenes and activiries
+- celebrity recognition and content moderation
+
+## Comprehend
+- NLP service
+- identifies entities within text
+- sentiment analysis
+- key phrase extraction
+
+## Polly
+- text-to-speech
+- supports variety of language and voice stykes
+
+## Transcribe
+- automatic speech recognition
+- real time and batch transcription
+- identifies and labels individual speakers
+- supports custom vocab and lanageu models
+
+## Athena
+- interactive query service making easy to analyze data in S3 using standard SQL
+- serverless and integrates directly to data stored in S3
+- support for multiple formats of data like CSV, JSON
+
+## Kinesis
+- platform for real-time data processing
+- real time streaming of data
+- load streaming data into data lakes and warehouses
+- real time analytics on streaming data
+
+## Glue
+- fully managed Extract, Transform, Load (ETL) service
+- centralized metadata repository
+- automate process of extracting, transforming and loading data
+- integrates with carious services and data sources
+
+## Quicksight
+- scalabale business intelligence
+- create and share interactive visualisations on dashboards
+- build in ML insights for anomoly detection and forecasting
+- serverless
