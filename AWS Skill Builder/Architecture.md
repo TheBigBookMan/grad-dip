@@ -297,6 +297,12 @@
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
 - **Marketplace**- resource to find third-party software that runs on AWS
 	- things like antivirus software, intrusion detection systems like Mcafee, Palo Alto Networks etc
+- **Data Transfer Charges**- 
+	- **Incoming Data Transfer**- free when transferring data into AWS services
+	- **Outgoing Data Transfer**- 
+		- **Within same region**- data transfer between services within same region is free
+		- **Between different regions**- charges apply based on the volume of data transferred
+		- **To internet**- charges aply for data transfered out of AWS to the internet, varying by region and data volume
 
 ## Migration and Innovation
 - moving from on-premise or another cloud to AWS

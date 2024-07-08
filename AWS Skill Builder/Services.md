@@ -56,11 +56,28 @@
 	- Memory optimised- memory-intensive tasks, floating point calculations, graphics processing, data pattern matching, better for processing large datasets in memory
 	- Storage optimized- high performance for locally stored data
 - **EC2 Pricing**-
-	- On-demand- pay for duration that instance runs for- ideal for short term and irregular workloads that cant be interrupted, utilise unused capacity at a discounted rate. No long-term commitment or upfront paments
-	- Savings plan- low prices on EC2 usage for a commitment to consistent amount of usage- reduce your EC2 instance cost when making hourly spend commitment to instance family and region for 1-3 year planb, enter contract to get discounted rate
-	- Reserved Instances- predictable usage and steady-state workloads- good for when you know the amount of usage and type, covered for 1 year or 3 year. Pay up front and reserve for one or 3 year
-	- Spot instances- request for spare EC2 computing capacity- 90% off on-0demand price- AWS can reclaim the service anytime
-	- Dedicated hosts- pay for physical host that is fully dedicated to running instance- pay by the hour for the instances that run on single-tenant hardware
+	- **On-demand**- pay for duration that instance runs for- ideal for short term and irregular workloads that cant be interrupted, utilise unused capacity at a discounted rate. No long-term commitment or upfront paments
+		- high cost that other models but offers flexibility without upfront costs
+	- **Savings plan**- low prices on EC2 usage for a commitment to consistent amount of usage- reduce your EC2 instance cost when making hourly spend commitment to instance family and region for 1-3 year planb, enter contract to get discounted rate
+		- savings up to 72% on compute usage
+		- good for flexible workloads with predictable usage patterns
+	- **Reserved Instances (RIs)**- predictable usage and steady-state workloads- good for when you know the amount of usage and type, covered for 1 year or 3 year. Pay up front and reserve for one or 3 year
+		- on-etime or partial upfront payment for significant discount compared to on-demand pricing
+		- Standard RIs- provide most significant savings
+		- Convertible RIs- allows changing instance types and families
+		- 75% discount compared to on-demand pricing
+		- Can be shared across multiple accounts within AWS Organisation maximising utilisation and cost savings
+	- **Spot instances**- request for spare EC2 computing capacity- 90% off compared to on-0demand price- AWS can reclaim the service anytime
+		- suitable for flexible workloads that can be interrupted, like batch processing, data anlysis and CI/CD
+	- **Dedicated hosts**- pay for physical host that is fully dedicated to running instance- pay by the hour for the instances that run on single-tenant hardware
+		- control over the underyling hardware
+		- pay-per-host, gives vissibility into socket and core usage
+	- **Dedicated INstances**- instances that run on hardware dedicated to single customer
+		- suitable for workloads requiring physical isolation and host level
+		- pay for instances at additional hourly rate on top of EC2 instance pricing
+	- **Capacity Reservations**- reserve capacity for EC2 instances in specific AZ for any duration
+		- suitable for ensuring capacity availability for mission0critical workloads
+		- no upfront cost, pay for reserved capacity whether you use it or not
 - **Scale horizontally**- launch new EC2 instances and add to the pool
 - **Scale vertically**- resize the instance
 - **EC2 Auto-scaling**-
@@ -163,6 +180,11 @@
 	- useful for situations where you can lose data and recreate that data easily without consequence
 	- so dont write important data to these
 	- because stopping an EC2 instance and starting a new one it might start on a different host, where a store volume did not previously exist
+- **Volume Types**- 
+	- **General Purpose SSD (gp2/gp3)**- balanced prce and performance for wide variety of workloads
+	- **Provisioned IOPS SSD (io1/io2)**- high performance for mission-critical, I/O intensive apps
+	- **THrouhput Optimized HDD (st1)**- low cost hDD storage for frequently accessed, throughput intensive workloads
+	- **Cold HDD (sc1)**- lowest cost HDD storage for infrequently accessed workloads
 
 ## Elastic File System (EFS)
 - file system to have shared between applications for businesses
@@ -175,6 +197,8 @@
 - supports peta-byte scale file systems
 - pay only for storage you use
 - data transfer to and from the file system usin AWS DataSync for automated and accelrated data transfer
+- **Standard**- for frequently accessed files
+- **Infrequent Access**- lower cost for files not accessed often, automatic lifecycle managent between standard class and infrequent class
 
 ## FSx
 - full managed, highly performane file systems 
