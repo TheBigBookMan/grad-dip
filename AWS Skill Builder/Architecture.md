@@ -304,6 +304,8 @@
 	- **Developer Support**- includes everything in basic support, plan, plus can email customer support directly with 24 hour response time
 		- responses of less than 12 hours for system impairment
 		- $29 per month
+		- no aws API access
+		- limited trusted advisor access
 	- **Business Support**- include everything from previous plans
 		- directo phone access to support team with 4 hour response time for system impair
 		- 1 hour response time if prod system is down
