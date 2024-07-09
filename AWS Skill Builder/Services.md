@@ -6,6 +6,7 @@
 - can version objects and create multiple buckets and store them across different classes or tiers of data
 - create permissions for who can read/write objects
 - stores unlimited amount of data at any scale
+- **Multipart upload API**- can upload single object as a set of parts, like a continous flow of data
 - Can be even static files like html, videos, images, stylesheets etc
 - **Storage Class**- Different tiers for how often the data needs to be retrieved (frequently or stored for several years)
 	- **S3 Standard**- 11 99.9 of probability it will remain intact after 1 year
@@ -45,6 +46,7 @@
 ## Elastic Compute Cloud (EC2)
 - virtual server
 - can run any sort of OS on it
+- **Instance Metadata**- get information abot the EC2 instance
 - good to have multiple EC2 instances across different buildings
 - can change instance type and size of resources wanted
 - **Instance Connect**- allows you to connect to the Instace or an SSH client
@@ -58,16 +60,19 @@
 - **EC2 Pricing**-
 	- **On-demand**- pay for duration that instance runs for- ideal for short term and irregular workloads that cant be interrupted, utilise unused capacity at a discounted rate. No long-term commitment or upfront paments
 		- high cost that other models but offers flexibility without upfront costs
+		- eg best for 3 months that is uninterruptible
 	- **Savings plan**- low prices on EC2 usage for a commitment to consistent amount of usage- reduce your EC2 instance cost when making hourly spend commitment to instance family and region for 1-3 year planb, enter contract to get discounted rate
 		- savings up to 72% on compute usage
 		- good for flexible workloads with predictable usage patterns
 	- **Reserved Instances (RIs)**- predictable usage and steady-state workloads- good for when you know the amount of usage and type, covered for 1 year or 3 year. Pay up front and reserve for one or 3 year
+		- all updront payment for 1 year term
 		- on-etime or partial upfront payment for significant discount compared to on-demand pricing
-		- Standard RIs- provide most significant savings
-		- Convertible RIs- allows changing instance types and families
+		- **Standard RIs**- provide most significant savings
+		- **Convertible RIs**- allows changing instance types and families
 		- 75% discount compared to on-demand pricing
 		- Can be shared across multiple accounts within AWS Organisation maximising utilisation and cost savings
 	- **Spot instances**- request for spare EC2 computing capacity- 90% off compared to on-0demand price- AWS can reclaim the service anytime
+		- adjusts price based on supply and demand of EC2 instances
 		- suitable for flexible workloads that can be interrupted, like batch processing, data anlysis and CI/CD
 	- **Dedicated hosts**- pay for physical host that is fully dedicated to running instance- pay by the hour for the instances that run on single-tenant hardware
 		- control over the underyling hardware
@@ -89,6 +94,8 @@
 	- **Scale up**- increasing the size of the server
 	- **Scale out** - increasing amount of servers
 	- Can set desired capacity for a server and the amount of servers
+- **Service Limit** - serice limits for each account to ensure AWS doesnt run out of services
+	- can boost your service limit contacting Support Center to request service limit increase
 
 ## Elastic Load Balancer (ELB)
 - Directing traffic
@@ -213,7 +220,9 @@
 
 ## Identity Access Management (IAM)
 - User permissions for restriction etc
+- **Global** defined service
 - have the root owner and then they can provide permissions for workers to specific services
+- **IAM Policy Simulator**- can evaluate and test the policies
 - Enable the MFA for additional layer security
 - Smart to use Root ONLY for a singular task required, use IAM for daily use
 	- ONLY Root can close AWS account, change contact info, payment method, certain S3 operaions related to bucket ownership
@@ -241,6 +250,9 @@
 - **IAM Group**- grouping of users that get policies attached to them, assign a user to a group that is specific to their needs and then they have the access of that group
 - **IAM Role**- used to gain access to speific services for a temporary amount of time- similar to a user however it is assigned to someone for temporary amount of time- can be on a role that can access only S3 for something in the morning and then arvo can only access EC2
 
+## API Gateway
+- serverless
+- API proxy for Fargate, lamdba
 ## Organisations
 - central location to manage multiple AWS accounts
 - manage billinc, access, compliance, security, share resources across AWS accounts
@@ -277,6 +289,7 @@
 - can make calculations based on how much usage estimating some services will have at periods of time (eg EC2 instances lower usage during weekends)
 
 ## CloudFront 
+- globally defined service
 - a CDN that will host things in a specific location that may be closer to another location for faster delivery speeds
 - Separate from regions so its not taking up as many resources and costing as it would to serve a whole isntance in another region
 - They are sites which hold the storage
@@ -288,6 +301,11 @@
 - give it the application code and desired configurations and beanstalk will build and save the environment for easier deployment
 - gives convenience of not provisioning and managing all the pieces separately while still giving visibility of underlying resources
 - Adjust capacity, load balancing, automatic scaling, application health monitoring
+
+## Cognito
+- single sign on service
+- **Cognito Identity Pool**- tempporary AWS credentials for users who have been auth via social media logins
+	- also for guest users who dont require any auth
 
 ## Cloudformation
 - Infrastructure as code tool that defines variety of AWS resources using JSON or YAML- rather than using the GUI
@@ -530,6 +548,8 @@
 ## X-ray
 - analysing and debugging distributed apps
 - end-to-end view and root cause analysis
+- the requests traveling through your application
+- good for debugging micrsoservices
 
 ## AppStream 2.0
 - fully managed app streaming service

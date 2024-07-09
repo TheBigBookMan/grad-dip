@@ -249,6 +249,11 @@
 	- **Config**-
 		- **Configuration Tracking**- tracks aws resources configurations and changes over time, snapshots of configurations
 		- **Compliance auditing**- assesses compliance with internal policies and industry standards
+- **Amazon Detective**- assess, investigate and pinpoint source of suspected security vulnerabilities and suspicous activity
+	- build interactive visualisations and models using ML, stats, graph theory
+	- quickly and easily identify and ivnestigate security problems
+	- collect and anlyze log data from services- VPC flow logs, cloudtrail, gaurduty
+- **Amazon Inspector**- helps assess and improve the security and compliance by auto analyzing application securty vuleneraibilitys and deviation from best practices
 
 ## Monitoring and Analytics
 - able to monitor all the traffic that your services have
@@ -294,6 +299,7 @@
 - **Budgets**- set custom budhets for variety of scenarios like cost and usage
 	- receive an alert when cost or usage exceed or are forecasted to exceed the budgeted amount
 - **Cost Explorer**- shows which services you are spending most money
+	- SHOWS FORECAST of data based on historical data
 	- gives 12 months of historical data to track spending
 	- filter by tags on services (group services with tags for easier identifier)
 	- preconfigured views for common usage patterns
@@ -320,11 +326,17 @@
 		- - access to trusted advisor
 		- TAM Techincal-Account Manager is an AWS person actively monitoring your environment and help with optimization
 		- they help provide the well architected framework- Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimzation, Sustainability
+		- access to Infrastructure Event Management, Well-Architected Reviews and Operations Reviews features in AWS
 - **AWS Partner NEtwork (APN)**- global community of partners that leverage AWS
 	- **INdependent software vendors (ISVs)**- develop and sell software solutions oin AWS
 	- **System integrations (SIs)**- provide consulting and implementation services
+	- **APN Consulting Partners**- professional services firms that help customers
+	- **APN Technology Partners**- provide software solutions that are either hosted or integrated with AWS
 - **Trusted Advisor**- provides recommendation for cost optimzation, security, fault tolerance, performance improvements
 - **Health Dashboards**- display the health of AWS services and provides alerts and remediation guidance
+- **AWS Health**- provides ongoing visibility into resource performance and availability of services and accounts
+	- provides relevant and timely inforation to help manage events in progress
+	- delivers alerts and notifications triggered by chagnes in the health
 - **HEalth API**- programmatic access to health information for integration with internal systems
 - **Marketplace**- resource to find third-party software that runs on AWS
 	- things like antivirus software, intrusion detection systems like Mcafee, Palo Alto Networks etc
@@ -492,3 +504,9 @@
 		- **Wide Range**- broad range of services to build innovative solutions
 		- **Flexibility**- many different types of customising to tailor infrastructure to every need
 		- **Agility**- being able to rapidly develop, test and deploy applications
+- **Building in cloud**- best practices
+	- **Design for failure**
+	- **Decouple your components**
+	- **Implement elasticity**
+	- **Think parallel**
+- **AWS **
