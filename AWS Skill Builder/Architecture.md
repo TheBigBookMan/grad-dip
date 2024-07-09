@@ -15,6 +15,10 @@
 - running the code on a virtual server hosted in the cloud
 - no provisioning or managing of the servers
 - removes the need of having to host the server yourself
+- **Step Functions**- orchestration for modern apps that breaks it into multiple steps, adding flow logic
+	- define and manage the workflow of application independetly from busniess logic
+	- ensure state for each step
+	- creates a log of each step
 
 ## Containers
 - great so you can run applications code on different environments as the code environment is saved within the image

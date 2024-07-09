@@ -4,6 +4,7 @@
 - changing a part of an object will change the whole object
 - max file size to store is 5 terabytes
 - can version objects and create multiple buckets and store them across different classes or tiers of data
+- **Versioning**- organise and manage the data to ensure you can recover data if something gets deleted or overwritten
 - create permissions for who can read/write objects
 - stores unlimited amount of data at any scale
 - **Multipart upload API**- can upload single object as a set of parts, like a continous flow of data
@@ -302,6 +303,13 @@
 - gives convenience of not provisioning and managing all the pieces separately while still giving visibility of underlying resources
 - Adjust capacity, load balancing, automatic scaling, application health monitoring
 
+## AMazon Pinpoint
+- digital user engagement service where customer communicate with end users and measure user management
+- across multiple channels like email, SMS and mobile push notifications
+## ElasticMapReduce (EMR)
+- manages big data
+- things like apache spark
+- perform data transformation workloads ETL
 ## Cognito
 - single sign on service
 - **Cognito Identity Pool**- tempporary AWS credentials for users who have been auth via social media logins
