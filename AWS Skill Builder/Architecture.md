@@ -297,6 +297,7 @@
 	- User defined tags created customly
 	- AWS generated tags that are created by AWS
 	- good for organising
+- **Cost Anomaly Detection**- uses ML to identify any surprising expenditures
 - **Cost and Usage Report**- comprehensive report that includes detailed billing information
 	- filtered and grouped by cost allocation tags to alayze at granular level
 	- provides insight into how different parts of organisation consume resources

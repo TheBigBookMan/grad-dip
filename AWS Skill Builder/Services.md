@@ -53,6 +53,7 @@
 - **Instance Connect**- allows you to connect to the Instace or an SSH client
 - **Session Manager**- allows the session to begin connetion through client or SSH
 - Terminal is used to talk with the EC2 instance
+- **EC2 Image Builder**- automates the creation, maangement, deployment and customization of  server images
 - **INstance types**- 
 	- General purpose- good balance computte, memoery and networking resources- good for web service or code repo
 	- Compute optimised- intensive tasks like game servers, high perofrmance computing and scientific modeling, better for batch processing- group data processing
@@ -262,6 +263,7 @@
 - control over the AWS services and API actions that each account can access 
 - group accounts in organisational units (OU)- make easier to manage accounts with similar business or security requirements- applying a policy to OU will make all accounts inherit that policy permissions
 - **SErvice control policies**- specify the max permissions for memeber accounts in organisation, can restrict AWS sercices, resources, API actioans, users and roles each member account can access
+- **Volume priocing**- having the accumulation of the accounts and businsess in one price, like a discount for more you use together
 
 ## Artifact
 - gain access to compliance reports done by third parties
@@ -389,6 +391,7 @@
 - good for data that is read only, as it is good for historical data "how many bags did we sell this week?" compared to a SQL which would be "how many bags in inventory?"
 - 10 times higher performance than traditional databases
 - rather than doing mul;tiple complex queries, can use a simple SQL query to return complex data
+- **Redhisft ML**- train andd deploy directly from redshift data warehouse, can use SQL commands
 
 ## DocumentDB
 - noSQL good for larger data than DynamoDB
