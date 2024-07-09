@@ -442,6 +442,11 @@
 - identifies and labels individual speakers
 - supports custom vocab and lanageu models
 
+## Macie
+- data security service that discovers sensitive data using ML
+- uses pattern matching 
+- provides visisbility to data security risks and enables automated protection against the risks
+
 ## Athena
 - interactive query service making easy to analyze data in S3 using standard SQL
 - serverless and integrates directly to data stored in S3
