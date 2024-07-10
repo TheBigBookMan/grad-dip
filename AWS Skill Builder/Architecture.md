@@ -267,6 +267,7 @@
 - **Trusted Advisor**- 
 	- provides real-time guidance to help improve security, performace and cost-efficieny
 	- security checks by identifying common security issues like exposed access keys, S3 bucket permissions and IAM usage
+	- recommendations on **Cost Optimisation**, **Performance**, **Security**, **Fault Tolerance**, **Service Limits**
 - **GuardDUty**- 
 	- detects potential threats by analyzing continous streams of data from multiple aws sources
 	- provides actionable security findings and integrates with AWS Security Hub for centralized management

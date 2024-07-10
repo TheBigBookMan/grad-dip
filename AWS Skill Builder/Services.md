@@ -3,6 +3,7 @@
 - Object storage has the data, metadata (info of where the data is, how it is used, object size etc) and key (unique identifier)
 - changing a part of an object will change the whole object
 - max file size to store is 5 terabytes
+- **Volume discount**- consolidated billing enables to see combined view of AWS costs incurred by all accounts
 - can version objects and create multiple buckets and store them across different classes or tiers of data
 - **Versioning**- organise and manage the data to ensure you can recover data if something gets deleted or overwritten
 - create permissions for who can read/write objects
@@ -53,6 +54,7 @@
 - **Instance Connect**- allows you to connect to the Instace or an SSH client
 - **Session Manager**- allows the session to begin connetion through client or SSH
 - Terminal is used to talk with the EC2 instance
+- AMazon Linux instances are billing in a per-second duration
 - **EC2 Image Builder**- automates the creation, maangement, deployment and customization of  server images
 - **INstance types**- 
 	- General purpose- good balance computte, memoery and networking resources- good for web service or code repo
@@ -103,6 +105,9 @@
 - Directing traffic
 - Able to see which servers have lower amount of usage and can direct traffic to the underused ones so ones currently being used dont have too much traffic and cause problems
 - auto-scaling lets the ELB know it needs to start directing traffic
+- **Application LB**- can direct to applications using HTTP, domain etc
+	- goes to Lamdba
+- **Network LB**- directs with TCP, UDP etc
 
 ## Simple Queue Service (SQS)
 - send, store and receive messages between software components at any volume
@@ -191,7 +196,9 @@
 	- because stopping an EC2 instance and starting a new one it might start on a different host, where a store volume did not previously exist
 - **Volume Types**- 
 	- **General Purpose SSD (gp2/gp3)**- balanced prce and performance for wide variety of workloads
+		- can be used as system boot volumes, best for dev and prod environments
 	- **Provisioned IOPS SSD (io1/io2)**- high performance for mission-critical, I/O intensive apps
+		- used for large database workloads
 	- **THrouhput Optimized HDD (st1)**- low cost hDD storage for frequently accessed, throughput intensive workloads
 	- **Cold HDD (sc1)**- lowest cost HDD storage for infrequently accessed workloads
 
