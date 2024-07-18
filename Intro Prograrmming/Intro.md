@@ -27,3 +27,6 @@
 		- complete covers all possibilities the program must handle, decisions elements should include all possible outgoing arrows
 	- **Top to bottom layout**- convention to flow from top to bottom so start is at top and stop s bottom
 	- **KNow your arrows**- make sure the amount of arrows for each element is correct
+## Python
+- **Sequence**- actions executed in order
+- **Selection**- condition determines which statements are executed
