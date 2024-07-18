@@ -1,0 +1,29 @@
+## Flowcharts
+- drawn using shapes to show logical process of something
+- **Elements**
+	- **Start/Stop**- describe where process beings and ends and flowchart should only have one of each, start should have one outgoing arrow and stop has one incoming arrow (represented by round rectangles)
+	- **Process elements**- describe processing step, should have one incoming arrow and one outgoing arrow- description usually starts with a verb and there can be many in flowchart (represented by rectangle)
+	- **Input/output**- data enters/leaves
+		- one incoming arrow and one outgoing arrow
+		- stuff like user input and showing a result
+		- flowcharts usually have atleast one of each
+		- represented by parallelograms
+	- **Decsiion element**- select one of multiple based on conditions
+		- often phrased like yes/no
+		- element should have one incoming arrow and multiple outgoing arrows
+		- represented by diamonds
+	- **Connector element**- join multiple flows and helpful for re0joining multiple different flow paths
+		- should have multiple incomking arrows and one outgoing arrow
+		- represented by circles
+- **IDentify elements**-
+	- **input/output**- when data enters te process or leaves the process
+	- **decision**- looking for questions which have multiple possible outcomes
+	- **process**- identified looking for 'action' steps that are not performing input or output
+- **Best Design Practices**- best when designing flowchart
+	- **Order**- order elements appear is essential
+	- **Clear, consie, complete**- 
+		- clear ha spaced out elements and minimises number of arrows crossing over each other
+		- concise uses short descriptions within flowchart elements and avoids unecessary duplications
+		- complete covers all possibilities the program must handle, decisions elements should include all possible outgoing arrows
+	- **Top to bottom layout**- convention to flow from top to bottom so start is at top and stop s bottom
+	- **KNow your arrows**- make sure the amount of arrows for each element is correct

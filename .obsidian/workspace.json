@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0b61ab6b8bee16c6",
+        "id": "834c5b66a7d0c4fa",
         "type": "tabs",
         "children": [
           {
-            "id": "41e19daa2ef791a7",
+            "id": "dc0064167d80247b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS Skill Builder/Architecture.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "af9f1667da6da560",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS Skill Builder/Services.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "016f65bf405009ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS Skill Builder/SAA/Solutions.md",
+                "file": "Intro Prograrmming/INtro.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/SAA/Solutions.md",
+                "file": "Intro Prograrmming/INtro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Skill Builder/SAA/Solutions.md",
+                "file": "Intro Prograrmming/INtro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Skill Builder/SAA/Solutions.md"
+                "file": "Intro Prograrmming/INtro.md"
               }
             }
           }
@@ -172,16 +147,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "016f65bf405009ba",
+  "active": "dc0064167d80247b",
   "lastOpenFiles": [
-    "AWS Skill Builder/Architecture.md",
-    "AWS Skill Builder/Services.md",
     "AWS Skill Builder/SAA/Solutions.md",
-    "AWS Skill Builder/SAA",
-    "Intro Prograrmming/Intro.md",
-    "Intro Prograrmming",
+    "AWS Skill Builder/Services.md",
+    "AWS Skill Builder/Architecture.md",
     "Artificial Intelligence/Untitled.md",
-    "Artificial Intelligence",
+    "Intro Prograrmming/INtro.md",
+    "Intro Prograrmming",
+    "AWS Skill Builder/SAA",
     "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
     "Pasted image 20240523133829.png",
@@ -205,6 +179,7 @@
     "Information Technology/Week5_PracticeClass/BusinessPage.php",
     "Information Technology/Week5_PracticeClass/OrderList.php",
     "Information Technology/Week5_PracticeClass/CustomerList.php",
+    "Information Technology/Week5_PracticeClass/shopstyle.css",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
