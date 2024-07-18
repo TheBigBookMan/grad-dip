@@ -1,201 +1,198 @@
 {
-    "main": {
-        "id": "164df8215031e4fd",
-        "type": "split",
+  "main": {
+    "id": "164df8215031e4fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "834c5b66a7d0c4fa",
+        "type": "tabs",
         "children": [
-            {
-                "id": "834c5b66a7d0c4fa",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "dc0064167d80247b",
-                        "type": "leaf",
-                        "state": {
-                            "type": "markdown",
-                            "state": {
-                                "file": "Intro Prograrmming/INtro.md",
-                                "mode": "source",
-                                "source": false
-                            }
-                        }
-                    }
-                ]
+          {
+            "id": "dc0064167d80247b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intro Prograrmming/INtro.md",
+                "mode": "source",
+                "source": false
+              }
             }
-        ],
-        "direction": "vertical"
-    },
-    "left": {
-        "id": "e84c71b390091f91",
-        "type": "split",
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e84c71b390091f91",
+    "type": "split",
+    "children": [
+      {
+        "id": "13ed801166dc0b66",
+        "type": "tabs",
         "children": [
-            {
-                "id": "13ed801166dc0b66",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "99211eb9a8982c37",
-                        "type": "leaf",
-                        "state": {
-                            "type": "file-explorer",
-                            "state": {
-                                "sortOrder": "alphabetical"
-                            }
-                        }
-                    },
-                    {
-                        "id": "8fb78f30e2f61558",
-                        "type": "leaf",
-                        "state": {
-                            "type": "search",
-                            "state": {
-                                "query": "tag:#Chapter1",
-                                "matchingCase": false,
-                                "explainSearch": false,
-                                "collapseAll": false,
-                                "extraContext": false,
-                                "sortOrder": "alphabetical"
-                            }
-                        }
-                    },
-                    {
-                        "id": "09736edaa66aac2c",
-                        "type": "leaf",
-                        "state": {
-                            "type": "bookmarks",
-                            "state": {}
-                        }
-                    }
-                ]
+          {
+            "id": "99211eb9a8982c37",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
-        ],
-        "direction": "horizontal",
-        "width": 200,
-        "collapsed": true
-    },
-    "right": {
-        "id": "c585aa9f458856fa",
-        "type": "split",
+          },
+          {
+            "id": "8fb78f30e2f61558",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Chapter1",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "09736edaa66aac2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c585aa9f458856fa",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d88546b29d17bf7",
+        "type": "tabs",
         "children": [
-            {
-                "id": "0d88546b29d17bf7",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "0f1563e670ab6130",
-                        "type": "leaf",
-                        "state": {
-                            "type": "backlink",
-                            "state": {
-                                "file": "Intro Prograrmming/INtro.md",
-                                "collapseAll": false,
-                                "extraContext": false,
-                                "sortOrder": "alphabetical",
-                                "showSearch": false,
-                                "searchQuery": "",
-                                "backlinkCollapsed": false,
-                                "unlinkedCollapsed": true
-                            }
-                        }
-                    },
-                    {
-                        "id": "bf85cc795a1d2945",
-                        "type": "leaf",
-                        "state": {
-                            "type": "outgoing-link",
-                            "state": {
-                                "file": "Intro Prograrmming/INtro.md",
-                                "linksCollapsed": false,
-                                "unlinkedCollapsed": true
-                            }
-                        }
-                    },
-                    {
-                        "id": "812ca60d4896edeb",
-                        "type": "leaf",
-                        "state": {
-                            "type": "tag",
-                            "state": {
-                                "sortOrder": "frequency",
-                                "useHierarchy": true
-                            }
-                        }
-                    },
-                    {
-                        "id": "96caac351462116c",
-                        "type": "leaf",
-                        "state": {
-                            "type": "outline",
-                            "state": {
-                                "file": "Intro Prograrmming/INtro.md"
-                            }
-                        }
-                    }
-                ]
+          {
+            "id": "0f1563e670ab6130",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Intro Prograrmming/INtro.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
-        ],
-        "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
-    },
-    "left-ribbon": {
-        "hiddenItems": {
-            "switcher:Open quick switcher": false,
-            "graph:Open graph view": false,
-            "canvas:Create new canvas": false,
-            "daily-notes:Open today's daily note": false,
-            "templates:Insert template": false,
-            "command-palette:Open command palette": false
-        }
-    },
-    "active": "dc0064167d80247b",
-    "lastOpenFiles": [
-        "AWS Skill Builder/Services.md",
-        "AWS Skill Builder/SAA/Solutions.md",
-        "AWS Skill Builder/Architecture.md",
-        "AWS Skill Builder/SAA",
-        "Intro Prograrmming/Intro.md",
-        "Intro Prograrmming",
-        "Artificial Intelligence/Untitled.md",
-        "Intro Prograrmming/INtro.md",
-        "Intro Prograrmming",
-        "AWS Skill Builder/SAA",
-        "AWS Skill Builder/Workshops GenAI.md",
-        "Pasted image 20240523133859.png",
-        "Pasted image 20240523133829.png",
-        "Pasted image 20240523133758.png",
-        "Pasted image 20240523103754.png",
-        "Pasted image 20240516111751.png",
-        "RAG/RAG Langchain.md",
-        "AWS Skill Builder",
-        "Networking/Intro to Networks.md",
-        "RAG",
-        "Information Technology/Topic 1- Computer Architecture.md",
-        "Information Technology/Topic 2- Networks.md",
-        "Information Technology/Topic 3- Databases.md",
-        "Information Technology/Topic 5- Web Dev- PHP.md",
-        "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
-        "Information Technology/Introduction IT.md",
-        "Information Technology/Human Computer Interface.md",
-        "Information Technology/Topic 6- Spreadsheets.md",
-        "Information Technology/Assessment3.zip",
-        "Information Technology/Week5_PracticeClass.zip",
-        "Information Technology/Week5_PracticeClass/BusinessPage.php",
-        "Information Technology/Week5_PracticeClass/OrderList.php",
-        "Information Technology/Week5_PracticeClass/CustomerList.php",
-        "Information Technology/Week5_PracticeClass/shopstyle.css",
-        "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
-        "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
-        "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
-        "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/WAUL8A.jpg",
-        "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/V4RB9I.jpg",
-        "Databases/Introduction to databases.md",
-        "Databases/Relational Algebra and SQL.md",
-        "Databases/ER+EER Models.md",
-        "Databases/Normalization.md",
-        "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
-        "Databases/Topic 1.md",
-        "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
-        "2023-08-18.md",
-        "Databases/Readings.md"
-    ]
+          },
+          {
+            "id": "bf85cc795a1d2945",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Intro Prograrmming/INtro.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "812ca60d4896edeb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "96caac351462116c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Intro Prograrmming/INtro.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dc0064167d80247b",
+  "lastOpenFiles": [
+    "AWS Skill Builder/SAA/Solutions.md",
+    "AWS Skill Builder/Services.md",
+    "AWS Skill Builder/Architecture.md",
+    "Artificial Intelligence/Untitled.md",
+    "Intro Prograrmming/INtro.md",
+    "Intro Prograrmming",
+    "AWS Skill Builder/SAA",
+    "AWS Skill Builder/Workshops GenAI.md",
+    "Pasted image 20240523133859.png",
+    "Pasted image 20240523133829.png",
+    "Pasted image 20240523133758.png",
+    "Pasted image 20240523103754.png",
+    "Pasted image 20240516111751.png",
+    "RAG/RAG Langchain.md",
+    "AWS Skill Builder",
+    "Networking/Intro to Networks.md",
+    "RAG",
+    "Information Technology/Topic 1- Computer Architecture.md",
+    "Information Technology/Topic 2- Networks.md",
+    "Information Technology/Topic 3- Databases.md",
+    "Information Technology/Topic 5- Web Dev- PHP.md",
+    "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+    "Information Technology/Introduction IT.md",
+    "Information Technology/Human Computer Interface.md",
+    "Information Technology/Topic 6- Spreadsheets.md",
+    "Information Technology/Assessment3.zip",
+    "Information Technology/Week5_PracticeClass.zip",
+    "Information Technology/Week5_PracticeClass/BusinessPage.php",
+    "Information Technology/Week5_PracticeClass/OrderList.php",
+    "Information Technology/Week5_PracticeClass/CustomerList.php",
+    "Information Technology/Week5_PracticeClass/shopstyle.css",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/WAUL8A.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/V4RB9I.jpg",
+    "Databases/Introduction to databases.md",
+    "Databases/Relational Algebra and SQL.md",
+    "Databases/ER+EER Models.md",
+    "Databases/Normalization.md",
+    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
+    "Databases/Topic 1.md",
+    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
+    "2023-08-18.md",
+    "Databases/Readings.md"
+  ]
 }
