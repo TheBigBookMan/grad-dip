@@ -39,4 +39,4 @@
 	- **INdefinite loop**- repeats for number of times but not obvious the number beforehand
 	- **Interactive loop**- has condition which decides whether loop should finish based on user input- user controls when it finishes
 	- **Computed conditions**- condition based on complex computation made in loop
-	
+- **Classes**- 

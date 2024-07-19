@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
+                "file": "Intro Prograrmming/Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
+                "file": "Intro Prograrmming/Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
+                "file": "Intro Prograrmming/Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Artificial Intelligence/AI.md"
+                "file": "Intro Prograrmming/Intro.md"
               }
             }
           }
@@ -149,13 +149,13 @@
   },
   "active": "41e19daa2ef791a7",
   "lastOpenFiles": [
+    "Artificial Intelligence/AI.md",
     "Intro Prograrmming/Intro.md",
     "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/SAA/Solutions.md",
     "AWS Skill Builder/Services.md",
     "AWS Skill Builder/SAA",
     "Intro Prograrmming",
-    "Artificial Intelligence/AI.md",
     "Artificial Intelligence",
     "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
