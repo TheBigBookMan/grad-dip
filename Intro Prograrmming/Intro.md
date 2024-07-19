@@ -27,6 +27,16 @@
 		- complete covers all possibilities the program must handle, decisions elements should include all possible outgoing arrows
 	- **Top to bottom layout**- convention to flow from top to bottom so start is at top and stop s bottom
 	- **KNow your arrows**- make sure the amount of arrows for each element is correct
+- **Iteration**- can be added toi a control flow which shows the flow going back to an earlier point in time
+	- can execute the same statement multiple times without having to literally repeat code
+	- represented by a backwards pointing arrow
+	- something like a while loop
 ## Python
 - **Sequence**- actions executed in order
 - **Selection**- condition determines which statements are executed
+- **While Loops**-
+	- **Definite loop**- repeates a fixed number of times, number of repitions known before starting loop
+	- **INdefinite loop**- repeats for number of times but not obvious the number beforehand
+	- **Interactive loop**- has condition which decides whether loop should finish based on user input- user controls when it finishes
+	- **Computed conditions**- condition based on complex computation made in loop
+	
