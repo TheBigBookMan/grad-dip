@@ -8,3 +8,45 @@
 - **Different areas**- 
 	- Robots are the shell of the AI going on under the hood
 	- ML machines become better overtime from learning from experience
+- **Recent successes**
+	- facial recognition
+	- text recognition
+	- self-driving vehicles
+- **AI Branches**-
+	- **Game Playing**- define strateigies to play specific games like chess, based on previously made experiences from games
+	- **Automated Resoning**- conduct logic reasoning (propositiona llogic, first order login, high order logic, abductive logic) by using a computer
+		- problems that require logical steps to get to the solution
+		- we put the understanding of the problem in ourselves to the machine
+	- **Knowledge Representation**- research on representing human knowledge in symbols to facilitate automated reasoning and storing in computers
+		- formatting the data 
+	- **Natural Language Processing**- analyse human language for computers to use
+		- understanding, translation, analysis and summarisation of text
+	- **Robotics and Planning**- robot is machine that imitates human or human activity
+		- design and construction of robot (sensors, planing, decision making and mechanical moving)
+	- **Machine Learning**- research and development of computer systems that are able to learn and adapt without instructions by using algorithms and statistical models to anaylyse and draw inferences from patterns in data
+		- supervised learning, unsupervised learning, semi-supervised learning and reinforacement learning
+	- **Semantic web and Ontology**- research on web information representation, exraction and reasoning, which enables information exchange between apps, machines and platforms
+## Logic
+- using logic to represent knowledge
+- **Formal language and system**
+	- **Formal language**- contains
+		- set of symbols (alphabet of the language)
+		- set of formation rules determining which sequences of symbols from its alphabet are well formaed formulas
+	- **Formal system**- 
+		- formal language with a deductive apparatus is a formal system
+		- a deductive appratus consists of the axioms and rules of inference that can be used to derive theoroms
+- **Proppositional logic**- can be used for problem solving, planning and decision making, as well as reasoning, it helps representing knowledge in mathematical and logical form- can be either true or false
+	- **Propositional Language**- 
+		- is a formal language
+		- alphabet of propositional language includes
+			- propositional symbols (p, q, ...)
+			- connectives (-(**negation** (opposite of whatever it is)), V(**disjunction** (logical OR between propositions)), ^(**conjuction** (logical AND between propositions)), <- (**implication** (proposition implies another (if one proposition is true then another must also be true))))
+			- punctuation (( ))
+	- **Well formed formula (wff)**- 
+		- a proposition
+		- if A and B are forumlas, then (-A), (A ^ B), (A V B), (A <- B) are forumlas
+- **Axioms**- statemeents assumed to be true without proof
+	- (A <- B) <- A
+	- ((C <- A) <- (B <- A)) <- ((C <- B) <- A)
+	- (A <- B) <- (-B <- -A)
+- **Inference Rule**- rule of inference is modus ponens rule: A and B <- A infer B. derive new propositions from existing ones
