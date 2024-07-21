@@ -50,3 +50,33 @@
 	- ((C <- A) <- (B <- A)) <- ((C <- B) <- A)
 	- (A <- B) <- (-B <- -A)
 - **Inference Rule**- rule of inference is modus ponens rule: A and B <- A infer B. derive new propositions from existing ones
+- **First Order Logic**- extention of propositional logic, propositional = true/false, first order= one + variables
+	- **Alphabet** of first order
+		- **Variables** - (X, Y, Z...)
+		- **Constants**- (a, b, c, ...)
+		- **Function**- (f, g, ...)
+		- **Predicate**- (p, q, ...)
+		- **Connectives**- (- (**negation**), V (**disjunction**), ^ (**conjunction**), <- (**implicaton**))
+		- **Quantifiers**- (A(Upside down) (**universal quantifier**), E (backwards) (**existing quantifier**))
+		- **Punctuation** ( (  ) )
+	- **Term**- 
+		- a constant
+		- a variable
+		- f(X1, X2, ...., Xn) where f is an n-ary function symbol and X1, X2, Xn are terms
+	- **Atom**- if p is a pedicate and X1, X1, ... Xn are terms, then p(X1, X2, ..., Xn) is an atom
+	- **Literal**- literal is an atom or the negation of an atom, *A* positive literal is an atom, *a* negative literal is the negation
+		- example- if *p* is predicate, *a*, *b*, *X* are terms: then
+			- p(a + b, X, Xa) is an atom
+			- p(a + b, X, Xa) is also called a positive literal and -p(a + b, X, Xa) is negative literal
+	- **Formation rules of first order language**- well formed formaula (wff) is:
+		- an atom
+		- if *A* is a formula, then (A(upside down)X)A and (E(backwards)X)A are formulas
+		- if A and B are forumlas, then (-A), (A^B), (AVB), (A<-B) are forumlas
+		- Example- *p* is predicate, *a*, *b*, *c*, *X* are terms: then all these are formulas
+			- p(a, b, X)
+			- -p(a, c, X)
+			- p(a, b, X) ^ --p(a, c, X)
+			- A(upside down)X((p (a, b, X) V -p(a, c, X)) <- (p (a, b, X) ^ -p (a, c, X)))
+			- These are not forumlas:
+			- A(upsidedown)X (p(a, b, X) p(a, c, X))
+			- p(a, b, X) ^
