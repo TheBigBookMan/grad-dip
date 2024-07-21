@@ -80,3 +80,101 @@
 			- These are not forumlas:
 			- A(upsidedown)X (p(a, b, X) p(a, c, X))
 			- p(a, b, X) ^
+- **Semantics and Syntax**- 
+	- **Semantics** - (model theory) of a formal language is study of interpretations, truth functions and models of the language
+	- **Syntax**- (proof theory) study of deductive apparatus
+	- **Semantics of first order logic**- study of interpretations, models, semantic consequeunces and semantic consistency
+	- **INterpretation**- first order langageu interpretation consists of 4 parts
+		- assignment of a non-empty domain D of L
+		- assignment of all constants of L in D
+		- assignment of all n-ary functions of L as f : Dn -> D
+		- assignment of all n-ary predicates of L as p : Dn -> B
+		- B is boolean set which contains 2 values TRUE and FALSE
+		- interpretation is binding of specific meaning to an abstract languiage, with assignment of an interpretation to first order langageu, each formulao f the language has a truth value
+		- Example:
+			- p (a, b)
+			- p (b, c)
+			- p (X, Y) <- p (X, Z) ^ p (Z, Y)
+			- can be interpretaed different ways
+			- predicate *p* can be assigned as parent for a set of human individuals in which case program becomes: 
+				- parent (a, b)
+				- parent (b, c)
+				- parent (X, Y) <- parent (X, Z) ^ parent (Z, Y)
+			- *p* can also be assigned as greater _ than for the set of integets, then program becomes:
+				- greater_than (a, b)
+				- greater_than (b, c)
+				- greater_than (X, Y) <- greater_than (X, Z) ^ greater_than (Z, Y)
+	- **Definition**- I be an interprattion of the first order language and A and B be two formulas of the languge, then:
+		- A is true for I iff I assigns a truth value true to A
+		- -A is true for I iff I assigns a truth value false to A
+		- A ^ B is true for I iff I assigns true to both A and B
+		- A V B is true for I iff I assigns true to either A or B
+		- B <- A is true for I iff I either A is false for I or B is true for I
+		- (iff = if and only if)
+	- **Model**- interpretation I is a model of a formula F (denoted as Mf) iff F is true for I. an interpretation I is a model of a set of forumlas L(upside down) (denoted as ML(upside down)) iff it is a model of each of the formulas
+		- Example:
+			- p (a, b)
+			- p (b, c)
+			- p (X, Y) <- p (X, Z) ^ p (Z, Y)
+		- interpretation (parent) is not a model of the formula, the interpretation (greater_than) is a model of the formula
+	- **Valid, satisfiable and unsatisfiable**- let F be a closed formula of first order langage L. F is valid in L (denoted as l=F) iff for every interpration of L the truth value of F is true; F is satisfiable if there exists and interpretation of L such that the truth of value of F under this interpretation is true; F is unsatisfiable if there is no interpretation of L under which the truth value of F is true
+		- Example:
+			- (A(upside down)X) (A(upside down)Y) (-p (X, Y) V p (X, Y)) is valid
+			- (A(upside down)X) (A(upside down)Y) (-p (X, Y) ^ p (X, Y)) is unsatisfiable
+			- (A(upside down)X) (A(upside down)Y) (p (X, Y) <- (p (X, Z) ^ p (Z, Y))) is satisfiable
+		- Example:
+			- if A and B are formulas then- (-A V B) <- (B <- A) and (B <- A) <- (-A V B) are valid
+	- **Consequence**- formula F is a consequence of a formula G (denoted as G l=F) iff there is no such an interpretation of first order language L for which G is true and F is false. Formula F is a consequence of a set of formulas T(denoted as T l=F) iff there is no interpretation for which every formula of T is true and F is false
+		- Example:
+			- p (X, Y) is a consequence of q (X, Y, Z) ^ p (X, Y)
+			- p (X, Y) is also a consequence of T where T = {q (X, Y, Z) ^ p (X, Y), q (X, Y, Z) V p (X, Y)}
+	- **Definition**- set of formulas is consistent if it has a model
+	- **Syntax of first order logic**- deductive apparats of first order logic contants seven axioms and one inference rule
+	- **Axioms**- let A, B, C be formulas, the axioms of first order predicate logic are:
+		- (A <- B) <- A
+		- ((C <- A) <- (B <- A)) <- ((C <- B) <- A)
+		- (A <- B) <- (-B <- -A)
+		- A <- (A(upside down)X) A
+		- (E(backwards)X)A <- A
+		- ((A(upside down)X)B <- (A(upside down)X) A <- (A(upsidedown)X) (B <-A)
+		- if A is an axionm then (A(upsidedown)X) A is also axionm
+		- inference rule of first order logic is the Modus ponens rule
+	- **Modus ponens rule**- if A and B are formulas then B is the immediate consequence of A and B <- A
+	- **Proof**- proof is a finite sequence of formulas in which each formula is either and axiom or an immediate consequence of the previous formulas by modus ponens rule
+	- **Theorem**- formula F is a theorem of first order logic if there is a proof in which the last forumla is F then it is denoted as l - F
+		- Example:
+			- if A, B, C are formulas the sequence below is a proof
+			- if A is a formula the sequence below is not a proof
+			- if A, B, C are formulas the sequence below is a proof
+			- (A <- B) <- A (Axiom (1))
+			- ((C <- A) <- (B <- A)) <- ((C <- B) <- A) (Axiom (2))
+			- ((A <- A) <- (B <- A)) <- ((A <- B) <- A) Axiom(2)
+			- ((A <- A) <- (B <- A)) (Modus Ponens rules)
+		- Example: if A is a formula the sequence below is not a proof
+			- A
+			- (A <- B) <- A (Axiom (1))
+			- A <- B (Modus Ponens rule)
+		- Example: some theorems of first order logic are listed below, if X is a variable and p and q are predicate symbols then:
+			- -(A(upside down)X) p(X) <-> (E(backwards)X) -p(X)
+			- -(E(backwards)X) p(X) <-> (A(upside down)X) -p(X)
+			- -(p(X) ^ q(X)) <-> (-p(X) V -q(X))
+			- -(p(X) V q(X)) <-> (-p(X) ^ -q(X))
+			- --p(X) <-> p(X)
+			- (p(X) <- q(X)) <-> (-p (X) V q(X))
+			- symbol <-> defined as follows: for any formulas A and B, A <-> B is equivalent to ((A <- B) ^ (B <- A))
+	- **Derivation**- F be a formula and T be a set of formulas. Derivation of F from T is a finite sequence of formulas satisfying the following conditions: 
+		- F is the last formula of the sequence
+		- each of the formula is an axiom or a immediate conseuqnce of he previous frmulas or a formula of T
+		- in a special case when T is empty, a derivation becomes a proof
+		- Example:
+			- T = {A, B, C <- A ^ B} the sequence below is a derivation of C from T
+			- A (formula from T)
+			- B (formula from T)
+			- C <- A ^ B (formula from T)
+			- C (Modus Ponens rule)
+	- **Definitions**- F be a formula and T be a set of formulas. F is defined as a consequence (logical consequence) of T if there is a dervation of F from T denoted as T l - F
+		- Example: in previous example where T = {A, B, C <- A ^ B} C is a consequence of T
+	- **Consistent**- set of T of formulas is deinfed as consistent if and only if there is not such formula F that T l - F and T l - -F
+		- Example:
+			- T = {A, B, -C <- A, C <- A ^ B} is a set which is inconsistent because both C and -C can be derived from T
+	- **Theorem**- formula is consequence of a set of formulas (in syntax) if and only if it is a consequence of the set (in semantics). a set of formulas are consistent (in syntax) if and only if they are consistent (in semantics)
