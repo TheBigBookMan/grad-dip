@@ -43,7 +43,7 @@
 			- connectives (-(**negation** (opposite of whatever it is)), V(**disjunction** (logical OR between propositions)), ^(**conjuction** (logical AND between propositions)), <- (**implication** (proposition implies another (if one proposition is true then another must also be true))))
 			- punctuation (( ))
 	- **Well formed formula (wff)**- 
-		- a proposition
+		- a proposition- a sentence that is either true or false
 		- if A and B are forumlas, then (-A), (A ^ B), (A V B), (A <- B) are forumlas
 - **Axioms**- statemeents assumed to be true without proof
 	- (A <- B) <- A

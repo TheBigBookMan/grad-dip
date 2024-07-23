@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "53bf2b29eae9aa3d",
+        "id": "0b61ab6b8bee16c6",
         "type": "tabs",
         "children": [
           {
-            "id": "cfe3d1468f80348b",
+            "id": "41e19daa2ef791a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,18 +147,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfe3d1468f80348b",
+  "active": "41e19daa2ef791a7",
   "lastOpenFiles": [
+    "Intro Prograrmming/Intro.md",
     "Untitled.md",
     "Artificial Intelligence/AI.md",
-    "Intro Prograrmming/INtro.md",
-    "Intro Prograrmming/Intro.md",
+    "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/SAA/Solutions.md",
     "AWS Skill Builder/Services.md",
-    "AWS Skill Builder/Architecture.md",
-    "Artificial Intelligence/Untitled.md",
-    "Intro Prograrmming",
     "AWS Skill Builder/SAA",
+    "Intro Prograrmming",
+    "Artificial Intelligence",
     "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
     "Pasted image 20240523133829.png",
@@ -182,7 +181,6 @@
     "Information Technology/Week5_PracticeClass/BusinessPage.php",
     "Information Technology/Week5_PracticeClass/OrderList.php",
     "Information Technology/Week5_PracticeClass/CustomerList.php",
-    "Information Technology/Week5_PracticeClass/shopstyle.css",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
@@ -194,6 +192,8 @@
     "Databases/Normalization.md",
     "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md",
     "Databases/Topic 1.md",
-    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md"
+    "Databases/Reading/Database Systems, Implementation and Management by Carlos Coronel.md",
+    "2023-08-18.md",
+    "Databases/Readings.md"
   ]
 }
