@@ -35,6 +35,7 @@
 	- **Formal system**- 
 		- formal language with a deductive apparatus is a formal system
 		- a deductive appratus consists of the axioms and rules of inference that can be used to derive theoroms
+- **Truth tables**- 
 - **Proppositional logic**- can be used for problem solving, planning and decision making, as well as reasoning, it helps representing knowledge in mathematical and logical form- can be either true or false
 	- **Propositional Language**- 
 		- is a formal language
@@ -45,25 +46,70 @@
 	- **Well formed formula (wff)**- 
 		- a proposition- a sentence that is either true or false
 		- if A and B are forumlas, then (-A), (A ^ B), (A V B), (A <- B) are forumlas
+- **Proposition**- a sentence that is either true or false, eg: the cat is brown- *p*
+	- **Negation**- it means that it is NOT proposition (a negative of the statement), eg: the cat is not brown- *-p*
+	- **Conjunction**- takes 2 logical formulas and expresses that both are true, proposition1 AND proposition2 are true, eg: the cat is brown AND the cat has fur- *p ^ q*
+	- **Disjunction**- takes 2 logical formulas and expresses that atleast one is true, proposition1 OR proposition2 as long as one is true, eg: the cat is not brown OR the cat has fur- *p V q* 
+	- **Implication**- takes a proposition and if it is true then the next proposition must also be true, eg: the cat is brown THEREFORE the cat has fur- *p -> q*
+		- this is also true when the first proposition is FALSE, the cat is not brown SO it doesnt have fur, the cat is not brown SO it does have fur
+		- logically equivalent to *-p V q* 
+	- **Biconditional**- takes 2 propositions and says if proposition1 is true THEN proposition2 is true or proposition1 is false THEN proposition2 is false *p <-> q* 
+- **Contrapositive**- when there's two negations in an implication they cross each other out as both ways are true of each other, eg: *(-A -> -B)* is equivalent of *(A -> B)* 
 - **Axioms**- statemeents assumed to be true without proof
 	- (A <- B) <- A
 	- ((C <- A) <- (B <- A)) <- ((C <- B) <- A)
 	- (A <- B) <- (-B <- -A)
+- **Inference**- deriving logical conclustions from given premises- reach new conclusions
+	- **Deductive Inference**- conclusion based on premise where premis true then conclusion must be true
+		- premise1: ben is man
+		- premise2: man is strong
+		- conclusion: therefore ben is strong
+	- **INductive Inference**- drawing general conclusion based on specific observations, not alwasy conclusion is true, but most likely
+		- observation: the sun rises east everyday in recorded history
+		- conclusion: therefore the sun will likely rise east tomorrow
+	- **Abductive Inference**- finding the most likely explanation for observations, forms hypotheses or theories
+		- observation: grass is wet in morning
+		- hypotheses: probably rained last night
 - **Inference Rule**- rule of inference is modus ponens rule: A and B <- A infer B. derive new propositions from existing ones
+	- **Modus Ponens**- *P -> Q* if P is true, then Q must be true
 - **First Order Logic**- extention of propositional logic, propositional = true/false, first order= one + variables
 	- **Alphabet** of first order
-		- **Variables** - (X, Y, Z...)
-		- **Constants**- (a, b, c, ...)
-		- **Function**- (f, g, ...)
-		- **Predicate**- (p, q, ...)
+		- **Variables** - (X, Y, Z...)- placeholders for objects that can be replaced by a value
+		- **Constants**- (a, b, c, ...)- specific, unchanging objects in the domain, eg: *a* represents a particular object or individual
+		- **Function**- (f, g, ...)- map objects to objects in the domain, they take one or more arguements and return a single object. eg: *f(x)* denotes a function that maps x to another object in the domain
+			- usually returns a value or different variable
+			- does not return true or false (this is what a predicate returns)
+		- **Predicate**- (p, q, ...)- statements that involve variables which are neither true or false until or unless the values of the variables are specified
+			- eg: *X is an animal*- there is no value for X so we cant evaluate if true or false
+			- proposition has the value so we can determine if true or false
+			- so once the value of the predicate has been assigned then it becomes a proposition
+			- predicate returns true or false
+			- **Predicate shorthand**- can break it down to make easier to read
+				- *X is greater than 3* can be G(X)
+				- G() is the **predicate** = *is greater than 3*
+				- X is the subject/variable
+				- if it's *G(5)* then this is now a proposition because we have a value of 5 so it is *5 is greater than 3* which = true
 		- **Connectives**- (- (**negation**), V (**disjunction**), ^ (**conjunction**), <- (**implicaton**))
-		- **Quantifiers**- (A(Upside down) (**universal quantifier**), E (backwards) (**existing quantifier**))
+		- **Quantifiers**- (A(Upside down) (**universal quantifier**), E (backwards) (**existing quantifier**))- can combine quantifiers for more complex statements
+			- specify the scope of variables within a formulas
+			- **Universal Quantifier**- ∀- expresses a statement holds for all elements in the domain
+				- *∀x P(x)* = *"for all x, P(x) is true* 
+				- sets a general rule that applies everywhere within a domain or all memebers of a set
+			- **Existential Quantifier**- ∃- states there is at least one element in the domain for which the predicate is true
+				- *∃xP(x)* = "*there exists an x such that P(x) is true*"
+				- express existence of at least one element that satisfies given condition, useful for stating that a particular property or relationship holds for some members of a set
 		- **Punctuation** ( (  ) )
-	- **Term**- 
-		- a constant
-		- a variable
-		- f(X1, X2, ...., Xn) where f is an n-ary function symbol and X1, X2, Xn are terms
-	- **Atom**- if p is a pedicate and X1, X1, ... Xn are terms, then p(X1, X2, ..., Xn) is an atom
+		- **Equality**- to represent equality between two terms- *x = y* = "x is equal to y"
+	- **Term**- construct expressions involving predicates, functions, logical connectives- used to refer to objects in the domain
+		- **Constant Term**- symbols refer to specific, fixed objects within the domain and represent particular elements not changing
+			- if domain is a set of people, the constant might be Ben or Sam representing individuals specifically
+		- **Variable Term**- variables placeholders representing any element in the domain, used to express generality and are bound by quantifiers in logical expressions
+			- x, y, z can stand for any element in domain
+		- **Function Term**- map one or more terms to anther term, term represents the result of applying a function to one or more terms
+			- f(x, y) can be function(x + y) so therefore can be something like f(2, 5) where the response would be 7 as 2 + 5
+	- **Atom (Atomic Formula)**- basic type of logical statement or expression, its a predicate applied to set of terms and does not contain any logical connectives
+		- if p is a pedicate and X1, X1, ... Xn are terms, then p(X1, X2, ..., Xn) is an atom
+		- can be used in smaller components to make a more complex statement that will have multiple atoms, eg: (P(a, b) ^ Q(c, d))
 	- **Literal**- literal is an atom or the negation of an atom, *A* positive literal is an atom, *a* negative literal is the negation
 		- example- if *p* is predicate, *a*, *b*, *X* are terms: then
 			- p(a + b, X, Xa) is an atom
