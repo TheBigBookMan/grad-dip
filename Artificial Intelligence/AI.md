@@ -224,3 +224,41 @@
 		- Example:
 			- T = {A, B, -C <- A, C <- A ^ B} is a set which is inconsistent because both C and -C can be derived from T
 	- **Theorem**- formula is consequence of a set of formulas (in syntax) if and only if it is a consequence of the set (in semantics). a set of formulas are consistent (in syntax) if and only if they are consistent (in semantics)
+
+## Knowledge Representation
+- research field of AI understanding, designing, implementing ways of representing information in computers so computer can use the information
+	1. to derive information that is implied by it
+	2. to converse with people in natural languages
+	3. to decide waht to do next
+	4. to solve problems in areas that normally require human expertise
+- **Types knowledge representation mechanisms**
+	- **Scripts**- structure that prescribes set of circumstances which could be expected to follow on from one another, chain of situations which could be anticipated. 
+		- used in natural language understanding systems to organise a knowledge base in terms of the situations that the system is to understand
+		- Beneficial because:
+			1. events tend to occur in known runs or patterns
+			2. causal relationships between events exist
+			3. entry conditions exist which allow an event to take place
+			4. prerequisites exist upon events taking place like when a student progresses through a degree scheme, or when a purchaser buys a house
+		- usually represented using conceptual dependency structures
+		- **Components of a script**-
+			- **Entry Conditions**- these must be satisfied before events in the script can occur 
+				- customer is hungry, bustomer has money, restuarant is open
+			- **Results**- conditions that will be true after events in script occur
+				- customer not hungry, customer has less money, owner has more money
+			- **Objects**- factors/items that support the content of the script- the objects involved in the events
+				- tables, menu, food, money
+			- **Roles**- individual participants in the script and the actions they perform
+				- customer, waiter, cook, cashier, owner
+			- **Scenes**- the script is broken up into a sequence of scenes, each of which presents a temporal aspect of the script
+				- Scene 1: customer enters restaurent, customer looks at tables, customer decies where to sit
+				- Scene 2: waiter brings menyu, customer orders food
+	- **Frames**- 
+		- frames are collection of attributes or slots and associated values that describe a real world entity
+		- each frame represents a class, or an instance
+		- frames are extensions of record datatypes in databases
+		- similar to a relational database how tables are conencted through inheritance
+			- an orange class is a child of the fruit class inheriting certain characteristics
+	- **Semantic Networks**- represents knowledge as a graph
+		- graph based knowledge representations
+		- use of nodes that may represent an entity with an arc that links an entity to another entity (Ben (entity) -> likes (arc) apples (entity))
+		- can also link entities together through inheritance and show how entities are conneted
