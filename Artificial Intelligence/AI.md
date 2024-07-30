@@ -32,10 +32,12 @@
 	- **Formal language**- contains
 		- set of symbols (alphabet of the language)
 		- set of formation rules determining which sequences of symbols from its alphabet are well formaed formulas
+		- formal language is abstract unless we assign meaning to it compared to human language where it carries meaning
 	- **Formal system**- 
 		- formal language with a deductive apparatus is a formal system
 		- a deductive appratus consists of the axioms and rules of inference that can be used to derive theoroms
 - **Truth tables**- 
+- semantics (model theory) of a formal lanaguge is the study of interpretations, truth functions and models of the language
 - **Proppositional logic**- can be used for problem solving, planning and decision making, as well as reasoning, it helps representing knowledge in mathematical and logical form- can be either true or false
 	- **Propositional Language**- 
 		- is a formal language
@@ -254,11 +256,22 @@
 				- Scene 2: waiter brings menyu, customer orders food
 	- **Frames**- 
 		- frames are collection of attributes or slots and associated values that describe a real world entity
-		- each frame represents a class, or an instance
+		- each frame represents a class, or an instance of real world entity
 		- frames are extensions of record datatypes in databases
 		- similar to a relational database how tables are conencted through inheritance
 			- an orange class is a child of the fruit class inheriting certain characteristics
+			- also how a frame may have a slot which is another frame
+				- a UniClass(startTime, startDate, Lecturer (other frame with name, specialty))
 	- **Semantic Networks**- represents knowledge as a graph
 		- graph based knowledge representations
 		- use of nodes that may represent an entity with an arc that links an entity to another entity (Ben (entity) -> likes (arc) apples (entity))
 		- can also link entities together through inheritance and show how entities are conneted
+		- **Quillians Network**- represent the meaning of english words by traversing a network of related words to reach the final understanding of the word
+			- each node is a word concept and a word is defined in terms of other words and the components of the definition are defined in the same fashion
+			- looking uop the meaning of a wod we raverse this network until we are satisfied that we understand the original word
+			- prgram used to find relationships between pairs of english words
+			- find links between words through nodes and leafs of words that are similar
+			- problem with this was it had to deal with complexities of many domains
+		- estimate the distance between words (identifying synonyms)- used for information retrieval
+			- like a question-answering system can estimate the distance between a question entered and multiple answers found on interenet, then estimate distance between the question and each answer and then display answer shotest distnace
+			- measure the distance by using Quillians by seeing the nodes and leafs etc between question to answer
