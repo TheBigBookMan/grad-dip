@@ -62,16 +62,32 @@
 
 
 # Task 4
-# !!! NEED TO ADD IN PROPER PRINT STATEMENT
-initial_deposit = float(input("What is the initial deposit amount? "))
-interest_rate = float(input("What is the interest rate? "))
-term_length = int(input("What is the term length in years? "))
+# initial_deposit = float(input("What is the initial deposit amount? "))
+# interest_rate = float(input("What is the interest rate? "))
+# term_length = int(input("What is the term length in years? "))
 
-# For loop iterating the compounding interest
-if term_length == 0:
-    print(initial_deposit)
-else:
-    for i in range(term_length):
-        initial_deposit = initial_deposit + (initial_deposit * (interest_rate / 100))
-        print(initial_deposit)
+# final_amount = 0
+
+# if term_length == 0:
+#     final_amount = initial_deposit
+# else:
+#     compound_price = initial_deposit
+#     for i in range(term_length):
+#         compound_price = compound_price + (compound_price * (interest_rate / 100))
+
+#     final_amount = compound_price
+
+# print(f"Deposit amount ($): {initial_deposit}")
+# print(f"Interest rate (%): {interest_rate}")
+# print(f"Years invested: {term_length}")
+# print(f"Balance after {term_length} years: ${final_amount}")
+
+
+# Task 5
+# Part A
+min_required_battery = input("What is the minimum required battery capacity in milliamp-hours (mAh)? ")
+
+SMALL_MAH = 3000
+MEDIUM_MAH = 10000
+LARGE_MAH = 20000
 
