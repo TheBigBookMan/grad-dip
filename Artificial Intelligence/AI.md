@@ -48,6 +48,7 @@
 	- **Well formed formula (wff)**- 
 		- a proposition- a sentence that is either true or false
 		- if A and B are forumlas, then (-A), (A ^ B), (A V B), (A <- B) are forumlas
+		- needs to have a way to represent that it is a formula so like a conjunction or something between two formulas
 - **Proposition**- a sentence that is either true or false, eg: the cat is brown- *p*
 	- **Negation**- it means that it is NOT proposition (a negative of the statement), eg: the cat is not brown- *-p*
 	- **Conjunction**- takes 2 logical formulas and expresses that both are true, proposition1 AND proposition2 are true, eg: the cat is brown AND the cat has fur- *p ^ q*
@@ -128,6 +129,7 @@
 			- These are not forumlas:
 			- A(upsidedown)X (p(a, b, X) p(a, c, X))
 			- p(a, b, X) ^
+			- they are not formulas because they have no quantifiers or predicates/functions
 - **Semantics and Syntax**- 
 	- **Semantics** - (model theory) of a formal language is study of interpretations, truth functions and models of the language
 	- **Syntax**- (proof theory) study of deductive apparatus
