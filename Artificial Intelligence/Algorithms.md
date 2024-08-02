@@ -56,3 +56,19 @@
 	- if all Open list, then combinatorially explosive nature of the space may prevent finding a soltuion
 	- Space Complexity makes it impractical for large problems
 - **Depth-first search**- 
+	- When a state is examined, all of its children and their descendents are examined before its siblings
+	- Moves vertically down a branch before moving on to the next branch
+	- will iterate through all descendants of a node before moving on to a sibling
+	- gets quickly into a deep search space
+	- if its known that solution path will be long, it doesnt waste time searching several shallw states in the graph
+	- can get lost deep in a graph, missing shorter paths to a goal
+	- at each level, the list open retains only the children of a single state, if a graph has an average of B children per state, this requires a toal space usage of *B n* states to go *n* levels deep into the space
+- **Depth-first search with depth limit**-
+	- good compromise between breadth-first and depth-first
+	- set a global depth limit and dont explore if the depth is greater than that limit
+		- the depth bound forces a failure on a search path once it has reached a certain level
+		- results in a breath-like sweep of the search space at that depth level
+	- most appropriate if it is known that a solution lies within a certain depth
+	- can create the depth limit to be:
+		- based on certain amount of resources that you have, needing to save on computation so splitting the amount across branches 
+		- how many snapshots of state can be made within the probem, like in a game where you can only make a certain amount of moves then thats the depth limit
