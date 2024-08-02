@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0f9902d3f94b63ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Artificial Intelligence/Algorithms.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
+                "file": "Artificial Intelligence/Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
+                "file": "Artificial Intelligence/Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Artificial Intelligence/AI.md"
+                "file": "Artificial Intelligence/Algorithms.md"
               }
             }
           }
@@ -147,12 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfe3d1468f80348b",
+  "active": "0f9902d3f94b63ba",
   "lastOpenFiles": [
+    "Artificial Intelligence/AI.md",
+    "Artificial Intelligence/Algorithms.md",
+    "Artificial Intelligence/~$ssign1.docx",
+    "Artificial Intelligence/assign1.docx",
+    "Artificial Intelligence/New Microsoft Word Document.docx",
     "Intro Prograrmming/assignment1.py",
     "Artificial Intelligence/intro.py",
     "Untitled.md",
-    "Artificial Intelligence/AI.md",
     "Intro Prograrmming/INtro.md",
     "Intro Prograrmming/Intro.md",
     "AWS Skill Builder/SAA/Solutions.md",
@@ -180,10 +197,6 @@
     "Information Technology/Human Computer Interface.md",
     "Information Technology/Topic 6- Spreadsheets.md",
     "Information Technology/Assessment3.zip",
-    "Information Technology/Week5_PracticeClass.zip",
-    "Information Technology/Week5_PracticeClass/BusinessPage.php",
-    "Information Technology/Week5_PracticeClass/OrderList.php",
-    "Information Technology/Week5_PracticeClass/CustomerList.php",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
