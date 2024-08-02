@@ -85,9 +85,30 @@
 
 # Task 5
 # Part A
-min_required_battery = input("What is the minimum required battery capacity in milliamp-hours (mAh)? ")
+
+device_total_battery_capacity = 0
+
+while True:
+    device_capacity = float(input("What is the device capacity? "))
+    device_total_battery_capacity = device_total_battery_capacity + device_capacity
+
+    more_devices = input("Do you have more devices? ")
+
+    if more_devices == "n":
+        break
 
 SMALL_MAH = 3000
 MEDIUM_MAH = 10000
 LARGE_MAH = 20000
 
+powerbank_recommend = ''
+
+if device_total_battery_capacity <= SMALL_MAH:
+    powerbank_recommend = "Small MAH"
+elif device_total_battery_capacity <= MEDIUM_MAH:
+    powerbank_recommend = "Medium MAH"
+else:
+    powerbank_recommend = "Large MAH"
+
+print(f"Total requirement: {device_total_battery_capacity} mAH")
+print(f"Recommended powerbank: {powerbank_recommend}")
