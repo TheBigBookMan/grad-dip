@@ -117,3 +117,5 @@
 		- Space Complexity- O(bd)
 		- Optimality/Admissibility- Yes
 		- b = branching factor, d is depth of solution
+
+## Heuristic Search
