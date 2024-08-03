@@ -72,3 +72,48 @@
 	- can create the depth limit to be:
 		- based on certain amount of resources that you have, needing to save on computation so splitting the amount across branches 
 		- how many snapshots of state can be made within the probem, like in a game where you can only make a certain amount of moves then thats the depth limit
+- **Evaluating search strategies**- 
+	- four factors for evaluating
+		1. **Completeness**- 
+			- a search is complete if it is guaranteed to find a solution if there is one
+			- not all search techniques are complete
+		2. **Time Complexity**-
+			- how long does it take to find a solution
+			- usually measured in terms of the number of nodes expanded
+		3. **Space Complexity**-
+			- how much space is used by the algorithm
+			- usually measured in terms of the max size that the nodes list becomes during the search
+		4. **Optimality/Admissibility**-
+			- if a solution is found, is it guaranteed to be an optimal one, that is is it the one with the minimum cost
+	- **Evaluation Breadth-first**
+		- Completeness- Yes
+		- Time Complexity- 1 + b + b^2 + b^3 ... + b^n = O(b^n)
+		- Space Complexity- O(b^n)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, n = depth of solution
+	- **Evaluation Depth-first**
+		- Completeness- No
+		- Time Complexity- O(b^m)
+		- Space Complexity- O(bm)
+		- Optimal/Admissibility- No
+		- b = branching factor, m = max depth of tree search
+	- **Evaluation Depth-first wth Depth-limit**
+		- Completeness- Yes if l > d
+		- Time Complexity- O(b^l)
+		- Space Complexity- O(bl)
+		- Optimal/Admissibility- No
+		- b = branching factor, d = depth of solution, l is depth limit
+	- **Evaluation depth-first search with iterative deepening (ID)**
+		- This is where the depth consistently geets deeper with every iteration
+		- Checks all nodes at current depth limit before increasing depth limit
+		- Completeness- Yes
+		- Time Complexity- O(b^d)
+		- Space Complexity- O(b^d)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, d = depth of solution
+	- **Evaluation of O(bd)**
+		- Completeness- Yes if l > d
+		- Time Complexity- 1 + (1 + b) + (1 + b + b^2)... = O(b^d)
+		- Space Complexity- O(bd)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, d is depth of solution
