@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0f9902d3f94b63ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Artificial Intelligence/Algorithms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,16 +147,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f9902d3f94b63ba",
+  "active": "cfe3d1468f80348b",
   "lastOpenFiles": [
     "Artificial Intelligence/~WRL0004.tmp",
     "Artificial Intelligence/~WRD0003.tmp",
     "Artificial Intelligence/~WRD0002.tmp",
     "Artificial Intelligence/AI.md",
-    "Artificial Intelligence/Algorithms.md",
     "Artificial Intelligence/~$ssign1.docx",
     "Artificial Intelligence/assign1.docx",
-    "Artificial Intelligence/New Microsoft Word Document.docx",
+    "Artificial Intelligence/Algorithms.md",
     "Intro Prograrmming/assignment1.py",
     "Artificial Intelligence/intro.py",
     "Untitled.md",
@@ -198,6 +184,8 @@
     "Information Technology/Introduction IT.md",
     "Information Technology/Human Computer Interface.md",
     "Information Technology/Topic 6- Spreadsheets.md",
+    "Information Technology/Assessment3.zip",
+    "Information Technology/Week5_PracticeClass.zip",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",

@@ -56,3 +56,66 @@
 	- if all Open list, then combinatorially explosive nature of the space may prevent finding a soltuion
 	- Space Complexity makes it impractical for large problems
 - **Depth-first search**- 
+	- When a state is examined, all of its children and their descendents are examined before its siblings
+	- Moves vertically down a branch before moving on to the next branch
+	- will iterate through all descendants of a node before moving on to a sibling
+	- gets quickly into a deep search space
+	- if its known that solution path will be long, it doesnt waste time searching several shallw states in the graph
+	- can get lost deep in a graph, missing shorter paths to a goal
+	- at each level, the list open retains only the children of a single state, if a graph has an average of B children per state, this requires a toal space usage of *B n* states to go *n* levels deep into the space
+- **Depth-first search with depth limit**-
+	- good compromise between breadth-first and depth-first
+	- set a global depth limit and dont explore if the depth is greater than that limit
+		- the depth bound forces a failure on a search path once it has reached a certain level
+		- results in a breath-like sweep of the search space at that depth level
+	- most appropriate if it is known that a solution lies within a certain depth
+	- can create the depth limit to be:
+		- based on certain amount of resources that you have, needing to save on computation so splitting the amount across branches 
+		- how many snapshots of state can be made within the probem, like in a game where you can only make a certain amount of moves then thats the depth limit
+- **Evaluating search strategies**- 
+	- four factors for evaluating
+		1. **Completeness**- 
+			- a search is complete if it is guaranteed to find a solution if there is one
+			- not all search techniques are complete
+		2. **Time Complexity**-
+			- how long does it take to find a solution
+			- usually measured in terms of the number of nodes expanded
+		3. **Space Complexity**-
+			- how much space is used by the algorithm
+			- usually measured in terms of the max size that the nodes list becomes during the search
+		4. **Optimality/Admissibility**-
+			- if a solution is found, is it guaranteed to be an optimal one, that is is it the one with the minimum cost
+	- **Evaluation Breadth-first**
+		- Completeness- Yes
+		- Time Complexity- 1 + b + b^2 + b^3 ... + b^n = O(b^n)
+		- Space Complexity- O(b^n)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, n = depth of solution
+	- **Evaluation Depth-first**
+		- Completeness- No
+		- Time Complexity- O(b^m)
+		- Space Complexity- O(bm)
+		- Optimal/Admissibility- No
+		- b = branching factor, m = max depth of tree search
+	- **Evaluation Depth-first wth Depth-limit**
+		- Completeness- Yes if l > d
+		- Time Complexity- O(b^l)
+		- Space Complexity- O(bl)
+		- Optimal/Admissibility- No
+		- b = branching factor, d = depth of solution, l is depth limit
+	- **Evaluation depth-first search with iterative deepening (ID)**
+		- This is where the depth consistently geets deeper with every iteration
+		- Checks all nodes at current depth limit before increasing depth limit
+		- Completeness- Yes
+		- Time Complexity- O(b^d)
+		- Space Complexity- O(b^d)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, d = depth of solution
+	- **Evaluation of O(bd)**
+		- Completeness- Yes if l > d
+		- Time Complexity- 1 + (1 + b) + (1 + b + b^2)... = O(b^d)
+		- Space Complexity- O(bd)
+		- Optimality/Admissibility- Yes
+		- b = branching factor, d is depth of solution
+
+## Heuristic Search
