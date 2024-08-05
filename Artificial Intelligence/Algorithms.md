@@ -118,4 +118,24 @@
 		- Optimality/Admissibility- Yes
 		- b = branching factor, d is depth of solution
 
-## Heuristic Search
+## Heuristic Search (Best-first, A*, Hill climbing and Simulated Annleaing search)
+- Comparison between blind search and heuristic search
+	- **Blind Search**
+		- depth-first and breadth-first strategies do not consider information about preferred states
+		- no capability of determining if one state is better (like closer to the goal), this is why called blind/uninformed/exhaustive
+		- blind search searches through a state space indiscriminately
+		- usually very ineffecient, by adding a domain knoweldge we can improve search processes 
+	- **Heuristic Search**
+		- in contrast to blind search, heuristic have some idea of how close state is to the goal (this means it can explore the more promising states first)
+		- heuristic evaluation function that determines which state to select to continue the search
+		- explore the node that is most likely to be nearest to goal state using the heuristic function which tells us how close we are to the goal state
+		- no guaranteee heuristic function will return a value that ensures a node is closer to gal state than another node
+		- implement heuristic function, need to have domain knoweldge so the heuristic function has to know something about the problem so it can judge how close the current state is to the goal state
+- **Heuristic Function**- *f(n)* = estimated distance between the state *n* and the goal state
+	- definition of *f(n)* is problem dependent
+- **Best-first search (greedy search)**- 
+	- similar to fepth-first and breath-fiorst, uses list OPEN to keep track of current fringe of the search and CLOSED record states already visited
+	- this includes added step of ordering the states on OPEN according to the heuristic function- the closeness of these states to the goal
+	- On each iteration the search, it alwas selects the most "promising" state (with the lowest heuristic function value) in OPEN to perform search, thus OPEN is actually a priority queue
+	- each step it will look at the ordered OPEN list and choose the best heuristic function (lowest score = estimated closer to goal) and this is why greedy because always choosing the best selection
+- 
