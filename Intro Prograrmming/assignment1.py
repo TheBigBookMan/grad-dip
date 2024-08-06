@@ -42,8 +42,7 @@
 
 
 # Task 3
-# TODO test on real food??? i dunno
-# !!! need to test though
+
 # serving_size = float(input("What is the serving size in grams? "))
 # grams_fat = float(input("How many grams of fat in a serving? "))
 # grams_carbs = float(input("How many grams of carbohydrates in a serving? "))
@@ -53,12 +52,13 @@
 # CARBS_CALS_PER_GRAM = 4
 # PROTEINS_CALS_PER_GRAM = 4
 
-# total_fat = ((serving_size * grams_fat) / 100) * FATS_CALS_PER_GRAM
-# total_carbs = ((serving_size * grams_carbs) / 100) * CARBS_CALS_PER_GRAM
-# total_protein = ((serving_size * grams_protein) / 100) * PROTEINS_CALS_PER_GRAM
+# total_fat = grams_fat * FATS_CALS_PER_GRAM
+# total_carbs = grams_carbs * CARBS_CALS_PER_GRAM
+# total_protein = grams_protein * PROTEINS_CALS_PER_GRAM
 
 # total_cals = total_fat + total_carbs + total_protein
-# print(total_cals)
+# cals_per_100_grams = (total_cals / serving_size) * 100
+# print(cals_per_100_grams)
 
 
 # Task 4
@@ -86,29 +86,29 @@
 # Task 5
 # Part A
 
-device_total_battery_capacity = 0
+# device_total_battery_capacity = 0
 
-while True:
-    device_capacity = float(input("What is the device capacity? "))
-    device_total_battery_capacity = device_total_battery_capacity + device_capacity
+# while True:
+#     device_capacity = float(input("What is the device capacity? "))
+#     device_total_battery_capacity = device_total_battery_capacity + device_capacity
 
-    more_devices = input("Do you have more devices? ")
+#     more_devices = input("Do you have more devices? ")
 
-    if more_devices == "n":
-        break
+#     if more_devices == "n":
+#         break
 
-SMALL_MAH = 3000
-MEDIUM_MAH = 10000
-LARGE_MAH = 20000
+# SMALL_MAH = 3000
+# MEDIUM_MAH = 10000
+# LARGE_MAH = 20000
 
-powerbank_recommend = ''
+# powerbank_recommend = ''
 
-if device_total_battery_capacity <= SMALL_MAH:
-    powerbank_recommend = "Small MAH"
-elif device_total_battery_capacity <= MEDIUM_MAH:
-    powerbank_recommend = "Medium MAH"
-else:
-    powerbank_recommend = "Large MAH"
+# if device_total_battery_capacity <= SMALL_MAH:
+#     powerbank_recommend = "Small MAH"
+# elif device_total_battery_capacity <= MEDIUM_MAH:
+#     powerbank_recommend = "Medium MAH"
+# else:
+#     powerbank_recommend = "Large MAH"
 
-print(f"Total requirement: {device_total_battery_capacity} mAH")
-print(f"Recommended powerbank: {powerbank_recommend}")
+# print(f"Total requirement: {device_total_battery_capacity} mAH")
+# print(f"Recommended powerbank: {powerbank_recommend}")

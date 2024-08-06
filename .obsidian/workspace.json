@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Artificial Intelligence/AI.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0f9902d3f94b63ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Artificial Intelligence/Algorithms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,16 +147,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f9902d3f94b63ba",
+  "active": "cfe3d1468f80348b",
   "lastOpenFiles": [
-    "Artificial Intelligence/~WRL0004.tmp",
-    "Artificial Intelligence/~WRD0003.tmp",
-    "Artificial Intelligence/~WRD0002.tmp",
+    "Intro Prograrmming/CSE4IP_T4_Assessment1_BenSmerd_22072922.ipynb",
+    "Intro Prograrmming/Untitled.ipynb",
+    "Artificial Intelligence/assign1-state-space-tree.drawio",
     "Artificial Intelligence/AI.md",
-    "Artificial Intelligence/Algorithms.md",
     "Artificial Intelligence/~$ssign1.docx",
     "Artificial Intelligence/assign1.docx",
-    "Artificial Intelligence/New Microsoft Word Document.docx",
+    "Artificial Intelligence/Algorithms.md",
     "Intro Prograrmming/assignment1.py",
     "Artificial Intelligence/intro.py",
     "Untitled.md",
@@ -190,6 +176,7 @@
     "RAG/RAG Langchain.md",
     "AWS Skill Builder",
     "Networking/Intro to Networks.md",
+    "RAG",
     "Information Technology/Topic 1- Computer Architecture.md",
     "Information Technology/Topic 2- Networks.md",
     "Information Technology/Topic 3- Databases.md",
