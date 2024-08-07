@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Artificial Intelligence/AI.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0f9902d3f94b63ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Artificial Intelligence/Algorithms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,21 +160,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfe3d1468f80348b",
+  "active": "0f9902d3f94b63ba",
   "lastOpenFiles": [
-    "Artificial Intelligence/~WRL3286.tmp",
-    "Artificial Intelligence/~WRD3278.tmp",
-    "Artificial Intelligence/~WRL0005.tmp",
-    "Artificial Intelligence/~WRD0004.tmp",
-    "Artificial Intelligence/~WRL0003.tmp",
-    "Artificial Intelligence/~WRD0002.tmp",
-    "Artificial Intelligence/~WRL0001.tmp",
-    "Artificial Intelligence/~WRD0000.tmp",
+    "Intro Prograrmming/CSE4IP_T4_Assessment1_BenSmerd_22072922.ipynb",
     "Artificial Intelligence/~$ssign1.docx",
-    "Artificial Intelligence/~WRL1641.tmp",
-    "Artificial Intelligence/~WRD1637.tmp",
+    "Artificial Intelligence/assign1-state-space-tree.drawio",
+    "Artificial Intelligence/~WRL0004.tmp",
+    "Artificial Intelligence/~WRD0003.tmp",
+    "Artificial Intelligence/~WRD0002.tmp",
     "Artificial Intelligence/AI.md",
     "Artificial Intelligence/Algorithms.md",
+    "Artificial Intelligence/assign1.docx",
+    "Artificial Intelligence/New Microsoft Word Document.docx",
+    "Intro Prograrmming/assignment1.py",
+    "Artificial Intelligence/intro.py",
     "Untitled.md",
     "Intro Prograrmming/INtro.md",
     "Intro Prograrmming/Intro.md",
@@ -169,6 +181,7 @@
     "AWS Skill Builder/Services.md",
     "AWS Skill Builder/Architecture.md",
     "Artificial Intelligence/Untitled.md",
+    "Intro Prograrmming",
     "AWS Skill Builder/Workshops GenAI.md",
     "Pasted image 20240523133859.png",
     "Pasted image 20240523133829.png",
