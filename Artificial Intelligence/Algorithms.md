@@ -144,5 +144,7 @@
 	- On each iteration the search, it alwas selects the most "promising" state (with the lowest heuristic function value) in OPEN to perform search, thus OPEN is actually a priority queue
 	- each step it will look at the ordered OPEN list and choose the best heuristic function (lowest score = estimated closer to goal) and this is why greedy because always choosing the best selection
 - **Uniform Cost Search**- sometimes edges in state space is associated with a cost- so determining the search for goal state AND the lowest cost path to the goal state
+	- cumulative cost of the path
+	- 
 	- breadth-first search finds the shallowest goal state and therefore be the cheapest solution provided the **path cost is a function of the deppth of the solution**, but if it is not the case, then breadth fierst is not gauranteed to find the best (cheapest) solution
 	- Uniform cost search remedies this by expanding the lowest cost node on the fringe, where cost is the path cost from starting state to the current state *g(n)* 
