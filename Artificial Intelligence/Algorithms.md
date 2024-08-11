@@ -153,3 +153,4 @@
 	- heuristic function formula- *f(n) = g(n) + h(n)*
 		- *g(n)* = the cost from the start node to current node
 		- *h(n)* = estimation distance from  current node to goal state
+
