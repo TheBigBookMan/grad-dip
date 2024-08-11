@@ -42,6 +42,7 @@
 ## Blind Search (breadth-first, depth-first, depth-first with depth limit)
 - **Breadth-first search**-
 	- explores the state space lebel-by-level
+	- uses a queue- first in first out
 	- only when no more states to be explored at a given level it moves on to the next level
 	- goes by the levels of the tree, may take a while to get to the bottom of a singular branch if they are all long as it has to clear every parent node off that level
 	- does not maintain a list of states on the current path (however you can if path is required by storing ancestor information along with each state)
@@ -57,6 +58,7 @@
 	- Space Complexity makes it impractical for large problems
 - **Depth-first search**- 
 	- When a state is examined, all of its children and their descendents are examined before its siblings
+	- uses stack- first in last out
 	- Moves vertically down a branch before moving on to the next branch
 	- will iterate through all descendants of a node before moving on to a sibling
 	- gets quickly into a deep search space
@@ -87,15 +89,18 @@
 			- if a solution is found, is it guaranteed to be an optimal one, that is is it the one with the minimum cost
 	- **Evaluation Breadth-first**
 		- Completeness- Yes
-		- Time Complexity- 1 + b + b^2 + b^3 ... + b^n = O(b^n)
-		- Space Complexity- O(b^n)
+		- Time Complexity- 1 + b + b^2 + b^3 ... + b^n = O(b^d)
+			- worst case scenario (big O notation) it will have to go through every branch on every level to reach the goal
+		- Space Complexity- O(b^d)
 		- Optimality/Admissibility- Yes
-		- b = branching factor, n = depth of solution
+		- b = branching factor, d = depth of solution
 	- **Evaluation Depth-first**
 		- Completeness- No
 		- Time Complexity- O(b^m)
+			- worst case scenatio it goes to the max depth of branches, which could be massive
 		- Space Complexity- O(bm)
 		- Optimal/Admissibility- No
+			- because it could go around on a branch for a long time to reach the goal (if goal connected to multiple parents)- where one goal could be shorter, but it just didnt start on that branch
 		- b = branching factor, m = max depth of tree search
 	- **Evaluation Depth-first wth Depth-limit**
 		- Completeness- Yes if l > d
@@ -134,8 +139,17 @@
 - **Heuristic Function**- *f(n)* = estimated distance between the state *n* and the goal state
 	- definition of *f(n)* is problem dependent
 - **Best-first search (greedy search)**- 
-	- similar to fepth-first and breath-fiorst, uses list OPEN to keep track of current fringe of the search and CLOSED record states already visited
+	- similar to depth-first and breath-fiorst, uses list OPEN to keep track of current fringe of the search and CLOSED record states already visited
 	- this includes added step of ordering the states on OPEN according to the heuristic function- the closeness of these states to the goal
 	- On each iteration the search, it alwas selects the most "promising" state (with the lowest heuristic function value) in OPEN to perform search, thus OPEN is actually a priority queue
 	- each step it will look at the ordered OPEN list and choose the best heuristic function (lowest score = estimated closer to goal) and this is why greedy because always choosing the best selection
-- 
+- **Uniform Cost Search**- sometimes edges in state space is associated with a cost- so determining the search for goal state AND the lowest cost path to the goal state
+	- cumulative cost of the path
+	- queue is sorted by the path cost, so whatever is the shortest cost (currently) will be ahead of any nodes that are longer, so its already identifying shorter paths than longer even when its not at goal state
+	- breadth-first search finds the shallowest goal state and therefore be the cheapest solution provided the **path cost is a function of the deppth of the solution**, but if it is not the case, then breadth fierst is not gauranteed to find the best (cheapest) solution
+	- Uniform cost search remedies this by expanding the lowest cost node on the fringe, where cost is the path cost from starting state to the current state *g(n)* 
+- **A* Seaarch**-  combining both greedy search and uniform cost search
+	- have to determine what *g(n)* and *h(n)* - like tiles moved
+	- heuristic function formula- *f(n) = g(n) + h(n)*
+		- *g(n)* = the cost from the start node to current node
+		- *h(n)* = estimation distance from  current node to goal state
