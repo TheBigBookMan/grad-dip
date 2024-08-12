@@ -138,11 +138,19 @@
 		- implement heuristic function, need to have domain knoweldge so the heuristic function has to know something about the problem so it can judge how close the current state is to the goal state
 - **Heuristic Function**- *f(n)* = estimated distance between the state *n* and the goal state
 	- definition of *f(n)* is problem dependent
+	- **Straight Line Distance**- used to determine the optimal distance from points to a goal state
+		- *hsld(n)* = straight line distance betwen *n* and goal location
+		- this is usually being able to measure the distance between two cities based on a map (great indicator for distances)
 - **Best-first search (greedy search)**- 
+	- **Priority queueue**- ordering the OPEN list as prioriy being the best option ordered
 	- similar to depth-first and breath-fiorst, uses list OPEN to keep track of current fringe of the search and CLOSED record states already visited
 	- this includes added step of ordering the states on OPEN according to the heuristic function- the closeness of these states to the goal
 	- On each iteration the search, it alwas selects the most "promising" state (with the lowest heuristic function value) in OPEN to perform search, thus OPEN is actually a priority queue
 	- each step it will look at the ordered OPEN list and choose the best heuristic function (lowest score = estimated closer to goal) and this is why greedy because always choosing the best selection
+	- always choosing the best short term solution, not looiking long term (hence why it always chooses the presented best option)
+	- not guaranteed to be complete
+	- similar to DFS as it will explore one path at a time and then backtrack
+	- time complexity of O(bm)
 - **Uniform Cost Search**- sometimes edges in state space is associated with a cost- so determining the search for goal state AND the lowest cost path to the goal state
 	- cumulative cost of the path
 	- queue is sorted by the path cost, so whatever is the shortest cost (currently) will be ahead of any nodes that are longer, so its already identifying shorter paths than longer even when its not at goal state
@@ -153,4 +161,24 @@
 	- heuristic function formula- *f(n) = g(n) + h(n)*
 		- *g(n)* = the cost from the start node to current node
 		- *h(n)* = estimation distance from  current node to goal state
-
+		- *f(n)* = considered as a estimated cost from the stating state to the goal state through *n*
+	- not guaranteed to find a solution
+	- sometimes a different heuristic evaluation function may lead to different solution (importance of selecting right heuristic function)
+- **Admissable Heuristics**-
+	- important issue how should the evaluation function *f(n)* be defined
+	- evaluation function *f(n)* must never overestimate the cost to reach the goal
+- **Hill Climbing**- math method to search for the optimal
+	1. pick random point in search space
+	2. consider all neighbours of current state
+	3. choose neighbours with best quality and move to that state
+	4. repeat 2-4 until all neighbouring states are of lower quality
+	5. return current state as solution state
+	- no search tree, just returns final solution
+	- if two neighbouring states have same evaluation and both best quality, chooses random between them
+	- not guaranteed to find the best solution and no gaurantees about solution
+	- can reach a state that has no better neighbours however there can be better solutions elsewhere
+	- **Local Maxima**- guess this means the maximum value locally (closest neighbours)
+	- **Global Maxima**- optimal global value- what you are searching for
+	- **Multi-state hill-climb**- series of hill climbing searches each starting randomly in search space
+		- best result is saved from all searches and returned as best soltuion
+		- unless looking at all possible solutions, still not guaranateed to find optimal
