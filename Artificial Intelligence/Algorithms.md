@@ -136,7 +136,8 @@
 		- explore the node that is most likely to be nearest to goal state using the heuristic function which tells us how close we are to the goal state
 		- no guaranteee heuristic function will return a value that ensures a node is closer to gal state than another node
 		- implement heuristic function, need to have domain knoweldge so the heuristic function has to know something about the problem so it can judge how close the current state is to the goal state
-- **Heuristic Function**- *f(n)* = estimated distance between the state *n* and the goal state
+- **Heuristic Function**- function is dependent on the question of the problem, as there could many different functions depending on context
+	- *f(n)* = estimated distance between the state *n* and the goal state
 	- definition of *f(n)* is problem dependent
 	- **Straight Line Distance**- used to determine the optimal distance from points to a goal state
 		- *hsld(n)* = straight line distance betwen *n* and goal location
@@ -157,6 +158,8 @@
 	- breadth-first search finds the shallowest goal state and therefore be the cheapest solution provided the **path cost is a function of the deppth of the solution**, but if it is not the case, then breadth fierst is not gauranteed to find the best (cheapest) solution
 	- Uniform cost search remedies this by expanding the lowest cost node on the fringe, where cost is the path cost from starting state to the current state *g(n)* 
 - **A* Seaarch**-  combining both greedy search and uniform cost search
+	- greedy search looks at the closest node to the goal node, while uniform cost looks at the lowest cost path
+		- A* combines both
 	- have to determine what *g(n)* and *h(n)* - like tiles moved
 	- heuristic function formula- *f(n) = g(n) + h(n)*
 		- *g(n)* = the cost from the start node to current node
