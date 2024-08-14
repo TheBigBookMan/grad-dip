@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "c07ba69ea3338592",
+    "id": "164df8215031e4fd",
     "type": "split",
     "children": [
       {
-        "id": "f3c775b8fea05872",
+        "id": "53bf2b29eae9aa3d",
         "type": "tabs",
         "children": [
           {
-            "id": "6bf0edd6400057e7",
+            "id": "cfe3d1468f80348b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "961d398da4a8f1fe",
+    "id": "e84c71b390091f91",
     "type": "split",
     "children": [
       {
-        "id": "17db79120c589428",
+        "id": "13ed801166dc0b66",
         "type": "tabs",
         "children": [
           {
-            "id": "aac6ac4d95ae06b9",
+            "id": "99211eb9a8982c37",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,12 +43,12 @@
             }
           },
           {
-            "id": "854c985dc209c543",
+            "id": "8fb78f30e2f61558",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Chapter1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "58e46197aa66f001",
+            "id": "09736edaa66aac2c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,19 +69,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "right": {
-    "id": "c29e9d33f80e9e86",
+    "id": "c585aa9f458856fa",
     "type": "split",
     "children": [
       {
-        "id": "19786429c4babd88",
+        "id": "0d88546b29d17bf7",
         "type": "tabs",
         "children": [
           {
-            "id": "3485cfde898a8e37",
+            "id": "0f1563e670ab6130",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -98,7 +98,7 @@
             }
           },
           {
-            "id": "e8c1a260c4409b34",
+            "id": "bf85cc795a1d2945",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -110,7 +110,7 @@
             }
           },
           {
-            "id": "07c5d68105d89621",
+            "id": "812ca60d4896edeb",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,7 +121,7 @@
             }
           },
           {
-            "id": "1b63b3ac9509c49b",
+            "id": "96caac351462116c",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -147,13 +147,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6bf0edd6400057e7",
+  "active": "cfe3d1468f80348b",
   "lastOpenFiles": [
-    "Artificial Intelligence/~WRL0003.tmp",
-    "Artificial Intelligence/~WRL1807.tmp",
-    "Artificial Intelligence/~WRD0002.tmp",
-    "Artificial Intelligence/~WRL0001.tmp",
-    "Artificial Intelligence/~WRD0000.tmp",
-    "Artificial Intelligence/AI.md"
+    "Artificial Intelligence/~WRL0315.tmp",
+    "Artificial Intelligence/~WRD0299.tmp",
+    "Artificial Intelligence/~WRL1855.tmp",
+    "Artificial Intelligence/~WRD1843.tmp",
+    "Artificial Intelligence/~WRL4069.tmp",
+    "Artificial Intelligence/~WRD4057.tmp",
+    "Artificial Intelligence/~WRL1582.tmp",
+    "Artificial Intelligence/~WRD1574.tmp",
+    "Artificial Intelligence/~WRL0004.tmp",
+    "Artificial Intelligence/~WRD0003.tmp",
+    "Artificial Intelligence/~$ssign1.docx",
+    "Artificial Intelligence/AI.md",
+    "Artificial Intelligence/Algorithms.md",
+    "Untitled.md",
+    "Intro Prograrmming/INtro.md",
+    "Intro Prograrmming/Intro.md",
+    "AWS Skill Builder/SAA/Solutions.md",
+    "AWS Skill Builder/Services.md",
+    "AWS Skill Builder/Architecture.md",
+    "Artificial Intelligence/Untitled.md",
+    "AWS Skill Builder/Workshops GenAI.md",
+    "Pasted image 20240523133859.png",
+    "Pasted image 20240523133829.png",
+    "Pasted image 20240523133758.png",
+    "Pasted image 20240523103754.png",
+    "Pasted image 20240516111751.png",
+    "RAG/RAG Langchain.md",
+    "Networking/Intro to Networks.md",
+    "Information Technology/Topic 1- Computer Architecture.md",
+    "Information Technology/Topic 2- Networks.md",
+    "Information Technology/Topic 3- Databases.md",
+    "Information Technology/Topic 5- Web Dev- PHP.md",
+    "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
+    "Information Technology/Introduction IT.md",
+    "Information Technology/Human Computer Interface.md",
+    "Information Technology/Topic 6- Spreadsheets.md",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/8VS76C.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/WAUL8A.jpg",
+    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/V4RB9I.jpg",
+    "Databases/Introduction to databases.md",
+    "Databases/Relational Algebra and SQL.md",
+    "Databases/ER+EER Models.md",
+    "Databases/Normalization.md",
+    "Databases/Reading/Fundamentals of Database Systems by Elmasri-Navathe.md"
   ]
 }
