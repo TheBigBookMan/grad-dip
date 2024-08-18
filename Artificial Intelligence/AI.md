@@ -277,3 +277,238 @@
 		- estimate the distance between words (identifying synonyms)- used for information retrieval
 			- like a question-answering system can estimate the distance between a question entered and multiple answers found on interenet, then estimate distance between the question and each answer and then display answer shotest distnace
 			- measure the distance by using Quillians by seeing the nodes and leafs etc between question to answer
+
+## Automated Reasoning
+- Logix is study of correct reasoning and is the science of proof, thinking and inference
+- **Inference Technique**- 
+	- derive logical conclusion given rules and facts
+	- enables AI to simluate human-like decision making and problem solving capabilities
+- **Inference Engine**- component of intelligent system in AI which applies logical rules to the knowledge base to infer new information from known facts
+	- first inference engine was part of the expert system
+	- inference engine commonly proceeds in two modes
+		- **Forward Chaining**- 
+			- data-driven, automatic decision making, unconscious processing
+			- eg object recognition, routine decisions, expert system- design to replace an expert in the domain (e.g. determining if product is good or not when made, also taking in medical symptoms and determining a diagnosis)
+			- may do lots of work that is irrelevant to the goal
+			- considers all possible outcomes
+			- its like it adds on more stuff from the start to reach a goal through logic
+			- **Forward Chaining Process**-
+				1. **Start with Facts**- our knowledge
+					- stored in a knowledge base
+					- e.g. cloudy, raining
+				2. **Apply Rules to Facts**- 
+					- apply some sort of logic (rule) to the facts which then infers a new fact
+					- e.g. cloudy matches rule 1 (might_rain <- cloudy), infers new fact: might_rain
+						- raining matches rule 2 (carry_umbrella <- raining), infers new fact: carry_umbrella
+				3. **Update KNowledge Base**- 
+					- after infering new facts, update knowledge base with new facts
+					- e.g. cloudy, raining, might_rain, carry_umbrella
+				4. **Repeat Until No New Facts Can Be Inferred**- 
+					- until all rules can not infer any more facts then stop
+				- **Conclusion**- the system has inferred tha tthe person should carry an umbrella based on the facts 'it is cloudy' and 'its raining' and the rules that link these conditions to the action of carrying the umbrella
+			1. Start with given proposition symbols (atomic sentence) eg A, B
+			2. Iteratively try to infer truth of additional proposition symbols (A ^ B O=> C) therefore we establish C is true
+			3. Continue until 
+				1. no more inference can be carried out
+				2. goal is reached
+		- **Backward Chaining**- Work backwards from the query Q
+			- goal-driven, appropriate for problem solving
+			- tests a specific hypothesis or goal
+			- e.g. where are my keys? How do i get into phd program?
+			- complexity can be much less than linear in size of KB
+			- this is where you kind of backtrack with logic from the end goal to the start
+			- **Backward Chaining Process**- backtraqcking from goal through the rules and facts
+				1. **Start with Goal**- this is true
+					- goal is carry_umbrella and prove this goal is true
+				2. **MAtch the goal with a rule**- 
+					- look for the rule that leads to the goal carru_umbrella
+					- rule 2: carry_umbrella <- raining
+					- carry_umbrella is conclusion rule 2
+					- subgoal, prove condition of rule 2: raining (is true)
+				3. **Match subgoal with fact**-
+					- check facts to see if fact is true or not (this will determine the end goal)
+					- carry_umbrella <- raining (raining is true)
+				4. **Subgoal Satsified**- 
+					- since subgoal raining is satisfied by the fact (facts are true), original goal carry_umbrella is also satisfied
+				- **Conclusion**- carry_umbrella is true based on the facts and rules
+			1. To prove Q by BC
+			2. check if Q is known already OR
+			3. prove BC all premises of some rule concluding q
+			4. Avoid loops: check if new subgoal is already on the goal stack
+			5. Avoid repeated work; check if new subgoal-
+				1. has already been proved true
+				2. has already failed
+- **SLD-resolution (Selective Linear Definite Clause Resolution)**- SLD-resolution defines process prove a goal for a logic progmra. SLD-resolution contains a set of SLD-derivations for inference and a set of rules (computation rule, selection rule, and ordering rule)
+	- **Three Rules**-
+		- **Computational Rule**- function from a set of definite goals to  a set of atoms that the value of the function for a goal is an atom, called the selected atom, in that goal
+		- **Search Rule**- strategy of searching for SLD-trees to find success branches
+		- **Ordering Rule**- specifies the order in which program clauses are to be tried in the derivation. Computation, search and ordering rules aplpied in SLD-resoltuom are
+			- a. select subgoals according to their order (left to right)
+			- b. depth-first search
+			- c. respect order of the clauses in program
+	- **Soundess and Completeness**- in logic program P, 'the goal G can be derived by SLD-resolution' means that SLD-derivation with the goal G on the program P is successful. 'The goal G cannot be derived by the SLD-resolution' means the derivation with G on P is failed
+		- **Sound**- resolution is sound if the derived is a consequence of the program
+		- **COmplete**- resolution is complete if all consequences of the program can be derived by resoliution
+		- **Theorem**- SLD-resolution is sound, SLD-resolution is complete if the derivation is finite
+	- clasues include facts and rules
+	- backward chaning method in PROLOG for deriving logical conclusions from a set of definite clauses
+	- key concepts include resolution, unification, subsitutation, derivation and SLD tree
+	- **Intial Resoltion**- 
+		1. leads to unifying the goal with head of the clause.
+			- **Variabvles**- capital case, value can change
+			- **Constnat**- lower case, cant change
+			- look at the head of the clause to resolve the head with a specific rule
+			- **Clauses**- are either facts or rules
+			- **Unification**- matching the goal with a rule (clauses)
+				- basically identifying where the goal matches with the current rule (should be same named ege parent(ben, justin) with parent(X,Y))
+				- if unification in FACT then use it, if not then in clause to then find the fact that works in the clause
+				- if no unification, then will return that the logic has ended without any success
+				- if successful then it produces a substitution that can be applied to both goal and rule
+				- **Unifier**  write it out like- X/ben, Y/justin
+			- **Substitution**- replace the variables in the clause with terms (constants, varialbes or functions)
+				- allows generalisig of rusles and goals by making them compatible for unification
+				- basically when you have identified the header with the rule like above then you just substitute the variables with the terms (ben, justin with X, Y = {X = ben, Y = justin})
+			- **Derivation**- sequence of resolution steps to derive new goal or conclusion from initial goal
+				- applies role to goal through unification and substitution
+				- generates new subgoals that must be resolved
+				- can then look at the rule with the new terms replacing the variables: parent(X, Y) :- father(X, Y) becomes parent(ben, justing) :- father(X, Y)
+				- new goal is father(ben, justin)
+				- this is based on unifying the variables with terms and then substituing them in the logic process rules to identify the goal
+			- **Tree (SLD Tree)**-
+				- A tree structure that represents derivation process of a goal using SLD resolution
+				- root is initial goal
+				- each node represents a goal or subgoal
+				- edges represent application of rules (via resolution)
+				- branches represent different possible derivations (alternative rule applications)
+					- branches can be when there is no direct unification for a clause
+					- branch will then continue if there is conjunction for each goal then continue that branch
+					- branch goes depth first when finding solution
+					- branches can be different clauses, so if no facts and then few clauses that could work, you must try all in order
+				- successful derivation is at a leaf where all goals are resolved
+				- **Root**- the initiall query goal
+					- e.g parent(ben, justin)
+				- **Subgoal Node**- generated by applying the rule 
+					- e.g father(ben, justin)
+				- **Resolution**- if completion
+					- e.g. Success
+				- **Fact**- can be displayed by <- 
+					- are undeniably true (hence why first chosen in a clause)
+					- e.g. son(ben, justin)<-
+				- **Rule**- can be displyaed by a clause with <- in middle
+					- e.g. parent(X, Y) <- son(Y, X) 
+
+
+## PROLOG
+- PROgramming in LOGic
+- facilitates-
+	- propositional logic
+	- first order reasonging
+	- higher order reasoning
+- predicates can be defined such as:
+	- daughter(X, Y)- X is a daughter of Y
+	- son(X, Y)- X is a son of Y etc
+	- male(X)- X is a male
+- logic program in PROLOG written like
+	- daughter(samantha, rebecca)- samantha is daughter of rebecca
+	- son(jack, michael)- jack is son of michael
+	- male(jack)- jack is a male
+- **Rule**- 
+	- !!!! THESE ARE ORDER FROM RIGHT TO LEFT
+	- parent(X, Y) :- daughter(Y, X): if Y is daughter of X then X is parent of Y
+	- mother(X, Y) :- paret(X,Y), not(male(X)): if X is parent of Y AND not male then X is mother of Y
+	- father(X, Y) :- parent(X, Y), male(X): if X is parent of Y AND male THEN X is father of Y
+- Data types not defined, numerical caluclations supportes
+- **Constants**- 
+	- value that can never be changed
+	- value of integer, decimal, sequence of symbols, string, list, structure
+	- may/may not have identifier
+		- identifier of a constant may contain letters, digits, underscores 
+		- start lower case letter
+- **Variables**- 
+	- value that can vary
+	- always has an identifier
+		- identifier contains letters, digits, underscores 
+		- starts with capital letter or underscore
+- **Terms**-
+	- term is either a variable or constant
+- **Predicates**-
+	- function with only two possible values- true/false
+	- may be unary (takes only one parameter) or multiary (takes more than one parameter)
+		- if takes no parameters then its a proposition?
+	- identifier may contain letters, digists, underscores
+		- starts with lower case letter
+	- can write like "greater_than/2" to show greater than function and /2 represents takes 2 parmaters
+- **Atom**-
+	- if *p* (predicate) n-ary (n parameters) and *t* (term) 
+	- *p(t1, ... tn)* is an atom
+	- example: greater_than/2(1, 5) - this will see if 1 is greater than 5
+-  **Logical Connectives**-
+	- conjunction (AND) - ,
+	- disjunction (NOT)- ;
+	- implication (then)- :-
+	- negation (not): not
+	- e.g: parent(X, Y) :- daughter(Y, X) same as parent(X, Y) <- daughter(Y, X)- if Y is daughter of X then X is parent of Y
+- **Logic Program**- logic program is a set of program clauses
+	- **Program Clause**-  set of program clauses, can be fact, rule or goal
+		- **Fact**- represents a statement which is true
+			- PROLOG- *p(a1, a2.... an)* where p is predicate and a1,a2 etc are terms (its an Atom)
+			- e.g. daughter(samantha, rebecca) etc
+		- **Rule**- indicates a relation of implication (if, then etc)
+			- PROLOG- B :- A1, A2,... An where B is an atom and A1, A2 etc are atoms or negation of atoms
+			- B is the **head(consequent)** of the rule and A1, A2, Ak is the **body(premise)** of the rule
+			- e.g. parent(X, Y) :- daughter(Y, X).
+			- parent(X, Y) = head, daughter(Y, X) = body, :- = implication, . = always need full stop at end to end the rule
+		- **Goal**- an atom or conjunction of multiple atoms
+			- e.g. ?mother(rebecca, jack) is a goal
+			- e.g. ?parent(X, samanatha), mother(Rebecca, Jack)  is conjunction
+- **Arithmetic Calculations**- PROLOG has simple maths
+	- **Arithmetic Operators**-
+		- +, -, *, /, mod
+		- instead of "=" it's "is" 
+		- >, <, <=, =<
+		- =:= comparison of numerical values, can be an expression and values
+		- = general comparison- compares values on left and right sides, if one hasnt been boung then the value on other side will be bound (unification)
+		- == strict comparison, values on sides must be the same, no value binding will be conducted, no expresison must be values
+		- the slashes go opposite way (they are invisible in obsidian)
+		- "=/=" not equal
+		- "/=" not equal
+		- "/= =" string
+		- ?maximum_num(4, 5, X)- largest number of 4 or 5 will return into value X
+			- can also do it like ?maxiumum_num(X, 4, 5)- largest nunmber of 4 or 5 returns X?
+		- predicate f(N, F) where the N is parameter and F is bined (returned) value
+- **Input**- built-in predicate read/1 is defined fo reaching from standard input (or file)
+	- *read(x)* 
+	- reads a term from the standard input or a file, and uses the input value to instantiate X, the input is treminated by full stop
+- **Output**- predicate write/1 is defined for output
+	- *write(X)* 
+	- outputs the contents of X
+	- e.g test1 :- read(X), Y = X, Write(Y). this will take input of a number, check if that number is same as Y and (if Y has no value it binds it to that value) and then it ouputs whatever Y is (could be X as it wasnt bound, or a number previously)
+	- built in predicate tab/1 outputs tab spaces 
+	- built in preitate nl/0 outputs a new line
+		- e.g. test1 :- read(X), Y == X, nl, tabl(12), write(Y). this takes input as X then checks strict checking on Y to X, then creates a new line and indents tab by 12 and writes out Y (no value binding conducted)
+	- abstract :- nl, write('enter X'), read(X), positive(X). ---- a predicate can have two definitions like an if else---weird
+		- positive(X) :- X < 0, Y is 0 - X, write(Y).
+		- positive(X) :- X >= 0, write(X).
+- **Recursion**- clause calling itself to make the problem smaller
+	- goes through each recusrive then backtrack with the final clauses
+- **Iteration**- loops
+	- loop(Index, Index) :- body(Index)
+	- loop(Index, End) :- Index < End, body(Index), Index1 is Index + 1, loop(Index1, End).
+	- body(Index) :- write('in the loop with index ='), write(Index), nl.
+	- same as a while loop while Index <= End: print(Index++)
+	- loop normally created using two caluses, both have same head. One clause defines terminating case while other executes the body, then move the loop to next iteration
+- **Selection**- if else
+	- if is (then) ->
+	- else is ;
+	- e.g test(X) :- (X > 0 -> write('posiotive); write('negative)).
+- **Lists**- 
+	- sequence of elements- 
+	- e.g [23, 'hey', [1, 4, 5], 45, 'string'].
+	- list can be divded into two components, head and tail. first element of list is head, rest is tail of list. Head is a term, tail is a list
+	- notation [ | ] used to separate the head and the tail. If list contains only one elemnt then element makes the head, tail is an empty list
+	- nth1(2, [1, 2, 3, 4], X).
+		- get the 2nd item of the list
+		- PROLOG doesnt start with 0, starts with 0
+		- X = 2
+		- as getting second element (first param) binding to X
+	- 
