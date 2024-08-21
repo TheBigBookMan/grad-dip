@@ -506,9 +506,23 @@
 	- e.g [23, 'hey', [1, 4, 5], 45, 'string'].
 	- list can be divded into two components, head and tail. first element of list is head, rest is tail of list. Head is a term, tail is a list
 	- notation [ | ] used to separate the head and the tail. If list contains only one elemnt then element makes the head, tail is an empty list
+		- e.g. X = [monday, tues, wed, thus]
+		- weekdays([first_day | rest_days]) this then assigns first_day = monday and rest_days = [tues, wed, thurs]
 	- nth1(2, [1, 2, 3, 4], X).
 		- get the 2nd item of the list
 		- PROLOG doesnt start with 0, starts with 0
 		- X = 2
 		- as getting second element (first param) binding to X
-	- 
+- **Structures**- PROLOG doesnt support global variables
+	- scope of variable is within clause only
+	- thats why variables like X, Y so common because no scope
+	- dataq structures built with user-defined predicates to pass value from one clause to the other
+	- data structure is an atom or composition of atoms
+	- e.g. student (ben, smerd, 123232, CS50, 2024)
+		- student(ben, smerd, x, y z)
+		- x = 123232
+		- y = CS50
+		- z = 2024
+	- single layer data structures, the arguements are terms, if the structures are loaded in prolog executer we can enter queries as above
+	- Multi-layered structures- can nest structure in structure
+		- student(names(ben, smerd), 12323, CS50, 2024)

@@ -1,0 +1,52 @@
+- **game playing using search**- tic-tac-toe, chess or other two player games where players need to decide on the next move they will make, on possible strategy
+	- generate all possible legal moves
+	- evaluate resulting board configurations from each of the moves
+	- choose the move that results in the board configuration with max value
+	- problem with strategy is that choosing maximum board configuration doesnt always consider opponents possible response
+- **game playing using minimax**- strategy where you choose the board configuration maximised potential after the opponent has made their move
+	- opponent tries to beat your every move, minimax method maximises your position while minimising opponents position
+		- game of NIM
+			- several tokens are placed on a table between two opponents
+			- at each move, player must divide a pile of tokens into two non-empty piles of different sizes
+			- first player who can no longer make a move loses the game
+	- minimax- has one player who is MAX tha always trying to get maximum value and other player MIN that tries to make the MAX player get the minimum value
+		- MIN uses same information as MAX and always attempts to move to a state that is worst for MAX. 
+		- implemting minimax, we label each level in the search space according to whose move it is at the point in the game
+		- each leaf node is given a value of 1 or 0, depending on whether it is a win for MAX or MIN
+		- Minimax propogates these values up the graph through parent nodes according to the rule:
+			- if parent state is a MAX node, give it the maximum value among its children
+			- if the parent is a MIN node give it the minimum values of its children
+			- this means if its parent is on the MAX level and the children have a 0 or 1 then chooses highest number, 1
+		- Value that is assigned to each state indicates the vale of the best state that this player can achieve (assuming the opponent plays as predicated by the minimax algo). these derived values then used to choose among the possible moves
+	- **Minimax Algorithm (for perfect decisions)**-
+		1. generat entire game tree, down to leaves (terminal states)
+		2. apply the utility function to each terminal state (this gives numberic value for the outcome of the game)
+		3. for each level, back one value up to the parent
+			- if parent is max, take largest value
+			- if parent is min, take smallest value
+		4. at top level, max chooses opton which leads to highest value
+		5. for chess, b = 35 for 'reasonable games'
+			- exact solution completely infeasible
+	- **Minimax to fixed-ply depth**-
+		- for 'interesting games' there is no hope of generating full game tree
+		- adaption of minimax:
+			- expand the tree n ply where n is number of levels explored, and its value is determined by available time and space
+			- apply evaluation function (heuristic) to leaves
+			- leaves will NOT be win/loss for MAX
+			- must somehow distinguish between good and bad positions for MAX
+			- higher value the better position for MAX
+		- perform minimax to get best move, note that this is best move gfiven the states explored, and will not always result in a wint. heuristic function usually a weighted sum of factors
+	- **Alpha-Beta Pruning**- 
+		- minimax assumes we dirst do the generation and then the evaluation
+		- being smart and integrating evaluating with generation we can get orders of magnitude improvement
+		- getting rid of any values if you know the max or min of a grandparent,
+			- eg if a grandparent is a > or < number then you can already detemine the parent and then get rid of unnecessary grandhildren that are out because of the < >
+		- procedure operates:
+			- descend to full ply depth in a depth-first fashion and apply heuristic evaluation to a state and all of siblings (we assume these are MAX nodes)
+			- minimum of these MAX nodes is then bakced up to parent (which is MIN node)
+			- this value is then offered to he grandparent of these MAXs as a potential cutoff (it is referred to as **alpha value**)
+			- next, the algo descends to other grandchildren adn terminates exploration of their parent if any of ther values is equal or less than this alpha value (this is referred to as a **alpha cutoff** or **alpha-pruning**)
+			- similar procedure can be described for pruning over the grandchildren of MIN node (this is referred to as **beta cutoff** or **beta-pruning**)
+		- Rules for terminating search
+			- search can be sropped below any MIN node having a beta value less than or equal to alpha value of anyu of its MAX node ancestors
+			- search can be stopped below any MAX node having an lpha value greater than or equal to the ebta value of any of MIN node ancestors
