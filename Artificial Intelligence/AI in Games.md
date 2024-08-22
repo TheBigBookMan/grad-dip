@@ -10,6 +10,7 @@
 			- at each move, player must divide a pile of tokens into two non-empty piles of different sizes
 			- first player who can no longer make a move loses the game
 	- minimax- has one player who is MAX tha always trying to get maximum value and other player MIN that tries to make the MAX player get the minimum value
+		- **2-ply search**- means to look at all moves from the first player and all moves from second player and comparing the difference with the heuristic function to get a value which would equal the best move to make based on certain criteria
 		- MIN uses same information as MAX and always attempts to move to a state that is worst for MAX. 
 		- implemting minimax, we label each level in the search space according to whose move it is at the point in the game
 		- each leaf node is given a value of 1 or 0, depending on whether it is a win for MAX or MIN
@@ -41,6 +42,7 @@
 		- being smart and integrating evaluating with generation we can get orders of magnitude improvement
 		- getting rid of any values if you know the max or min of a grandparent,
 			- eg if a grandparent is a > or < number then you can already detemine the parent and then get rid of unnecessary grandhildren that are out because of the < >
+			- so for example if its a MIN
 		- procedure operates:
 			- descend to full ply depth in a depth-first fashion and apply heuristic evaluation to a state and all of siblings (we assume these are MAX nodes)
 			- minimum of these MAX nodes is then bakced up to parent (which is MIN node)
@@ -50,3 +52,82 @@
 		- Rules for terminating search
 			- search can be sropped below any MIN node having a beta value less than or equal to alpha value of anyu of its MAX node ancestors
 			- search can be stopped below any MAX node having an lpha value greater than or equal to the ebta value of any of MIN node ancestors
+
+## Expert Systems
+- expert systems are computer systems designed to mimic human experts- offer advice about complex tasks that require lots of training and experience
+- one of biggest AI successes-
+	- **Dendral**- expert system for interpreting mass spectral data to infer molecular structure
+	- **MYCIN**- expert system for diagnosing meningitis infections from symptoms, patient history and lab test results
+	- **Prospector**- system for interpreting geological data and predicting likelihood of mineral deposits
+- **Production Systems**- model of computation that provide pattern directed control of a problem solving process and consist of
+	- a set of production rules
+		- **Production Rule**- a condition action pair that defines a single chunk of problem-solving knowledge
+			- condiiton/premise/left ide of the rule/body of the rule
+			- action/consequence/right side of the rule/head of the rule
+		- **Condition Action pair in production rule**- condition part of the rule is a pattern that determines when that rule may be applied to problem instance. action part defines the associated problem-solving step
+			- condition is the left and action is right, split by implication ->
+			- have_headache -> take_panadol
+			- at_home ^ rarining -> drive_to_school
+			- at_home ^ -raining -> walk_to_school
+	- **Working memory**
+		- working memeory contains a description of current sate of the world in a reasoning process. 
+		- The description matched against the condition part of a production rule to select appropriate problem-solving actions.
+		- When condition part of a rule is matched by the content of working memory, action associated with that condition may then be performed. 
+		- Actions of prodiuction rules are specifically designed to alter the contents of working memeory
+		- have_headache, at_home, at_school, raining
+		- all possible contents in the working memeory of production system
+	- **Recognise Act Control Cycle**-
+		- provides control structure for production system
+		- working memeory is initialised with initial problem description
+		- current state of problem is maintained as a set of facts in working memory
+		- facts are matched against conditions of the production rules with their conditions being satisfied, are placed in conflict set
+		- one of production rules in the conflict is set is then selected (based on conflict resolution) and that production rule is fired
+		- to fire a rule, action is performed, this changes the contensts of working memory
+		- after selected production rule is fired, control cycle repeats with modified working memeory
+		- process terminates when contents of working memory do not match any rules conditions
+	- **Production Systems in operation**- control of production system loops until state is reached in which working memory no longer matches the conditions of any production rules
+		- the working memory holds the current state
+		- conflict set is an identifier to a production set of rules, the conflict set states which rules are not being followed
+		- conflict resolution strategy- the rule fired will be lowest to highest based on the identifier number of the rule set
+	- **Control of Inference**-
+		- process of firing a rule and adding items to working memory is an inference process
+		- for real-world problems, need add heuristic control to inference process
+		- range of options exist for adding heuristic control
+			- structure of the rules themselves
+				- eg rule goes higher priority than others in sequence of rules
+			- choice of data-driven or goal-driven strategies
+				- **Data driven search**- forward chaining
+					- begin with the facts and apply rules in a fotrware direction until goal is reached
+				- **Goal driven search**- backward chaining
+					- begin with goal and work backward to facts of the problem to satisfy that ggoal
+				- **Bi-directional search**- 
+					- various posibilities
+					- search in a forward direction until the number of states bcomes large, then switch to a goal-directed search to use sub-goals to select among alternative states
+			- choice of strategies for conflict resolution
+				- eg if no rule or specific, can put rules into categories and make more specific rules?
+	- **Control of Inference through COnflict Resolution**-
+		- simplest way to select a rule is to choose first tule in the rule set that matches the contents of working memeory; however can choose better strategies
+		- **Refraction**- once a rule has fired, do not allow it to fire again until the working memory elements that match its conditions have been modified, discourages looping
+		- **Recency**- give preference to rules whose conditions match with working memory elements that have most recently been added to working memeory, focuses the search on a single line of reasoning
+		- **Specificity**- preference to more specific rules over more general ones where one rule is considered more specific than another if it has more conditions, which implies that it will match fewer working memeory elements
+- **Expert Systems (ES) Languages SHells and Tools**
+	- specialized lanaguages havbe been developed for expert systems, called expert systems languages
+	- important design principle in expert systems lnaguages is separation of data from methods of manipulatating data
+	- allows entirely separate piece of code- the ifnerence engine- to apply knowlefe to the data, allowing high degree of parallelism and modularity
+	- expert system shell consists of expert system language plus associated utility programs to facilitate development, debugging, deliver of application programs
+	- clasic example of expert system shell is Emptty Mycin EMYCIN which was created by removing medical knowledge base of MYCIN expert system
+	- expert system can also be built using PROLOG
+- **Elements of Expert System**
+	- **KNoweldge Base**- set of rules stored
+	- **Working Memory**- current state facts
+		- global database of facts used by the rules
+	- **Inference Engine**- conduct reasoning and have
+		- makes inferences by decideing which rules are satsifed by the facts, prioritizes the satisfied rules and executes the rule with highest priority
+		- **Agenda**- resolve conflict if multiple rules can be fired
+			- also known as conflict set- a priotized list of rules created by the inference engine, whose patterns are satisfied by facts in working memory
+	- **Knowledge Acquisition Facility**- acquire knoweldge from who- user interface
+		- automatic way for user to enter knowledge in the system instead of having the knowleged engineer explicitly code knowledge
+	- **Explanation Facility**- if system cant make diagnosis of problem, system will ask ask user interface for more information, user will get more explanation from explanation facility why more questions asked for more info
+		- explains the reasoning of the system to the user
+	- **User Interface**- gives the knowledge by getting information from the user
+		- mechanism by which the user and expert system communciate
