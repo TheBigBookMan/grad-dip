@@ -98,6 +98,8 @@
 			- choice of data-driven or goal-driven strategies
 				- **Data driven search**- forward chaining
 					- begin with the facts and apply rules in a fotrware direction until goal is reached
+					- rule 1 is considered first part of the premise of this rule
+					- if a premise is not ASKABLE- meaning that if you cant actually draw that conclusion from something (e.g. if a light is on)
 				- **Goal driven search**- backward chaining
 					- begin with goal and work backward to facts of the problem to satisfy that ggoal
 				- **Bi-directional search**- 
@@ -117,6 +119,7 @@
 	- expert system shell consists of expert system language plus associated utility programs to facilitate development, debugging, deliver of application programs
 	- clasic example of expert system shell is Emptty Mycin EMYCIN which was created by removing medical knowledge base of MYCIN expert system
 	- expert system can also be built using PROLOG
+	- loops through the procedure checking if the working memory is matched by goal or conflict-set is empty
 - **Elements of Expert System**
 	- **KNoweldge Base**- set of rules stored
 	- **Working Memory**- current state facts
