@@ -100,18 +100,50 @@
 					- begin with the facts and apply rules in a fotrware direction until goal is reached
 					- rule 1 is considered first part of the premise of this rule
 					- if a premise is not ASKABLE- meaning that if you cant actually draw that conclusion from something (e.g. if a light is on)
+					- finding facts based on premises from facts and then rerunning through with the new facts to find the final goal
 				- **Goal driven search**- backward chaining
 					- begin with goal and work backward to facts of the problem to satisfy that ggoal
+					- facts in working memory can be from users
+					- find the matching goal from working memeory rules, use conflict to use lowest-numbered rule
+					- check the facts for the goal of that rule in the working memory- can ask user to confirm
+					- **Explanation**- important to explain reasoning to human interrogator
+						- two types question should be able to be answered by rule absed system
+							- why
+							- how
 				- **Bi-directional search**- 
 					- various posibilities
 					- search in a forward direction until the number of states bcomes large, then switch to a goal-directed search to use sub-goals to select among alternative states
 			- choice of strategies for conflict resolution
 				- eg if no rule or specific, can put rules into categories and make more specific rules?
+			- **Obtaining the Facts**- sometimes necessary for expert system to obtain facts 
+				- **Knowledge Base (Facts-KB)**- get from the knowledge base
+				- **Askable**- can query the user for facts
+				- Look up the database
+				- Sensors and isntruments- connected to machinery monitoring some process
+				- other programs linked by other programming languages
+			- **Uncertainty**- much expert information is uncertain- the rules are not 100% guaranteed, but may still be reliable
+				- there can be other explanations for these symptoms, but the probability is high that is a reasonable diagnosis, we can be sure enough in the diagnogsis to prescribe particular medication
+				- expert systems can be designed to associate some kind of uncertainty factor with exper rules-
+				- many methods implemented to handle uncertainty in expert systems
+					- probablity theory
+					- certainty factors
+					- fuzzy logic- where results in system can be close but in real world thedifference might not mean much (1.75 height is tall but 1.74 is small? in height)
+					- dempster shafer
+				- all methods involve assigning some quantitative value to each rule
+				- method of combining uncertainty values is used when firing rules
+				- kind of like having weights on each rule
 	- **Control of Inference through COnflict Resolution**-
 		- simplest way to select a rule is to choose first tule in the rule set that matches the contents of working memeory; however can choose better strategies
 		- **Refraction**- once a rule has fired, do not allow it to fire again until the working memory elements that match its conditions have been modified, discourages looping
 		- **Recency**- give preference to rules whose conditions match with working memory elements that have most recently been added to working memeory, focuses the search on a single line of reasoning
 		- **Specificity**- preference to more specific rules over more general ones where one rule is considered more specific than another if it has more conditions, which implies that it will match fewer working memeory elements
+	- **Development of Expert Systems**- typical process for developing expert system
+		- **Knowldge Acquisition**- need to talk to a domain expert to get information from there
+		- **Knowledgfe Representation**- convert them into production rules
+		- **Selection development tools**- where to put system or to use PROLOG or expert system shell
+		- **System prototyping**- build prototype to see if work
+		- **Evaluation**- evaluate
+		- **Improvement/Maintenace**- imrove perofmance
 - **Expert Systems (ES) Languages SHells and Tools**
 	- specialized lanaguages havbe been developed for expert systems, called expert systems languages
 	- important design principle in expert systems lnaguages is separation of data from methods of manipulatating data
@@ -125,6 +157,7 @@
 	- **Working Memory**- current state facts
 		- global database of facts used by the rules
 	- **Inference Engine**- conduct reasoning and have
+		- apply knoeldge to the data, allowing high degree of parallelism and modulairty- 
 		- makes inferences by decideing which rules are satsifed by the facts, prioritizes the satisfied rules and executes the rule with highest priority
 		- **Agenda**- resolve conflict if multiple rules can be fired
 			- also known as conflict set- a priotized list of rules created by the inference engine, whose patterns are satisfied by facts in working memory
