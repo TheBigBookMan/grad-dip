@@ -115,6 +115,7 @@
 					- begin with the facts and apply rules in a fotrware direction until goal is reached
 					- rule 1 is considered first part of the premise of this rule
 					- if a premise is not ASKABLE- meaning that if you cant actually draw that conclusion from something (e.g. if a light is on)
+						- ask t he user to get the answer
 						- if the piece of information in the left hand side (CONDITION) is not the conclusion from another rule, then it is ASKABLE, because you need to be able to get that bit of information from somewhere, if its not from another rule then its from a user
 					- finding facts based on premises from facts and then rerunning through with the new facts to find the final goal
 					- see how once the new fact has been found by previous facts, its added to the fact list
