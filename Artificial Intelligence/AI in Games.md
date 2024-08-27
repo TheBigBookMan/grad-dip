@@ -14,6 +14,8 @@
 		- MIN uses same information as MAX and always attempts to move to a state that is worst for MAX. 
 		- implemting minimax, we label each level in the search space according to whose move it is at the point in the game
 		- each leaf node is given a value of 1 or 0, depending on whether it is a win for MAX or MIN
+		- **Top**- is whoever is making first move, so if the MAX is making first move then the initial state will be a MAX and then start the alternating levels
+		- **Start**- start from the leaf nodes at the bottom of the tree and thats how you determine the parent values based on the min/max and the values of childremnm
 		- Minimax propogates these values up the graph through parent nodes according to the rule:
 			- if parent state is a MAX node, give it the maximum value among its children
 			- if the parent is a MIN node give it the minimum values of its children
@@ -21,7 +23,7 @@
 		- Value that is assigned to each state indicates the vale of the best state that this player can achieve (assuming the opponent plays as predicated by the minimax algo). these derived values then used to choose among the possible moves
 	- **Minimax Algorithm (for perfect decisions)**-
 		1. generat entire game tree, down to leaves (terminal states)
-		2. apply the utility function to each terminal state (this gives numberic value for the outcome of the game)
+		2. apply the evaluation function to each terminal state (this gives numberic value for the outcome of the game)
 		3. for each level, back one value up to the parent
 			- if parent is max, take largest value
 			- if parent is min, take smallest value
@@ -37,12 +39,20 @@
 			- must somehow distinguish between good and bad positions for MAX
 			- higher value the better position for MAX
 		- perform minimax to get best move, note that this is best move gfiven the states explored, and will not always result in a wint. heuristic function usually a weighted sum of factors
+		- **Heuristic function**- usually weighted sum of factors- like how chess can have weight of each piece
+			- need expert input and experimentation
+			- e.g. tic tac toe can have the count of all winning lines open to MAX and subtract number of winning lines open to MIN
 	- **Alpha-Beta Pruning**- 
-		- minimax assumes we dirst do the generation and then the evaluation
+		- minimax assumes we dirst do the generation and then the evaluation, not have to evaluate every node
 		- being smart and integrating evaluating with generation we can get orders of magnitude improvement
+		- **Heuristic function**- applies the estimated values on each node, and each node doesnt have to be evaluted (fginding the true value) because you can determine the values from the heuristic granchildren, parent
 		- getting rid of any values if you know the max or min of a grandparent,
 			- eg if a grandparent is a > or < number then you can already detemine the parent and then get rid of unnecessary grandhildren that are out because of the < >
-			- so for example if its a MIN
+			- so for example if the grandparent we know is >= 3 (in MAX) and the first parent node (child of grandparent) is 3 (in the MIN) then we already know that the 3 is the MIN value (LOOK AT SCREENSHOT)
+			- IMPORTANT- do depth first, so start on left side and evaluate the alpha-beta pruning from there- easier than breadth-first
+			- IMPORTANT that if on max level then you are looking for values that are only >= that current value, and vice versa for MIN
+				- BECAUSE if you are on MAX with value of 5, you want higher value as this is better score fr MAX so looking for the branch that will be higher = more optimal
+			- ![[Pasted image 20240827203622.png]]
 		- procedure operates:
 			- descend to full ply depth in a depth-first fashion and apply heuristic evaluation to a state and all of siblings (we assume these are MAX nodes)
 			- minimum of these MAX nodes is then bakced up to parent (which is MIN node)
@@ -65,6 +75,8 @@
 			- condiiton/premise/left ide of the rule/body of the rule
 			- action/consequence/right side of the rule/head of the rule
 		- **Condition Action pair in production rule**- condition part of the rule is a pattern that determines when that rule may be applied to problem instance. action part defines the associated problem-solving step
+			- THIS IS THE RULE
+			- always left if the condition -> right is what happens from the condition
 			- condition is the left and action is right, split by implication ->
 			- have_headache -> take_panadol
 			- at_home ^ rarining -> drive_to_school
@@ -89,6 +101,9 @@
 		- the working memory holds the current state
 		- conflict set is an identifier to a production set of rules, the conflict set states which rules are not being followed
 		- conflict resolution strategy- the rule fired will be lowest to highest based on the identifier number of the rule set
+	- picture below iterates through and checks production set rules against the working memory and identifies in the conflict set which ones can be applied and based on conflict resolution (lowest number) then rule 1 is fired
+		- if multiple instances in the working memeory item that can have the rule applied when fired, only the first instnace is altered?
+	- ![[Pasted image 20240827212706.png]]
 	- **Control of Inference**-
 		- process of firing a rule and adding items to working memory is an inference process
 		- for real-world problems, need add heuristic control to inference process
@@ -100,7 +115,11 @@
 					- begin with the facts and apply rules in a fotrware direction until goal is reached
 					- rule 1 is considered first part of the premise of this rule
 					- if a premise is not ASKABLE- meaning that if you cant actually draw that conclusion from something (e.g. if a light is on)
+						- if the piece of information in the left hand side (CONDITION) is not the conclusion from another rule, then it is ASKABLE, because you need to be able to get that bit of information from somewhere, if its not from another rule then its from a user
 					- finding facts based on premises from facts and then rerunning through with the new facts to find the final goal
+					- see how once the new fact has been found by previous facts, its added to the fact list
+						- which can then be used to uncover more facts together
+					- ![[Pasted image 20240827213705.png]]
 				- **Goal driven search**- backward chaining
 					- begin with goal and work backward to facts of the problem to satisfy that ggoal
 					- facts in working memory can be from users
@@ -110,6 +129,9 @@
 						- two types question should be able to be answered by rule absed system
 							- why
 							- how
+					- going backwards from goal looking at the facts given, to determine if that goal was true or not
+						- making sure to check that the fact is true, if not then move to next goal possibility
+					- ![[Pasted image 20240827213835.png]]
 				- **Bi-directional search**- 
 					- various posibilities
 					- search in a forward direction until the number of states bcomes large, then switch to a goal-directed search to use sub-goals to select among alternative states
