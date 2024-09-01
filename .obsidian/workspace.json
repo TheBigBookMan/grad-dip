@@ -18,8 +18,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a4e5b789bcd6b3cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Artificial Intelligence/Machine Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d67e6ea4f4b5b36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Artificial Intelligence/Algorithms.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd8e9119b18a99d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Artificial Intelligence/AI.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Artificial Intelligence/AI in Games.md",
+                "file": "Artificial Intelligence/Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Artificial Intelligence/AI in Games.md",
+                "file": "Artificial Intelligence/Machine Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Artificial Intelligence/AI in Games.md"
+                "file": "Artificial Intelligence/Machine Learning.md"
               }
             }
           }
@@ -147,16 +184,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfe3d1468f80348b",
+  "active": "a4e5b789bcd6b3cd",
   "lastOpenFiles": [
+    "A.md",
+    "Artificial Intelligence/Machine Learning.md",
+    "Pasted image 20240831161840.png",
+    "Pasted image 20240831161820.png",
+    "Artificial Intelligence/AI in Games.md",
+    "Artificial Intelligence/Algorithms.md",
+    "Artificial Intelligence/AI.md",
     "Pasted image 20240827213835.png",
     "Pasted image 20240827213705.png",
     "Pasted image 20240827212706.png",
     "Pasted image 20240827203622.png",
     "Intro Prograrmming/assignment2.py",
-    "Artificial Intelligence/AI.md",
-    "Artificial Intelligence/Algorithms.md",
-    "Artificial Intelligence/AI in Games.md",
     "Untitled 1.md",
     "Untitled 2.md",
     "Artificial Intelligence/~WRL0478.tmp",
@@ -178,7 +219,6 @@
     "Pasted image 20240523133829.png",
     "Pasted image 20240523133758.png",
     "Pasted image 20240523103754.png",
-    "Pasted image 20240516111751.png",
     "RAG/RAG Langchain.md",
     "Networking/Intro to Networks.md",
     "Information Technology/Topic 1- Computer Architecture.md",
@@ -189,11 +229,8 @@
     "Information Technology/Introduction IT.md",
     "Information Technology/Human Computer Interface.md",
     "Information Technology/Topic 6- Spreadsheets.md",
-    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/VJVJ6W.jpg",
-    "Information Technology/Week5_PracticeClass/IFU_Assets/BrandPictures/IFRAF1.jpg",
     "Databases/Introduction to databases.md",
     "Databases/Relational Algebra and SQL.md",
-    "Databases/ER+EER Models.md",
-    "Databases/Normalization.md"
+    "Databases/ER+EER Models.md"
   ]
 }

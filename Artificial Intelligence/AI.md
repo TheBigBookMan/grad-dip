@@ -26,6 +26,11 @@
 	- **Machine Learning**- research and development of computer systems that are able to learn and adapt without instructions by using algorithms and statistical models to anaylyse and draw inferences from patterns in data
 		- supervised learning, unsupervised learning, semi-supervised learning and reinforacement learning
 	- **Semantic web and Ontology**- research on web information representation, exraction and reasoning, which enables information exchange between apps, machines and platforms
+
+1. A(upside down)x (smart(x) <- student(x))
+2. E(backwards)x student(x)
+3. Ex (smart(x) ^ student(x))
+4. Ax()
 ## Logic
 - using logic to represent knowledge
 - **Formal language and system**
@@ -39,6 +44,7 @@
 - **Truth tables**- 
 - semantics (model theory) of a formal lanaguge is the study of interpretations, truth functions and models of the language
 - **Proppositional logic**- can be used for problem solving, planning and decision making, as well as reasoning, it helps representing knowledge in mathematical and logical form- can be either true or false
+	- **IMPORTANT**- if there is an implication, the part of the IF is false and the part of the THEN is true, then it will be FALSE, while all else will be TRUE
 	- **Propositional Language**- 
 		- is a formal language
 		- alphabet of propositional language includes

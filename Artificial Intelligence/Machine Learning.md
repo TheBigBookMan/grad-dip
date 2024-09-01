@@ -1,0 +1,64 @@
+- **Machine learning types**-
+	- **Supervised learning**- all data is labelled and alrogirhtms learn to predict the output from the input data (classification and regression)
+	- **Unsupervised learning**- all data is unlabelled and the algorithms learn to inherent structure from the input data (clustering)
+	- **Semi0supervised learning**- some data is labelled, but most is unlabelled, mixture of supervised and unsupervised techniques used (pattern recognition (mix of labelled and unlabelled images))
+- **Types of Learning**-
+	- **Inductive Learning**- learning from example, e.g. learning concept of 'tiger' by being given pictures of 10 different tigers (and being told the animals are tigers)
+	- **Learning by being told**- e.g. telling someone 'a tiger has a long tail, stripes, short ears etc'
+	- **Learning by anology**- e.g 'a tiger is like a big cat with orange stripes and big teeth'- related to learning by discovery
+- **Classification**- many learning problems can be expressed as classification problems. Given varios input features (like size of teeth, stipiness) the goal is to decide which of several classes (or output categories) the case falls into (e.g tiger, rabbit, giraffe etc). 
+	- Applications of classification include:
+		- **Character recognition**
+		- **Disease diagnosis**
+		- **Credit screening**
+	- Goal of classification problems is to find some rule or function that lets you classify an instance into a particular class based on the features of that isntance
+		- f(feature1, feature2, ...) Class
+		- fteeth=big, covering=stripy
+	- try to discover the function *f* from a data set of cases which we know the correct classification
+- **Terminology**-
+	- ![[Pasted image 20240831161840.png]]
+	- **Sample (example)**- set of data that describes an entity. In a table, each row represents a sample
+	- **Attribute (feature)**- refers to a charactersitic of samples. in a table, each column represents an attribute
+	- **Feature Value**- values in the main body of the table are the attribute (feature) values
+	- First column in table would not be considered an attribute
+		- because its a unique identifier, so not considered a predicator attribute ( an attribute used to make classification decision)
+	- In a table if a row (sample) is equal to what you are looking for, then it is positive sample ,if its not what looking for then its negative sample
+- **Data Types**- 
+	- **Boolean**- usually 'yes' or 'no' (true or false)
+	- **Catergorical**- taking discrete value (like boolean)
+		- **Nominal (categorical)**- have two or more discrete values (ege red, blue, green)
+		- **Ordinal (categorical)**- two or more discrete values, but there is an implicit ordering of these values (young, middle aged, old)
+	- **Numeric**- a number
+		- **Interval (numeric)**- measured on an interval scale (temperature measured on Celsius scale where each degree is 1/1000th the difference between melting and boiling points water)
+		- **Ratio (numeric)**- value is ratio between magnitude of a quantity and a unit of magnitude of same kind (mass, length, time)
+	- **Structured data types**- include categorical and numeric values
+	- **Unstructured data types**- include textual and multimedia values
+	- **Semi-structured values**- include webpages, email and html/xml data
+- **KNowledge representation**-
+	- before learning, must decide how going to represent knowledge
+	- exmaple, suppose we represent knowledge as IF, THEN tules in left hand side is a conjunction of features
+		- e.g. (stripy = yes) ^ (long tail = yes) -> (tiger? = yes)
+- **Searvhing rule space**- search for possible rules
+	- inductive learning- finding clever ways of managing search for possible rules
+- **Decision Trees**- useful structure for classification
+	- **Classification using Decision Tree**- 
+		- decision tree allows to devide how to classify an example as animal, based on attribute values
+		- basically a tree based on logic, branches of YES/NO which go to more questions
+		- **Non-Leaf NOdes** represent attributes (striped, long tail, big teeth etc)
+		- **LEaf NOdes** represent classes (tiger, lemur, zebra, rabbit etc)
+		- **Arc Labels** represent attribute values (yes, no)
+		- traverse the tree based on the attribute values to get to the class answer
+	- **DEcision tree and Conjunctive Rules**-
+		- a decision tree really just stores set of c onjuctive rules (1 rule for each leaf node)
+		- (stripy = Yes) ^ (long tail = Yes) ^ (big teeth = yes) -> (class = tiger)
+	- **DEcision tree inductio**- 
+		- **OKhams Razor**- states that the most likely hypothesis is the simplest one that is consister with all observations
+		- the smallest tree that correctly classifies all of the training examples is best
+		- induction algorithms aim to come up with the ssimplest decision tree that coers the exampl data
+		- prefer the simplest tree becasue we bleieve that it is more likely to be a general rule which works for new cases, rather than a complex forumala applied to given data
+		- resulting tree is a useful reprepentation that can be easily verified by humans and used by humans or pgraomgas
+		- cerate decision tree top down looking for fwatures with which to lavel nodes
+		- feature chosen shoul be a good discriminating feature- should be the feature which best splits the exampls into different classes (tifer, non-tiger)
+			- IMPORTANT- starting with an attribute at the root comapred to others can cause the traversing to take longer 
+			- find the best discriminating feature (which will be best at root to get rid of any NON classes for what you are looking for)
+				- highest amount of information that we can use to start getting rid of NON classes
