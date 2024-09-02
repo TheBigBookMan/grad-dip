@@ -62,3 +62,53 @@
 			- IMPORTANT- starting with an attribute at the root comapred to others can cause the traversing to take longer 
 			- find the best discriminating feature (which will be best at root to get rid of any NON classes for what you are looking for)
 				- highest amount of information that we can use to start getting rid of NON classes
+- **ID3 Algorithm**- 
+	- decision tree induction program constructs decision trees in top-down
+	- attribute seleted to test current node of the tree and is used to partition set of examples
+	- algorithm recusrively constructs a sub-tree for each partition
+	- continues until either all memebers of partition are in same class or no mroe attribute remains
+	- **Criteria**- select criteria o be in root
+		- selecting attribute to be place of root of tree (and each of sub trees) is critical for inducing a good tree
+		- criteria used by ID3 based on measure called **information again**
+	- **Entropy**- 
+		- set of samples and each sample belongs to either a class N or P
+		- probability of the sample belonging to class P or N
+	- **Information Gain**- simple expected reducton in entropy casued by partitioning examples acoording to some attribute
+		- more information gathered from attributes, we can reduce the possibilities that a sample will be a part of
+		- ![[Pasted image 20240902191005.png]]
+		- when the attribute has the greatest information gain, ID3 will select it as the root of the tree
+		- algorithm will then continue to apply this alysis recursively to each sub-tree until has completed the tree
+		- root attribute can already identify sample that isnt part of the class so can remove those rows from the table immediately
+	- **Measuring Classification Accuracy**-
+		- real test of how well a classifier performs must be determined by testing its perfoamce on samples thath ave not been used to construct the classifier
+		- no point in having classifier that performs well on training samples if it doesnt perform well in predicting class of test samples
+		- classifier must be able to generalise
+		- test ability of classifier to generalise we must hold out some of the samples to use as test set
+		- **Estimate Methodologies**-
+			- **SImple Split**- 
+				- split data into two mutually exclusive sets (training set- 70%, and test set 30%)
+				- include decision tree using examples in training set, and then measure classification accuracy on examples in test set
+			- **K-fold Cross Validation**
+				- split the data into k mutually exclusive subsets
+				- use each subset as a test set, while using all of other subsets as for training
+				- repeat step 2 k times
+				- aggregate the test results to obtain the overall estimation of prediciton accuracy
+			- **Leave-one-out Cross Validation**
+				- special case of k-fold where k is equal to number of examples in the dataset
+				- use one sample for testing
+			- which one to use-
+				- no definitive answer but really matters of tradeoff
+				- simple split is good for large number of examples, if its extremely large might do a 10% training and 90% test split, if number is small then number of examples used for training may not be sufficient to develop good model
+				- k-fold is good for estimation of true accuracy of classifier, but is computaitonally expenseive, since need to inudec many decision rees, best for small datasets and moderate data set size
+	- **Overfitting**-
+		- good performance is seen on training data, but poor erfroamcen on test data
+		- overfits to the training data- good for training but not test
+	- **Generalisation**-
+		- dont care how well classifier performs on examples it has trained on. Interested in how well it performs on examples it hasnt seen before, interested in its ability to generalise
+		- higher degree of overfitting, lower ability of classifier to generalise
+	- **Pruning**-
+		- avoding overfitting is using pruning in decision tree
+		- cutting off smaller branches
+		- result in new tree that does not eprform well on training examples but better able to generalise corretly predict class of novel examples
+		- different approaches to pruning
+		- no in ID3 algorithm
