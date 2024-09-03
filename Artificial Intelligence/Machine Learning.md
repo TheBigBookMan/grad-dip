@@ -104,6 +104,13 @@
 	- **Overfitting**-
 		- good performance is seen on training data, but poor erfroamcen on test data
 		- overfits to the training data- good for training but not test
+		- as training progresses, average magnitures of weight values increases
+		- higher magnitueds of weight values, more non-linear the function represented by network
+		- if function becomes too non-linear then will beging to model spurios noise in the training examples
+		- generalization performacne decreases- not good with data it hasnt seen
+		- caused by
+			- too many hidden layer units
+			- excessive training
 	- **Generalisation**-
 		- dont care how well classifier performs on examples it has trained on. Interested in how well it performs on examples it hasnt seen before, interested in its ability to generalise
 		- higher degree of overfitting, lower ability of classifier to generalise
@@ -143,3 +150,62 @@
 			- can be linear or non-linear
 	- outoing connection from each hidden layer neuron split into number of branches that transmit signal to neurons in output layer
 	- output layers nodes take weighted sume of inputs and output this value
+- **Non-linear activation of hidden unit**- 
+	- weighted neuron from input
+	- reaches linear combiner
+	- then haird limiter- activation function
+	- and output
+- **What MLP used for**-
+	- solve regression-
+		- problem which the task is to estimate continous valued output, on basis of input signal
+		- takes many factors to determine a new output on a scale type
+	- solve classification-
+		- problem which the task is to assign an input signal to one of a fixed number of output classes
+- **Training Neural Network**-
+	- process to feed a set of labelled data into system to determine the value for each weight, labelled data are data with bpoth input and output aqre known
+	- knowledge represented in neural network resides in the values of numerical weights that connect neurons
+	- training algortihms operate by adjusting the weights in such a way makes the ouput of networkc lose to desired output
+	- machine learning uses neural networks is called supervised learning because NN requires training process
+	- process:
+		1. initialise weights into small rnadom values
+		2. present training example to network, calculate the error between network output and target outpitl adjust network weights or umber of neurons or activation functions in such way to reduce error
+		3. repeat step 2 for each exmaple in training set
+		4. repeats step 2 and 3 often a very large number of times- until overall error is deemed to be sufficiently low
+		5. network is now trained and can be applied to making predictions on novel examples
+	- each iteration of steps 2 and 3 is referred as **epoch**
+	- **learning rate**- amount by which network weights are adjusted is detremined
+	- activation functions to use- sigmoid for classification, linear for regression
+	- choosing appropriate number of hidden layer units is crucial for NN generaliusation capacity and so it doesnt overfit
+- **Application**-
+	- convert inputs with encoding into numerical (yes = 1, no = 0)
+	- **Bias**- extra neuron that is a set number of the asnwer?
+		- input value alwas 1
+- **MIxed-attribute datasets**-
+	- having boh continous and categorical data
+	- numeric attributes- only require single neuron
+	- binary attributes- also require only single input neuron, 1 or 0
+	- categorical ttributes- 1-of-n encoding scheme
+	- **Classification problen**- use one output corresponding to each class value
+	- **Regression problem**- network require to output single numeric value only one output is required
+
+## Unsueprvised Learning- Clustering
+- requires no training
+- decision tree is unsupervised learning
+- **CLustering**- algorithm classifies a set of data samples into an umber of clusters
+	- samples within a cluster share some common charactersitcs which make them different from samples of another cluster
+	- differnert clutsreing algorithms
+	- **Grid-based**-
+		- divide samples using grid structure, identify cell of higehst density and its niehgbouring cells to form cluster
+			- creating grid structure, partitioning data space into finite number of cells
+			- calculating cell density for each cell
+			- sorting of cells according to their densiities
+			- identifying cluster centres
+			- traversal of neihbour cells
+	- **Density based**-
+	- **Centroid based**-
+		- specfiy number of clusters k
+		- initialise centroids first shuffling dataset and then randomly selecting k data points for the centroids without replacement
+		- keep iterating until there is no change to the centroids, assignment of dat apoints to clusters isnt changeing
+			- compute the sum of squared distance between data points and all centroids
+			- assign each dat point to the closes cluster (centroid)
+			- compute centroids for the cluisters by taking the average all of all data points that belong to each lcuster
