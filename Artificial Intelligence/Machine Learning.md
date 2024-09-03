@@ -1,5 +1,6 @@
 - **Machine learning types**-
 	- **Supervised learning**- all data is labelled and alrogirhtms learn to predict the output from the input data (classification and regression)
+		- 
 	- **Unsupervised learning**- all data is unlabelled and the algorithms learn to inherent structure from the input data (clustering)
 	- **Semi0supervised learning**- some data is labelled, but most is unlabelled, mixture of supervised and unsupervised techniques used (pattern recognition (mix of labelled and unlabelled images))
 - **Types of Learning**-
@@ -112,3 +113,33 @@
 		- result in new tree that does not eprform well on training examples but better able to generalise corretly predict class of novel examples
 		- different approaches to pruning
 		- no in ID3 algorithm
+
+## Artificial Neural Networks (ANNs)
+- used with supervised learning
+	- requires a training process
+- decision trees represent knowledge symolbicaly, while neural networks represen knowledge sub-symbolically as set of numerical weights
+- consistsw overy simple processors called neurons, which are analogous to biological neurons in brain
+- takes multiple inputs, processes input data, generates one or multiple outputs
+- neurons arranged in layers and connected by weighted (numerical) links passing signals from one neuron to anoter
+- different types ANN proposed and can be used for different purposes, most popular is **multilayer perceptron (MLP)**- can be applied to classification or regression problems
+- **Multilayer Perceptron (MLP)**
+	- consists of neurons arranged in 3 or more layers
+		- **Input Layer**- input signals
+		- **Output Layer**- output signals
+		- **One or More Hidden (Middle) Layers**- layers of numerical weights
+			- hidden doesnt take ay input from outside system and doesnt output directly to anything
+	- inputs can be things like (color, weight, shape)
+	- outpiuts can be things like (orange, apple, pear)
+	- with the middle layer making the processing
+- **Basic operation of NN**
+	- uinput signal fed to input layer
+	- outgoing connection from each input layer neuron splits into number branches that transmit same isgnal to neurons in hidden layer
+	- hidden layer units then take weighted sum of inputs, and pass through non-linear actication function
+		- **Acitvation Function**- process the data and apply function to the input to generate output
+			- each neuron forms weighted sum of its inputs and passe resulting value through a function
+			- function is referred to as activation or transfer function
+			- if inputs are x1, x2, xn and weights are w1, w2, wn the output neuron is y = g(w1 x1 + w2x2)
+			- function g is activation function
+			- can be linear or non-linear
+	- outoing connection from each hidden layer neuron split into number of branches that transmit signal to neurons in output layer
+	- output layers nodes take weighted sume of inputs and output this value
