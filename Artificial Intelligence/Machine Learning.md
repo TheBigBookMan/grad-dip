@@ -209,3 +209,71 @@
 			- compute the sum of squared distance between data points and all centroids
 			- assign each dat point to the closes cluster (centroid)
 			- compute centroids for the cluisters by taking the average all of all data points that belong to each lcuster
+
+## Anomaly Detection
+- **Anomaly Detection**- they are outliers
+	- objects different from other objects
+- **Causes of anomalies**- 
+	- data from different class of object or underlying mechanism
+		- disease versus non-disease
+		- fraud vs non-fraud
+	- Natural variation
+		- tails on a Gaussian distribution
+	- Data measurement and colelction errors
+- **Structure of Anomalies**-
+	- **Point Anomalies**- individual data instance is anomalous with respect to the data
+	- **Contextual Anomalies**- individual data instance is anomlaous within a ontext. it requires a notion of context- conditional anomalies
+	- **Collective Anomalies**- individual data instance is anomlaous with collection. collection of related data instances is snomalous, requires relationship among data instances
+- **Applications of Anomaly Detection**-
+	- network intrusion
+		- monitoring events ocurring in a computer system or network and analyse them for instrusions. 
+		- intrusions defined as attempts to bypass security mechanisms of a computer or network
+		- challenges with tranditional intrusion detection systems are based on signatures of known attacks and cannot detect emerging cyber threates
+		- substantial latency in deployment of newly created signatures across computer system
+			- anomaly detection can alleciate these limitations
+	- insurance/credit cad fraud
+		- criminal activities occurring in commercial organisations
+		- malicious users might be employees, catual custoemrs or someone posing as customer
+		- credit card, insurance claim, mobile/cell. insider trading
+		- challenges to detect fraud- fast and accurate real-time detection and misclassification cost is very high
+	- healthcare informatics/medical diagnosis
+		- detect anomolous patient records plus indicate disease outbreaks and instrumentation errors
+		- key challenges are avaialbility of only normal labels, misclassification cost very high, ata can be complex
+	- industrial damage detection
+		- faults and failures in complex industrial systems, structural damages, intrusions in electronic security systems, suspisous events in video surveillance and abnormal enery consumption
+		- keychallaneges are data is extremely large, noisy and unlablleed. most applications exhibit temporal behaviour and detected anomolous events typocally require immediate intervention
+	- image processing/ video serveillance
+		- outliers in an image monitored over time and detecting anomolous regions within an image
+		- mammoggraphy image analysis, video servueillance and satelite image analysis
+		- key challanges- detecting collective anomolies, data sets are very lareg
+	- novel topic detection in text minung
+- **Using Data Labels for Anomaly detection**-
+	- **Supervised Anomaly detection**-
+		- available for both normal data and anomalies
+		- like classification with high class imbalance
+	- **Semi-supervised anomaly detection**- available only for normal data
+	- **Unsupervised anomaly detection**- 
+		- not assumed
+		- based on assumption that anomalies are very rare compared to normal data
+- **Output of anomaly detection**-
+	- output of anomaly detection achieved in two forms
+		- **Label**-
+			- each test instance is given a normal or anomaly label
+			- typical output of classification-based approaches
+		- **Score**-
+			- each test instance is assigned an anomaly score
+				- allows outputs to be ranked
+				- requires an additiona threshold parameter
+- **Variants of Anomaly detection problem**-
+	- if dataset D could have detection prblem following variants
+		- given dataset D, find all data points X -> D with anomaly scores greater than some threshold t
+		- given dataset D find all data points X -> D having the top-n largest anomaly scores
+		- given dataset D containing mostly normal data points, and a test piont x, compute anomaly score of x with respect to D
+- **Unsupervised anomaly detection**-
+	- no labels available, its based on assumption that anomalies are very rare compared to normal data
+	- gerneral steps for unsupervised are
+		- build a profile of normal behaviour
+			- summary statistics for overall population
+			- model of multivariate data dsitrubuion
+		- use normal profile to detect anomalies
+			- anomalies are observations whose characteristics differ signifacntly from normal profile
