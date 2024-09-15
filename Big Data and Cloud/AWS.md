@@ -1,1 +1,91 @@
 - Amazon Web Services
+- digital computing in 2003
+- size of digital data ever created was 4000 million GB
+	- same data generated every 48 hours
+- provide software and hardware remotely in order to make users life simpler
+- **Software as a service**- not having to buy software and install it
+	- internet transfers data through the connection
+	- pay and access only the functionalities that benefit them and when they need it
+- **Public cloud**- most known and used
+	- made available as pay-as-you-go to general public
+- **Private cloud**- large organisation to become a private cloud provider
+	- create own internal data centres and dont make these centres available to public
+- **Variables Combned to make computing possible**
+	- experience with very large datacenters
+	- unprecedented number of users enables unprecedented economis of scale
+	- pervasive broadband internet
+	- fast x86 visualsation
+	- pay-as-you-go billing models
+	- standard software stacks
+- **Economies of Scale**-
+	- having many users means less cost for datacenters 
+	- less cost for datacenters means less cost for users
+- **Four examples cloud computing**-
+	- **Rapid Growth of web 2 company**- 
+		- many users growing in short amount of time
+		- cant run on just a desktop home computer
+		- non-cloud solutions scale slowly
+			- need months to setup new computers and software
+			- cannot support rapid growth unless very expensive iver-provisioning
+		- cloud can scale by hundreds of machines within minutes
+	- **PAtterned workload/peak workload**
+		- non cloud based need to provision for peak workload
+			- ensure a response time
+		- clous is just pay for what you use
+	- **Over-provisioning and under-provisioning**
+		- overprovisioning- underutilising resources 
+			- over paying for wasted computational resources
+		- unerprovisioning- 
+			- not enough resources for demand
+			- causes problems for software
+	- **Elasticity**
+		- ability to scale up and down computational resources based on demand
+		- pay-as-you-go services work perfectl well
+		- not wasting recources or money
+- **Cloud-based web apps**- 
+	- allows application servers to scale up and down automatically
+- **Big data analytics on cloud**-
+	- dont need to build data processing on site
+	- can use cloud when needed
+- **Types of cloud services**-
+	- **Infrastructure as a service**- 
+		- allows users to share physical ahrdware such as CPU and storage services
+		- users can take advantage of hardware and other physical resources without capital investment
+		- benefit is very few limitations on what user can confiugure service to do
+		- simple sotrage service, elastic block storage, elastic compute service EC2
+		- used by Virtual Machines
+		- **Virtual Machines**-
+			- multiple users share same computer resources
+			- sharing on same computer doesnt mean resources interact, can run independently
+			- Virtual Machine Manager VMM
+				- hypervisor
+				- creates and runs virtual machines
+				- provides interfact identical to the host (except in the case of paravirtualisation)
+				- usually guest is an OS
+				- configure resources available to each gues OS- ege 2 virtual CPUs of RAM/ GB on disk
+			- Protection due to isolation
+				- host systems protected against virus, security breaches and bugs in gues OS systems
+				- one OS system is protected from another guest OS
+			- Flexibility-
+				- suspend and resume virtual machine
+				- snapshot of virtual machine state
+					- can be used allow to restoring previous state
+					- VM can be cloned
+			- Consolidation of resources-
+				- many lightly use systems combined create heavily used system
+			- cheaper to manage
+				- 100 physica lservers running 20 virtual = 2000 virtual servers
+			- live migration
+				- moves a running gues from on physical machine to another
+				- useful when system is overloaded for load balancing
+				- useful when hardware upgraded or repaired
+			- install software conf on virtual machine image
+				- redoployment of OS and environment much faster
+	- **Platform as a service**-
+		- allow tenats share the OS and application frameworks
+		- allows sharing database service admin which cuts costs significantly and more efficient than virtual machines
+		- higher level of service at a lower cost for users
+		- relational database services, dynamo DB, Route 55, elastic mapreduce
+	- **Software as a service**-
+		- services directly consumable by end user allowing to share entire software stack
+		- gmail, google calendar, google docs, dropbox
