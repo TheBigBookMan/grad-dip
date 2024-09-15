@@ -161,4 +161,49 @@
 	- **Elastic Block Storage (EBS)**-
 		- read and write raw bytes like normal disk drive
 		- store data via file system
-		- 
+		- useful in instances when data is computed in VM and VM is paused and then reinitiated
+		- EBS stores data in interim period and functions effectively as network stroage
+		- block level storage volumes for use with EC2 instances
+		- both read and write access
+		- EBS snapshots are durable and can be stored in S3
+		- suited for apps requiring databases, file systems or acess t raw block level storage
+		- EBS volumes highly available and reliably storage which attached to any running instance in same availability zone
+		- EBS volumes persist independently from life of the instance
+		- when EBS volume not attched to EC2 instance, pay only for cost of storage
+		- EBS used to create RAID (RAID 0 or RAID 1+0) configuration for a server
+			- volumes behave like unformatted block devices for limnux or windows instances
+			- benefit is access faster from two different discs and a backup is always available should one of the disks fail
+		- highly available and reliable, particularly when data is replicated across multiple servers within the same AZ for fault tolerance.
+		- 20 GB or less volumes, expected annual failure is 0.1-0.5% compared to commodity HDD with typically have a failure rate of 4%
+		- can be configured to take periodic snapshots of your volumes and save themto S3
+	- **Comparison**-
+	- ![[Pasted image 20240915160414.png]]
+- **Compute Services**
+	- **Elastic Compute EC2**- 
+		- resizable compute capacity in cloud and reduces the time required to obtain and boot new server instances VM to minutes
+		- enables users to scale their capacity up or down as required
+		- instance types-
+			- differnt CPU types can be selected
+			- ![[Pasted image 20240915162104.png]]
+	- **AMazon Machine Image (AMI)**-
+		- templates of computers root volume
+		- pre-configured images including OS systems and apps pre-installed, standard images and community images
+		- create your own AMI with your own apps, libraries and data
+		- create own gold master images of EC2 infrastructure enables to decrease your boot times
+	- **Infrastructure and Apps**- enables launch entire enterprise software stacks from Oracle and new system analsysi program SAP customer can deploy their SAP solutions on SAP certified amazon EC2 instances
+- **Billing Model**-
+	- **Reserved Instances**-
+		- cheaper per hour to rent
+		- require you to pay 24 hour X 7 day access for one or three years at a time
+		- useful for wanting to run a web server needed all the time
+	- **On-demand Instances**- 
+		- only pay per hour for what you use
+		- if you dont need the instance for a period of time then you dont pay for it during that period of time
+		- billing done per hour grain so need to pay for atleast one hour at a time
+	- **Spot Instances**-
+		- people big the max amount per hour willing to pay for an instance
+		- allows AWS to rent EC2 instances that people dont want to yuse for usual on-demand price
+		- price goes up again the user may be evicted from instance
+		- users continously save their progress in case get evicted
+		- ![[Pasted image 20240915163734.png]]
+	- 

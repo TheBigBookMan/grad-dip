@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "32617972ac784f64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Big Data and Cloud/Map Reduce.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Big Data and Cloud/AWS.md",
+                "file": "Big Data and Cloud/Map Reduce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Big Data and Cloud/AWS.md",
+                "file": "Big Data and Cloud/Map Reduce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Big Data and Cloud/AWS.md"
+                "file": "Big Data and Cloud/Map Reduce.md"
               }
             }
           }
@@ -147,10 +160,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8143d70273245f8c",
+  "active": "32617972ac784f64",
   "lastOpenFiles": [
-    "Artificial Intelligence/AI.md",
     "Big Data and Cloud/AWS.md",
+    "Big Data and Cloud/Map Reduce.md",
+    "Pasted image 20240915163734.png",
+    "Pasted image 20240915162104.png",
+    "Pasted image 20240915160414.png",
+    "Artificial Intelligence/AI.md",
     "Artificial Intelligence/Algorithms.md",
     "Artificial Intelligence/Machine Learning.md",
     "Artificial Intelligence/~WRL0379.tmp",
@@ -180,9 +197,6 @@
     "AWS Skill Builder/Services.md",
     "AWS Skill Builder/Architecture.md",
     "AWS Skill Builder/Workshops GenAI.md",
-    "Pasted image 20240523133859.png",
-    "Pasted image 20240523133829.png",
-    "Pasted image 20240523133758.png",
     "RAG/RAG Langchain.md",
     "Networking/Intro to Networks.md",
     "Information Technology/Topic 1- Computer Architecture.md",
