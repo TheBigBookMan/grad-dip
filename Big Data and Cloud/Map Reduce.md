@@ -1,1 +1,4 @@
-- **Map Reduce**- 
+- **Update Intensive**- millions of updates occurring every day
+	- coplex and often client facing which means that timely responses are essential
+- **Data Intensive**- query large amounts of data quickly
+- 
