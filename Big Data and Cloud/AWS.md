@@ -89,3 +89,76 @@
 	- **Software as a service**-
 		- services directly consumable by end user allowing to share entire software stack
 		- gmail, google calendar, google docs, dropbox
+
+## Amazon Web Services
+- amazon found christmas period had too high demand for their hardware
+- **SErvices**-
+	- **Deployment & Management**
+		- **AWS Management console**- web interface
+		- **Deployment & Automation**-
+			- AWS Cloudformation
+			- Elastic Beanstalk
+			- OpsWorks
+		- **Monitoring**- Cloudwatch
+		- **Identity & Access**- IAM
+	- **Application services and networking**-
+		- **Content delivery**- cloudfront
+		- **Distributed computing**
+			- amazon EWR
+			- auto scaling
+		- **Networking**
+			- AMazon VPC
+			- Route 53
+			- Elastic load balancing
+			- AWS direct connect
+	- **Compute, storage and database**
+		- **Compute**- EC2
+		- **Storage**
+			- S3
+			- glacier
+			- EBS
+		- **Database**
+			- redshift
+			- dynamodb
+			- amazon rds
+			- elastiache
+- **Regions**- usually different cities
+	- consists of data centers within a region
+	- **Availability Zones**- where data centers reside
+	- each region has multiple AZ (mainly minimum 2)
+	- each AZ has separate power provider enabling other data centers to continue to operate when single power provider goes down
+	- increase fault tolerance during natural disasters
+	- allow users to spread computation across multiple tier 1 ISPs
+- **Edge Location**- help lower latency and improve perfoamcen by caching data closer to user
+- **Security**
+	- **Security groups**- built-in firewall for virtual servers
+		- associate multiple security groups with an instance
+		- all other internet ports blocked by default
+		- **Web Tier**- accept traffic port 80/443 from anywhere on internet
+		- **App Tier**- accept traffic from web tier
+			- SSH to app tier- acts as bastion
+		- **DB Tier**- only accept traffic from app tier
+			- authoriused 3rd parties granted SSH access
+		- additional rules to allow remote administration via SSH
+	- **Virtual Private Cloud VPC**-
+		- provision a logically isolated section of AWS cloud to launch AWS services in a virtual network that you define
+		- complete control over your virtual networking environment
+			- own IP address
+			- createion of subnets
+			- configuration of route tables and network gateways
+- **AWS Storage Services**-
+	- **Simple Storage Service (S3)**-
+		- designed to store objects
+		- write once and read many times
+		- good for fles that dont need to be updated- like images
+		- designed for 99.999999999% durability and availability of objects over a given year
+		- highly scalable, reliable and inexpensive
+		- need to upload a file to store in a bucket, set permissions and add metadata
+		- limit 100 buckets per account
+		- choose geographical region where S3 buckets and contents stored
+		- bandwith into S3 is free but AWS charge rate on bandwith out
+		- space is provided in a prorated GB per month and can be calculated
+	- **Elastic Block Storage (EBS)**-
+		- read and write raw bytes like normal disk drive
+		- store data via file system
+		- 
