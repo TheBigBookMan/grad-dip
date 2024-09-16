@@ -1,4 +1,81 @@
 - **Update Intensive**- millions of updates occurring every day
 	- coplex and often client facing which means that timely responses are essential
-- **Data Intensive**- query large amounts of data quickly
-- 
+- **Data Intensive**- query large amounts of data quickly with read only
+- **Hadoop Distributed File System**-
+	- stores data across multiple file systems
+	- distributed across different machines (nodes) for fault tolerance
+	- parallel processing
+- ![[Pasted image 20240916155504.png]]
+- lack of transfer speed presents problem for big data analysts
+	- solution was use multiple discs
+	- hadoop uses programming distributed systems use of multiple disks and parallel processing to process large daa sets quickly
+- **MapReduce**- automatically convert two sequential programs into a parallel program runs on very large cluster of machines
+	- use huge cluster of machines to do data analytics
+	- parallel programming framework
+		- runs on lots of machines
+	- Dont use mapreduce on complex algorithms, things that have high big O notation
+	- if no index exists and data is not sorted then
+		- parallel programming can help
+		- each computer subset of many documents
+		- can work in parallel
+	- parallel programming is good for exhaustive search
+		- no need to touch every bit of data to find something
+	- **Data transofrmation example of using it**- replacing things in documents works well because can split the workload evenly and things changed doesnt ruin other stuff
+	- **Data aggregration**- good for parallel programming
+		- aggregate large data sets
+	- Very good for touching every piece of data just ones and processing piece of data independently
+	- work done on a machine is independent of other machines
+	- programmers write two sequential programs (map and reduce) that operate on one small piece of data at a time
+	- apply the two sequential programs to massive dat asets to automatically produce a parallel program
+	- **9 Concepts**-
+		- **Scaling Out vs Scaling Up**-
+			- scaling out- more computers
+				- unlimited scalability
+				- much cheaper
+				- can take advantage of more parallel IO
+				- network communication slow
+			- scaling up- increase size computer
+				- limited scalability from processing, RAM, IO
+				- becomes very costly once threshold reached
+				- good that can process fast because shared memory
+		- **Batch Processing vs INteractive Processing**
+			- batch- takes big piece of data and process it all and gives you the result at end
+				- perfect for mapreduce
+			- interactive- query and get response then query again
+				- a lot slower and not good for mapreduce
+		- **Shipping COmputation vs shipping data**
+			- computation- move data to computation
+				- not good
+				- program small
+			- data- move computation to data
+				- move program to where the data is
+				- mapreduce makes 3 copies of data
+					- 3 places to move the computation
+		- **Process Data sequentially and void random IO**
+			- Random IO disk much slower than sequential IO
+				- cost of accessing 1000, 4KB pages using
+					- random IOl 6000ms
+					- sequeuntial: 40ms
+			- load data is faster to load it from beginning to end seuqneitally instead of in random spots at a time
+				- takes time for the disk head to mvoe from one place to another
+				- why sequential works better because the data is all near each other
+		- **Hide system details from developer**
+			- very complex
+			- mapreduce provides high level abstraction that isolates the developers from system level details
+			- way too error prone writing distributed software
+		- **Seamless scalability**
+			- program written to process 100 TB data exact same as for 100MB data
+			- can scale for more data nd more machines
+			- although not adding double machines means half execution time, but its still more efficient
+		- **Automatic fault tolerance**
+			- large clusters of computers makes higher chance of things breaking
+			- mapreduce automatically redistributres work or failed nodes to other does and redo work
+			- users dont need to know about failure because auto done
+		- **Automatic load balancing**
+			- mapreduce auto balance the work from a node that is taking long to one that is free
+			- autoamtica so user doesnt need to do anything
+		- **Schema on read**
+			- big problem with RDS takes too long to load into the database
+				- writes to DB before being queried- not good for fast paced databases
+			- mapreduce runs the query as the same time as loading the data, so doesnt need to wait for writing
+			- 
