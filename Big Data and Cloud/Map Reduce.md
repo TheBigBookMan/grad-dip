@@ -27,6 +27,11 @@
 	- work done on a machine is independent of other machines
 	- programmers write two sequential programs (map and reduce) that operate on one small piece of data at a time
 	- apply the two sequential programs to massive dat asets to automatically produce a parallel program
+	- **Map**- same computations across all items
+		- maps the data it into a kay/value pair
+	- **Reduce**- results from the map phase and reduce into single value and return a single computation
+		-  shuffle happens- groups the nodes into nodes of mathching keys
+		- return single value for each one of the keys, rather than the multiple keys
 	- **9 Concepts**-
 		- **Scaling Out vs Scaling Up**-
 			- scaling out- more computers
@@ -78,4 +83,43 @@
 			- big problem with RDS takes too long to load into the database
 				- writes to DB before being queried- not good for fast paced databases
 			- mapreduce runs the query as the same time as loading the data, so doesnt need to wait for writing
-			- 
+
+## Language Neural Mapreduce processing
+- **Map Function**- receives a key and value as inpout and outputs an intermediate key and an intermediate value
+	- essentially it maps all the data into some sort of key-value pair making it easier to shuffle and reduce into smaller chunks to process and analyse
+	- *map (in_key, in_value) -> list(intermediate_key, intermediate_value)*
+	- map- function used to transform the input key and value to the intermediate key and intermediate value
+	- in_key- just the line number of the input line currently being read
+	- in_value- actual text read from the current line of input file
+	- list- list outputted by the map function
+	- intermediate_key- most important parameter, data at the reducer is grouped based on the intermediate key
+	- intermediate_value- usually stores the values you want to aggregate by
+- **Reduce Function**- important to reduce large datasets into smaller to be usable
+	- data is shuffled by the system and grouped according to the intermediate key value pairs
+	- all key value pairs with the same intermediate key are sent to separate reducers where they are further reduced through aggregation. 
+	- output of reducer is sorted by intermediate key
+	- *reduce (intermediate_key, list(intermediate_value)) -> list(out_key, out_value)* 
+	- reduce- function that takes output of the mapper and combines values thaqt belong to the same intermediate key by aggregating the values
+	- intermediate_key- each call to reduce function will recieve one intermediate key
+	- list(intermediate_value)- list of values that have all have the same intermediate key
+	- list- output of the reducer is a list of output keys and their corresponding values
+	- out_key- key that is outputted by reducer, often same value as intermediate key
+	- out_value- aggregated output that is result of combining all the values for the same intermediate key
+	- The reducer also outputs its key values pairs in sorted order according to the intermediate key
+- Most time consuming parts of mapreduce data processing is the shuffling of data from mappers to reducers
+	- can reduce cost by performing a mini reduce operation within a mapper node
+	- mapper reduces the amount of data that need to be shuffled to the reducer
+	- **Combiner**- combines the output of the mappers to reduce tha mount of data shuffled
+		- can reduce amount of key-value pairs the reducer needs to aggregate so can reduce overall time processing
+	- **Local Aggregation**- same idea as using combiner but combining data is done inside the map function, requiring a hash table
+	- **Combiner vs Local Aggregation**- 
+		- combiner allows yo write separate function to do combining and often reduce function can just be reused as combiner function
+			- downside is the output key of mapper needs to be emitted first by mapper before gets to combiner
+			- incurs overhead of more objects
+		- local aggregation more challenging to program since need to keep track of already encountered intermediate keys and group them nyu youtself
+			- high cost of memory for keeping hash table
+			- advantage is intermediate keys of mappers do not need created before they are aggregated
+- Can run mapreduce on AWS
+	- elastic mapreduce
+		- upload code and specify size of your cluster and where to load and store the data
+		- 
