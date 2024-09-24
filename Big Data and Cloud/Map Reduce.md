@@ -122,4 +122,99 @@
 - Can run mapreduce on AWS
 	- elastic mapreduce
 		- upload code and specify size of your cluster and where to load and store the data
-		- 
+
+
+## Hadoop
+- open source mapreduce made by yahoo 2008
+- **Hardware**- nodes of commodity PCs via network
+	- called cluster of workstations
+	- each node has a disk, CPUs, memory
+	- very scalavble
+	- spread over thousands of shared nothing nodes/blades
+	- nodes/blades are grouped into racks
+	- each node/blade within a rack has the memeoyr, disk, CPUus
+	- communication within nodes/blades faster than across racks
+- **Shared Nothing Architecture**- shared by the netwok
+	- moving data across machines is costly 
+	- goal hadoop to minimize data movement 
+	- move computation to data- ship the code to the data
+	- map task just take data and process it, transform and tranfer it to same machine, so no communication across machines
+	- minimize cost of data shuffle from mappers to reducers
+- **Architecture**- 
+	- **COmputation Layer**-
+		- via JobTracker coordinates distribution of map and reduce tasks to various computational nodes
+		- Master node runs program called JobTracker
+	- **Storage Layer**-
+		- called Hadoop distributed file system (HDFS)
+		- responsbile for managing and storage of all data
+		- Master node runs NameNode (NN)
+			- has meta-data in memory
+			- entire metadara is in main memory
+			- no demand paging of meta-data
+	- Master-slave architecture where there is a master node for computation layer and a master node for storage layer
+		- both master nodes reside in same master node machine
+		- makes JobTracker easily find out where data needed by madreduce job resides so easily ship the code to where data is
+		- ![[Pasted image 20240924161042.png]]
+- **Hadoop Distributed File System (HDFS)**-
+	- designed to store huge amounts of data (peta bytes) across thousands of machines
+	- even though its spread across so many machines and dissks, it appears like normal file system with a single directory structure containing files
+	- single namespace
+	- files usually broken in blocks of 128MB
+	- designed for write once- read many times so cannot update files that have been written into HDFS- which suits standard data analytics workloads where queries are usually all read-only
+	- used across 10000 machines
+	- replicate the data across machines, replicating twice so 3 copies of data
+	- any death of machine it will know when copies of data are and recover them automatically
+	- optimised for batch processing and moving the computation to data
+	- provides very high aggregate bandwidth
+	- scalability of HDFS determined by memory size of namenode
+	- types of metadata-
+		- list of files
+		- list of blocks for each file
+		- list of datanodes for each block
+		- data attributes- creation time etc
+	- **DataNode**- the slave nodes
+		- a block server
+			- sores data in local file system
+			- stores meta-data of a block
+			- serves data and meta-data to clients
+		- a block report
+			- periodically report sent of all existing blocks to NameNode
+			- if no block report received by NameNode within time frame then assume DataNode is down
+		- Facilitates Pipelining in datanode
+			- ![[Pasted image 20240924164845.png]]
+		- ![[Pasted image 20240924164928.png]]
+	- Logical blocks are actually stored as files in local file system
+	- file will be created inside local file system of each data node to store Block A, same for Block B
+	- Small files
+		- file is 100 bytes in size it will occupy one HDFS block
+		- block stored in a 100 byte file in local file system of the Datanodes
+		- no waste of space
+		- having a lot of small files is bad since Namenode need to keep track of it all
+		- total meta data size of many small files maybe too big to fit in RAM of namenode
+	- Data correctness-
+		- use checksums to validate data
+		- file creation- client computes checksum per 512 bytes with unique signatute
+	- **Rebalancer**- moves block of data around
+		- % disk full on Datanodes should be similar
+		- moves blocks around to balance number of blocks per datanode
+		- computational parallelism also depends on where the data resides
+		- usually run when new datanodes are added
+	- NameNode failure-
+		- single point of failure
+		- all meta data (where data blocks reside) kept in RAM
+		- even turning off then loses it all because in RAM
+		- if namenode dies
+			- contents of datanodes no longer accessible
+		- edits log
+			- log all changes that occurred to the meta data (add new file, write etc)
+			- writes onto a log like disk 
+		- fsimage- contains the latest snapshot of the meta data
+	- Secondary NameNodes
+		- old snapshot (fsimage) may become too old
+		- edit log also gets too large
+		- if recovery is needed then it will take a long time to replyu all the edits
+		- create new fsimage by playing back the edits
+		- very computationally expensive
+		- plays back the edits continously so it is up to date
+		- high availability using the two name nodes because if one dies then use the second
+		- Zookeeper is distributed consensus service which can be used to elect a single node as the active NameNode
