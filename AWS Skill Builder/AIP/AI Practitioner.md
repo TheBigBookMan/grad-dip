@@ -1,0 +1,14 @@
+## Fundamentals of AI and ML
+- **AI**- simulation of human intelligence by machines like computer systems
+	- systems that perceive, reason, learn and act based on data performing tasks like humans would with human-intelligence, pattern recognitions, deciison making, problem solving
+- **ML**- subset of AI focusing on building systems that learn from data to make predicitons or decisions
+	- not being explicilty programmed, but algorithms detecting patterns and relationships in data to improve performance over time
+- **Deep Learning**- subset of ML
+	- involves neural networks that has many layers (deep)
+	- can automatically learn features and representations within large amounts of data
+	- common in image recognition, speech processing and natural language understanding
+- **Neural Networks**- set of algorithms designed to recognise patterns
+	- inspired by the structure of human brain
+	- layers of interconnected nodes where each connection carries a weight and data flows through from input to output
+	- each node may change the input in a certain wayu and weigh on where the next node will be fired
+- 
