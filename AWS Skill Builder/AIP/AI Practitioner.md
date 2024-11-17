@@ -11,4 +11,4 @@
 	- inspired by the structure of human brain
 	- layers of interconnected nodes where each connection carries a weight and data flows through from input to output
 	- each node may change the input in a certain wayu and weigh on where the next node will be fired
-- 
+-
