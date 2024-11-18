@@ -1,4 +1,5 @@
 ## Fundamentals of AI and ML
+### Basic AI concepts and terminologies
 - **AI**- simulation of human intelligence by machines like computer systems
 	- systems that perceive, reason, learn and act based on data performing tasks like humans would with human-intelligence, pattern recognitions, deciison making, problem solving
 - **ML**- subset of AI focusing on building systems that learn from data to make predicitons or decisions
@@ -11,4 +12,97 @@
 	- inspired by the structure of human brain
 	- layers of interconnected nodes where each connection carries a weight and data flows through from input to output
 	- each node may change the input in a certain wayu and weigh on where the next node will be fired
--
+- **Computer Vision**- field of AI focused on allowingm achines to be able to detect through visual information like images and videos
+- **Natural Language Processing (NLP)**- deals with the interaction between human language and machines provessing by understanding, interpreting and generating
+- **Model**- used in ML, it has been trained on data to make predictions specifically from the data trained on, does not require being programmed to do the task
+- **Algorithm**- takes an input and then a process of logic is performed to create a specific output
+- **Training**- feeding data to the ML to be trained on for better pattern recnognition and creating relationships between the data
+- **Inference**- process using trained ML models for making predictions on specific tasks ased on new, unseed data
+- **Bias**- systematic errors in ML model predicitons due to prejudice assumptions during the learning process
+- **Fairness**- ensuring ML models predictions are impartial and do not favor any group over others
+- **Fit**- how well the ML models prediction match the actual data. 
+- **Overfitting**- occurs when the model learns the data too well and performs poorly on unseen data because it just uses the trained data
+- **LLM**- type of deep learning model trained on vast amount of text data to understand human-like-language (NLP)
+- **Similarities between AI, ML, DL**-
+	- enable machines to perform tasks that usually require human intelligence
+	- use data to make decisions
+	- using pattern recognition from trained data to make the predictions
+- **DIfferences between AI, ML, DL**-
+	- AI- broadest concept, encompassing any machine with human-like intelligence
+	- ML- subset of AI focussing on algorithms that learn from data to make deicisions
+	- DL- using neural networks with multiple layers to model intricate data patterns
+- **Types of Inferencing**-
+	- **Batch**- processing large number of data inputs at once, suitable for tasks where real-time responses aren't necessary
+		- like having large chunks sent in periods
+	- **Real-time**- data inputs individually as they arrive, these are immediate predictions or decisions, essential for instant responses
+- **Types of Data**-
+	- **Labeled**- data comes with tags and labels for annotation, this allows for identifying correct and incorrect output for each input- supervised learning
+	- **Unlabeled**- no explicit tags, this is used in unsupervised learning to discover hidden patterns
+	- **Tabular**- structured data organised in tables with rows and columns, common in databases and spreadsheets
+	- **Time Series**- data points collected or recorded at specific time intervals, used in forecasting and trend analysis
+	- **Image**- visual data formats like JPEG/ PNG and used in computer vision tasks
+	- **Text**- data in textual format, such as documents, social media posts- used in NLP
+	- **Structured**- organised and easily searchable often stored in relational databases
+	- **Unstructured**- without predefined format, such as videos, images and free-text documents
+- **Types of Learning**-
+	- **Supervised**- using labeled data to explicilty tell the ML model what is correct and incorrect- regression (linear like stocks) or classification (categorical)
+	- **Unsupervised**- uses unlaeled data to indeitfy patterns between the input and create clustering and associated tatsks (groups common inputs together to identify some sort of common pattern)
+	- **Reinforcement**- agent learns to make decisions by performing actions in an environment to maximize cumulative rewards, used in robotics and game playing
+
+### Identify practical use cases for AI
+- **AI Is appropriate use case**- can enhance decisions making, automatig repetitive tasks, scaling solutions efficiently
+	- **Assist human decision making**- 
+		- **Healthcare**- ML models can analyse medical images (x-rays, MRI) to assist doctors in diagnosing conditions with higher accuracy
+		- **Finance**- analyse stock market trends, help financial analysts make more informaed investment decisions
+		- **Custtomer support**- NLP powered chatbots can resolve common customer issues, leaving human agents for more complext cases
+	- **Solution Scalability**- 
+		- **Personlised marketing**- based on tracking human behaviour, can tagert individuals more specifically based on their browsing
+		- **Supply chain optimization**- forecasting models can predict demand, optimize inventory and reduce waste
+		- **Content moderation**- automatically filter inappropriate content on social media platforms, scaling moderation to millions of users
+	- **Automation**-
+		- **Manufactoring**- robots can utomate quality control and assembly processes
+		- **Smart home automation**- optimize energy consumption by learning usage patterns and controlling devices accordingly
+		- **Fraud detection**- real-time ML models can flag suspicious transactions for financial institutions
+- **AI is not appropriate use case**- AI/ML not always best approach, can use traditional programming or rule-based systems
+	- **Cost-benefit analysis**
+		- **Small-scale projects**- cost of implementing ML slutions can outweigh the benefits if volume of data is insufficient or decisions are straightforward
+		- **Limited data available**- not enough historical data to train an effective model, rule based approach might be more efficient
+		- **Long development time**- if project requires immediate implementation, developing ML model too time consuming
+	- **When specific outcome is needed**
+		- If task requires precise, deterministic output rather than probabilistic prediction, ML not suitable. eg accounting, legal contract generation where accuracy is critical, deterministic algoprithms are preferable
+- **Selecting appropriate ML techniques for specific use cases**
+	- **Regression**-
+		- **Use**- predicting continous outcomes- stock prices, temperature forecases, house prices
+		- **AWS**- Sagemaker can build, train and deploy regression models using bult-in algorithms
+	- **Classification**-
+		- **Use**- categorical data stored in distinct classes such as spam detection, disease diagnosis or sentimen analysis
+		- **AWS**- Sagemaker built-in algorithms like XGBoost can be used for classification tasks
+	- **Clustering**-
+		- **Use**- grouping similar items together, such as customer segmentation, market analysis or document clustering
+		- **AWS**- Sagemaer supports clustering algorithms like K-means
+- **Identify examples of real world AI applications**
+	- **Computer Vision**-
+		- **Use**- autonomous vehicles, facial recognition for security, quality control in manufaction, agriculture food sorting
+		- **AWS**- Rekognition for image and video analysis
+	- **Natural Language Processing**-
+		- **Use**- customer support chatbots, sentiment analysis, document summarisation
+		- **AWS**- Comprehend for extracting insights from text data
+	- **Speech Recognition**-
+		- **Use**- Transcribing customer support calls, voice-activated assistants (Alexa)
+		- **AWS**- Transcribe for converting speech to text
+	- **Recommendation Systems**-
+		- **Use**- E-commerce product recommendations, movie suggestions on streaming platforms
+		- **AWS**- Personalize for real-time personalised recommendations
+	- **Fraud Detection**-
+		- **Use**- Identifying fradulent credit card transactions, preventing identity theft
+		- **AWS**- Sagemaker anomoly detection models
+	- **Forecasting**-
+		- **Use**- Demand forecasting, inventory management, resource planning
+		- **AWS**- Forecast for time-series forecasting
+- **Capabilities for AWS ML Services**
+	- **Sagemaker**- fully managed service that helps data scientists and devs build, train, deploy ML models at scale. Supports variety of ML algorithms, automated model turning and model deployment
+	- **Transcribe**- Automated speech recognition service converst speech into text. Useful for transcription of audio files, meeting recordings or real time speech
+	- **Translate**- neural machine translation ervice that provides fast and accurate language translation, ideal for translating customer communications or documents
+	- **Comprehend**- NLP service uses ML to extract key phrases, entities, sentiment and language from unstructured text. useful for customer feedback, social media monitoring and document classification
+	- **Lex**- building conversational interfaces using voice and text. Powers chatbots and virtual assistants with automatic speech recognition and NLP
+	- **Polly**- Text to speech service that converts written text into lifelike spoeech. Ideal for applications requiring voice interaction, like virtual assistants or audio content generation
