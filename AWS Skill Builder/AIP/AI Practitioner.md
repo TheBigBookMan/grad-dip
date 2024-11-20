@@ -184,3 +184,94 @@
 	- **Sagemaker Feature Store**- centralised repository for storing and retrieving ML features
 	- **Sagemaker Model Monitor**- automatic monitoring of deployed models for data drift and errors
 	- **Sagemaker Pipelines**- automate and manage ML workflows
+
+## Fundamentals of Gen AI
+### Basic Concepts of Gen AI
+- **Foundational Gen AI Concepts**-
+	- **Tokens**- 
+		- Smalles unit of text or data that a model processes, LLM tokens could represent words, characters or subwords
+		- Example- AI is fun tokenise as ["AI", "is", "fun"]- this depends on how the tokeniser does it, as it could be split into singular characters as well
+	- **Chunking**- 
+		- Dviding data into manageable chunks for efficient processing, like splitting a long document into smaller sections before feeding it to the model
+		- usefule in tasks like summarisation or document processing
+	- **Embeddings**-
+		- Dense vector representation of data (text, images) where similar items are closer in a vector space
+		- Example- Word2Vec creates embeddings where synonyms like "king" and "queen" are geometrically close- like categorising words that are related in a way together in a 3D space (vectors)
+	- **Vectors**- 
+		- Numeric representations of data (embeddings), vectors enable computational efficiency in similarity search or clustering tasks- the vectors are stored like etc like nested coordinates on a 3D plane
+	- **Prompt Engineering**-
+		- crafting specific intructions to prompt to the model to guide the gen AIs behaviour
+	- **Transformer-Based LLM**- 
+		- LLM built on transformer architecture use self-attention mechanisms to understand context across entire sequences- the ability to understand and remember better
+		- good at tasks like translation, summarisation and text generation
+	- **FOundation Models**-
+		- large pre-trained models capable of being fine-tuned for a variety of downstream tasks, they form the foundation for many AI applications
+		- OpenAI GPT models, hugging face models, AWS Bedrock models
+	- **Multi-modal Models**-
+		- Models designed to process and generate data across multiple modalities (text, image, video)
+		- DALL-E generates images from text
+	- **Diffusion Models**-
+		- generative model that creates data by iteraveily removing noise, used for image generation and restoration
+		- Stable diffusion, DALL-E
+- **Use Cases for Gen AI**-
+	- **Image Generation**-
+		- DALL-E and stable diffusion use text-to-image prompting
+		- Use- marketing, social media, digital art
+	- **Video Generation**-
+		- Generate animated or syntheised videos based on text descriptions or templates
+		- Use- virtual characters, movie effects
+	- **Audio Generation**-
+		- Text-to-soeech and AI generated music
+		- Use- accessibility with like reading out to blind people
+	- **Summarisation**-
+		- Condensing long documents into concise summaries using LLMs
+		- Use- news aggregation, legal document analysis
+	- **Chatbots**-
+		- Conversational agents poweredby LLMs 
+		- Use- customer support, virtual assistants
+	- **Translation**-
+		- Gen models like AWS Trranslate provide context-aware language translation
+		- Use- cross-language translation, content localisation
+	- **Code Generation**-
+		- Github Copilot assist developers by generating boilerplate code or solving problems
+		- Use- software development, debugging
+	- **Customer Service Agents**-
+		- Agents handle customer queries with human-like responses
+		- Use- e-commerce, banking
+	- **Search**-
+		- Context-aware search engines provide accurate results using embeddings and LLMs
+		- Use- knwoeldge managementm, document search
+	- **Recommendation Engines**-
+		- Personalised reocmmendations using user behasviour and embeddings
+		- Use- e-commenrce, streaming platforms
+- **Foundation Model Lifecycle**-
+	1. **Data Selection**-
+		- identify diverse, high-quality datasets for pre-training
+		- Example- text data from books, websites and research articles
+	2. **Model Selection**-
+		- Choose architecture best suited for the problem (eg GPT for test, diffusion for images)
+		- Example- GPT for NLP tasks
+	3. **Pre-Training**-
+		- Train the model on a vast corpus of data to learn generalised representations
+		- AWS- Sagemaker supports large-scale distribured training
+	4. **Fine-Tuning**-
+		- Adapt the model to specific use cases or industries using domain-specific datasets
+		- AWS- Sagemaker fine-tuning for customising foundation models
+	5. **Evaluation**-
+		- Assess models performance using metrics like BLEU (text) FID (images)
+		- AWS- Sagemaker Experiments to track evaluation results
+	6. **Deployment**-
+		- Make model available via APIs or endpoints for real-time batch inference
+		- AWS- Sagemaker Endpoint for managed deployment
+	7. **Feedback**-
+		- Gather user feedback to idetnfiy areas of improvement
+		- Example- continous monitoring of chatbot interactions
+	8. **Model Iteration**-
+		- Retrain or fine-tune model periodically to incorporate feedback and updated data
+		- AWS- Sagemaker Pipelines for automating retraining workflows
+- **AWS Gen AI Services**-
+	- **Sagemaker**- end-to-end development and deployment of generative models
+	- **Polly**- text-to-speech for audio generation
+	- **Translate**- language translation services
+	- **Rekognition**- image and video analysis for visual AI tasks
+	- **Lambda**- lightweight deployment of gen AI models for scalable APIs
