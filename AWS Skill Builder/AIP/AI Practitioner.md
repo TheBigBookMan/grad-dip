@@ -106,3 +106,81 @@
 	- **Comprehend**- NLP service uses ML to extract key phrases, entities, sentiment and language from unstructured text. useful for customer feedback, social media monitoring and document classification
 	- **Lex**- building conversational interfaces using voice and text. Powers chatbots and virtual assistants with automatic speech recognition and NLP
 	- **Polly**- Text to speech service that converts written text into lifelike spoeech. Ideal for applications requiring voice interaction, like virtual assistants or audio content generation
+### Describe ML Development Lifecycle
+- The development lifecycle of how machine learning pipeline works
+	1. **Data Collection**-
+		- Purpose- gather data from various sources like databases, APIs, IoT devices to use for training
+		- AWS- S3 for dat astorage, Glue for data extraction and transformation
+	2. **Exploratory Data Analysis (EDA)**-
+		- Purpose- understand the data by visualising patterns, outliers and data imbalances, make assumptions of the data
+		- AWS- Sagemaker Data Wrangler for exploratory data analysis and data visualisation, QuickSight for business intelligence tool
+	3. **Data Pre-Processing**-
+		- Purpose- Clean and prepare the data, including handling missing values, normalization, and transofrmation- preparing the data to be trained, data needs to be to a certain standard for training to work properly
+		- AWS- Sagemaker Processing for batch data pre-processing and Glue for multiple data sources connections
+	4. **Feature Engineering**-
+		- Purpose- Create new features or modify existing ones to improve the model performance
+		- AWS- Sagemaker Feature Store for managing and storing features
+	5. **Model Training**- 
+		- Purpose- train ML models on labeeled data
+		- AWS- Sagemaker Training Jobs for distributed and efficient training, Deep Learning AMIs
+	6. **Hyperparameter Tuning**-
+		- Purpose- Optimize model hyperparameters to improve performance
+		- AWS- Sagemaker Automatic Model Tuning for hyperparameter optimization
+	7. **Model Evaluation**-
+		- Purpose- Assess model performance using metrics like accuracy, precision, recall and AUC
+		- AWS- Sagemaker Experiments to track evaluation metrics and compare results, Cloudwatch Logs for tracking of performance
+	8. **Deployment**-
+		- Purpose- Deplo trained model for real-time or batch inference
+		- AWS- Sagemaker Endpoint for real-time deployment, AWS Lamdbda for lightweight deployment
+	9. **Monitoring**-
+		- Purpose- Monitor the deployed model for drift, performance degradation or errors and make adjustments- loop through again
+		- AWS- Sagemaker Model Monitor for automated monitoring, Cloudwatch Metrics for evaluation of stats
+- **Sources of Models**- 
+	-  **Open-Source Pre-Trained Models**
+		- Hugging Face Transformers, Tensorflow Hub, PyTorch Hub
+		- Reduces development time by leverageing state of the art models by large companies, ready to go code with higher abstraction
+	- **Training Custom Models**
+		- Created from scratch using specific data tailored to business problem
+		- Sagemaker offers support for custom model training using tensorflow, pyorch and MXNet
+- **Methods to Use a Model in Production**-
+	- **Managed API Service**-
+		- Deploy model using services like Sagemaker Endpoints, which handle scaling and availability
+		- AWS- API Gateway + SageMaker Endpoint
+	- **Self-Hosted API**-
+		- Host model on custom servers or containers using Docker and Kubernetes
+		- AWS- EC2, EKS
+- **Fundamental Concepts of MLOps**-
+	- **Experimentation**-
+		- Iterative model development using different datasets, algorithms and hyperparameters- to see what sort of matching variables work best
+		- AWS- Sagemaker Experiments to track and manage experiments
+	- **Repeatable Processes**-
+		- Automate ML pipelines for consistend and reproducible results- be able to consistently output the same method with automative processes
+		- AWS- Step Functions + Sagemaker Pipelines
+	- **Scalable Systems**-
+		- Ensure ML solutions scale with increasing data and users- using things like containers, auto balancers, load balancers for scalability
+		- AWS- Sagemaker Training with managed spot instances for scalability
+	- **Managing Technical Debt**-
+		- Minimise complexity by maintaining clear and modular piplelines- ensuring it doesnt get too complicated to manage and deply the ML pipline
+	- **Production Readiness**-
+		- Validate models before deployment using robust testing frameworks- ensuring that the model being used has based a baseline minimum so its not trash
+	- **Model Monitoring and Re-Training**-
+		- Continously monitor model performance and retrain using updated data- after identifying issues 
+		- AWS- Sagemaker Model Monitor + Sagemaker Pipinelines for retraining
+- **Model Performance Metrics**-
+	- **Model Metrics**- 
+		- **Accuracy**- percentage of correct predictions out of total predictions
+		- **Precision**- ratio of true positives to all predicted positives
+		- **Recall**- ratio of true positive to all actual positives
+		- **F1 Score**- harmonic mean of precisions and recall, balancing both
+		- **Area Under the ROC Curve (AUC)**- measure the models ability to distinguish between classes
+	- **Business Metrics**-
+		- **Cost per User**- operational cost divided by the number of users benefiting from the model
+		- **Development Costs**- resources (time, infrastructure) spent on model development
+		- **Customer Feedback**- direct feedbacj from end-users on the models usefulness and accuracy
+		- **Return on INvestment (ROI)**- value derived from the model compared to its cost of development and maintenance
+- **AWS Managed AI/ML Services for ML Lifecycle**-
+	- **Sagemaker**- end-to-end ML development, including training, deployment and monitoring
+	- **Sagemaker Data Wrangler**- simplified data preparation and exploration
+	- **Sagemaker Feature Store**- centralised repository for storing and retrieving ML features
+	- **Sagemaker Model Monitor**- automatic monitoring of deployed models for data drift and errors
+	- **Sagemaker Pipelines**- automate and manage ML workflows
