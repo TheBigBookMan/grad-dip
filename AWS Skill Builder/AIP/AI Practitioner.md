@@ -367,3 +367,88 @@
 	- **Translate**- perform accurate translations using gen NLP models
 	- **Rekognition**- analyse images and videos for gen AI apps
 	- **Lex**- build conversational AI cahtbots pwoered with LLMs
+
+### AWS Infrastructure and Technologies for Building Gen AI Apps
+- **Key AWS Services for Gen AI**-
+	- **Sagemaker Jumpstart**- 
+		- pre trained models and pre-built solutions for quick deployment
+		- Use- easily deploy text generation, image generation and summarisation models
+	- **Bedrock**-
+		- Access to foundation models from providers Anthropic, Stability AI, AI21 Labs without infrastructre management
+		- Use- text generation, chatbots, recommendation systems
+	- **Partyock (Bedrock playground)**-
+		- User-friendly interface for experimenting with and fine-tuning foundation models on bedrock
+		- Use- prototype generative AI apps without deep techincal expertise
+	- **Q**-
+		- Specialised service for querying gen AI models and managing user interactions
+		- Use- advanced NLP tasks and model interaction
+	- **Lamdba**-
+		- Serverless computing for lightweight, scalable deployments of AI apps
+		- Use- deploy inference endpoints for real-time gen apps
+	- **Elastic Kubernetes Service**- 
+		- orchestration for deploying custom gen AI models using docker containers
+		- Use- manage scalable deployments of models like GPT or diffusiuon models
+	- **Inferentia**-
+		- custom designed chips for cost-effective ML inference
+		- Use- enhance performance of gen AI apps during inference
+	- **S3**-
+		- scalable storage for large datasets, such as text copora, image libraries ror audio files
+		- Use- store training data for pre-training or fine-tuning foundation models
+- **Advantages Using AWS Gen AI Services**-
+	- **Accessibility**-
+		- no need for expertse managing AI infrastructure or training models from scratch
+		- Services like bedrock provide pre-trained models accessible via APIs
+	- **Lower Barrier Entry**-
+		- Pre-built solutions in Sagemaker Jumpstart enable businsess to get started without in-depth AI knowledge
+		- Example- deploy chatbot in minutes with minimal config
+	- **Efficiency**-
+		- Optimize resource usage with services like Inferentia and Elastic Inferentia
+		- Pre-configured workflows in sagemaker pipeline reduce dev time
+	- **Cost-Effictiveness**-
+		- Pay-as-you-go pricing minimses upfront ivnestments
+		- Managed services reduce operational overhead for maintaining infrastructure
+	- **Speed to Market**-
+		- quickly prototype ad deploy gen AI solutions using bedrock and partyrock
+		- Example- launching a personalised recommendation engine within days
+	- **Meet Business Objectives**-
+		- Customisable models and APIs ensure alignment with specific business goals
+		- Example- fine-tuning a language model to improve customer support efficiency
+- **Benefits of AWS Infrastructure for Gen AI Apps**-
+	- **Security**-
+		- end-to-end encryption ensures the safety of sensitive data
+		- IAM allows fine-grained permissions
+	- **Compliance**-
+		- AWS complies with global standards, GDPR, HIPAA, SOC 2
+		- ideal for industries like healthcare and finance that require strict regulatory adherence
+	- **Responsbility**-
+		- Shared responsibility model clarifies roles between AWS (infrastructure security) and customers (app security)
+	- **Safety**-
+		- tools like Macie and Security Hub proactively detect vulnerabilities and ensure data safety
+	- **Scalability and Reliability**-
+		- auto-scaling features allow apps to handle variable workloads
+		- multi-region availability ensures low latency and high availability for global apps
+- **Cost Tradeoffs of AWS Gen AI Services**
+	- **Responsiveness**-
+		- Tradeoff- real-time inferencing requires low-latency endponints, which increase costs
+		- Example- sagemaker real-time endpoints cost more than batch inference jobs
+	- **Availability**-
+		- Tradeoff- deploying across multiple regions improves availability but incurs additional costs
+		- Example- hosting endpoints in both US and Europe icnreases latency coverage but adds data transfer costs
+	- **Redundancy**-
+		- Tradeoff- high redundancy ensures reliability but increases resource usage
+		- Example- using multiple Sagemaker endpoints with a load balancer adds fault tolerance
+	- **Performance**-
+		- Tradeoff- high performance hardware (inferentia or GPUs) speeds up inference but costs more
+		- Example- Inferentia chips are cost-effective for high-throughput tasks compared to general-purpose CPUs
+	- **Regional Coverage**-
+		- Tradeoff- serving global customers may require deplyoing in multple AWS regions impacing operational costs
+		- Example- latency-sensitive apps require regional endpoints for better user exeriences
+	- **Token-Based pricing**-
+		- Tradeoff- many foundation models available via Bedrock charge based on token usage
+		- Example- heavy usage of LLMs with long prompts and outputs can lead to higher costs
+	- **Provisioned Throughput**-
+		- Tradeoff- reserved throughput ensures consistent performance but increases baseline costs
+		- Example- provisioning for peak usage may result in underutilisation during off-peak hours
+	- **Custom Models**-
+		- Tradeoff- training custom models adds complexity and resource demands compared to leveraging pre-trained ones
+		- Example- fine-tuning requires compute-intensive resources, but delivers higher task-specific performance
