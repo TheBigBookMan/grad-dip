@@ -275,3 +275,95 @@
 	- **Translate**- language translation services
 	- **Rekognition**- image and video analysis for visual AI tasks
 	- **Lambda**- lightweight deployment of gen AI models for scalable APIs
+### Capabilities and Limitations of Gen AI For Business Problems
+- **Advantages**-
+	- **Adaptability**-
+		- Gen AI models can adapt to different tasks and data types without requiring extensive retraining
+		- Example- LLM fine-tuned for customer support, code generation or content createion
+		- Business- reduces time to market for custom AI solutions
+	- **Responsiveness**-
+		- Gen AI can provide real-time responses, enhancing user experience
+		- Example- chatbots using LLMs offer quick and contextual customer support
+		- Business- improces customer satisfaction and reduces operational costs
+	- **Simplicity**-
+		- Gen AI automates complex tasks, reducing need for human intervention
+		- Example- automatic code completion tools like co-pilot to simplify programming
+		- Business- streamline workflows, enabling businesses to focus on strategic objectives
+	- **Creativity & Innovation**-
+		- Create novel outputs, like art, music or marketing content based on prompts
+		- Eample- DALL-E generate custom visuals from text prompts
+		- Business- enhance creativity in marketing, product design and content generation
+	- **Cross-Domain Functionality**-
+		- Process multimodal inputs (text, image, audio) for diverse applications
+		- Example- multi-modal models handle visual and text-based customer queries simultaneously
+		- Business- expand AI applicability across industries
+- **Disadvantages**-
+	- **Hallucinations**- 
+		- May produce outputs that are factually incorrect or fabricated
+		- Example- chatbot confidently provides incorrect answers to customer queries
+		- Impact- reduces trust and reliability, especially incritical apps like finance and healthcare
+	- **Interpretability**-
+		- AI models operate as black boxes making their decision-making process hard to explain
+		- Example- LLM may produce recommendation without clear reasoning
+		- Impact- hinders adoption in regulated industries requiring transparency
+	- **Inaccuracy**-
+		- Generate outputs with errors or misinterprate data, especially for niche domains and if the training wasnt enough data
+		- Example- translating domain-specific jargon incorrectly
+		- Impact- Leads to potential miscoummunication or suboptimal decisions
+	- **Non-determinism**-
+		- Can produce different outputs from the same input, making them less predictable
+		- Example- repeated prompts to a model yield various responses
+		- Impact- challenges concistency in apps like legal or financial document generation
+	- **Data and Resource Constraints**-
+		- Training or fine-tuning generative AI models requires significant computational resources and high-quality data
+		- Impact- limits accessibility for small businessses and increases costs
+- **Factors for Selecting Appropriate Gen AI Models**-
+	- **Model Types**-
+		- Choose between LLM, diffusion models or multi-modal models based on the task
+		- Example- GPT for text, stable diffusion for image generation
+	- **Performance Requirements**-
+		- Assess latency, throughput and accuracy needs
+		- Example- real-time chatbots require low-latency models
+	- **Capabilities**- 
+		- Ensure model supports desired functionalities
+		- Example- Multi-modal models for processing text and images
+	- **Constraints**-
+		- Factor in computational resources, cost and scalability
+		- Example- Smaller models may be more cost-effective but less capable
+	- **Compliance**-
+		- Ensure the model meets industry regulations and ethical standards
+		- Example- Healthcare apps require HIPAA-compliant AI systems
+	- **AWS services**-
+		- Bedrock provides access to foundation models for text, image and other generative tasks
+		- Sagemaker offers pre-trained gen AI models with eay fine-tuning options
+- **Determine Business Value for Gen AI Apps**-
+	- **Business Value**- Gen AI can transform businesses by
+		- **Increasing Efficiency**- automative repetitive tasks reduces operational costs
+		- **Enhancing Customer Experience**- real-time, accurate responses build trust and satisfaction
+		- **Driving Innovation**- creative outputs provide unique competitive advantages
+	- **Metrics to Evaluate Success**-
+		- **Cross-Domain Performance**-
+			- The models ability to perform well across multiple tasks and domains
+			- Example- multi-modal models performance in text summarisation and image generation
+		- **Efficiency**-
+			- Processing time, resource usage, cost-effictiveness
+			- Example- Cost per inference and computational overhead
+		- **Conversion Rate**-
+			- Percentage of users who take desired actions due to gen AIs output
+			- Example- improved purchase rates from personalised product recommendations
+		- **Average Revenue Per User (ARPU)**-
+			- Revenue generated per user due to enhanced services
+			- Example- IMproved purchase rates from personalised product recommendations
+		- **Accuracy**-
+			- Precision of outputs compared to expected results
+			- Example- Correctness of translations or summaries
+		- **Customer Lifetime Value (CLV)**-
+			- Total revenue from a customer over their lifetime with the business
+			- Example- Enchanced loyalty through AI-powered personalised experiences
+- **AWS Services to Support GEN Apps**
+	- **Bedrock**- access foundation models for text and iamge generation
+	- **Sagemaker**- build, traing, deploy custom gen AI models
+	- **Polly**- generate human-like speech for audio apps
+	- **Translate**- perform accurate translations using gen NLP models
+	- **Rekognition**- analyse images and videos for gen AI apps
+	- **Lex**- build conversational AI cahtbots pwoered with LLMs
