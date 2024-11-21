@@ -452,3 +452,164 @@
 	- **Custom Models**-
 		- Tradeoff- training custom models adds complexity and resource demands compared to leveraging pre-trained ones
 		- Example- fine-tuning requires compute-intensive resources, but delivers higher task-specific performance
+
+## Applications of Foundation Models
+### Design Considerations for Apps Using Foundation Models
+- **Selection Criteria for Pre-Trained Models**- important to consider factors
+	- **Cost**-
+		- Tradeoff- Larger, more powerful models typially cost more to use based on tokes or compute costs
+		- Example- choosing smaller, less expensive model for lightweight tasks like sentiment analysis (simple output- negative/positive)
+	- **Modality**-
+		- type of data the model handles- text, image, audio, multi-modal
+		- Example- use text-based models like GPT for chatbots or multi-modal models for apps combining text and images
+	- **Latency**-
+		- real time apps require low-latency models to ensure responsiveness
+		- Example- real-time customer service, deploy models with low-inference time- input to output is a short amount of time for user interaction
+	- **Multi-lingual Support**-
+		- If application serves to global audience, choose models with multi-lingual capabilities
+		- Example- bedrock provides models like BLOOM for multi-lingual tasks
+	- **Model Size and Complexity**-
+		- Tradeoff- larger models may perform better but require more compute resources increasing costs and latency
+		- Example- smaller models for simple tasks and larger models for complex reasoning
+	- **Customisation**-
+		- Choose models that allow fine-tuning or in-context learning for domain-specific needs
+		- Example- fine-tune a model for industry specific jargon or terminology
+	- **Input/Output length**-
+		- Models have max token limits for inputs and outputs
+		- Example- summarising large docs, ensure model supoprts extended context windows- otherwise truncates the input/output if exceeding max limit
+- **Effect of Inference Parameters on Model Responses**-
+	- **Temperature**-
+		- controls the randomness of resposnes
+		- **Lower Temperature**- produces deterministic and repitive outputs
+		- **Higher Temperature**- generates more creative and diverse outputs
+		- Use- use low temperature for tasks requiring precision (code generation) and high temperature for creative writing
+	- **Input Length**-
+		- Longer inputs provide more context but may increase cost and latency
+		- for summarisation, balance input length to provide enough context without exceeding token limits
+	- **Output Length**-
+		- Deteremines the length of the models response
+		- set limits based on the apps needs (short answers for chatbots, longer outputs for document generation)
+- **Retrieval Augmented Generation (RAG) and Business Applications**-
+	- **What is RAG**-
+		- Combines generative AI with a knowledge retrieval system to provide accurate context-specific answers
+		- Uses vector database for relevant retriaval of information
+		- inputs the retrieved context into the LLM for response generation based on the content within the context
+	- **Business Applications**-
+		- **Knowledge Bases**- enhances customer service by retrieving and summarising relevant documentation
+		- **Content Summarisation**- generates concise summaries from vast repositories of documents
+		- **Search and Discovery**- improces search accuracy in e-commerce or research platforms
+	- **AWS Services Supporting RAG**-
+		- **Bedrock**- integrates foundation models with retrieval capabilities
+		- **Opensearch**- stores embeddings for efficient retriaval of context
+		- **Aurora/PostgreSQL**- manages structured and semi-structured data to support retrieval worflows
+- **AWS SErvices Storing Embeddings in Vector DBs**-
+	- **Opensearch**- 
+		- Scalable, real-time vector search for embeddings
+		- Example- powering RAG workflows or semantic search
+	- **Aurora**-
+		- SQL based management of embeddings for structured data 
+		- Example- storing customer behaviour vectors for personalised recommendations
+	- **Neptune**-
+		- Graph based database supporting embeddings for network based queries
+		- Example- social graph analaysis or recommendation systems
+	- **DocumentDB (Mongo)**-
+		- Managing semi-structured JSON like documents with embedding vectors
+		- Example- storing text embeddings for product search
+	- **RDS for PostgreSQL**-
+		- storing embeddings with native vector search capabilities
+		- Example- indexing embeddings for document retrieval systems
+- **Cost Tradeoffs of Foundation Model Customisation**-
+	- **Pre-Training**-
+		- Cost- high compute costs for training from scratch on large datasets
+		- Use- rarely feasible unless you need a highly unique model
+	- **Fine-Tuning**-
+		- Cost- moderately expensive but offers high customisation for specific tasks
+		- Use- industry-specific apps (legal, medical)
+	- **In-Context Learning**-
+		- Cost- low, no retraining needed, relies on providing contextual examples in the prompt
+		- Use- quick and flexible solutions for dynamic use cases
+	- **RAG**-
+		- Cost- relatively low since it leverages pre-trained models with external knwoeldge bases
+		- Use- applications requiring up-to-date or highly accurate information
+- **Role of Agents in Multi-step Tasks**-
+	- Agents orchestrate multi-step workflows byinteracting with foundation models and external systems
+	- Example- an agent processes user requests by perforaming tasks like retrieval, reasoning and respnse generation
+	- **Bedrock Agents**-
+		- Integrate bedrock foundation models with other AWS services or APIs
+		- Automate complex workflows by chaining multiple AI tasks
+		- Example- customer query system that retrieves data, generate summaries, and sends email responses automatically
+
+### Effective Prompt Engineering Techniques
+- **Concepts and Constructs of Prompt Engineering**-
+	- **Key Constructs**-
+		- **Context**- 
+			- provide a background or additional details to help the model understand the task
+			- Example- adding a statement like "You are a helpful assistant" at the beginning of the prompt
+		- **Instruction**-
+			- explicitly defines what the model should do
+			- Example- "Summaruse the following text in 100 words"
+		- **Negative Prompts**-
+			- Specify what the model should avoid
+			- Example- "Do not include personal opinions"
+		- **Model Latent Space**-
+			- the internal representation of data learned by the model, used to generate responses
+			- Example- effective prompts exploit latent patterns in the model to retrieve desired outputs
+- **Techniques for Prompt Engineering**-
+	- **Chain-Of-Thought Prompting**-
+		- Encourages the model to explain its reasoning step by step before providing a final answer
+		- Example- "Think step-by-step to determine the answer to the following math problem"
+		- Use- improves performance in reasoning tasks like calculations or logical deductions
+	- **Zero-Shot Prompting**-
+		- Provides no examples, relying on the models pre-trained knoweldge to respond to the task
+		- Example- "Translate this text into French"
+		- Use- simple tasks where models knwoeldge suffices
+	- **Single-Shot-Prompting**-
+		- Provide on example of the desired input-ouput behaviour
+		- Example- providing an input/output example of what you want
+		- Use- tasks requiring slight guidance for clarity
+	- **Few-Shot-Prompting**-
+		- Provides multiple examples to help the model generalise the task
+		- Example- provide multiple input/output examples of what you want
+		- Use- complex tasks with unclear instructions
+	- **Prompt Templates**-
+		- reusable structures for common tasks to maintain consistency
+		- Example- a template of the prompt 
+		- Use- repeated tasks like summarisation or code generation
+### Benefits and Best Practices for Prompt Engineering
+- **Benefits**-
+	- **Response Quality Improvement**-
+		- weel-designed prompts reduce ambiguity and enhance accuracy
+	- **Experimentation**-
+		- allows iterative refinement of prompts to achieve optimal performance
+	- **Guardrails**-
+		- negative prompts and explicity instructions help prevent undesirable outputs
+	- **Discovery**-
+		- Testing differenct prompt structures uncovers models latent capabilities
+	- **Specificity and Concision**-
+		- clear and concuse prompts reduce the risk of irrelevant responses
+	- **Using Multiple Comments**-
+		- break prompts into smaller, modular componenets for better understanding
+		- can provide multiple things to do achieve in one prompt
+- **Best Practices**-
+	- **Use Specfic Instructions**-
+		- avoid vague language
+	- **Iterate and Experiment**-
+		- test and refine prompts for better results
+	- **Limit Input Length**-
+		- avoid overwhelming the model with unnecessary details
+	- **Apply context**-
+		- frame the task within a clear scope
+### Potential Risks and Limitations of Prompt Engineering
+- **Risks**-
+	- **Exposure**-
+		- prompts containing sensitive data may expose it in the response
+		- Mitigation- avoid including private or sensitive information in prompts
+	- **Poisoning**-
+		- adversarial prompts introduce harmful or biased behavour into the model
+		- Mitigation- use pre-approved, validated prompts
+	- **Hijacking**-
+		- Users exploit open ended prompts to manipulate the models behaviour
+		- Mitigation- apply strong moderation and input validation
+	- **Jailbreaking**-
+		- Maliciously crafted prompts bypass safeguards and restrictions
+		- Mitigation- enforce robust content filtering and testing
