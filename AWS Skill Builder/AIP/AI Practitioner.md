@@ -937,3 +937,153 @@
 		- tracks model behaviour in production, flagging anomalies or drift
 	- **Augmented AI (A2I)**-
 		- enables human review of AI decisions for sensitive tasks, fostering trust
+
+## Security, Compliance, and Governance for AI Solutions
+### Methods to Secure AI Systems
+- **AWS Services and Features to Secure AI Systems**-
+	- **Identity and Access Management (IAM)**-
+		- **Roles, Policies and Permissions**-
+			- grant least-privileged access for AI resources
+			- use roles for Sagemaker notebooks, pipelines and deployed endpoints
+			- Example- assign separate roles for data scientists and ML engineers to restrict access to sensitive datasets
+		- Tool- IAM
+	- **Encryption**-
+		- **Encryption at Rest**-
+			- use Key Management Service (KMS) for encrypting data stored in S3 or Sagemaker endpoints
+		- **Encryption in Transit**- 
+			- use SSL/TLS to secure communication between services
+		- Tool- Certificate Manager
+	- **Macie**-
+		- identifies sensitive data such as PII in datasets
+		- Use- comintor compliance with data privacy regulations (GDPR, HIPAA)
+	- **PrivateLink**-
+		- establish private connectivity to AI services without exposing data to the public internet
+		- Use- secure communication between Sagemaker and your VPC
+	- **Shared Responsibility Model**-
+		- AWS secure the cloud infrastructure, while customers secure the apps and data within their AWS environment
+		- **Responsbilities**-
+			- AWS- physical, network protection
+			- Customer- identify management, data encryption, model access control
+- **Source Citation and Documenting Data Origins**-
+	- **Source Citation**-
+		- trace and document the origins of datasets to ensure compliance, transparency and accountability
+		- Example- including dataset sources in reports for regulatory compliance
+	- **Data Lineage**-
+		- tracks the journey of data from its origin through processing and usage
+		- Tool- Glue Data Catalog for tracking metadata and lineage
+	- **Data Cataloging**-
+		- organises and classifies datasets to improve discoverability and governance
+		- Tool- Glue
+	- **Model Cards**-
+		- document model details, including data sources, performance metrics, intended use cases
+		- Use- provide audit trails and transparency for deployed models
+- **Best Practices for Secure Data Engineering**-
+	- **Assessing Data Quality**-
+		- regularly validate datasets for accuracy, completeness and consistency
+		- Tool- Data Wrangler for data exploration and cleaning
+	- **Implementing Privacy-Enhancing Technologies**-
+		- use anonymisation or pseudonumisation to protect sensitive data
+		- Example- masking PII in datasets before model training
+	- **Data Access Control**-
+		- enforce strict access policies for sensitive datasets using IAM and resource tagging
+		- Tool- S3 bucket policies
+	- **Data Integrity**-
+		- verify data integrity using checksums and version control
+		- Tool- S3 Object Lock for data immutability
+- **Security and Privacy Considerations for AI Systems**-
+	- **Application Security**-
+		- secure APIs used by AI apps with AWS WAF (web application firewall) to block unauthorised access
+	- **Threat Detection**-
+		- monitor for suspicious activity with GuardDuty
+		- Example- detect unusual access patterns in Sagemaker notebooks
+	- **Vulnerability Management**-
+		- regularly update dependencies and libraries used in AI systems
+		- Tool- Inspector for vulnerability scanning
+	- **Infrastructure Protection**-
+		- use VPCs, security groups, network ACLs to isolate AI systems
+		- Tool- Shield for DDoS protection
+	- **Prompt Injection**- 
+		- type of attack where adversarial inputs manipulate the behaviour of gen AI
+		- Mitigation-
+			- sanitise and validate prompts before processing
+			- implement guardrails to filter inapproprirate outputs
+	- **Encryption at Rest and in Transit**-
+		- ensure sensitive data is encrypted during storage and transmission
+		- Tool- KMS and SSL/TLS
+- **Key AWS Tools for Securing AI Systems**-
+	- **IAM**- role-based access control for AI resources
+	- **Macie**- detect and protect sensitive data
+	- **PrivateLink**- securely connect to AI services without internet exposure
+	- **Glue**- track data lineage and catalog metadata
+	- **Sagemaker Model Cards**- document model details and data sources for governance
+	- **GuardDuty**- threat detection for infrastructure and applications
+	- **Key Management Service**- encrypt data at rest and manage keys securely
+
+### Recognise Governance and Compliance Regulations for AI Systems
+- **Regulatory Compliance Standards for AI Systems**-
+	- **International Organisation for Standardisation (ISO)**-
+		- **ISO/IEC 27001**- standards for information security management
+		- **ISO/IEC 27701**- privacy information management systems
+		- **Relevance**- ensures secure handling of sensitive and personal data in AI systems
+	- **Systems and Organisation Controls (SOC)**-
+		- **SOC 2**- focuses on data security, availability, processing integrity, confidentiality and privacy
+		- **Relevance**- demonstrates trustworthiness in AI systems handling customer data
+	- **Algorithm Accountability Laws**-
+		- **EU AI Act**- sets requirements for AI system risk management and transparenct in the European Union
+		- Example- requiring explainable outputs and mitigating algorithmic bias
+	- **General Data Protection Regulation (GDPR)**-
+		- **Relevance**- governs the use of personal data in AI systems, emphasising transparency, consent and data minimisation
+- **AWS Services and Features for Governance and Compliance**-
+	- **Config**-
+		- monitors and evaluates configurations of AWS resources against compliance standards
+		- Use- detect non-compliant resources in your AI infrastructure
+	- **Inspector**-
+		- automates vulnerability scanning for AWS workloads
+		- Use- identify security risks in AI systems during development and deployment
+	- **Audit Manager**-
+		- simplifies audit preparation by automatically collecting evidence for compliance frameworks
+		- Use- prepare for SOC 2, DGPR, ISO audits for AI systems
+	- **Artifact**-
+		- provides access to AWS compliance reports and agreements
+		- Use- validate AWS compliance with regulatory standards relevant to AI apps
+	- **Cloudtrail**-
+		- logs and monitors all API activity in your AWS environment
+		- Use- ensure traceability for AI system interactions
+	- **Trusted Advisor**-
+		- offers real-time recommendations for improving security, preformance and cost-efficiency
+		- Use- validate best practices for deploying AI systems securely and efficiently
+- **Data Governance Strategies**-
+	- **Data Lifecycles**-
+		- define stages of data handling, including collection, processing, storage and deletion
+		- Tool- S3 Lifecycle Policies for automating data retention and deletion
+	- **Logging**-
+		- maintain logs of data access and transformations for traceability
+		- Tool- CloudTrail for logging API calls and user actions
+	- **Residency**-
+		- ensure data storage complies with regional regulations on data localisation
+		- Tool- AWS local zones for maintaining data residency in specific geographies
+	- **Monitoring and Observation**-
+		- track data usage and detect anomolies
+		- Tool- CloudWatch for real-time monitoring of data pipelines
+	- **Retention**-
+		- define retention periods based on regulatory and business requirements
+		- Tool- S3 Object Lock for enforcing retention policies
+- **Process to Follow Governance Protocols**-
+	- **Policies**-
+		- define clear governance policies for data access, model usage and compliance
+		- Example- policy requiring encryption of all sensitive data at rest and in transit
+	- **Review Cadence**-
+		- regularly review AI systems and processes for compliance
+		- Best practice- shcedule quaterly governance audits using Audit Manager
+	- **Review Strategies**-
+		- implement review frameworks to evaluate system adherence to governance protocols
+		- Example- Trusted Advisor to contiously check for compliance gaps
+	- **Governance Frameworks**-
+		- adopt standardised frameworks for consistent governene practices
+		- Example- gen AI Security Scoping Matrix to identify and mitigate risks in AI systems
+	- **Transparency Standards**-
+		- maintain documentation on model behaviour, data sources and decisions
+		- Tool- Sagemaker Model Cards to document model characteristics and intended use cases
+	- **Team Training Requirements**-
+		- educate teams on geovernance protocols and compliance requirements
+		- Example- Training and Certificate for security and compliance best practices
