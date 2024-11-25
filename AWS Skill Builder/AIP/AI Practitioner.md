@@ -868,3 +868,72 @@
 	- Continously monitor production models with Sagemaker Model Monitor for fairness and performance drift
 	- Incorporate human reviews with amazon A2I for high stakes applications
 	- Regularly audit datasets for inclusivity, diversity and balance
+
+### Recognise Importance of Transparent and Explainable Models
+- **Differences Between Transparent/Explainable Models and Non-Transparent/Non-Explainable Models**-
+	- **Transparent and Explainable Models**-
+		- Models whose decision-making processes are understandable and interpretable by humans
+		- Characteristics-
+			- provide insights into how and why decisions are made
+			- allow users to trace predicitons back to input features
+			- Examples- decision trees, linear regression, logistic regression
+		- Uses-
+			- Healthcare- explaining why a specific diagnosis or treatment recommendation was made
+			- Finance- providing justification for loan approvals or rejections
+	- **Non-Transparent and Non-Explainable Models**-
+		- Models whose inner workings are complex and difficult to interpret, often referred to as black box models
+		- Characteristics-
+			- High accuracy but limited interpretability
+			- Examples- deep learning models, transformers, ensemble methods like random forests
+		- Uses- 
+			- high stake apps- fraud detection, autonomous vehicles where interpretability is less critical than raw performance
+- **Tools to Identify Transparent and Explainable Models**-
+	- **Sagemaker Model Cards**-
+		- provides a centralised repository to document model details, including intended use cases, limitations and performance metrics
+		- purpose- to enhance transparency by sharing critical information about a models development and performance
+	- **Open Source Models**-
+		- models with publicly available code and training data, fostering transparency
+		- Examples-
+			- HUgging Face models with detailed documentatioon
+			- OpenAIs GPT models
+	- **Data Transparency**-
+		- ensures datasets used for training are well-documented, licensed and appropriate for the intended use case
+		- Tool- Sagemaker Clarify can audit datasets for biases and ensure diversity
+	- **Licensing**-
+		- transparent licensing agreements specify data sources and usage rights
+		- Example- open datasets with permissive licenses (Creative Commons)
+- **Tradeoffs Between Model Safety and Transparency**-
+	- **Interpretability vs Performance**-
+		- Tradeoff- transparent models (linear regression) often prioritse interpretability over perfroance, while non-transparent models (deep learning) excel in performance at the cost of explainability
+		- Example-
+			- decision tree provides clear justifications for predictions but may underperform on complex tasks
+			- a neural network achieves higher accuracy but lacks interpretability
+	- **Safety**-
+		- non-transparent models might pose safety risks if their decisions cannot be understood or trusted
+		- Example- an opaque fraud detection model could inadvertently flag legitimate transactions, damaging trust
+	- **Mitigation**-
+		- combine high-performing black box models with explainability tools like LIME (Local Interpretable Model-agnostic Explanations) or SHAP (sHapley Additive exPlanations)
+- **Principles of Human Centered Design for Explainable AI**-
+	- **Clarity and Simplicity**-
+		- Outputs and explanations should be concise and jargon-free
+		- Example- providing simple reasons like "your loan app was rejected due to low income and high debt"
+	- **User Context**-
+		- tailer explanations to the expertise level of the user
+		- Example- a medical AI explaining diagnoses differently to a doctor versus a patient
+	- **Trust and Transparency**-
+		- clearly state the models capabilities, limitations and confidence levels
+		- Example- "the model has 85% accuracy for diagnosing condition X"
+	- **Actionability**-
+		- explanations should provide actionable insights
+		- Example- "improve your credit score by reducing credit card utilisation"
+	- **Iterative Feedback**-
+		- allow users to provide feedback on explanations to improve future outputs
+		- Example- incorporating user corrections into AI-assisted document review systems
+- **AWS Tools for Explainable AI**-
+	- **Sagemaker Clarify**-
+		- detects and mitigates biases in data and model predictions
+		- provides feature importance metrics for interpretability
+	- **Sagemaker Model MOnitor**-
+		- tracks model behaviour in production, flagging anomalies or drift
+	- **Augmented AI (A2I)**-
+		- enables human review of AI decisions for sensitive tasks, fostering trust
