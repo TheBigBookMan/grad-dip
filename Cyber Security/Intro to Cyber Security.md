@@ -1,0 +1,109 @@
+- **Cyberseucirty**- 
+	- the technologies and procesuders intended for sagefuarding computers, networks and dat afrom unlawfal admittance, weaknesses and attacks transported through the internet
+	- ongoing effort to protect digitual information from unauthorised access or modification mitigate possible exploits and implement plans for disaster recovery
+- **Importance of Cybersecurity**-
+	- making sure infrastutre and ifnormation protected
+	- for everyone now, everyone responsibility: IT, workers, everytone
+	- key business aspect as well
+	- Goals- making sure information and data are being colelted part of business process protected from internal people and external like internet
+	- increase in advancements of digitisation, sybersecurtity needs to keep up with advancements of hacking techniques
+	- key infrastructre at risk of advanced attacks
+- **Four types cybresecurity**-
+	- **Computer**- process of preventing any unauthorised use of your computer, prevention measures top unauth users attempting to break into your system
+	- **Data**- protecting data from corruption and unauthed access, ensure privacy while protecting personal and corporate data
+	- **Network**- protecting your network, protect usability, reliability, integrity and safety of network and data
+	- **Pyshical**- protection of hardware, programs, networks and dat afrom physical access. things like fire, natural disasters, buglary, theft, vandalism and terroism
+- **CIA Triad**- most foundational and crucual pinciples and concepts for cybersecurity. Attack on the system can come down to one of these three
+	- **Confidentiality**- principle of protecting sensitive information against access and disclosure to unauthorised entities
+		- **Breaches**- can be breached intentionally (disgrunteld employees) or unintentionally (human error, oversight)
+			- attacks designed to gain unath access to systems, apps, dataases to steal or tamper with data
+			- caputring and deciphering network traffic
+			- electronic eavesdropping (sniffing)
+			- escalation of system privileges and then stealing password files or other sensitive information
+			- social engineering to get seneitive information
+			- psyhical eavesdropping (shoulder surfing)
+		- **Events**- scenarious where confidentially is comprimsed
+			- failing to properly encrypt a transmission
+			- failing to fully authenticate a remote system before transferring data
+			- leaving open otherwise secured access points
+			- accessing malicious code that opens a back door
+			- misrouted faces, documents left on printers
+			- walking away from aan access terminal while data is displyaed on the monitor
+		- **Countermeasures**- organisations must employ robust countermeasres to protect data from unath access
+			- data classification and labeling
+			- strong access controls and auth mechnaisms
+			- encryption of data in process, in transit and in storage
+			- steganography
+			- remote wipe capaibilities (for stolen or lost devices)
+			- adequate training and education of individuals
+		- **Concepts, conditions and aspects**- define and influecne confedentiality
+			- *Sensitivity* - could cause harm or damage if disclosed
+			- *Criticality*- level to which information is mission critical
+			- *Privacy*- keeping information confidential that is personally identifiable or that might cause harm, embarassment or disgrace to someone if revealed
+			- *Seclusion*- involces storing somtehing in an out-=opf the way location
+			- *Isolation*- act of keeping something separated from others
+	- **Integrity**- principle ofprotecting information against improper modifciation ensuring accuracy, consistency and trusthworthiness of data during its entire life cycle
+		- **Breaches**- 
+			- *Three perspectives*-
+				1. Preventing unath subjects from making modifications
+				2. Preventing authorised subjects from making unath modifications, such as mistakes
+				3. Maintaining the internal and external consitecy of objects so that their data is a correct and true reflection of the real world and any relationship with any child, peer or parent objkect is valid, consistent mand verifiable
+			- *Breached by*-
+				- viruses
+				- logic bombs
+				- unath access
+				- erros in coding and apps
+				- malicious modification
+				- intentional replacement
+				- system back doors
+		- **Events**- events can lead to an integrity breach
+			- acceidently deleting files
+			- executing malicious code, such as trojan horse
+			- introducing a virus
+			- altering config, including erros in commands, codes and scripts
+			- entering invalid data (SQL injection, cross-site scripting, fake network packets)
+		- **Countermeasures** - 
+			- data classification and labeling
+			- strong access controls and authentication mechanisms
+			- encryption of data in process, in transit and in storage
+			- steganography
+			- remote wipe capaibilities (for stolen or lost devices)
+			- adequate training and education of individuals
+		- **Concepts, conditions and aspects**-
+			- accuracy
+			- comprehensiveness
+			- completeness
+			- responsbility
+			- accountability
+			- non-reputation
+			- validity
+			- authenticaity
+			- truthfulness
+- **Availability**- assurance that the systems responsible for delivering, storing and processing information are accessible when needed
+	- **Breaches**- 
+		- numerous threats to availability
+			- network congestion
+			- outage
+			- device failure
+			- software errors
+			- environmental issues
+		- availability can be breached by attacks that focus on violation of availability
+			- DoS (denial of service) attack
+			- object destruction
+			- communication interruptions
+	- **Events**
+		- accidentally deleting files
+		- mislabeling or incorrectly classifying assets
+		- under-allocating resources
+		- overutilising a hardware or software component
+	- **Countermeasures**- most policies as well as busines continuity planning (BCP) focus on fauly tolerance features on various levels of access/storage/security with goal of eliminating single poiints of failure to maintain availabiligy of critical systems
+		- designing intermediary delivery systems properly
+		- using access controls effectively
+		- monitoring performance and network traffic
+		- using firewalls and routers to prevent DoS attacks
+		- implementing redundancy for critical systems
+		- maintaining and testing backup systems
+	- **Concepts, conditions and aspects**-
+		- usability
+		- timeliness
+		- accessibility
