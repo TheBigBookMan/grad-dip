@@ -107,3 +107,59 @@
 		- usability
 		- timeliness
 		- accessibility
+
+## Authentication, Authorisation and Identification (AAA)
+- extension of the CIA triad
+	- **Authentication**- mechanism of verifying the identity of a user to prevent unauthorised access
+		- system requiring users to enter username and password for access
+	- **Authorisation**- the services that determine whihc resources are accessed, when and by whom as well as the associated operations
+		- admin panel where only certain users have permission to delete records base on role
+	- **Accounting**- keeps track of what users do, including what they acess, the amount of time they access resources and any changes made
+		- logging all access and modofication activities in secure database for auditing
+	- **Identification**- determines the true identity of a user in relation to auth, authoirsation and accounting system
+		- biometric finger scan system to uniquely identify employees
+	- **Non-repudiation**- protects against denial by one of the parties in a communication
+		- digitial signatures on emails to ensure the sender cannot deny having sent the email
+- **Common Terminology**
+	- **Adware**- advertiing that is integratede into software, results in pop-ups ads or redirection of a browser to commercisal site
+	- **Auto-rooter**- malicious hacker tool used to break into new machines remotely
+	- **Back door (trap door)**- any mechanisms that bypass a normal sercurity check; allow unauthorised access to functionality
+	- **Code Injection**- insertion of malicious code by exploiting an injection flaw
+	- **Cyber Attack**- deliberate act through cyberspace to manipulate, disrupt, deny, degrade or destroy computers or networks, or information resident on them, with the effect of seriously compormiosing sercurity
+	- **Cyber- Criminals**- individuals who use tech to commit crimes in cyberspace
+	- **CyberSpace**- environment formed by physical and non-physical components to store, modify and exchange data using computer networks
+	- **Denial of service (DoS) attack**- attack prevents authorised access to resources or delaying of time-critical operations
+	- **Distriburted denial of service (DDoS) attack**- DoS atechniwue that uses numerous hosts to perform the attack
+	- **DNS Attacks**- attacks that encompass viariety of explots that subvert functioning of DNS which provides a mappying between hostnames and IP addresses
+	- **Downloader**- program that installs other items on a machine that is under attack, usually a downloaded is sent  in an email
+	- **Dropper**- installer that carries malware to be executed on compromised machine, often disguised and hidden in computers directories so that they are visible they look like valid proglrams or files
+	- **Exploit**- code specific to a single vunerability or set of vulnerabilites
+	- **Exploit Kit**- pre-packaged software made available for use b others that uses an aresnal of exploits to infect a computer, then typcally installs malware
+	- **Flooder**- program that is used to attack networked computer system with large volume of traffic to carry out DoS attack
+	- **Hacker or Cracker**- unauthrisade user who attempts to gain access to information system, hackers are curious people, crackers are malihn
+	- **Hacktivists**- hacker motivated by political, religious or ideological agenda
+	- **INjection Flaw**- vulnerability that is created from insecure coding techniqures resulting in imporerpr input validation allwos attackers to relay malicious code through web apps
+	- **Insider threats/malicious insiders**- people who take advantage of their access to inflict harm
+	- **Keyloggers**- software that captures keystrokes on a compromised system
+	- **Kit (virus generator)**- set of tools for generating new visrsses automatically
+	- **Logic bomb**- program inserted into software by intrudor, logic bombs lies dormant until predefined condition is met
+	- **Malware**- malicious software used to gain unath access to computers, steal information and distrupt or disable entworks- Trojans, viruses and worms
+	- **Mobile Code**- software that are shipped unchanged to a hetergenous collection of platforms and execute with identicial semantics
+	- **Password Attack**- method of accessing an obstructed device, using one of various methods by capturing Id/password of validated user
+	- **Phishing**- digitial form of social engineering uses authentic looking but not leggit, emails request information from users or direct them to fake website
+	- **Ransomeware**- malware that tries to extract a ransom payment in exchange for unb;ocking access to an asset belonging to victim
+	- **Remote access atacks**- attacks made across internet or corporate network
+	- **Rootkit**- set of hacker tools used after an attacker has broken into a computer system and gained root level access
+	- **Script Kiddie**- derisive term describe unskilled individual who uses existing omputer scripts or programs to hack computers, networks or websites
+	- **Social engineering**- attackers tricking people into revealing information by performing certain actions that appear fine but are malciious
+	- **Spam**- unsolicited messages, containing advertising transmitted to large amutns of people
+	- **Spyware**- software that collects informtion from a computer and transmits to another system
+	- **State sponsored actor**- private actor that conducts activity on behalf of state like onctracted hacker
+	- **Threat actor**- entity that is aprtially or wholly responsible for an incident that impacts organisations security, malivious actos
+	- **Trojan Horse**- computer program appears to have useful function but also has hidden malicious function that evade security mechanism sometime exploited legit autohtisations
+	- **TTPs**- tactics, techniques and procedures patterns of behaviours used by attackers
+	- **Virus**- malware that when executed tries to replicate itself into other executable code, can infect cireuses
+	- **Website expliote**- attack inserting maliicous code on a webs server to attack the webs erver otr means of attacking source systems of users accessing website
+	- **Worm**- computer program runs independently and propogates complete working version of itself onto other hosts on a network
+	- **Zomboe or bot**- program activated on an infected computer that launches attacks on other machines
+	
