@@ -1,0 +1,1089 @@
+## Fundamentals of AI and ML
+### Basic AI concepts and terminologies
+- **AI**- simulation of human intelligence by machines like computer systems
+	- systems that perceive, reason, learn and act based on data performing tasks like humans would with human-intelligence, pattern recognitions, deciison making, problem solving
+- **ML**- subset of AI focusing on building systems that learn from data to make predicitons or decisions
+	- not being explicilty programmed, but algorithms detecting patterns and relationships in data to improve performance over time
+- **Deep Learning**- subset of ML
+	- involves neural networks that has many layers (deep)
+	- can automatically learn features and representations within large amounts of data
+	- common in image recognition, speech processing and natural language understanding
+- **Neural Networks**- set of algorithms designed to recognise patterns
+	- inspired by the structure of human brain
+	- layers of interconnected nodes where each connection carries a weight and data flows through from input to output
+	- each node may change the input in a certain wayu and weigh on where the next node will be fired
+- **Computer Vision**- field of AI focused on allowingm achines to be able to detect through visual information like images and videos
+- **Natural Language Processing (NLP)**- deals with the interaction between human language and machines provessing by understanding, interpreting and generating
+- **Model**- used in ML, it has been trained on data to make predictions specifically from the data trained on, does not require being programmed to do the task
+- **Algorithm**- takes an input and then a process of logic is performed to create a specific output
+- **Training**- feeding data to the ML to be trained on for better pattern recnognition and creating relationships between the data
+- **Inference**- process using trained ML models for making predictions on specific tasks ased on new, unseed data
+- **Bias**- systematic errors in ML model predicitons due to prejudice assumptions during the learning process
+- **Fairness**- ensuring ML models predictions are impartial and do not favor any group over others
+- **Fit**- how well the ML models prediction match the actual data. 
+- **Overfitting**- occurs when the model learns the data too well and performs poorly on unseen data because it just uses the trained data
+- **LLM**- type of deep learning model trained on vast amount of text data to understand human-like-language (NLP)
+- **Similarities between AI, ML, DL**-
+	- enable machines to perform tasks that usually require human intelligence
+	- use data to make decisions
+	- using pattern recognition from trained data to make the predictions
+- **DIfferences between AI, ML, DL**-
+	- AI- broadest concept, encompassing any machine with human-like intelligence
+	- ML- subset of AI focussing on algorithms that learn from data to make deicisions
+	- DL- using neural networks with multiple layers to model intricate data patterns
+- **Types of Inferencing**-
+	- **Batch**- processing large number of data inputs at once, suitable for tasks where real-time responses aren't necessary
+		- like having large chunks sent in periods
+	- **Real-time**- data inputs individually as they arrive, these are immediate predictions or decisions, essential for instant responses
+- **Types of Data**-
+	- **Labeled**- data comes with tags and labels for annotation, this allows for identifying correct and incorrect output for each input- supervised learning
+	- **Unlabeled**- no explicit tags, this is used in unsupervised learning to discover hidden patterns
+	- **Tabular**- structured data organised in tables with rows and columns, common in databases and spreadsheets
+	- **Time Series**- data points collected or recorded at specific time intervals, used in forecasting and trend analysis
+	- **Image**- visual data formats like JPEG/ PNG and used in computer vision tasks
+	- **Text**- data in textual format, such as documents, social media posts- used in NLP
+	- **Structured**- organised and easily searchable often stored in relational databases
+	- **Unstructured**- without predefined format, such as videos, images and free-text documents
+- **Types of Learning**-
+	- **Supervised**- using labeled data to explicilty tell the ML model what is correct and incorrect- regression (linear like stocks) or classification (categorical)
+	- **Unsupervised**- uses unlaeled data to indeitfy patterns between the input and create clustering and associated tatsks (groups common inputs together to identify some sort of common pattern)
+	- **Reinforcement**- agent learns to make decisions by performing actions in an environment to maximize cumulative rewards, used in robotics and game playing
+
+### Identify practical use cases for AI
+- **AI Is appropriate use case**- can enhance decisions making, automatig repetitive tasks, scaling solutions efficiently
+	- **Assist human decision making**- 
+		- **Healthcare**- ML models can analyse medical images (x-rays, MRI) to assist doctors in diagnosing conditions with higher accuracy
+		- **Finance**- analyse stock market trends, help financial analysts make more informaed investment decisions
+		- **Custtomer support**- NLP powered chatbots can resolve common customer issues, leaving human agents for more complext cases
+	- **Solution Scalability**- 
+		- **Personlised marketing**- based on tracking human behaviour, can tagert individuals more specifically based on their browsing
+		- **Supply chain optimization**- forecasting models can predict demand, optimize inventory and reduce waste
+		- **Content moderation**- automatically filter inappropriate content on social media platforms, scaling moderation to millions of users
+	- **Automation**-
+		- **Manufactoring**- robots can utomate quality control and assembly processes
+		- **Smart home automation**- optimize energy consumption by learning usage patterns and controlling devices accordingly
+		- **Fraud detection**- real-time ML models can flag suspicious transactions for financial institutions
+- **AI is not appropriate use case**- AI/ML not always best approach, can use traditional programming or rule-based systems
+	- **Cost-benefit analysis**
+		- **Small-scale projects**- cost of implementing ML slutions can outweigh the benefits if volume of data is insufficient or decisions are straightforward
+		- **Limited data available**- not enough historical data to train an effective model, rule based approach might be more efficient
+		- **Long development time**- if project requires immediate implementation, developing ML model too time consuming
+	- **When specific outcome is needed**
+		- If task requires precise, deterministic output rather than probabilistic prediction, ML not suitable. eg accounting, legal contract generation where accuracy is critical, deterministic algoprithms are preferable
+- **Selecting appropriate ML techniques for specific use cases**
+	- **Regression**-
+		- **Use**- predicting continous outcomes- stock prices, temperature forecases, house prices
+		- **AWS**- Sagemaker can build, train and deploy regression models using bult-in algorithms
+	- **Classification**-
+		- **Use**- categorical data stored in distinct classes such as spam detection, disease diagnosis or sentimen analysis
+		- **AWS**- Sagemaker built-in algorithms like XGBoost can be used for classification tasks
+	- **Clustering**-
+		- **Use**- grouping similar items together, such as customer segmentation, market analysis or document clustering
+		- **AWS**- Sagemaer supports clustering algorithms like K-means
+- **Identify examples of real world AI applications**
+	- **Computer Vision**-
+		- **Use**- autonomous vehicles, facial recognition for security, quality control in manufaction, agriculture food sorting
+		- **AWS**- Rekognition for image and video analysis
+	- **Natural Language Processing**-
+		- **Use**- customer support chatbots, sentiment analysis, document summarisation
+		- **AWS**- Comprehend for extracting insights from text data
+	- **Speech Recognition**-
+		- **Use**- Transcribing customer support calls, voice-activated assistants (Alexa)
+		- **AWS**- Transcribe for converting speech to text
+	- **Recommendation Systems**-
+		- **Use**- E-commerce product recommendations, movie suggestions on streaming platforms
+		- **AWS**- Personalize for real-time personalised recommendations
+	- **Fraud Detection**-
+		- **Use**- Identifying fradulent credit card transactions, preventing identity theft
+		- **AWS**- Sagemaker anomoly detection models
+	- **Forecasting**-
+		- **Use**- Demand forecasting, inventory management, resource planning
+		- **AWS**- Forecast for time-series forecasting
+- **Capabilities for AWS ML Services**
+	- **Sagemaker**- fully managed service that helps data scientists and devs build, train, deploy ML models at scale. Supports variety of ML algorithms, automated model turning and model deployment
+	- **Transcribe**- Automated speech recognition service converst speech into text. Useful for transcription of audio files, meeting recordings or real time speech
+	- **Translate**- neural machine translation ervice that provides fast and accurate language translation, ideal for translating customer communications or documents
+	- **Comprehend**- NLP service uses ML to extract key phrases, entities, sentiment and language from unstructured text. useful for customer feedback, social media monitoring and document classification
+	- **Lex**- building conversational interfaces using voice and text. Powers chatbots and virtual assistants with automatic speech recognition and NLP
+	- **Polly**- Text to speech service that converts written text into lifelike spoeech. Ideal for applications requiring voice interaction, like virtual assistants or audio content generation
+### Describe ML Development Lifecycle
+- The development lifecycle of how machine learning pipeline works
+	1. **Data Collection**-
+		- Purpose- gather data from various sources like databases, APIs, IoT devices to use for training
+		- AWS- S3 for dat astorage, Glue for data extraction and transformation
+	2. **Exploratory Data Analysis (EDA)**-
+		- Purpose- understand the data by visualising patterns, outliers and data imbalances, make assumptions of the data
+		- AWS- Sagemaker Data Wrangler for exploratory data analysis and data visualisation, QuickSight for business intelligence tool
+	3. **Data Pre-Processing**-
+		- Purpose- Clean and prepare the data, including handling missing values, normalization, and transofrmation- preparing the data to be trained, data needs to be to a certain standard for training to work properly
+		- AWS- Sagemaker Processing for batch data pre-processing and Glue for multiple data sources connections
+	4. **Feature Engineering**-
+		- Purpose- Create new features or modify existing ones to improve the model performance
+		- AWS- Sagemaker Feature Store for managing and storing features
+	5. **Model Training**- 
+		- Purpose- train ML models on labeeled data
+		- AWS- Sagemaker Training Jobs for distributed and efficient training, Deep Learning AMIs
+	6. **Hyperparameter Tuning**-
+		- Purpose- Optimize model hyperparameters to improve performance
+		- AWS- Sagemaker Automatic Model Tuning for hyperparameter optimization
+	7. **Model Evaluation**-
+		- Purpose- Assess model performance using metrics like accuracy, precision, recall and AUC
+		- AWS- Sagemaker Experiments to track evaluation metrics and compare results, Cloudwatch Logs for tracking of performance
+	8. **Deployment**-
+		- Purpose- Deplo trained model for real-time or batch inference
+		- AWS- Sagemaker Endpoint for real-time deployment, AWS Lamdbda for lightweight deployment
+	9. **Monitoring**-
+		- Purpose- Monitor the deployed model for drift, performance degradation or errors and make adjustments- loop through again
+		- AWS- Sagemaker Model Monitor for automated monitoring, Cloudwatch Metrics for evaluation of stats
+- **Sources of Models**- 
+	-  **Open-Source Pre-Trained Models**
+		- Hugging Face Transformers, Tensorflow Hub, PyTorch Hub
+		- Reduces development time by leverageing state of the art models by large companies, ready to go code with higher abstraction
+	- **Training Custom Models**
+		- Created from scratch using specific data tailored to business problem
+		- Sagemaker offers support for custom model training using tensorflow, pyorch and MXNet
+- **Methods to Use a Model in Production**-
+	- **Managed API Service**-
+		- Deploy model using services like Sagemaker Endpoints, which handle scaling and availability
+		- AWS- API Gateway + SageMaker Endpoint
+	- **Self-Hosted API**-
+		- Host model on custom servers or containers using Docker and Kubernetes
+		- AWS- EC2, EKS
+- **Fundamental Concepts of MLOps**-
+	- **Experimentation**-
+		- Iterative model development using different datasets, algorithms and hyperparameters- to see what sort of matching variables work best
+		- AWS- Sagemaker Experiments to track and manage experiments
+	- **Repeatable Processes**-
+		- Automate ML pipelines for consistend and reproducible results- be able to consistently output the same method with automative processes
+		- AWS- Step Functions + Sagemaker Pipelines
+	- **Scalable Systems**-
+		- Ensure ML solutions scale with increasing data and users- using things like containers, auto balancers, load balancers for scalability
+		- AWS- Sagemaker Training with managed spot instances for scalability
+	- **Managing Technical Debt**-
+		- Minimise complexity by maintaining clear and modular piplelines- ensuring it doesnt get too complicated to manage and deply the ML pipline
+	- **Production Readiness**-
+		- Validate models before deployment using robust testing frameworks- ensuring that the model being used has based a baseline minimum so its not trash
+	- **Model Monitoring and Re-Training**-
+		- Continously monitor model performance and retrain using updated data- after identifying issues 
+		- AWS- Sagemaker Model Monitor + Sagemaker Pipinelines for retraining
+- **Model Performance Metrics**-
+	- **Model Metrics**- 
+		- **Accuracy**- percentage of correct predictions out of total predictions
+		- **Precision**- ratio of true positives to all predicted positives
+		- **Recall**- ratio of true positive to all actual positives
+		- **F1 Score**- harmonic mean of precisions and recall, balancing both
+		- **Area Under the ROC Curve (AUC)**- measure the models ability to distinguish between classes
+	- **Business Metrics**-
+		- **Cost per User**- operational cost divided by the number of users benefiting from the model
+		- **Development Costs**- resources (time, infrastructure) spent on model development
+		- **Customer Feedback**- direct feedbacj from end-users on the models usefulness and accuracy
+		- **Return on INvestment (ROI)**- value derived from the model compared to its cost of development and maintenance
+- **AWS Managed AI/ML Services for ML Lifecycle**-
+	- **Sagemaker**- end-to-end ML development, including training, deployment and monitoring
+	- **Sagemaker Data Wrangler**- simplified data preparation and exploration
+	- **Sagemaker Feature Store**- centralised repository for storing and retrieving ML features
+	- **Sagemaker Model Monitor**- automatic monitoring of deployed models for data drift and errors
+	- **Sagemaker Pipelines**- automate and manage ML workflows
+
+## Fundamentals of Gen AI
+### Basic Concepts of Gen AI
+- **Foundational Gen AI Concepts**-
+	- **Tokens**- 
+		- Smalles unit of text or data that a model processes, LLM tokens could represent words, characters or subwords
+		- Example- AI is fun tokenise as ["AI", "is", "fun"]- this depends on how the tokeniser does it, as it could be split into singular characters as well
+	- **Chunking**- 
+		- Dviding data into manageable chunks for efficient processing, like splitting a long document into smaller sections before feeding it to the model
+		- usefule in tasks like summarisation or document processing
+	- **Embeddings**-
+		- Dense vector representation of data (text, images) where similar items are closer in a vector space
+		- Example- Word2Vec creates embeddings where synonyms like "king" and "queen" are geometrically close- like categorising words that are related in a way together in a 3D space (vectors)
+	- **Vectors**- 
+		- Numeric representations of data (embeddings), vectors enable computational efficiency in similarity search or clustering tasks- the vectors are stored like etc like nested coordinates on a 3D plane
+	- **Prompt Engineering**-
+		- crafting specific intructions to prompt to the model to guide the gen AIs behaviour
+	- **Transformer-Based LLM**- 
+		- LLM built on transformer architecture use self-attention mechanisms to understand context across entire sequences- the ability to understand and remember better
+		- good at tasks like translation, summarisation and text generation
+	- **FOundation Models**-
+		- large pre-trained models capable of being fine-tuned for a variety of downstream tasks, they form the foundation for many AI applications
+		- OpenAI GPT models, hugging face models, AWS Bedrock models
+	- **Multi-modal Models**-
+		- Models designed to process and generate data across multiple modalities (text, image, video)
+		- DALL-E generates images from text
+	- **Diffusion Models**-
+		- generative model that creates data by iteraveily removing noise, used for image generation and restoration
+		- Stable diffusion, DALL-E
+- **Use Cases for Gen AI**-
+	- **Image Generation**-
+		- DALL-E and stable diffusion use text-to-image prompting
+		- Use- marketing, social media, digital art
+	- **Video Generation**-
+		- Generate animated or syntheised videos based on text descriptions or templates
+		- Use- virtual characters, movie effects
+	- **Audio Generation**-
+		- Text-to-soeech and AI generated music
+		- Use- accessibility with like reading out to blind people
+	- **Summarisation**-
+		- Condensing long documents into concise summaries using LLMs
+		- Use- news aggregation, legal document analysis
+	- **Chatbots**-
+		- Conversational agents poweredby LLMs 
+		- Use- customer support, virtual assistants
+	- **Translation**-
+		- Gen models like AWS Trranslate provide context-aware language translation
+		- Use- cross-language translation, content localisation
+	- **Code Generation**-
+		- Github Copilot assist developers by generating boilerplate code or solving problems
+		- Use- software development, debugging
+	- **Customer Service Agents**-
+		- Agents handle customer queries with human-like responses
+		- Use- e-commerce, banking
+	- **Search**-
+		- Context-aware search engines provide accurate results using embeddings and LLMs
+		- Use- knwoeldge managementm, document search
+	- **Recommendation Engines**-
+		- Personalised reocmmendations using user behasviour and embeddings
+		- Use- e-commenrce, streaming platforms
+- **Foundation Model Lifecycle**-
+	1. **Data Selection**-
+		- identify diverse, high-quality datasets for pre-training
+		- Example- text data from books, websites and research articles
+	2. **Model Selection**-
+		- Choose architecture best suited for the problem (eg GPT for test, diffusion for images)
+		- Example- GPT for NLP tasks
+	3. **Pre-Training**-
+		- Train the model on a vast corpus of data to learn generalised representations
+		- AWS- Sagemaker supports large-scale distribured training
+	4. **Fine-Tuning**-
+		- Adapt the model to specific use cases or industries using domain-specific datasets
+		- AWS- Sagemaker fine-tuning for customising foundation models
+	5. **Evaluation**-
+		- Assess models performance using metrics like BLEU (text) FID (images)
+		- AWS- Sagemaker Experiments to track evaluation results
+	6. **Deployment**-
+		- Make model available via APIs or endpoints for real-time batch inference
+		- AWS- Sagemaker Endpoint for managed deployment
+	7. **Feedback**-
+		- Gather user feedback to idetnfiy areas of improvement
+		- Example- continous monitoring of chatbot interactions
+	8. **Model Iteration**-
+		- Retrain or fine-tune model periodically to incorporate feedback and updated data
+		- AWS- Sagemaker Pipelines for automating retraining workflows
+- **AWS Gen AI Services**-
+	- **Sagemaker**- end-to-end development and deployment of generative models
+	- **Polly**- text-to-speech for audio generation
+	- **Translate**- language translation services
+	- **Rekognition**- image and video analysis for visual AI tasks
+	- **Lambda**- lightweight deployment of gen AI models for scalable APIs
+### Capabilities and Limitations of Gen AI For Business Problems
+- **Advantages**-
+	- **Adaptability**-
+		- Gen AI models can adapt to different tasks and data types without requiring extensive retraining
+		- Example- LLM fine-tuned for customer support, code generation or content createion
+		- Business- reduces time to market for custom AI solutions
+	- **Responsiveness**-
+		- Gen AI can provide real-time responses, enhancing user experience
+		- Example- chatbots using LLMs offer quick and contextual customer support
+		- Business- improces customer satisfaction and reduces operational costs
+	- **Simplicity**-
+		- Gen AI automates complex tasks, reducing need for human intervention
+		- Example- automatic code completion tools like co-pilot to simplify programming
+		- Business- streamline workflows, enabling businesses to focus on strategic objectives
+	- **Creativity & Innovation**-
+		- Create novel outputs, like art, music or marketing content based on prompts
+		- Eample- DALL-E generate custom visuals from text prompts
+		- Business- enhance creativity in marketing, product design and content generation
+	- **Cross-Domain Functionality**-
+		- Process multimodal inputs (text, image, audio) for diverse applications
+		- Example- multi-modal models handle visual and text-based customer queries simultaneously
+		- Business- expand AI applicability across industries
+- **Disadvantages**-
+	- **Hallucinations**- 
+		- May produce outputs that are factually incorrect or fabricated
+		- Example- chatbot confidently provides incorrect answers to customer queries
+		- Impact- reduces trust and reliability, especially incritical apps like finance and healthcare
+	- **Interpretability**-
+		- AI models operate as black boxes making their decision-making process hard to explain
+		- Example- LLM may produce recommendation without clear reasoning
+		- Impact- hinders adoption in regulated industries requiring transparency
+	- **Inaccuracy**-
+		- Generate outputs with errors or misinterprate data, especially for niche domains and if the training wasnt enough data
+		- Example- translating domain-specific jargon incorrectly
+		- Impact- Leads to potential miscoummunication or suboptimal decisions
+	- **Non-determinism**-
+		- Can produce different outputs from the same input, making them less predictable
+		- Example- repeated prompts to a model yield various responses
+		- Impact- challenges concistency in apps like legal or financial document generation
+	- **Data and Resource Constraints**-
+		- Training or fine-tuning generative AI models requires significant computational resources and high-quality data
+		- Impact- limits accessibility for small businessses and increases costs
+- **Factors for Selecting Appropriate Gen AI Models**-
+	- **Model Types**-
+		- Choose between LLM, diffusion models or multi-modal models based on the task
+		- Example- GPT for text, stable diffusion for image generation
+	- **Performance Requirements**-
+		- Assess latency, throughput and accuracy needs
+		- Example- real-time chatbots require low-latency models
+	- **Capabilities**- 
+		- Ensure model supports desired functionalities
+		- Example- Multi-modal models for processing text and images
+	- **Constraints**-
+		- Factor in computational resources, cost and scalability
+		- Example- Smaller models may be more cost-effective but less capable
+	- **Compliance**-
+		- Ensure the model meets industry regulations and ethical standards
+		- Example- Healthcare apps require HIPAA-compliant AI systems
+	- **AWS services**-
+		- Bedrock provides access to foundation models for text, image and other generative tasks
+		- Sagemaker offers pre-trained gen AI models with eay fine-tuning options
+- **Determine Business Value for Gen AI Apps**-
+	- **Business Value**- Gen AI can transform businesses by
+		- **Increasing Efficiency**- automative repetitive tasks reduces operational costs
+		- **Enhancing Customer Experience**- real-time, accurate responses build trust and satisfaction
+		- **Driving Innovation**- creative outputs provide unique competitive advantages
+	- **Metrics to Evaluate Success**-
+		- **Cross-Domain Performance**-
+			- The models ability to perform well across multiple tasks and domains
+			- Example- multi-modal models performance in text summarisation and image generation
+		- **Efficiency**-
+			- Processing time, resource usage, cost-effictiveness
+			- Example- Cost per inference and computational overhead
+		- **Conversion Rate**-
+			- Percentage of users who take desired actions due to gen AIs output
+			- Example- improved purchase rates from personalised product recommendations
+		- **Average Revenue Per User (ARPU)**-
+			- Revenue generated per user due to enhanced services
+			- Example- IMproved purchase rates from personalised product recommendations
+		- **Accuracy**-
+			- Precision of outputs compared to expected results
+			- Example- Correctness of translations or summaries
+		- **Customer Lifetime Value (CLV)**-
+			- Total revenue from a customer over their lifetime with the business
+			- Example- Enchanced loyalty through AI-powered personalised experiences
+- **AWS Services to Support GEN Apps**
+	- **Bedrock**- access foundation models for text and iamge generation
+	- **Sagemaker**- build, traing, deploy custom gen AI models
+	- **Polly**- generate human-like speech for audio apps
+	- **Translate**- perform accurate translations using gen NLP models
+	- **Rekognition**- analyse images and videos for gen AI apps
+	- **Lex**- build conversational AI cahtbots pwoered with LLMs
+
+### AWS Infrastructure and Technologies for Building Gen AI Apps
+- **Key AWS Services for Gen AI**-
+	- **Sagemaker Jumpstart**- 
+		- pre trained models and pre-built solutions for quick deployment
+		- Use- easily deploy text generation, image generation and summarisation models
+	- **Bedrock**-
+		- Access to foundation models from providers Anthropic, Stability AI, AI21 Labs without infrastructre management
+		- Use- text generation, chatbots, recommendation systems
+	- **Partyock (Bedrock playground)**-
+		- User-friendly interface for experimenting with and fine-tuning foundation models on bedrock
+		- Use- prototype generative AI apps without deep techincal expertise
+	- **Q**-
+		- Specialised service for querying gen AI models and managing user interactions
+		- Use- advanced NLP tasks and model interaction
+	- **Lamdba**-
+		- Serverless computing for lightweight, scalable deployments of AI apps
+		- Use- deploy inference endpoints for real-time gen apps
+	- **Elastic Kubernetes Service**- 
+		- orchestration for deploying custom gen AI models using docker containers
+		- Use- manage scalable deployments of models like GPT or diffusiuon models
+	- **Inferentia**-
+		- custom designed chips for cost-effective ML inference
+		- Use- enhance performance of gen AI apps during inference
+	- **S3**-
+		- scalable storage for large datasets, such as text copora, image libraries ror audio files
+		- Use- store training data for pre-training or fine-tuning foundation models
+- **Advantages Using AWS Gen AI Services**-
+	- **Accessibility**-
+		- no need for expertse managing AI infrastructure or training models from scratch
+		- Services like bedrock provide pre-trained models accessible via APIs
+	- **Lower Barrier Entry**-
+		- Pre-built solutions in Sagemaker Jumpstart enable businsess to get started without in-depth AI knowledge
+		- Example- deploy chatbot in minutes with minimal config
+	- **Efficiency**-
+		- Optimize resource usage with services like Inferentia and Elastic Inferentia
+		- Pre-configured workflows in sagemaker pipeline reduce dev time
+	- **Cost-Effictiveness**-
+		- Pay-as-you-go pricing minimses upfront ivnestments
+		- Managed services reduce operational overhead for maintaining infrastructure
+	- **Speed to Market**-
+		- quickly prototype ad deploy gen AI solutions using bedrock and partyrock
+		- Example- launching a personalised recommendation engine within days
+	- **Meet Business Objectives**-
+		- Customisable models and APIs ensure alignment with specific business goals
+		- Example- fine-tuning a language model to improve customer support efficiency
+- **Benefits of AWS Infrastructure for Gen AI Apps**-
+	- **Security**-
+		- end-to-end encryption ensures the safety of sensitive data
+		- IAM allows fine-grained permissions
+	- **Compliance**-
+		- AWS complies with global standards, GDPR, HIPAA, SOC 2
+		- ideal for industries like healthcare and finance that require strict regulatory adherence
+	- **Responsbility**-
+		- Shared responsibility model clarifies roles between AWS (infrastructure security) and customers (app security)
+	- **Safety**-
+		- tools like Macie and Security Hub proactively detect vulnerabilities and ensure data safety
+	- **Scalability and Reliability**-
+		- auto-scaling features allow apps to handle variable workloads
+		- multi-region availability ensures low latency and high availability for global apps
+- **Cost Tradeoffs of AWS Gen AI Services**
+	- **Responsiveness**-
+		- Tradeoff- real-time inferencing requires low-latency endponints, which increase costs
+		- Example- sagemaker real-time endpoints cost more than batch inference jobs
+	- **Availability**-
+		- Tradeoff- deploying across multiple regions improves availability but incurs additional costs
+		- Example- hosting endpoints in both US and Europe icnreases latency coverage but adds data transfer costs
+	- **Redundancy**-
+		- Tradeoff- high redundancy ensures reliability but increases resource usage
+		- Example- using multiple Sagemaker endpoints with a load balancer adds fault tolerance
+	- **Performance**-
+		- Tradeoff- high performance hardware (inferentia or GPUs) speeds up inference but costs more
+		- Example- Inferentia chips are cost-effective for high-throughput tasks compared to general-purpose CPUs
+	- **Regional Coverage**-
+		- Tradeoff- serving global customers may require deplyoing in multple AWS regions impacing operational costs
+		- Example- latency-sensitive apps require regional endpoints for better user exeriences
+	- **Token-Based pricing**-
+		- Tradeoff- many foundation models available via Bedrock charge based on token usage
+		- Example- heavy usage of LLMs with long prompts and outputs can lead to higher costs
+	- **Provisioned Throughput**-
+		- Tradeoff- reserved throughput ensures consistent performance but increases baseline costs
+		- Example- provisioning for peak usage may result in underutilisation during off-peak hours
+	- **Custom Models**-
+		- Tradeoff- training custom models adds complexity and resource demands compared to leveraging pre-trained ones
+		- Example- fine-tuning requires compute-intensive resources, but delivers higher task-specific performance
+
+## Applications of Foundation Models
+### Design Considerations for Apps Using Foundation Models
+- **Selection Criteria for Pre-Trained Models**- important to consider factors
+	- **Cost**-
+		- Tradeoff- Larger, more powerful models typially cost more to use based on tokes or compute costs
+		- Example- choosing smaller, less expensive model for lightweight tasks like sentiment analysis (simple output- negative/positive)
+	- **Modality**-
+		- type of data the model handles- text, image, audio, multi-modal
+		- Example- use text-based models like GPT for chatbots or multi-modal models for apps combining text and images
+	- **Latency**-
+		- real time apps require low-latency models to ensure responsiveness
+		- Example- real-time customer service, deploy models with low-inference time- input to output is a short amount of time for user interaction
+	- **Multi-lingual Support**-
+		- If application serves to global audience, choose models with multi-lingual capabilities
+		- Example- bedrock provides models like BLOOM for multi-lingual tasks
+	- **Model Size and Complexity**-
+		- Tradeoff- larger models may perform better but require more compute resources increasing costs and latency
+		- Example- smaller models for simple tasks and larger models for complex reasoning
+	- **Customisation**-
+		- Choose models that allow fine-tuning or in-context learning for domain-specific needs
+		- Example- fine-tune a model for industry specific jargon or terminology
+	- **Input/Output length**-
+		- Models have max token limits for inputs and outputs
+		- Example- summarising large docs, ensure model supoprts extended context windows- otherwise truncates the input/output if exceeding max limit
+- **Effect of Inference Parameters on Model Responses**-
+	- **Temperature**-
+		- controls the randomness of resposnes
+		- **Lower Temperature**- produces deterministic and repitive outputs
+		- **Higher Temperature**- generates more creative and diverse outputs
+		- Use- use low temperature for tasks requiring precision (code generation) and high temperature for creative writing
+	- **Input Length**-
+		- Longer inputs provide more context but may increase cost and latency
+		- for summarisation, balance input length to provide enough context without exceeding token limits
+	- **Output Length**-
+		- Deteremines the length of the models response
+		- set limits based on the apps needs (short answers for chatbots, longer outputs for document generation)
+- **Retrieval Augmented Generation (RAG) and Business Applications**-
+	- **What is RAG**-
+		- Combines generative AI with a knowledge retrieval system to provide accurate context-specific answers
+		- Uses vector database for relevant retriaval of information
+		- inputs the retrieved context into the LLM for response generation based on the content within the context
+	- **Business Applications**-
+		- **Knowledge Bases**- enhances customer service by retrieving and summarising relevant documentation
+		- **Content Summarisation**- generates concise summaries from vast repositories of documents
+		- **Search and Discovery**- improces search accuracy in e-commerce or research platforms
+	- **AWS Services Supporting RAG**-
+		- **Bedrock**- integrates foundation models with retrieval capabilities
+		- **Opensearch**- stores embeddings for efficient retriaval of context
+		- **Aurora/PostgreSQL**- manages structured and semi-structured data to support retrieval worflows
+- **AWS SErvices Storing Embeddings in Vector DBs**-
+	- **Opensearch**- 
+		- Scalable, real-time vector search for embeddings
+		- Example- powering RAG workflows or semantic search
+	- **Aurora**-
+		- SQL based management of embeddings for structured data 
+		- Example- storing customer behaviour vectors for personalised recommendations
+	- **Neptune**-
+		- Graph based database supporting embeddings for network based queries
+		- Example- social graph analaysis or recommendation systems
+	- **DocumentDB (Mongo)**-
+		- Managing semi-structured JSON like documents with embedding vectors
+		- Example- storing text embeddings for product search
+	- **RDS for PostgreSQL**-
+		- storing embeddings with native vector search capabilities
+		- Example- indexing embeddings for document retrieval systems
+- **Cost Tradeoffs of Foundation Model Customisation**-
+	- **Pre-Training**-
+		- Cost- high compute costs for training from scratch on large datasets
+		- Use- rarely feasible unless you need a highly unique model
+	- **Fine-Tuning**-
+		- Cost- moderately expensive but offers high customisation for specific tasks
+		- Use- industry-specific apps (legal, medical)
+	- **In-Context Learning**-
+		- Cost- low, no retraining needed, relies on providing contextual examples in the prompt
+		- Use- quick and flexible solutions for dynamic use cases
+	- **RAG**-
+		- Cost- relatively low since it leverages pre-trained models with external knwoeldge bases
+		- Use- applications requiring up-to-date or highly accurate information
+- **Role of Agents in Multi-step Tasks**-
+	- Agents orchestrate multi-step workflows byinteracting with foundation models and external systems
+	- Example- an agent processes user requests by perforaming tasks like retrieval, reasoning and respnse generation
+	- **Bedrock Agents**-
+		- Integrate bedrock foundation models with other AWS services or APIs
+		- Automate complex workflows by chaining multiple AI tasks
+		- Example- customer query system that retrieves data, generate summaries, and sends email responses automatically
+
+### Effective Prompt Engineering Techniques
+- **Concepts and Constructs of Prompt Engineering**-
+	- **Key Constructs**-
+		- **Context**- 
+			- provide a background or additional details to help the model understand the task
+			- Example- adding a statement like "You are a helpful assistant" at the beginning of the prompt
+		- **Instruction**-
+			- explicitly defines what the model should do
+			- Example- "Summaruse the following text in 100 words"
+		- **Negative Prompts**-
+			- Specify what the model should avoid
+			- Example- "Do not include personal opinions"
+		- **Model Latent Space**-
+			- the internal representation of data learned by the model, used to generate responses
+			- Example- effective prompts exploit latent patterns in the model to retrieve desired outputs
+- **Techniques for Prompt Engineering**-
+	- **Chain-Of-Thought Prompting**-
+		- Encourages the model to explain its reasoning step by step before providing a final answer
+		- Example- "Think step-by-step to determine the answer to the following math problem"
+		- Use- improves performance in reasoning tasks like calculations or logical deductions
+	- **Zero-Shot Prompting**-
+		- Provides no examples, relying on the models pre-trained knoweldge to respond to the task
+		- Example- "Translate this text into French"
+		- Use- simple tasks where models knwoeldge suffices
+	- **Single-Shot-Prompting**-
+		- Provide on example of the desired input-ouput behaviour
+		- Example- providing an input/output example of what you want
+		- Use- tasks requiring slight guidance for clarity
+	- **Few-Shot-Prompting**-
+		- Provides multiple examples to help the model generalise the task
+		- Example- provide multiple input/output examples of what you want
+		- Use- complex tasks with unclear instructions
+	- **Prompt Templates**-
+		- reusable structures for common tasks to maintain consistency
+		- Example- a template of the prompt 
+		- Use- repeated tasks like summarisation or code generation
+### Benefits and Best Practices for Prompt Engineering
+- **Benefits**-
+	- **Response Quality Improvement**-
+		- weel-designed prompts reduce ambiguity and enhance accuracy
+	- **Experimentation**-
+		- allows iterative refinement of prompts to achieve optimal performance
+	- **Guardrails**-
+		- negative prompts and explicity instructions help prevent undesirable outputs
+	- **Discovery**-
+		- Testing differenct prompt structures uncovers models latent capabilities
+	- **Specificity and Concision**-
+		- clear and concuse prompts reduce the risk of irrelevant responses
+	- **Using Multiple Comments**-
+		- break prompts into smaller, modular componenets for better understanding
+		- can provide multiple things to do achieve in one prompt
+- **Best Practices**-
+	- **Use Specfic Instructions**-
+		- avoid vague language
+	- **Iterate and Experiment**-
+		- test and refine prompts for better results
+	- **Limit Input Length**-
+		- avoid overwhelming the model with unnecessary details
+	- **Apply context**-
+		- frame the task within a clear scope
+### Potential Risks and Limitations of Prompt Engineering
+- **Risks**-
+	- **Exposure**-
+		- prompts containing sensitive data may expose it in the response
+		- Mitigation- avoid including private or sensitive information in prompts
+	- **Poisoning**-
+		- adversarial prompts introduce harmful or biased behavour into the model
+		- Mitigation- use pre-approved, validated prompts
+	- **Hijacking**-
+		- Users exploit open ended prompts to manipulate the models behaviour
+		- Mitigation- apply strong moderation and input validation
+	- **Jailbreaking**-
+		- Maliciously crafted prompts bypass safeguards and restrictions
+		- Mitigation- enforce robust content filtering and testing
+
+### Training and Fine-Tuning Process for Foundation Models
+- **Key Elements of Training a Foundation Model**-
+	- **Pre-Training**-
+		- initial training phase where the model learns generalised patterns from large-scale, diverse datasets
+		- establish a robust foundation for the model to handle various tasks
+		- Example- training on datasets like Common Crawl or Wikipedia to develop language understanding
+		- AWS- Sagemaker supports distriburted training for large datasets
+	- **Fine-Tuning**-
+		- Adapting a pre-trained model to specific tasks or domains using smaller, task-specific datasets
+		- improve performance in niche applictions
+		- Example- fine-tuning a pre trained language model for legal document analysis
+	- **Continous Pre-training**-
+		- periodically retraining the model with updated or domain-specific data while retaining general knwoeldge
+		- keep the model relevant for evolving use cases
+		- Example- updating a chatbots model with recent industry specific terminology
+- **Methods for Fine-Tuning a Foundation Model**-
+	- **Instruction Tuning**-
+		- fine-tuning the model to follow specific instructions or prompts for better allignment with user requirements
+		- Example- tuning a model to respond politely or adhere to a conversationalo tone
+	- **Adapting Models for Specific Domains**-
+		- Specialsing a general-purpose model for domain-specific tasks by training on relevant datasets
+		- Example- training a healthcare-specific model using medical literature
+	- **Transfer Learning**-
+		- Leveraging the knowledge of a pre-trained model and fine-tuning it for a new but related task
+		- Example- using a model traine don general text data to classify customer reviews
+	- **Continous Pre-training**-
+		- regularly updating the model by retrianing with new data
+		- Example- incorporating recet legal changes into a compliance model
+	- **AWS**- 
+		- Sagemaker FIne-tune enables seamless fine-tuning of models using task-specific datasets
+- **Preparing Data to Fine-Tune a Foundation Model**-
+	- **Data Curation**-
+		- selecting and organising datasets relevant to the target task or domain
+		- Example- filtering a dataset to remove noisy or irrelevant entries
+	- **Governance**-
+		- ensuring that data complies with ethical and legal standards
+		- Example- removing personally identifiable information (PII) from the training data
+	- **Data Size**-
+		- balance between dataset size and computational efficiency
+		- Example- use a large dataset for generalisation but ensure its manageable within resource limits
+	- **Labeling**-
+		- Annotating data with task-specific labels for supervised fine-tuning
+		- Example- labeling emails as spam or not spam for a spam detection model
+	- **Representativeness**-
+		- ensuring the dataset captures the diversity and nuances of the target domain
+		- Example- for a multilingual chatbot, include text samples from various languages
+	- **Reinforcement Learning from Human Feedback (HRLF)**-
+		- a method where humans provide feedback to improve the models responses
+		- Example- ranking model outputs to teach the model preferences for specific responses
+	- **AWS Services for Data Preparation**-
+		- **Sagemaker Ground Truth**- offers tools for efficient data labeling
+		- **S3**- storage for large-scale datasets
+		- **Glue**- data cleaning and transformation
+- **Fine-Tuning Workflow for a Customer Support Chatbot**-
+	- **Pre-Training**-
+		- use a pre-trained model like GPT for language understanding
+		- train on general text datasets
+	- **Fine-tuning**-
+		- gather customer support tickets as a domain-specific dataset
+		- label the dataset with intents
+		- fine-tine the model using sagemaker
+	- **Evaluation**-
+		- test the model on unseen data to ensure relevance and accuracy
+	- **Continous Pre-training**-
+		- periodically update the model with new support ticket data to keep i aligned with customer needs
+- **Best Practices for Fine-Tuning Foundation Models**-
+	- **High-Quality Data**- ensure data is clean, accurate and representative of the target task
+	- **Ethical Considerations**- remove bias and sensitive information to prevent harmful outputs
+	- **Evaluation Metrics**- use metrics like accuracy, F1 score or perplexity to measure improvements
+	- **Iterative Training**- experiment with different fine-tuning strategies to optimise performance
+
+### Methods to Evaluate Foundation Model Performance
+- **Approaches to Evaluate Foundation Model Performance**- evaluating foundation models invovles assessing their outputs against predefined benchmarks or expectations
+	- **Human Evaluation**-
+		- involves human evaluators assessing the quality of the models outputs based on predefined criteria
+		- Use- 
+			- evaluate text coherence, fluency and relevance in gen AI outputs. 
+			- Assess subjective qualities such as creativity in image generation
+		- Advantages-
+			- captures qualitative aspects that automated metrics may miss
+		- Challenges-
+			- time-consuming and may introduce human biases
+	- **Benchmark Datasets**-
+		- use standardised datasets to compare model performance against known baselines
+		- Examples-
+			- GLUE (General Language Understanding Evaluation) for NLP tasks
+			- MS COCO (Microsoft Common Objects in Context) for image captioning
+			- SQuAD (Stanford Question Answering Dataset) for question answering systems
+		- Advantages- 
+			- enables reproducibility and comparison with other models
+		- Challenges-
+			- may not represent the specific use case of the model
+- **Relevant Metrics To Assess Foundation Model Performance**-
+	- **Text-Based Metrics**-
+		- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**-
+			- measures the overlap of words or phrases between the generated and reference texts
+			- Use- summarisation tasks
+			- Example- ROUGE-L measures longest common subsequences
+		- **BLEU (Bilingual Evaluation UNderstudy)**-
+			- measures the precision of n-grams in the generated text compared to refernce text
+			- Use- machine translation tasks
+			- Example- BLUE-4 evaluates 4-gram overlaps for fluency
+		- **BERTScore**-
+			- use embeddings from BERT to measure semantic similarity between generated and reference texts
+			- Use- general-purpose text generation tasks, where semantic meaning is critical
+	- **Image- Based Metrics**-
+		- **FID (Frechet Inception Distance)**-
+			- measures the quality of generated images by comparing feature distributions with real images
+			- USe- image generation tasks
+		- **IS (Inception Score)**-
+			- evaluates the diversity and quality of generated images
+			- Use- image generation tasks focusing on visual variation
+	- **Speech and Audio Metrics**-
+		- **WER (Word Error Rate)**-
+			- evaluates the accuracy of speech-to-text systems
+			- Use- automatic speech recognition
+		- **PESQ (Perceptual Evaluation of Speech Quality)**-
+			- measures the quality of synthesised speech
+			- Use- text to speech systems
+- **Whether Foundation Model Effectively Meets Business Objectives**-
+	- **Productivity**-
+		- measure whether the model saves time or reduces manual effort
+		- Example- automating document summarisation to reduce the reading time
+		- Evaluation-
+			- time saved per task
+			- comparison of manual vs automated workflows
+	- **User Engagement**-
+		- assess whether the model enhances user experience and satisfaction
+		- Example- chatbot providing helpful and conversational responses
+		- Evaluation-
+			- user feedback and satisfaction scores
+			- metrics like Net Promoter Score NPS
+	- **Task Engineering**-
+		- determine whether the model simplifies or improves task execution
+		- Example- AI powered search engines delivering more relevant results
+		- Evaluation
+			- search accuracy and relevance scores
+			- user retention metrics
+- **Best Practices for Evaluation**-
+	- **Align Metrics with Use Cases**-
+		- ensure metrics like ROUGE and BLEU match the business goal
+	- **Combine Automated and Human Evaluation**-
+		- use quantitative metrics for scalability and human evaluation for qualitative insights
+	- **Iterative Testing**-
+		- continously monitor and evaluate model performance after deployment to adapt to changing requirements
+	- **Business Impact Metrics**-
+		- evaluate cost savings, revenue growth, or improved customer satisfaction directly tied to the models deployment
+
+## Guidelines for Responsible AI
+### Development of AI Systems that are Responsible
+- **Features of Responsible AI**- responsible AI ensures that AI systems operate ethically, inclusively and reliably
+	- **Bias**-
+		- systematic prejudice in AI predictions due to imbalanced training data
+		- Example- an AI model perfoming better for one demographic group over another
+	- **Fairness**-
+		- ensuring equitable performance across all user groups
+		- Example- equal accuracy for all age groups in a medical diagnosis model
+	- **Inclusivity**-
+		- designing AI systems that work for diverse populations, including underrepresented groups
+		- Example- voice recognition that supports multiple accents and dialects
+	- **Robustness**-
+		- ability of an AI system to maintain performance in varying conditions or adversarial scenarious
+		- Example- image recognition systems correctly classifying objects in low light
+	- **Safety**-
+		- ensuring AI outputs do not cause harm
+		- Example- chatbots avoiding offensive or harmful language
+	- **Veracity**-
+		- accuracy and reliability of AI outputs
+		- Example- factually correct text generation in chat applications
+- **Tools for Identifying Features of Responsible AI**-
+	- **Guardrails for Bedrock**-
+		- guardrails ensure gen AI outputs are aligned with ethical guidelines
+		- Capabilities
+			- content filtering to avoid harmful outputs
+			- moderation tools to flag inappropriate responses
+	- **Sagemaker Clarify**-
+		- detects and mitigates bias in ML models and datasets
+		- Capabilities
+			- analyse feature importance and dataset imbalances
+			- measure fairness metrics like disparate impact
+	- **Sagemaker MOdel Monitor**-
+		- tracks model performance in production to detect drift or bias over time
+		- Capailities-
+			- monitors data distributions
+			- alerts on performance degradation or fairness violations
+	- **Augmented AI (A2I)**
+		- enables human review of AI predictions to ensure quality and compliance
+		- Capabilities
+			- incorporates human audits into workflows
+			- useful for tasks like sensitive document review or quality assurance
+- **Responsible Practices for Model Selection**-
+	- **Environmental Considerations**-
+		- select energy-efficient models and infrastructure to minimise the carbon footprint
+		- AWS- use Graviton-based instances optimised for energy efficiency
+	- **Sustainability**-
+		- optimise compute resources and use managed services to reduce unnecessary overhead
+		- Example- sagemaker training with managed spot instances for cost and energy savings
+- **Legal Risks of Working With Gen AI**-
+	- **Intellectual Property Infringement Claims**-
+		- Models trained on copyrighted data may produce outputs that infringe on intellectual property
+		- Mitigation- use curated and licensed datasets for training
+	- **Biased Model Ouputs**-
+		- Gen AI may propogate stereotypes present in training data
+		- Mitigation- regularloy audit and balance datasets
+	- **Loss of Customer Trust**-
+		- outputs perceived as unfair, biased or inappropriate can erode user confidence
+		- Mitigation- implement robust moderation and feedback mechanisms
+	- **End-User Risk**-
+		- incorrect predictions or inappropriate outputs can harm users
+		- Mitigation- clearly communicate model limitations
+	- **Hallucinations**-
+		- gen AI may produce factually incorrect or fabricated outputs
+		- Mitigation- include veracity checks and human review where critical
+- **Characteristics of Datasets**-
+	- **Inclusivity**-
+		- ensure datasets represent diverse groups to avoid bias
+		- Example- a dataset for facial recognition should include diverse skin tones
+	- **Diversity**-
+		- invlude varied data samples to cover edge cases and rare scenarios
+		- Example- chatbot training data should include formal and colloquial language
+	- **Curated Data Sources**-
+		- use high-quality vetted data to ensure reliability
+		- Example- training legal models using verified legal documents
+	- **Balanced Datasets**-
+		- avoid overrepresentation or underrepresentation of any group
+		- Example- gender balance in a recruitent models dataset
+- **Effects of Bias and Variance**-
+	- **Bias**-
+		- leads to systematic errors and unfair outcomes
+		- Example- a model predicting lower credit scores for certain demographics
+	- **Variance**-
+		- high variance results in overfitting, where the model performs well on training data but poorly on unseen data
+		- Example- a model that memorises training data but fails in production
+	- **Overfitting**-
+		- when a model performs well on training dat abut poorly on unseen data due to excessive complexity
+	- **Underfitting**-
+		- when a model fails to capture patterns in the training data due to oversimplification
+- **Tools to Detect and Monitor Bias, Trustworthiness and Truthfulness**-
+	- **Label Quality Analysis**-
+		- ensures that labeled data used for training is accurate and consistent
+		- Tool- Sagemaker Ground Truth for efficient and accurate labeling
+	- **Human Audits**-
+		- incorporate human oversight to review model outputs and address biases
+		- Tool- Augmented AI (A2I) for human reviews
+	- **Subgroup Analysis**-
+		- evaluate model performance across different demographic or categorical subgroups
+		- Tool- Sagemaker Clarify provides tools for subgroup performance analysis
+	- **Sagemaker Model Monitor**-
+		- continously monitors deployed models to detect shifts in input data distribution and output biases
+- **Best Practices for Responsible AI**-
+	- Use Sagemaker Clarify during model development to detect biases early
+	- Continously monitor production models with Sagemaker Model Monitor for fairness and performance drift
+	- Incorporate human reviews with amazon A2I for high stakes applications
+	- Regularly audit datasets for inclusivity, diversity and balance
+
+### Recognise Importance of Transparent and Explainable Models
+- **Differences Between Transparent/Explainable Models and Non-Transparent/Non-Explainable Models**-
+	- **Transparent and Explainable Models**-
+		- Models whose decision-making processes are understandable and interpretable by humans
+		- Characteristics-
+			- provide insights into how and why decisions are made
+			- allow users to trace predicitons back to input features
+			- Examples- decision trees, linear regression, logistic regression
+		- Uses-
+			- Healthcare- explaining why a specific diagnosis or treatment recommendation was made
+			- Finance- providing justification for loan approvals or rejections
+	- **Non-Transparent and Non-Explainable Models**-
+		- Models whose inner workings are complex and difficult to interpret, often referred to as black box models
+		- Characteristics-
+			- High accuracy but limited interpretability
+			- Examples- deep learning models, transformers, ensemble methods like random forests
+		- Uses- 
+			- high stake apps- fraud detection, autonomous vehicles where interpretability is less critical than raw performance
+- **Tools to Identify Transparent and Explainable Models**-
+	- **Sagemaker Model Cards**-
+		- provides a centralised repository to document model details, including intended use cases, limitations and performance metrics
+		- purpose- to enhance transparency by sharing critical information about a models development and performance
+	- **Open Source Models**-
+		- models with publicly available code and training data, fostering transparency
+		- Examples-
+			- HUgging Face models with detailed documentatioon
+			- OpenAIs GPT models
+	- **Data Transparency**-
+		- ensures datasets used for training are well-documented, licensed and appropriate for the intended use case
+		- Tool- Sagemaker Clarify can audit datasets for biases and ensure diversity
+	- **Licensing**-
+		- transparent licensing agreements specify data sources and usage rights
+		- Example- open datasets with permissive licenses (Creative Commons)
+- **Tradeoffs Between Model Safety and Transparency**-
+	- **Interpretability vs Performance**-
+		- Tradeoff- transparent models (linear regression) often prioritse interpretability over perfroance, while non-transparent models (deep learning) excel in performance at the cost of explainability
+		- Example-
+			- decision tree provides clear justifications for predictions but may underperform on complex tasks
+			- a neural network achieves higher accuracy but lacks interpretability
+	- **Safety**-
+		- non-transparent models might pose safety risks if their decisions cannot be understood or trusted
+		- Example- an opaque fraud detection model could inadvertently flag legitimate transactions, damaging trust
+	- **Mitigation**-
+		- combine high-performing black box models with explainability tools like LIME (Local Interpretable Model-agnostic Explanations) or SHAP (sHapley Additive exPlanations)
+- **Principles of Human Centered Design for Explainable AI**-
+	- **Clarity and Simplicity**-
+		- Outputs and explanations should be concise and jargon-free
+		- Example- providing simple reasons like "your loan app was rejected due to low income and high debt"
+	- **User Context**-
+		- tailer explanations to the expertise level of the user
+		- Example- a medical AI explaining diagnoses differently to a doctor versus a patient
+	- **Trust and Transparency**-
+		- clearly state the models capabilities, limitations and confidence levels
+		- Example- "the model has 85% accuracy for diagnosing condition X"
+	- **Actionability**-
+		- explanations should provide actionable insights
+		- Example- "improve your credit score by reducing credit card utilisation"
+	- **Iterative Feedback**-
+		- allow users to provide feedback on explanations to improve future outputs
+		- Example- incorporating user corrections into AI-assisted document review systems
+- **AWS Tools for Explainable AI**-
+	- **Sagemaker Clarify**-
+		- detects and mitigates biases in data and model predictions
+		- provides feature importance metrics for interpretability
+	- **Sagemaker Model MOnitor**-
+		- tracks model behaviour in production, flagging anomalies or drift
+	- **Augmented AI (A2I)**-
+		- enables human review of AI decisions for sensitive tasks, fostering trust
+
+## Security, Compliance, and Governance for AI Solutions
+### Methods to Secure AI Systems
+- **AWS Services and Features to Secure AI Systems**-
+	- **Identity and Access Management (IAM)**-
+		- **Roles, Policies and Permissions**-
+			- grant least-privileged access for AI resources
+			- use roles for Sagemaker notebooks, pipelines and deployed endpoints
+			- Example- assign separate roles for data scientists and ML engineers to restrict access to sensitive datasets
+		- Tool- IAM
+	- **Encryption**-
+		- **Encryption at Rest**-
+			- use Key Management Service (KMS) for encrypting data stored in S3 or Sagemaker endpoints
+		- **Encryption in Transit**- 
+			- use SSL/TLS to secure communication between services
+		- Tool- Certificate Manager
+	- **Macie**-
+		- identifies sensitive data such as PII in datasets
+		- Use- comintor compliance with data privacy regulations (GDPR, HIPAA)
+	- **PrivateLink**-
+		- establish private connectivity to AI services without exposing data to the public internet
+		- Use- secure communication between Sagemaker and your VPC
+	- **Shared Responsibility Model**-
+		- AWS secure the cloud infrastructure, while customers secure the apps and data within their AWS environment
+		- **Responsbilities**-
+			- AWS- physical, network protection
+			- Customer- identify management, data encryption, model access control
+- **Source Citation and Documenting Data Origins**-
+	- **Source Citation**-
+		- trace and document the origins of datasets to ensure compliance, transparency and accountability
+		- Example- including dataset sources in reports for regulatory compliance
+	- **Data Lineage**-
+		- tracks the journey of data from its origin through processing and usage
+		- Tool- Glue Data Catalog for tracking metadata and lineage
+	- **Data Cataloging**-
+		- organises and classifies datasets to improve discoverability and governance
+		- Tool- Glue
+	- **Model Cards**-
+		- document model details, including data sources, performance metrics, intended use cases
+		- Use- provide audit trails and transparency for deployed models
+- **Best Practices for Secure Data Engineering**-
+	- **Assessing Data Quality**-
+		- regularly validate datasets for accuracy, completeness and consistency
+		- Tool- Data Wrangler for data exploration and cleaning
+	- **Implementing Privacy-Enhancing Technologies**-
+		- use anonymisation or pseudonumisation to protect sensitive data
+		- Example- masking PII in datasets before model training
+	- **Data Access Control**-
+		- enforce strict access policies for sensitive datasets using IAM and resource tagging
+		- Tool- S3 bucket policies
+	- **Data Integrity**-
+		- verify data integrity using checksums and version control
+		- Tool- S3 Object Lock for data immutability
+- **Security and Privacy Considerations for AI Systems**-
+	- **Application Security**-
+		- secure APIs used by AI apps with AWS WAF (web application firewall) to block unauthorised access
+	- **Threat Detection**-
+		- monitor for suspicious activity with GuardDuty
+		- Example- detect unusual access patterns in Sagemaker notebooks
+	- **Vulnerability Management**-
+		- regularly update dependencies and libraries used in AI systems
+		- Tool- Inspector for vulnerability scanning
+	- **Infrastructure Protection**-
+		- use VPCs, security groups, network ACLs to isolate AI systems
+		- Tool- Shield for DDoS protection
+	- **Prompt Injection**- 
+		- type of attack where adversarial inputs manipulate the behaviour of gen AI
+		- Mitigation-
+			- sanitise and validate prompts before processing
+			- implement guardrails to filter inapproprirate outputs
+	- **Encryption at Rest and in Transit**-
+		- ensure sensitive data is encrypted during storage and transmission
+		- Tool- KMS and SSL/TLS
+- **Key AWS Tools for Securing AI Systems**-
+	- **IAM**- role-based access control for AI resources
+	- **Macie**- detect and protect sensitive data
+	- **PrivateLink**- securely connect to AI services without internet exposure
+	- **Glue**- track data lineage and catalog metadata
+	- **Sagemaker Model Cards**- document model details and data sources for governance
+	- **GuardDuty**- threat detection for infrastructure and applications
+	- **Key Management Service**- encrypt data at rest and manage keys securely
+
+### Recognise Governance and Compliance Regulations for AI Systems
+- **Regulatory Compliance Standards for AI Systems**-
+	- **International Organisation for Standardisation (ISO)**-
+		- **ISO/IEC 27001**- standards for information security management
+		- **ISO/IEC 27701**- privacy information management systems
+		- **Relevance**- ensures secure handling of sensitive and personal data in AI systems
+	- **Systems and Organisation Controls (SOC)**-
+		- **SOC 2**- focuses on data security, availability, processing integrity, confidentiality and privacy
+		- **Relevance**- demonstrates trustworthiness in AI systems handling customer data
+	- **Algorithm Accountability Laws**-
+		- **EU AI Act**- sets requirements for AI system risk management and transparenct in the European Union
+		- Example- requiring explainable outputs and mitigating algorithmic bias
+	- **General Data Protection Regulation (GDPR)**-
+		- **Relevance**- governs the use of personal data in AI systems, emphasising transparency, consent and data minimisation
+- **AWS Services and Features for Governance and Compliance**-
+	- **Config**-
+		- monitors and evaluates configurations of AWS resources against compliance standards
+		- Use- detect non-compliant resources in your AI infrastructure
+	- **Inspector**-
+		- automates vulnerability scanning for AWS workloads
+		- Use- identify security risks in AI systems during development and deployment
+	- **Audit Manager**-
+		- simplifies audit preparation by automatically collecting evidence for compliance frameworks
+		- Use- prepare for SOC 2, DGPR, ISO audits for AI systems
+	- **Artifact**-
+		- provides access to AWS compliance reports and agreements
+		- Use- validate AWS compliance with regulatory standards relevant to AI apps
+	- **Cloudtrail**-
+		- logs and monitors all API activity in your AWS environment
+		- Use- ensure traceability for AI system interactions
+	- **Trusted Advisor**-
+		- offers real-time recommendations for improving security, preformance and cost-efficiency
+		- Use- validate best practices for deploying AI systems securely and efficiently
+- **Data Governance Strategies**-
+	- **Data Lifecycles**-
+		- define stages of data handling, including collection, processing, storage and deletion
+		- Tool- S3 Lifecycle Policies for automating data retention and deletion
+	- **Logging**-
+		- maintain logs of data access and transformations for traceability
+		- Tool- CloudTrail for logging API calls and user actions
+	- **Residency**-
+		- ensure data storage complies with regional regulations on data localisation
+		- Tool- AWS local zones for maintaining data residency in specific geographies
+	- **Monitoring and Observation**-
+		- track data usage and detect anomolies
+		- Tool- CloudWatch for real-time monitoring of data pipelines
+	- **Retention**-
+		- define retention periods based on regulatory and business requirements
+		- Tool- S3 Object Lock for enforcing retention policies
+- **Process to Follow Governance Protocols**-
+	- **Policies**-
+		- define clear governance policies for data access, model usage and compliance
+		- Example- policy requiring encryption of all sensitive data at rest and in transit
+	- **Review Cadence**-
+		- regularly review AI systems and processes for compliance
+		- Best practice- shcedule quaterly governance audits using Audit Manager
+	- **Review Strategies**-
+		- implement review frameworks to evaluate system adherence to governance protocols
+		- Example- Trusted Advisor to contiously check for compliance gaps
+	- **Governance Frameworks**-
+		- adopt standardised frameworks for consistent governene practices
+		- Example- gen AI Security Scoping Matrix to identify and mitigate risks in AI systems
+	- **Transparency Standards**-
+		- maintain documentation on model behaviour, data sources and decisions
+		- Tool- Sagemaker Model Cards to document model characteristics and intended use cases
+	- **Team Training Requirements**-
+		- educate teams on geovernance protocols and compliance requirements
+		- Example- Training and Certificate for security and compliance best practices

@@ -8,47 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8143d70273245f8c",
+            "id": "3540641bda1001e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Big Data and Cloud/AWS.md",
+                "file": "Cyber Security/Intro to Cyber Security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AWS"
-            }
-          },
-          {
-            "id": "32617972ac784f64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Big Data and Cloud/Map Reduce.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Map Reduce"
-            }
-          },
-          {
-            "id": "767b8c623e67030e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "title": "Intro to Cyber Security"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AWS Skill Builder/AIP/AI Practitioner.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for AI Practitioner"
             }
           },
           {
@@ -140,11 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "AWS Skill Builder/AIP/AI Practitioner.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from AI Practitioner"
             }
           },
           {
@@ -154,9 +129,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
+                "useHierarchy": true
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -168,12 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "file": "AWS Skill Builder/AIP/AI Practitioner.md"
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of AI Practitioner"
             }
           }
         ]
@@ -193,11 +164,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "767b8c623e67030e",
+  "active": "3540641bda1001e9",
   "lastOpenFiles": [
-    "Pasted image 20240916155504.png",
+    "Untitled.md",
+    "Cyber Security/Intro to Cyber Security.md",
+    "A.md",
+    "Pasted image 20240523103754.png",
+    "Cyber Security",
+    "AWS Skill Builder/AIP/AI Practitioner.md",
+    "AWS Skill Builder/CP/Architecture.md",
+    "AWS Skill Builder/AIP",
+    "AWS Skill Builder/CP",
+    "AWS Skill Builder/CP/Services.md",
+    "AWS Skill Builder/Workshops GenAI.md",
     "Big Data and Cloud/AWS.md",
     "Big Data and Cloud/Map Reduce.md",
+    "Pasted image 20240924164928.png",
+    "Pasted image 20240924164845.png",
+    "Pasted image 20240924161042.png",
+    "Pasted image 20240916155504.png",
     "Pasted image 20240915163734.png",
     "Pasted image 20240915162104.png",
     "Pasted image 20240915160414.png",
@@ -211,26 +196,13 @@
     "Artificial Intelligence/~WRL0993.tmp",
     "Artificial Intelligence/~WRD0974.tmp",
     "Artificial Intelligence/~WRL4097.tmp",
-    "Artificial Intelligence/~WRD4089.tmp",
-    "Artificial Intelligence/~WRL1498.tmp",
-    "Artificial Intelligence/~WRD1478.tmp",
-    "Untitled.md",
     "Pasted image 20240902191005.png",
-    "A.md",
     "Pasted image 20240831161840.png",
-    "Pasted image 20240831161820.png",
     "Artificial Intelligence/AI in Games.md",
-    "Pasted image 20240827213835.png",
-    "Pasted image 20240827213705.png",
-    "Pasted image 20240827212706.png",
-    "Pasted image 20240827203622.png",
     "Untitled 2.md",
     "Intro Prograrmming/INtro.md",
     "Intro Prograrmming/Intro.md",
     "AWS Skill Builder/SAA/Solutions.md",
-    "AWS Skill Builder/Services.md",
-    "AWS Skill Builder/Architecture.md",
-    "AWS Skill Builder/Workshops GenAI.md",
     "RAG/RAG Langchain.md",
     "Networking/Intro to Networks.md",
     "Information Technology/Topic 1- Computer Architecture.md",
@@ -239,7 +211,6 @@
     "Information Technology/Topic 5- Web Dev- PHP.md",
     "Information Technology/Topic 4- Web Dev- HTML+CSS.md",
     "Information Technology/Introduction IT.md",
-    "Information Technology/Human Computer Interface.md",
-    "Information Technology/Topic 6- Spreadsheets.md"
+    "Information Technology/Human Computer Interface.md"
   ]
 }

@@ -27,6 +27,11 @@
 	- work done on a machine is independent of other machines
 	- programmers write two sequential programs (map and reduce) that operate on one small piece of data at a time
 	- apply the two sequential programs to massive dat asets to automatically produce a parallel program
+	- **Map**- same computations across all items
+		- maps the data it into a kay/value pair
+	- **Reduce**- results from the map phase and reduce into single value and return a single computation
+		-  shuffle happens- groups the nodes into nodes of mathching keys
+		- return single value for each one of the keys, rather than the multiple keys
 	- **9 Concepts**-
 		- **Scaling Out vs Scaling Up**-
 			- scaling out- more computers
@@ -78,4 +83,138 @@
 			- big problem with RDS takes too long to load into the database
 				- writes to DB before being queried- not good for fast paced databases
 			- mapreduce runs the query as the same time as loading the data, so doesnt need to wait for writing
-			- 
+
+## Language Neural Mapreduce processing
+- **Map Function**- receives a key and value as inpout and outputs an intermediate key and an intermediate value
+	- essentially it maps all the data into some sort of key-value pair making it easier to shuffle and reduce into smaller chunks to process and analyse
+	- *map (in_key, in_value) -> list(intermediate_key, intermediate_value)*
+	- map- function used to transform the input key and value to the intermediate key and intermediate value
+	- in_key- just the line number of the input line currently being read
+	- in_value- actual text read from the current line of input file
+	- list- list outputted by the map function
+	- intermediate_key- most important parameter, data at the reducer is grouped based on the intermediate key
+	- intermediate_value- usually stores the values you want to aggregate by
+- **Reduce Function**- important to reduce large datasets into smaller to be usable
+	- data is shuffled by the system and grouped according to the intermediate key value pairs
+	- all key value pairs with the same intermediate key are sent to separate reducers where they are further reduced through aggregation. 
+	- output of reducer is sorted by intermediate key
+	- *reduce (intermediate_key, list(intermediate_value)) -> list(out_key, out_value)* 
+	- reduce- function that takes output of the mapper and combines values thaqt belong to the same intermediate key by aggregating the values
+	- intermediate_key- each call to reduce function will recieve one intermediate key
+	- list(intermediate_value)- list of values that have all have the same intermediate key
+	- list- output of the reducer is a list of output keys and their corresponding values
+	- out_key- key that is outputted by reducer, often same value as intermediate key
+	- out_value- aggregated output that is result of combining all the values for the same intermediate key
+	- The reducer also outputs its key values pairs in sorted order according to the intermediate key
+- Most time consuming parts of mapreduce data processing is the shuffling of data from mappers to reducers
+	- can reduce cost by performing a mini reduce operation within a mapper node
+	- mapper reduces the amount of data that need to be shuffled to the reducer
+	- **Combiner**- combines the output of the mappers to reduce tha mount of data shuffled
+		- can reduce amount of key-value pairs the reducer needs to aggregate so can reduce overall time processing
+	- **Local Aggregation**- same idea as using combiner but combining data is done inside the map function, requiring a hash table
+	- **Combiner vs Local Aggregation**- 
+		- combiner allows yo write separate function to do combining and often reduce function can just be reused as combiner function
+			- downside is the output key of mapper needs to be emitted first by mapper before gets to combiner
+			- incurs overhead of more objects
+		- local aggregation more challenging to program since need to keep track of already encountered intermediate keys and group them nyu youtself
+			- high cost of memory for keeping hash table
+			- advantage is intermediate keys of mappers do not need created before they are aggregated
+- Can run mapreduce on AWS
+	- elastic mapreduce
+		- upload code and specify size of your cluster and where to load and store the data
+
+
+## Hadoop
+- open source mapreduce made by yahoo 2008
+- **Hardware**- nodes of commodity PCs via network
+	- called cluster of workstations
+	- each node has a disk, CPUs, memory
+	- very scalavble
+	- spread over thousands of shared nothing nodes/blades
+	- nodes/blades are grouped into racks
+	- each node/blade within a rack has the memeoyr, disk, CPUus
+	- communication within nodes/blades faster than across racks
+- **Shared Nothing Architecture**- shared by the netwok
+	- moving data across machines is costly 
+	- goal hadoop to minimize data movement 
+	- move computation to data- ship the code to the data
+	- map task just take data and process it, transform and tranfer it to same machine, so no communication across machines
+	- minimize cost of data shuffle from mappers to reducers
+- **Architecture**- 
+	- **COmputation Layer**-
+		- via JobTracker coordinates distribution of map and reduce tasks to various computational nodes
+		- Master node runs program called JobTracker
+	- **Storage Layer**-
+		- called Hadoop distributed file system (HDFS)
+		- responsbile for managing and storage of all data
+		- Master node runs NameNode (NN)
+			- has meta-data in memory
+			- entire metadara is in main memory
+			- no demand paging of meta-data
+	- Master-slave architecture where there is a master node for computation layer and a master node for storage layer
+		- both master nodes reside in same master node machine
+		- makes JobTracker easily find out where data needed by madreduce job resides so easily ship the code to where data is
+		- ![[Pasted image 20240924161042.png]]
+- **Hadoop Distributed File System (HDFS)**-
+	- designed to store huge amounts of data (peta bytes) across thousands of machines
+	- even though its spread across so many machines and dissks, it appears like normal file system with a single directory structure containing files
+	- single namespace
+	- files usually broken in blocks of 128MB
+	- designed for write once- read many times so cannot update files that have been written into HDFS- which suits standard data analytics workloads where queries are usually all read-only
+	- used across 10000 machines
+	- replicate the data across machines, replicating twice so 3 copies of data
+	- any death of machine it will know when copies of data are and recover them automatically
+	- optimised for batch processing and moving the computation to data
+	- provides very high aggregate bandwidth
+	- scalability of HDFS determined by memory size of namenode
+	- types of metadata-
+		- list of files
+		- list of blocks for each file
+		- list of datanodes for each block
+		- data attributes- creation time etc
+	- **DataNode**- the slave nodes
+		- a block server
+			- sores data in local file system
+			- stores meta-data of a block
+			- serves data and meta-data to clients
+		- a block report
+			- periodically report sent of all existing blocks to NameNode
+			- if no block report received by NameNode within time frame then assume DataNode is down
+		- Facilitates Pipelining in datanode
+			- ![[Pasted image 20240924164845.png]]
+		- ![[Pasted image 20240924164928.png]]
+	- Logical blocks are actually stored as files in local file system
+	- file will be created inside local file system of each data node to store Block A, same for Block B
+	- Small files
+		- file is 100 bytes in size it will occupy one HDFS block
+		- block stored in a 100 byte file in local file system of the Datanodes
+		- no waste of space
+		- having a lot of small files is bad since Namenode need to keep track of it all
+		- total meta data size of many small files maybe too big to fit in RAM of namenode
+	- Data correctness-
+		- use checksums to validate data
+		- file creation- client computes checksum per 512 bytes with unique signatute
+	- **Rebalancer**- moves block of data around
+		- % disk full on Datanodes should be similar
+		- moves blocks around to balance number of blocks per datanode
+		- computational parallelism also depends on where the data resides
+		- usually run when new datanodes are added
+	- NameNode failure-
+		- single point of failure
+		- all meta data (where data blocks reside) kept in RAM
+		- even turning off then loses it all because in RAM
+		- if namenode dies
+			- contents of datanodes no longer accessible
+		- edits log
+			- log all changes that occurred to the meta data (add new file, write etc)
+			- writes onto a log like disk 
+		- fsimage- contains the latest snapshot of the meta data
+	- Secondary NameNodes
+		- old snapshot (fsimage) may become too old
+		- edit log also gets too large
+		- if recovery is needed then it will take a long time to replyu all the edits
+		- create new fsimage by playing back the edits
+		- very computationally expensive
+		- plays back the edits continously so it is up to date
+		- high availability using the two name nodes because if one dies then use the second
+		- Zookeeper is distributed consensus service which can be used to elect a single node as the active NameNode

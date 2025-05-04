@@ -1,0 +1,165 @@
+- **Cyberseucirty**- 
+	- the technologies and procesuders intended for sagefuarding computers, networks and dat afrom unlawfal admittance, weaknesses and attacks transported through the internet
+	- ongoing effort to protect digitual information from unauthorised access or modification mitigate possible exploits and implement plans for disaster recovery
+- **Importance of Cybersecurity**-
+	- making sure infrastutre and ifnormation protected
+	- for everyone now, everyone responsibility: IT, workers, everytone
+	- key business aspect as well
+	- Goals- making sure information and data are being colelted part of business process protected from internal people and external like internet
+	- increase in advancements of digitisation, sybersecurtity needs to keep up with advancements of hacking techniques
+	- key infrastructre at risk of advanced attacks
+- **Four types cybresecurity**-
+	- **Computer**- process of preventing any unauthorised use of your computer, prevention measures top unauth users attempting to break into your system
+	- **Data**- protecting data from corruption and unauthed access, ensure privacy while protecting personal and corporate data
+	- **Network**- protecting your network, protect usability, reliability, integrity and safety of network and data
+	- **Pyshical**- protection of hardware, programs, networks and dat afrom physical access. things like fire, natural disasters, buglary, theft, vandalism and terroism
+- **CIA Triad**- most foundational and crucual pinciples and concepts for cybersecurity. Attack on the system can come down to one of these three
+	- **Confidentiality**- principle of protecting sensitive information against access and disclosure to unauthorised entities
+		- **Breaches**- can be breached intentionally (disgrunteld employees) or unintentionally (human error, oversight)
+			- attacks designed to gain unath access to systems, apps, dataases to steal or tamper with data
+			- caputring and deciphering network traffic
+			- electronic eavesdropping (sniffing)
+			- escalation of system privileges and then stealing password files or other sensitive information
+			- social engineering to get seneitive information
+			- psyhical eavesdropping (shoulder surfing)
+		- **Events**- scenarious where confidentially is comprimsed
+			- failing to properly encrypt a transmission
+			- failing to fully authenticate a remote system before transferring data
+			- leaving open otherwise secured access points
+			- accessing malicious code that opens a back door
+			- misrouted faces, documents left on printers
+			- walking away from aan access terminal while data is displyaed on the monitor
+		- **Countermeasures**- organisations must employ robust countermeasres to protect data from unath access
+			- data classification and labeling
+			- strong access controls and auth mechnaisms
+			- encryption of data in process, in transit and in storage
+			- steganography
+			- remote wipe capaibilities (for stolen or lost devices)
+			- adequate training and education of individuals
+		- **Concepts, conditions and aspects**- define and influecne confedentiality
+			- *Sensitivity* - could cause harm or damage if disclosed
+			- *Criticality*- level to which information is mission critical
+			- *Privacy*- keeping information confidential that is personally identifiable or that might cause harm, embarassment or disgrace to someone if revealed
+			- *Seclusion*- involces storing somtehing in an out-=opf the way location
+			- *Isolation*- act of keeping something separated from others
+	- **Integrity**- principle ofprotecting information against improper modifciation ensuring accuracy, consistency and trusthworthiness of data during its entire life cycle
+		- **Breaches**- 
+			- *Three perspectives*-
+				1. Preventing unath subjects from making modifications
+				2. Preventing authorised subjects from making unath modifications, such as mistakes
+				3. Maintaining the internal and external consitecy of objects so that their data is a correct and true reflection of the real world and any relationship with any child, peer or parent objkect is valid, consistent mand verifiable
+			- *Breached by*-
+				- viruses
+				- logic bombs
+				- unath access
+				- erros in coding and apps
+				- malicious modification
+				- intentional replacement
+				- system back doors
+		- **Events**- events can lead to an integrity breach
+			- acceidently deleting files
+			- executing malicious code, such as trojan horse
+			- introducing a virus
+			- altering config, including erros in commands, codes and scripts
+			- entering invalid data (SQL injection, cross-site scripting, fake network packets)
+		- **Countermeasures** - 
+			- data classification and labeling
+			- strong access controls and authentication mechanisms
+			- encryption of data in process, in transit and in storage
+			- steganography
+			- remote wipe capaibilities (for stolen or lost devices)
+			- adequate training and education of individuals
+		- **Concepts, conditions and aspects**-
+			- accuracy
+			- comprehensiveness
+			- completeness
+			- responsbility
+			- accountability
+			- non-reputation
+			- validity
+			- authenticaity
+			- truthfulness
+- **Availability**- assurance that the systems responsible for delivering, storing and processing information are accessible when needed
+	- **Breaches**- 
+		- numerous threats to availability
+			- network congestion
+			- outage
+			- device failure
+			- software errors
+			- environmental issues
+		- availability can be breached by attacks that focus on violation of availability
+			- DoS (denial of service) attack
+			- object destruction
+			- communication interruptions
+	- **Events**
+		- accidentally deleting files
+		- mislabeling or incorrectly classifying assets
+		- under-allocating resources
+		- overutilising a hardware or software component
+	- **Countermeasures**- most policies as well as busines continuity planning (BCP) focus on fauly tolerance features on various levels of access/storage/security with goal of eliminating single poiints of failure to maintain availabiligy of critical systems
+		- designing intermediary delivery systems properly
+		- using access controls effectively
+		- monitoring performance and network traffic
+		- using firewalls and routers to prevent DoS attacks
+		- implementing redundancy for critical systems
+		- maintaining and testing backup systems
+	- **Concepts, conditions and aspects**-
+		- usability
+		- timeliness
+		- accessibility
+
+## Authentication, Authorisation and Identification (AAA)
+- extension of the CIA triad
+	- **Authentication**- mechanism of verifying the identity of a user to prevent unauthorised access
+		- system requiring users to enter username and password for access
+	- **Authorisation**- the services that determine whihc resources are accessed, when and by whom as well as the associated operations
+		- admin panel where only certain users have permission to delete records base on role
+	- **Accounting**- keeps track of what users do, including what they acess, the amount of time they access resources and any changes made
+		- logging all access and modofication activities in secure database for auditing
+	- **Identification**- determines the true identity of a user in relation to auth, authoirsation and accounting system
+		- biometric finger scan system to uniquely identify employees
+	- **Non-repudiation**- protects against denial by one of the parties in a communication
+		- digitial signatures on emails to ensure the sender cannot deny having sent the email
+- **Common Terminology**
+	- **Adware**- advertiing that is integratede into software, results in pop-ups ads or redirection of a browser to commercisal site
+	- **Auto-rooter**- malicious hacker tool used to break into new machines remotely
+	- **Back door (trap door)**- any mechanisms that bypass a normal sercurity check; allow unauthorised access to functionality
+	- **Code Injection**- insertion of malicious code by exploiting an injection flaw
+	- **Cyber Attack**- deliberate act through cyberspace to manipulate, disrupt, deny, degrade or destroy computers or networks, or information resident on them, with the effect of seriously compormiosing sercurity
+	- **Cyber- Criminals**- individuals who use tech to commit crimes in cyberspace
+	- **CyberSpace**- environment formed by physical and non-physical components to store, modify and exchange data using computer networks
+	- **Denial of service (DoS) attack**- attack prevents authorised access to resources or delaying of time-critical operations
+	- **Distriburted denial of service (DDoS) attack**- DoS atechniwue that uses numerous hosts to perform the attack
+	- **DNS Attacks**- attacks that encompass viariety of explots that subvert functioning of DNS which provides a mappying between hostnames and IP addresses
+	- **Downloader**- program that installs other items on a machine that is under attack, usually a downloaded is sent  in an email
+	- **Dropper**- installer that carries malware to be executed on compromised machine, often disguised and hidden in computers directories so that they are visible they look like valid proglrams or files
+	- **Exploit**- code specific to a single vunerability or set of vulnerabilites
+	- **Exploit Kit**- pre-packaged software made available for use b others that uses an aresnal of exploits to infect a computer, then typcally installs malware
+	- **Flooder**- program that is used to attack networked computer system with large volume of traffic to carry out DoS attack
+	- **Hacker or Cracker**- unauthrisade user who attempts to gain access to information system, hackers are curious people, crackers are malihn
+	- **Hacktivists**- hacker motivated by political, religious or ideological agenda
+	- **INjection Flaw**- vulnerability that is created from insecure coding techniqures resulting in imporerpr input validation allwos attackers to relay malicious code through web apps
+	- **Insider threats/malicious insiders**- people who take advantage of their access to inflict harm
+	- **Keyloggers**- software that captures keystrokes on a compromised system
+	- **Kit (virus generator)**- set of tools for generating new visrsses automatically
+	- **Logic bomb**- program inserted into software by intrudor, logic bombs lies dormant until predefined condition is met
+	- **Malware**- malicious software used to gain unath access to computers, steal information and distrupt or disable entworks- Trojans, viruses and worms
+	- **Mobile Code**- software that are shipped unchanged to a hetergenous collection of platforms and execute with identicial semantics
+	- **Password Attack**- method of accessing an obstructed device, using one of various methods by capturing Id/password of validated user
+	- **Phishing**- digitial form of social engineering uses authentic looking but not leggit, emails request information from users or direct them to fake website
+	- **Ransomeware**- malware that tries to extract a ransom payment in exchange for unb;ocking access to an asset belonging to victim
+	- **Remote access atacks**- attacks made across internet or corporate network
+	- **Rootkit**- set of hacker tools used after an attacker has broken into a computer system and gained root level access
+	- **Script Kiddie**- derisive term describe unskilled individual who uses existing omputer scripts or programs to hack computers, networks or websites
+	- **Social engineering**- attackers tricking people into revealing information by performing certain actions that appear fine but are malciious
+	- **Spam**- unsolicited messages, containing advertising transmitted to large amutns of people
+	- **Spyware**- software that collects informtion from a computer and transmits to another system
+	- **State sponsored actor**- private actor that conducts activity on behalf of state like onctracted hacker
+	- **Threat actor**- entity that is aprtially or wholly responsible for an incident that impacts organisations security, malivious actos
+	- **Trojan Horse**- computer program appears to have useful function but also has hidden malicious function that evade security mechanism sometime exploited legit autohtisations
+	- **TTPs**- tactics, techniques and procedures patterns of behaviours used by attackers
+	- **Virus**- malware that when executed tries to replicate itself into other executable code, can infect cireuses
+	- **Website expliote**- attack inserting maliicous code on a webs server to attack the webs erver otr means of attacking source systems of users accessing website
+	- **Worm**- computer program runs independently and propogates complete working version of itself onto other hosts on a network
+	- **Zomboe or bot**- program activated on an infected computer that launches attacks on other machines
+	
