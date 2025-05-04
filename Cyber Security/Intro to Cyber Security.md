@@ -9,16 +9,17 @@
 	- increase in advancements of digitisation, sybersecurtity needs to keep up with advancements of hacking techniques
 	- key infrastructre at risk of advanced attacks
 - **Four types cybresecurity**-
-	- **Computer**- process of preventing any unauthorised use of your computer, prevention measures top unauth users attempting to break into your system
+	- **Computer**- process of preventing any unauthorised use of your computer, prevention measures stop unauth users attempting to break into your system
 	- **Data**- protecting data from corruption and unauthed access, ensure privacy while protecting personal and corporate data
 	- **Network**- protecting your network, protect usability, reliability, integrity and safety of network and data
 	- **Pyshical**- protection of hardware, programs, networks and dat afrom physical access. things like fire, natural disasters, buglary, theft, vandalism and terroism
-- **CIA Triad**- most foundational and crucual pinciples and concepts for cybersecurity. Attack on the system can come down to one of these three
+- **CIA Triad**- most foundational and crucual pinciples and concepts for cybersecurity. Attack on the system can come down to one of these three. need all 3 arms of it for security
 	- **Confidentiality**- principle of protecting sensitive information against access and disclosure to unauthorised entities
 		- **Breaches**- can be breached intentionally (disgrunteld employees) or unintentionally (human error, oversight)
 			- attacks designed to gain unath access to systems, apps, dataases to steal or tamper with data
 			- caputring and deciphering network traffic
-			- electronic eavesdropping (sniffing)
+			- electronic eavesdropping (sniffing)- wifi, bluetooth
+			- can get wall shields which actually stop wifi signals from going through the walls and going outside the office
 			- escalation of system privileges and then stealing password files or other sensitive information
 			- social engineering to get seneitive information
 			- psyhical eavesdropping (shoulder surfing)
@@ -27,7 +28,7 @@
 			- failing to fully authenticate a remote system before transferring data
 			- leaving open otherwise secured access points
 			- accessing malicious code that opens a back door
-			- misrouted faces, documents left on printers
+			- misrouted faxes, documents left on printers
 			- walking away from aan access terminal while data is displyaed on the monitor
 		- **Countermeasures**- organisations must employ robust countermeasres to protect data from unath access
 			- data classification and labeling
@@ -108,7 +109,7 @@
 		- timeliness
 		- accessibility
 
-## Authentication, Authorisation and Identification (AAA)
+## Authentication, Authorisation and Identification (Accounting) (AAA)
 - extension of the CIA triad
 	- **Authentication**- mechanism of verifying the identity of a user to prevent unauthorised access
 		- system requiring users to enter username and password for access
@@ -162,4 +163,72 @@
 	- **Website expliote**- attack inserting maliicous code on a webs server to attack the webs erver otr means of attacking source systems of users accessing website
 	- **Worm**- computer program runs independently and propogates complete working version of itself onto other hosts on a network
 	- **Zomboe or bot**- program activated on an infected computer that launches attacks on other machines
-	
+
+## Design Concepts
+- design elemetns are necessary to consider when building a system to make sure core security principles (CIA and AAA) are implemented
+- ![[Pasted image 20250504194855.png]]
+- **Need to Know**- 
+	- access authorisation scheme which subjects right to access and object takes into consideration not just privilege level but relevance of data inbolbed in the role subject plays
+	- indivate the subject requires access to objet only when specificly necessary to their job
+	- so if the privlege runs out  then they cant access
+- **Least Privilege**-
+	- minimum necesarry access that is require to perform a task should be assigned
+	- anyuone that does not have privilege will be able to access\
+- **Separation of Duties**-
+	- builds on least privilege
+	- requires use of granular access permissions
+	- each type of priiellge operation, should be different roles in the system- ensure subject only gets essential roles and privileges
+- **Defence in Depth**-
+	- having security measures at each critical level of security infrastructure
+	- **ADministrative**- plicies, planning and training
+	- **Physical**- covers aspects such as cameras and locks
+	- **Perimeter**- firewalls, intrusion prevention systems (IPS), segmentation and virtual local area networks (VLANs)
+	- **Network**- addresses authenticatred routing protocols, control plane policing and network device handling
+	- **Host**- advanced malware protection and antivurs
+	- **APplication**- robustness testing, best practices and fuzzing
+	- **Data**- safeguarding data traversing the network
+- **Fail Secure**-
+	- system should consist of secure state where only certain essential operations can be performed and all access are blocked
+	- event of failure the system should fall back to secure state allowing essentitl tasks to repair
+- **Economy of Mechanisms**-
+	- security mechanisms should be simple as possible
+	- complex system design makes harder to audit and erros can easily be overlooked
+	- simplified system easier to audit, find errors and resolve them
+- **Complete Mediation**-
+	- every access to every object must be checked for security and efficiency
+	- whenever subject attempts to access objet, system must check priveleges
+	- if action permitted then system will allow access otherwise bvlock
+- **Open Design**-
+	- success of mechanism should not depend on it being secret
+	- securit through obscurity does not work in most cases
+	- secret eventually gets out and insiders will know sever
+	- open design gets assurance from many critics so more chance to imprve
+- **Least Common Mechanism**-
+	- minimise the number of mechanisms common to more than one user and depended on by all users
+	- shared mechanism is potential information path so shared mehcnaism should be minimsed for control
+- **Psychological Acceptability**-
+	- user interfac emust be easy to use so that users routinely and automatically apply mechniasms correctly
+	- should not add difficulty of accessing resources with extra security
+- **Weakest Link**-
+	- weakest point of a system should be identified and reinforced
+	- least valuable resources or privelelges are not secured properly and as result they turn into a weak link the system security
+	- strength of a security system is only as strong as the weakest link
+- **Leveraging Existing Components**-
+	- in a system, existing code or functionality should be reused when possible
+	- ensures that attack surface is kept to a minimmum by not introducing new vulnerabilities when adding new code to system
+
+## McCumber Cube
+- provides structured framework that inrgrates these principles into a comprehensive approach ti information security
+- Cube expands on the ideas of the others by organising security efforts across three key dimensions
+- **Security Goals**- evaluating and protecting cybersecurity
+	- **Confidentiality**- sensitive data should not be disclosed to unauthorised people or process
+	- **Integrity**- data could be changed accidentily or maliciously, mechanisms to detect and roll back accidental or malicious changes should be in place
+	- **Availability**- authorised users or processes should be able to access dat aor the system when necessary
+- **Information States**- safeguarfing data in transit, at rest and in process states. achieved by backing up data, using strong cryptographic mechanisms to encrypt/decrypt data and verifying integrity and authenticity of data
+	- **Transmission**- data needs to be protected while traveling between systems, end-to-end encryption can protect data from thuird party access and verification of integirty and authenticity can identify if data undchanged and if coming from correct sources
+	- **Storage**- stored in dvecies (cloud, hard disk etc) need to be protected, backups should happend regularly and be stored in separate safge and secure place, both data and backups should be encrypted using strong crytpographic mechanism
+	- **Processing**- data needs to be protected while it is being used in any operation, should onjly access data that is essential for the task, and should be isolated so that other ongoing processes cannot access that data
+- **COuntermeasures**- types of solutions or weapons organisationg uses to protect cyberspace
+	- **Technology**- hardware and software solutions for prevention and detection systems (IDs, firewaless)
+	- **Policies & Practice**- procedures and guidelines that ensure an organisation follows good practices
+	- **People**- Measures to ensure awareness among the system users about potential dangers
