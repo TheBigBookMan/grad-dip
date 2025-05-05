@@ -1,0 +1,92 @@
+## NIST (National Isntitute of Standards) Cybersecurity Framework (CSF)
+-  structured guidance that helps organisations assess and continually improve their ability to prevent, detect and respond to cyber-attakcs
+- supplies overarching policy framework
+- 30 % of US companies use NIST CSF as standard for data protection
+- aims to maintaing critical infrastructure including systems and assets so vital to US that the incapacity or destruction of such systems and seets would be debilitating
+- voluntary-risk based CSF comprising industry standards and best practices for helping organisations manage cybersecurity tisks
+-  NIST CSF is technology-neutral so works across various technology environments
+- flexible to work across organisations of all sizes
+	- versatile and designed for use of all sizes, maturity levels and sectors
+	- not just critical for infrastrcture, non-critical infrastructure organisations can also benefit greatly from its implementation
+- Value to programs
+	- organisations with matrue cybersecurity programs can use CSF to enhance and refine their existing processes
+	- companies looking to establish cybersecurity program can use CSF as foundational framework
+	- also complements existing risk management processes, aligning with industry best practices
+	- incorporates international standards, making applicable within and outside US
+- **Benefits**-
+	- **Describe**- describing the current cubersecurity posture allows organisations to understand their exsiting security measures
+	- **Target State**- defining target state for cubersecurity helps to set clear goals for security improvements
+	- **Identify**- identifying and prioritising opportunities for improvement enures that resources are allocated effectively
+	- **Assess**- assessing progress towards the target state enables continous monitoring and adjustment of security measures
+	- **Communicate**- communicating about cybersecurity isk among internal and external stakeholders fosters better understanding and collaboration on security issues
+- **Implementation through to Business Process**-
+	- **Risk Management**- NIST CSF guides key decision points about risk management activities across various levels of an organisation, from senior execs to business and process levels, down to implementation and operations
+	- **Senior Exec Level**- primary focus is on manging organisational risk, leaders at this level are responsibile for making critical decisions regarding risk apetite, prioritising key objectives and aligning resources to address the organisations most significant risks
+	- **Mission Priority, Risk appetite and Budget**- ensures mission priorities, risk appetite, and budget align with a structured framework profile at business/process level
+	- **Business/Process Level**- focus effectively on communicating the mission priorities, availabile resources and overall risk tolerance to the business process level
+	- **Changes in Current and Future Risk**- at business/process level, the focus shifts to critical infrastructure risk management
+	- **Framework Profile**- actions involve selecting the appropriate profile and allocating the budget, inputs from exec level are used to understand priority and current and future risk is communicated back up to exec level. level also communicates heavily with implementation/operations level to communicate risk frameworks and oversee the implementation process
+	- **Implementation**- focus on securing critical infrasturucture, actions include implementing the selected profile, this level communicates progress on profile implementation back to business/process level
+	- **Implementation Progress Changes in Assets, Vulnerability and Threat**- end-to-end risk management process facilitated by the NIST CSF ensures that each level of the organisation is aligned and informed, from strategic decision-making to operational execution
+- **Components (Tiers, Core, Profile)**-
+	- **Core**-
+		- outlines cybersecurity activities and provides information references, all organised around particular outcomes
+		- enables communication of cyber risk across an organisation
+		- consists of functions, categories, subcategories and informative references
+		- functions are to govern (NIST CSF2.0), identify, protect, detect, respond, recover (GIPDRR)
+	- **Tiers**-
+		- describes how cybersecurity risk is managed by an organisation
+		- describes degree to which an organisations cybersecurity risk management practices exhibit the key charactersitics (risk, threat aware, repeatable and adaptive)
+		- tier options are 
+			- partial (tier 1) 
+			- risk- informed (tier 2)
+			- risk-informed 
+			- repeatable (tier 3) and adaptive (tier 4)
+		- each organisation will decide which tier matches its risk management needs and capabilities, not a race to the top
+	- **Profile**-
+		- aligns industry standards and best practices to the framework core in a particular implementation scenario
+		- supports prioritisation and measurement while factoring in business needs
+		- helps organisations progress from their current elvel of cybersecurity sophisitication to a target improved state
+
+
+- **CIS Controls**- Critical Securital Controls are a prioritised, community-developed set of defensive practices that mitigate the most prevalant attacks on systems and networks
+	- provide a detailed, defence-in-depth checklist for day-to-day implementation
+- **Vulnerabiliuty**- weakness in software, hardware or organisational processes that when compromised can lead to a security breach,
+	- non-pshyical vulnerablities involve software, data, unpatched operating systems
+	- physical vulnerabilities involve protection of physical assets, such as servers
+- **Network Vulnerabilities**
+	- **Malware**-
+		- torjans, viruses, worms, ransomware
+		- symptoms include slow systems, random reboots, unknown processes
+		- common spread through phising emails and malciious downloads
+		- Types of Malware
+			- **Viruses**- seld-replicating and spread through user actions like clicking or copying
+			- **Keyloggers**- capture keystrokes to steal sensitive data
+			- **Worms**- self-replicating without a host program, spreading quickly across networks
+			- **Trojan Horses**- disguised as legit software, allowing back door access
+			- **Ransomware**- locks users out of their systems or data until a ransom is paid
+			- **Logic Bombs**- triggered by specific conditions to execute malicious code
+			- **Bots and Botnets**- compromised systems controlled remotely, used in DDoS attacks
+			- **Adware and Spyware**- serve ads or steal user information without permission
+			- **Rootkits**- provide remote control over system that is difficult to detect and remove
+	- **Social Engineering Attacks**-
+		- methods to trick users into giving up personal information
+		- include phishing, spearphising, whaling, smishing, spam, farming, tailgating, shoulder surfing and dumpster diving
+		- **Attack Methods**-
+			- **Phishing emails**- fake emails that trick users into providing sensitive information
+			- **Spearphishing**- targeted phishing using personal information
+			- **Whaling**- targets high-profile executives for critical information
+			- **Vishing**- voice phishing over phone calls
+			- **Smishing**- SMS phishing using text messages
+			- **Spam**- mass unsolicited emails that can contain  scams or malware
+			- **Pharming**- redirects user traffic to fake websites often by compromising or poisoning DNS response
+			- **Tailgating**- physical access gained by following authorised users
+			- **Shoulder Surfing**- observing users to obtain sensitive inforation
+			- **Dumpster Diving**- searching through trash for valuable information
+	- **Outdated or unpatched Software**-
+		- software is vulnerable to attacks if not updated
+		- regular patches and updates are essential for security
+	- **Misconfigured firewalls and operating systems**-
+		- firewalls monitor traffic and enforce security rules
+		- default operating system settings can be a seucirty risk and should be customised for better protection
+	
