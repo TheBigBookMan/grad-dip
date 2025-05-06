@@ -47,6 +47,102 @@
 		- aligns industry standards and best practices to the framework core in a particular implementation scenario
 		- supports prioritisation and measurement while factoring in business needs
 		- helps organisations progress from their current elvel of cybersecurity sophisitication to a target improved state
+- **Framework Implemetation Tiers**
+	- provide a deeper context for how an organisation approaches cybersecurity risk. tiers work alongside the Core and Profiles offering insights into processes in place to manage risk
+	- **Risk Management Process**- functionality and repeatability of sybersecurity risk management
+	- **Integrated Risk Management Program**- extent to which cybersecurity is considered broader risk management decisions
+	- **External Participation**- degree to which organisation benefits by sharing or recieving information from outside parties
+	- Figure below shows how the tiers range from Tier 1 (partial) to Tier 4 (adaptive) indicating increasing degree of rigour and sophistication in cybersecurity risk management processes, how well integrated cyber risk decisions are into broader risk decisions and the degree to which the organisation shares and recieves cybersecurity info from external parties
+	- ![[Pasted image 20250506084702.png]]
+	- selection of appropriate tier is responsibility of each individual organisation. the chosen tier must align with the organisations goals, be practical to implement and effectively reduce cybersecurity risks to an acceptable level
+- **CSF Core**-
+	- set of cybersecurity outcomes arranged by function, category and subcategory
+	- outcomes are not a checklist of actions to perform; specific actions taken to achieve an outcome will vary by organisations and use cases, as will individual responsible for those actions
+	- the order and size of functions, categories, subcategories in core do not imply the sequence or importance of achieving them. the structure of the core is intended to resonate most with those charged with operationalising risk management within an organisation
+	- **The Framework Core (GIPDRR)**- Function/Category/Category Identifier
+		- **Govern (GV)**- 
+			- Organisations cybersecurity risk management strategy, expectations and policy are established, communicated and monitored
+			- Govern function provies outcomes to inform what an organisation may do to achieve and prioritise the outcomes of the other five functions in context of mission and stakeholder expectations
+			- Governance activities are critical for incorporating cybersecurity into an organisations broader enterprise risk management (ERM) strategy
+			- Govern addresses an understanding of organisational context, the establishment of cybersecurity strategy and cybersecurity supply chain risk management, roles, responsibilites, authorities, polict and the oversiht of cybersecurity strategy
+			- *Categories*- Category Identifier
+				- **Organisational Context**- GV.OC
+				- **Risk Management Strategy**- GV.RM
+				- **Roles, Responsbilities and Authorities**- GV.RR
+				- **Policy**- GV.PO
+				- **Oversight**- GV.OV
+				- **Cybersecurity Supply Chain Risk Management**- GV.SC
+		- **Identify (ID)**-
+			- organisations current cybersecurity risks are understood
+			- understanding organisations assets (data, hardware, software, systems, facilities, services, people), suppliers and related cybersecurity risks enables an organisation to prioritise its efforts consistent with its risk management strategy and mission needs identified under Govern
+			- essential for understanding where the data resides (internal or third parties) and have policies to protect it
+			- this function also includes identification of improvement opportuniuties for organisations policies, plans, processes, procedures and practices that support cybersecurity risk management to inform efforts under all six functions
+			- *Categories*- Category Identifier
+				- **Asset Management**- ID.AM
+				- **Risk Assessment**- ID.RA
+				- **Improvement**- ID.IM
+		- **Protect (PR)**-
+			- Safeguards used to manage organisations cybersecurity risks
+			- implementing safeguards to ensure continuity of critical business processes. including- managing access to assets and information, conducting regular backups, protecting sensitive data and regularly updating software to prevent vulnerabilities
+			- once assets and risks are identified and prioritised, Protect supports the ability to secure those assets to prevent or lower the likelihood and impact of adverse cybersecurity events,
+			- increase likelihood and impact of taking advantage of opportunities
+			- outcomes covered by this function include identity management, authentication and access controle; awareness and trainig; data security; platform security (hardware, software, services of physical and virtual platforms); resilience of technology infrastructure
+			- *Categories*- Category Identifier
+				- **Identity management, Authentication and Access Control**- PR.AA
+				- **Awareness and Training**- PR.AT
+				- **Data Security**- PR.DS
+				- **Platform Security**- PR.PS
+				- **Technology Infrastructure Resilience**- PR.IR
+		- **Detect (DE)**-
+			- Possible cybersecurity attacks and compromises are found and analysed
+			- detect enables the timely discovery and analysis of anomalies, indicators of compromise, other potentially adverse events that may indicate that cybersecurity attacks and incidents are occurring.
+			- this function supports successful incident response and recovery activities
+			- key activities:
+				- using endpoint security suits with automatic updates to ensure real-time detection of threats
+				- understanding typical data movements within the organisation so any unusual flows (customer data being exported) can be detected
+				- capturing and reviewing logs of a system events, such as account changes and communication initiations. Security information and event management (SIEM) tools can be used to analyse logs for anomolies
+			- *Categories*- Category Identifier
+				- **Continuous Monitoring**- DE.CM
+				- **Adverse Event Analysis**- DE.AE
+		- **Respond (RS)**-
+			- actions regarding a detected cybersecurity incident are taken
+			- Respond supports the ability to contain the effects of cybersecurity incidents
+			- outcomes within this function cover incident management, analysis, mitigation, reporting and communication
+			- key activities:
+				- collaborate with both internal teams and external partners, such as law enforcement or IT vendors, to ensure a mooth and coordinated response when incidents occur
+				- regularly test response plans to ensure all participants understand their roles and responsibilities. testing helps reveal any gaps in legal reporting, communications or execution
+				- after testing or experiencing an incident, adjust response and recovery plans based on lessons learnt. this ensures the plan remains effective and up to date with current needs
+			- *Categories*- Category Identifier
+				- **Incident Management**- RS.MA
+				- **Incident Analysis**- RS.AN
+				- **Incident Response Reporting and Communication**- RS.CO
+				- **Incident Mitigation**- RS.MI
+		- **Recover (RC)**-
+			- assets and operations affected by a cybersecurity incident are restored
+			- Recover supports the timely restoration of normal operations to reduce the effects of cybersecurity incidents and enable appropriate communication during recovery efforts
+			- key activities
+				  recvoery plans should include strategies for managing companys reputation, proactive rather than reactive communication with the public is essential to maintain trust
+				  ensure both internal and external stakeholders are informed in a controlled manner, providing them with necessary details while avoiding oversharing
+				  after testing or executing reoery plans, update them with lessons learnt to improve future responses and resilience
+				  explore cyber insurance options as part of recovery planning, be aware that insurance payouts may take time, so alternative plans are critical
+			- *Categories*- Category Identifier
+				- **Incident Recovery Plan Execution**- RC.RP
+				- **Incident Recovery Communication**- RC.CO
+	- The core was designed to cover the entire breadth without being overly deep crossing topics across cyber, physical and personnel
+	- Covers across Functions->Categories->Subcategories
+	- Subcategories are deepest level of abstraction in the core, 97 subcategories and outcome-driven statements that provide considerations for creating or improving a cyebrsercurity program
+	- risk management activities can prevent negative evnts occurring but can also support taking advantage of positive opportunities
+	- actions to reduce cybersecurity risk benefit organisation in ways such as increasing revenue like first offering excess facility space to a commercial hosting provider for hosting their own and other organisation, then moving a major financial system from the organisation data centre to the hosting provider, reducing risks
+	- the actions above should be addressed concurrently, actions that support Govern, Identify, Protect and Detect should all happen continoulsky and actions that support responding and recovery should be ready at all times and happen when cybersecurity incidents occur
+	- all functions have vital roles related to cyber incidents
+	- Govern, Identify and Protect outcomes help prevent and prepare for incidents, 
+	- Govern, Detect, Respond and Recover outcomes help discover and manage incidents
+	- Each function named after a verb that summarises its content 
+	- each function divided into categories which are related to cybersecurity outcomes that collectively comprise the function
+	- categories divided into subcategories into more specific outcomes of technical and management activities. they are not exhaustive but describe detailed outcomes that support each category
+	- They all apply to all ICT used by organisations including IT, IoT and OT. also apply to all types of technology environments including cloud, mobile and AI systems
+	- ![[Pasted image 20250506093314.png]]
+
 
 
 - **CIS Controls**- Critical Securital Controls are a prioritised, community-developed set of defensive practices that mitigate the most prevalant attacks on systems and networks
