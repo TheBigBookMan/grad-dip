@@ -142,9 +142,14 @@
 	- categories divided into subcategories into more specific outcomes of technical and management activities. they are not exhaustive but describe detailed outcomes that support each category
 	- They all apply to all ICT used by organisations including IT, IoT and OT. also apply to all types of technology environments including cloud, mobile and AI systems
 	- ![[Pasted image 20250506093314.png]]
+- **Profile**- profile optimisation in NIST Cybersecurity framework involves creating and refining profiles to align cybersecurity activities within organisations business requirements, risk tolerance and resources
+	- framework is voluntary so no right or wrong ways to do it
+	- organisation can map their cybersecurity requirements, mission objectives and operating methodoloogies along with current practices against subcategoryes of framework Core
+	- requrements and objectives can be compared against the current operating state of the organisation to gain understanding of the gaps between the two
+	- ![[Pasted image 20250508092611.png]]
 
 
-
+## Security Controls
 - **CIS Controls**- Critical Securital Controls are a prioritised, community-developed set of defensive practices that mitigate the most prevalant attacks on systems and networks
 	- provide a detailed, defence-in-depth checklist for day-to-day implementation
 - **Vulnerabiliuty**- weakness in software, hardware or organisational processes that when compromised can lead to a security breach,
