@@ -35,8 +35,7 @@
               "title": "Cybersecurity Principles"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,10 +178,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "570b841c8d20c8d4",
+  "active": "3540641bda1001e9",
   "lastOpenFiles": [
-    "Cyber Security/Intro to Cyber Security.md",
     "Cyber Security/Cybersecurity Principles.md",
+    "Cyber Security/Intro to Cyber Security.md",
     "Pasted image 20250509082959.png",
     "Pasted image 20250508092611.png",
     "Pasted image 20250506093314.png",
