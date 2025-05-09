@@ -1,0 +1,143 @@
+- Risk management is process of identifyinf risks (vulnerabilities) to n orgnisations information assets and infrastructure and taking steps to reduce these risks to acceptable level
+- can also be descirbed as process of identifying, assessing and controlling risks facing an organisation
+- **Components of Risk Management**-
+	- **Risk Identification**- process of examination and documentation of the security posture of organisations information tech and risks it face. includes recognition, enumeration and documentation of risks to an organisations information assets
+		1. **Plan & organise process**
+			- being by organising a team, consisting of representatives of all affected groups
+		2. **Identify, inventory & categorise assets**-
+			- asset identification and valuation is an iterative process, beginning with identification of assets
+			- includes all element of organisations sytem- people, procedures, data, information, software, hardware and entworking
+			- classify and categorise assets by adding details as dif deeper into analysis
+			- Traditional System Components -> SecSDLC Components -> Risk management system components
+				- **People**-
+					- **Employees**-
+						- Trusted employee
+						- other staff
+					- **Non-employees**-
+						- people at trusted organisations
+						- strangers
+				- **Procedures**-
+					- **Procedures**-
+						- IT and standard business procedures
+						- IT and business-sensitive procedures
+				- **Data**-
+					- **Information**-
+						- transmission
+						- processing
+						- storage
+				- **Software**-
+					- **Software**-
+						- application
+						- operating system
+						- security components
+				- **Hardware**-
+					- **System devices and peripherals**
+						- systems and peripherals
+						- security devices
+					- **Networking components**-
+						- intranet components
+						- internet or DMZ components
+			- Process of identifying and valuing these assets in more detail
+				- **People, procedures and data asset identification**-
+					- not as readily discovered and documented
+					- assets should be identified, described and evaluated by people using knowledge, experience and judgement
+					- also be recorded in a reliable data-handling process:
+						- **Asset attributed for people**- position name/number/ID, supervisor, security clearance level, special skills
+						- **Asset attributes for procedures**- description, intended purpose, what elements it is tied to, storage location for reference, storage location for update
+						- **Asset attributes for data**- classification, owner/creator/manager, data structure size, data structure used, online/offline status. location, backup procedures employed
+				- **Hardware, software and network asset identification**-
+					- automated tools can uncover system elements that comprise the hardware, software and network components
+					- information attributes to track depends on
+						- needs of the organisation/risk management efforts
+						- management needs of information security/information technology communities
+						- asset attributes to be considered are name, IP address, MAC address, element type, serial number, manufacturer name, model/part number, software version, physical or logical location and controlling entity
+		3. **Classify, Value & Prioritise Assets**-
+			- examples-
+				- confidential data, internal data, public data. information organisations generally organise themselves to create a useable data classification model
+				- government agenciesm y have unclassified, sensitive bu unclassified (SBU), confidential, secret, or top secret categories
+				- there can be other classifications, such as need-to-know and named projects (list of personnel having access to those projects)
+			- other side of data classification scheme is personnel security clearance structure, identifying the level of information each individual is authorised to bview based on their need-to-know
+			- Each organisation should create a weighting for each category based on answers to previous questions
+			- considerations for calculations
+				- **Value retained from the cost of creatng the information asset**- 
+					- information is created or acquired at some cost to the organisation
+					- cost can be calculated or estimated
+				- **Value retained from past meintenance of the information asset**-
+					- estimated that for every dollar spent developing an application or acquiring and processing data, many more are spent on maintencce over the useful life of data or software
+					- cists can be estimated by quantifying human resources used to continially update, support, modify, and service applications and systems associated with particular information asset
+				- **Value implied by cost of replacing information**-
+					- includes human resource time needed to reconstruct, restore, or regenerate the information from backups, independent transaction logs, hard copies of data sources
+					- restoration can sometimes take longer than it took to create the data
+				- **Value from providing information**-
+					- different come cost of developing or maintaining information is cost of providing information to users who need it
+					- includes value associated with the delivery of information via databases, networks, hardware and software systems
+					- also includes cost of infrastructure necessary to provide access and control of information
+				- **Value incurred from cost of protecting information**-
+					- value of an asset is based in part on cost of protecting it, while amount of money spend to protect an asset is based in part on value of the asset
+				- **Value to owners**-
+					- values listed prebiously are easy to calculate, this and following values are mote like to be esimates of costs
+					- value to owners- howmuch is your social security number worth to you? telelhone number?
+					- very subjective measurements
+			- **Weighted Factor Analysis**-
+				- once inventory and value assessment is complete, can prioritise each asset using straightforward process
+				- each information asset is assigned a score for each of a set of assigned critical factors
+				- scores range from 0.1 to 1.0 - range recommended by NIST SP800-30 Risk Management for Information Technology Systems and then each critical factor is assigned a weight (1 to 100) to indicate importance for organisation![[Pasted image 20250509151109.png]]
+				- ![[Pasted image 20250509151119.png]]
+				- 
+				
+		4. **Identify and Prioritise Threats**-
+			- each of these identified threats has potential to attack any protected assets
+			- to make process manageable, each step in threat identification ad vulnerability identification process is managed separately and then coordinated at end of process
+			- realistic threats need investigation, while unimportant threats are set aside, threat assessment can include asking-
+				- which threats present danger to assets?
+				- which threats represent most danger to the information?
+				- how much would it cost to recover from an attack?
+				- which threat requires the greates expenditure to prevent?
+			- **Common Threats to information security**- Threat -> Example
+				- **Act of human error or failure** - accidents, employee mistakes
+				- **Compromises to intellectual property**- piracy, copyright infringement
+				- **Deliberate acts of espionage or trespass**- unauthorised access and data collection
+				- **Deliberate acts of information extortion**- blackmail for information disclosure
+				- **Deliberate acts of sabotage or vandalism**- destruction of system or information
+				- **Deliberate acts of theft**- illegal confiscation of equipment or information
+				- **Deliberate software attacks**- viruses, worms, macros, denial of service
+				- **Forces of nature**- fire, flood, earthquake, lightning
+				- **Quality of service deviations from service providers**- power and WAN quality of service issues
+				- **Technical hardware failures or errors**- equipment failure
+				- **Technical software failures or errors**- bugs, code problems, unknown loopholes
+				- **Technological obsolescence**- antiquared or outdated technologies
+		5. **Specify Asset Vulnerabilities**-
+			- reviewing each information asset for each threat it faces and creating list of vulnerabilities that remain viable risks to organisation
+			- vulnerabilities are specific avenues that threat agends can exploit to attack an information asset
+			- end of risk identification process, should have a prioritised list of assets and their vulnerabilities. list servers as starting point for next step in risk management process- risk assessment
+			- list priorities list threats facing organising based on thweight table discussed- two lists can be combined into a **threates-nvulnerablities- assets (TVA)** worksheet for addition of vulnerability and control information during risk assessment
+			- **Vulnerability Assessment (on a router)**
+				- **Compromises to intellectual property**-
+					- copyrighted works developed in house and stored on intranet servers can be copied without perfmission unless the router is configured to limit access from outsiders
+					- works copyrighted by others can be stolen; your organisation is liable for that loss to copyright holder
+				- **Espionage or trespass**-
+					- information asset (router) may have little intrinsic value, but other assets protected by this device could be attacked if it does not perform correctly or is compromised
+				- **FOrces of nature**-
+					- all information assets in organisation are subject to forces unless suitable controls ar eprovided
+				- **Human error of failure**-
+					- employees or contractors may cause an outage if configuration errors are made
+				- **Information extortion**-
+					- if attackers bypass the router or compromise it and then enter your network, may encrypt your data in place, may not have stolen it but unless pay them to acquire encruption key the data is inert and of no value
+				- **Deviation in quality of service**-
+					- power system failures are always possible, unless suitable electrical power conditiongin isprovided
+					- ISP connectivity failures can interrupt internet bandwidth
+					- ![[Pasted image 20250509161904.png]]
+	- **Risk Assessment**- determination of the extent to which organisations information assets are exposed or at risk
+		- determine loss frequency (likelihood)
+		- evaluate loss magnitude (impact)
+		- calclate risk
+		- assess risk acceptability
+	- **Risk Control**- application of measures to reduce the risks to organisations data and information systems. involves implementing security controls that reduce the risks to information assets to acceptable level
+		- select control strategies
+		- justify controls
+		- implement, monitor and assess controls
+- **Desirable Risk Level**- 
+	- not all risks can be mitigated or avoided
+	- organisation must define the level of risk willing to live with
+	- requires trade offs between perfect security and unlimited accessibility
+	- determine how many resources, byudgets, attention and anything goes to security (eg banks want a lot of resources to security)
