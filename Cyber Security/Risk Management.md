@@ -127,11 +127,27 @@
 					- power system failures are always possible, unless suitable electrical power conditiongin isprovided
 					- ISP connectivity failures can interrupt internet bandwidth
 					- ![[Pasted image 20250509161904.png]]
-	- **Risk Assessment**- determination of the extent to which organisations information assets are exposed or at risk
-		- determine loss frequency (likelihood)
-		- evaluate loss magnitude (impact)
-		- calclate risk
-		- assess risk acceptability
+	- **Risk Assessment**- determination of the extent to which organisations information assets are exposed or at risk and assigna risk rating to each specific information asset
+		- **Determine Loss Frequency (likelihood)**-
+			- asset identification and valuation
+				- Risk = likelihood of vulnerability occurence x value (or impact)
+				- subtract percentage risk already controlled
+				- add element of uncertainty
+			- loss frequency is calculated- loss frequency = likelihood x probability of success
+		- **Evaluate loss magnitude (impact)**-
+			- other side of data classification scheme is personnel security clearance structure, identifying level of information each individual is authorised to view on based on their need-to-know
+			- loss magnitude = value of asset x percentage of loss
+			- risk determination, loss magnitude is determined by considering both the asset value and the probable loss from a successful attack
+		- **Calculate Risk**- 
+			- each identified threat has potential to attack any assets protected
+			- ![[Pasted image 20250509164959.png]]
+		
+		- **Assess Risk Acceptability**-
+			- results of risk assessment are presented in the ranked vulnerability risk worksheet, summarises asset, asset relative value, vulnerability, loss frequency and lss magnitude
+	- **Summary of risk identification and assesmsent**-
+		- **Information asset clasfficiation worksheet**- assembles information about information assets and their value to the organisation
+		- **Weighted criteria analaysis worksheet**- assigns a ranked value or impact weight to each information asset
+		- **Ranked vulnerability risk worksheet**- assigns a ranked value or risk rating for each uncontrolled asset- vulnerability pair
 	- **Risk Control**- application of measures to reduce the risks to organisations data and information systems. involves implementing security controls that reduce the risks to information assets to acceptable level
 		- select control strategies
 		- justify controls
