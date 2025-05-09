@@ -150,8 +150,73 @@
 
 
 ## Security Controls
+- **Cybersecurity Control**-security controls are safeguards or countermeasures to avoid, detect, counteract or minimse security risks to physical property, information, computer systems  or other assets
+- **Types of Security Control**-
+	- **Time**- security controls can be classified according to the time that they act relative to  a security incident
+		- **Preventative (before the event)**- controls are intended to prevent an incident from occurring (eg locking out unauth intruders)
+		- **Detective (during the event)**- contolrs are intended to identify and characterise an incident in progress (eg by sounding the intruder alaram and alerting security guards or police)
+		- **Corrective (after the event)**- controls are intended to limit the extent of any damage caused by the incident (eg recovering the organisation to normal working status as efficiently as possible)
+	- **Nature**- security controls can also be classified according to their nature
+		- **Pyhsical**- controls (eg fences, doors, locks and fire extinguishers)
+		- **Procedural or Administrative**- controls (eg incident response processes, management oversight, security awareness and training)
+		- **Technical or Logical**- controls (eg use euthentication- login- and logical access controls, anti-virus software, firewalls)
+		- **Legal and Regulatory or Compliance**- controls (eg privacy laws, policies and clauses)
+- Different security and control frameworks
+- ![[Pasted image 20250509082959.png]]
+
 - **CIS Controls**- Critical Securital Controls are a prioritised, community-developed set of defensive practices that mitigate the most prevalant attacks on systems and networks
+	- has top 18 critical security controls which are prioritised set of best practices created to stop most pervasive and dangerous threats of today
+	- published the best practice guidelines for computer security
+	- consisted of 18 critical security controls (CSC) that organisations should take to block or mitigate known attacks
+	- included no-nonsense actionable recommendations for cybersecurity
+	- distributed as widely and freely as possible
 	- provide a detailed, defence-in-depth checklist for day-to-day implementation
+- **Why use the CIS Control**-
+	- **Offence informs defence**- 
+		- CIS controls are selected, dropped and prioritised based on data and specific knowledge of attacker behaviour and how to stop it
+	- **Feasible**-
+		- all individual recommendations (safeguards) must be specific and practical to implment
+	- **Focus**- 
+		- help defenders idetnfiy the most critical actions they need to take to stop the most important attacks
+		- Avoid the temptation to solve every securirt problem; avoid adding 'good things to do' or 'things you could do'
+	- **Measureable**-
+		- all CIS controls, especially for implementation Group 1, must be measureable
+		- simplify or remove ambiguous language to avoid inconsistent interpretation
+		- some safeguards may have a threshold
+	- **Align**-
+		- create and demonstrate 'peaceful co-existence' with other governance, regulatory, and process management schemes, frameworks and structures
+		- cooperate with and point to existing, independent standards and security recommendations where they exists, such as National Institute of Standards and Technology (NIST), Cloud Security Alliance (CSA), Software Assurance Forum for Excellence in Code (SAFECode), Att&CK and Open Web Application Security Project (OWASP)
+- **Importance of CIS Controls**- five critical security controls that address asset management, secure configurations and continuous monitoring. important in reducing vulnerabilities and defending against threats
+	- **CIS Control 1**-
+		- utilises an active discovery tool to identify devices connected to organisations network and update the hardware asset inventory
+		- maintains an accurate and up-to-date inventory of all technology assets with the potential to store or process information. the inventory shall include all hardware assets whetehr connected to organisations network or not
+	- **CIS Control 2**-
+		- ensures that all software on an organisations network is authorised and properly inventoried
+		- mandates continous monitoring and invetorying of software to prevent unauthorised or vulnerable software from being installed or running within the org
+	- **CIS Control 3**-
+		- involves securing configurations for hardware and software on mobile devices, laptops, workstations and servers to reduce vulnerabilities
+		- stresses establishing secure baselines for configurations and actively managing and enforcing these configurations throughout the system lifecycle
+	- **CIS Control 4**-
+		- focuses on the continuous vulnerability assessment and remediation process, ensuring vulnerabilities are identified and addressed in a timely manner
+		- mandates regular scans of network devices and applications to detect potential vulnerabilities and deploy patches or corrective actions
+	- **CIS Control 5**-
+		- covers te secure configuration of enterprise network devices such as firewalls, routes and switches, ensuring these are configured to reduce security risks
+		- emphasises managing hardware devices securely throughout their lifecycle and enforcing best practices for secure configuration
+- **CIS Implementation Groups**- CIS controls were developed to provide guidelines to organisations at any scale. assist organisations of any size 3 implementation groups (IG) were created. based on risk profile and resources and organisation has acces sto- total of 153 safeguards spread across each
+	- **Implementation Group 1 (IG1)**- 
+		- definition of essential cyber hygiene and represents minimum standard of information security for all enterprises
+		- IG1 assists enterprises with limited cybersecurity expertise thwart general, non-targeted attacks
+		- 56 cyber defence safeguards
+	- **Implementation Group 2 (IG2)**-
+		- assists enterprises managing IT infrastructure of multiple departments with differing risk profiles
+		- IG2 aims to help enterprises cope with increased operational complexity
+		- 74 additional cyber defence safeguards
+	- **Implementation Group 3 (IG3)**-
+		- assists enterprises with IT security experts to secure sensitive and confidential data
+		- IG3 aims to prevent and/or lessen the impact of sophisticated attacks
+		- 23 additional cyber defense safeguards
+
+
 - **Vulnerabiliuty**- weakness in software, hardware or organisational processes that when compromised can lead to a security breach,
 	- non-pshyical vulnerablities involve software, data, unpatched operating systems
 	- physical vulnerabilities involve protection of physical assets, such as servers
