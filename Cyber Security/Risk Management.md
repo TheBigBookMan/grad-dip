@@ -152,8 +152,50 @@
 		- select control strategies
 		- justify controls
 		- implement, monitor and assess controls
-- **Desirable Risk Level**- 
-	- not all risks can be mitigated or avoided
-	- organisation must define the level of risk willing to live with
-	- requires trade offs between perfect security and unlimited accessibility
-	- determine how many resources, byudgets, attention and anything goes to security (eg banks want a lot of resources to security)
+		- need to identify the possible steps to decrease likelihood of risk scenario- controls need to be identified to mitigate risk
+		- for each threat and associated vulnerabilities that have any risk, create prelimenary list of control ideas, justify the cost and implement them
+		- **Residual Risk**- find the risks and control them to make more manageable and reduce number of risks
+		- **Key risk control strategies**- when managing risks within organistion, there are 5 primary strategies to address or control
+		- ![[Pasted image 20250512083058.png]]
+			- **Defence**- prevent the exploitation of vulnerabilities, accomplished though countering threats, removing asset vulnerabilities, limiting asset access and adding protective safeguards
+				- application of policy
+				- education and training
+				- applying technology
+			- **Mitigation**- reduce the impact of an attack rather than reduce the success of the atack itself. solid in place policies can help mitigate the impact
+				- **Incident Response (IR) plan**- defines the actions to take while the indicent is in progress
+				- **Disaster Recovery (DR) plan**- most common mitigation procedurel involves preparations for the recovery process
+				- **Business Continuity (BC) plan**- encompasses the continuation of business activities if a catastrophic event occurs
+			- **Transference**- shift risk to other assets, processes or organisations. if lacking, organisation should hire individuals or firms that provide security management and admin expertise. organisation may then transfer the risk associated with management of complex systems to another organisation experienced dealing with those risks
+			- **Acceptance**- involves doing nothing to protect a vulnerability and accepting the outcome of exploitation. approach only valid when particular function, service, information or asset does not justify cost of protection
+			- **Termination**- directs organisation to avoid business activities that introduce uncontrollable risks. organisation may seek an alternative mechanism to meet customers needs
+		- **Justifying Controls**- asset valuation involves estimating real/perceived costs associated with design, development, installation, maintenance, protection, recovery and defence against loss/litigation. process results in an estimate of potential loss per risk. Question to be asked here:
+			- what damage could occur, and what financial impact would it have?
+			- what would it cost to recover from the attack, in addition to the financial impact of damage?
+			- what is the single loss expectancy for each risk?
+		- **Cost Benefit Analysis**- 
+			- determines where or not particular control is worth its cost
+			- ![[Pasted image 20250512085550.png]]
+		- **Control Cycle**- selection and implementation of a control strategy is not end of a process; strategy and its accompanying controls must be monitored and re-evaluated on an ongoing basis to determine their effectiveness and to calculate the estimated residual risk more accruately
+			- how the cyclical process ensures risks are cointrolled- there is no exit from this cycle, it is a process that continues for as long as the organisation continues to function
+			- ![[Pasted image 20250512085745.png]]
+	- **Desirable Risk Level**- 
+		- not all risks can be mitigated or avoided
+		- organisation must define the level of risk willing to live with
+		- requires trade offs between perfect security and unlimited accessibility
+		- determine how many resources, byudgets, attention and anything goes to security (eg banks want a lot of resources to security)
+	- **Risk Management Framework**- effectively manage risks in an organisation, several established frameworks and processess guide implementation of security controls and risk mitigation strategies.
+		- **NIST Risk Management Framework (RMF)**- describes risk management as comprehensive process require organisings to frame risk, assess risk, respond to determined risk and monitor risk on ongoing basis
+		- ![[Pasted image 20250512090128.png]]
+		- **ISO 27005 Risk Management Process**- desvirbes risk management as continous iteractive process. steps consist of context establishment, risk assessment, risk treatment, risk acceptance, monitoring and communication. steps are performed iteratively and continuously to keep risk management system up to date
+			- **Context Establishment**- initial step where organisation defines scope of risk management process. involves identifying environment in which risks will be assessed, including assets at risk, threats and vulnerabilities within organisation
+			- **Risk Assessment**- stage involves assessing risks that may affect organisations information security, risk assessment continous process and is subdivided into three parts
+				- **Risk Identification**- identifying potential threats that could harm the organisations information assets
+				- **Risk Analysis**- evaluating the likelihood and potential impact of these threats
+				- **Risk Evalucation**- comparing estimated risks against risk criteria to determine their significance and prioritise them for treatment
+			- **Risk Decision Point  1 (Assessment Satisfactory)**- after risk assessment, decicion point is reached. if the assessment is deemed satisfactory then the process moves forward, if not it loops back for further refinement
+			- **Risk Treatment**- involves deciding on the best course of action for managing risks, it may include risk mitigation strategies such as implementating additional security controls or transferring risks to another party through mechanisms like insurance
+			- **Risk Decision Point 2 (Treatment Satisfactory)**- once risks hav ebeen treated, there is second decision point. if treatments are deemed satsifactory, process can proceed, if not additional treatments may need to be implemented
+			- **Risk Acceptance**- if risk treatment is deemed satsifactory, organisation formally accepts the remaining risk. this implies residual risks are within acceptable limits based on organisations risk appetite
+			- **Risk Communication and Consultation**- throughout process, effective communication with stakeholders is critical. ensuring stakeholders understand the risks and treatments is essential for successful implementation and monitoring
+			- **Risk Monitoring and Review**- continuous monitoring and review are crucial to ensure that risks are managed effectively over time. step also involves checking risk treatments are effective and that risk environment has not changed significantly
+			- **End of First or Subsequent Iteration**- process is iterative, meaning tha tit repeats to ensure ongoing risk management as new threats emerge or risk landscape changes
