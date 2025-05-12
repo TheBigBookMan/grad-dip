@@ -199,3 +199,245 @@
 			- **Risk Communication and Consultation**- throughout process, effective communication with stakeholders is critical. ensuring stakeholders understand the risks and treatments is essential for successful implementation and monitoring
 			- **Risk Monitoring and Review**- continuous monitoring and review are crucial to ensure that risks are managed effectively over time. step also involves checking risk treatments are effective and that risk environment has not changed significantly
 			- **End of First or Subsequent Iteration**- process is iterative, meaning tha tit repeats to ensure ongoing risk management as new threats emerge or risk landscape changes
+## CORAS
+- **CORAS Process**- 
+	- process for security risk analaysis, it is a graphucal language that supports analysis process ad is basis for communication, documentation and analysis
+	- risk management process is based on ISO 31000: Risk Manangement- principles and guielines
+	- ![[Pasted image 20250512093337.png]]
+	- ![[Pasted image 20250512093345.png]]
+	- **Risk Management Process Steps**- Five key steps in risk management process
+		1. **Identify Context**- begin risk management process, essential to identify the context in which analysis will take place
+			- **Characterise the target of analysis**- clearly define the focus and scope of analysis to ensure all relevant aspects are considered
+			- **Identify and value assets**- conduct an asset-driven risk analysis process, focusing on business-oriented aspects such as availability of services that generate revue
+			- **Specify risk evaluation criteria**- determine acceptable level of risk by identifying what losses the client can tolerate, similar to setting requirements in system development
+		2. **Identify Risks**- next step involves identifying potential risks to the assets
+			- **Identify threats to assets through structured brainstorming**- use methods like Hazard and Operability Analysis (HazOp) and involve diverse group of participants, including system owners, users, developers, domain experts and risk analysis experts (5-7 people)
+			- **Identify vulnerabilities of assets**- utilise questionnaires and checklists to systematically identify weaknesses in assets
+			- **Equipment physical secuity**
+				- ensure that equipment is properly physically protected against unauthorised access to data or loss of data
+				- verify that power supplies are managed in a way that prevents data loss and ensures availability
+		3. **Analyse Risk Level**- after identifying risks, important to analyse their severity
+			- recognise that it is impossible to completely eliminate all risks
+			- determine which risks require treatment by assessing their seriousness and prioritising them accordingly
+		4. **Evaluate Risks**- evaluating risks involves analysing likelihood and consequences of unwanted incidents
+			- **Quantitative values**- assign numberical values to risks, such as potential losso f $1mill with a 25% change per year
+			- **Qualitative values**- use descriptive terms like high, medium, and low to categorise risks
+		5. **Treat Risks**- final step is to address identified risks
+			- **Identify treatments for unaccpeted risks**- develop strategies to mitigate or manage risks that are deemed unacceptable
+			- **Evaluate and prioritise different treatments**- assess the effectiveness of various risk treatments and prioritise them based on their potential impact and feasibility
+	- **Model-based Risk Analysis**-
+		- combines graphical modelling with classical risk analysis to better represent the threats, risks, assets and treatments. 
+		- help of graphical model, control can be placed at right level; it increases communication efficiency and makes result understandable for broad range of people
+		- ![[Pasted image 20250512101426.png]]
+- **What is CORAS**-
+	- a model-based risk analysis process designed specifically for security-critical systems
+	- framework procides a structured approach for identifying, assessing and managing risks in complex systems
+	- leverages graphical modelling to facilitate risk communication between stakeholders and offers various tools and techniques for modeling and documenting risk factors
+	- **Overview**- 
+		- CORAS semantics are a schematic translation of any CORAS diagram into english
+		- CORAS guideline is a guideline for the best use of graphical language within the process
+		- CORAS tool is a computerised tool supporting the above
+	- **Types**- different types of diagrams
+		- **Asset Diagrams**- devsribe the focus of the analysis
+		- **Threat Diagrams**- describe scenarios that may cause harm to the assets
+		- **Risk Diagrams**- summarise the risks presented in the threat diagrams
+		- **Treatment Diagrams**- add proposed treatments to the threat diagrams
+		- **Treatment Overview Diagrams**- add the proposed treatments to the risk diagrams
+	- **Symbols**- symbols used in CORAS for graphically representing risk assessment
+		- ![[Pasted image 20250512102207.png]]
+	- **Threat Diagram**- breakdown below helpes visualise relationships between threats, vulnerabilities, assets, and unwanted incidents
+		- ![[Pasted image 20250512102255.png]]
+		- after exploring the CORAS process definition, semantics, guidelines, tools and types. now explore semantics translated into english (vertices and relations), providing clear structure for visualising and understanding risks. leads to crucial phases like identifying and documenting assets, followed by other key phrases like identifying threats, evaluating risks and selecting appropriate risk treatments
+	- **CORAS Semantics Translated to English**- CORAS method is crucial to understand the vertices and relations used in threat diagrams. 
+		- **Vertices**- represent elements like assets, threats or unwanted incidents
+			- a hacker is a deliberate human threat
+			- threat scenario- power supply breakdown in Norway, likeelihood undefined
+			- threat scenario- power supply breakdown in Sweden, with a likelihood of once every 5 years
+			- unwanted incident- blackout in Norway, with a likelihood of occurring 3 times every 100 years
+			- power production in Norway is a direct asset
+		- **Relations**- illustrate connections between them, such as cause-and-effect scenarios
+			- a hacker initiates a power supply breakdown in Norway with a likelihood of once every 100 years
+			- power supply breakdown in Norway leads to a blackout in Norway with a conditional likelihood of 1.0
+			- power supply breakdown in Sweden leads to a blackout in Norway with a conditional likelihood of 0.1
+			- blackout in Norway impacts power production in Norway with a consequence classified as critical
+	- **CORAS Semantics and Diagrams**- the semantics are essential in the breakdown of a CORAS diagram as they illustrate how risks and threates are identified, managed or mitigated. by using distinct symbols and relationships, the diagram visually clarifies which treatments are applied to specific threats, facilitating a better understanding of overall risk management strategy
+		- ![[Pasted image 20250512103223.png]]
+- **CORAS Risk Management Phases**-
+	- the CORAS method follows structured process that helps organisations manage and mitigate risks systematically. each phase is designed to capture essential aspects of risk management, from identifying valuable assets to selecting appropriate risk treatments. The phases are:
+	1. **Identifying and Documenting Assets**- first step in effective risk management is identifying and docuemting assets
+		- **Asset**- assets refer to something to which a party assigns value and hence requires protection
+		- **Client's Role**- the client specifies its assets and risk acceptance levels
+		- **Common Pitfalls**- mistakes in this step can jeopardise the entire analysis
+			- wrong focus
+			- wrong level of detail
+		- Key assets of the analysis client- including 'Product Information', 'Budget', and 'Business Contracts'
+			- ![[Pasted image 20250512114431.png]]
+		- may also specify interested parties other than the client
+			- different parties may have different assets
+			- two parties may assign different values to the same assets or aspects (eg confidentially) but possible with different priorities (asset value) and different protection requirements
+		- also possible to specify how assets can depend on other assets
+			- company reputation
+			- income
+		- Shows relationship between confidentiality and data protection, emphasising that harm to confidentiality can lead to harm to data protection
+			- ![[Pasted image 20250512114813.png]]
+	2. **Identifying and Documenting Threats and Unwanted Incidents in the Threat Diagram**- once assets are documented, its important to identify potential threats and unwanted incidents that could disrupt these assets, using threat diagrams visualise these potential incidents and their consequences
+		- essential to define key terms
+			- **Threat**- potential cause of an unwanted incident
+			- **Unwanted Incident**- an event that harms or reduces the value of an asset
+		- Below visualises how these elements interact and how specific threats may lead to unwanted incidents that reduce asset value
+			- ![[Pasted image 20250512120006.png]]
+		- Further clarify the elements involved in risk management, define additional terms
+			- **Vulnerability**- weakness or deficiency that can be exploited by a threat to cause harm or reduce the value of an asset
+			- **Threat Scenario**- chain of events initiated by a threat, potentially leading to an unwanted incident
+		- Participants need to specify 'why' incidents can happen (vulnerabilities) and 'how' (threat scenarios)
+		- below shows the flow of different types of threats and unwanted incidents and their impacts on business assets like contracts, product information and budget. highling how various vulnerabilities, such as insufficient virus protetion or access to confidential information can lead to incidents like attacks on the information system, accidental publication of product information or confidential data being sold
+			- ![[Pasted image 20250512120930.png]]
+	3. **Identifying and Documenting Likelihoods and Consequences**- since identified the threats and unwanted incidents, next step is to assess how likely these incidents are to occur and their potential impact on assets
+		- important to understand
+			- **Likelihood**- frequency or probability of something to occue
+			- **Consequence**- impact of an unwanted incident on an asset in terms of harm or reduced asset value
+		- Below helps to clarify how the probability of an event and potential consequences are analysed to determine the overall risk
+			- ![[Pasted image 20250512121244.png]]
+		- 
+	4. **Documenting Risks**- focus on documenting risks based on identified threats, assets, and vulnerabilities
+		- **Risk**- refers to likelihood of unwanted incident and its consequences for a specific asset, acceptable and non-acceptable risks are shown in a risk diagram to aid decision-making and planning treatments
+		- below shows the relationship between various risks and their impact on critical business assets, such as business contracts, product information and budget. illustrates different risks like a virus attack or the accidental release of confidential information can affect these assets. each risk is assessed for its acceptability or unacceptability helping to determine which risks require treatment and which can be tolerated
+			- ![[Pasted image 20250512121937.png]]
+	5. **Identifying and Documenting Risk Treatments**- once risks are documented, next step is to determine appropriate risk treatments
+		- **Unacceptable risks**- are evaluated to identify appropriate treatments
+		- **Acceptable risks**- can be removed from the diagram
+		- below shows example of risk diagram where various risks are visualised and categorised based on their acceptability to organisation
+			- ![[Pasted image 20250512122101.png]]
+		-  highlighted risks help in identifying those that need mitigation versus those that can be tolerated without further action
+		- risk treatment refers to an appropriate measure to reduce the risk level, treatments are added where they should have an effect
+		- below shows risk treatments being implemented for previously identified risks, illustrating how specific countermeasures are applied to reduce the risk level associated with various threats and vulnerabilities
+			- ![[Pasted image 20250512125321.png]]
+- **Example of CORAS Threat Diagrams**- following are five CORUS threat diagrams that illustrate concepts such as identification, vulnerabilities, threats and their potential impact on an organisation
+	- **Example 1**- below shows the relationship between a companys key resource, such as server integrity, information confidentiality and system availability. demonstrating how these critical assets, when compromised can negatively impact the companys reputation
+		- ![[Pasted image 20250512130101.png]]
+	- **Example 2**- below demonstrates a typical scenario where external attackers, such as hackers or malicious software, can exploit vulnerabilities like outdated virus protection, highlighting possible paths threats can take, from initiating an unwanted incident to causing serious consequences such as breaches in confidentiality, integriyt, or availability of servers. this mapping of threats relations and their potential impacts it helps visualise how different threats interct with vulnerabilities and the likelihood and severity of each possible outcome
+		- ![[Pasted image 20250512130246.png]]
+	- **Example 3**- below provides an illustration of how a hacker or computer virus can initiate risk relations that impact a companies servers confidentiality, integrity and availability. it illustrates different scenarios where these risks may be deemed acceptable or unacceptable base don severity of impact. highlights visualusing levels and how they affect critical assets in the system by mapping out the relationships between threats, risks and their consequences
+		- ![[Pasted image 20250512130514.png]]
+	- **Example 4**- below demonstrates how preventative actions, usch as installing monitoring software or updating virus protection routines, can reduce likelihood and consequences of attacks on a companies critical assets. mapping out potential treatment scenarios, the diagram illustrates how these actions can prevent or minimise the impact on confidentiality, integrity and availability of companies servers
+		- ![[Pasted image 20250512130628.png]]
+	- **Example 5**- below outlines how specific treatments, like installing monitoring software or updating virus protection routeins, can reduce the likelihood and consequences of attacks on critical assets like servers. shows relationships between threats, risks and treatment actions, emphasising how effective measures can protext the confidentiality, integriy and availability of vital systems
+		- ![[Pasted image 20250512130748.png]]
+- **Eight Steps of CORAS Risk Analysis**-
+	- in the steps below it is in a case sudy for a telemedicine case study, which involves identifying and managing potential risks in a healthcare setting where patients and healthcare professionals use digital tools for remote communication and treatment
+		- telemedicine introduces new risks, such as threats to patient privacy, unauthorised access to sensisitve medical data, and disruptions in communication between healthcare providers like GPs and specialists
+		- telemedicine system connects various stakelholders and is crucial for delivering timely healthcare services, CORAS method allows identifiation of assets like patient data and communication channels, potential threats like system vulnerabilities and estimation of risks to mitigate them effectively
+	- the process follows a structured step-by-step approach to identifying, estimating, evaluating and treating risks, eight key steps of CORUS risk analysus process are:
+		1. **Preparation for Analysis**-
+			- aims to complete essential preparations before beginning the analysis
+			- involves setting a preliminary scope and focus for analysis and informing the customer of their responsibilities
+		2. **Customer Presentation of the Target**-
+			- the second step an introductory meeting is held where the client representatives outline their overall goals and the specific target for the analysis, analysts gather the information from these presentations and discussions
+			- key tasks include introducing security analysis method, defining the analysis goals and scope, planning subsequent meetings and workshops and setting the particiapnts
+			- essential participants include the analysis leader, secratary and client decision-makers with optional involvement from technical experts and users
+			- **Modelling Guideline**-
+				- early stage of the analysis it can be useful to describe the target with information drawings, pictures or sketches on a blackboard. below shows an example of telemedicine case, the presentation can later be supplemented with more formal modelling techniques such as Unified Modeling language (UML) or data flow diagram
+				- ![[Pasted image 20250512131943.png]]
+				- 
+		3. **Refining the Target Description Using Asset Diagrams**-
+			- third step a follow up meeting is held with the clients representatives, where analysts present their initial understanding of the first meeting and any client-provided documentation
+			- a high-level securiy analysis is conducted to idetnify prelimnary threats, vulnerabilities, threat scenarios and unwanted incidents, helping to refine the scope for detailed analysis
+			- require participants include the security analysis leader, secretary, client decision-makers and technical experts with optional input from users
+			- **Modelling Guideline for the Target Description**- 
+				- when refining target description during risk analysis use a formal or standardised notation such as UML but ensure that notation is explained thoroughly so that participants understand it
+				- create models of both statis and dynamic features of the target
+					- **Static Features**- static may be hardware configurations, network design etc, recommended using UML class diagrams and UML collaboration diagrams (or similar notations)
+						- **Class Diagram**-
+							- ![[Pasted image 20250512132615.png]]
+						- **Collaborative Diagram**-
+							- ![[Pasted image 20250512132627.png]]
+					- **Dynamic Features**- may include work processes, information flow, recommended UML activity diagrams and UML sequence diagrams (or similar notations) for dynamic parts
+						- **Activity Diagram**-
+							- ![[Pasted image 20250512132721.png]]
+			- **Symbols from the CORAS Risk Modelling Language**-
+				- next step in refining tarrget description is to model interactions, assets and risks relevant to the analysis. fully understand risk scenarios and model them efficiently, we rely on symbols from CORAS risk modelling lanague. these symbols represent threats, vulnerabilities, assets and other key elements needed for risk identification and treatment
+				- below shows CORAS symbols for risk modelling diagram
+					- ![[Pasted image 20250512132903.png]]
+			- **Asset Diagram**-
+				- essential for mapping the organisations critical assets that could be impacted by threats or vulnerabilities, it helps identify what needs protection and forms the basis for subsequent risk assessment
+				- below shows key assets like customer databases and online services
+					- ![[Pasted image 20250512132958.png]]
+			- **High-Level Risk Table**-
+				- high-level risk table is next crucial element in documenting and prioritising risks, the table is used to categorise identified risks by their potential impact and likelihood
+				- ![[Pasted image 20250512133047.png]]
+				- 
+		4. **Approval of Target Description**-
+			- fourth step, a detailed subscription of the analysis target is refined, including assumptions and preconditions, this step concludes with client approval of the documentation
+			- key tasks involve approcing the target and asset descriptions, ranking assets by importance, setting consequeunce and likelihood scales for each asset and establishing risk evaluation criteria
+			- the required participants mirror those from previous meeting emphasising the presence of decision-makers to set clear boundaries for the ongoing analysis
+			- **Asset Table**- helps organise and document critical assets within the telemedicine system, 
+				- beloiw typically lists each asset and its corresponding importance to the system, allowing stakeholders to focus on high-priority areas during analysis
+				- ![[Pasted image 20250512133510.png]]
+			- **Consequence Scale for Health Records**-
+				- consequences scale measures the impact of an unwanted incident on health records, ensuring that all participants understand the severity of possible risl
+				- below shows example of consequence scale
+				- ![[Pasted image 20250512133556.png]]
+			- **Likelihood Scale**-
+				- likelihood scale assesses probability of potential threats materialising. the scale helps prioritise risks by estimating how often such incidents might occur within the telemedicine system
+				- below example of likelihood scale
+				- ![[Pasted image 20250512133646.png]]
+			- **Risk Evaluation Matrix**-
+				- risk evaluation matrix combines the consequence and likelihood scales to assess the overall risk level for each identified threat, 
+				- below matrix visually represents which risks are critical and require immediate attention
+				- ![[Pasted image 20250512133738.png]]
+		5. **Risk Identification Using Threat Diagrams**-
+			- this step is conducted as a workshop with experts focused on the evaluation target
+			- primary aim is to identify a comprehensive list of potential unwanted incidents, threats, vulnerabilities and threat scenarios
+			- key tasks include completing initial threat diagrams with identified elements
+			- participants should include the security analysis leader, seurity analysis secratary and client representatives, specifically technical experts and users, with decision-makers attending optionally
+			- **Threat Diagrams**-
+				- after identifying the key people who whould participate in the risk analysis process, next step involves understanding the various threats that could impact the system, 
+				- below several diagrams used to visualise and categorise these threats into different ttypes
+					- **Initial THreat Diagram- Accidental actions**-
+						- ![[Pasted image 20250512141351.png]]
+					- **Initial Threat Diagram: Deliberate actions**-
+						- ![[Pasted image 20250512141407.png]]
+					- **Initial THreat Diagram: Non-human threats**-
+						- ![[Pasted image 20250512141422.png]]
+					- **Final Threat Diagram: Accidental actions**-
+						- ![[Pasted image 20250512141437.png]]
+		6. **Risk Estimation Using Threat Diagrams**-
+			- this step is structured as a workshop on estimating the likelihood and consequences of each identified unwanted incident
+			- key asks include assigning likelihood estaimtes to threat scenarios, estimating likelihoods for unwanted incidents based on these scenarios and annotating the impact of each incident on assets
+			- required participants include the security analysis leader, security analysis secratary and client representatives, prticularely decision-makers nad technical experts on the target and users
+			- **MOdelling Guideline**-
+				- for risk estimation on threat diagrams
+					- add likelihood estimates to threat scenarios
+					- estimate the likelihood of unwanted incidents, using threat scenarios as a reference
+					- annotate each incident-asset relation with a consequence based on the assets consequence scale
+			- **Threat Diagram with Estimates**-
+				- after completing the modelling guidelines, the next phase of CORAS process involves estimating the risk. this involves assessing the likelihood of each identified threat and determining the potential impact it could hav eon the system
+				- threat diagram below with estimates, provides visual represenatation of how various threats relate to assets
+					- ![[Pasted image 20250512141758.png]]
+			- **The Combined Likelihood Estiamtes Table**-
+				- summarises these findings to give a clearer picture of the probability and severity of each threat scenario
+				- ![[Pasted image 20250512141837.png]]
+		7. **Risk Evaluation Using Risk Diagrams**-
+			- the client is presented with an initial overview of the risk landscape, allowing for adjustments and corrections as needed
+			- tasks include confirming or adjusting the likelihood and consequence estimates, finalising the acceptable risk areas in the risk matrices, and provinding a risk overview in a diagram
+			- the required participants are the security analysis leader, secratary and client-decision makers with optional technical expertise
+			- **Risk Evaluation Matrix with Risks Table**-
+				- after defining the people who should participate in the risk evaluation process, the next step involves visualsing the colelcted risk data for analysis, 
+				- the risk evaluation matrix with risks below provides a framework for comparing identified risks based on their likelihdood and impact
+				- ![[Pasted image 20250512142130.png]]
+			- **Risk Overview Diagram**-
+				- following the matrix, the risk overview diagram below offers comprehensive visual summary of the entire risk landscape, showing how different threats, vulnerabilities and their respective treatments interact
+				- ![[Pasted image 20250512142215.png]]
+		8. **Risk Treatments Using Treatment Diagrams**-
+			- final step focuses on identifying appropriate treatments and evaluating their cost-effectiveness, ideally conducted in a workshop
+			- tasks include treatments to threat diagrams, estimating the cost-benefit of each treatment to decide on implemtnation and displaying the treatments within risk overview diagrams
+			- partiicapns required for this step are the security analysis leader, secratary and client representatives, including decision-maers, technical experts and users
+			- **Treatment Diagram**-
+				- visually document how the identified risks will be addressed
+				- below diagram provides a structured approach to mapping out risk mitigation strategies, showing how treatments are applied to specific threats and vulnerabilities
+				- ![[Pasted image 20250512142419.png]]
+			- **Treatment Overview Diagram**-
+				- following the treatment diagram, the treatment overview diagram offers a broader view of all treatments in place, summarising how each identified risk is being managed
+				- below
+				- ![[Pasted image 20250512142515.png]]
+				- 
