@@ -1,2 +1,29 @@
 - Web application is app stored on remote server delivered through internet into a browser interface. the servers attact attackers
-- 
+- secure web app needs protect backend database, server application, network and app itself
+- security requirements align with general security goals includeing:
+	- CIA triad
+	- IAAA (identification, authentication, authorisation and Accounting)
+	- non-repudiation
+- **Web Server**-
+	- 2 parts
+		- **Web Client**- 
+			- generally browsers and other related tools that let users send requests to web server
+		- **Web Server**-
+			- based on request (if valid) fetches related resources from database and sends back the data to client as response to initial request
+	- Resources can be two types
+		- **Static**- resources consist of information that doesnt change frequently- html, js
+		- **Dynamic**- information that changes frequently, web server builds part of the response on the fly using latest information and sends to the web client- json built on the fly with business logic
+	- ![[Pasted image 20250521101004.png]]
+- **Hypertest Transfer Protocol (HHTP)**-
+	- most web clients with GUI communicate over web server using HTTP without using GUI
+	- it is a request-response protocol used to transfer resources between client and server
+- **What is Risk**-
+	- the intersection of a threat, a weakness and an asset- Risk = Likelihood X Impact
+	- attacker can use different ways to access resources or create disruption. each path is called an **attack vector**
+	- below shows an attack vector
+		- each path represents a risk that may or may not cause serious damage
+		- sometimes identifying these paths is trvial, sometimes extremely dofficult
+		- impact could be minor or catastrophic for business
+		- identifying risk can help business implement proper controls against attaks
+		- projects such as Open Web Application Security Project (OWASP) help us understand and learn about common risks related to web apps
+	- ![[Pasted image 20250521140036.png]]
