@@ -1,0 +1,2 @@
+- Web application is app stored on remote server delivered through internet into a browser interface. the servers attact attackers
+- 
