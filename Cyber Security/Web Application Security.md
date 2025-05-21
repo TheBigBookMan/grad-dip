@@ -27,3 +27,77 @@
 		- identifying risk can help business implement proper controls against attaks
 		- projects such as Open Web Application Security Project (OWASP) help us understand and learn about common risks related to web apps
 	- ![[Pasted image 20250521140036.png]]
+
+## Open Worldwide Application Security Project (OWASP)
+- identifies the 'top 10' most serious risks for a broad array of organisations. each risk there is generic information about the likelihood and technical impact is provided using a risk rating framework
+- framework uses these factors to assess and rate security risks
+	- **Exploitability**- refers to how easily or difficult an attacker can exploit the vulnerability
+	- **Weakness Prevalence**- indicates how common a specific vulnerability is across applications
+	- **Weakness Detectability**- measures how easily the vulnerability can be detected during the development or testing phases
+	- **Technical Impact**- assesses the potential damage or consequences for the system
+	- **Business Impact**- reflects the broader consequences for the organisation, such as financial losses or reputational damage
+	- ![[Pasted image 20250522084220.png]]
+- The top 10 represents a broad consensus about most critical security risks to web apps
+- **Key updates in recent OWASP top 10 application security risks**
+	- ![[Pasted image 20250522090405.png]]
+- **2021s top 10 risks in terms of current web application industry, common web vulnerabilities, detection and prevention**
+	- **Broken Access Control**- when access control mechanisms fail, attackers can exploit these flaws to access unauthorised data and systems. UNderstanding how to properly secure access points is crucial
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Crytpographic Failues**- this risk highlights the importance of securing sensitive data through robust encryption methods. Weak encryption or improper handling of cryptographic keys can lead to data breaches
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Injection**- One of the most common and dangerous risks is when attackers send malicious code through input fields to exploit vulnerabilities in an application
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Insecure Design**- ensuring security is built into the design of applications from the ground up, preventing weaknesses that could be exploited later
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Security Misconfiguration**- incorrectly configured settings can leave applications open to attack. Regular updates and proper configuration management are essential
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Vulnerable and Outdated Components**- using outdated software components increases the risk of known vulnerabilities being exploited. Its critical to stay up-to-date
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Identification and Authentication Failures**- weak authentication mechanisms allow attackers to bypass identity checks, gaining access to systems without proper authorisation
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Software and Data Integrity Failures**- trusting unverified code or data sources can introduce malicious software into your systems
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Security Logging and Monitoring Failures**- without proper monitoring and logging, breaches may go undetected for long periods, increasing damage
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
+	- **Server-side Request Forgery (SSRF)**- SSRF occurs when an attacker tricks a server into accessing unintended locations, potentially exposing sensitive data
+		- **Vulnerabilities**-
+		- **Detections**-
+		- **Preventions**-
+		- **Threat Agents/Attack Vectors**-
+		- **Impacts**-
