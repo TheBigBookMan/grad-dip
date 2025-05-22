@@ -42,60 +42,97 @@
 	- ![[Pasted image 20250522090405.png]]
 - **2021s top 10 risks in terms of current web application industry, common web vulnerabilities, detection and prevention**
 	- **Broken Access Control**- when access control mechanisms fail, attackers can exploit these flaws to access unauthorised data and systems. UNderstanding how to properly secure access points is crucial
+		- **Description**-
+			- enforces policy so users cannot act outside of their intended permissions
+			- users have a limited scope of access based on particular roles
 		- **Vulnerabilities**-
+			- violation of principle of least privilege or deny by default, where access should only be granted for particular capabilities, roles, or users but is available to anyone
+			- bypassing access control checks by modifying URL- parameter tampering or force browsing- internal application state, or HTML page, or by using an attack tool modifying API requests
+			- permitting viewing or editing someone elses account, by providing its unique identifier- insecure direct object references (IDOR)
+			- Accessing API with missing access controls for POST, PUT, DELETE
+			- Elevation of privilege. Acting as a user without being logged in or acting as an admin when logged in as a user
+			- Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token, or a cookie or hidden field manipulated to elevate privileges or abusing JWT invalidation
+			- CORS misconfiguration allows API access from unauthorised/untrusted origins
+			- Force browser to authenticated pages as an unathenticated user or to privileged pages as a standard user
 		- **Detections**-
-		- **Preventions**-
+			- review logs for unauth access
+			- penetration testing for role boundary issues
+			- automated scanners for access control gaps
+		- **Preventions**- access control is only effective in trusted server-side code or server-less API, where attacker cannot modify the access control check or metadata
+			- Except for public resources, deny by default
+			- implement access control mechanisms once and re-use them throughout the application, including minimising Cross-Origin Resource Sharing (CORS) usage
+			- model access controls should enforce record ownership rather than accepting that the user can create, read, update or delete any record
+			- unique application business limit requirements should be enforced by domain models
+			- disable web server directory listing and ensure file metadata (eg git) and backup files are not present within web roots
+			- log access control failures, alert admins when appropriate (eg repeated failures)
+			- rate limit API and controller access to minimise the harm from automated attack tooling
+			- stateful session identifiers should be invalidated on the server after logout. stateless JWT tokens should rather be short lived so that the window of opportunity for an attacker is minimsed. for longer lived JWTs its highly recommended to follow the OAuth standards to revoke access
+			- implement strict Role Based Access Control (RBAC)
+			- developers and QA staff should include functional access control unit and integration tests
 		- **Threat Agents/Attack Vectors**-
+			- attacker modifies request parameter to send whatever account information they want, if not correctly verified the attacker can access any users account etc
+			- attacker forces browses to target URLs that should require auth but dont, gaining access
 		- **Impacts**-
+			-  failures lead to unauthorised information disclosure, modification, or destruction of all data 
+			- performing a business function outside of the users limit
 	- **Crytpographic Failues**- this risk highlights the importance of securing sensitive data through robust encryption methods. Weak encryption or improper handling of cryptographic keys can lead to data breaches
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Injection**- One of the most common and dangerous risks is when attackers send malicious code through input fields to exploit vulnerabilities in an application
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Insecure Design**- ensuring security is built into the design of applications from the ground up, preventing weaknesses that could be exploited later
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Security Misconfiguration**- incorrectly configured settings can leave applications open to attack. Regular updates and proper configuration management are essential
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Vulnerable and Outdated Components**- using outdated software components increases the risk of known vulnerabilities being exploited. Its critical to stay up-to-date
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Identification and Authentication Failures**- weak authentication mechanisms allow attackers to bypass identity checks, gaining access to systems without proper authorisation
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Software and Data Integrity Failures**- trusting unverified code or data sources can introduce malicious software into your systems
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Security Logging and Monitoring Failures**- without proper monitoring and logging, breaches may go undetected for long periods, increasing damage
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
 	- **Server-side Request Forgery (SSRF)**- SSRF occurs when an attacker tricks a server into accessing unintended locations, potentially exposing sensitive data
+		- **Description**-
 		- **Vulnerabilities**-
 		- **Detections**-
 		- **Preventions**-
