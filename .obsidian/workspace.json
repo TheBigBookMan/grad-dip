@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,24 +193,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9dbc6e2b97b5099a",
+  "active": "570b841c8d20c8d4",
   "lastOpenFiles": [
+    "Cyber Security/~WRL1643.tmp",
+    "Cyber Security/~WRD1635.tmp",
+    "Cyber Security/~WRL2641.tmp",
+    "Cyber Security/~WRD2637.tmp",
+    "Cyber Security/~WRL3554.tmp",
+    "Cyber Security/~WRD3546.tmp",
+    "Cyber Security/~WRL3013.tmp",
+    "Cyber Security/~WRD3005.tmp",
+    "Cyber Security/~WRL0580.tmp",
+    "Cyber Security/~WRD0568.tmp",
+    "Cyber Security/~WRL0138.tmp",
+    "Cyber Security/Intro to Cyber Security.md",
+    "Cyber Security/Risk Management.md",
+    "Cyber Security/Web Application Security.md",
     "Pasted image 20250522090405.png",
     "Pasted image 20250522084220.png",
     "Pasted image 20250521140036.png",
     "Pasted image 20250521101004.png",
-    "Cyber Security/Risk Management.md",
-    "Cyber Security/Web Application Security.md",
-    "Cyber Security/~WRL2269.tmp",
-    "Cyber Security/~WRD2261.tmp",
-    "Cyber Security/~WRL0822.tmp",
-    "Cyber Security/~WRD0810.tmp",
-    "Cyber Security/~WRL1492.tmp",
-    "Cyber Security/~WRD1488.tmp",
-    "Cyber Security/~WRL2771.tmp",
-    "Cyber Security/~WRD2763.tmp",
-    "Cyber Security/~WRL1662.tmp",
-    "Cyber Security/~WRD1658.tmp",
     "Cyber Security/Security Controls.md",
     "Cyber Security/Pasted image 20250504194855.png",
     "Pasted image 20250512142515.png",
@@ -218,9 +220,7 @@
     "Pasted image 20250512142215.png",
     "Pasted image 20250512142130.png",
     "Pasted image 20250512141837.png",
-    "Pasted image 20250512141758.png",
     "Untitled.md",
-    "Cyber Security/Intro to Cyber Security.md",
     "A.md",
     "AWS Skill Builder/AIP/AI Practitioner.md",
     "AWS Skill Builder/CP/Architecture.md",
