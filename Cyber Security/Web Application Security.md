@@ -77,11 +77,53 @@
 			- performing a business function outside of the users limit
 	- **Crytpographic Failues**- this risk highlights the importance of securing sensitive data through robust encryption methods. Weak encryption or improper handling of cryptographic keys can lead to data breaches
 		- **Description**-
+			- important to identify the protection needs for different types of data in transit and rest, eg passwords, credit cards etc require extra protection- have government/universal regulations
+			- weak or incorrectly implemented cryptography
 		- **Vulnerabilities**-
+			- data transmitted using clear text (non secure protocols like HTTP, SMTP, FTP)
+			- allowing too much external traffic
+			- verify all inernal traffic eg load balancers, web servers or back end systems
+			- using old or weak cryptographic algorithms or protocls used either by default or in older code
+			- improper key management or rotiation of keys not there
+			- crypto keys checked into source code repositories
+			- encryption might not be enfored correctly, eg HTTP security directives or headers missing
+			- is the received server certificate and the trust chain propery validated
+			- is an insecure mode of operation such as ECB in use, is encryption used when authenticated encryption is more appropriate
+			- are passwwords being used as cryptographic keys in absence of a password base key derivation function
+			- is randomness used for cryptographic purposes that was not designed to meet cryptographic requiremenets
+			- deprecated hash functions such as MD5/SHA1 in use or non-cryoptographic hash functions used when cryptographic hash functions are needed
+			- deprecated cryptographic padding methods such as PKCS number 1 v1.5 in use
+			- are cryptographic error messages or side channel information exploitable eg in the form of padding oracle attacks
 		- **Detections**-
+			- static code analysis for cryptography misuse
+			- TLS scanning
+			- manual inspection for key management practices
 		- **Preventions**-
+			- classify data processed, stored or transmitted by application. identify which data is sensitive accotding to privacy laws and requirements
+			- dont store sensitive data unnecessarily, discard as soon as poassible or use PCI DSS compliant tokenisation or even trauncation, data that is not retained cannot be stolen
+			- ensure ecrypt all sensitive data at rest
+			- ensure up-to-date and strong standard algorithms, protocls, and keys are in place- use proper key management
+			- encrypto all data in transit with secure protoclls such as TLS with forward secrecy (FS) ciphers, cipher prioritisation by the server and secure parameters. enforce encryption using directives like HTTP Strict Transport Security (HSTS)
+			- disable caching for response that contain sensitive data
+			- apply required security controls as per the data classificaiton
+			- do not use legacy protocols such as FTP, SMTP and HTTP for transporting sensitive data
+			- store passwords using strong adaptve and salted hashing functions with a work factor (delay factor) such as Argon2, scrypt, bcrypt and PBKDF2
+			- initialisation vectors must be chosen appropriate for the mode of operation, many modes this means using a cryptographically secure pseudo random number generator. 
+			- always use authenticated encryption instead of just encryption
+			- keys should be generated cryptographically randomly and stored in memeory as byte arrays. f password is used, then must be converted to a key via an appropriate password base key deriviation function
+			- ensure that cryptographic randomness is used where appropriate and that is has not been seeded in predictable way or with low entropy, most modern APIs do not require developer to seed 
+			- avoid deprecated cryptographic functions and padding schemes
+			- verify independally the effectiveness of config and settings
 		- **Threat Agents/Attack Vectors**-
+			- man in the midde attacks on insecure connections
+			- data breach via exposed plain text
+			- sql injection from hacker revealing information with poor code practices
+			- non enforcing TLS good practices like using HTTPS
+			- poor password and encryption of data can leave easy decrpytion of passwords
 		- **Impacts**-
+			- regulatory penalties for bad data storage
+			- loss of confidentiality and integrity (CIA)
+			- reputation damage for non secure private data
 	- **Injection**- One of the most common and dangerous risks is when attackers send malicious code through input fields to exploit vulnerabilities in an application
 		- **Description**-
 		- **Vulnerabilities**-
