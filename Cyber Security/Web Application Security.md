@@ -126,8 +126,20 @@
 			- reputation damage for non secure private data
 	- **Injection**- One of the most common and dangerous risks is when attackers send malicious code through input fields to exploit vulnerabilities in an application
 		- **Description**-
+			- untrusted data is interpreted as code or comands and leading to arbitrary execution of code
+			- can be malicious intent by actors or accidental input
+			- more common injections are SQL, NoSQL, OS Command, ORM, LDAP, Expressive Langauge, Object Graph Navigation Library injections
+				- concept common among them all
+			- 
 		- **Vulnerabilities**-
+			- user-supplied dat ais not validated, filtered or sanitised by the application
+			- dynamic queries or non-parameterised calls without context-aware excaping are used directly in the interpretar
+			- hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records
+			- hostile data is directly used or concatenated. the SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures
 		- **Detections**-
+			- source code review is best method detecing if vulnerable to injection
+			- automated testing of all parameters, headers, URL, cookies, JSON, SOAP and XML data inputs strongly encouraged
+			- organisations can inlcude status (SAST), dynamic (DAST) and interactive (IAST) application security testing tools into the CI/CD pipeline to identify introduced injection flaws before prod deployment
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
