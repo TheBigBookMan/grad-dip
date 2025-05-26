@@ -141,8 +141,19 @@
 			- automated testing of all parameters, headers, URL, cookies, JSON, SOAP and XML data inputs strongly encouraged
 			- organisations can inlcude status (SAST), dynamic (DAST) and interactive (IAST) application security testing tools into the CI/CD pipeline to identify introduced injection flaws before prod deployment
 		- **Preventions**-
+			- Keeping data seaparate from commands and queries
+			- using a safe API which avoids using the interpreter entirely, provides a parameterised interface or migrates to ORM Tools
+			- use positive server-side input validation- not a complete defense as many apps require special charracters, such as text ares or API for mobile apps
+			- any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter 
+			- SQL structures such as table names, column names and so on cannot be escaped and therefore any user -supplied structure names are dangerous- common issue in report-writing software
+			- use LIMIT and other SQL controls within queeries to prevent mass discolusre of records in case of SQL injection
 		- **Threat Agents/Attack Vectors**-
+			- malicious form input
+			- query parameters or cookies containing injected code
 		- **Impacts**-
+			- database exfiltration or deletion
+			- system compromise
+			- remote code execution
 	- **Insecure Design**- ensuring security is built into the design of applications from the ground up, preventing weaknesses that could be exploited later
 		- **Description**-
 		- **Vulnerabilities**-
