@@ -266,22 +266,18 @@
 	- the CORAS method follows structured process that helps organisations manage and mitigate risks systematically. each phase is designed to capture essential aspects of risk management, from identifying valuable assets to selecting appropriate risk treatments. The phases are:
 	1. **Identifying and Documenting Assets**- first step in effective risk management is identifying and docuemting assets
 		- **Asset**- assets refer to something to which a party assigns value and hence requires protection
-			-  need to list down all assets into the diagram
 		- **Client's Role**- the client specifies its assets and risk acceptance levels
 		- **Common Pitfalls**- mistakes in this step can jeopardise the entire analysis
 			- wrong focus
 			- wrong level of detail
 		- Key assets of the analysis client- including 'Product Information', 'Budget', and 'Business Contracts'
-			- **Asset Diagram**- below
 			- ![[Pasted image 20250512114431.png]]
 		- may also specify interested parties other than the client
 			- different parties may have different assets
 			- two parties may assign different values to the same assets or aspects (eg confidentially) but possible with different priorities (asset value) and different protection requirements
 		- also possible to specify how assets can depend on other assets
-			- **Indirect assets**- 
-				- company reputation
-			- **Direct assets**-
-				- income
+			- company reputation
+			- income
 		- Shows relationship between confidentiality and data protection, emphasising that harm to confidentiality can lead to harm to data protection
 			- ![[Pasted image 20250512114813.png]]
 	2. **Identifying and Documenting Threats and Unwanted Incidents in the Threat Diagram**- once assets are documented, its important to identify potential threats and unwanted incidents that could disrupt these assets, using threat diagrams visualise these potential incidents and their consequences
