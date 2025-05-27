@@ -156,18 +156,79 @@
 			- remote code execution
 	- **Insecure Design**- ensuring security is built into the design of applications from the ground up, preventing weaknesses that could be exploited later
 		- **Description**-
+			- missing or ineffective control design within an application
+			- secure design can still have implementation defects leading to vulnerabilities that may be exploited
+			- insecure design cannot be fixed by a perfect implemntation by definition, needed security controls were never created to defend against specific attacks
+			- one of the factors that contribute to insecure design is lack of business risk profiling inhjerent in software or system being developed and thus failure to determine what level of security design is required
+			- secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and dtested to prevent known attack methods
 		- **Vulnerabilities**-
+			- lack of threat modeling
+			- insecure workflows
+			- poor design for authentication, authorisation
 		- **Detections**-
+			- threat modeling should be integrated into refinement sessions
+			- look for changes in data flows and access control or other security controls
+			- in user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties
+			- analyse assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable
+			- determine how to validate the assumptions and enforce dontiions needed for proper bheaviours
+			- ensure results are documented in user story
+			- learn from mistakes and offer positive incentives to promote improvements
+			- collect and negotiate the business requirements for an application with the business, including protection requirements concerning confidentiality, integrity, availability and authenticity of all data assets and expected business logic
+			- take into account how exposed your application will be and if need segregataion of tenants
+			- compile technical requirements, including functional and non-functional security requirements
+			- plan and negotiate the budget covering all design, build, testing and operation including security activities
 		- **Preventions**-
+			- establish and use a secure development lifecycle with AppSex professionals to help evaluate and desin security and privacy related controls
+			- establish and use a library of secure design patterns or paved road ready to use components
+			- use threat modeling for critical authenticatio, access control, business logic, and key flows
+			- integrate security language and controls into user stories
+			- integrate plausability checks at each tier of your application (frontend to back)
+			- write unit and integration tests to validate that all critical flows are resistant to the threat model. compile use cases and miuses cases for each tier of your application
+			- segregate tier layers on the system and network layers depending on the exposure and protection needs
+			- segregate tenants robustly but design throughout all tiers
+			- limit resource consumption by user or service
 		- **Threat Agents/Attack Vectors**-
+			- using a questions and answers type of credential recovery workflow which cannot be trusted as evidence of identity as more than one person can know the answers
+			- exploiting flaws in business logic
+			- not protecting websites against things like scalpers, eg not planning for bad actors that exploit business logic flaws
 		- **Impacts**-
+			- inherent system weaknesses
+			- difficult to fix vulnerabilities post deployment
 	- **Security Misconfiguration**- incorrectly configured settings can leave applications open to attack. Regular updates and proper configuration management are essential
 		- **Description**-
+			- without a concerted, repeatable application security configuration process, systems are at a higher risk
+			- happens when systems are insecure due to default, incomplete, or overly permissive configurations
 		- **Vulnerabilities**-
+			- missing appropriate security hardening across any part of the application stack or improperly configured permissions on cloud services
+			- unnecessary features are enabled or installed (unnecessary ports, serviuces, pages, accounts or privileges)
+			- default accounts and their passwords are still enabled and unchanged
+			- error handling reveals stack traces or other overly informative error messages to users
+			- for upgraded systems the latest security features are disabled or not configured securely
+			- security settings in the application servers, application frameworks, libraries, databases are not set to secure values
+			- server does not send security headers or directives or they are not set to secure values
+			- software is out of date or vulnerable
+			- open admin interfaces
+			- default credentials or keys
+			- verbose error messages
 		- **Detections**-
+			- infrastructure and application scans
+			- manual config reviews
+			- configuration compliance tools
 		- **Preventions**-
+			- repeatable hardening process makes fast and easy to deploy another environment that appropriately locked down
+			- development, QA and production environments should all be configured identically with different credentials used in each environment. this process should be automated to minimise the effort required to set up a new secure environment
+			- minimal platform without any unnecessary features, components, documentation and samples- remove or not not install unused features and frameworks
+			- task to review and update configurations appropriate to all security notes, updates and patches as part of the patch management process
+			- segmented application architecture provides effective and secure separation between components or tenants, with segmentation, containerisation or cloud security groups
+			- sending security directives to clients
+			- automated process to verify the effectiveness of configurations and settings in all environments
 		- **Threat Agents/Attack Vectors**-
+			- public scans for open ports or exposed services
+			- explitation of misconfigured cloud storage
 		- **Impacts**-
+			- full system compromise
+			- exposure of internal services
+			- data leakage
 	- **Vulnerable and Outdated Components**- using outdated software components increases the risk of known vulnerabilities being exploited. Its critical to stay up-to-date
 		- **Description**-
 		- **Vulnerabilities**-
