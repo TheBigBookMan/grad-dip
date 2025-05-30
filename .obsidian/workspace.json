@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber Security/Risk Management.md",
+                "file": "Cyber Security/Web Application Security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Risk Management"
+              "title": "Web Application Security"
             }
           }
         ],
@@ -181,6 +181,7 @@
   },
   "active": "570b841c8d20c8d4",
   "lastOpenFiles": [
+    "Cyber Security/Risk Management.md",
     "Cyber Security/~WRL0486.tmp",
     "Cyber Security/~WRD0478.tmp",
     "Cyber Security/~WRL3684.tmp",
@@ -191,7 +192,6 @@
     "Cyber Security/~WRD3762.tmp",
     "Cyber Security/~WRL1112.tmp",
     "Cyber Security/~WRD1104.tmp",
-    "Cyber Security/~WRL0632.tmp",
     "Pasted image 20250521101004.png",
     "Cyber Security/Web Application Security.md",
     "Pasted image 20250522090405.png",
@@ -199,7 +199,6 @@
     "Pasted image 20250521140036.png",
     "Cyber Security/Security Controls.md",
     "Cyber Security/Pasted image 20250504194855.png",
-    "Cyber Security/Risk Management.md",
     "Pasted image 20250512142515.png",
     "Pasted image 20250512142419.png",
     "Pasted image 20250512142215.png",
