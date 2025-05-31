@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Intro to Cyber Security"
             }
-          },
-          {
-            "id": "570b841c8d20c8d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cyber Security/Web Application Security.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Web Application Security"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5110321044922,
-    "collapsed": true
+    "width": 210.5110321044922
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -179,21 +163,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "570b841c8d20c8d4",
+  "active": "3540641bda1001e9",
   "lastOpenFiles": [
-    "Cyber Security/Risk Management.md",
-    "Cyber Security/~WRL0486.tmp",
-    "Cyber Security/~WRD0478.tmp",
-    "Cyber Security/~WRL3684.tmp",
-    "Cyber Security/~WRD3676.tmp",
-    "Cyber Security/~WRL1027.tmp",
-    "Cyber Security/~WRD1016.tmp",
-    "Cyber Security/~WRL3774.tmp",
-    "Cyber Security/~WRD3762.tmp",
-    "Cyber Security/~WRL1112.tmp",
-    "Cyber Security/~WRD1104.tmp",
-    "Pasted image 20250521101004.png",
     "Cyber Security/Web Application Security.md",
+    "Cyber Security/Risk Management.md",
+    "Cyber Security/~WRL0429.tmp",
+    "Cyber Security/~WRD0417.tmp",
+    "Cyber Security/~WRL3436.tmp",
+    "Cyber Security/~WRD3421.tmp",
+    "Cyber Security/~WRL2414.tmp",
+    "Cyber Security/~WRD2399.tmp",
+    "Cyber Security/~WRL3065.tmp",
+    "Cyber Security/~WRD3053.tmp",
+    "Cyber Security/~WRL4074.tmp",
+    "Cyber Security/~WRD4054.tmp",
+    "Pasted image 20250521101004.png",
     "Pasted image 20250522090405.png",
     "Pasted image 20250522084220.png",
     "Pasted image 20250521140036.png",
