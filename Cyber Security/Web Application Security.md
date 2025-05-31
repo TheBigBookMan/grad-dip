@@ -231,29 +231,113 @@
 			- data leakage
 	- **Vulnerable and Outdated Components**- using outdated software components increases the risk of known vulnerabilities being exploited. Its critical to stay up-to-date
 		- **Description**-
+			- using components with known vulnerabilities can be exploited if they are not patched or managed
 		- **Vulnerabilities**-
+			- if you don't know the versions of all the components you use- both client and server side- can be components you directly use as well as nested dependencies
+			- software is vulnerable, unsupported or out of date- including the OS, web/application server, database management system, applications, APIs and all components, runtime environments and libraries
+			- if you dont scan for vulnerabilities regularly and subscribe to security bulletins related to components you use
+			- if you dont fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based timely fashion- commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organisations open to days or months of unnecessary exposure to fixed vulnerabilities
+			- if software developers do not test compatibility of updated, upgraded or patched libraries
+			- if you do not secure components configurations
 		- **Detections**-
+			- continously inventory the versions of both client and server components (frameworks, libraries) and their dependencies using tools like versions, OWASP dependency check etc
+			- continuously monitor sources like COmmon Vulnerability and Exposures
+			- software bill of materials
+			-  use software composition analysis tools to automate the process
+			- subscribe to email alerts for security vulnerabilities related to components you use
 		- **Preventions**-
+			- remove unused dependencies, unnecessary features, componetns, files and documentation
+			- only obtain components from officual sources over secure links
+			- prefer signed packages to reduce the chance of including a modified, malicious component
+			- monitor for libraries and components that are unmaintained or do not create security patches for older versions
+			- if patching is not possible, consider deploying a cirtual patch to monitor, detect or protect against the discovered issue
+			- every organisation must ensure an ongoing plan for monitoring, triaging and applying updates or configuration changes for the lifetime of the application or portfolio
 		- **Threat Agents/Attack Vectors**-
+			- components can run with same priveleges as application itself, flaws in component result in serious impact
+			- flaws can be accidental or intential through a component and be exploited
+			- automated tools to help attackers find unpatched or misconfigured systems
 		- **Impacts**-
+			- remote code execution
+			- supply chain attacks
+			- downtime due to unpatched systems
 	- **Identification and Authentication Failures**- weak authentication mechanisms allow attackers to bypass identity checks, gaining access to systems without proper authorisation
 		- **Description**-
+			- confirmation of the users identiy, authentication, session management is critical to protect against authentication related attacks
 		- **Vulnerabilities**-
+			- permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords
+			- permits brute force or other automated attacks
+			- permits default, weak, or well known passwords
+			- uses weak or ineffective credential recovery and forgot-password processes such as "knowledge based answers" which cannot be made safe
+			- uses plain text, encrypted, or weakly hashed passwords data stores
+			- has missing or ineffective multi-factor authentication
+			- exposes session identifier in the URL
+			- reuse session identifier after successful login
+			- does not correctly invalidate Session Ids, user sessions or authentication tokens (mainly sign sign on SSO tokens) arent properly invalidated during logout or period of inactivity
 		- **Detections**-
+			- log analysis for repeated login attempts
+			- pen testing login flows
+			- MFA audit logs
 		- **Preventions**-
+			- where possible, implement MFA to prevent automated credential stuffing, brute force, and stolen credential reuse attacks
+			- do not ship or depoy with any default credentials, particulary admin users
+			- implement weak password checks, such as testing new or changed passwords agains the top 10000 worst password list
+			- align password length, complexity and rotation policies with National Institute of Standards and Technology (NIST) for memorised secrets or other modern, evidence based password policies
+			- ensure registration, credential recovery, and API pathways are hardeened against account enumeration attacks by using the same messages for all outcomes
+			- limit or increasingly delay failed login attempts, but be careful not to create Denial of Service scenario. log all failures and alert administrators when credential stuffing, brute force, or other attacks detected
+			- use server side, secure, built in session manager that generates a new random session ID with high entropy after login. session identifier should be in the URL, be securely stored na dinvalidated after logout, idle and absolute timeouts
 		- **Threat Agents/Attack Vectors**-
+			- credential stuffing, use of lists of known passwords
+			- continued use of passwords as sole factor, requiring password rotation and complexity requirements encourage users to use and reuse weak passwords
+			- application session timeouts not set correctly, if user doesnt logout then they next person use compiter is still logged into that account previously
 		- **Impacts**-
+			- account takeover
+			- unauth system access
+			- identify fraud
 	- **Software and Data Integrity Failures**- trusting unverified code or data sources can introduce malicious software into your systems
 		- **Description**-
+			- code and infrastructure that does not protect against integrity violations
+			- common in using third party applications and updating dependencies
 		- **Vulnerabilities**-
+			- eg a app relies on plugins, libraries or modules from untrusted sources, repositories, and CDNs
+			- insecure CI/CD pipeline can introduce potential for unauthorised access, malicious code, system compromise
+			- many apps now include auto-update functionality where updates are downloaded without sufficient integrity verification and applied to the trusted system
+			- attackers could upload their own updates to be distruibuted across all installations
+			- objects or data are encoded or serialied into a structure than attacker can see and modify is vulnerable to insecure serialization
 		- **Detections**-
+			- signature validation
+			- integrity check tools
+			- pipeline audits
 		- **Preventions**-
+			- digital signatures or cimilar mechanisms to verify the software or data is from the expected source and has not been altered
+			- ensure libraries and dependencies are consuming trusted repos
+			- ensure software supply chain tool OWASP Dependency Check is used to verify components dont contain vulnerabilities
+			- ensure there is a review process for code and configuration changes to minimise the chance that malicious code or configuration could be introduced into your software pipeline
+			- ensure CI/CD pipeline has proper segregation, configuration and access control to ensure integrity of code flowing through the build and deploy process
+			- ensure unsigned or unencrypted serialized data is not sent to untrusted clients without some form of integiry check or digital signature to detect tampering or replay of serialised data
 		- **Threat Agents/Attack Vectors**-
+			- many home routes, set top boxes, device firmwreiand others dont veruify updates. unsigned firmware is grpowing target
+			- attacking multiple update systems
 		- **Impacts**-
+			- deployment of malware
+			- persistent backdroos
+			- total compromise of production
 	- **Security Logging and Monitoring Failures**- without proper monitoring and logging, breaches may go undetected for long periods, increasing damage
 		- **Description**-
+			- help detect, excalate, and respond to active breaches.
+			- without logging and monitoring, beaches cannot be detected. insufficient logging, detection, monitoring and active response occurs any time
 		- **Vulnerabilities**-
+			- auditable events, such as logins, failedl logins and high-value transactions are not logged
+			- warnings and errors generate no, inadequate or unclear log messages
+			- logs of applications and APIs are not monitored for suspicious activity
+			- logs are only stored locally
+			- appropriate alerting thresholds are response excalation processes are not in place or effective
+			- penetration testing and scans by dynamic application security testing (DAST) tools do not trigger alerts
+			- application cannot detect, escalate or alert for active attacks in real-time or near real-time
+			- vulnerable to information leakage by making logging and alerting events visible to a user or an attacker
 		- **Detections**-
+			- implement centralized logging (eg ELK, splunk)
+			- monitor with SIEM tools
+			- log reviews during incident response
 		- **Preventions**-
 		- **Threat Agents/Attack Vectors**-
 		- **Impacts**-
