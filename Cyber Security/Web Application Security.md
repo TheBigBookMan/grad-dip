@@ -339,12 +339,46 @@
 			- monitor with SIEM tools
 			- log reviews during incident response
 		- **Preventions**-
+			- ensure all login, access control and server side input validation failures can be logged with sufficient usr contect to identify suspusicous or malicious accounts and held for enough time to allow delayed forensic analysis
+			- ensure logs are generated in a format that log management solutions can easily consume
+			- ensure log data is encoded correctly to prevent injections or attacks on the logging or monitoring systems
+			- ensure high value transactions have an audit trail with integirity controls to prevent tampering or deletion, such as append only database tables or similar
+			- devsecops teams should establish effective monitoring and alerting such that suspicious activities are detected and responded to quickly
+			- establish or adopt an incident response and recovery plan, such as NIST
+			- are commercial and open-source application protection frameworks such as OWASP and open source log correlation software such as elasticsearch
 		- **Threat Agents/Attack Vectors**-
+			- attackers cover their tracks by deleting or inkecting logs
+			- undetected privilege escalation
 		- **Impacts**-
+			- delayed response to breaches
+			- greater damage over time
+			- regulatory failures
 	- **Server-side Request Forgery (SSRF)**- SSRF occurs when an attacker tricks a server into accessing unintended locations, potentially exposing sensitive data
 		- **Description**-
+			- occurs when web application is fetching a remote resource without validating user supplied URL- allows an attacker to coerve the application to send a crafted request to unexpected destination, even when protected by firewall, VPN or other network acess control list ACL
 		- **Vulnerabilities**-
+			- modern web apps provide endusers with convenient features, fetching URL becomes common scenario. as a result the incidence of SSRF is increasing and the severity is becoming higher due to cloud services and complexitiy of architectures
 		- **Detections**-
+			- Outbound request logging
+			- SSRF-focused scans (Burp suite extensions)
 		- **Preventions**-
+			- **From Network Layer**-
+				- segment remote resource access functionality in separate networks to reduce the impact of SSRF
+				- enforce "deny by default" firewall policies or network access control rules to block all but essential intranet traffic
+				- establish an ownership and lifecycle for firewall rules based on applications
+			- **From Application Layer**-
+				- sanitise and validate all client supplied input data
+				- enforce the URL schema, port and destination with a positive allow list
+				- do not send raw responses to clients
+				- disable HTTP redirections
+				- be aware of URL consistency to avoid attacks such as DNS rebinding and "time of check, time of use" race conditions
+				- do not mitigate SSRF via the use f a deny list or regular expression, attackers have payload lists, tools and skills to bypass deny lists
+			- dont deploy other security relevant service on front systems. control local traffic on these systems
+			- for frontends with dedicated and manageable user groups use network encryption VPNs on independent systems to consider very higih protection needs
 		- **Threat Agents/Attack Vectors**-
+			- uploading malicious URLs
+			- exploiting file fetch APIs or redirect endpoints
 		- **Impacts**-
+			- internet network enumeration
+			- credential theft (IAM tokens)
+			- bypassing firewalls
