@@ -58,3 +58,34 @@
 			- ciphertext should be transmissable by telegrph, an unsercure channel
 			- encryption apparatus and documents should be portable and operable by a single person
 			- it is necessary that the system be easy to use, requiring neither mental strain not the knowledge of long series of rules to observe
+- **Cryptographic Attacks**- basic intention of an attacker is to break a cryptosystem and find the plaintext from the ciphertest. to obtain the plaintext, the attacker only needs to find the secret decryption key as the algorithm is already in public domain. once the attacker is able to determine the key, the attacked system is considered broken or compromised
+	- **Ciphertext-only Attack (COA)**- 
+		- attacker has access to a set of ciphertexts but does not have access to the corresponding plaintext
+		- attack is considered successful when corresponding plaintext can be determined from the given set of ciphertext
+	- **Known-plaintext Attack (KPA)**
+		- attacker knows the plaintext for some parts of the cipher text and tries to decrypto the res tof the ciphertext using provided information.
+		- linear cryptanalysis against block ciphers is a type of known plaintext attack
+	- **Chosen-plaintext Attack (CPA)**
+		- attacker gets to choose a plaintext and obtain the corresponding ciphertext
+		- from the ciphertext-plaintext pair, the attacker tries to determine the ecnryption key
+		- differetntial cryptanalysis applied against block ciphers is an example of a chosen plaintext attack
+		- RSA is also vulnerable to chosen-plaintext attacks
+	- **Dictionary Attack**-
+		- different variants of dictionary attacks, all of which involve compiling a 'dictionary'
+		- attacker builds a dictionary of corresponding ciphertext-plaintext pairs over a period of time
+		- in the future an attacker refers to the dictionary to find the corresponding plaintext
+	- **Brute-force Attack (BFA)**
+		- attacker tries to determine the key by attempting all possible combinations
+		- if key is 8 bits long, then number of possible keys is 28=256
+		- attacker knows ciphertext and the algorithm, then they will attempt all of the 256 keys one by one for decryption
+		- if the key is long the attack takes longer
+	- **Birthday Attack**
+		- variant of the brute-force technique often used against cryptographic hash functions
+		- when students in a class are asked about their birthdays, answer is one of the possible 365 dates
+	- **Man in the Middle Attack (MITM)**
+		- mostly used against public key cryptosystems where key exchange is involved before communication
+		- example:
+			- host A wants to communicate with host B, sends requests for the public key of B
+			- an attacker intercepts this request and sends their own public key instead. Whaterver host A sends to host B, the attacker can read
+			- in order to maintain communication, the attacker re-encrypts the data after reading it with their own public key and sends it to B
+			- attacker sends their public key as As public key so B believes it is communication with A
