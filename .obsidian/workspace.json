@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber Security/Risk Management.md",
+                "file": "Cyber Security/Intro to Cyber Security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Risk Management"
+              "title": "Intro to Cyber Security"
+            }
+          },
+          {
+            "id": "570b841c8d20c8d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cyber Security/Web Application Security.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web Application Security"
+            }
+          },
+          {
+            "id": "2145e535db9b3acd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cyber Security/Cryptography.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cryptography"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -164,22 +193,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3540641bda1001e9",
+  "active": "2145e535db9b3acd",
   "lastOpenFiles": [
-    "Cyber Security/~WRL0911.tmp",
-    "Cyber Security/~WRD0883.tmp",
-    "Cyber Security/~WRL3053.tmp",
-    "Cyber Security/~WRD3025.tmp",
-    "Cyber Security/~WRL0094.tmp",
-    "Cyber Security/~WRD0071.tmp",
-    "Cyber Security/~WRL1640.tmp",
-    "Cyber Security/~WRD1617.tmp",
-    "Cyber Security/~WRL2138.tmp",
-    "Cyber Security/~WRD2115.tmp",
-    "Cyber Security/~WRL2137.tmp",
+    "Untitled.md",
+    "Cyber Security/Cryptography.md",
     "Cyber Security/Web Application Security.md",
-    "Cyber Security/Intro to Cyber Security.md",
     "Cyber Security/Risk Management.md",
+    "Cyber Security/~WRL0486.tmp",
+    "Cyber Security/~WRD0478.tmp",
+    "Cyber Security/~WRL3684.tmp",
+    "Cyber Security/~WRD3676.tmp",
+    "Cyber Security/~WRL1027.tmp",
+    "Cyber Security/~WRD1016.tmp",
+    "Cyber Security/~WRL3774.tmp",
+    "Cyber Security/~WRD3762.tmp",
+    "Cyber Security/~WRL1112.tmp",
+    "Cyber Security/~WRD1104.tmp",
     "Pasted image 20250521101004.png",
     "Pasted image 20250522090405.png",
     "Pasted image 20250522084220.png",
@@ -191,7 +220,7 @@
     "Pasted image 20250512142215.png",
     "Pasted image 20250512142130.png",
     "Pasted image 20250512141837.png",
-    "Untitled.md",
+    "Cyber Security/Intro to Cyber Security.md",
     "A.md",
     "AWS Skill Builder/AIP/AI Practitioner.md",
     "AWS Skill Builder/CP/Architecture.md",

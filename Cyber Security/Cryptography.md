@@ -1,0 +1,2 @@
+- to ensure confidentiality of information, needs to be mechanisms in place that prevent third parties viewing or understanding the contents
+- this can be done using cryptography techniques on data when in transit or in storage
