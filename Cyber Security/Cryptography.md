@@ -4,3 +4,57 @@
 	- It manipulates traditional characters (letters and digts directly) -> it operates on binary bit sequences
 	- mainly based on security through obscuurity. the techniques employed for coding were kept secret and only the parties involved in communication knew about them -> relies on publicly known mathemematical algorithms for coding the information. secrecy is obtained through a secret key
 	- requires entire cryptosystem for communicating confidentiality -> requires parties interested in secure communucation to poses the secret key only
+- **Cryptographic Primitives and Security Services of Cryptography**- 
+	- cryptographic primites are used to ensure different security services
+	- **Cryptographic Primitives**- tools and techniques in cryptography that can be selectively used to provide a set of desired security services
+		- **Encryption**- computes a cipher or plain text using key(s)
+		- **Hash Function**- computes a one-way representative value or signature of a message
+		- **Message Authentication Code (MAC)**- a short piece of information used for authenticating a message
+		- **DIgital Signatures**- confirm the message author
+	- **Security Services**- based on the requirement, one or more cryptographic primitices can be used together to ensure desired security services
+		- **Confidentiality**- a security service that keeps the information from an unauthorised person
+		- **Data Integrity**- deals with identifying any alteration to the data
+		- **Authentication**- provides the identification of the author
+		- **Message Authentication**- identifies the originator of the message
+		- **Non-repudiation**- a security service that ensures that an entity cannot refuse ownershup of a previous communication or an action
+- **Cryptosystem (Cipher System)**-
+	- implenetation of cryptographic techniques and ifrastructure to priovide information security services.
+	- objective is that only the sender and the receiver will know the plaintext
+	- Process
+		- **Sender**
+		- **PlainText**- data to be protected during transmission
+		- **Encryption Algorithm**- a mathematical process that procudes a ciphertext for any given plaintext and encryption key
+		- **Encryption Key**- a value that is known to the sender; the sender inputs the envryption key into the encryption algorithm along with the plaintext to compute the ciphertext
+		- **Ciphertext**- scrambled version of the plaintext produced by the encryption alogirhtm using a specific encryption key
+		- **Decryption Algorithm**- a mathematical process that produces a unique plaintext for any given ciphertext and a specific decrpyion key
+		- **Decryption Key**- a value that is known to the receiver, the decryption key is related to the encryption key but is not always identical to it. the receiver inputs the decryption key into the decryption algorithm along with the ciphertext to compute the plaintext
+		- **PLaintext**
+		- **Receiver**
+	- **Twp types of encryption mechanisms**
+		- **Symmetric Encryption**- symmetric encryption is a cryptographic method in which the same alogirhtm and secret (key) are used both to encipher and decipher the message. also known as 'private key encryption'. both the sender and receiver must possess the same secret key
+			- **Benefits**-
+				- symmetric encryption can be programmed into fast computing algorithms and executed quickly, making bulk data exchange possible
+				- has low power requirements
+			- **Challenges**-
+				- key establishment requires a secure key establishment mechanism
+				- if either copy of the key is compromised, an intermediary can decrypto and read messages without the receivers knwoeldge
+		- ![[Pasted image 20250602162916.png]]
+		- **Asymmetric Encryption**- assymetric encryption is a cryptographic method that includes two different keys (public and private key) to encipher or decipher the message. also known as 'public key encryption'. every user in this systems needs to have a pair of dissimilar keys, a private and public (one is used for encryption, other can decrypto the ciphertext back to original plaintext). length of keys (number of bits) in this encryption is large; the encryption/decryption process is slower than symmetric encryption. RSA algorithm was the first public key encryption algorithm developed/published for commercial use
+			- **Benefits**-
+				- decryption and encryption processes require two different keys, so encryption key can be shared via an unsecured channel as long as there is a way to authenticate the senders identity
+				- public key cryptosystem can be used to share keys for symmetric encryption
+			- **Challenges**-
+				- user needs to trust that public key they are using in communications with a person is really that personsns public key and has not been spoofed
+				- public key revocation and re-isue are necessary in case the corresponding private key is lost, since new private key-public key pairs need to be generated
+				- generating large prime numbers for RSA is a challenge
+		- ![[Pasted image 20250602163121.png]]
+	- **Encryption Key Size**- when deploying ciphers, the crypto variable or key size is very important. stregnth of many encryption applications and cryptosystems is measured by key size. security of encrypted data is not dependent on keeping the encrypting algorithm secret. cryptosystem security depends on keeping some or all of the elemtns of crypto variable or key secret
+	- **Kerkhoff Principle of Cryptosystem (1883 AD)**
+		- Kerkchloff outlined six key design principles for cryptosystems, which remain relevant today. principle states that a cryptosystem should remain secure even if everything about the system is known to an adversary, except for the secret key. 
+		- strength of encryption relies soleoy on secrecy of the key, not algorithm itself
+		- **Design Principles**-
+			- cryptosystem should be unbreakable practically, if not mathematically
+			- falling of the cryptosystem in the hands of an intruder should not lead to any compromise of the system, preventing any inconvenience to the user
+			- ciphertext should be transmissable by telegrph, an unsercure channel
+			- encryption apparatus and documents should be portable and operable by a single person
+			- it is necessary that the system be easy to use, requiring neither mental strain not the knowledge of long series of rules to observe
