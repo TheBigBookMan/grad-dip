@@ -1,2 +1,6 @@
 - to ensure confidentiality of information, needs to be mechanisms in place that prevent third parties viewing or understanding the contents
 - this can be done using cryptography techniques on data when in transit or in storage
+- **Classic vs Modern Cryptography**- Classic -> Modern
+	- It manipulates traditional characters (letters and digts directly) -> it operates on binary bit sequences
+	- mainly based on security through obscuurity. the techniques employed for coding were kept secret and only the parties involved in communication knew about them -> relies on publicly known mathemematical algorithms for coding the information. secrecy is obtained through a secret key
+	- requires entire cryptosystem for communicating confidentiality -> requires parties interested in secure communucation to poses the secret key only
