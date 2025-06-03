@@ -89,3 +89,23 @@
 			- an attacker intercepts this request and sends their own public key instead. Whaterver host A sends to host B, the attacker can read
 			- in order to maintain communication, the attacker re-encrypts the data after reading it with their own public key and sends it to B
 			- attacker sends their public key as As public key so B believes it is communication with A
+- **Cryptography: Traditional Ciphers**
+	- all of these systems are based on symmetric key encryption scheme, providing only the confidentiality of information
+	- earlier systems worked on alphabet as the basic element and are referred to as ciphers
+	- a cipher is a set of steps (algorithm) for performing both encryption and decryption
+	- **Four Main Ciphers**
+		- **Caesar Cipher**-
+			- mono-alphabetic cipher where each letter of plaintext is substituted by another letter to form the ciphertext
+			- traditionally, in Caesar cipher, if key is 3 each letter is shifted to the right by three positions during encryption
+			- to retreieve plaintext, each letter is shifted to the left by three positions during decryption
+			- **Letter to Number Mapping**-
+				- each letter is mapped numberically (A=1, B=2) 
+			- **Shift cipher**- 
+				- move the letters of each by the key number
+				- encryption can also be done by shifting letters between 1 to 25 positions
+				- Caesar is usually 3 positions
+		- **Vigenere Cipher**-
+			- uses a text string as a key, which then used to calculate the number of shifts in plaintext
+			- **Letter to number mapping**-
+				- each letter is mapped numerically
+			- combine the cipher letter and the 
