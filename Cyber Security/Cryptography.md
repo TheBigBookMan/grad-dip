@@ -108,4 +108,14 @@
 			- uses a text string as a key, which then used to calculate the number of shifts in plaintext
 			- **Letter to number mapping**-
 				- each letter is mapped numerically
-			- combine the cipher letter and the 
+			- combine the cipher letter value and the original value
+			- **One-time pad**-
+				- special case of the cipher, the key length and plaintext length are the same
+				- key is randomly generated string of alphabets that has the same length as plaintext
+				- key can be used only once
+		- **Transposition Cipher**-
+			- plaintext rearranged to generate the ciphertext
+			- plaintext alphabets are not replaced here
+			- simple columnar transposition- where plaintext is written horizontally with a certain alphabet width and then the ciphertext is read vertically
+			- key = number of rows you spread the message across
+			- read it vertically when its spread horizontally and thats the cipher code
