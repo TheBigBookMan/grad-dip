@@ -83,4 +83,77 @@
 			- shrink wrap agreements rarely used today simple because most software distrubute online and not hardware
 
 ## Business Continuity Planning (BCP)
-- 
+- involves assessing risks to organisational processe to create policies, plans and procedures to minimse the effect those risks might hav eon organisation
+- organisations reliant on technology should have a robust business continuity plan to remain operational during emergencies
+- BCP is key responsibility of cybersecurity professional, but cross functional team should assess both quantitative and qualitative risks identifying measures to mitigate impacts and restore normal operations quickly
+- Process involves
+	- project scope and planning
+	- business impact assessment
+	- continuity planning
+	- approval and implementation
+- must include documentation, covering continuity guidelines, risk management strategies and emergency respose protocols. should also outline priorities, responsibilites and timelines ensuring the plan is clear for  both current and future team members
+
+## Incident Response
+- when a security incident does occur, and organisation must be able to respond appropriately to limit or contain the incident and minmise impoact on the organisation
+- CISSP security operations domain recommends following steps for manageing incident response
+	1. **Detection**
+		- identify and confirm hat security incident is occurring or has occurred
+		- involves monitoring systems, logs, intrusion detection systems, antivurs alerts, user reports and other threat intelligence sources
+		- key signs include unusual traffic patterns, unaithorised access attemtps or alerts from monitoring tools
+		- early and accurate detection is crucial to reduce impact
+		- example- a firewall flags a large volume of outbound traffic to a suspicious IP- indicating data exfiltration attempt
+	2. **Response**
+		- immediately act to contain and understand the scope of an incident
+		- notify internal incident response team
+		- perform initial assessment to understand how widespread and severe the incident is
+		- prioritise based on impact- is this a ransomware attack or a phishing email
+		- example- security team isolates affected systems from the network to repvent lateral movement
+	3. **Mitigation**
+		- limit the damate and stop the attacks progression
+		- block malicious IP addresses or domains
+		- disable compromised accounts
+		- shut down affected servers or applications
+		- remove malware or corrupted files if possible
+		- example- compromised user account is disabled, and access logs are viewed to idetnfiy further unauthorised activity
+	4. **Reporting**
+		- communicate what has happened internally and externally if required
+		- internal- notify senior managementm, legal teams and affected departments
+		- external- report to regulatory bodies, customers, partners or law enforcementt, as needed especially for breaches involving personal data
+		- example- data breach involving customer PII may require notification under GD
+	5. **Recovery**
+		- restore systems, services and oeprations to a secure and normal state
+		- restore systems from clean backups
+		- verify systems are patched and hardedned before bringing them back online
+		- monitor for signs of reinfection or residual threats
+		- example- reinstalling the operating system and restoring clean backups on a ninfected server, followed by intensive monitoring
+	6. **Remediation**
+		- fix the root cause and roevent recurrence
+		- apply patches and updates
+		- harden systems- disable unnecessary ports/services and improve firewall rules
+		- improve user training, update antivirus definitions and ehance monitoring
+		- example- if breach came from an unpatched CMS plugin, the fix might include updating or replacing the plugin and implementing stricter update policies
+	7. **Lessons Learned**
+		- analyse the incident to improve processes and reduce future risk
+		- conduct a post-incident review
+		- identify gaps in detection ,response or prevention
+		- update incident response plans and train staff based on findingns
+		- example- the team finds an outdated alert threshold delayted detection, they adjust thresholds and train staff on earlier warning signs
+- detection initiates te process and incidents are confirmed before moving to containment and response while preserving evidence. recovery ensures systems are restored securely, and remediation and root cause analysis aim to prevent future incidents
+- **Incident Prevention**
+	- prevention is preferable over responding to an attack after it has already happened
+	- practices like regular patching, disabling unused services and employing intrusion detection and prevention systems help defend against attacks
+	- Intrusion Detection SYstems (IDS) use knowledge based (signature based) or behaviour based methods to identify threats, with passive systems logging events and active ones blocking attacks
+	- host-based IDS monitor individual devides, while network based IDS monitor overall network activitity
+	- to divery attackers from production entowrks, honeypots and similar tools can be used
+	- anti-malware at network boundaries, on servers and on endpoints is essential and user education reduces risk from social engineering attacks
+	- are other means to prevent or monitor malicious activitiy
+	- penetration testing with proper authorisation, tests system defences by simulating attacks using varying levels of internal knowledge
+	- audits and monitoring ensure accountability by logging system actitivies, which serve as forensic evidence and help reconstruct events for accountability
+	- sampling and clipping levels aid in managing large files
+	- security audits, access reviews and entitlement audits verify complians with security policies and support the principle of least privilege.
+	- audit reports should be protected and limited to specific personalle to prevent attackers from exploiting discolosed vulnerabilities
+
+## Access Control
+- refers the ability to allow system or resource access only to authorused users, programs or processes
+- granting or denying access occurs according to a specified security model that bestows certain permissions to access a resource
+- access control comprises an entire set of procedures performae dby hardware, software and administrators to monitor access, idetnfiy users requesting access, record access attempts and grant or deny access based on pre-established rules
