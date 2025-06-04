@@ -1,0 +1,86 @@
+- **Laws**- exist to protect against computer crime
+	- **Criminal Law**- outlines the rules and sanctions for major violations of the public trust
+		- computer fraud and abuse act (1986)
+		- electronic communications privacy act (1986)
+		- digital millenium copyright act (1986)
+	- **Civil Law**- provides us with aframework for conducting business
+		- trademark law
+		- patent law
+	- **Administrative Law**- government agencies use administrative law to promulgate the day-to-day regulations that interpret existing law. many government agencies promulgate administrative law
+		- HIPAA securty rule (2003) which affects specific types of industries and data types
+- Most laws related to IT securtiy fall into civil and administrative law
+- Cases for information theft, system intrusions, identity theft and other crimes that are harmful to coeity and may trigger criminal sanctions
+- **Main Laws Applicable in Aus**
+	- **Privacy Act (1988)**
+		- key piece legilsation in Australia that protects handling of personal information in the online space
+		- defines personal information as any information or opinion that could be used to identify an individual, regardless of whether its true or recorded in a metrial form
+		- applies to mainly government agencies and private sector organiasationg with annual turnover of more than 3 million dollars
+	- **General Data Protection Regulation (GDPR)**
+		- European Union law that requires organisations to protect personal data
+		- biled as the toughes privacy and security law in the world when put into effect 2018
+		- it applies to organisations anywhere that process personal data of EU residents
+	- **Clarifying Lawful Overseas Use of Data Act (CLOUD Act)**
+		- US federal law enacted 2018 to updated Stored Communications Act (SCA) of 1986 
+		- protects privacy of contents of files stored by service providers and of records held about the subscriber by service providers
+		- addresses challenges the FBI faced in obtatining data from service providers using SCA warrants as original SCA was created before advent of cloud computing
+		- CLOUD Act enables federal law enforcement with a warrant or subpoena to compel a US-based technology company to provide data stored on their servers, regardless of whether the data is located in US or abroad.
+		- Aus signed the Australia-US CLOUD Act agreement so authoirites in both countries can more readily obtain electornic data stroed in each others countries
+	- **Computer Fraud and Abuse Act (CFAA) (1986)**
+		- US criminal law that makes federal offence to engage in many types of hacking activity
+		- specifically CFAA prohibits unauthorised access to any computer system that is engaged in interstate commerse
+		- prohibits the creation of malcious code that might cause damage to computer system
+		- many nuances to this law, bottom line is making hacking criminal offencse
+	- **Identify Theft and Assumption Deterrence Act (ITADA) (1988) **
+		- US law that makes it federal crime to steal an individuals identity including using or possessing false identification and transferring or using identity information without consent with the intent of committing fraud
+		- some rules apply to specific industries such as Health Insurance Portability and Accountability Act for health care, payment card industry and publicly traded company industrey
+	- **Electronic Communications Privacy Act (ECPA) (1986)**
+		- US law restriucts government interception of communications and stored information
+		- includes telephone calls, network transmissions, email messages and pen registers that log records of communications
+		- government mmust meet stringet requirements before receiving a search warrant for electornic communcaitions
+- **Compliance**-
+	- information security professional should be aware of compliance requirements specific to industry and business activities
+	- financial organisations may have auditors conduct IT controls and audit designed to ensure information security controls are sufficient to ensure compliance with Sarbanes-Oxley Act (2002)
+	- Payment card industry may need organisation to retain approved independent auditors to verify controls and provide a report directly to the regulators
+- **Intellectual Property**-
+	- Intangible assets are collectively referred to as intellectual property
+	- **Copyright**-
+		- copyright law guarantees the creators of 'original works of authorship' protection against the unauthorised duplication of their work
+		- 'original works' include: literary works, musical works, dramatic works, pantomimes and choreographic works, pictorial, graphical, sculptural works, motion pictures, audiovisual works, sound recordings and architectural wors
+	- **Trademarks**-
+		- there are the words, slogans and logos used to identify a company and its products or services
+	- **Patents**-
+		- protect intellectual property rights of inventors
+		- three main requirements
+			- invention must be new, inventions are patentable only if they are original ideas
+			- invention must be useful, must actually work and accomplish some sort of task
+			- invention must not be obvious, you cant make a patent for something dumb
+	- **Trade Secrets**-
+		- many companies have intellectual property that is absolutely critical to their business and signifcant damage would result if were disclosed to competitors or the public
+		- to preseerve trade secre status, must implement adequate controls within your organisation to ensure only authorised personall with a need to know of the secrets have acces to them
+		- must also ensure anyone who does hav ethis type of acces is bound by NDA that prohibis them from sharing information with others and provides penalties for violating the agreement
+		- trade secret protection is on the best ways to protect computer software
+- **Software as Intellectual Property**-
+	- software is a form of intellectual property
+	- companies invest resources in developing it and proretcing it theough license agreements
+	- **License agreements**- include the terms of use for software that an organisatio nacquire and use and can contain many different provisions that cover the circumstances of acceptable use
+		- number and trypes of individuals who may use the software
+		- amount of information that may be processed
+		- locations where data may be processed
+		- number of servers supporting the software
+		- other restrictions the software publisher chooses to use
+	- some sofware license agreements come in different forms
+		- **Detailed Contracts**
+			- some cases, software agreements are details contracts that are negotiated between software endor and the customer
+			- epecially true in case of expensive enterprise software
+			- in these cases the vendor often proposes a license agreement and then the customer suggests revisions
+			- there may be many rounds of negotiation before two sides agree on mutually acceptable lanague
+		- **Click-through Agreements**-
+			- other end of the spectrum
+			- take-it or leave-it agreements where customer simply clisk 'I agree' button as they purchase software or gisn up for a service
+			- these agreemetns can be dangerous because users typically dont read them and they may be comitting their organisation to underisrable restricitons
+		- **Shrink-wrap Agreements**-
+			- these same as click-through agreements but they are included on physical package of a piece of software and they take effect when user breaks the seal on the package
+			- shrink wrap agreements rarely used today simple because most software distrubute online and not hardware
+
+## Business Continuity Planning (BCP)
+- 

@@ -119,3 +119,10 @@
 			- simple columnar transposition- where plaintext is written horizontally with a certain alphabet width and then the ciphertext is read vertically
 			- key = number of rows you spread the message across
 			- read it vertically when its spread horizontally and thats the cipher code
+		- **Feistel Block Cipher**-
+			- common design model for block ciphers is Festel cipher. popular algorithsm use it- DES, 3DES
+			- not a single block cipher but a design framework which many block ciphers like DES derive
+			- the structure uses the same algorithm for both encryption and decryption relying on multuple rounds of subsition and permutation
+			- each tounf the input splits into two halved, and only one half is transformed using a function that takes the encryption as input key
+			- unique feature is using round-dependent keys, derived from original encryption keys to ensure secure process
+		- 
