@@ -234,4 +234,43 @@
 		- addresses how to assign specific access rights
 		- mainly used in access control mechanisms for distributed systems
 ## Network Access Control
-- network
+- can be facilitated with use of firewalls (various firewall architecture), remote logins or VPNs
+- **Firewalls**-
+	- hardware and software that filter or prevent specific information movement between LANs and internet
+	- **Types**-
+		- separate computer system
+		- software service running on existing router or server
+		- separate network containing supporting devices
+	- **Layers of Operations**-
+		- **Network Layer**- 
+			- **Packet Filtering**-
+				- network- level firewalls examine the header information of data packets
+					- IP source and destination address
+					- direction (inbound or outbound)
+					- transmission control protocol (TCP) or user datagram protocl (UDP) source and destination port requests
+				- simple firewall models enforce rules designed to prohibit packets with certain addresses or partial addresses from passing throug hthe device
+				- configuration schemes
+					- static- filtering rules
+					- dynamic- emergent events and rules
+					- stateful packet inspection- track network connections using a table
+		- ![[Pasted image 20250605175943.png]]
+		- **Application Layer**-
+			- **Proxy**-
+				- application layer proxy is a device capable of functioning both as a firewall and an application proxy server
+				- app gateways frequently installed on a dedicated computer- proxy server
+				- often placed in unsecured areas of the network, they are exposed to higher levels of risk from less trusted networks
+				- additional filtering routers can be implemented behind the proxy firewall, further protecting internal systems
+		- **MAC Layer**-
+			- **Media access control** **(MAC)** -
+				- filtering deals with unique device or HW addresses
+				- designed to operate the media access control sublayer of a networks data link layer
+				- make filtering decisions based on a specific host computers identity
+				- MAC addresses of specific host computer are linked to access control list entries that identify specific types of packets that can be sent to each host- all other traffic is blocked
+		- **Hybrid Firewalls**-
+			- combine elements of other types of firewalls
+			- elements of packet filtering and rpoxy services or of packet filtering and circuit gateways
+			- may consist of two separate firewall devices- each separate firewall system but connected to work in tandem
+			- they enable organisation to make security improvements without completely replacing existing firewalls
+			- include next generation firewall (NGFW) and unified threat management (UTM) devices
+	- **Firewall Architecture**-
+		- 
