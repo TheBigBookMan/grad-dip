@@ -157,3 +157,81 @@
 - refers the ability to allow system or resource access only to authorused users, programs or processes
 - granting or denying access occurs according to a specified security model that bestows certain permissions to access a resource
 - access control comprises an entire set of procedures performae dby hardware, software and administrators to monitor access, idetnfiy users requesting access, record access attempts and grant or deny access based on pre-established rules
+- **Types of access control**-
+	- **Physical Controls**-
+		- access controls are items you can physucally touch and are designed to prevent, monitor or detect direct contact with systems or areas withi na facility
+		- examples- guards, fences, motion detectors, locked doors, sealed windows, lights, cable protection, laptop locks, badges, swipe cards, guard dogs, video cameras alarms etc
+	- **Logical/Technical Controls**-
+		- technological hardware or software mechanisms used to manage access to and provide protection for resources and systems
+		- examples- authentication methods (passwords, smartcards, biometrics), encryption, constrained interfaces, access control lists, protocols, firewalls, routes, intrusion detection systems and clipping levels
+	- **Administrative Controls**-
+		- policies and procedures defined by an organisations security policy and other regulations or requirements
+		- categorised by how they are implemented- can be implemented administratively, logically/technically or physically
+		- sometimes referred to as management controls
+		- focus on personnnel and business practices
+		- examples- policies, procedures, hiring practices, background checks, classifying and labelling data, security awareness and training efforts, reports and reviews, personnel controls and testing
+- **Five types of access control strategies**
+	- **Role-based Access Control (RBAC)**- based on the role of the subject
+		- access to resources is granted base don the role the user holds
+		- roles are assigned permission, and users are assigned roles, users dont get permissions directly
+		- centralised control over permissions
+		- supports **least privilege** principle- users only get access necessary for their job
+		- easier to manage access a group ratehr than just users
+		- example- software engineer can access code repository but not HR database
+	- **Discretionary Access Control (DAC)**- grants or restricts object access and is determined by the objects owner
+		- owner of a file or resource has the discretion to grant access to others
+		- access control lists ACL or capability tables are common mechanisms
+		- more flexible but less secure, as users can grant access for other users- can lead to privilege sprawl
+		- common in windows/linux systems with file-level permissions
+		- example- alice creates a document and grants access to Bob but not Carol even though same role
+	- **Mandatory Access Control (MAC)**- restricts the actions that a subject can perform on an object
+		- the system, not owner controls access based on securirty labels or classifications
+		- users and data are both assigned security levels (eg top secret, confidential, unclassified)
+		- very strict- users cannot override permissions
+		- common in government and military
+		- example- document labeled 'top secret' cannot be accessed by a user with 'secret' clearance even if they own the file
+	- **Permission-based Access Control (or rule-based Access Control)**- is the abstraction of application actions into a set of permissions
+		- access is granted based on rules that evaluate conditions like time of dayt, location or system state
+		- rules can be static or dynamic
+		- often used in firewalls, routers and systems with contextual policies
+		- useful for enforcing business logic (eg no access after 6pm)
+		- example- rule may state "only allow VPN during business hours"
+	- **Attribute-based Access Control (ABAC)**- abstraction of application actions into a set of rules and attributed defining the characteristics of those rules
+		- makes decisions based on a set of attributes
+			- **Subject Attributes**- users department, clearance level, role
+			- **Object Atttributes**- file, type, classification
+			- **Environmental Attributes**- time, location, device type
+		- very fine grained and flexible
+		- often used in modern, cloud-based systems
+		- policies are written as logic rules using attributes
+- **Security Models**-
+	- several access control security mofels that illustrate access control implementations and cam help organisationa quickly make improvements through adaptation
+	- they can be used to enforce security policy (rules of system config) and for assessing the effictiveness of computer security controls into a computer system
+	- **Bell- LaPadula Confidentiality Model**-
+		- is a 'state machine' reference model, meaning it uses a formal mathematical model to describe the systems states and transitions
+		- employs the 'no read up, no write down' principle which ensures users cannot read data at a higher security level that then own and cannoy write data to a lower security level
+		- model implements both mandatory access control MAC and discetionary access control DAC providing robust framework for managing access permissions based on both system enforced rules and user defined policies
+		- ![[Pasted image 20250605162600.png]]
+	- **Biba Integrity Model**-
+		- focused on maintaining data integrity by preventing unauthorised modifications, it ensures data remains accurate and reliable by enforcing strict access controls
+		- prevent corruption of higher integrity entities
+		- prevent data modification by unauthorised parties
+		- prevent unauthorised data modification by authorised parties
+		- maintain internal and external consistency
+		- based on the 'no write up, no read down' principle
+		- ![[Pasted image 20250605162723.png]]
+	- **Clark-Wilson Integrity Model**-
+		- designed to ensure data integrity by enforcing weel-formed transactions and seaparation of duties
+		- focuses on preventing unauthorised users from making changes and ensuring that authorised users onloy make authorised changes
+		- no changes by unauthorised subjects
+		- no unauthorised changes by authorised subjects
+		- maintenance of internal and external consistency
+	- **Graham-Denning Access Control Model**-
+		- provides a framework for defining how subjsects (users) and objects (resources) interact withi na system
+		- outlines the rules for securely creating and deleting subjects and objects as well as assigning specific access rights
+		- composed of a set of objects, set of subjects and set of rights
+		- shows how subjects and objects should be securely created and delted
+		- addresses how to assign specific access rights
+		- mainly used in access control mechanisms for distributed systems
+## Network Access Control
+- 
