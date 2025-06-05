@@ -234,4 +234,4 @@
 		- addresses how to assign specific access rights
 		- mainly used in access control mechanisms for distributed systems
 ## Network Access Control
-- 
+- network
