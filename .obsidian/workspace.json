@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber Security/net.md",
+                "file": "Cyber Security/Cyberlaw, BCP, Incident Response and Access Control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "net"
+              "title": "Cyberlaw, BCP, Incident Response and Access Control"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5110321044922,
-    "collapsed": true
+    "width": 210.5110321044922
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -178,7 +177,7 @@
     "Pasted image 20250605175943.png",
     "Pasted image 20250605162723.png",
     "Pasted image 20250605162600.png",
-    "Cyber Security/net.md",
+    "Cyber Security/Cyberlaw, BCP, Incident Response and Access Control.md",
     "Untitled.md",
     "Cyber Security/Web Application Security.md",
     "Cyber Security/Risk Management.md",
