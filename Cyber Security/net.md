@@ -273,4 +273,144 @@
 			- they enable organisation to make security improvements without completely replacing existing firewalls
 			- include next generation firewall (NGFW) and unified threat management (UTM) devices
 	- **Firewall Architecture**-
-		- 
+		- the design of a network security system that monitors and controls incoming and outgoing network traffic
+		- **Configuration Factors**-
+			- best configuration for firewalls depends on three factors
+				- objectives of the network
+				- organisations ability to develop and implement architectures
+				- budget available for the function
+		- **Architectural Implementations**-
+			- there are three common architectural implementations of firewalls
+				- **Single Bastion Hosts**-
+					- commonly known as sacrificial hosts, they stand as sole defender on the network perimeter
+					- usually implemented as a dual-homed host, which contains two network interface cards (NICs)
+						- one is connected to an external network
+						- one conencted to internal network
+					- implementation of this architecture often makes use of network address translation (NAT) creating another barrier to intrusion from external attackers
+					- ![[Pasted image 20250606095949.png]]
+				- **Screened Host**-
+					- combines a packet-filtering router with a seaprate, dedicated firewall such as an application proxy server
+					- allows the router to pre-screen packets to minimse the traffic/load on internal proxy
+					- external attack is required to compromise two seaprate systems before the attack can access internal data
+					- ![[Pasted image 20250606101851.png]]
+				- **Screened Subnet (with DMZ)**-
+					- DMZ (demilitarised zone) is dominant architecture used today. consists of two or more internal firewalls behind a packet-filtering router, with each protecting a trusted network
+					- connetions from outside or untrausted networks are routed through an external filtering router into and out of a routing firewall, to seaprate a network segment known as DMZ
+					- connections into trusted internal networks are allowed only from DMZ bastion host servers
+					- screened subnet performs two functions
+						- protects DMZ systems and information from outside threats
+						- protects the internal networks by limiting how external connections can gain access to internal systems
+					- DMZ creates extranets
+					- ![[Pasted image 20250606102652.png]]
+- **Intrusion Detection and Prevention Systems**-
+	- firewalls for external intrusions- intrusion detection systems (IDS) and intrusion prevention systems (IPS) protect against intrusions that originate within systems
+	- **Network vs Host-Based IDS**-
+		- **Network Based Intrusion Network Systems** (NIDS) monitor traffic on a whole network
+			- **Disadvantages**-
+				- **Performance Limitations in High Traffic**-
+					- NIDS may struggle to handle large volumes of network traffic, necessitating additional systems to balance the load
+				- **Difficulty Identifying Attack Sources**-
+					- determining the true source of an attack can be challenging due to IP address spoofing or attacks originating from botnets
+					- retquires extensive investigation beyond NIDS capabilities
+				- **Lack of Impact Analysis**-
+					- while NIDS can detect attacks, it often cannot determine if an attack successfully compromised specific systems, files, or applications, limiting its ability to asses the effectiveness of an attack
+		- **Host Based Intrusion Detection System (HIDS)** detects malicious activities on a single computer
+			- **Disadvantages**-
+				- **Higher Management Costs**-
+					- HIDS requires individual administrative attention on each hos, increasing management overhead
+				- **Limited Scope**-
+					- HIDS can only detect attacks targeting specific host it monitors
+				- **Resource Consumption**-
+					- HIDS often uses significant system resources, potentially degrading host performance. 
+					- reducing its resource usage may lead to missed attacks
+				- **Vulnerability to Intrusion**-
+					- HIDS is more susceptible to discovery and disablement by attackers, as it operates on the targeted host itself
+				- **Log Tampering Risk**-
+					- since HIDS logs are stored locally, they can be modified or deleted during a successful attack, compromising evidence
+		- ![[Pasted image 20250606103311.png]]
+	- **Intrusion Prevention Systems (IPS)**
+		- special type of 'active response' IDS that attempts to detect and block attacks before they reach target systems
+		- like most active IDS, an IPS is placed in line with the traffic so that it can analyse the traffic and choose what to foward and what to block
+		- given overlap between and IPS and active IDS, an IPS is often referred to as an intrusion detection and prevention system (IDPS)
+		- like IDS, IPS may be network-based or host-based
+	- **Network-Based IDPS Location**-
+		- for network monitoring- National Institute of Standards and Technology (NIST) recommends four locations for placing the sensors of a network-based intrusion detection and prevention system
+			- Outside an external firewall
+				- Outside the main enterprise firewall- 
+					- this placement is useful for establishing the level of threat for a give nenterprise network
+					- those responsible for winning management support for security efforts fiind thie placement vva
+			- behind each firewall in the network DMZ
+				- In the DMZ inside the main firewall but outside the internal firewalls
+					- location monitors for penetraction attempts that target web and other services that are generally open to outsides
+				- NIDPS manager, in front of internal firewalls
+					- a sensor can be positioned to monitor major backbone networks, such as those that support internal servers and database resources
+				- behind internal firewallts
+					- a sensor can be positioned to monitor LANs that support user workstations and servers specific to single daprtments
+					- can monitor for more specific attacks at network segments, as well as attacks originating from inside the organisation
+			- on major network backbones
+			- on critical subnets
+		- ![[Pasted image 20250606110909.png]]
+- **Signature vs Anomoly Based Detection**-
+	- **Signature (or knowledge) Based Detection**-
+		- draws on a database of known attacks compiled by the IDS vendor
+		- main drawback is that the database of attack patterns and characteristics (signatures) must be regularly updated
+	- **Anomaly (or behaviour) Based Detection**-
+		- detects abnormal behaviour that deviates from an established baseline
+		- this apprach picks up attacks that a signature based IDS might miss, but may also pick up false alarms, especially if there are changes in the network that are not reflected in established baseline
+- **Remote Login**-
+	- refers to systems that authenticate user credentials for those trying to access an organisations network via dial-up
+	- three types of remote login
+		- **Remote Authentication Dial-In User Service (RADIUS)**-
+			- centralises responsibility for user authentication in a central RADIUS server
+			- uses UDP and combines the authentication and authorisation into one and accounting seaparate
+		- **Diameter**-
+			- emerging alternative derived from RADIUS commonly used by mobile network service providers
+			- mainly for mobiles
+		- **Terminal Access Controller Access Control SYstem (TACACS+)**- 
+			- validates user credentials at a centralised server (likie RADIUS) based on client/server configuration
+			- uses TCP and separates the authentication, authorisation and accounting into one
+	- RADIUS and TACACS+ enfore the AAA system
+		- **NEED TO LOOK INTO MORE BETWEEN THESE TWO- CHATGPT**
+		- **Authentication**- allows the system to identify the users, often done using a username and password or a certificate
+		- **Authorisation**- dictatces the user access level
+		- **Accounting**- keeps track of the changes a user made
+		- mechanism of RADIUS and TACACS+ while trying to access NAS server
+			- when authentication request is sent, in RADIUS, the authentication response is combined with an authorisation response
+			- TACACS+ seaprates the authentication and authorisation presooinses which provides more control
+			- ![[Pasted image 20250606121131.png]]
+	- **Kerberos Login**-
+		- provides secure third-party authentication using symmetric key encryption to validate individual users to various network resources and keeps a database containing private keys or clients/servers
+		- consists of three interacting services
+			- **Authentication Service (AS)**
+			- **Key Distribution Center (KDC)**
+			- **Kerbros Ticket Granting Service (TGS)**
+		- Process
+			1. client requests services from the TGS, sending the server names, Ticket Granting Ticket (TGT) and the authenticator containing the client name, timestamp and optional session key, all encrypted in the client/TGS session key
+			2. TGS responds with a ticket containing
+				- server names
+				- client name, client address, valid ticket time and client server session key, encrypted in the servers private key
+				- client/server session key encrypted in the client/TGS session key
+			3. client authenticates the server by sending the ticket and an authenticator containing the client address, timestamp and optional session key encrypted in the client/server session key
+			4. client requests services from TGS, sending the server name, the TGT and the authenticator containing the client name, timestamp and optional sesion key, all encrypted in the client/TGS session key
+
+## Virtual Private Network (VPN)
+- VPN must accomplish
+	- encapsulation of incoming and outgoing data
+	- encryption of incoming and outgoing data
+	- authentication of remote computer and perhaps remote usser as well
+- most common implementations of VPN it allows the user to turn the internet into a private network
+- **Tunnel Mode**-
+	- the entire original IP packet is encapuslated within a new IP packet, providing security and ensuring that the contents of original packet are hidden
+	- both header and payload are encrypted, including original source and destination addresses
+	- provides protection against eavesdropping and dat atampering
+	- basically an outer packet carrying the original packet through the untrusted network
+	- ensure confidentiality and integrity by encapsulating the original data in the protective layer
+	- ![[Pasted image 20250606125949.png]]
+- **Transport Mode**-
+	- data within the IP packet is encrypted, but header information is not
+	- this allows user to establish a secure link directly with the remote host, encrypting only the data contents of the packet
+	- two popular uses
+		- end-to-end transport of encrypted data
+		- remote access worker connecting to an office network over the internet by connecting to a VPN server on the perimeter
+		- ![[Pasted image 20250606130103.png]]
+	- 
