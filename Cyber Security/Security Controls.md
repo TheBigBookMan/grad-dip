@@ -1,3 +1,43 @@
+## Common Vulnerabilities
+- network security vulnerabilities are constantly evolving as threat actors seek new ways to attack computer networks
+- **Vulnerability**- a weakness in software, hardware or organisational processes that, when comrpomised can lead to security breach. 
+	- **Non-physical**- involve softare or data, such as operating systems unpatched
+	- **Physical**- protection of physical assets such as servers
+- **Network Vulnerability**-
+	- **Malware**-
+		- includes trojans, viruses, worms, ransomware
+		- malware symptoms include slow ystems, random reboots and unkown processes
+		- commonly spread through phishing emails and malicious downloads
+		- **Common Types**-
+			- **Viruses**- self-replicating and spread through user actions like clicking or copyng
+			- **Keyloggers**- track the keystrokes made to steal sensitive data
+			- **Worms**- self-replicating without a host program, spreading quickly across networks
+			- **Trojan Horses**- disguised as legit software allowing back door access
+			- **Ransomware**- asks for money in exchange for access to computer again
+			- **Logic Bombs**- logic in code that when executed creates malisiouc code
+			- **Bots and Botnets**- compromised system controlled remotely, often used in DDoS attacks
+			- **Adware and Spyware**- server ads or steal user information without permission
+			- **Rootkits**- provide remote control over a system that is difficult to detect and remove
+	- **Social Engineering Attacks**-
+		- trick users into giving up personal information- can lead to accessing their private credentials
+		- phishing, spearphsighing, whaling, smishing, spam, farming, tailgating, should er surfing and dumpster diving
+		- **Common Methods**-
+			- **Phishing Emails**- emails that trick users providing credentials
+			- **Spearphishing**- targeted phishing using personal information
+			- **Whaling**- targets high-profile execs with critial information
+			- **Vishing**- voice phishing over phone calls
+			- **Smishing**- SMS phishing using text
+			- **Spam**- unsolicited emails that contain scams or malware
+			- **Pharming**- redirect user traffict to fake websites
+			- **Tailgating**- physical access gained by following authorised users
+			- **Shoulder Surfing**- observing users to obtain sensitive information
+			- **Dumpster Diving**- searching through trash for valuable information
+	- **Outdated or Unpatched Software**-
+		- software is vulnerable to attacks if not updated
+		- regular patches and updates are essential for security
+	- **Misconfigured Firewalls and Operating Systems**-
+		- firewalls monitor traffic and enforce security rules
+		- default operating system settings can be a security risk and should be customised for better protection
 ## NIST (National Isntitute of Standards) Cybersecurity Framework (CSF)
 -  structured guidance that helps organisations assess and continually improve their ability to prevent, detect and respond to cyber-attakcs
 - supplies overarching policy framework
