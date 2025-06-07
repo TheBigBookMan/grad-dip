@@ -17,32 +17,55 @@
 	- **Confidentiality**- principle of protecting sensitive information against access and disclosure to unauthorised entities
 		- **Breaches**- can be breached intentionally (disgrunteld employees) or unintentionally (human error, oversight)
 			- attacks designed to gain unath access to systems, apps, dataases to steal or tamper with data
+				- accessing malicious code that opens a back door
 			- caputring and deciphering network traffic
+				- failing to properly encrypt a transmission
 			- electronic eavesdropping (sniffing)- wifi, bluetooth
+				- failing to fully authenticate a remote system before transferring data
 			- can get wall shields which actually stop wifi signals from going through the walls and going outside the office
 			- escalation of system privileges and then stealing password files or other sensitive information
+				- leaving open otherwise secured access points
 			- social engineering to get seneitive information
+				- misrouted faxes, documents left on printers
 			- psyhical eavesdropping (shoulder surfing)
+				- walking away from an access terminal while data is displayed on monitor
 		- **Events**- scenarious where confidentially is comprimsed
 			- failing to properly encrypt a transmission
+				- capturing and deciphering network traffic
 			- failing to fully authenticate a remote system before transferring data
+				- electronic eavesdropping- sniffing
 			- leaving open otherwise secured access points
+				- escalation of system privileges and stealing password files or sensitive information
 			- accessing malicious code that opens a back door
+				- attacks designed to gain unauthorised access to systems, applications and databases to steal or tamper data
 			- misrouted faxes, documents left on printers
+				- social enginerring to get sensitive information
 			- walking away from aan access terminal while data is displyaed on the monitor
+				- physical eavesdropping (shoulder surfing)
 		- **Countermeasures**- organisations must employ robust countermeasres to protect data from unath access
-			- data classification and labeling
+			- data classification and labeling- labeling data into predefined levels of sensitivity or importance to determine how it should be protected and visisbly lableing data with classifications so usrers can handle appropriately
+				- attacks designed to gain unauthorised access to systems, applications and databases to steal or tamper data
 			- strong access controls and auth mechnaisms
+				- escalation of system privileges and then stealing password files or sensitive information
 			- encryption of data in process, in transit and in storage
-			- steganography
+				- capturing and deciphering network traffic
+			- steganography- hiding a secret message or data within a non secret file or medium so the existence of hidden information is concealed (hiding in plain sight)
+				- electronic eavesdropping- sniffing
 			- remote wipe capaibilities (for stolen or lost devices)
+				- physical eavesdropping
 			- adequate training and education of individuals
+				- social engineering to get sensitive information
 		- **Concepts, conditions and aspects**- define and influecne confedentiality
 			- *Sensitivity* - could cause harm or damage if disclosed
+				- unauthorised access to a healthcare database revealing patient records
 			- *Criticality*- level to which information is mission critical
+				- if this is impacted can cause business operations to fail
 			- *Privacy*- keeping information confidential that is personally identifiable or that might cause harm, embarassment or disgrace to someone if revealed
+				- getting someones private credentials to login to their account
 			- *Seclusion*- involces storing somtehing in an out-=opf the way location
+				- storing backups away from a location in another plkace
 			- *Isolation*- act of keeping something separated from others
+				- separating the network infrasttructure for something seaprate from another
 	- **Integrity**- principle ofprotecting information against improper modifciation ensuring accuracy, consistency and trusthworthiness of data during its entire life cycle
 		- **Breaches**- 
 			- *Three perspectives*-
@@ -51,12 +74,19 @@
 				3. Maintaining the internal and external consitecy of objects so that their data is a correct and true reflection of the real world and any relationship with any child, peer or parent objkect is valid, consistent mand verifiable
 			- *Breached by*-
 				- viruses
+					- introducing a virus
 				- logic bombs
+					- executing malciious code like a trojan horse
 				- unath access
+					- oversight in a security policy or misconfigured security control
 				- erros in coding and apps
+					- altering configurations with commands, codes or scripts
 				- malicious modification
+					- entering invalid data- sql injectsion, cross-site scripting and fake network packets
 				- intentional replacement
+					- accidentally deleting files
 				- system back doors
+					- oversight in a security policy or misconfigured security control
 		- **Events**- events can lead to an integrity breach
 			- acceidently deleting files
 			- executing malicious code, such as trojan horse
@@ -64,22 +94,35 @@
 			- altering config, including erros in commands, codes and scripts
 			- entering invalid data (SQL injection, cross-site scripting, fake network packets)
 		- **Countermeasures** - 
-			- data classification and labeling
-			- strong access controls and authentication mechanisms
-			- encryption of data in process, in transit and in storage
-			- steganography
-			- remote wipe capaibilities (for stolen or lost devices)
-			- adequate training and education of individuals
+			- Strict access control
+				- unauthorised access
+			- rigorous authentication procedures
+				- system back doors
+			- intrusion detection systems
+				- logic bombs
+			- objet/data encryption
+				- malicious modification
+			- hash-based verification techniques
+				- errors in coding and applications
 		- **Concepts, conditions and aspects**-
 			- accuracy
+				- data in a financial report being altered without proper validation
 			- comprehensiveness
+				- incomplete backup of a database
 			- completeness
+				- partial loss of data during a transfer process
 			- responsbility
+				- failure to apply security patches leading to data tampering
 			- accountability
-			- non-reputation
+				- lack of logging changes to critical files
+			- non-repudiation
+				- denial of sending a critical email after it has been altered
 			- validity
+				- incorrect data entry in a patients medical record
 			- authenticaity
+				- unauth access to system resulting in data being altered
 			- truthfulness
+				- falsification of scientific research data 
 - **Availability**- assurance that the systems responsible for delivering, storing and processing information are accessible when needed
 	- **Breaches**- 
 		- numerous threats to availability
@@ -90,8 +133,11 @@
 			- environmental issues
 		- availability can be breached by attacks that focus on violation of availability
 			- DoS (denial of service) attack
+				- overutilising a hardware or software component
 			- object destruction
+				- accidentally deleting files
 			- communication interruptions
+				- under allocating resources
 	- **Events**
 		- accidentally deleting files
 		- mislabeling or incorrectly classifying assets
@@ -99,15 +145,24 @@
 		- overutilising a hardware or software component
 	- **Countermeasures**- most policies as well as busines continuity planning (BCP) focus on fauly tolerance features on various levels of access/storage/security with goal of eliminating single poiints of failure to maintain availabiligy of critical systems
 		- designing intermediary delivery systems properly
+			- communications interruption
 		- using access controls effectively
+			- object destruction
 		- monitoring performance and network traffic
+			- attacks that focus on violation of availability like DoS
 		- using firewalls and routers to prevent DoS attacks
+			- attacks like DoS
 		- implementing redundancy for critical systems
+			- object destruction
 		- maintaining and testing backup systems
+			- object destruction
 	- **Concepts, conditions and aspects**-
 		- usability
+			- system is avalable but difficult to use due to poor interface design
 		- timeliness
+			- system is slow to respond during peak usage times, causing delays
 		- accessibility
+			- system is down due to network outage, making it inaccessible to users
 
 ## Authentication, Authorisation and Identification (Accounting) (AAA)
 - extension of the CIA triad
@@ -130,7 +185,7 @@
 	- **Cyber- Criminals**- individuals who use tech to commit crimes in cyberspace
 	- **CyberSpace**- environment formed by physical and non-physical components to store, modify and exchange data using computer networks
 	- **Denial of service (DoS) attack**- attack prevents authorised access to resources or delaying of time-critical operations
-	- **Distriburted denial of service (DDoS) attack**- DoS atechniwue that uses numerous hosts to perform the attack
+	- **Distriburted denial of service (DDoS) attack**- DoS technique that uses numerous hosts to perform the attack
 	- **DNS Attacks**- attacks that encompass viariety of explots that subvert functioning of DNS which provides a mappying between hostnames and IP addresses
 	- **Downloader**- program that installs other items on a machine that is under attack, usually a downloaded is sent  in an email
 	- **Dropper**- installer that carries malware to be executed on compromised machine, often disguised and hidden in computers directories so that they are visible they look like valid proglrams or files
@@ -167,18 +222,18 @@
 ## Design Concepts
 - design elemetns are necessary to consider when building a system to make sure core security principles (CIA and AAA) are implemented
 - ![[Pasted image 20250504194855.png]]
-- **Need to Know**- 
+- **Need to Know**-  access only information necessary for task
 	- access authorisation scheme which subjects right to access and object takes into consideration not just privilege level but relevance of data inbolbed in the role subject plays
 	- indivate the subject requires access to objet only when specificly necessary to their job
 	- so if the privlege runs out  then they cant access
-- **Least Privilege**-
+- **Least Privilege**- give the minimum required access
 	- minimum necesarry access that is require to perform a task should be assigned
 	- anyuone that does not have privilege will be able to access\
-- **Separation of Duties**-
+- **Separation of Duties**- split responsibilities to reduce risk fraud
 	- builds on least privilege
 	- requires use of granular access permissions
 	- each type of priiellge operation, should be different roles in the system- ensure subject only gets essential roles and privileges
-- **Defence in Depth**-
+- **Defence in Depth**- use layered security controls
 	- having security measures at each critical level of security infrastructure
 	- **ADministrative**- plicies, planning and training
 	- **Physical**- covers aspects such as cameras and locks
@@ -187,33 +242,33 @@
 	- **Host**- advanced malware protection and antivurs
 	- **APplication**- robustness testing, best practices and fuzzing
 	- **Data**- safeguarding data traversing the network
-- **Fail Secure**-
+- **Fail Secure**- deny by default; fail securely
 	- system should consist of secure state where only certain essential operations can be performed and all access are blocked
 	- event of failure the system should fall back to secure state allowing essentitl tasks to repair
-- **Economy of Mechanisms**-
+- **Economy of Mechanisms**- keep designs simple and manageable
 	- security mechanisms should be simple as possible
 	- complex system design makes harder to audit and erros can easily be overlooked
 	- simplified system easier to audit, find errors and resolve them
-- **Complete Mediation**-
+- **Complete Mediation**- check access every time its requested
 	- every access to every object must be checked for security and efficiency
 	- whenever subject attempts to access objet, system must check priveleges
 	- if action permitted then system will allow access otherwise bvlock
-- **Open Design**-
+- **Open Design**- dont rely on obscurity; favor peer review
 	- success of mechanism should not depend on it being secret
 	- securit through obscurity does not work in most cases
 	- secret eventually gets out and insiders will know sever
 	- open design gets assurance from many critics so more chance to imprve
-- **Least Common Mechanism**-
+- **Least Common Mechanism**- minimise shared resources to reduce risk
 	- minimise the number of mechanisms common to more than one user and depended on by all users
 	- shared mechanism is potential information path so shared mehcnaism should be minimsed for control
-- **Psychological Acceptability**-
+- **Psychological Acceptability**- make security usable and user-friendly
 	- user interfac emust be easy to use so that users routinely and automatically apply mechniasms correctly
 	- should not add difficulty of accessing resources with extra security
-- **Weakest Link**-
+- **Weakest Link**-strengthen the most vulnerable part
 	- weakest point of a system should be identified and reinforced
 	- least valuable resources or privelelges are not secured properly and as result they turn into a weak link the system security
 	- strength of a security system is only as strong as the weakest link
-- **Leveraging Existing Components**-
+- **Leveraging Existing Components**- use proven tools cautiously; avoid reinventing
 	- in a system, existing code or functionality should be reused when possible
 	- ensures that attack surface is kept to a minimmum by not introducing new vulnerabilities when adding new code to system
 
