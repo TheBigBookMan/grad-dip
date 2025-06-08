@@ -77,12 +77,22 @@
 	- **Tiers**-
 		- describes how cybersecurity risk is managed by an organisation
 		- describes degree to which an organisations cybersecurity risk management practices exhibit the key charactersitics (risk, threat aware, repeatable and adaptive)
-		- tier options are 
+		- tier options are - kind of where they are in terms of knoelwedge and awareness
 			- partial (tier 1) 
+				- ad hoc, reactive
+				- limited awareness of cyebrsecurity risks
+				- no formal risk management
 			- risk- informed (tier 2)
+				- risk management practices are approved but not organisation wide
+				- some awareness exists
 			- risk-informed 
+				- policies are established and consistently followed
+				- risk management is integrated
 			- repeatable (tier 3) and adaptive (tier 4)
+				- organisation adapts its cybersecurity approach based on previous incidents and predicitve analysis
+				- continous improvement is emphasised
 		- each organisation will decide which tier matches its risk management needs and capabilities, not a race to the top
+		- appropriate tier depends on the business needs, risk appetite and resources
 	- **Profile**-
 		- aligns industry standards and best practices to the framework core in a particular implementation scenario
 		- supports prioritisation and measurement while factoring in business needs
@@ -101,6 +111,9 @@
 	- the order and size of functions, categories, subcategories in core do not imply the sequence or importance of achieving them. the structure of the core is intended to resonate most with those charged with operationalising risk management within an organisation
 	- **The Framework Core (GIPDRR)**- Function/Category/Category Identifier
 		- **Govern (GV)**- 
+			- establish governance
+			- understand and manage the organisations cybersecurity risk management strategy, roles, responsibilities, legal requirements and risk tolerance
+			- all about setting the direction and oversight
 			- Organisations cybersecurity risk management strategy, expectations and policy are established, communicated and monitored
 			- Govern function provies outcomes to inform what an organisation may do to achieve and prioritise the outcomes of the other five functions in context of mission and stakeholder expectations
 			- Governance activities are critical for incorporating cybersecurity into an organisations broader enterprise risk management (ERM) strategy
@@ -113,6 +126,9 @@
 				- **Oversight**- GV.OV
 				- **Cybersecurity Supply Chain Risk Management**- GV.SC
 		- **Identify (ID)**-
+			- understand risk
+			- identify organisational systems, assets, people, data and capabilities to understand and manage cybersecurity risks
+			- this includes stakeholders, supply chain dependencies and ciritical data locations
 			- organisations current cybersecurity risks are understood
 			- understanding organisations assets (data, hardware, software, systems, facilities, services, people), suppliers and related cybersecurity risks enables an organisation to prioritise its efforts consistent with its risk management strategy and mission needs identified under Govern
 			- essential for understanding where the data resides (internal or third parties) and have policies to protect it
@@ -122,6 +138,9 @@
 				- **Risk Assessment**- ID.RA
 				- **Improvement**- ID.IM
 		- **Protect (PR)**-
+			- safeguard assets
+			- implemente safeguards to limit or contain the impact of potential cybersecurity events
+			- this includes access controls, awareness training, encryption, backups and patch management
 			- Safeguards used to manage organisations cybersecurity risks
 			- implementing safeguards to ensure continuity of critical business processes. including- managing access to assets and information, conducting regular backups, protecting sensitive data and regularly updating software to prevent vulnerabilities
 			- once assets and risks are identified and prioritised, Protect supports the ability to secure those assets to prevent or lower the likelihood and impact of adverse cybersecurity events,
@@ -134,6 +153,9 @@
 				- **Platform Security**- PR.PS
 				- **Technology Infrastructure Resilience**- PR.IR
 		- **Detect (DE)**-
+			- identify incidents
+			- develop and implement processes to detect cybersecurity events in  a timely manner
+			- logging, intrusion detection systems, security monitoring and anomaly detection all fall here
 			- Possible cybersecurity attacks and compromises are found and analysed
 			- detect enables the timely discovery and analysis of anomalies, indicators of compromise, other potentially adverse events that may indicate that cybersecurity attacks and incidents are occurring.
 			- this function supports successful incident response and recovery activities
@@ -145,6 +167,9 @@
 				- **Continuous Monitoring**- DE.CM
 				- **Adverse Event Analysis**- DE.AE
 		- **Respond (RS)**-
+			- take action
+			- define and execute incident response plans
+			- includes communication, containment, analysis and coordination after an event has been detected
 			- actions regarding a detected cybersecurity incident are taken
 			- Respond supports the ability to contain the effects of cybersecurity incidents
 			- outcomes within this function cover incident management, analysis, mitigation, reporting and communication
@@ -158,6 +183,9 @@
 				- **Incident Response Reporting and Communication**- RS.CO
 				- **Incident Mitigation**- RS.MI
 		- **Recover (RC)**-
+			- restore operations
+			- plan for resilience and the timely restoration of capabilities and services after an incident
+			- also includes learning from the incident (lessons learned, updates to plans and improvements)
 			- assets and operations affected by a cybersecurity incident are restored
 			- Recover supports the timely restoration of normal operations to reduce the effects of cybersecurity incidents and enable appropriate communication during recovery efforts
 			- key activities
