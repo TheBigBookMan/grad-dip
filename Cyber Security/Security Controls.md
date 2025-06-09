@@ -120,11 +120,40 @@
 			- Govern addresses an understanding of organisational context, the establishment of cybersecurity strategy and cybersecurity supply chain risk management, roles, responsibilites, authorities, polict and the oversiht of cybersecurity strategy
 			- *Categories*- Category Identifier
 				- **Organisational Context**- GV.OC
+					- understand environment in which organisation operations including business objetives, stakeholders and internal/external landscape impacting the cybersecurity decisions
+					- defining business goals and priotities
+					- understanding legal, regulatory and compliance obligations
+					- knowing who the stakeholders are- internal, external
+					- mapping out dependencies- cloud providers, infrastutrucre
 				- **Risk Management Strategy**- GV.RM
+					- develop and maintain a strategy that defines how cybersecurty risk is assessed, accepted, mitigated, transferred or avoided
+					- defininf risk apetite and tolerance
+					- determining risk assessment methodologies
+					- setting risk-based prioritisation for security investments
+					- aligning cyberseuciryt risk with enterprise risk management
 				- **Roles, Responsbilities and Authorities**- GV.RR
+					- clearly define who is responsible for cybersecurity across organisation and ensure accountability at all levels
+					- assigning formal responsibilities for governance, operations, incident response and compliance
+					- documenting roles across teams
+					- empowering individualcs with appropriate authority to act
 				- **Policy**- GV.PO
+					- to establish and maintain formal cybersecurity policies that guide behaviour, decisions and control across organisation
+					- creating and maintaing security policies
+					- ensuring policy approval and implementation and comuncation
+					- ensuring policies are upheld
+					- conducting periodic auditing of policies for updates and reviews
 				- **Oversight**- GV.OV
+					- ensure cybersecurity govrnance is monitored, measured and continously improved
+					- conducting cyberseucirty audits
+					- tracking policy enforecment and metrics
+					- ensuring executeive and board visibility of cybersecurity posture
+					- managing performance indicators and improvement plans
 				- **Cybersecurity Supply Chain Risk Management**- GV.SC
+					- manage cybersecutrity risks associated with vendors, third parties and supply chain parnters
+					- evaluating supplier cybersecurity practices
+					- including security requiements
+					- monitoring third party risk
+					- developing response plans for supplier-related incidents
 		- **Identify (ID)**-
 			- understand risk
 			- identify organisational systems, assets, people, data and capabilities to understand and manage cybersecurity risks
@@ -135,8 +164,11 @@
 			- this function also includes identification of improvement opportuniuties for organisations policies, plans, processes, procedures and practices that support cybersecurity risk management to inform efforts under all six functions
 			- *Categories*- Category Identifier
 				- **Asset Management**- ID.AM
+					- identify and maintain an inventory of all physical and digital assrts that support organisations opersations
 				- **Risk Assessment**- ID.RA
+					- identify and analyse cybersecurity risks to operations, assets and individuals
 				- **Improvement**- ID.IM
+					- coontinously improve the organisations understanding of its cybersecurity posture and to evolve its practices absed on experience and changes in the environment
 		- **Protect (PR)**-
 			- safeguard assets
 			- implemente safeguards to limit or contain the impact of potential cybersecurity events
@@ -148,10 +180,24 @@
 			- outcomes covered by this function include identity management, authentication and access controle; awareness and trainig; data security; platform security (hardware, software, services of physical and virtual platforms); resilience of technology infrastructure
 			- *Categories*- Category Identifier
 				- **Identity management, Authentication and Access Control**- PR.AA
+					- ensures only authoiused users and devies have access to assets
+					- include MFA, least privilefe, role-based access control and identity lifecycle management
+					- also covers device authentication and session management
 				- **Awareness and Training**- PR.AT
+					- ensures users and staff are trainined to identify and respond to cybersecurity threats
+					- covers security awareness programs, phishing simulations and role specific training
 				- **Data Security**- PR.DS
+					- protecting data at rest, transit and use
+					- encryption, access control, data classification and data los preventions DLP policies
+					- emphasises secure data handling, retention and disposal
 				- **Platform Security**- PR.PS
+					- involves hardening operating systems, applications and firmware
+					- patch management, secure configuration baselines and anti-malware defenses
+					- ensures platforms are configured and maintained securely
 				- **Technology Infrastructure Resilience**- PR.IR
+					- infrastructure can withstand disruptions or attacks
+					- includes redundancy, failover systems, system hardening and backup verification
+					- aims to limit operational impact from failures or breaches
 		- **Detect (DE)**-
 			- identify incidents
 			- develop and implement processes to detect cybersecurity events in  a timely manner
@@ -165,7 +211,13 @@
 				- capturing and reviewing logs of a system events, such as account changes and communication initiations. Security information and event management (SIEM) tools can be used to analyse logs for anomolies
 			- *Categories*- Category Identifier
 				- **Continuous Monitoring**- DE.CM
+					- ongoing monitoring of networks, endpoints, systems and user activities to detect anomolies
+					- includes SIEMS, intrustion etection sysyems, log collection and alerting
+					- enables early detection of suspicious behavour or policy violations
 				- **Adverse Event Analysis**- DE.AE
+					- focuses on identifying, validating and priotitising potential security events
+					- iuncludes triages, initial investigation and linking events to known threats or incidents
+					- enables rapid escalation and action
 		- **Respond (RS)**-
 			- take action
 			- define and execute incident response plans
@@ -179,9 +231,17 @@
 				- after testing or experiencing an incident, adjust response and recovery plans based on lessons learnt. this ensures the plan remains effective and up to date with current needs
 			- *Categories*- Category Identifier
 				- **Incident Management**- RS.MA
+					- establishes formal incident response procdeures and respnsibilities
+					- includes playbooks, escalation paths, authoriy levels and legal considerations
 				- **Incident Analysis**- RS.AN
+					- focuses on understanding the scope and root caseuf of the incident
+					- includes forencis,c impact assessment and determining threat origin
 				- **Incident Response Reporting and Communication**- RS.CO
+					- covers internal and external communications furing and after the incideitn
+					- includes communication with executives, regulatros, third parties and customers
 				- **Incident Mitigation**- RS.MI
+					- defines how to contain, neutralise and recover from an incident
+					- includes isolating infected systems, revoking access and resotring backups
 		- **Recover (RC)**-
 			- restore operations
 			- plan for resilience and the timely restoration of capabilities and services after an incident
@@ -195,7 +255,13 @@
 				  explore cyber insurance options as part of recovery planning, be aware that insurance payouts may take time, so alternative plans are critical
 			- *Categories*- Category Identifier
 				- **Incident Recovery Plan Execution**- RC.RP
+					- executes the business continuity plan 
+					- includes restoring data, sevices and systems to pre-incident state
+					- ensures recovery timelines and SLAs are met
 				- **Incident Recovery Communication**- RC.CO
+					- involves post-incident updates to stakeholders, regulators and customers
+					- includes status updates, root cause summaries and long term corrective actions
+					- supports organisation trust and transparency
 	- The core was designed to cover the entire breadth without being overly deep crossing topics across cyber, physical and personnel
 	- Covers across Functions->Categories->Subcategories
 	- Subcategories are deepest level of abstraction in the core, 97 subcategories and outcome-driven statements that provide considerations for creating or improving a cyebrsercurity program
@@ -255,31 +321,64 @@
 		- create and demonstrate 'peaceful co-existence' with other governance, regulatory, and process management schemes, frameworks and structures
 		- cooperate with and point to existing, independent standards and security recommendations where they exists, such as National Institute of Standards and Technology (NIST), Cloud Security Alliance (CSA), Software Assurance Forum for Excellence in Code (SAFECode), Att&CK and Open Web Application Security Project (OWASP)
 - **Importance of CIS Controls**- five critical security controls that address asset management, secure configurations and continuous monitoring. important in reducing vulnerabilities and defending against threats
-	- **CIS Control 1**-
+	- 18 security controls best practices
+	- help organisations rengthen security posture, reduce risk and defend agains most common cyber threats
+	- **CIS Control 1**- Inventory and Control of Enterprise Assets
 		- utilises an active discovery tool to identify devices connected to organisations network and update the hardware asset inventory
+		- detect and quarantine unauthorised or unknown devices
 		- maintains an accurate and up-to-date inventory of all technology assets with the potential to store or process information. the inventory shall include all hardware assets whetehr connected to organisations network or not
-	- **CIS Control 2**-
+		- reduces attack surface by indentifying unmanaged devces
+		- helps enforce access control  policies and incident response
+	- **CIS Control 2**- Inevntory and Control of Software Assets
 		- ensures that all software on an organisations network is authorised and properly inventoried
 		- mandates continous monitoring and invetorying of software to prevent unauthorised or vulnerable software from being installed or running within the org
-	- **CIS Control 3**-
+		- unauthorised or outdated software is a common entry point for attackers, this control ensures only approved software is installed anc monitored
+		- approve and whitelist applications
+		- prevents shadow IT and reduces malware risk
+		- supports software license compliance
+	- **CIS Control 3**- Data Protection
+		- protect sensitive data from unauthorised access, loss or misuse at rest, transit or in use
+		- classify data and label by its sensitiyive
+		- using encryption
+		- protects untellectual property and personal/sensitive data
+		- helps meet compliance
 		- involves securing configurations for hardware and software on mobile devices, laptops, workstations and servers to reduce vulnerabilities
 		- stresses establishing secure baselines for configurations and actively managing and enforcing these configurations throughout the system lifecycle
-	- **CIS Control 4**-
+	- **CIS Control 4**- Secure Configuration of Enterprise Assets and Software
+		- default configurations often insecure, this control enforces hardened settings for OS, applications and devices
+		- develop and apply secure baseline configurations
+		- use configuration management
+		- reduces vulnerability exposure
 		- focuses on the continuous vulnerability assessment and remediation process, ensuring vulnerabilities are identified and addressed in a timely manner
 		- mandates regular scans of network devices and applications to detect potential vulnerabilities and deploy patches or corrective actions
-	- **CIS Control 5**-
+	- **CIS Control 5**- Account Management
 		- covers te secure configuration of enterprise network devices such as firewalls, routes and switches, ensuring these are configured to reduce security risks
 		- emphasises managing hardware devices securely throughout their lifecycle and enforcing best practices for secure configuration
 - **CIS Implementation Groups**- CIS controls were developed to provide guidelines to organisations at any scale. assist organisations of any size 3 implementation groups (IG) were created. based on risk profile and resources and organisation has acces sto- total of 153 safeguards spread across each
-	- **Implementation Group 1 (IG1)**- 
+	- **IMplementation Groups**-
+		- defined which subcontrols are most appropriate for an organisation
+		- the 18 controls are split into subcontrols in each implementation group
+		- depending on
+			- size and complexity
+			- cybersecurity expertise
+			- available IT resources
+			- risk tolerance and exposure
+			- regulatory and legal obligations
+	- **Implementation Group 1 (IG1)**- Basic Cyber Hygiene
+		- small businsess or non-profit with limited IT/security staff and resources
+		- defending against common, non-targeted attakcs
 		- definition of essential cyber hygiene and represents minimum standard of information security for all enterprises
 		- IG1 assists enterprises with limited cybersecurity expertise thwart general, non-targeted attacks
 		- 56 cyber defence safeguards
-	- **Implementation Group 2 (IG2)**-
+	- **Implementation Group 2 (IG2)**- Standard Cyber Hygiene
+		- medium sized oragnisations with dedicated IT teams and moderate risk exposure
+		- likely handling sensitive data
 		- assists enterprises managing IT infrastructure of multiple departments with differing risk profiles
 		- IG2 aims to help enterprises cope with increased operational complexity
 		- 74 additional cyber defence safeguards
-	- **Implementation Group 3 (IG3)**-
+	- **Implementation Group 3 (IG3)**- Advanced Cyber Hygiene
+		- large enterprises or in high-risk sectors
+		- facing targeted threats with legal/regulatory mandates
 		- assists enterprises with IT security experts to secure sensitive and confidential data
 		- IG3 aims to prevent and/or lessen the impact of sophisticated attacks
 		- 23 additional cyber defense safeguards
