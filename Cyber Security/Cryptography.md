@@ -40,6 +40,7 @@
 				- if either copy of the key is compromised, an intermediary can decrypto and read messages without the receivers knwoeldge
 		- ![[Pasted image 20250602162916.png]]
 		- **Asymmetric Encryption**- assymetric encryption is a cryptographic method that includes two different keys (public and private key) to encipher or decipher the message. also known as 'public key encryption'. every user in this systems needs to have a pair of dissimilar keys, a private and public (one is used for encryption, other can decrypto the ciphertext back to original plaintext). length of keys (number of bits) in this encryption is large; the encryption/decryption process is slower than symmetric encryption. RSA algorithm was the first public key encryption algorithm developed/published for commercial use
+			- PersonA gives their public key to PersonB and vice versa, personA uses PersonsBs public key to encrypt the message so then when PersonB gets the message they can use their private key to decrypt the message because it was encrypted with their public key
 			- **Benefits**-
 				- decryption and encryption processes require two different keys, so encryption key can be shared via an unsecured channel as long as there is a way to authenticate the senders identity
 				- public key cryptosystem can be used to share keys for symmetric encryption
@@ -104,6 +105,8 @@
 				- move the letters of each by the key number
 				- encryption can also be done by shifting letters between 1 to 25 positions
 				- Caesar is usually 3 positions
+		- **ENCRYPT**- Plaintext (P) + Key (K) (mod 26) = Ciphertext
+		- **DECRYPT**- Ciphertext (C) - Key(K) (mod 26) = Plaintext (P)
 		- **Vigenere Cipher**-
 			- uses a text string as a key, which then used to calculate the number of shifts in plaintext
 			- **Letter to number mapping**-
@@ -119,6 +122,10 @@
 			- simple columnar transposition- where plaintext is written horizontally with a certain alphabet width and then the ciphertext is read vertically
 			- key = number of rows you spread the message across
 			- read it vertically when its spread horizontally and thats the cipher code
+			- **ENCRYPTING**- shade the bottom right corner horizontal
+				- put in row by row left to right
+			  **DECRYPTING**- shade bottom right corner vertical
+				- put in row by row left to right
 		- **Feistel Block Cipher**-
 			- common design model for block ciphers is Festel cipher. popular algorithsm use it- DES, 3DES
 			- not a single block cipher but a design framework which many block ciphers like DES derive
