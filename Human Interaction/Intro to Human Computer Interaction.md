@@ -1,0 +1,48 @@
+- **Human-Computer Interaction (HCI)**-
+	- research in the design and use of computer tech
+	- focuses on interfaces between peoploe and computers
+	- users input commands with keyboard, mouse, gamepad, joystick or microphone
+	- input information handled by OS kernal and middleware
+	- computer outputs processed information via displays, speakers or gamepage
+	- users then input new commands after receiving feedback
+	- forming an input/output loop
+	- situated at the intersection of computer science, psyhcology and all other fields of science
+- **Why HCI Important**-
+	- need HCI to improve user interface design
+	- feedback loop of human sensors
+	- ![[Pasted image 20250724095423.png]]
+- **User Interfaces**- 
+	- **Batch Interfaces (1945-68)**-
+		- non-interactive user interfaces
+		- users specified all details of batch job in advance of bath processing, receives output when all processing is done
+		- computer does not prompt for furhter input after processing has started
+		- mainly punch cards
+	- **Command Line INterfaces (1969-present)**-
+		- prompt users for input by typing command string with keyboard abd respond by outputting text on computer monitor
+	- **Graphical User Interface (GUI) (1968-present)**-
+		- input via devices such as computer keyboard and mouse that provide a articulated graphical output via computer monotir
+		- WIMP (windows, icons, menus, pointers)
+- **Interface Types**-
+	- **Pen Interfaces**-
+		- any computer user interface using a digital pen
+		- popular in mobiles such as tablets, PDAs and GPS receivers
+		- digital pen is generally used to press upon a graphics tablet or touchscreen, as opposed to using a more traditional interface such as keyboard, keypad, mouse or touchpad
+	- **Direct Touch Interfaces**-
+		- multi-touch technology enabling surface (touchpad or touchscreen) to recognise presence of one or more point of contact with surface at any time
+		- used to implement additional functionality such as pinch to zoom, or activate certain subroutinrs attached to predefined gestures
+	- **Tangible User Interfaces**-
+		- person interacts with digital information through physical environment
+		- GUI only exists in digital world, TUI connects the digital with physical
+		- because this is designed for one target group, interface must be developed together wth target group ensuring better user experience
+		- allows phyiscal interaction between user and interface itself
+		- user knows intuitively how to use interface by knowing the function of phyiscal object- less learning time
+	- **Gesture Interfaces**-
+		- form of non-verbal communication which visible bodily actions are used to communicate messages
+		- in place of speech or together in parallel with spoken words
+		- include movements of hands, face or body parts
+		- **Gesture Design**- 
+			- gestures should be straightforward so users can easily recall and perform them
+			- simple gestures allow users to use technology minimal effort at max speed
+		- **Gesture Recognition**-
+			- rely on gesture-recognition algrithms to identify gesture movements
+			- systems determine which device command a particular gesture represents and take appropriate action
