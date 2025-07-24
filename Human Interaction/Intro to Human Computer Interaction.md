@@ -46,3 +46,51 @@
 		- **Gesture Recognition**-
 			- rely on gesture-recognition algrithms to identify gesture movements
 			- systems determine which device command a particular gesture represents and take appropriate action
+	- **Voice User Interfaces**-
+		- allow users to interact with a system through voice or speech commands
+		- usually use speech recognition to understand spoken commands
+		- widely used in motor vehicles, home automation systems, computer OS, home applicanes and TV remotes
+	- **Brain Computer Interfaces**- 
+		- acquires brain signals, analyses them and translates them into commands relayed to an output to carry out action
+		- computer interaction via application of ML to statistical temporal features  extracted from frontal lobe EEG brainwave
+		- data have high levels of success in classifying mental states and emotional states
+
+## Input Devices and Interaction Tasks
+- **Interacation. Task**- 
+	- entry of information using a hardware or software device
+	- dialogue is a series of exchanges o information between a user and the computer
+	- seven basic tasks in HCI
+- **Selection**-
+	- choosing objects from set of alternatives
+	- selection task may be achieved by pointing and clicking object with mouse cursor; tabbing through list; selecting meny; typing identifier key; soeaking speech recognition
+- **Position and Orient**-
+	- specfying a position within a range, an angle or 3D orientation
+	- **Linguistic**- 'specify' in some coordinate systems
+		- can use input text boxes to quantify position, orientation and scale of an bobject
+	- **Spatial**- move cursor to position
+		- use arrow buttons or mouse cursor to change position and orientation of an objet by selection
+		- device movement direction should correspond to movement in screen space
+- **Path**- specifying a series of positions and orientations oer time
+- **Quantify**- specifying an exact numeric value
+- **Linguistic**- value types on QWERTY keyboard or number pad
+- **Spatial**- can use an operate slider, dial, pointer and up/down counter
+- **Text**- entry of symbolic data
+	- when entering large amounts of text, hardware keyboard is preferred over simluated keyboard or selection of characters
+
+## Input Devices
+- input devices in HCI enables users to enter data as instruction into computer for processing
+- keyboard, mouse, scanner, touch pad, light pen, digital camera, hoysticsk
+- **Categories**-
+	- **Sense Positions**-
+		- sense position of mechanical control object (stylus or finger)
+		- tablets, phones
+	- **Sense Motion**-
+		- sense their motion, mouse use light source- light-emitting diode (LED) and light detector to detect movement relative to a surface
+		- mouse
+	- **Sense Force**-
+		- sense force applied to device
+		- isometric joystick
+		- pointing device typically mounted centrally in a computer keyboard
+		- like other pointing devices- mice, touchpadds or trackballs, OS software translates manipulation of device into movements of pointer or cursor
+		- reacts to strain or force rathern than gross movement- called isometric pointing device 
+	- 

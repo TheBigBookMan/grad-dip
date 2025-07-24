@@ -8,21 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "58422d8b8fb5760f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Human Interaction/Intro to Human Computer Interaction.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Intro to Human Computer Interaction"
-            }
-          },
-          {
-            "id": "3d5dd297dd14c350",
+            "id": "fae7e1dffad8bdb7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Intro to Cloud Repo and Virtualisation"
             }
+          },
+          {
+            "id": "0129fbc1580de9ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Human Interaction/Intro to Human Computer Interaction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro to Human Computer Interaction"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,11 +179,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "58422d8b8fb5760f",
+  "active": "0129fbc1580de9ae",
   "lastOpenFiles": [
-    "Pasted image 20250724095423.png",
     "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Human Interaction/Intro to Human Computer Interaction.md",
+    "Pasted image 20250724095423.png",
+    "Untitled.md",
+    "Untitled 1.md",
+    "AWS Skill Builder/SAA/Solutions.md",
+    "Web Cloud",
+    "Human Interaction",
+    "AWS Skill Builder/CP/Services.md",
+    "AWS Skill Builder/CP/Architecture.md",
     "Cyber Security/Cyberlaw, BCP, Incident Response and Access Control.md",
     "Cyber Security/Cryptography.md",
     "Cyber Security/Web Application Security.md",
@@ -198,7 +206,6 @@
     "Pasted image 20250606101851.png",
     "Pasted image 20250606095949.png",
     "Pasted image 20250605175943.png",
-    "Pasted image 20250605162723.png",
     "Cyber Security/~WRL0486.tmp",
     "Cyber Security/~WRD0478.tmp",
     "Cyber Security/~WRL3684.tmp",
@@ -218,7 +225,6 @@
     "Artificial Intelligence/AI in Games.md",
     "Untitled 2.md",
     "Intro Prograrmming/INtro.md",
-    "Intro Prograrmming/Intro.md",
-    "RAG/RAG Langchain.md"
+    "Intro Prograrmming/Intro.md"
   ]
 }
