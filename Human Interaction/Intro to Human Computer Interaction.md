@@ -93,4 +93,35 @@
 		- pointing device typically mounted centrally in a computer keyboard
 		- like other pointing devices- mice, touchpadds or trackballs, OS software translates manipulation of device into movements of pointer or cursor
 		- reacts to strain or force rathern than gross movement- called isometric pointing device 
-	- 
+	- **Absolute vs Relative Input Devices**-
+		- **Absolute**- 
+			- 1:1 mapping between input and output spaces
+			- position sensing devices like tablet
+		- **Relative**-
+			- input controls the relative position of the cursor (always indirect)
+			- motion sensing devices like hte mouse
+	- **Direct vs Indirect Control**-
+		- **Indirect Devices**-
+			- display surface is not input surface
+			- a mouse is an indirect input device as you must move mouse to point to a spot on screen
+			- hovering is indispensable, user must know position of cursor before starting drawing
+			- hovering feedback means tracking position of the pointing device while pointing device is proximal to interaction surface
+		- **Direct Devices**-
+			- display surface also is input surface
+			- touchscreen is direct input device
+			- hovering feedback is not indispensiable as there is clear mapping between pen/finger and screen
+			- occlusion problems are main drawback- concerned with cases where fingers or hands cover the object of interestg when intetaction with it
+			- occlusion proglem is the fat finger problem, when touch targets are packed too close together the finger touches more than what desired
+- **Transfer Function**-
+	- matches physical properies sensed by input device
+	- three main tytpes:
+		- force-to-velocity (isometric joystick)-
+		- position-to-position (touchscreens)-
+		- velocity-to-velocity (mice and touchpads)-
+	- simple miltiplicative transfer function is control-to-display (C:D) ratio which is ratio between movement of input device and corresponding movement of object it controls
+	- if a mouse must be moved 1cm on desk in order t move a cursor 2 cm on screen the device has a 1:2 control-to-display ratio
+- **Three State Models**- different states for an input 
+	- example- mouse
+		- **State 0**- out of range- the device is not in its physical tracking range
+		- **State 1**- tracking- device motion moves only the cursor
+		- **State 2**- dragging- device motion moves objects on the screen
