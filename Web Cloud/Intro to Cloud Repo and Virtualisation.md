@@ -16,3 +16,44 @@
 	- distrubuted source control
 	- develoeprs can have full version on their device
 	- many branches
+
+## Virtualisation
+- **Advantages VMs in Cloud**-
+	- **Scalability**-
+		- scale computing resources up and down based on demand
+		- organistions can easily adjust number of VM instances and resources allocated
+		- ensuring optimatl performance and cost-efficiency
+	- **Cost Savings**-
+		- elimante the need for upfront hardware investments and associated maintenance costs
+		- organisations leverage pay-as-you-go model
+	- **Rapid Provisioning**-
+		- provisioned quickly- in minutes
+		- scale infra rapidly and respond to business needs faster and reduces time required for deploying new apps or services
+	- **High Availability and Redundancy**-
+		- offer robust infra and redundancy measures to ensure high availability of VM instances
+		- data centres located different regions providing failover options and minimising risk of downtime
+	- **Flexibility and Customisation**-
+		- various config options, allowing organisations to choose their desired operating system, software stack an resource allocation
+		- flexibilty enables custom environments for each apps requirements
+- **Disadvantages of Implementing VMs in Cloud**-
+	- **Dependency on Internet Connectivety**-
+		- require stable internet connection to access and manage them
+		- organisations may face challenges and utilising their VM instances in unreliable or limited connectivity cases
+	- **Potential Vendor lock-in**-
+		- mving VMs between cloud providers can be complex and time consuming
+		- organisations may face challenges if they want to migrate their VMs from one provider to another, as compatability and migration tools vary
+		- result in vendor lock in and limit flexibility i nchoosing diferent providers
+	- **Performance Variability**-
+		- performance can be influenced by factors such as network latency, shared resources and virtualisation overhead
+		- sometimes organisations experience performance fluctuations, particularly sharing physical resources with other cloud users
+	- **Data Security and Compliance**-
+		- organisations must carefully consider data security and compliance when implementing VMs in the cloud
+		- must ensure appropriate security measures, access controls and data encryption to protect sensitive information
+		- compliance with industry regulations and data residency requirements may also need to be addressed
+	- **Cost Management**-
+		- must carefully manage their resources usage to avoid unexpected costs
+		- organisations may face higher than anticipated cloud bills if resources are not adequately monitorired or optimised
+- **Dependency Matrix from Hell**-
+	- so many dependencies for applications
+	- different versions can happen acros environments and cause incompatibility
+	- different versions of libraries causes conflicts and deployment issues

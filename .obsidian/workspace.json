@@ -35,8 +35,7 @@
               "title": "Intro to Human Computer Interaction"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,10 +178,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0129fbc1580de9ae",
+  "active": "fae7e1dffad8bdb7",
   "lastOpenFiles": [
-    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Human Interaction/Intro to Human Computer Interaction.md",
+    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Pasted image 20250724095423.png",
     "Untitled.md",
     "Untitled 1.md",
