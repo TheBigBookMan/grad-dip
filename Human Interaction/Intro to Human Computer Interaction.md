@@ -121,7 +121,48 @@
 	- simple miltiplicative transfer function is control-to-display (C:D) ratio which is ratio between movement of input device and corresponding movement of object it controls
 	- if a mouse must be moved 1cm on desk in order t move a cursor 2 cm on screen the device has a 1:2 control-to-display ratio
 - **Three State Models**- different states for an input 
+	- computer pointing devices in terms of state transitions
+	- paradigm of descriptive modelling
 	- example- mouse
 		- **State 0**- out of range- the device is not in its physical tracking range
 		- **State 1**- tracking- device motion moves only the cursor
 		- **State 2**- dragging- device motion moves objects on the screen
+	- **Device Acquisition Time**- 
+		- average time to pick up or putdown an input device
+		- important metric to measure performance of input device
+		- mobile devices supporting pen input and finger touch, device acquisition time using a pen is generally longer than using finger which demonstrated significant advantage of direct finger touch
+	- **Degrees of Freedom**- 
+		- number of parameters may vary independently
+		- traditional GUI is moving on 2D cursor (y, x) which is 2 degrees of freedom
+		- sensing the location of two fingers would be 4DOF, two touch points can be used as X and Y position of object as well as rotation and scale
+
+## Graphical User Interface (GUI)
+- **GUI Programming**-
+	- use a toolkit that must follow a pattern of progtram design laid down by toolkit vendor
+	- toolkits are set of reuseable classes designed to provide useful, general purpose functionality
+	- each toolkit has its own API and set of design rules
+	- most languages have a popular toolkit to use
+- **GUI Programming Terms**-
+	- **Window**- 
+		- area of screen controlled by application
+		- usually rectangular 
+		- windows can contain other windows and every single GUI control is treated as a window in its own right
+	- **Control**-
+		- GUI object used for controlling the applicaiton
+		- controls have properties and usually generate events
+		- normally controls correspond to app level objects and the events are coupled to methods of corresponding object such when an event occurs- when an object executes a method
+		- GUI environment usually provides a mechanism for binding events to methods
+	- **Widget**-
+		- is a control sometimes restricted to visible controls
+		- some cotnrols can be associated with a given window but are not visible
+		- widgets are subset of controls that are visisble and can be manipulated by programmer, such as frame, label, button, text entry, message boxes, test box, radio button, canvas, check button, image, listbox, menu/menu button and scale/scrollbar
+	- **Layout**-
+		- controls are laid out within frame 
+		- layout may be specific in number of ways either using on screen coordinates specified in pixels, using relative postion to other components (left, top) or using grid or table arrangement
+		- coordinate system is easy to undertand but difficult to manage when window is resized and so on
+		- beginners are advised to use non-resizeable windows if working with coordiante based layouts
+	- **Child**-
+		- GUI apps have hierarchy of widegets/controls
+		- top-level frame comprising of application window will contain subframes that contain more frames or controls
+		- controls can be visualised as a tree structure with each control having a single parent and number of children
+		- normal for structure to be stored explicitly by widgets so programmers can perform some common action to control and all its children
