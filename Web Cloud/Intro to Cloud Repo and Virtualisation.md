@@ -57,3 +57,28 @@
 	- so many dependencies for applications
 	- different versions can happen acros environments and cause incompatibility
 	- different versions of libraries causes conflicts and deployment issues
+- **How containers overcome dependency matrix from hell**-
+	- **Encapsulate Environments**-
+		- encapsulate application and its dependencies, creating isolated runtime environments
+		- each container includes necessary runtime components, libraries and dependencies to run application without affecting host system or other containers
+		- isolation elimnates conflicts between different apps and their dependncies
+	- **Reproducible Builds**-
+		- define the apps runtime environment in a reproducible manner
+		- container image includes a snapshot of the app, its dependices and underlying system components
+		- ensuring apps run consistently across different enviroinoments, regardless of underlying host system config or dependencies
+	- **Portability**-
+		- designed to be portable across different environments, including development machines, testing environments and prod servers
+		- because container includes all necessary dependencies, it can quickly move from one environment to another without worrying about compatability or versioning issues
+		- portability simplifies the deployment process and ensures consistent behaviour across different environments
+	- **Dependency Management**-
+		- container orchestration such as kubernetes to manage and deploy large scale containerised apps
+		- platforms provide features like service discovery, load balancing and audomtate scaling
+		- simplify dependency management by allowing deployment and coordidation of multiple container, manaing their interconnections and ensuring the availability of required dependencies
+	- **Versioning and Rollbacks**-
+		- containers enable versioning and rollbacks at container level
+		- each container image can be tagged with specific version, allowing easy tracking and management of different versions of an app
+		- in case issues or failures, rollbacks can be performaed by reverting to previous container image, ensuring rapid recovery without affecting other containers or host system
+	- **Infrastructure Agnosticism**-
+		- designed to be infra agnostic
+		- abstract away the underlying infra and run consistently across different host systems, whether a dev machine, local server or cloud based environment
+		- flexibility allows organisations to leverage different infra proiders or switch between environments without significantly modifying application or its dependencies
