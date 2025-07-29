@@ -82,3 +82,20 @@
 		- designed to be infra agnostic
 		- abstract away the underlying infra and run consistently across different host systems, whether a dev machine, local server or cloud based environment
 		- flexibility allows organisations to leverage different infra proiders or switch between environments without significantly modifying application or its dependencies
+- **VMs vs Container**-
+	- **VMs**-
+		- emulate an entire operating system and run on hypervisor that abstracts the underlying hardware
+		- each VM includes seaprate guest OS which consumes system resources independently of the host OS
+		- VMs have their own kernel and full OS, allowing them to run applications that are not compatible with host OS
+		- VMs offer strong isolation between different instances, as they operate as individual entitites with their own network stack and file system
+		- VMs provide the ability to run different operating systems and have more flexibilty in terms of software and configuration options
+		- each VM requires dedicated number of resources, may take longer to provision and start compared to containers
+		- VMs can run on bare-metal servers or be deployed in virtualised infra
+	- **Containers**-
+		- operate at the OS level and share the host OS kernel
+		- package applications and their dependencies into a single, lightweight unit known as container image
+		- multiple containers can run on the same host, utilising shared OS resources without replicating full OS for each container
+		- containers provide faster startup times and use fewer resoures than VMs since dont require separate guest OS
+		- containers have less isolation compred to VMs since they share host OS, however still provide isolation at process level and can run securely using containerisation technologies
+		- containersa re highly portable and can quickly move between environments if the host OS supports the requried container runtime
+		- container orchestration like kubernetes enable efficient managment, scaling and deployment of containers in a distributed environment
