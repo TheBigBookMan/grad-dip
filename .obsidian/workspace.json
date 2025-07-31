@@ -8,21 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fae7e1dffad8bdb7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Intro to Cloud Repo and Virtualisation"
-            }
-          },
-          {
-            "id": "0129fbc1580de9ae",
+            "id": "58422d8b8fb5760f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Intro to Human Computer Interaction"
             }
+          },
+          {
+            "id": "72d0302cee6c3c60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Human Interaction/Interaction with Indirect Devices.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Interaction with Indirect Devices"
+            }
+          },
+          {
+            "id": "3d5dd297dd14c350",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro to Cloud Repo and Virtualisation"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,18 +193,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fae7e1dffad8bdb7",
+  "active": "72d0302cee6c3c60",
   "lastOpenFiles": [
+    "Pasted image 20250801085733.png",
     "Human Interaction/Intro to Human Computer Interaction.md",
-    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
+    "Human Interaction/Interaction with Indirect Devices.md",
     "Pasted image 20250724095423.png",
-    "Untitled.md",
-    "Untitled 1.md",
-    "AWS Skill Builder/SAA/Solutions.md",
-    "Web Cloud",
-    "Human Interaction",
-    "AWS Skill Builder/CP/Services.md",
-    "AWS Skill Builder/CP/Architecture.md",
+    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Cyber Security/Cyberlaw, BCP, Incident Response and Access Control.md",
     "Cyber Security/Cryptography.md",
     "Cyber Security/Web Application Security.md",
@@ -224,6 +234,7 @@
     "Artificial Intelligence/AI in Games.md",
     "Untitled 2.md",
     "Intro Prograrmming/INtro.md",
-    "Intro Prograrmming/Intro.md"
+    "Intro Prograrmming/Intro.md",
+    "RAG/RAG Langchain.md"
   ]
 }

@@ -1,0 +1,27 @@
+## Mouse Interaction
+- computer mouse invented in 60s
+- originally a block
+- originally referred to as 'X-Y position indicatory for a display system'
+- **Indirect Input Device**-
+	- functions by detecting two-dimensional motion relative to its supporting surface
+	- hand operated electronic device that controls coordinates of a cursor on computer screen as user moves it around on a surface
+	- generally perforam following actions
+		- *Left Clicking*- user clicks left button of the mouse
+		- *Right Clicking*- user clicks right button of the mouse
+		- *Double Clicking*- user clicks a mouse button (usually left) twice in quick succession. time interval seaprates the two clicks is determined by mouse settings on OS
+		- *Dragging*- presses and holds down left mouse button then moves the mouse while still holding down left mouse button. usualy moves objects or select objects on screen
+		- *Scrolling*- moves the scroll wheel in the middle of the mouse to scroll up and down on any page
+- **Mouse Types**-
+	- **Mechanical Mouse**-
+		- type of computer mouse that has a rubber or metal ball on underside that can roll in every direction
+		- not common these days
+	- **Optical Mouse**-
+		- relies entirely on one or more light-emitting diodes (LEDs) and an imaging array of photodiodes (semiconductor p-n junction device that converts light into an electrical current) to detect movement relative to underlying surface
+		- when mouse moves or user clicks a button, sends 3 bytes of data to computer
+		- first 8 bits contain
+		- ![[Pasted image 20250801085733.png]]
+		- next 2 bytes contain X and Y movement values
+- **Properties of the Mouse**-
+	- **Sense Motion**- the mouse uses a light source; LED and a light detector to detect movement relative to a surface
+	- **Relative Input Device**- input controls the relative position of the cursor
+	- **Indirect Input Device**- one must move the mouse to point to a spot on the screen
