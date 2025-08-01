@@ -25,3 +25,18 @@
 	- **Sense Motion**- the mouse uses a light source; LED and a light detector to detect movement relative to a surface
 	- **Relative Input Device**- input controls the relative position of the cursor
 	- **Indirect Input Device**- one must move the mouse to point to a spot on the screen
+- **Control to CD Ratio**-
+	- ratio between movement of the input device and the coresponding movement of the object it controls
+	- describes the proportion between movements in the control space to the movements in the display space
+	- example- a mouse moves in a different spoeed or distance from the cursor on the screen
+	- these movements take place in two different spaces, units of measurement must be same to be meningful (eg metrics instead of pixels)
+	- C:D gain refers to scale factor of these two mvoements
+	- ![[Pasted image 20250801194132.png]]
+	- **Process of pointing to a target**-
+		- **Gross Positinoning**- 
+			- getting in the vicinity of a target
+		- **Fine Positioning**-
+			- final acquisition
+	- llow C:D gain the gross positioning time would be short, but fine positioning time would be long
+	- which means that high gains it is easier to approach a distant target; with low gains this takes longer
+	- high gains hinder the selection of targets, whereas low gains facilitate this process
