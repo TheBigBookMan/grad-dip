@@ -149,3 +149,96 @@
 			- ![[Pasted image 20250802094829.png]]
 		- changing keyboard can have high learning cost
 		- explains why QWERTY keyboard is not optimal from perspective of typing efficiency but still widely used
+- **Three Novel Keyboard Designs**-
+	- **ShapeWriter (gesture keyboard)**-
+		- stoke gesture-based text and command input method
+		- instead of tapping each individual letter, the user traces over all letters in a word sequentially on the touchscreen keyboard
+		- the user lands in proximity to the keys, and slidesd to next letters, and lifts the key at the end of the word
+		- shape formed by the gesture is recognised by the engine
+		- system error tolerant and it is not necessary to cross all letters in a word for the system to correctly output the intended word
+		- standard feature of phones
+	- **Touch Display**-
+		- combines physical ergnomic qualities of the conventional keyboard with dynamic display and touch-sensing embedded in each key
+		- effectively transforms the keyboard into interactive surface that is seamlessley integrated with interaction space of GUIs
+		- extends graphical output, mouse interaction and three-state input to keyboard
+		- gave rise to entirely new design of sopace interaction across keyboard, mouse and screen
+	- **Zoomboard**- 
+		- proliferation of touchscreen devices has made soft keyboards a routinr part of life
+		- ultra-small computing platforms like smart watch and ipod nano lack a means of text entry
+		- designing keyboards for small touchscreens such as smart watches is challengeing
+		- enables text entry on ultra small devices with a soft keyboard
+		- design uses interative zooming to enlarge otherwise impossibly tiny keys to comofortable size
+		- designed on qwerty layout
+
+## Interaction Elements
+- interaction occurs when human performs a task using tech
+- two main categories of interaction tasks
+	- interaction tasks with a goal (sending an email, burning a CD and enetering a destination in a GPS device)
+	- interaction tasks without a goal (browsing the web and chatting with friends on a social networking site)
+- Most HCI tasks are in cognitive band of Newells time scale of human action
+	- ![[Pasted image 20250802200608.png]]
+	- human systems at work are deliberate acts (eg mouse click, button click- 100ms), operations (gesture input- 1s) and unit tasks (search menu items, select them- 10s)
+	- **Hard and Soft Controls**-
+		- in the past controls were physical, single-purpose devices
+		- displays and controls tended to bne physical, single purpose devices
+		- controls like hjoysticsk, switches, arrays of switches,m push buttons,keys, keybopards, mice, steering wheels, handles, knobs, levers and so on arrive through an involved process of engineering etc
+		- once built, they were fixed for life- called hard controls
+		- advent of computers with software, graphical displays and point and click interactions changed this
+		- interfaces created in software and rendered on a display are called soft controls
+		- through soft interfaces, the way humans interact with technology changed
+		- distinction between contriols and displays is blurred with soft controls
+		- soft control is rendered on a display through software, its size, shape or appearance can change dynamically to convery information to the user
+		- soft controls have properties of displays
+		- toolbar buttons and widgets are typical examples
+		- image was captured with the curosr, or I-0beam, positioned inside the text: this
+		- image contains two combo boxes and seven buttons
+		- each is both a control and a displayu
+		- ![[Pasted image 20250802201426.png]]
+- **Control-Display Relationships**-
+	- when a user graps a computer mouse and moves it to the right, the cursor on the systenms display moves to the right
+	- control-displayu relationship is not something userts think about much
+	- HCI should be: where the relationship between what a user does and what is experiences is antural, seamless, intuitive and efficient
+	- control-display relationships are sometimes called mappings since the relationships attribute how a controller property maps to a display property
+	- mouse-cursor example describes a spatial relatiopnship
+- **Spatial Relationships**-
+	- mouse-cursor relationshiup
+	- mapping is congruent because there is an exact spatial correspondence between the controller input and the display output
+	- move the nmouse right, cursor goes rightr
+	- mapping supports the uysers expectation
+	- if relationship is expected and considered by most people within a population, such as a cultuiral, ethnic or geographi group, then the relationship is considered as a anatural relationship
+	- Another peropertty is C:D gain (C:D ratiop or devide gain)
+		- quantifiwes amount ofg movement in a display object (cursor) for a given amount of movement in a control
+		- if a mouse is moved 3cm and cursor also moves 3cm then the C:D gain is 1, if cursor moves 6cm 
+		- non linear gains, the term transfer function is used
+
+## Latency
+- (lag) is the delay between an input action and the corresponding response on a display
+- usually negligible on interactive systems (eg cursor positioning, typing)
+- can be noticeable in some settings- remote manipulation or internet access
+- frame rate of 10Hz is considered minimial to achieve real-time
+- **Modes**-
+	- common and sometimes frustrating property of user interaces
+	- mode is a functionaning arrangement or condition
+	- modes are everywhere (and unavoidable)
+	- example-= office phones have modes; a light on means theres a message waiting; light off means no messages
+	- stanbdard keyboard has 100 keys eyt can produce 800 key varations using modes by the modifier keys
+	- common mode- related when you enter a password in login page
+		- if prompted to enter a password and caps lock is in effect, then logging will fail
+		- user may not know caps lock is on
+	- designing modeless interactions is sometimes viewed as desireable
+	- trutyh is modes cant be avoided in most cases
+	- example car-0 three modes- neutral, drive and reverse
+		- main issues with modes are
+			- changing modes
+			- feedback
+			- making the mode apparent to the user
+	- ![[Pasted image 20250802202850.png]]
+- ![[Pasted image 20250802202900.png]]
+- **Interaction Errors**-
+	- interaction involves human (sensors, brain, responders) and the machine
+	- interaction error happens when system cannot accomodate a users need
+	- error may arise from a lack of functionality, loack of afforedance for the user, a lack of general usability ot a lack of appropriate feedback to complete the interaction
+	- interaction errors happen only at at the interfaces between interacting systems
+	- bad erros are high in consequences and therefore get a lot of attention
+	- little errors are low in consequences and therefore teend to linger
+	- 
