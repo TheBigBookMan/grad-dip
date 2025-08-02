@@ -40,3 +40,112 @@
 	- llow C:D gain the gross positioning time would be short, but fine positioning time would be long
 	- which means that high gains it is easier to approach a distant target; with low gains this takes longer
 	- high gains hinder the selection of targets, whereas low gains facilitate this process
+	- varying C:D gain evokes a trade off between gross positioning time and fine positioning time
+	- optimal setting is that which minimises the combined gross and fine positiioning times
+	- C:D gain settings can be adjusted in most cases
+	- Microsoft, Mac and X Window systems have implemented mechanisms that adapt the C:D gain to users needs (the C:D gain increases when users movement velocity increases)
+- **Three State Model**-
+	- mouse lifted from supporting surface = state 0
+	- state 0 transits to state 1 when lowering the mouse
+	- mouse is moved without the button being pushed = tracking (state 1) (user just moves the mouse without interaction)
+	- if mouse pointed at an icon and button pressed while moving the mouse = new state (state 2) called dragging
+	- ![[Pasted image 20250802083619.png]]
+- **Two Novel Mouse Designs**-
+	- **The Bubble Cursor**-
+		- target acquisition technique based on area cursors
+		- improves upon area cursors by dynamically resizing the activation area depending on the proximity surrounding targets
+		- such that only one target is selectable at any time
+		- empirical studies show that the bubble curosr significantly outperforms point cursor
+	- **Ninja Cursor**-
+		- technique using multiple cursors simultaneously to make object pointing faseter as average distance from a cursor to distance can be shortened
+		- technique intended for using with big screens, where moving cursor for a long distance is a pain for the user
+		- mul;tiple cursors shown simultaneously
+		- when user moves the real mouse, all cursors will be moved at same tiome
+
+## Keyboard Interaction
+- first input device to be used with computers and still major and most widely used input device
+- **Different types of keys**-
+	- about 100 keys and each key sends different signal
+	- alphabetical, numerical, function, cursor movement, modifier, scroll, punctuation mark and other special purpose keys
+	- **Alphanumeric Keys**-
+		- keys composed of alphabetical and number keys with a few keys (tab, caps, backspace, enter)
+	- **Modifier Keys**-
+		- shift, alt and ctrl are modifier keys
+		- modify input of other keys
+		- modifier key is held down then an operation or action of the second key is changed in some way
+	- **Function Keys**-
+		- F1 to F12 are used to perform special type of operations for the user
+	- **Cursor Movement Keys (arrow keys)**-
+		- standard keybopards include set of cursor keys
+		- enable user to move around the screen without using a mouse
+	- **Special Purpose Keys**-
+		- IBM compatible keyboards contain 8 special purpose keys, each perform a unique function
+		- esc, print screen, scroll lock, pause, insert, delete, windows key and menu key
+- **Types of Keyboards**-
+	- classify keyboards according to their key arrangements
+	- **QWERTY**-
+		- most common keyboard
+		- invented in 1868
+		- original QWERTY had problems
+			- many common letter combinations require awkward finger motions
+			- many common letter combinations are yyped with one hand
+			- most typing is done with the left hand, wghich for most people is the weather hand and reduces speed
+			- about 52% typing is doner on the top row, 32% on the home row and 16% on bottom row
+	- **Dvorak Keyboard**-
+		- built 1936
+		- several designs made
+		- main objectives were to make typing or keyboard use more rhythmic and user friendlyt by increasing speed and reducing effort and fatigue which reduces error
+		- letters typed be alternating between hands which makes typing more rhythnmic, increasing speed, reduces error and reduces fatigue
+		- about 22% of typing is done on top row, 70% on home row and 8% on bottom row
+		- right hand should do more of the typing because most people right handed 56% keystrokes on right hand side
+		- least common letters on bottom row which is hardest to reach row
+		- layout also minimises number of keystrokes nmade with weak fingers
+		- experiments show speed improvement of 10-15% coupled with reduction of user fatigue
+		- intended for english
+	- **Chord Keyboard**-
+		- enter characters or commands by pressing several; keys together like a piano
+		- entered with one hand leaving the other hand free
+		- very different, only have 4 or 5 keys are used
+		- **Advantages**-
+			- extremely compact, simply reduces size of convential keyboard
+			- allows text or commands with one hand leaving other hand free
+			- chord keyboards can be used in cramped and confied conditions
+		- **Disadvantages**-
+			- very difficult to use, as only a f ew keys
+			- hard to learn, need to spend long time learning how to use the jkeyboard
+			- unfamiliar, cannot ransfer skills to other types of keyboards
+			- typing can be very slow
+			- increases fatigue as work done on one hand
+- **Characteristics of Keyboards**-
+	- classified according to mechanical properties
+		- **Mechanical**-
+			- buuilt with high quality
+			- spring activated key switches
+			- provide tactile feedback
+		- **Touchscreen**-
+			- input text by tapping a keyboard that appears on screen with fingerts
+			- cannot provide tactile feedback inherently
+		- **Stylus-driven**-
+			- similar touchescreen soft keyboards
+			- only different is support digital pen input
+	- **Three State Model**-
+		- user does not touch key = state 0
+		- user topuches a key = state 1 from state 0
+		- user presses a key, then a character is input and state 0 transits to state 1
+		- if user keeps pressing key the character will be input repeatedly
+		- user releases the key, state 2 becomes state 1
+		- user lifts finger off key state = state 1 becomes state 0
+		- ![[Pasted image 20250802094217.png]]
+	- **Skill Acquisition and Skill Transfer**-
+		- with practice, users cna memorise location of commoinly used keys relative to the home position of two hands
+		- allowing typing with little or no visual attention which is called blind typing
+		- blind typing is ability to use procedural memory to find keys fast without using sense of sight, all available fingers like a piano player
+		- procedural memory is a specific type of meory that encodes repetitive motor acts
+		- once activity is encoded in procedural memoery it requires little conscious effort to perform
+		- process of encoding an activity in procedural memeory can be formalised as the power law of practice
+			- T is the time to perform the task
+			- P is the amount of practioce
+			- a and b are constants that fit the curve to observed data as shown
+			- ![[Pasted image 20250802094829.png]]
+		- changing keyboard can have high learning cost
+		- explains why QWERTY keyboard is not optimal from perspective of typing efficiency but still widely used
