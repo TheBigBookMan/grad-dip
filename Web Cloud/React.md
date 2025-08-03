@@ -1,0 +1,30 @@
+- **Features**-
+	- **Virtual DOM**-
+		- feature that makes app development faster and more flexible
+		- it allows replicating a webpage within reacts virtual memoery
+		- it represents the original DOM so it can see changes or updates made to the app and updates only the modified components, rather than rendering the entire UI again
+		- results in reduced time and cost for development
+		- for every DOM object, there is a virtual DOM object
+		- the virtual DOM just doesnt have the power to change whats on the screen and this is what makes 
+		- every virtual DOM object gets updated when rendering a JSX element- sounds inefficient but it isnt because virtual DOM is updated very quickly
+		- once virtual DOM updated, it takes a snapshot for comparison and then determines what has changed by comparing the old with the new to update only what has changed
+		- 'diffing' is the comparison of changes
+		- 
+	- **JSX**-
+		- markup syntax describes the appearance of apps interface
+		- makes syntax like HTML and combines javascript into
+		- allows for a lot more flexibility with development
+	- **React Native**-
+		- uses native rather than web components for andoid and iOS
+		- transforms react code to render compatible with phones native features
+	- **One-way Data Binding**-
+		- uses unidirectional flow of data, forcing developers to use callback feature to edit components and prevent them from direct editing
+		- controlling of data flow from a single point is achieved with a JS app architectuce called Flux
+		- affords devs better control over the app and makes more flexible and effective
+	- **Declarative UI**-
+		- react code readable and makes it easier to fix bugs
+	- **Component-based Architecture**-
+		- user interface of app based on react comprises of several components each with particular logic
+		- devs can relay the data across the app without DOM being impacted
+		- components play large role in deciding apps visuals and itneractions
+- 
