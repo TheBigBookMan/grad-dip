@@ -1,1 +1,55 @@
-- a
+- **Three Tier Architecture**-
+	- **Presentation Tier**-
+		- responsible for displaying data to user and receving user input
+		- tpyical;l;y includes web browser, web server and UI
+		- HTML, CSS, JS
+	- **Application Tier**-
+		- processes data and performs business logic
+		- typicallyt includes an application server, a database and programmiong language
+	- **Data Tier**-
+		- stores data and provides access to data for app tier
+		- typically includes database server and data access layer
+	- Three tiers connected by network and communicate with each other user well-defined interfaces
+	- allows each tier to be developed and maintained independetly
+	- ![[Pasted image 20250803092339.png]]
+- **Six-Tier Architecture**-
+	- extends three tier but adds additional latyers
+	- ehance scalability, flexibility and maintainability
+	- each tier serves a specific purpoise and has own responsibilities
+	- ![[Pasted image 20250803092548.png]]
+- **HTML**-
+- **DOM**-
+	- structured elements of an html document in form of tree
+	- can specify which element of html doc we want to modify or apply particular style to
+	- ![[Pasted image 20250803093627.png]]
+- **Javascript**- 
+	- reasons why JS is essential web dev
+		- **Client Side Interactivity**-
+			- executed on client side meaning runs directly on browser
+			- enables dtynamic interactions with webpages allowing for real-time updates, form validation, , animations and user interface enhancements
+			- enables more engaging and interactive user experience
+		- **DOM Manipulation**-
+			- powerful capabilities to access and manipulate a webpage DOM
+			- develoeprs dynamically modify the structure, content and styling of HTML elements on fly
+			- respond to user actions and update page accordingly
+		- **Event Handling**-
+			- enables event-driven programming allowing develoeprs to define actions or behaviours responding to user events such as clicks, mouse movements, keyboard inputs etc
+			- event handling enables creation of interactive features like drop-down menus, image sliders, form validation and interactive maps
+		- **Asynchronous Operations**-
+			- async programming through callbacks, promises and asyn/awaits
+			- allows for non-blocking operations like making HTTP requests to servers, fetching data from APIs or performing time-consuming tasks without freezing user interface
+			- asyn operations enhance responsiveness and performance of web apps
+		- **Cross Browser Capabilitiy**-
+			- supported by all major web brwosers making it universal
+			- provides consistent way to add functionality to webpages regartdless of browser being userd by end user
+		- **Frameworks and Libraries**-
+			- vast eceosystem of frameworks and librarties
+			- simplify web dev
+			- provide tools, reuseable components and structured patterns for building complex web apps more efficiently
+		- **Server-side Development**-
+			- node as backend for server side javascript
+			- developers can write front and back ends ion javascript
+			- easier communication and code sharing between
+	- **Document Object**-
+		- a way for javaqscript to access the HTML source code
+		- manipulate the DOM
