@@ -14,6 +14,7 @@
 		- markup syntax describes the appearance of apps interface
 		- makes syntax like HTML and combines javascript into
 		- allows for a lot more flexibility with development
+		- require a javascript compiler/transpiler like Babel so it can transform the html/js structure into javascript
 	- **React Native**-
 		- uses native rather than web components for andoid and iOS
 		- transforms react code to render compatible with phones native features
@@ -27,4 +28,23 @@
 		- user interface of app based on react comprises of several components each with particular logic
 		- devs can relay the data across the app without DOM being impacted
 		- components play large role in deciding apps visuals and itneractions
-- 
+	- **Life Cycle Methods**-
+		- methods happen during different stages of the react components existence from creation, to updates to removal
+		- **Lifeycle 4 Main Events**-
+			1. **Mounting**- 
+				- adding nodes to the DOM
+				- when the component is first inserted into the DOM
+			2. **Updating**- 
+				-  altering existing nodes to the DOM
+				- when the component updates there are changes based on updates to its state or props
+				- without updates the component would remaind the same as when first created
+			3. **Unmounting**- 
+				- removing nodes from the DOM
+				- component removed from the DOM
+			4. **Error Handling**- 
+				- verifying the code works and is bug free
+				- component also goes through error-handling pahse
+		- component goes through different phases before it gets rendered- mounting, updating and unmounting
+		- A react component may not go through every phase eg it could be mounted and then ummounted without any updates or error handling
+		- ![[Pasted image 20250804092514.png]]
+	- **State**- 
