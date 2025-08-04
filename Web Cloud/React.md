@@ -87,4 +87,36 @@
 		- can be highly reliable
 		- data is less likely to be lost or corrupted
 - **Three-Tier Architecture**-
-	- 
+	- software application architecture that organises apps into 3 logical and physucal computing tiers
+		1. **Presentation Tier**- 
+			- displays user interface
+			- constists of webpages, HTML, css and javascript
+		2. **Application Tier**-
+			- responsible for processing the users requets and returning the resukt
+			- consists of app serviers, web services and business logic
+		3. **Data Tier**-
+			- responsible for storing and retrieving data
+			- consists of database server and database management system
+	- logically separated byt may or may not be physically separated
+		- presentation and app tiers could be hosted on same web server while data tier could be hosted separate database server
+		- all hosted on different servers
+		- ![[Pasted image 20250805091358.png]]
+	- **PHP-MySQL Three Tier**-
+		- php server side scripting language for web dev
+		- mysql is open source relational database management system
+		- presentation tier- html, css, javascript
+		- application tier- php
+		- data tier- mysql
+	- **3 Tier Issues**-
+		- mainly in databaser layer, each RDBMS has its own name and specific ways of working with string, numbers and date
+		- scripts work individually in each rdbms so once you choose one you are locked in it
+		- database migration requires rewriting most of the code of the program
+- **Object Relational Mapping (ORM)**-
+	- creating a bridge between the application that needs the data and the data source
+	- the app only knows that the data comes from ORM
+	- RDBMS knows that the data must be sent to or retrieved from ORM
+	- **Sequelize**-
+		- promise based Nodejs ORM for SQL RDBMS
+		- features solid transaction support, relations, read replication and more
+		- it abstracts all the different dialects of SQL so you can use it across different RDBMS
+		- abstracts the querying language 
