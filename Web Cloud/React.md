@@ -48,3 +48,43 @@
 		- A react component may not go through every phase eg it could be mounted and then ummounted without any updates or error handling
 		- ![[Pasted image 20250804092514.png]]
 	- **State**- 
+		- javascript object representing information about a components current status
+		- its declated in a function and managed within the component and react preserves the state variables unlike normal variables which disappeat then functions conclude
+		- signifies certain properties that guide the components behaviour
+		- guideline is if a components needs react to change its own attributes then those attributes should be in its state
+		- local state is only a feature available to class components
+		- you should not directly change a state variable, you need to use the setter method for that state
+		- setting state isnt immediate, so usually something like useEffect with the dependency to the state item can work
+	- **Props**-
+		- components must communicate by sending data to each other, so data is passed between components using props
+		- it is passed in a unidirectional flow (one way from parent to child)
+		- props are ready only, so if ou want to change a variable you will need a function passed as well
+
+## Sequelize
+- **Why databases crucial**-
+	- **Data Storage**-
+		- provide central location for storing all the data a web app needs
+		- makes accessing and managing the data easy 
+		- keeps data organised and secure
+	- **Data Retrieval**-
+		- make retrieving data from the web app easy
+		- important because users often need to acces specific pieces of data 
+		- need to access data quickly
+	- **Data Processing**-
+		- can process data in different ways
+		- include filtering, sorting and performing calculations on the data
+	- **Data Security**-
+		- can be secured using various techniques like encryption and access control
+		- helps protect the data from unauthorised access or modification
+- **Additional Benefits**-
+	- **Scalability**-
+		- can be scaled to meet the needs of a growing web app
+		- as apps grows, database needs to expand to accomodate increasing data
+	- **Performance**-
+		- can be optimised for performance
+		- help improve web apps speed and responsiveness
+	- **Reliability**-
+		- can be highly reliable
+		- data is less likely to be lost or corrupted
+- **Three-Tier Architecture**-
+	- 
