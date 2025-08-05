@@ -1,0 +1,57 @@
+## Touchscreen Interaction
+- touch is thought to be the first sense humans develop
+- sense of touch, tactile sense is made up of exceptionally fine network of receptors in ytour skin
+- **Sensors for Finger Input Detection**-
+	- two main types of screen sensors for finder input detection
+		- **Resistive Touchscreen**-
+			- works based on pressure applied to the screen
+			- consists of several layers
+			- when screen is pressed, the outer layer is pushed onto the next layer
+			- the technology senses the pressure is being applied and registers input
+			- while versatile as they can be used with finger, fingernail, stylus or any other object
+			- they are used on pen-based interfaces
+		- **Capacitive Touchscreens**-
+			- work by sensing the conductive properties of an object usually the skin on your fingertip
+			- screen on a mobile phone or smartphone usually has a glass face and does not rely on pressure
+			- makes it more responsive than resistive screen when it comes to gestures such as swiping and pinching
+			- can only be touched with a finger (some conductive pens)
+			- will not respond to touches with a regular stylus, gloves or most other objects
+	- actions like swiping through contact lists, zooming in and out of web pages and maps, scrolling though photos are best suited to capacitive touchscreens, unlike resistive screens you can swipe across them gently and still get a response
+- **Touchscreens vs Touchpads**-
+	- compare through 3 aspects- 
+		- **Precision**-
+			- **Touchscreens**-
+				- Low
+				- the contact area of fingertup is greater than a single x, y coordinate, which increases the chances of uninteded command activiations
+				- mouse and pen/stylus supply a precise x, y coordinate
+			- **Touchpads**-
+				- High
+				- same as a mouse
+		- **Object State**-
+			- **Touchscreens**-
+				- two state model
+				- touch surface of a display device is either touched (on) or not (off)
+				- no hover state that ca n trigger additional visual feedback
+			- **Touchpads**-
+				- same as touch
+		- **Rich Interaction**-
+			- **Touchscreens**-
+				- supports multitouch
+				- multiple input points (fingertips) on a touch surface
+				- supports direct manipulation of objects through gestures such as tapping, dragging, sliding, pinching and rotating
+			- **Touchpads**-
+				- same as touch
+				- no support for direct manipulation as they are indirect input devices
+- **Two-State Model**-
+	- direct finger touch uses a two-state model
+		- touch surface of a display device is either touched (on) or not (off)
+		- there is no hover state that can trigger addiitional visual feedback
+		- ![[Pasted image 20250805094126.png]]
+- **Multitouch**-
+	- multitouch tech that enables a touchpad or touchscreen to recognise more than one point of contact with the surface
+	- apple added in multi-touch with additional functionality such as pinch, zoom or to activate certain subroutines to predefined gestures
+	- increases the degree of freedom for finger input
+	- commonly a finger can just offer two degrees of freedom (x, y coordinates) which is required for pointing tasks
+	- higher degrees of freedom can be achieved with more fingers engaged in interaction tasks
+	- multitouch tech can be used to perform other tasks such as zooming and rotation- which is significant advantage of the multitouch technology
+	- current multiotouch tech are actually multippoint because they only rely on information of x,y coordinates
