@@ -55,3 +55,29 @@
 	- higher degrees of freedom can be achieved with more fingers engaged in interaction tasks
 	- multitouch tech can be used to perform other tasks such as zooming and rotation- which is significant advantage of the multitouch technology
 	- current multiotouch tech are actually multippoint because they only rely on information of x,y coordinates
+- **Finger Properties**-
+	- classified into 4 main categories
+		- **Position Property**
+			- coordinage value (x,y)
+		- **Motion Property**-
+			- velcoity
+			- acceleration
+		- **Physical Property**-
+			- size of contact area
+			- shape of contact area
+			- orientation
+			- pressure
+		- **Even Property**-
+			- finger tap
+			- finger flick
+	- The contact position of the finger is the first property considered in widget design
+	- most touchscreen devices can detect and track single point on the touch panel of device
+	- touch interaction design also considered finger movement velocity and acceleration
+	- dictionary entries include a variety of motions and may take form of dedicated computer app
+	- researchers also investigated finger physucal properties
+		- when finger lands on a touchscreen there are physical properties such as finger contact area, finger orientation and finger pressure that can be used to enhance finger interaction
+		- ![[Pasted image 20250806085529.png]]
+	- finger tapping is typically adopted to simluate the mouse click event. finger flicking is a quick movement on the screen and used as the primary navigation gesture
+- **Fat Finger Problem**-
+	- when selecting targets on touch device with a finger and the targets are smaller than the size of the finger contact area users do not know if they hit the desired target
+	- 
