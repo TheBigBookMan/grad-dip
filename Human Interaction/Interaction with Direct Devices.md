@@ -148,3 +148,25 @@
 				1. user draws an initial mark with the pen in the general diretion of the target
 				2. user continues the initial mark by drawing the continuation mark of the desired target
 			3. the target is selected on pen up
+		- **The Vacuum Technique**-
+			- interaction technique that enables quick access to items on areas of a large display that are difficult for a user to reach without significant physical movement
+			- circular widget with a user-controllable arc of influence that is centered at the widgets point of invocation and spans out to the edges of the display
+			- farawar objects residing inside this influence arc are brought closer to the widgets centre in the form of proxies that can be manipulated in lieue of the original
+			- steps of tehcnique
+				1. cursor drag beings in centre of displau
+				2. when drag exceeds threshold, vacuum is invoked 20 degrees initial arc, bringing proxies of targets 3, 5 towards the centre
+				3. additional cursor movement increases arc angle
+				4. change in cursor direction changes direction of arc
+				5. cursor moving beyond the arcs edges expands the arc
+				6. cursor moving beyond the arcs edges expands the arc
+
+## Gesture Interaction
+- form of non-verbal communication which visible bodily actions are used to communicate important messages either in place of speech or together and in parallel with spoken words
+- gestures include movement of the hands, face or other parts of the body'
+- human gestures are a mode of non-verbal interaction and can provide most intuitive and natural way to interact with computers therefore gestures have been made in many interface designs- flick finger on screen to navigate a document
+- stroke gestures are a form of 2-dimensional geometric signals from the users mind to the computer that encode texts or commands
+- they are transmitted through a channel with noise (due to inaccuracies in recall and production), received by the computer and decoded by a recogniser into the messages intended by the user
+- decoding process may take place at the end of the stroke or incrementally during the production of the stroke
+- capacity of this channel depends on how many messages can be accurately transmitted
+- this is turn depends on both users ability and computers algorithm to accurately classify different stroke gestures
+- ![[Pasted image 20250807164757.png]]
