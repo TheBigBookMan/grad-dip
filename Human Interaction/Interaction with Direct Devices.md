@@ -80,4 +80,37 @@
 	- finger tapping is typically adopted to simluate the mouse click event. finger flicking is a quick movement on the screen and used as the primary navigation gesture
 - **Fat Finger Problem**-
 	- when selecting targets on touch device with a finger and the targets are smaller than the size of the finger contact area users do not know if they hit the desired target
+	- lack of sensing precision can make precise touchscreen interactions more difficult and error prone
+	- in many interfaces touch targets are packed too close toegether resulting in wrong button being touched which ends up as incorrect input
+	- **Solutions**-
+		- **Pinch Gesture**-
+			- enlarge the target to be selected
+			- user touches screen with two or more fingers and moves them apart to zoom in
+		- **Shift**-
+			- facilitate target selection on touchscreen
+			- Scenario 1
+				1. user touches screen intending to acquire small target located near other targets; shift determines the presense of targets small enough to be occluded by the finger
+				2. to eliminate occlusion, shift 'escalates' by creating a callout that contains a copy of the occluded screen area placed in a non occluded location on the screen; the callout includes a pointer representing the finger contact point to eliminate selection point abiguity
+				3. the user fine-tunes the pointer position while maintaing contact with the screen
+				4. once the correct position is visually verified, lifting the finger to select the target
+				5. removes the callout
+			- Scenario 2
+				- when acquiring a large target, shift behaves differently. occlusion is not a problem in this case, so shift does not escalate by default.
+				- lifting their finger immediately, user makes selection as if using an unaided touchscreen
+				- ![[Pasted image 20250807151238.png]]
+		- **Lucidtouch**-
+			- is a mobile device that is 'pseudo transparent'
+			- allows users to see their fingers through the screen
+			- users interact with screen contents using multiple fingers on the back of the device
+			- this solves the problem that traditional touchscreens are facing; it prevents the users fingers from occluding screen contents
+
+## Pen Interaction
+- pen interaction has attacted a lot of attention in HCI
+- a stylus (digital pen) is a small, pen shaped instrument used to input commands to a computer screen, mobile device or graphics tablet
+- user places a stylus on the surface of the screen to draw or make selections by tapping the stylus on the screen
+- stylus can be used instead of a mouse or trackpad
+- **Pen Computing**-
+	- follows a pen-paper metaphor
+	- fundamental way for capturing daily experiences, communicating ideas, recording notable events and conducting deep thinking and visual descriptions
+- **Properties of Pen Input**-
 	- 
