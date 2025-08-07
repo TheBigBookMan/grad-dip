@@ -113,4 +113,31 @@
 	- follows a pen-paper metaphor
 	- fundamental way for capturing daily experiences, communicating ideas, recording notable events and conducting deep thinking and visual descriptions
 - **Properties of Pen Input**-
+	- two types input device
+		- **Absolute Input Device**-
+			- one-to-one mapping between input and output spaces
+		- **Direct Input Device**-
+			- display surface is also the input surface
+	- **Three State Model**- graphics tablet with stylus
+		- state 0 the stylus is off the tablet and tip switch is in open state
+		- moving stylus has no effect since it is out of range
+		- when stylus in range, tracking symbol follows the stylus motion (state 1: tracking)
+		- extra pressure on the stylus closes the tip switch moving system to state 2
+		- ![[Pasted image 20250807161113.png]]
+	- **Two Modes Pen Interfaces**-
+		- **Inking**-
+			- allows data entry
+			- gestures are drawn to issue commands for manipulating the data
+			- example- note-taking tool allows people to take notes via natural handwriting (inking) and to edit by making copy editing gestured to perform commands (gesturing)
+			- can support scratching out a word in some sytems, if not in a system then it can create naturally occuring ink stroks by accident which are classified as gestures
+		- **Gesturing**-
+			- things like shading or something
+	- **Pen Properties**-
+		- five basic pen properties
+			- **x,y Coordinate**: x,y movements of pen are sensed on tablet surface
+			- **Pen Pressure**: amount of pressure applied by the pen tip on the tablet surface
+			- **Pen Tilt**: angle between the pen barrel and projection of the pen barrel on the screen
+			- **Pen Rolling**: movements by turning over and over along the pen barrel (lon axis)
+			- **Pen Azimuth**: angle between north direction and projection of the pen barrel on the screen
+		- ![[Pasted image 20250807161615.png]]
 	- 
