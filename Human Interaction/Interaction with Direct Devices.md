@@ -170,3 +170,8 @@
 - capacity of this channel depends on how many messages can be accurately transmitted
 - this is turn depends on both users ability and computers algorithm to accurately classify different stroke gestures
 - ![[Pasted image 20250807164757.png]]
+- **Gesture Categories**-
+	- **Touch Gestures vs Motion Gestures**-
+		- touch gestures are gestures drawn on 2D screens and motion gestures are performed in the air
+		- touch gestures include one-stroke gestures and multi-stroke gestures
+	- **Analogue Gestures **
