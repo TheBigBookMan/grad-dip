@@ -140,4 +140,11 @@
 			- **Pen Rolling**: movements by turning over and over along the pen barrel (lon axis)
 			- **Pen Azimuth**: angle between north direction and projection of the pen barrel on the screen
 		- ![[Pasted image 20250807161615.png]]
-	- 
+		- **Interacting with Large Screens**-
+			- when working at large wall display, even if partially utilised, many targets are likely to be distant from the user, requiring walking, which is slow and inerrupts workflor- need to design techniques for remote target selection
+		- **Gesture Select Technique**-
+			1. user identifies a remote target they wish to select
+			2. a continuation marks appear on the targets
+				1. user draws an initial mark with the pen in the general diretion of the target
+				2. user continues the initial mark by drawing the continuation mark of the desired target
+			3. the target is selected on pen up
