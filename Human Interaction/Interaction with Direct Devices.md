@@ -174,4 +174,51 @@
 	- **Touch Gestures vs Motion Gestures**-
 		- touch gestures are gestures drawn on 2D screens and motion gestures are performed in the air
 		- touch gestures include one-stroke gestures and multi-stroke gestures
-	- **Analogue Gestures **
+	- **Analogue Gestures vs Abstract Gestures** -
+		- analogue gestures are those that mimic physisal or conventional effects of the real world
+		- analogue gesture is analogous to what a stroke gesture would do in the physical world or according to cultural convention (example- flick/swip gestures)
+		- abstract gestures are fundamentally arbitraty gestures that do not resemble physucal effects (example drawing X to close a window)
+	- **Application Examples of Gesture INteraction**-
+		- gestures can be used to triugger commands
+		- frequently used single touch gestures include:
+			- tap and double tap which correspond to a single or double click
+			- drag, where an objet is moved with a  continous finger movement
+			- zoom, when pinching two or more finger together or apart
+			- flick, where moving a finger extremely fast (to enable scrolling or to switch between windows)
+		- **Google Gesture Search**-
+			- enables users to search their phones contacts, bookmarks, applications and music by scribbling out letters with their fingers
+		- **Gesture Keyboards**-
+			- enable users to write each word in lexicon via a word gesture
+			- word gesture approx traces all letters in the internded word, regardless of whether they are adjacent
+			- example- write the word 'method' a user touches the 'm' key and slides to 'e' and then slides to the rest
+	- **Advantages of Gesture Interaction**-
+		- gesture based interfaces have two main advantages and provide the user with a completely new form of interaction
+		- **Immediate and Powerful Interaction**-
+			- unlike traditional buttons and menus, gestures do not interrupt the users activity by forcing them to move their hand to the location of a command
+			- instead they can be performend directly from the current cursor position
+		- **Intuitiveness**-
+			- gestures feel very natural to perform since they mirror our experiences in the real world
+			- gestures allow the user to handle multiple points of input and even define several parameters at once
+			- they are a more natural form of communication
+	- **Disadvantages of Gesture Interaction**-
+		- gesture interaction also raises issues that are not relavant with tranditional input
+		- the problems are to learn, to remember and to accurately execute gestures
+		- developer must provide a syustem that correctly recognises these gestures
+		- developer has to ensure gestures are qiuckly and correcctly recognised but also must provide a guide that allows a rapid and easy learning of these gestures
+		- **Discoverability**-
+			- they are not self-revealing or self-explanatory
+			- gestures are arbitrary and are usually difficult to discover
+		- **Memorability**-
+			- while conventonal commands only must be recognised, gestures need to be known and remembered before executing them
+			- can make them as intuitive as possible to be memorable
+			- developers can design based on what they think works, but it might not be refelctive of real world human behaviour, therfore the gesture may not be intuitive
+- **Gesture Recognition Algorithm $1**-
+	- 2D single stroke recogniser designed for rapid prototyping of gesture based user interfaces
+	- machine learning
+	- recognise users drawn gesture by comparing it to a set of predefined templates in a simple way
+	1. **Resample the points**
+	2. **Rotate to a reference angle**
+	3. **Scale to a reference square**
+	4. **Translate to origin**
+	5. **Compare with templates**
+	6. **Pick the closest match**
