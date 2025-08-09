@@ -1,0 +1,163 @@
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef1f5; /* soft grey-blue */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a90e2;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #fff;
+}
+.header h2 { margin: 0; font-size: 1.3rem; }
+.nav a {
+  margin-left: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity .2s ease;
+}
+.nav a:hover { opacity: .85; }
+
+/* Cards */
+.card {
+  background: #f7f9fb;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  margin-top: 18px;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  transition: background .2s ease, transform .2s ease;
+}
+.btn:hover { background: #357ABD; transform: scale(1.05); }
+
+/* Hero layout (text | photo) */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* text wider than photo */
+  gap: 18px;
+  align-items: center;
+}
+.hero--mini { grid-template-columns: 1fr 0.8fr; }
+
+.display {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0 0 10px 0;
+}
+.subhead { margin: 0 0 12px 0; color: #444; }
+
+.hero-photo { display: flex; justify-content: center; }
+.avatar {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Media row (quote | video) */
+.media-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.quote {
+  background: #eaf2fd;
+  border-left: 4px solid #4a90e2;
+  padding: 12px;
+  margin: 0;
+  font-style: italic;
+  color: #333;
+}
+
+.hero-media video {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background: #000;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none; padding: 0; margin: 10px 0;
+}
+.skills-list li {
+  background: #e3e9f0;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+.skills-list li:hover {
+  background: #4a90e2;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Emphasis chips */
+.highlight-word {
+  color: #4a90e2;
+  font-weight: bold;
+  background: #e6f0fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Toggle effect on About card */
+.highlight { background: #ffe082; transition: background-color .3s ease; }
+
+/* Tiny lift on hover */
+.anim-float { transition: transform .3s ease; }
+.anim-float:hover { transform: translateY(-4px); }
+
+/* Responsive: stack hero + media rows on small screens */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero--mini { grid-template-columns: 1fr; }
+  .media-row { grid-template-columns: 1fr; }
+}
+
+/* Image rotation animation */
+.rotate-animation {
+  animation: rotate360 1s ease-in-out;
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

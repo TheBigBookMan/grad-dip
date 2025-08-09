@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About - Personal Site</title>
+<link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h2>Personal Site</h2>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="aboutMe.html">About</a>
+      <a href="guessPassword.html">Guess Password</a>
+    </nav>
+  </header>
+
+  <!-- Small hero for About -->
+<section class="card hero hero--mini">
+  <div class="hero-text">
+    <h1 class="display">About</h1>
+    <p class="subhead">A bit about my background and skills.</p>
+    <button class="btn" id="toggleBtn">Toggle Highlight</button>
+    <button class="btn" id="rotateBtn">Rotate Image</button>
+  </div>
+  <div class="hero-photo">
+    <img src="../assets/me.png" alt="Profile photo" class="avatar" id="profileImage"/>
+  </div>
+</section>
+
+  <section class="card" id="aboutCard">
+    <p><strong>Author:</strong> <span id="author-fullname">Your Full Name</span></p>
+    <p><strong>Date created:</strong> 9 August 2025</p>
+    <p><strong>Copyright:</strong> © <span id="year"></span> Your Full Name</p>
+
+    <p>
+      I'm a <strong class="highlight-word">software engineer</strong> with
+      <strong class="highlight-word">frontend</strong>,
+      <strong class="highlight-word">backend</strong>, and
+      <strong class="highlight-word">cloud</strong> skills.
+    </p>
+
+    <p>I am from <span class='highlight-word'>Adelaide, Australia.</span></p>
+
+    <p>
+      I have completed a <strong class="highlight-word">Masters of Criminology</strong> and have decided to make a career change into
+      <strong class="highlight-word">software engineering</strong>. I love the idea of
+      <strong class="highlight-word">building an application from the ground up</strong> to help people.
+      I'm <strong class="highlight-word">passionate about healthcare</strong> and hope to build
+      <strong class="highlight-word">software for NDIS providers</strong> to deliver services more efficiently.
+    </p>
+
+    <h3>Skills</h3>
+    <ul class="skills-list">
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>AWS</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Docker</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  // year + highlight toggle
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("toggleBtn").addEventListener("click", () => {
+    document.getElementById("aboutCard").classList.toggle("highlight");
+  });
+
+  // rotate image on click
+  document.getElementById("rotateBtn").addEventListener("click", () => {
+    const img = document.getElementById("profileImage");
+    img.classList.add("rotate-animation");
+  });
+</script>
+
+</body>
+</html>
