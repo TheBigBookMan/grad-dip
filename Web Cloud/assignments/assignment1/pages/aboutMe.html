@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>About - Personal Site</title>
+<title>About Me</title>
 <link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body>
@@ -17,24 +17,31 @@
     </nav>
   </header>
 
-  <!-- Small hero for About -->
-<section class="card hero hero--mini">
-  <div class="hero-text">
-    <h1 class="display">About</h1>
-    <p class="subhead">A bit about my background and skills.</p>
-    <button class="btn" id="toggleBtn">Toggle Highlight</button>
-    <button class="btn" id="rotateBtn">Rotate Image</button>
-  </div>
-  <div class="hero-photo">
-    <img src="../assets/me.png" alt="Profile photo" class="avatar" id="profileImage"/>
-  </div>
-</section>
+
+  <section class="card hero hero--mini">
+        <div class="hero-text">
+          <h1 class="display">About</h1>
+          <p class="subhead">A bit about my background and skills.</p>
+          <!-- Button to toggle a highlight background -->
+          <button class="btn" id="toggleBtn">Toggle Highlight</button>
+          <!-- Another button to rotate the image -->
+          <button class="btn" id="rotateBtn">Rotate Image</button>
+        </div>
+    <div class="hero-photo">
+      <!-- Another photo of me -->
+      <img src="../assets/me.png" alt="Profile photo" class="avatar" id="profileImage"/>
+    </div>
+  </section>
 
   <section class="card" id="aboutCard">
-    <p><strong>Author:</strong> <span id="author-fullname">Your Full Name</span></p>
+    <!-- My name -->
+    <p><strong>Author:</strong> <span id="author-fullname">Ben Smerd</span></p>
+    <!-- The date this opage was created -->
     <p><strong>Date created:</strong> 9 August 2025</p>
-    <p><strong>Copyright:</strong> © <span id="year"></span> Your Full Name</p>
+    <!-- Copyright year and by me -->
+    <p><strong>Copyright:</strong> © <span id="year"></span> Ben Smerd</p>
 
+    <!-- Information about me -->
     <p>
       I'm a <strong class="highlight-word">software engineer</strong> with
       <strong class="highlight-word">frontend</strong>,
@@ -42,8 +49,10 @@
       <strong class="highlight-word">cloud</strong> skills.
     </p>
 
+    <!-- My location -->
     <p>I am from <span class='highlight-word'>Adelaide, Australia.</span></p>
 
+    <!-- More information about me -->
     <p>
       I have completed a <strong class="highlight-word">Masters of Criminology</strong> and have decided to make a career change into
       <strong class="highlight-word">software engineering</strong>. I love the idea of
@@ -52,6 +61,7 @@
       <strong class="highlight-word">software for NDIS providers</strong> to deliver services more efficiently.
     </p>
 
+    <!-- My skills list -->
     <h3>Skills</h3>
     <ul class="skills-list">
       <li>JavaScript</li>
@@ -65,14 +75,16 @@
 </div>
 
 <script>
-  // year + highlight toggle
+
+// This is to make the current year using the Date opbject for the copyright
   document.getElementById("year").textContent = new Date().getFullYear();
 
+    // this is to toggle the higlight button
   document.getElementById("toggleBtn").addEventListener("click", () => {
     document.getElementById("aboutCard").classList.toggle("highlight");
   });
 
-  // rotate image on click
+// this is to click on the profile image and it rotates the image
   document.getElementById("rotateBtn").addEventListener("click", () => {
     const img = document.getElementById("profileImage");
     img.classList.add("rotate-animation");

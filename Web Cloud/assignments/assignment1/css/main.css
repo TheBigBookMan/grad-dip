@@ -1,14 +1,14 @@
-/* Base */
+/* body of the whole project pages */
 body {
   font-family: Arial, sans-serif;
-  background-color: #eef1f5; /* soft grey-blue */
+  background-color: #eef1f5;
   margin: 0;
   padding: 0;
   color: #333;
   line-height: 1.5;
 }
 
-/* Container */
+/* containers */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -29,7 +29,14 @@ body {
   border-radius: 8px;
   color: #fff;
 }
-.header h2 { margin: 0; font-size: 1.3rem; }
+
+/* h2 elements in the header */
+.header h2 { 
+  margin: 0; 
+  font-size: 1.3rem; 
+}
+
+/* anchors within the nav have transition */
 .nav a {
   margin-left: 14px;
   color: #fff;
@@ -37,7 +44,11 @@ body {
   font-weight: bold;
   transition: opacity .2s ease;
 }
-.nav a:hover { opacity: .85; }
+
+/* hovering over the anchors within the nav bar changes the opacity transition animation */
+.nav a:hover { 
+  opacity: .85; 
+}
 
 /* Cards */
 .card {
@@ -48,7 +59,11 @@ body {
   margin-top: 18px;
   transition: box-shadow .2s ease, transform .2s ease;
 }
-.card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
+
+/* hovering on the cards will make a shadow transition appear */
+.card:hover { 
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12); 
+}
 
 /* Buttons */
 .btn {
@@ -62,24 +77,40 @@ body {
   font-weight: bold;
   transition: background .2s ease, transform .2s ease;
 }
-.btn:hover { background: #357ABD; transform: scale(1.05); }
 
-/* Hero layout (text | photo) */
+/* this adds a backgrouind and scale change on button hover */
+.btn:hover { 
+  background: #357ABD; 
+  transform: scale(1.05); 
+}
+
+/* this is the display grid for the hero section */
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr; /* text wider than photo */
   gap: 18px;
   align-items: center;
 }
-.hero--mini { grid-template-columns: 1fr 0.8fr; }
+
+.hero--mini { 
+  grid-template-columns: 1fr 0.8fr; 
+}
 
 .display {
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin: 0 0 10px 0;
 }
-.subhead { margin: 0 0 12px 0; color: #444; }
 
-.hero-photo { display: flex; justify-content: center; }
+.subhead { 
+  margin: 0 0 12px 0; 
+  color: #444; 
+}
+
+.hero-photo { 
+  display: flex; 
+  justify-content: center; 
+}
+
 .avatar {
   width: 100%;
   max-width: 320px;
@@ -87,7 +118,7 @@ body {
   border: 2px solid #ddd;
 }
 
-/* Media row (quote | video) */
+/* the grid row for the quote and the video of me */
 .media-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,8 +145,12 @@ body {
 
 /* Skills */
 .skills-list {
-  list-style: none; padding: 0; margin: 10px 0;
+  list-style: none; 
+  padding: 0; 
+  margin: 10px 0;
 }
+
+/* the items under the sklills list have a transition */
 .skills-list li {
   background: #e3e9f0;
   padding: 6px 10px;
@@ -123,6 +158,8 @@ body {
   border-radius: 4px;
   transition: all .2s ease;
 }
+
+/* skills list items transform on hover */
 .skills-list li:hover {
   background: #4a90e2;
   color: #fff;
@@ -139,17 +176,34 @@ body {
 }
 
 /* Toggle effect on About card */
-.highlight { background: #ffe082; transition: background-color .3s ease; }
+.highlight { 
+  background: #ffe082; 
+  transition: background-color .3s ease; 
+}
 
 /* Tiny lift on hover */
-.anim-float { transition: transform .3s ease; }
-.anim-float:hover { transform: translateY(-4px); }
+.anim-float { 
+  transition: transform .3s ease; 
+}
 
-/* Responsive: stack hero + media rows on small screens */
+/* Animation on the hover */
+.anim-float:hover { 
+  transform: translateY(-4px); 
+}
+
+/* Media rows on the small screen */
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero--mini { grid-template-columns: 1fr; }
-  .media-row { grid-template-columns: 1fr; }
+  .hero { 
+    grid-template-columns: 1fr; 
+  }
+
+  .hero--mini { 
+    grid-template-columns: 1fr; 
+  }
+
+  .media-row { 
+    grid-template-columns: 1fr; 
+  }
 }
 
 /* Image rotation animation */
@@ -157,7 +211,31 @@ body {
   animation: rotate360 1s ease-in-out;
 }
 
+/* Keyframes for the rotation of the image when clicking the button */
 @keyframes rotate360 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { 
+    transform: rotate(0deg); 
+  }
+
+  to { 
+    transform: rotate(360deg); 
+  }
 }
+
+  /* Simple fade-in animation for the items in the password generator list */
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(5px); 
+    }
+
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  .password-line {
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+  }
