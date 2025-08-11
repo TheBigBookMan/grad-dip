@@ -45,3 +45,29 @@
 				- should relate to existing theories and/or point towards new theories
 				- should lead to studies beyond the present one
 				- hard to determine in advance
+	- **Independent Variables**-
+		- circumstance or characteristic that is manipulated in an experiment to elicit a change in human response while interacting with computer
+		- represensts the cause or reason for an outcome
+		- 'independent' because they are independent of participant behavour (nothing a participant can do to influence an independent variable
+		- example- interface, device, feedback mode, button layout, visual layout, age, gender, background noise, expertise etc
+		- synoym of factor
+		- must have two levels
+			- the two levels, values or settings for an IV are the test conditions
+			- name both the factor and level
+			- ![[Pasted image 20250811124520.png]]
+		- human charactersitics are naturally occurring attributes- age, gender, height, weight, handedness, grip strength, finger width, visual acuity, personality trait, political viewpoint, first language, shoe size etc
+		- cannot be manipulated in the same way as an attribute of an interface
+		- experiment must have atleast 1 IV but possible to have more
+		- higher number of effects increases rapidly with size of experiement
+			- ie two IVs = 2 effects and 1 interaction effect
+	- **Dependent Variables**-
+		- IV are the variables that the experimenter changes to test their dependent vairables
+		- a change in the IV directly causes a change in the DV
+		- the effect on the DV is measured and recorded
+		- a DV is a measured human behaviour- related to an aspect of the interaction involving an IV
+		- they are 'dependent' because they depend on what the participant foes
+		- example- task completion time, speed, accuracy, error rate, throughput, target re-entries, task retries, presses of backspace etc
+		- dependent variables must be clearly defined aso that the other researchers can reproduce your study
+		- any observable, measurable behaviour is a legit DV (provided it has the potential to reveal differences among the test conditions)
+		- novel DV- 'negative facial expressions' 
+	- 
