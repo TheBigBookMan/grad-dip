@@ -1,0 +1,47 @@
+## Experiment Design
+- 3 important steps of HCI are design, implement and evaluate a computing system
+- learning to conduct and design an experiemnt is a skill in research
+- **Experiment Design**-
+	- process of deciding what variables (independent variables, dependent variables, control variables and random variables) to use
+	- what tasks and procedures to use
+	- how many participants to use 
+	- how to solicit them
+- **Control Experiement**-
+	- make sure to control for outside variables that may influence the results and cause skewed data
+- **Methodology**-
+	- way an experiment is designed and carrie dout
+	- involves deciding on people (participants), the hardware and software (materials or apparatus), the tasks, the order of tasks, the procedure for briefing and preparing the participants, the variables, the data collected and analysed and so on
+	- havig sound methodology is critical
+	- need to follow standards for experiments with human participants and not just make it up because it seems reasonable
+	- American Psychological Society (APA) is predominant organisation promoting research in psych- the improvement of research methods and conditions and the application of research findings
+- **Ethics Approval**-
+	- crucial step that precedes every HCI experiment
+	- experiments involve humans and therefore researchers must respect safety, welfare and dignity of human participants in their research and treat them equally and fairly
+	- researchers need to submit documents to review committee to apply for ethics approval
+	- typically review committee serves to ensure several ethical guidelines are aknowledged and adhered to
+	- important to include the right of the participant to be informaed of
+		- the nature of the research (hypotheses, goals, objectives)
+		- research methodology (medical procedures, questionaiires, participant observeation)
+		- any risks or beenfits
+		- right not to participate, not to answer any questions and/or terminate participation at any time without prejudice (without academic penalty, withdrawl or remuneration)
+		- right to anonymity and confidentiality
+- **Getting Started with Experiment Design**-
+	- need to begin with the question: What are the experimental variables?
+	- variables are the factors and conditions you can modify and measure in the experiment and properly formed research questions inherently identify experimental variables
+	- **Hypotheses**-
+		- statement of predicted or expected relationshup between at least two variables
+		- provisional answer to a research question
+		- to form a good hypotheses we need to define the variables inbolved and define a relationshup between the variables
+		- five standards for good hypotheses:
+			- **Testable**-
+				- manipulating the variables and/pr measuring the outcome variable must potentially exist
+			- **Falsifiable**-
+				- must be able to disprove the hypothesis with data
+			- **Concise**-
+				- should be stated in simplest adequate form
+			- **Precise**-
+				- should be specific (operationalised)
+			- **Useful**-
+				- should relate to existing theories and/or point towards new theories
+				- should lead to studies beyond the present one
+				- hard to determine in advance
