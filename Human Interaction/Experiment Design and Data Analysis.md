@@ -70,4 +70,30 @@
 		- dependent variables must be clearly defined aso that the other researchers can reproduce your study
 		- any observable, measurable behaviour is a legit DV (provided it has the potential to reveal differences among the test conditions)
 		- novel DV- 'negative facial expressions' 
-	- 
+	- **Control Variables**-
+		- many circumstances or factors that (might influence a dependent variable but are not under investigation)
+		- these need to be accommodated in some manner
+		- best to control them
+		- examples- room lighting, room temperature, background noise, display size, mouse shape, mouse cursor speed, keyboard angle, chair height etc
+		- not always things you would think about, but they exist and may influence a DV
+		- controlling them means they are fixed at a nominal setting during the experiment so they do not interfere
+		- they might interfere if they are set at an extreme value
+		- allowing such circumstances to exist at a fixed nominal value is typical in experiment research
+		- the circumstances are treated as control variables
+		- a control variable is a circumstance (not under investigation) that is kept constant while testing the effect of an IV
+		- it is not a variable of interest in the study but it is controlled because it could influence the outcomes
+		- more control means the experiment is less generaliseable (less applicale to other people and other situations)
+	- **Random Variables**-
+		- instead of controlling all circumstances or factors, some allowed to vary randomly
+		- values of random variables as representing random sample of all values or instances of that variable
+		- there is a cost since more variability is introduced in measures
+		- is a benefit since results are more generalisable
+		- tpically random variables pertain to characterstics of the participants including biometrics (height, weight etc), social disposition (relaxed, nervous etc) or even genetics (gender, IQ)- these charactersitcsi are allowed to vary at random
+	- **Confounding Variables**-
+		- any circumstnace or condition that changes systematically with an IV is a confounding variable
+		- unlike control or random variables, confounding are usually problematic in experimental research
+		- is the effect observed due to the IV or to confounding variable
+		- researchers must attune to the possible presense of a confounding variable and elimnate it, adjust for it or consider in someway
+		- otherwise effects observed may be incorrectly interpreted
+		- example- setups can use different technology when trying to measure the one thing, and the result isnt a reflection of the persons behaviour, its a result because of the different technology (irrelevant)
+		- 
