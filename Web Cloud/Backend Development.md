@@ -1,0 +1,116 @@
+- **Frontend**-
+	- responsible for website or web app UI
+	- HTML, CSS, javascript making up the websites design, layout and functionality
+	- use them to create interactive and visually appealing websites that users can easily use
+- **Backend**-
+	- responsible for data and logic of a webside or web app
+	- this includes server side code that stores and processes data and the business logic determining how he website works
+- Work toegther to create full-stack application
+- ![[Pasted image 20250811090809.png]]
+- **Backend Scripting Languages**-
+	- **PHP**-
+		- relatively easy to learn and many web servers support it
+	- **Python**-
+		- readability and consiceness
+		- supported by wide range of web servers
+	- **Ruby**-
+		- good
+	- **Node**-
+		- runtime environment using javascript on server
+		- same language for frontend and backend
+- **Node.js**-
+	- known for cusomiseable and scalability
+	- server engine employs an event based non-blocking input/output model
+	- faicilitating the seamless integration f javascript into machine language, resulting in lightning-fast code execution
+	- data transmission speed fom the server to client is significantly improved
+	- stable and secure non-blocking I/O model
+	- under the hood it uses Googles v8 javascript engine enabling web apps event-driven and asynch operations
+	- node operates on a single threaded event loop architecture enhancing efficieny and responsiveness
+	- ![[Pasted image 20250811091422.png]]
+	- how node manages concurrent requests while using a single-threaded model
+		- adopts a simpligied single-threaded event loop model that does not handle multiple concurrent threads simultaneously and is supported by Libuv library
+		- processing model in node is based on the event-based javascript model and utilises the callback mechanism
+	- ![[Pasted image 20250811091622.png]]
+- **Asynchronous Event Loop**-
+	- event loop allows node to perform non-blocking I/O operations- even though it is single threaded- by offloading operations to the system kernel whenever possible
+	- all modern kernels are multi-threaded and can execute multiple tasks in the background
+	- the kernel informs node when any of the tasks get completed and node can add a callback to the poll queue that will be executed eventuallys
+	- WATCH- https://www.youtube.com/watch?v=8aGhZQkoFbQ
+- **Express**-
+	- minimal and flexible web app framework
+	- **Features**-
+		- **Javascript**- written in javascript
+		- **Speed**- built on top of node and the express applications can be executed quickly even for complex tasks
+		- **Scalability**- 
+			- very scalable and can be used to create high-traffic web apps
+			- uses event-based, non blocking I/O model making it very efficient for handling concurrent requests
+			- **Easy to Use**- easy for beginners and has a simple API with a lot of documentation
+			- **Extensible**-
+				- very extensible and can be easily customised to meet specific needs of your application
+				- wide range of third party modules available for express
+				- can create your own modules
+	- **More  Features**-
+		- **Routing**-
+			- powerful routing system that lets you move quickly through the app
+		- **Middleware**-
+			- add custom functionality to your apps middleware
+		- **Template Engines**-
+			- supports wide variety of template enginees like EJS, handlebars and pug
+		- **Static File Serving**-
+			- serve static files
+		- **Error Handling**-
+			- provides robust error handling system to gracefully handle errors
+- **URL and Http Routes**-
+	- uniform resource locator
+		- unique address that identifies a resource on the internet
+			- **Protocol**-
+				- https://
+				- first part of the url and tells the browser what type of resouce it is
+				- https used to transfer webpages
+			- **Hostname**-
+				- localhost, google.com
+				- second part of url and tells the browser the name of the server that hosts the resource
+				- host is usually the websites domain name but can also be IP address
+			- **Port**-
+				- :3000
+				- third part and tells the browser the port number the resource is hosted on
+				- default port for HTTPS is 443
+				- some resources may be hosted on different ports
+			- **Path**-
+				- /about, /search
+				- fourth part and tells the browser the path to the resource on the server
+				- starts with a forward slash and can include directories or files
+			- **Query String**-
+				- ?test=1
+				- fifth part and is optional
+				- set of key-value pairs that pass paramaters to the resource
+				- question mark ? separates the query string from the path
+			- **Fragment**-
+				- #history
+				- sixth and final part and is optional
+				- used to identify a specific part of a resource such as heading or paragraph
+				- fragment is separated from the query string b a hash
+- **API**-
+	- set of definitions and protocols for building and integrating software
+	- let you produce or service communicate with other products and services without having to know how they ar eimplemented
+	- simplify app development
+	- sometimes considered a contract with documentation representing an agreement between parties
+	- **REST (Representational State Transfer) API**-
+		- set of architetural constraints, not a protocol or standard
+		- when client request is made it transfers a representation of the state of the resource to the requester or endpoint
+		- this information or representation is delivered in one of several formats via HTTP: JSON, HTML, XLT, python, php or plain text
+		- headers and parameters are also important in the HTTP methods of RESTful API HTTP request as they contain important identifier information as the requests metadata, authorisation, URI, caching, cookies and more
+		- there are request and response headers each with theor own HTTP connection information and status codes
+		- **Criteria for REST**-
+			- client-server architecture comprises clients, servers and resources with requests managed through HTTP
+			- stateless client - server communication meaning no client information is stored between get requests and each request is separate and unconnected
+			- cacheable data that streamlines client-server interactions
+			- uniform interface between components so that information is transferred in a standard form, requires:
+				- resources requested are identifiable and separate from he representations sent to the client
+				- resources can be manipulated by the client via the representation they recieve because the representation contains enough information to do so
+				- self-descriptive messages returned to the client have enough information to describe how the client should process it
+				- hyptertext/hypermedia is available, meaning that after accessing a resource, the client should be able to use hyperlinks to find all other currently available actions they can take
+				- layered system that organises each type of server (responsible for security, load-balanding) involved retrieving requested information into hierarchies invisible to the client
+- **Routing**-
+	- mechanism by which requests (URL/HTTP) are routed to the code that handles them
+	- ![[Pasted image 20250811095128.png]]

@@ -36,7 +36,7 @@
             }
           },
           {
-            "id": "ca170123161e503b",
+            "id": "99487ffce95b7045",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,6 +47,20 @@
               },
               "icon": "lucide-file",
               "title": "React"
+            }
+          },
+          {
+            "id": "7c3b70b8787e1be7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Cloud/Backend Development.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Backend Development"
             }
           },
           {
@@ -76,9 +90,23 @@
               "icon": "lucide-file",
               "title": "Intro to Human Computer Interaction"
             }
+          },
+          {
+            "id": "23aef8c730927825",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Human Interaction/Interaction with Direct Devices.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Interaction with Direct Devices"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -152,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/AIP/AI Practitioner.md",
+                "file": "Human Interaction/Interaction with Direct Devices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +190,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for AI Practitioner"
+              "title": "Backlinks for Interaction with Direct Devices"
             }
           },
           {
@@ -221,35 +249,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca170123161e503b",
+  "active": "7c3b70b8787e1be7",
   "lastOpenFiles": [
-    "Web Cloud/assignments/assignment1 2/pages/index.html",
-    "Web Cloud/assignments/assignment1 2/pages/guessPassword.html",
-    "Web Cloud/assignments/assignment1 2/pages/aboutMe.html",
-    "Web Cloud/assignments/assignment1 2/css/main.css",
-    "Web Cloud/assignments/assignment1 2/assets/professional.mp4",
-    "Web Cloud/assignments/assignment1 2/assets/me.png",
-    "Web Cloud/assignments/assignment1 2/pages",
-    "Web Cloud/assignments/assignment1 2/css",
-    "Web Cloud/assignments/assignment1 2/assets",
-    "Web Cloud/assignments/assignment1 2/Dockerfile",
-    "Web Cloud/assignments/assignment1 2",
-    "Web Cloud/assignments/assignment1.zip",
+    "Pasted image 20250811095128.png",
+    "Pasted image 20250811091622.png",
+    "Pasted image 20250811091422.png",
+    "Pasted image 20250811090809.png",
+    "Web Cloud/React.md",
+    "Web Cloud/Backend Development.md",
+    "Human Interaction/Interaction with Direct Devices.md",
+    "Web Cloud/assignments/assignment1/pages/index.html",
+    "Web Cloud/assignments/assignment1/pages/guessPassword.html",
+    "Web Cloud/assignments/assignment1/pages/aboutMe.html",
+    "Web Cloud/assignments/assignment1/css/main.css",
+    "Web Cloud/assignments/assignment1/assets/professional.mp4",
     "Web Cloud/assignments/assignment1/assets/me.png",
-    "Web Cloud/assignments/assignment1/public/me.png",
-    "Web Cloud/assignments/assignment1/public/3B3B013F-2FC1-405C-B536-FCE15281783C.png",
+    "Web Cloud/assignments/assignment1/pages",
+    "Web Cloud/assignments/assignment1/Dockerfile",
+    "Web Cloud/assignments/assignment1/css",
+    "Web Cloud/assignments/assignment1/assets",
+    "Web Cloud/assignments/assignment1.zip",
     "Pasted image 20250807164757.png",
     "Pasted image 20250807161615.png",
     "Pasted image 20250807161113.png",
     "Pasted image 20250807151238.png",
     "Pasted image 20250806085529.png",
+    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Pasted image 20250805094126.png",
-    "Human Interaction/Interaction with Direct Devices.md",
+    "Human Interaction/Intro to Human Computer Interaction.md",
     "Web Cloud/Web Programming.md",
     "Human Interaction/Interaction with Indirect Devices.md",
-    "Web Cloud/React.md",
-    "Human Interaction/Intro to Human Computer Interaction.md",
-    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
     "Untitled 1.md",
     "AWS Skill Builder/SAA/Solutions.md",
     "AWS Skill Builder/CP/Services.md",
@@ -267,7 +296,6 @@
     "Big Data and Cloud/Map Reduce.md",
     "Artificial Intelligence/AI.md",
     "Artificial Intelligence/Algorithms.md",
-    "Artificial Intelligence/Machine Learning.md",
-    "Artificial Intelligence/AI in Games.md"
+    "Artificial Intelligence/Machine Learning.md"
   ]
 }
