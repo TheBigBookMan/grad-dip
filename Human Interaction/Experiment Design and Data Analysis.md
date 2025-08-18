@@ -96,4 +96,121 @@
 		- researchers must attune to the possible presense of a confounding variable and elimnate it, adjust for it or consider in someway
 		- otherwise effects observed may be incorrectly interpreted
 		- example- setups can use different technology when trying to measure the one thing, and the result isnt a reflection of the persons behaviour, its a result because of the different technology (irrelevant)
-		- 
+- **Experiment Task**-
+	- experiment task must 'elicit' a change
+	- when participants are given a test condition they are asked to do a task while their performance is measured
+	- later they are given a different test condition- another level of the IV and asked to do the task again
+	- the choice of task is important
+	- **Two Objectives for Designing a Good Task**-
+		- **Represent**-
+			- representative task of the activities people do with the interface
+		- **Discriminate**-
+			- can discriminate the test conditons
+		- Something in the interaction that differentiates the test conditions, toherwise there is no research to conduct
+	- **Task Examples**-
+		- if we have a research idea that involves developing a new graphical method for entering equations in a spreadsheet, we can design an experiemnt task: inserting an equation using
+			- the graphical method
+			- the conventional method
+		- if we have a research idea that involves developing an auditory feedback technique for programming a GPS device, we can design an experiment task: programming a destination location into a GPS device using
+			- auditory feedback method
+			- converntional method
+	- **Knowledge-based Tasks**-
+		- most experiment tasks are performance based or skills based (eg insertting an equation, programming a destination location)
+		- somtimes the task is knowledge based (eg use an internet search interface to find the date)
+		- participants can become contaminated after the first run of the task, since they have the acquired knowledge
+		- this is why need a ccreative approach for the other test condition to change slightly
+- **Experiment Procedure**-
+	- procedure ecompossaes everything with the participants
+		- arriving, welcoming
+		- signing a consent form
+		- instructions given to participants about the experiment task
+		- demonstration trials, practice trials
+		- rest breaks
+		- administering of a questionnaire or an interview
+	- **Instructions**-
+		- instructions to participants are important
+		- often goal of experiment task is 'to proceed as quickly and accurately as posible but at a pace that is comfortable'
+		- other isntructions are fine as the goal of the experiment or the nature of the tasks 
+		- important to give the same instructions to all participants
+		- if participant asks for clarification, do not change instructions in a way that may cause participant to behave differently from other participants
+	- **Participants**-
+		- researchers want experimental results to apply to people not actually tested- a population
+		- these examples include computer-literate adults, teenagers, children, people with certain disabilites, left-handed people, engineers etc
+		- applying results to people other than those who were tested is possible, two conditions required
+			- the people tested must be members of the same population of people to whom results are assumed to hold
+			- enough participants must be tested
+				- this is more to do with statistical testing than with the similarly of participants to the population
+		- ideally participants used in a n experiment are selected at random from the population
+		- participants are typically solicited from a convenient pool of individuals (as its hard to always be completely random as not enough people readily available)
+		- need to consider how many participants we need for an experiment
+		- the results can fail if too small or too large
+			- common way to find the best amount is by looking at sample sizes from similar research
+	- **Questionnaires**
+		 - questionnaires are used in most HCI experiments for two main purposes
+		- **Participant Information**- to collect information baout the participants such as demographics and prior experience with interfaces or interaction techniques related to the research
+		- ![[Pasted image 20250819084109.png]]
+		- **Feedback**-
+			- To solicit feedback, comments, impressions, suggesions and so on about participants use of experiment apparatus
+			- NASA Task Load INdex (NASA-TLX) is a popular tool for measuring and conducting a subjective mental workload (MWL) assessment
+			- can be used to deteremine the MWL of a participant while they are performing a task
+			- rates performance across 6 dimensions to determine an overall workload rating
+				1. **Mental Demaind**- how much thinking, deciding or calculating was required to perform the task
+				2. **Physical Demand**- amount of intensity of physucal activity required to complete the task
+				3. **Temporal Demand**- amount of time pressure involved in completing the task
+				4. **Effort**- how hard does the participant have to work to maintain their level of performance
+				5. **Performance**- level of success in completing the task
+				6. **Frustration**- how insecure, discouraged, secure or content the participant felt during the task
+			- **Likert Scale**-
+				- common rating system in questionnaires
+				- is designed to measure peoples attitudes, opinions or perceptions
+				- subjects choose from a range of responses to a specific question or statemet
+				- ![[Pasted image 20250819084518.png]]
+- **Experiment Design**-
+	- Two ways to assign conditions to participants
+		- **Within Subjects**-
+			- each participant is tested on each condition
+			- if experiment has IV with 3 test conditions, then each participant needs to complete the 3 conditions
+			- ![[Pasted image 20250819084822.png]]
+		- **Between Subjects**-
+			- each participant is tested on one condition only
+			- if experiment has 3 test contiions, participant only needs to complete 1 condition
+			- ![[Pasted image 20250819084908.png]]
+	- **Counterbalancing in Experimental Design**-
+		- can mitigate order effects of the within-subjects design by counterbalancing
+			- participants are divided into groups
+			- test conditions are administered in a different order to each group
+		- Three ways a test conditions can be ordered
+			- **Latin Square**-
+				- is an n x n array filled with n different symbols
+				- each occurring exactly once in each row and exactly once in each col
+				- distinguishing property is that each condition occurs precisely once in each row and col
+				- ![[Pasted image 20250819085100.png]]
+			- **Use all Possible Orders**-
+				- all orders (n!) can be used 
+				- ![[Pasted image 20250819085124.png]]
+			- **Randomise Conditions**-
+				- conditions can be randomised
+				- best if tasks are brief and repeated often, such as target size, movement direction and movement distance
+				- ![[Pasted image 20250819085210.png]]
+			- **Longitudinal Studies**-
+				- above focuses on confounding influence of learning in experiments where IV is assigned within subjects
+				- learning effects/order effects- are problematic and must be accomodated in some way, such as counterbalancing
+				- sometimes the research has a particular interest in learning, or acquisition of skill
+				- the experimental procedure involves testing users over a prolonged period while their improvement performance is measured
+				- instead of eliminating learning, the research seeks to observe it and measure it
+				- experimental evaluation where participants practice over a prolonged period is called a longitudinal study
+				- 'amount of practice' is an IV
+				- participants perform the task over multiple units of testing while their improvement with practice is observed and measured
+				- each unit of testing is a level of the IV
+				- various names are used for the IV, but typically example (session1, session2 etc)
+				- example of experiment comparing 2 text-entry methods for mobile phones: multi-tap and Letterwise
+					- for english text entry, letterwise requires average of 44% fewer keystrokes than does multi-tap
+					-  However, a performance benefit might not appear immediately, since users must learn the technique. 
+					- Furthermore, learning occurs with both methods, as participants become familiar with the experimental procedure and task. 
+					- However, it was felt that the reduction in keystrokes with LetterWise would eventually produce higher text-entry speeds. 
+					- To test this, a longitudinal study was conducted, with entry method assigned between subjects. The results are shown in the figure below.
+					- Indeed, the conjectured improvement with practice was observed. 
+					- Initial entry speeds were about 7.3 words per minute (WPM) for both methods in session 1.
+					- ![[Pasted image 20250819092650.png]]
+
+## Data Analysis
