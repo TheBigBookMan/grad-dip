@@ -214,3 +214,27 @@
 					- ![[Pasted image 20250819092650.png]]
 
 ## Data Analysis
+- after collecting experiment data, we need to use statistical procedures to answer research questions
+- **Hypothesis Testing**-
+	- statistical hypothesis test is a method of statistical infereence used to decide whether the data at hand sufficiently support a particular hypothesis
+	- **Assumption of No Difference**-
+		- null hypothesis
+		- no difference between testing methods
+		- statistical procedures seek to reject or accept the null hypothesis
+	- Two types for hypothesis testing
+		- distinguishing feature is that parametric tests operate on data from a probability distribution like normal distribution or t-distribution, whereas non-parametric tests are distribution free- which means they make no assumption about the distribution of the underlying data
+		- **Parametric Tests**-
+			- can be used to analyse typical performance measurements such as time, speed or accuracy for doing tasks, or counts for events such as key presses, finger flicks, gaze shifts or target re-entries
+			- analysis of variance (ANOVA) is main statistical procedure for hypothesis testing in factorial experiment (experimental design is used to study 2 or more factors, each with multiple discrete values)
+				- collection of statistical models and their associated estimation procedures (such as variation among andbetween groupos) used to analyse the differences among means
+				- the ANOVA result is typically reported in parathenses as support for a statement indicating whether the outcome of test was statistically significant
+				- **Several types of ANOVA**-
+					- **One-way ANOVA**-
+						- used in an experiment with 1 IV
+						- eg testing for differences among 2+ levels
+					- **Factorial ANOVA**-
+						- used when there is more than 1 factor
+						- eg 2-way ANOVA is used in an experiment with 2 IV
+					- **Repeated Measures ANOVA**-
+						- when the same subjects are used for each factor
+						- 
