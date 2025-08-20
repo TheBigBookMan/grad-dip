@@ -232,9 +232,46 @@
 					- **One-way ANOVA**-
 						- used in an experiment with 1 IV
 						- eg testing for differences among 2+ levels
+						- goal of one-way ANOVA is to deteremine if IV has significant effect on DV
+						- the goal is to determine if the test conditions yield different outcomes on the DV (eg one of the test conditions is faster/slower than the other)
+						- majority of HCI research papers that describe experiments include the results of an ANOVA, giving F-statistic, the degrees of freedom
+						- common task in HCI is to compare 2+ intefaces or interaction techniques to deteremine which is superior performance on one or more DV, such as task completion time, error rate, task re-tries etc
+						- ![[Pasted image 20250820092818.png]]
+						- ![[Pasted image 20250820092826.png]]
+						- 
 					- **Factorial ANOVA**-
 						- used when there is more than 1 factor
 						- eg 2-way ANOVA is used in an experiment with 2 IV
 					- **Repeated Measures ANOVA**-
 						- when the same subjects are used for each factor
-						- 
+						- research design that involves multiple measures of the same variable taken on the same or matched subjects under different conditions
+						- commonly used statistical approach to repeated measure designs
+						- the repeated-measure factor (qualitative IV) is the within-subjects factor, while dependent quantitative variable on which each participant is measured is the DV
+						- ![[Pasted image 20250820093251.png]]
+			- **Main Effects**-
+				- is the effect of 1 of the IV on the DV, ignoring the effects of all other IV
+			- **Interaction Effects**-
+				- represent the combined effects of the IV on the DV
+				- when an interaction is present, the impact of 1 IV depends on the level of the other IV
+				- ![[Pasted image 20250820093640.png]]
+				- ![[Pasted image 20250820093649.png]]
+			- **Post-hoc Test**-
+				- for an IV that has 2+ levels, there is a significant effect
+				- while this means atleast 1 test condition different significantly from one other test condition, it does not indicate which test conditions different significantly from one another
+				- to deteremine which pairs differ significantly, a post-hoc comparisons test is used
+				- for example- we found a significant main effect for target size on movement time
+				- to compare group means, we need to perform post-hoc tests, also known  multiple comparisons, example- small size vs large size on movement time
+		- **Non-parametric Tests**-
+			- methods of statistical analysis that do not require a distrubution to meet the required assumptions to be analysed- especially if the data is not normally distributed
+			- due to this reason, sometimes referred to as distribution-free tests
+			- described as they are typically used in HCI research- to analyse ordinal (sometimes interval data)
+			- data are typically obtained through questionnaires (likert scales), preference ratings or assessments on a scale
+			- rather than using direct measurement of human responses, the data are obtained subjectively, from participants, or using heuristics or other non-empirical or semi-empirical methods
+			- four most common non-parametric procedures are
+				- Mann-Whitney U test
+				- Wilcoxon signed-rank test
+				- Kruskal-Wallis test
+				- Friedman test
+				- ![[Pasted image 20250820095517.png]]
+			- **Wilcoxon Signed-Rank Test**-
+				- ![[Pasted image 20250820095542.png]]
