@@ -113,4 +113,87 @@
 				- layered system that organises each type of server (responsible for security, load-balanding) involved retrieving requested information into hierarchies invisible to the client
 - **Routing**-
 	- mechanism by which requests (URL/HTTP) are routed to the code that handles them
-	- ![[Pasted image 20250811095128.png]]
+	-![[Pasted image 20250811095128.png]]
+	- **Representationl State Transfer (REST)**
+		- **Stateless**-
+			- no context is stored on the server 
+			- each request doesnt known anything except whats in the request
+
+## Proxy and Routing
+- **Network Proxy**-
+	- proxy server acts as intemdiery between client server
+	- when client reqwuests a resourvce from a server, the proxy server forwards the requerst to the server and then returns response toi client
+	- **Used For**-
+		- **Privacy**-
+			- can hide the clients real IP address form the server
+			- useful for protecting privacy or bypassing geoblocking
+		- **Securty**-
+			- filter traffic and block malicious content
+			- help protect clients computer from malware and other threats
+		- **Performancxe**-
+			- used to cache frequently accessed resources
+			- improve performance by reducing traffic that needs to be sent to original server
+		- **Load Balancing**-
+			- distribute traffic across multiple servers
+			- help improve performance and reliability
+	- **Two Types Proxy Servers**-
+		- **Forward Proxy**-
+			- used to forward requests from clients to servers
+			- typically used to improve priovacy or security
+		- **Reverse Proxy**-
+			- forward request sfrom servers to clients
+			- typically yused to improve performance or load balancing
+		- ![[Pasted image 20250827212447.png]]
+	- **Benefits Using Proxy Server**-
+		- **Proivacy**-
+			- protect your privacy by hiding your real IP address from websiutes and other online services
+			- can be useful if concerned about being tacked or want to access websites blocked in your region
+		- **Securty**-
+			- help to protect yourt computer from malware and other online threats by filtering traffic and blocking malicious content
+		- **Performance**-
+			- improve performance of your internet connection by caching frequently accessed resources and by distributing traffic across multiple servers
+	- **Drawbacks Using Proxy Server**-
+		- **Latency**-
+			- add latency to internet connection
+			- making websites and other online services load more slowly
+		- **Security**-
+			- if proxy server not secure it could track yourt online activity or inject malware into your computer
+		- **Legality**-
+			- some countries using proxy servers to bypass geroblocking or access websites the government blocks is illegal
+	- **Reverse Proxying With NGINX**-
+		- **NGINX**-
+			- web server, reverse proxy and mail proxy
+			- high performance, scalability and stabiolity
+			- uses event-driven architecture that allows it to handle many concurrent requests
+			- very stable, has low memory footprint and is resistant to crashses
+			- **Used For Many Purposes**-
+				- **Web Serving**-
+					- server static and dynamic webpages
+				- **Reverse Proxying**-
+					- used to proxy requests to other servers
+					- can be useful for load balancing or for improving performance
+				- **Mail Proxygin**-
+					- used to proxy requests to mail servers
+					- useful for improving perfroamnce or for security
+				- **Load Balancing**-
+					- used to distribute traffic across multiple servers
+					- help to improve performance and reliability
+				- **Caching**-
+					- used to cache frequently accessed resources
+					- improve performance by reducing the number of requests to be made to original server
+				- **Security**-
+					- used to filter traffic and block malicious content
+					- help to protect websites and applications from attacks
+			- powerful and versatile web server
+			- easy to configure and very efficient
+			- **Benefits of using NGINX**-
+				- **Performance**- efficient and can handle many concurrent requests
+				- **Scalability**- scalable and can easily be scaled up to handle many requests
+				- **Stability**- stable and hjas a low memory footprint
+				- **Security**- used to filter traffic and block malicious content
+				- **Ease of Use**- easy to use and configure
+		- ![[Pasted image 20250827213424.png]]
+	- **IPv4**- 32 bit
+	- **IPv6**- 128 bits
+	- **Classless Inter-Domain Routing**-
+		- 
