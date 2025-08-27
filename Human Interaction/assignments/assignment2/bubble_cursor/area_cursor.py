@@ -34,20 +34,39 @@ class AreaCursor:
     def get_selected_object(self):  # return the index of the selected object in the object list
         return self.selected_object
 
+#  this is where the buble cursor algorithm is implemented
     def _determine_selected_object(self, x, y):
-        shortest_intersecting_distance = 0
-        closest_object = -1  # no object has been selected
+        self.x, self.y = x, y
 
-        # find the closest target overlapping the area cursor
-        for i in range(len(self.objects)):
-            distance = math.hypot(self.objects[i].x - x, self.objects[i].y - y)
-            if i == 0:
-                shortest_intersecting_distance = distance
-                if distance <= (self.radius + self.objects[i].radius):
-                    closest_object = i
-            else:
-                if distance <= (self.radius + self.objects[i].radius) and distance <= shortest_intersecting_distance:
-                    shortest_intersecting_distance = distance
-                    closest_object = i
+        # if there are no objects then there is nothing to select with the curor
+        if not self.objects:
+            self.selected_object = -1
+            return
 
-        self.selected_object = closest_object  # find the selected object
+        # array which will store what is in the range of the cursor
+        metrics = [] 
+        for idx, obj in enumerate(self.objects):
+            d = math.hypot(obj.x - x, obj.y - y)  # distance from cursor to object center
+            intd = max(d - obj.radius, 0.0)  # if inside then just say 0
+            cond = d + obj.radius  # other distance 
+            metrics.append((intd, cond, idx))  # shove it in the list
+
+        # sort so the closest one comes first
+        metrics.sort(key=lambda t: t[0])
+
+        # first one = closest object
+        intd_i, cond_i, idx_i = metrics[0]
+        self.selected_object = idx_i  # remember which object that was
+
+        # second one = the next closest (if it exists)
+        if len(metrics) > 1:
+            intd_j, _, _ = metrics[1]
+        else:
+            intd_j = float('inf')  # if there isnt one just make the cursor it huge
+
+        # set bubble radius smaller
+        new_radius = min(cond_i, intd_j)
+
+        # dont let radius go negative because that would be weird
+        self.radius = max(new_radius, 0.0)
+

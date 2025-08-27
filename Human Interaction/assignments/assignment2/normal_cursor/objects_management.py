@@ -77,7 +77,6 @@ class ObjectManager:
 
             self.last_selected_object_index = -1  # nothing selected anymore
 
-
     def paint_objects(self):
         for idx, t in enumerate(self.objects):
             # pick the starting color depending on what it is
@@ -147,7 +146,6 @@ class ObjectManager:
         # draw all the circles we made
         self.paint_objects()
         return self.objects
-
 
     def check_two_targets_overlap(self, t1, t2):
         return math.hypot(t1.x - t2.x, t1.y - t2.y) <= (t1.radius + t2.radius)

@@ -1,74 +1,45 @@
-
 import tkinter as tk
-import bubble_cursor
+import area_cursor
 import objects_management as om
 
-WINDOW_W = 1100
-WINDOW_H = 650
-OBJECT_DIAMETER = 40
-OBJECT_RADIUS = OBJECT_DIAMETER // 2
-OBJECT_NUM = 21  # 1 target + 20 distractors
-START_POS = (80, WINDOW_H - 80)
-START_R = 22
-TARGET_DISTANCE = 512
 
 class Application(tk.Frame):
     def __init__(self, master=None):
-        super().__init__(master)
-        self.master = master
-        self.master.configure(bg="white")
-        self.canvas = tk.Canvas(
-            self.master, 
-            width=WINDOW_W, 
-            height=WINDOW_H,
-            bg="white", 
-            highlightthickness=0)
+        super().__init__(master)  # Call tk.Frame.__init__(master)
+        self.master = master  # Update the master object after tk.Frame() makes necessary changes to it
+        window_width = 1500
+        window_height = 800
+        self.canvas = tk.Canvas(self.master, width=window_width, height=window_height)
         self.canvas.pack()
-
-        # objects
-        self.object_manage = om.ObjectManager(
-            self.canvas, WINDOW_W, WINDOW_H,
-            object_num=OBJECT_NUM,
-            object_radius=OBJECT_RADIUS,
-            start_btn_pos=START_POS,
-            start_btn_radius=START_R,
-            target_distance=TARGET_DISTANCE)
-        self.object_manage.draw_scene()
-
-        # cursor
-        self.cursor = bubble_cursor.BubbleCursor(self.canvas, self.object_manage)
-
-        # state
-        self.object_index = -1
-        self.started = False
-
-        # binds
-        self.canvas.bind("<Motion>", self.mouse_move)
         self.canvas.bind("<ButtonPress-1>", self.mouse_left_button_press)
+        self.canvas.bind("<Motion>", self.mouse_move)
+
+        object_width = 40
+        object_num = 20  # object total number
+        object_radius = object_width // 2  # object radius
+        self.object_manage = om.ObjectManager(self.canvas, window_width, window_height, object_num, object_radius)
+        objects = self.object_manage.generate_random_targets()
+
+        self.cursor = area_cursor.AreaCursor(self.canvas, objects)
+        # object the cursor is hovering, right now just 0 to begin with
+        self.object_index = 0
+    # ask the object manager which one is the target and store it here
+        self.target_object_index = self.object_manage.target_index
 
     def mouse_left_button_press(self, event):
-        # start gate: must click the Start circle first
-        if not self.started:
-            ids = self.canvas.find_withtag("current")
-            if self.object_manage.start_btn_id in ids:
-                self.started = True
-            return
-
-        # after started, if current selection is the target -> turn it yellow
-        idx = self.cursor.get_selected_object()
-        if idx is not None and idx >= 0:
-            if self.object_manage.objects[idx].is_target:
-                self.object_manage.change_yellow(idx)
+        if self.object_index >= 0:
+            self.object_manage.select_object(self.object_index)
 
     def mouse_move(self, event):
         self.cursor.update_cursor(event.x, event.y)
+
         self.object_index = self.cursor.get_selected_object()
         self.object_manage.update_object(self.object_index)
 
+
 if __name__ == '__main__':
     master = tk.Tk()
-    master.title("Bubble Cursor — Tkinter (class-structured)")
-    master.config(cursor="none")  # hide OS cursor
+    master.config(cursor="none")  # hid cursor in canvas
     master.resizable(0, 0)
     app = Application(master=master)
-    app.mainloop()
+    app.mainloop()  # mainloop() tells Python to run the Tkinter event loop. This method listens for events, such as button clicks or keypresses, and blocks any code that comes after it from running until the window it's called on is closed.

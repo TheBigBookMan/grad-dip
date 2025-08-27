@@ -1,5 +1,4 @@
 import tkinter as tk
-import area_cursor
 import objects_management as om
 
 
@@ -14,27 +13,39 @@ class Application(tk.Frame):
         self.canvas.bind("<ButtonPress-1>", self.mouse_left_button_press)
         self.canvas.bind("<Motion>", self.mouse_move)
 
+        object_width = 40
         object_num = 20  # object total number
-        object_radius = 20  # object radius
+        object_radius = object_width // 2  # object radius
         self.object_manage = om.ObjectManager(self.canvas, window_width, window_height, object_num, object_radius)
         objects = self.object_manage.generate_random_targets()
 
-        self.cursor = area_cursor.AreaCursor(self.canvas, objects)
+        # object the cursor is hovering, right now just 0 to begin with
         self.object_index = 0
 
+        # ask the object manager which one is the target and store it here
+        self.target_object_index = self.object_manage.target_index
+
+
     def mouse_left_button_press(self, event):
-        print(self.object_index)  # print the index of the selected object
+        if self.object_index >= 0:
+            self.object_manage.select_object(self.object_index)
 
+
+    # Make the event of the mouse click event for determining what type of circle you are in
     def mouse_move(self, event):
-        self.cursor.update_cursor(event.x, event.y)
+        # determine if cursor is inside any object
+        self.object_index = -1
+        for i, obj in enumerate(self.object_manage.objects):
+            distance = ((obj.x - event.x) ** 2 + (obj.y - event.y) ** 2) ** 0.5
+            if distance <= obj.radius:
+                self.object_index = i
+                break
 
-        self.object_index = self.cursor.get_selected_object()
         self.object_manage.update_object(self.object_index)
 
 
 if __name__ == '__main__':
     master = tk.Tk()
-    master.config(cursor="none")  # hid cursor in canvas
     master.resizable(0, 0)
     app = Application(master=master)
     app.mainloop()  # mainloop() tells Python to run the Tkinter event loop. This method listens for events, such as button clicks or keypresses, and blocks any code that comes after it from running until the window it's called on is closed.
