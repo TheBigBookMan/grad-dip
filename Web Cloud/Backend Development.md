@@ -195,5 +195,19 @@
 		- ![[Pasted image 20250827213424.png]]
 	- **IPv4**- 32 bit
 	- **IPv6**- 128 bits
-	- **Classless Inter-Domain Routing**-
-		- 
+	- **Classless Inter-Domain Routing (CIDR)**-
+		- an IP address (first address of the network)
+		- slash chararcter /
+		- numbher that tells tyou how many bits of the routing prefix must be fixed or allocated for the network identifier
+		- ![[Pasted image 20250828195721.png]]
+		- the last bit tells you how manyu bits are fixed, so if its 24 then the last digit will range between 0-255
+			- 192.0.2.0/24 = 192.0.2.0 - 192.0.2.255
+			- 192.0.2.0/16 = 192.0.0.0 - 192.0.255.255
+		- **2 Special Cases**-
+			- fixed IP addresses, where every bit is fixed, represent a single IP address (192.0.2.0/32) this is helpful when setting up a firewall rule and giving access to a specific host
+			- the internet, in which every bit is flexible is represented as 0.0.0.0/0
+			- ![[Pasted image 20250828200054.png]]
+		- proxy server is a system or router that provides a gaterway between users and the internet
+		- therefore it helps prevent syber attackers from entering a private network
+		- is a server, referred to as an intermediarty because it goes between end users and the webpages they visit online
+		- when a computer connects to the internet, it uses IP address to locate where to get the resources from
