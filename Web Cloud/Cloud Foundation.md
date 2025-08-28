@@ -1,0 +1,97 @@
+- ![[Pasted image 20250828201608.png]]
+- **Reasons why CLoud so popular**-
+	- **Trade capital expense for variable expense**
+		- ability to have flexible pricing
+		- pay as tyou go
+		- requirements get met in minutes as scaling can be automatixc
+	- **Benefit from massive scales of economy**-
+			- because so manyu customers in AWS they can have lower prices for you
+	- **Stop guessing capacity**-
+		- flexible usage capacity qwhich fgoes up and down byu requirements needed
+	- **Increase speed and agility**-
+		- time top get resources can be quick
+		- time to take down also quick
+	- **Stop spending money on running and mainting data centres**-
+		- aws pay for all the management of data centres
+	- **Go global in minutes**-
+		- data centeres globally so can host resources worldwide
+- **Cloud Computing Deployment Models**-
+	- **CLoud**
+		- fully developed in the cloud
+	- **Hybrid**-
+		- mix of cloud and on prem
+	- **On-premises**-
+		- managed in house IT infrastructure
+	- ![[Pasted image 20250828202457.png]]
+- ![[Pasted image 20250828203549.png]]
+- **3 Ways AWS Manages Services**-
+	- **Management Console**-
+		- GUI for most of the features
+	- **CLI**-
+		- launched from command script 
+	- **SDK**-
+		- add the services into your code
+- ![[Pasted image 20250828204504.png]]
+- ![[Pasted image 20250828204539.png]]
+- **FOundation Services**-
+	- **Storage**-
+		- **S3**-
+			- object storage for scalability, data availability, security and eprformance
+			- store and protect data fgor web sites, mobile apps, backup and restore, archive, enterprise apps, IoT and big data
+		- **EBS (eslatic block storage)**-
+			- block storage designed with EC2 for both throughput and transaction-intensive workloads
+			- used for various workloads such as relational and non-relational databases, apps, containerised apps, biog data, file systems
+		- **EFS (elastic file system)**-
+			- scalable, fully managed elastic network file sytstem for use with cloud services and on premises resourc es
+			- built to scale on demaind, growing and shrinking automaticllay as you add and remove files
+			- thousands of EC2 instances can access EFS simultaneously
+		- **S3 Glacier**-
+			- cold storage for low cost
+			- takes several hours top retrieve
+			- designed to deliver to 11 nines of durability
+	- **Compute**-
+		- **4 Categories**-
+			- VMs that provide IaaC
+				- EC2
+				- flexibilty for server management
+				- choose the OS and the resource capabilities
+			- serverless
+				- lambda
+				- run code without provisioning or managing servers
+				- pay only for compute time that is consumed
+				- dont have to pay for servers 24/7 even when not used
+			- container-based 
+				- ECS, EKS, Fargate, ECR
+				- run multiple workloads on singular OS
+				- spin up cointainer more quickly than VM 
+				- offers more responsiveness
+			- platform as service PaaS
+				- elastic Beanstalk
+				- facilitates quick deployment of apps by providing all app services you need
+				- aws manages OS, app server and other infra components
+			- ![[Pasted image 20250828211022.png]]
+			- 
+	- **Database**
+		- **Relational Database Service (RDS)**-
+			- relational database in the cloud
+			- resizable capacity while automating time-consum,ing administration like hardware provisioning, DB setuip, patching anbd backuops
+		- **Aurora**-
+			- MySQL/PostgreSQL
+			- high availability and resilient design over RDS
+		  - **Redshift**-
+			  - data warehouse
+			  - automatically adds the nodes to yourt cluster and redistributes data for maximum performance
+			  - columnar storage and massively parallel processing architecture
+			  - parallelise and distribute data and queries across multiple nodes
+			  - automatically monitors your cluster and backs up your data so can easily restore if needed
+			  - encryption is built in
+		  - **DynamoDB**-
+			  - key-valyue document DB
+			  - delivers single-digit millisecond performance at any scale
+			  - built in security, backup and rest0ore, in-memory caching
+			  - NoSQL DB service
+			  - redundantly stores data across multiple facilities in native US region as part of fault tolerant
+			  - can creat table and items, add items to table
+			  - system automaticallyt partitions your data and has table storage
+			  - no practical limit on number opf items you can store on a table
+		  - 
