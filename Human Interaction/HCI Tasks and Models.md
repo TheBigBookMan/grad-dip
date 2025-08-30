@@ -62,4 +62,83 @@
 			- usually without constraints of a user interface elemtns like buttons and slide bars
 
 ## HCI Models
-- 
+- a model is a simplification of reality
+- you are modeling something that is complex into a simpkle manner to understand it easier
+- **Fitts Law**-
+	- one of the most successful quantative models in HCI
+	- states the amount of time required to move a pointer to a target area is a function of distance to the target divided by the size of the target
+	- ![[Pasted image 20250830155035.png]]
+		- D = distance between centres of the start target and end target
+		- W = width of end target in direction of travel
+		- a and b = constants that depend on the choiuce of input device and are usually determined empirically by regression analysis
+		- logarithmex term log2(1+D/W) = point tasks index of difficulty (ID) measured in bits
+		- ![[Pasted image 20250830155240.png]]
+		- ![[Pasted image 20250830155254.png]]
+- **Index of Difficulty (ID)**-
+	- the difficulty of various combinations of D and W
+	- ![[Pasted image 20250830155743.png]]
+	- ![[Pasted image 20250830155751.png]]
+	- ![[Pasted image 20250830155813.png]]
+	- ![[Pasted image 20250830155820.png]]
+	- **Extending Fitts law from 1D to 2D and 3D**-
+	- ![[Pasted image 20250830155853.png]]
+	- **Implications for UI Design**-
+		- Fitts laws eesentially says that targets should be as big in size as possible
+		- derived from W parameter
+		- target distance should be as small as possible
+		- based on D parameter
+		- **Rule of the INfinite Edges**-
+			- having a target near edge works well
+			- user can move as fast as possible with pointer and edge will stop from going off screen
+			- fast to get to target
+- **Fitts law for dragging and crossing tasks**-
+	- ![[Pasted image 20250830211711.png]]
+	- ![[Pasted image 20250830211730.png]]
+- **GOMS Model**-
+	- specialised human information processor model for HCI observation that describes a users cognitive structure on 4 components
+	- 'set of goals, set of operators, set of methods, set of selection rules for choosing among compething methods for goalds' GOMS
+	- produces quantiative and qualitative predictions of how people will use a proposed system
+	- four main elements
+		- **Goals**- symbolic structure that define a state of affairs to be achieved and determine a set of possible methods by which it may be accomplished
+		- **OPerators**- elementary perceptual, motor or cognitive acts whose execution is necessary to change any aspect of the users mental state or affect the task environment
+		- **Methods**- describe a procedure for accomplishing a goal
+		- **Selection Rules**- needed when a goal is attempted and there may be more than onme method available to the user to accomplish it
+	- ![[Pasted image 20250830212114.png]]
+	- **3 Advantages of GOMS**-
+		- while it is not necessarily the most accurate method to measure human-computer interface interaction, it does allow vissibility of all precedural knowledge
+		- with it an analyst can easily estimate a particular interaction and calculate it quickl;y and easily
+		- this is only possible if the average methods-time measurement data for each specific task have previopiously been measures experimentally to a high degree of accuracy
+	- **5 Limitations of GOMS**-
+		- GOMS only applies to skilled users, it does not work for beginners or intermediates for errors may alter the data. the model doesnt also apply to learning the system or a user useing it after a long period of not using it
+		- a big diasadvantage is the lack of account for errors, even skilled users make errors, but GOMS does not account for errors
+		- mental workload is not addressed in the model, making it an unpreditable variable, same applies to fatigue
+		- GOMS only addresses the usability of a task on a systeml; it does not address its functionality
+		- users personalities, habits or phyiscal restrictions (disabilities) are not accounted for in anyu of the GOMS models, all users are assumed to be exactly the same
+- **Keystroke-level Model (KLM)**-
+	- predicts hiow long it will take an expert user to accomplish a routine task without errors using an interactive computer system
+	- as the simplest GOMS technique, it estimates an execution time for a task is done by lising the sequence of operators and then totalling the execution times for an indvidiual operators
+	- KLM makes several simplyfying assumptionsn that make it a restricted version of GOMS
+	- the analyst must specify the method used to acoomplish the particular task of itnerest, which typically entails choosing specific task instances
+	- **Original KLM 6 Operator Types**-
+		- K to press a key or button
+		- P to point with a mouse to a target on display
+		- H to home hands on the keytboard or other device
+		- D to draw a line segment on grid
+		- M to mentally prepare to do an action or a closelty related series of primitive actions
+		- R to represent the system-response time during with the user has to wait for the system
+	- Each of these operatiors has an estimate of execution time, either a single value , parameterised estimate- K is a dependent on typing speed and whether a key or mouse button click, press or release is involved- or a simple approx function
+	- ![[Pasted image 20250830213503.png]]
+	- ![[Pasted image 20250830213510.png]]
+	- ![[Pasted image 20250830213527.png]]
+	- ![[Pasted image 20250830213538.png]]
+	- ![[Pasted image 20250830213548.png]]
+	- **Advantages KLM**-
+		- KLM was designed to be a quick, easy-to-use system design tool which means that no deep knowledfge about psychology ios required for its usage
+		- task times can be rpedicted (given the limitations) without having to build a protoype and recruit and test users, whjioch saves money and time
+	- **Limitations of KLM**-
+		- measures only one aspect of eprformance, time, which means execution time and not the time to acquire or learn a task
+		- considers only expert users, generally users differ regarding their knowledge and experience of different systems and tasks, motor skills and technical ability
+		- it considers only routine unit tasks
+		- method has to be specified step by step
+		- execution of the method has to be error free
+		- mental operator aggregates different mental operations and therefore cannot model a deeper representation of the users mental oeprations. CRUCIAL 
