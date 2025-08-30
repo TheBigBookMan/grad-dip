@@ -94,4 +94,108 @@
 			  - can creat table and items, add items to table
 			  - system automaticallyt partitions your data and has table storage
 			  - no practical limit on number opf items you can store on a table
-		  - 
+	  - **Networking and CDS**-
+		  - **VPC (virtual private cloud)**-
+			  - provision logically isolated sections of the cloud
+		  - **ELB**-
+			  - automatically distributes incoming app traffic across multiple targets like EC2, containers, IP etc
+		  - **Cloudfront**-
+			  - CDN service delivering infomration closer to cuistomers in locations
+		  - **Transit Gateway**-
+			  - enables customers connect their VPC on prem networks to single gateway
+		  - **Route 53**-
+			  - DNS service
+		  - **Direct Connect**_
+			  - dedicated private network connection from data centre to aws
+		  - **VPN**-
+			  - provides secure private tunnelt from your network to aws global network
+	  - **Security, Identity and COmpliance Service**-
+		  - **IAM**-
+			  - manage aws resources securely
+			  - put riole based permissions to allow or deny users to access resources
+		  - **Organisations**-
+			  - restruict what servcices and actions based on specific accounts
+		  - **Cognito**-
+			  - SSO
+		  - **Artifact**-
+			  - on demand access to AWS security and compliance rports
+		  - **Key Management Service KMS**-
+			  - create and manage keys
+			  - can control encrtyption across wide range of awes services
+		  - **Shield**-
+			  - manage DDoS protecvtion service safeguard apps on AWS
+	- **Cost Management**-
+		- **Cost and Usage Report**-
+			- comprehensive set of AWS cost and usage data including metadata about services, pricing and reseervations
+		- **Budgets**-
+			- set custom budgets that alert when costs or usage exceed budget amount
+		- **Cost Explorer**-
+			- visualise through interface costs and usage over time
+	- **Management and Governance**-
+		- **Management Console**- interface for accessing aws account
+		- **Config**- tracks resources inventory and changes
+		- **Cloudwatch**- monitor your resources and applications
+		- **Auto Scaling**- scale resources on demand automatically
+		- **COmmand Line**- CLI to access and manage tools
+		- **Trusted Advisor**- helps optimise performacne and security
+		- **Well-archirtected tool**- provides help in revieweing and improviong worjkkloads
+		- **Cloudtrail**- tracks user activity and API usage
+
+## Simple Storage Service (S3)
+- designed for 11 9s of durability
+- can generate event notifications
+- used for
+	- content storage and dsitrubtion
+	- backup and restore
+	- archiving
+	- data lakes
+	- big data analytics
+	- disaster recovery
+	- static website hosting
+- stopre static content like iamges, videos, music etc and distribute through Cloudfront edge locations or S3 directly
+- back up data use storage life cycles policies to archive rarely accessed data in Glacier
+- create a data lake which is a centralisecd repository that allows you to store all structured and usntructured data at any scale
+	- can extract valuable insights using queries, analytics and ML
+- protect critical data, apps, IT systems stuynnuing in cloud or on prem
+- Cross-region replication enables automatic, asynchronous copying of objects across buckets in different AWS regions
+- **Components**-
+	- **Bucket**-
+		- container for objects stored in S3
+		- organise S3 namespace at highest level and identify the account responsible for storage and data transfer chages
+		- play arole in access control and server as unit of aggregation for usage reporting
+	- **Object**-
+		- fundamental entity stored in S3
+		- object can be anyu file like text, video, phgoto or bionary
+		- objects consist of object data and emtadata
+		- metadata is a set of name-value pairs that describe the object
+		- **Two kinds of Metadata**-
+			- **System-defined Metadata**-
+				- set of system metadata for each object stored in bucket
+				- S3 processes this system metadata as needed
+				- information such as object creation date, size and cersion
+			- **USer-defined Metadata**-
+				- can assign metadata during or after it has been uploaded
+				- stored with the object
+				- S3 does not process user-defined metadata
+				- must being with x-amz-meta prefix
+		- When PUT object you can not do partial updates to an object, always writes the entire object
+		- When GET, you need read access to the buecket
+	- **Object Key**-
+		- uniquely identifies the object in a bucket
+		- each object in a bueckt has exactly one key
+		- ![[Pasted image 20250830095743.png]]
+	- each bucket is regional
+	- you can choose the region where S3 stores the buckets
+	- objects stored in a region never leave unless you transfer them to another region
+	- region code indicates the region its stored in- us-west-2a
+	- to query specific objects in a bucket you query by file path
+		- scores/list-of-scores/english
+		- will return english scores that are under that file directory
+	- **Versioning**-
+		- protect your data
+		- default disabled
+		- enable versioning is a weay to keep variants of an opbject in the same bucket
+		- two objects in a bucket can have the same key but different version IDs
+		- preserve, retrieve and restore each vbersion of every object stored in your S3 bucket
+		- can recover from unintended user actions and pp failures with versioning
+		- DELETE you can delete all versions of object with ObjectKey but can delete specific version with VersionId

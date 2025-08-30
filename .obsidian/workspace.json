@@ -171,6 +171,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -181,6 +182,9 @@
   },
   "active": "4c22c3ab35a0732e",
   "lastOpenFiles": [
+    "Pasted image 20250830095743.png",
+    "Untitled.md",
+    "Web Cloud/Cloud Foundation.md",
     "Pasted image 20250828211022.png",
     "Pasted image 20250828204539.png",
     "Pasted image 20250828204504.png",
@@ -188,13 +192,11 @@
     "Pasted image 20250828202457.png",
     "Pasted image 20250828201608.png",
     "Web Cloud/Backend Development.md",
-    "Web Cloud/Cloud Foundation.md",
     "Pasted image 20250828200054.png",
     "Pasted image 20250828195721.png",
     "Pasted image 20250827213424.png",
     "Pasted image 20250827212447.png",
     "Human Interaction/Experiment Design and Data Analysis.md",
-    "Pasted image 20250820095542.png",
     "Human Interaction/Interaction with Direct Devices.md",
     "Web Cloud/React.md",
     "Web Cloud/assignments/assignment1/pages/index.html",
@@ -225,7 +227,6 @@
     "AWS Skill Builder/AIP/AI Practitioner.md",
     "AWS Skill Builder/Workshops GenAI.md",
     "Big Data and Cloud/AWS.md",
-    "Big Data and Cloud/Map Reduce.md",
-    "Artificial Intelligence/AI.md"
+    "Big Data and Cloud/Map Reduce.md"
   ]
 }
