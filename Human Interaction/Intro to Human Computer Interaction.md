@@ -56,24 +56,28 @@
 		- data have high levels of success in classifying mental states and emotional states
 
 ## Input Devices and Interaction Tasks
-- **Interacation. Task**- 
+- **Interacation Task**- 
 	- entry of information using a hardware or software device
 	- dialogue is a series of exchanges o information between a user and the computer
 	- seven basic tasks in HCI
 - **Selection**-
 	- choosing objects from set of alternatives
 	- selection task may be achieved by pointing and clicking object with mouse cursor; tabbing through list; selecting meny; typing identifier key; soeaking speech recognition
+	- like a dropdown list to select
 - **Position and Orient**-
 	- specfying a position within a range, an angle or 3D orientation
+	- like clicking a show your locationm button
 	- **Linguistic**- 'specify' in some coordinate systems
+		- typing in the specific coordination manually
 		- can use input text boxes to quantify position, orientation and scale of an bobject
 	- **Spatial**- move cursor to position
+		- moving a position with a cursor
 		- use arrow buttons or mouse cursor to change position and orientation of an objet by selection
 		- device movement direction should correspond to movement in screen space
-- **Path**- specifying a series of positions and orientations oer time
-- **Quantify**- specifying an exact numeric value
+- **Path**- specifying a series of positions and orientations oer time like a plan your map
+- **Quantify**- specifying an exact numeric value like data
 - **Linguistic**- value types on QWERTY keyboard or number pad
-- **Spatial**- can use an operate slider, dial, pointer and up/down counter
+- **Spatial**- can use an operate slider, dial, pointer and up/down counter a slider
 - **Text**- entry of symbolic data
 	- when entering large amounts of text, hardware keyboard is preferred over simluated keyboard or selection of characters
 
@@ -97,9 +101,11 @@
 		- **Absolute**- 
 			- 1:1 mapping between input and output spaces
 			- position sensing devices like tablet
+			- things like tablet because you are moving directly from one edge to another with real space the same as on screen space
 		- **Relative**-
 			- input controls the relative position of the cursor (always indirect)
 			- motion sensing devices like hte mouse
+			- example is cursor because you move a few cm may equal inches on the screen
 	- **Direct vs Indirect Control**-
 		- **Indirect Devices**-
 			- display surface is not input surface
@@ -120,6 +126,7 @@
 		- velocity-to-velocity (mice and touchpads)-
 	- simple miltiplicative transfer function is control-to-display (C:D) ratio which is ratio between movement of input device and corresponding movement of object it controls
 	- if a mouse must be moved 1cm on desk in order t move a cursor 2 cm on screen the device has a 1:2 control-to-display ratio
+	- essentially how far you nee dto move the mouse to match whats on the screen
 - **Three State Models**- different states for an input 
 	- computer pointing devices in terms of state transitions
 	- paradigm of descriptive modelling
