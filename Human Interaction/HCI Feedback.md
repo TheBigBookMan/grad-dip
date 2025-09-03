@@ -1,0 +1,78 @@
+- **Human Computer Feedback Loop**-
+	- ![[Pasted image 20250903143413.png]]
+- **Human Factors**-
+	- most profound challenges are from humans
+	- hard because there are inputs done by the senses
+	- output mainly done through the motor control of the effectors
+	- ![[Pasted image 20250903143527.png]]
+	- **Human Senses**-
+		- **Vision**-
+			- visual sensory channel is huge because people obtain 80% of their information through sense of light
+			- eye works similar to a camera
+			- when looking at an object, light reflected from the object enters the eye through the pupil and is focused through the optical components within the eye
+			- front of the eye comprises- cornea, iris, pupil and lens and focuses the image onto the retina
+			- **Frequency**-
+				- property of light leading to the perception of color
+				- visible light is a small band in electromagentic spectrum
+				- different colors are positioned within the visble spectrum of electromagnetic waves, with violet at one end (390 nanometres) and red at the other end (750 nanometres)
+				- ![[Pasted image 20250903144000.png]]
+			- **Intensity**-
+				- the amount of light falling on a surface
+				- quantifying light intensity is complicated because the eyes light sensitivity varies by the wavelength of the light and the complexity of the source (eg single frequency vs mixture of frequencies)
+				- **Luminance**- refers to amount of light passing through a given area
+					- with luminance comes brightness, a subjective property of the eye that includes perception of the brain
+					- unit for luminance is candela per square metre (cd/m2)
+			- **Fixations and Saccades**-
+				- saccades are type of eye movement used to rapidly move the fovea from one point of interest to another, usually taking 120 ms
+				- fixation is when the eye is kept aligned with the target for a specific furation (typically 200 ms)
+				- allowing for the image details to be processed
+				- ![[Pasted image 20250903144433.png]]
+		- **Hearing (Audition)**-
+			- detection of sound by humans
+			- sound is a vibration that propogates as an acoustic wave through a transmission medium such as a gas, liquid or solid
+			- sound is the reception of such waves and their perception by the brain
+			- **Frequency**-
+				- the rate at which a soundwave completes a cycle is measured in Hertz (Hz)
+				- human speech usually falls in the range of 85Hz to 1100Hz
+				- humans can hear between 20Hz to 20000 Hz
+				- frequency is the number of waves that pass a point for every unit of time
+				- ![[Pasted image 20250903145624.png]]
+			- **Amplitude**-
+				- essence of the volume of sound, measured in decibel (dB)
+				- height of the wave, measured from the middle (peak amplitude)
+				- ![[Pasted image 20250903145656.png]]
+			- **Timbre**-
+				- timbre of a sound is what colurs that sound
+				- it makes a violin sound different from a piano or your voice to someone elses
+				- often called sound quality
+			- **Envelope**-
+				- sound envelope is how sound changes over time
+				- about how sound starts, sustains and stops
+		- **Touch**-
+			-  give us information about temperature, rexture, pressure, body position and orientation
+			- another way of gaining information and feedback about objets and events around us, especially when interacting with them directly
+			- touch is just one component of the somatosensory system
+			- **Somatosensory System**-
+				- includes sensory receptors in the skin,m muscles, bones, joints and otgans that provide information on various physical or environmental phenomena- including touch, temperature, pain and body and limb position
+				- **Tactile Feedback**-
+					- refers to information provided through the somatosensory system from a body part, such as sfinger when it is in onctact with touching a phgysical object
+					- use of touch to communicate with users
+					- most people know vibration feeling a mobile phone or rumble in game controller
+					- devices have been designed that allow computer to produce output in a form that can be sensed by touch and related senses
+					- devices seem to be successful in providing tactile output
+					- providing force feedback- where user experienced the computer as a force on their body
+				- additional information- temperature, shape, texture, psition of the object or the amount of resistance- is also converyed
+		- **Smell and Taste**-
+			- **Smell**
+				- olfaction
+				- ability to perceive odours
+				- occurs through sensory cells in nasal cavity
+			- **Taste**-
+				- gustation
+				- direct checmical reception of seat, salty, bitter and sour sensations through the tongue and oral cavity taste buds
+			- **Flavour**-
+				- is a perceptual process in the brain that occurs through partnering the smell and taste senses
+				- less understood than the visual and auditory senses with expert-like finesse
+				- complex smells and tastes can be buolt from simpler elements
+				- but perceptual processes for this remain a topic of research
+				- classification schemes have been developed for specific industries (eg perfume, wine) but they do not generalise to human experiences with other smells and tastes
