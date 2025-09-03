@@ -76,3 +76,35 @@
 				- complex smells and tastes can be buolt from simpler elements
 				- but perceptual processes for this remain a topic of research
 				- classification schemes have been developed for specific industries (eg perfume, wine) but they do not generalise to human experiences with other smells and tastes
+	- **Human Responders**-
+		- used to perform input techniques'
+		- always coupled with human senses in executing interaction tasks so there is a need to introduce human responders 
+		- through movement or motor control, humans are empowered to affect the environmet around them
+		- control occurs through responders- using a finger to text or point, feet to walk or run, eyebrows to frown, vocal cords to speak or torso to learn, movement allows humans to engage with the world around them
+		- **Limbs**-
+			- human control over computers is associated with limbs
+			- fingers, hands and arms we type on keyboards, use mice and press buttons, ghold mobile phones and pres keys, touch and swipe the surfaces of touchscreen phones and tables and wave game controllers
+			- legs and feet can also act as responders
+			- movement of head can be used as a control for cursor
+		- **Voice**-
+			- combination of the larynx, and pulmonary pressure in the longs, we can create sounds
+			- speech is the most apparent form and primary channel for human communication
+			- as input modality, speech must be recognised by algorithms implemented in osftware running on the host computer
+		- **Eyes**-
+			- eye can sense and perceive the environment/computer
+			- it can also act as a controller via saccades and fixations
+			- ![[Pasted image 20250903183815.png]]
+			- the yes can be used to input characters and view the screens information
+				- useful for peoiple with limb disabilities
+			- video-based eye-typing system uses a camera to capture eye movement, from which users can type in words by looking at an on-0screen keyboard
+			- process divided into two parts
+				- eye-tracking system
+				- text-entry system
+				- ![[Pasted image 20250903183919.png]]
+			- Pros
+				- good for people with quadriplegia
+				- easy to reach remote targets
+			- Cons
+				- midas tough- lack of analogous functions for single clicking
+				- limitations in tracking accuracy
+				- calibratiopn errors and drift
