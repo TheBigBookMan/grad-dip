@@ -18,6 +18,7 @@
 	- **Optical Mouse**-
 		- relies entirely on one or more light-emitting diodes (LEDs) and an imaging array of photodiodes (semiconductor p-n junction device that converts light into an electrical current) to detect movement relative to underlying surface
 		- when mouse moves or user clicks a button, sends 3 bytes of data to computer
+		- essentially this data will tell the computer where the mouise is and what is the action doing
 		- first 8 bits contain
 		- ![[Pasted image 20250801085733.png]]
 		- next 2 bytes contain X and Y movement values
@@ -210,6 +211,13 @@
 		- quantifiwes amount ofg movement in a display object (cursor) for a given amount of movement in a control
 		- if a mouse is moved 3cm and cursor also moves 3cm then the C:D gain is 1, if cursor moves 6cm 
 		- non linear gains, the term transfer function is used
+- **Types of Relationships**-
+	- **Learned**-
+		- you learn the amount of interaction with an element will produce X amount of changes
+		- example- turning a nob to the right will increase sound
+	- **Natural**-
+		- natural understanding of an elements movements will produce X amount of changes
+		- example- pushing a slider up will turn the volume up
 
 ## Latency
 - (lag) is the delay between an input action and the corresponding response on a display
@@ -227,6 +235,8 @@
 		- user may not know caps lock is on
 	- designing modeless interactions is sometimes viewed as desireable
 	- trutyh is modes cant be avoided in most cases
+	- important to show to the user the current mode they are in so they know what uis going on
+	- also present the soft burttons for a user to change between known modes of the application
 	- example car-0 three modes- neutral, drive and reverse
 		- main issues with modes are
 			- changing modes
@@ -241,4 +251,7 @@
 	- interaction errors happen only at at the interfaces between interacting systems
 	- bad erros are high in consequences and therefore get a lot of attention
 	- little errors are low in consequences and therefore teend to linger
-	- 
+	- user expectations need to be cl;ear
+		- if you have a save changes box with the YES in the same postiion as a desicard changes box, this could cause an insticntive error by the user
+		- most syustems use save changes instead of discard changes as this is instinctive
+		- common UI interactions need to be kept

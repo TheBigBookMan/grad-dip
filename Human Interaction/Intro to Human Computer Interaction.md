@@ -138,10 +138,12 @@
 		- average time to pick up or putdown an input device
 		- important metric to measure performance of input device
 		- mobile devices supporting pen input and finger touch, device acquisition time using a pen is generally longer than using finger which demonstrated significant advantage of direct finger touch
+		- essentially the higher the acquisition time means there is more time between different interactions which can cause longer workflopws- eg how close a keyboard is to a mouse
 	- **Degrees of Freedom**- 
 		- number of parameters may vary independently
 		- traditional GUI is moving on 2D cursor (y, x) which is 2 degrees of freedom
 		- sensing the location of two fingers would be 4DOF, two touch points can be used as X and Y position of object as well as rotation and scale
+		- more DOF can mean richer input but adds more complexity to be tracked and manages the itneraction
 
 ## Graphical User Interface (GUI)
 - **GUI Programming**-
