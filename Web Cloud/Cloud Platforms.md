@@ -1,0 +1,50 @@
+- **Containers**-
+	- **Before containers**-
+		- deploying and managing apps took a lot of work
+		- each app required distinct environment with specific prerequisites for libraries, runtime and system resources
+		- administering these vaired envionrments was similar to managing diverse shipping containers
+	- **With Containers**-
+		- softwar containers are uniform, modular and portable
+		- simplifying deployment and scaling
+		- apps enclosed in containers can be moved effortleslly between environments; developer laptops, onprem data centres or cloud
+		- dont have to worry about compatability issues
+		- bundle up the code and all its dependencies into a container
+		- increases productivity, efficiency and cost-effectiveness
+		- serverless servies like Fargate no longer manage underlying infra which makes even more ease of transport of containers
+- **AWS Container Services**-
+	- **Elastic Container Service (ECS)**-
+		- high performance container orchestration supporting docker containers'
+		- use the service to run and scale containerised apps on aws
+		- can schedule placement of containers across a managed cluster of EC2 instances
+		- provides its own schedulers but can integrate with third-party schedulers to meet busines or app specific requirements
+		- is highlight integrated with other AWS services
+	- **Elastic Container Registry (ECR)**-
+		- cloud-based docker image registry that makes storing, manaing and deploying docker container images easy
+		- integrates with ECS and docker CLI
+		- simplifying development and production workflows
+		- push your container images to ECR by using docker CLI and ECS can pull directly for prod deployments
+		- reduces the need to operate container repos or be concerned about scaling the infra
+		- hots images in highly available and scalabe architecture
+		- ECR transfers your images over HTTPS and automatically encrypts at rest
+		- can configure policies to manage permissions for each repo and restrit access to IAM users, roles or other AWS accounts
+	- **Elastic Kubernetes Service (EKS)**-
+		- container management platform used to deploy and manage containerised apps at scale
+		- manages clusters of EC2 instances and runs containers on those instances with deployment, maintenance and scaling processes
+		- can run any containerised app using the same toolset on-pre and in cloud
+		- can use aws services to run kubernetes in the cloud
+		- scalable and highly available VM infra, community created service integrations and EKS
+		- is a managed service that runs kubernetes management infra across multiple availability zones to reduce single point of failure
+		- ![[Pasted image 20250903132950.png]]
+		- any apps that run on standard kubernetes environment fully compatbile on EKS
+		- EKS automatically sets up secure and encrypted channes to worker nodes
+		- when selecting EKS you provision an EKS cluster and deploy EC2 or fargate worker nodes
+	- **ECS-ECR Solution Architecture**-
+		- first step is retrieve images from a registry (ECR or docker)
+		- customise the containerimages with the necessary code and resources and create config files to group them
+		- defined your containers as short running tasks or long running services in ECS
+		- choose between EC2 or Fargate to bring services online
+		- use a combination of both launch types for app
+		- ECS manages your containers by scaling app and ensuring availability
+		- ![[Pasted image 20250903133410.png]]
+	- **Fargate or EC2**-
+		- 
