@@ -1,3 +1,4 @@
+## Containers
 - **Containers**-
 	- **Before containers**-
 		- deploying and managing apps took a lot of work
@@ -47,4 +48,96 @@
 		- ECS manages your containers by scaling app and ensuring availability
 		- ![[Pasted image 20250903133410.png]]
 	- **Fargate or EC2**-
-		- 
+		- **Fargate**-
+			- serverless so AWS manages the infra to support the containers
+			- manages the placement of your tasks on isntances and ensures that each task has the appropriate amount of CPU and memory
+			- you can focus on the app instead of worrying about infra
+			- choose when
+				- services subject to wide swings in demand
+				- large workloads that are optimised for low overhead
+				- small test environments
+				- batch workloads that run on a schedule
+			- ![[Pasted image 20250903133753.png]]
+		- **EC2**-
+			- when you want more control over the infra that supports your tasks
+			- you create and manage the EC2 clusters of E2 instances to support containers
+			- also define the placement of containers across the cluster based on resource needs, isolation, policites and availability requirements
+			- nmore granular control over your environment without operating your own cluster and config management systems or worrying about scaling management infra
+			- choose when
+				- more predictable resource requirements or option of using reserved instances to reduce costs
+				- large workloads that are optimised for price
+				- compliance with organisational security requirements
+				- excess EC2 capacity
+		- Choose EC2 when you have more predictable resource requirements
+		- fargate to launch other services subject to wide swings in demand
+
+## Elastic Block Storage (EBS)
+- persistant storage for EC2 instances
+- volumes are network-attached and persist independently from the life of an instance
+- highly available, reliable volumes that can be leveraged as an EC2 instances boot partition or attached to a running EC2 as standard block device
+- **Boot Partition**-
+	- EC2 instances can be stopped abnd restarted, enabling you to pay only for the storage resources used while maintaining your instances state
+- volume offer greatly improved durability over EC2 instance stores because EBS volumes are automatically replicated on the backend (in a single AZ)
+- used as it can persist data between EC2 instances when one goes down and another goes up
+- has the ability to create point-in-time consistent snapshots of your volumes that are stored in S3 and automatically replicated across multiple AZ
+- snapshots used as starting point for new EBS volumwes and can protect your data long-term durability
+- can also share these snapshots with other aws devs
+- **Volume Features**-
+	- **Persistent Storage**-
+		- volume lifetime is independent of any partiular EC2 instance
+	- **General Purpose**-
+		- volumes are raw, unformatted block devices that can be used from any OS
+	- **High PErformance**-
+		- are equal to or better than local EC2 drives
+	- **High Reliability**-
+		- have built-in redundancy within an AZ
+	- **Designed for Resliency**-
+		- the annual failure rate is between 0.1 to 1%
+	- **Variable Size**-
+		- volume sizes range from 1GB to 16 TB
+	- **Easy to Use**-
+		- can easily be created, attached, backedup, restored and deleted
+
+## Relational Database Service (RDS)
+- easy to setup, operate and scale a relational database in cloud
+- provides cost-efficient and resizeable capacity while managing time-consuming database admin tasks
+- can choose between Aurora, Oracle, Microsoft SQL, PostgreSQL, Mysql, mariaDB
+
+## Infrastructure
+- **Elastic Load Balancing**-
+	- automatically distribute incoming app traffic across multiple EC2 instances
+	- enables achieve fault tolerance in your apps
+	- provides required amount of load balancing capacity needed to route app traffic
+- **Auto-Scaling**-
+	- maintain app availability and allows you to scale your EC2 capacity automatically according conditions you define
+	- use to ensure you are running desired number of EC2 instances during demand spikes to maintain performance and decrease capacity during lulls to reduce costs
+	- well suited to apps that have stable demand patterns or that experience hourly, daily, weekly variability in usage
+
+## CI/CD
+- process of deploying artificats to various environments, including testing, staging and production
+- can either be done entirely automatically or with approval stages at crucial points
+- steps ensure all necessary approvals, such as release management are obtained before deployment
+- developers can rely on deployment-ready build artifacts that has undergone a standardised testing process
+  **Continous Integration and Continuous Delivery**-
+	- software dev practice that aims to automate and streamline the process for building, testing and deploying software apps
+	- involves regularly integrating code changes from multiple devs into shared repo
+	- each integration triggers an automated build process that compiles the code, runs automated tests and generates reports
+	- ensures that code changes are integrated smoothly and helps identify issues early in development cycle
+	- continous deployment extends integration by automating the deployment process
+	- involves automatically packaging the application, deploying it to various environments and running additional tests in each environment
+	- allows for rapid and frequent releases of new features or bug fixes
+	- continuous delivery all about reducing risk and delivering value faster by producing reliable software in short iterations
+	- ![[Pasted image 20250903142025.png]]
+	- when committing code to repo the repo server automatically notifies the CI server
+	- CI server running on a different machine will automatically do the build process
+		- compile the code
+		- run unit tests
+		- run integration test
+		- package the code
+	- CI systems automatically deploy the code onto the server
+- **Development Operations (DevOps)**-
+	- applications run together with other services in specific systems
+	- the apps in the cloud are the apps + infrastructure
+	- ![[Pasted image 20250903142532.png]]
+	- ![[Pasted image 20250903142706.png]]
+	- 
