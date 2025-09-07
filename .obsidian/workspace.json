@@ -36,34 +36,6 @@
             }
           },
           {
-            "id": "c68deb91f410cd03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Cloud/Cloud Platforms.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cloud Platforms"
-            }
-          },
-          {
-            "id": "04364447e391aa47",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Human Interaction/HCI Feedback.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "HCI Feedback"
-            }
-          },
-          {
             "id": "d0792817a54f80cd",
             "type": "leaf",
             "state": {
@@ -103,6 +75,20 @@
               },
               "icon": "lucide-file",
               "title": "HCI Tasks and Models"
+            }
+          },
+          {
+            "id": "04364447e391aa47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Human Interaction/HCI Feedback.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HCI Feedback"
             }
           }
         ],
@@ -250,38 +236,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "04364447e391aa47",
+  "active": "249425e6eccc3e45",
   "lastOpenFiles": [
-    "Pasted image 20250903183919.png",
-    "Pasted image 20250903183815.png",
-    "Pasted image 20250903145656.png",
-    "Pasted image 20250903145624.png",
-    "Pasted image 20250903144433.png",
-    "Pasted image 20250903144000.png",
-    "Pasted image 20250903143527.png",
-    "Pasted image 20250903143413.png",
-    "Web Cloud/Cloud Platforms.md",
-    "Human Interaction/HCI Feedback.md",
-    "Pasted image 20250903142706.png",
-    "Pasted image 20250903142532.png",
-    "Pasted image 20250903142025.png",
+    "Human Interaction/Interaction with Direct Devices.md",
     "Human Interaction/Interaction with Indirect Devices.md",
     "Human Interaction/Intro to Human Computer Interaction.md",
-    "Human Interaction/HCI Tasks and Models.md",
     "Human Interaction/Experiment Design and Data Analysis.md",
-    "Human Interaction/Interaction with Direct Devices.md",
-    "Web Cloud/assignments/Assignment2/frontend/src/components/CompanyList.js",
-    "Web Cloud/assignments/Assignment2/frontend/src/components/Company.js",
-    "Web Cloud/assignments/Assignment2/frontend/src/components/NewCompany.js",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/fsevents",
-    "Web Cloud/assignments/Assignment2/api/controllers/company.controller.js",
-    "Web Cloud/assignments/Assignment2/api/routes/companies.routes.js",
-    "Web Cloud/assignments/Assignment2/api/models/company.model.js",
-    "Web Cloud/assignments/Assignment2/api/models/companies.model.js",
+    "Human Interaction/HCI Feedback.md",
+    "Human Interaction/HCI Tasks and Models.md",
+    "Web Cloud/Cloud Platforms.md",
+    "Human Interaction/assignments/assignment3/task.py",
+    "Human Interaction/assignments/assignment3/ExperimentData.xlsx",
+    "Human Interaction/assignments/assignment3/ExperimentData (1).xlsx",
+    "Human Interaction/assignments/assignment3/SubjectiveData.xlsx",
+    "Human Interaction/assignments/assignment3/ExperimentData.numbers",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pingouin-0.5.5.dist-info/top_level.txt",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pingouin-0.5.5.dist-info/METADATA",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pingouin-0.5.5.dist-info/WHEEL",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pingouin-0.5.5.dist-info/REQUESTED",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pingouin-0.5.5.dist-info/RECORD",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/sample_data/logo2.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/sample_data/grace_hopper.jpg",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/sample_data/Minduka_Present_Blue_Pack.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect_large.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect.svg",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots_large.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots.svg",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots.png",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_extra/README.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_compat/README.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/scipy/fft/_pocketfft/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/README.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/CHANGELOG.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/package.json",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/data/patch.json",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@testing-library/react/node_modules/@testing-library/dom/README.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@testing-library/react/node_modules/@testing-library/dom/CHANGELOG.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@jest/source-map/node_modules/source-map/CHANGELOG.md",
@@ -291,12 +282,6 @@
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@babel/eslint-parser/node_modules/eslint-visitor-keys/CHANGELOG.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@eslint/eslintrc/node_modules/js-yaml/README.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/@eslint/eslintrc/node_modules/js-yaml/CHANGELOG.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@eslint/eslintrc/node_modules/globals/readme.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@jest/reporters/node_modules/color-convert/README.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@eslint/eslintrc/node_modules/type-fest/readme.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@jest/reporters/node_modules/color-convert/CHANGELOG.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@jest/source-map/node_modules/source-map/README.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@istanbuljs/load-nyc-config/node_modules/p-locate/readme.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@istanbuljs/load-nyc-config/node_modules/find-up/readme.md"
+    "Web Cloud/assignments/Assignment2/frontend/node_modules/@eslint/eslintrc/node_modules/globals/readme.md"
   ]
 }
