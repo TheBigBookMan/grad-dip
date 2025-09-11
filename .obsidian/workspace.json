@@ -91,8 +91,7 @@
               "title": "HCI Feedback"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -236,14 +235,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "348f9e2b5d364791",
+  "active": "90e051aec5737d36",
   "lastOpenFiles": [
     "Human Interaction/Interaction with Indirect Devices.md",
-    "Human Interaction/HCI Feedback.md",
-    "Human Interaction/HCI Tasks and Models.md",
     "Human Interaction/Interaction with Direct Devices.md",
-    "Human Interaction/Intro to Human Computer Interaction.md",
     "Human Interaction/Experiment Design and Data Analysis.md",
+    "Human Interaction/HCI Tasks and Models.md",
+    "Human Interaction/HCI Feedback.md",
+    "Human Interaction/Intro to Human Computer Interaction.md",
     "Web Cloud/Cloud Platforms.md",
     "Web Cloud/Cloud Foundation.md",
     "Web Cloud/Web Programming.md",
