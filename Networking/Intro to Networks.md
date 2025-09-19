@@ -1,1 +1,84 @@
-- Intro
+- **Network Foundation**-
+	- data networks which were initially used to carry iunformation from one company to another are now being utilised to improve quality of life worldwide
+	- most businesses utilise software packages that provide rmote workgroups
+	- people who work together but not in the exact regional point to collaborate on documents and databases in real time
+- **Network Architecture**-
+	- network architects must design the internet to suit the demands of the web and its users, like archicests for buildings
+	- internet has considerably exceeded its initial size and usage assumptions
+	- fault tolerance, scalability, quality of service and security are all built into internets design
+	- **Fault Tolerance**-
+		- reduces the effect of hardware or software failures and allows for speedy redovery
+		- commonly accomplished through redundancy which entails having duplicate connections or equipment between the source and destination
+		- ![[Pasted image 20250919132609.png]]
+	- **Scalability**-
+		- refers to capcity to add more users, apps, tools and other networks fast without compromising the performance of the service being supplied to current users
+		- accomplished by developing the systems underlying physical infrastructure and logical design in a hierarchical layered design
+		- ![[Pasted image 20250919132748.png]]
+	- **Quality of Service**-
+		- refers to the mechanism that manages congested network
+		- congestion occurs when bandwidth demand exceeds the network capaibility
+		- quality of service is achived by using a priority (class) system
+		- ![[Pasted image 20250919132849.png]]
+	- **Security**-
+		- essential for many network users such as banks and other organisations
+		- security must address 2 areas
+			- network infrastructure security
+				- protecting network devices from outside contact
+			- content security
+				- protecting the network content in various ways such as availability, confidentiality and integrity
+		- network outages, misdirection and loss of personal or corporate finances; firm intellectual property stolen or utilised by a rival; and customer contract data made public resulting in a loss of market trust might all result from network breach
+		- ![[Pasted image 20250919133150.png]]
+	- **Fault Tolerance Network Architecture**
+		- **Network Switching Types**-
+			- understanding how this resilience was achieved begins with a comparison of 2 fundamental types of network switching
+				- **Circuit-Switched, Connection-Oriented Networks**-
+					- phone operators and early dial-up systems established a temporary circuit, a physical link on which the phone signal would flow from sender to receiver to connect telephone calls
+					- system was connection-oriented becasue any physical disconnects or service difficulties would result in the call between users being dropped
+					- would necessitate starting a new call and setting up a new system
+				- **Packet-Switched, Connectionless Networks**-
+					- converting to this solved the fault-tolerance problem
+					- single message is split into little data blocks known as packets over a packet-switched network, which address information for the sender and recipient
+					- the packets are routed across numerous networks and resembled at their final spot
+					- because the call does not require an active connection to go through, packet-switched technology is connectionnless
+					- because numerous users may utilise network circuits simultaneously, this is more efficient than circuit-switched networks
+		- **Scalable Network Architecture**-
+			- reliable connectivity may expand without requiring significant changes to its core
+			- scalable design is seen from the internet
+			- internet developed exponentially over last decade but the basic design has remained unaltered- comprises of several private and public networks that are linked together through systems
+			- central domain servers that track internet addresses are housed by significant tier-1 ISPs
+			- system bottom later, the data is copied and hsared
+			- most traffic is processed away from the upper-tier servers thanks to its hierarchical, multitirered design
+			- because of how processing work is distributed, changes made at the lower tiers, such as adding a new ISP have no impact on the top levels
+		- **Providing Quality of Service (QoS)**-
+			- procedures that control congested network traffic are known as QoS
+			- when demand for network resources exceeds the available capacity, congestion occurs
+			- some network resource limits cannot be overcome
+			- technology limits, price and local availability of high-bandwidth services are all constraints
+			- data-carrying capability of a network is measured by its bandwidth
+			- when several communications are attempted across the network simultaneously, network capacity may be in short supply
+			- apaprent solution to this problem is the enhance the availble range
+			- **Priority Decisions for an Organisation**-
+				- **Time-sensitive Communication**- 
+					- prioritise services such as telephony and video delivery
+				- **Non-Time-Sensitive Communication**-
+					- reduce the priority of retrieving webpages or sending emails
+				- **High Importance to an Organisation**-
+					- prioritise data on production control or commercial transactions
+				- **Undesireable Communication**-
+					- reduce the importance of undesired activities (e.g. peer-to-peer file sharing or live entertainment) or prohibit them entirely
+		- **Providing Network Security**-
+			- online service has always been a productive environment for business, with year-on-year increases in B2B transactions and ecommerce
+			- scammers and vandals are drawn to the same milieu that draws genuine businesses
+			- integrity of firm assets might be jeopardised, resulting in significant economic and financial consequences
+			- as a result, web providers and users are concerned about network security and online safety is essential for any network management strategy
+			- system safety breach can lead to several serious repercussions
+				- network interruption that results in loss of communication and commercial transactions
+				- the loss of personal or commercial cash
+				- intellectual property theft (including proposals for projects, patents and strategic plans)
+				- exposure of confidential customer data- could cause a customer to lose confidence in the company and hasten to a more reliable vendor
+				- to provide security a network manager must address
+					- network infrastructure security
+					- content security
+
+## Network as Platform
+- 

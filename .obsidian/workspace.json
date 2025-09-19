@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5110321044922
+    "width": 210.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "c585aa9f458856fa",
@@ -166,6 +167,10 @@
   },
   "active": "348f9e2b5d364791",
   "lastOpenFiles": [
+    "Pasted image 20250919133150.png",
+    "Pasted image 20250919132849.png",
+    "Pasted image 20250919132748.png",
+    "Pasted image 20250919132609.png",
     "Human Interaction/HCI Feedback.md",
     "Untitled",
     "Human Interaction/HCI Tasks and Models.md",
@@ -196,9 +201,6 @@
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect.svg",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect.png",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg",
-    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots_large.png",
-    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots.svg",
-    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/matplotlib/mpl-data/images/subplots.png",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_extra/README.md",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_compat/README.md",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/scipy/fft/_pocketfft/LICENSE.md",
