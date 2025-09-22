@@ -81,4 +81,90 @@
 					- content security
 
 ## Network as Platform
-- 
+- **Elements of the Network**-
+	- systems are software-based communication programs running on network devices
+	- response to a request, a network service gives data
+	- **Networks have 4 Essential Features**-
+		- **Devices**
+			- messages are sent between devices on the network
+		- **Medium**-
+			- a path is a way to connect various devices; it may transmit messages from one device to the next
+		- **Message**-
+			- messages or units of data are passed from one device to the next
+		- **Rules**-
+			- the way messages are delivered, directed, received and understood is governed by rules or agreements (protocols)
+	- **Network Devices**-
+		- **Types of Network Devices**
+			- **End Device**-
+				- the piece of equipment that is the source or destination of communication
+				- such as computers, laptops, servers, workstations, network printers, VoIP phones and mobile devices
+				- typically the sole devices with which users interact (PDAs, smartphones, scanners)
+			- **Intermediary Device**-
+				- end users are linked through these devices
+				- messages are passed through intermediary devices based on the target host address until they reach their destincation
+		- **Physical Media**-
+			- all network devices need some sort of physical medium to communicate
+			- because physical qualities of each network media vary, different encoding methods are used
+			- process of converting data to signals in physical media is called encoding (electric, light, or electromagnetic energy)
+			- **Types of Physical Media**-
+				- **Copper Media**-
+					- **Signal Type**- electrical pulses
+					- **Speed**- starting from 100Mbps
+					- **Comparative cost**- least expensive
+					- **Typical use**- short distance, usually Local Area Network (LAN) up to 500m
+				- **Fibre-optic Media**-
+					- **Signal Type**- light pulses
+					- **Speed**- starting from 1000 Mbps
+					- **Comparative cost**- most expensive (more expensive than wireless)
+					- **Typical use**- long-distance trunks and LAN
+					- **Used in two modes**- single-mode and multimode
+						- **Single-Mode**-
+							- small core
+							- less dispersion
+							- suitable for long-distance apps up to 100km
+							- lasers are used as the light source often within campus backbones for distances of several thousand metres
+							- ![[Pasted image 20250922212037.png]]
+						- **Multimode**-
+							- larger core than single-mode
+							- allows more significant dispersion, meaning loss of signal
+							- used for distance up to 2km
+							- uses LEDs as light source often with LANs or distances of a couple hundred metres within campus network
+							- ![[Pasted image 20250922212125.png]]
+				- **Wireless Media**-
+					- **Signal Type**- electromagnetic waves
+					- **Speed**- starting from 10 Mbps
+					- **Comparative cost**- expensive (cheaper than fibre-optic)
+					- **Typical use**- multiuse based on frequency and available spectrum width can be used globally
+					- ![[Pasted image 20250922212225.png]]
+			- **Choosing suitable media**-
+				- how far a signal can travel across a medium
+				- the location where the media will be placed
+				- the amount of data to be transferred and the speed at which it will be transmitted
+				- cost of infrastructure (media or installation)
+	- **Network Sizes**-
+		- networks can be in different sizes
+		- most different significanes between sizes are
+			- the size of the region that has been covered
+			- the total number of people who are connected
+			- the number of services accessible and the sorts of services available
+			- ![[Pasted image 20250922213748.png]]
+		- **Unique Network Sizes**-
+			- **Local Area Network (LAN)**-
+				- scope usually limited to single building or group of buildings
+				- frequently owned by the same company that owns the devices that are connected to it
+				- provide substantially more bandwidth, in the range of hundreds of megabits per second
+				- fewer errors and delays
+				- ![[Pasted image 20250922213903.png]]
+			- **Wide Area Network (WAN)**-
+				- provide low-to-medium bandwitch services
+				- made up of several international trunks controlled by several governments
+				- different policies may be enforced
+				- ![[Pasted image 20250922214028.png]]
+			- **Metro Area Network (MAN)**=
+				- larger than LAN, smaller than WAN
+				- used for like uni campuses or a city
+				- often managed by ISPs or government entities
+			- **Internetwork**-
+				- collection of separate multiple networks (LAN, WAN, MAN)
+				- connected together
+				- uses routers and standard protocols like TCP/IP to allow communication between those different networks
