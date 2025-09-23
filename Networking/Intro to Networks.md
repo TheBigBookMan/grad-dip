@@ -168,3 +168,139 @@
 				- collection of separate multiple networks (LAN, WAN, MAN)
 				- connected together
 				- uses routers and standard protocols like TCP/IP to allow communication between those different networks
+
+## Introduction Network Protocols
+- protocols are regulations that anybody who connects with another must follow
+- network protocols enable communcation between devices and provide a global standard that allows data to flow freely
+- they allow the internet to function
+- **Device Interaction on Network, must adhere to several protocols**
+	- the messages format, including how much data to include in each part
+	- the method through which intermediary devices exchange information regarding the destinations path
+	- the procedure for dealing with update messages sent between intermediate devices
+	- the procedure for starting and stopping communications between hosts
+	- ![[Pasted image 20250923185130.png]]
+
+- **Interaction of Protocols**-
+	- example of using protocol suite in network communications is the interaction between web server and web browser
+	- interacted uses several protocols and standards to exchange information
+	- protocols ensure both parties recieve and understand the messages
+		- **Network Access Protocols (Link Layer)**-
+			- datalink management and physucal data transfer on the medium are the two major roles of network access protocols
+			- packets from IP are formatted and sent over the medium using datalink management protocols
+			- physical media standards and protocols regulate how signals are delivered over the media and how they are interpreted by receiving clients
+			- how your physical device is connected to the network
+			- example- ethernet, wifi, 5G etc
+			- provides addressing at hardware level- MAC addresses
+			- defines how the raw bits move across the medium- cables or radio waves
+		- **Internet Protocol (IP) (Network Layer)**-
+			- most widely used internetwork protocol
+			- IP is in charge of encapsulating TCPs structured segments into packets
+			- assigning suitable addresses and choosing hte optimal path to the destination host
+			- provides logical addressing system (IP addresses) and routing
+			- it doesnt guarantee delivery, order or reliability- it just tries to deliver packets from source to destination
+			- basically just decides WHERE the packets go, but actually performing the action of transporting it
+		- **Transmission Control Protocol (TCP) (Transport Layer)**-
+			- protocol for managing individual talks between web servers and web clients
+			- to get to destination client, TCP breaks the HTTP messages into smaller chunks called segments
+			- TCP sits on top of IP to improve reliability
+			- requires the 3-way handshake
+			- guarantees ordered delivery of data
+			- retransmits lost packets
+			- manages flow control
+			- wuthout TCP, high level appls would constantly have to handle missing/corrupted packets
+			- this is the assurance system, making sure envelopes arrive, in order and intact
+		- **Hypertext Transfer Protocol (HTTP) (Application Layer)**-
+			- standard protocol for communicating between a web server and web client
+			- content and formatting of requests and answers sent between the client and server are defined by HTTP
+			- runs on top of TCP
+			- how browsers and servers communicate with each other
+			- a client (browser) sends a request (GET /api/get_index.html) and server responds (200 + content)
+			- relies on TCP to ensure all text, images or videos arive in the right order
+			- its like the content of the message being delivered, instructions and data written in a shared language
+		- ![[Pasted image 20250923185150.png]]
+- **Protocol Suites and Industry Standards**-
+	- early days of networking, each manufactorer had proprietry network equipment and protocols to support it
+	- if corporation that bought equipment didnt need to exchange data outside its network then its fine
+	- necessity for cross-platform standard for network communication became common as businesses wanted to do business with other companies using different network technologies
+	- **Vendor-specific protocols**-
+		- called proprietry
+		- different devices from vendors are designed to interact with each other eventually
+		- why common protocol standards are required
+- **Network Models**-
+	- each layer is responsible for specific responsibilites and is separate from others
+	- the layers share data and rely on each other to receive and deliver input and output
+	- **Reference Model**-
+		- standard reference for network protocols and services to preserve consistency
+		- its not meant to be an implementation specification or give enough information to adequately describe the network architectures services
+		- OSI model is detailed description of the complete communication process
+		- TCP/IP model shows how the protocol suite works and how it is used to communicate
+	- **Open Systems Interconnection (OSI Model)**-
+		- International Organisation for Standardisation created OSI model to give foundation for developing a set of open systems protocols
+		- most widely known internetwork reference model
+		- used for data network design, operation specifications and troubleshooting
+		- **7 Layers**- from top to bottom
+			- **7. Application Layer**-
+				- acts a portal through which users and application processes can access network resources
+				- closest to the user
+				- provides network services directly to applications
+				- examples- HTTP, HTTPS, FTP, SMTP, POP3. DNS
+				- this is the browser, email client, even slack uses this layer
+			- **6. Presentation Layer**-
+				- formats the data to be delivered to the application layer
+				- ensures that data is in a format that the receiving app can understand
+				- functions: encryption, compression, translation (ASCII <-> unicode, jpeg <-> BMP)
+				- examples- SSL/TLS encryption, jpeg, mpeg, gif
+				- this is where data gets packaged in readable/secure form
+			- **5. Session Layer**-
+				- enables the formation of sessions between processes operating on separate platforms
+				- manages sessions between applications
+				- functions: authentication, session establishment, teardown, checkpoints
+				- example- when logging into website, session keeps you authenticated until log out
+				- keeps track of the conversations- ie are we still connected
+			- **4. Transport Layer**-
+				- guarantees that messages are delivered without errors, in order and without duplication or losses
+				- ensures the end-to-end delivery of data
+				- functions: segmentation, error detection, flow control, reliability
+				- protocols:
+					- TCP- reliable, ordered, connection-oriented
+					- UDP- fast, connectionless, no guarantee
+				- the courier that makes sure packages arrive in order and intact
+			- **3. Network Layer**-
+				- in charge of the subnets functionning
+				- determining which physical path data should travel depending on network circumstances, service priority and other criteria
+				- decides where the packet goes via routing
+				- functions: logical addressing, path selection, packet forwarding
+				- protocols: IP (IPv4, IPv6), ICMP, RIP, OSPF, BGP
+				- devices- routers
+				- like a GPS that decides which routes the packets take to reach desitaion
+			- **2. Datalink Layer**-
+				- over the physical layer, datalink ensures error-free transport of data frames from one node to another
+				- link setup and termination, frame traffic control, frame sequencing, frame aknowledgement, frame fault checking and media access management are all provided by it
+				- handles node-to-node delivery on the same network
+				- functions: MAC addressing, error detection (CRC), framing
+				- protocols/tech- ethernet, wifi, PPP, ARP
+				- devices- switches, birdges
+				- its like the street signs and house numbers in neighbourhood
+			- **1. Physical Layer**-
+				- responsibile for sending and receiving unstructured raw bitstreams across a physical channel
+				- lowest layer- the actual hardware
+				- functions: transmitting raw bits (0s, 1s) over a medium
+				- tech: cables, fiber, radio waves, hubs, repeaters
+				- the actual roads, wires and signals carrying the message
+			- ![[Pasted image 20250923185235.png]]
+	- **Protocol Models**-
+		- designed to resemble the structure of protocol suite closely
+		- it specieis the functions at each later of the protocols within TCP/IP suit
+		- Models are desinged to explain the protocols (different naming)
+		- **4 Layers TCP/IP Model**
+			- **4. Application**-
+				- data is shown to the user
+				- encoding and dialogue control
+			- **3. Transport**-
+				- supports cross-network connectivity between multiple devices
+			- **2. Internet**-
+				- optimum path through network is determined
+			- **1. Network/Link Access**-
+				- physical devices and media are under its control
+		- TCP/IP is the model referenced in real world, while OSI isn't
+		- 
