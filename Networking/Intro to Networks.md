@@ -303,4 +303,26 @@
 			- **1. Network/Link Access**-
 				- physical devices and media are under its control
 		- TCP/IP is the model referenced in real world, while OSI isn't
-		- 
+		- ![[Pasted image 20250925191439.png]]
+		- **Communication Process**
+			1. data are created at the originating source end devices application layer
+			2. in the source end device, data segmentation and encapsulation flow down the protocl stack
+			3. network access layer of the stack, data are generated and writtedn to the medium
+			4. media and other intermediate devices are used to transport data via the internetwork
+			5. data are received at the destination end devices entwork access layer
+			6. in target device, the decapsulation and reassemble of the data pass up the stack
+			7. application layer of the destination end device, passing these data to the destination application
+- **TCP/IP Data Encapsulation and Decapsulation**
+	- LOOK INTO MORE
+	- in transport layer, breaks the data into segments
+	- sequence number assigned to each segment
+	- transport laer must identfy target applications address
+	- assigns idetnfier to each segment- port number
+	- segments sent to network layer
+	- encapsulation takes place and network layer adds IP address to packets
+	- network layer compares destination and source IP address, if dont belong to same network, the packet sent to gateway
+	- network sends packets to data link layer
+	- encapsulation happens in datalink layer
+	- local 
+	- alot more its wild
+	- ![[Pasted image 20250925193243.png]]

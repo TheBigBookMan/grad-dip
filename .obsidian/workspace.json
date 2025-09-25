@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Intro to Networks"
             }
+          },
+          {
+            "id": "2501177f069a9856",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Network Layer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Network Layer"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -165,8 +180,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "348f9e2b5d364791",
+  "active": "2501177f069a9856",
   "lastOpenFiles": [
+    "Networking/Intro to Networks.md",
+    "Networking/Network Layer.md",
+    "Pasted image 20250925193243.png",
+    "Pasted image 20250925191439.png",
     "Pasted image 20250923185235.png",
     "Pasted image 20250923185150.png",
     "Pasted image 20250923185130.png",
@@ -175,11 +194,7 @@
     "Pasted image 20250922213748.png",
     "Pasted image 20250922212225.png",
     "Pasted image 20250922212125.png",
-    "Pasted image 20250922212037.png",
     "Untitled.md",
-    "Networking/Intro to Networks.md",
-    "Pasted image 20250919133150.png",
-    "Pasted image 20250919132849.png",
     "Human Interaction/HCI Feedback.md",
     "Untitled",
     "Human Interaction/HCI Tasks and Models.md",
