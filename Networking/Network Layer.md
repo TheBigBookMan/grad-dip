@@ -1,1 +1,83 @@
-- 
+- turing transport layer segments into packets and starting them on their way to target network across multiple networks![[Pasted image 20250927141056.png]]
+- **Communication from Host to Host**-
+	- receives data segments (PDUs- **Protocol Data Unit**) from transport layer
+	- bits of information have been compressed into manageable size and numbered for consistency
+	- devices employ network layer protocols (IP) to facilitate the transfer of upper layer information between hosts
+	- additional routing protocols are used to select routes between networks when the hosts are in distinct networks
+	- network layer protocols specify the addressing and packaging of a transport layer PDU and describe how the PDU is to be carried with minimum overhead
+	- **4 Tasks to be Performed**-
+		- **Addressing**-
+			- each sending and receiving device must have its own IP address
+			- hosts are devices in IP networks that have IP addresses. 
+			- the source IP address is the IP address of the transmitting host
+			- the destination IP address refers to the IP address of the receiving host
+		- **Encapsulation**-
+			- an IP header must be included in each PDU transported between networks to identify the source and destination IP addresses
+			- the address information and other bits that identify the PDU as a network layer PDU are contained in the IP header
+			- encapsulation is the term for the process of adding information
+			- a packet is a name given to an OSI layer 4 PDU that has been encapsulated at the network layer
+		- **Routing**-
+			- network layer is responsible for routing these packets to their final target host
+			- there are times when the source and destination hosts are not on the same network
+			- routers are network intermediary devices that connect networks
+			- routers job is to choose pathway for packets and direct them to their destinations
+			- routing is the term for this procedure
+			- a hop is a path taken by a packet to reach the next device
+		- **Decapsulation**-
+			- decapsulation is the process of releaseing encapsualated data that is often conveyed in packets via a network
+			- destination host checks the destination IP address to ensure the packet was sent to the correct device
+			- the packet is decapsulated and sent to the appropriate transport layer or OSI layer 4 protocol if the addrss is accurate
+- **Routing**-
+	- **How data packets are handled**-
+		- without network layer device, communication inside a network or subnet is possible?
+		- when a host connects outside the local network, router functions as a gateweay and chooses a path for the packet at the network layer
+		- **IP Packets: Carrying data end to end**-
+			- network layers job is to convey data from the host that created it to the host that consumes it
+			- IP packet is created at layer 3 to convery the layer 4 PDU during encapsulation at the source host
+			- if destination host is on same network as the source host, the packet is sent betweren the two hosts over local media without using a router
+			- if source and desitnation hosts are on different networks, the packet can transmit a transport layer PDU across several networks and routers
+			- when routers make forwarding judgements, the information contained inside is not affected
+			- information in the IP packet header is used to make forwarding decisions at each hop
+			- thoughout the entire procedure, the packet and its phyiscal network encapsulation stay unchanged from the source host to the destination host
+		- **Gateway: the way out of the network**-
+			- the gateway (default gateway) is required to transmit a message out of the local network
+			- if the network section of the packets destination node differs from the originating hosts network, the packet must be routed outside the original network
+			- the packet is sent to the gateway to do this
+			- this gateway connects to the local network through a router interface
+			- the physical network IP of the gateway interface matches the network addresses of the hosts
+			- the hosts are set up to recognise that address as the gateway address
+		- **IP Packet Route**-
+			- without a route, no packet may be sent
+			- regardless of whether a packet originates in a host or is passed by an intermediate device, the devi e must have a route to determine where the packet should be delivered
+			- either a packet must be sent to another host on the local network or the gateway
+			- the most must have routes that reflect these destinations to send a packet![[Pasted image 20250928144513.png]]
+		- a network takes a forwarding decitions for each packet that arrives at the gateway interface
+		- routing is the term for this forwarding mechanism
+		- a router needs a route to a destination network to fortwar a packet to the network
+		- the packet cannot be transmitted if a route to the target network does not exist
+	- **Routing Table**-
+		- information about linked and distant networks is stored in the routing table
+		- one of the router interfaces is directly connected to network connections
+		- these interfaces serve as entry points for hosts on various local networks
+		- remote connections are those that arent connected to the router directly
+		- the network admin can manually set routes to these networks on the router or learn them automatically yusing dynamic routing protocols
+		- routes in a routing table have 3 main features
+			- destination network
+			- next hop
+			- metric
+		- Network with a local router and a distant router![[Pasted image 20250928152623.png]]
+			- **2 Subnets**- means the remote router is connected to two sub-networks- 10.1.1.0/24 and 10.2.3.0/24
+			- **R 10.1.1.0 & R 10.1.2.0**- are the IP address of the destination networks. R means RIP (**Routing Information Protocol**) protocol dynamically learned route to the destination
+			- **(120/1)**- is the metric that is usually described as the cost of the route, if there is more than one route to one network then the route with the lowest metric cost is preferred
+			- **VIA 192.168.2.2**- is the next hop that means this is the IP address of the interface through which the packet will pass through to get to the destination network
+			- **00:00:08**- specifies the last time the route was updated in house: minutes: seconds
+			- **FastEthernet0/0**- this is the itnerface the router will use to reach the next hop
+			- **C 192.168.2.0/24 is directly connected**- this interface is connected to this IP network- it doesnt need to forward packets through another router- it can deliver them directly
+			- ![[Pasted image 20250928202411.png]]
+		- show IP route command from a routers console may be used to analyse the routing table in the local router
+		- from left to right the output contains the destination network, the metric (120/1) and next hop
+		- a router needs a route to a destination network to forward a packet to that system
+		- the gateway may be nunerous routes or hops distant from the destination network
+		- routes for directly linked networks are immediately added to the routers addressing database
+		- other routes are configured manually (statically) or acquired via a routing porotocol such as RIP or OSPF
+		- 
