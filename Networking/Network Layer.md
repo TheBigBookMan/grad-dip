@@ -80,4 +80,106 @@
 		- the gateway may be nunerous routes or hops distant from the destination network
 		- routes for directly linked networks are immediately added to the routers addressing database
 		- other routes are configured manually (statically) or acquired via a routing porotocol such as RIP or OSPF
-		- 
+	- **Packet Forwarding: moving the packet towards its destination**-
+		- packet-by-packet and hop-by-hop is used
+		- each router along the path treats each packet separately
+		- router evaluates each packets destination IP address and then checks the routing database for forwarding information at each step
+		- the router will then handle the packet in one of following ways
+			- forward it to the next-hop router
+			- forward it to the destination host
+			- drop it
+		- **Router Determining Appropriate Action**-
+			- Incoming Packet
+			1. routers are intermediary devices, it processes the packet at network layer
+				- packets arrive at a routers interfaces and encapsulated as a data link layer (layer 2) PDU
+				- the router firest discards the layer 2 encapsulation so that the IP packet can be examined
+			2. the router examines the IP address
+			3. the router checks the routing table for a match![[Pasted image 20250929173422.png]]
+			4. router selects the next hop
+				- in the router, the destination address in a packet header is examined
+				- if a matching route in the routing table shows that destination network is directly connected to the router
+				- the packet is forwarded to the interface to which that network is connected
+			5. the router then does one of the following
+				- **Scenario A: the router forwards the packet**- 
+					- if the route matching the destination network of the packet is a remote packet
+						- the packet is fowrwarded to the indicated interface, encapsulated by layer 2 protocol and sent to the following hop address
+					- if the destination network is on a directly connected network
+						- the packet must be first re-encapsulated by the layer 2 protocol and then forwarded out the proper interface to the local network
+				- **Scenario B: the router uses the default route**-
+					- if routing table does not contain a more specific route entry for an arriving packet
+						- the packet is forwarded to the interface indicated by a default route if one exists
+						- the packet is encapsulated by the layer 2 protocol and sent to the next-hop router at this interface
+						- the default route is also known as the gateway of last resort
+				- **Scenario C: the router drops the packet**-
+					- if a packet is dropped, IP, by design, has no provision to return a packet to the sender or previous router
+					- such a function would detract from the protocols efficiency and low overhead
+					- other protocols used to report such errors
+	- **Routing Process: How routes are learnt**-
+		- to generate trustworthy routing table, routers require information about other networks
+		- networks and routes are constantly changing with new networks popping up and old ones disappearing
+		- if a router contains inaccurate route information, it will likely forward packets improerpy, resulting in packet delays or drops
+		- to forward packets successfully, routers must have current knowledge about neigbourihg routers
+		- static and dynamic routing are the two ways a router may learn information about routes
+		- **Static Routing**-
+			- static route may be created by manually configuring the route information on the router
+			- a default route is an example of a static route
+			- for initial configuration and nay updates to routes, static routing needs the assistance of a network admin
+			- statis routes are trustworthy, as the router processes packets with little overhead
+			- on the other hand, static routes do not automatically update and have more significant admin expenditure![[Pasted image 20250929213017.png]]
+		- **Dynamic Routing**-
+			- dynamic routing allows routers to learn about routes from other routers in the same internetwork
+			- other routes send dynamic routing changes, which the receiving router uses without admin settings
+			- routing has a larger router processing overhead after initial setup, but it has low admin cost
+			- static routes to the next hops must exist if dynamic routing is not enabled and set on a router for the router to know where to fowrward packets
+			- ![[Pasted image 20250929213403.png]]
+
+## Network Layer Protocols
+- IP most widely used network layer protocol, other protocols as well
+- network protocols mainly were propprietary and communication was confined to a single manufacturers equipment
+- IPv4 is an open-source protocol that allows devices from different manufacturers to connect
+- **Standard Network Layer Protocols**-
+	- **Internet Protocol Version 4 (IPv4)**-
+		- most popular network protocol
+		- internets basic protocol
+	- **Internet Protocol Version 6 (IPv6)**-
+		- some regions is is now used
+		- will function with IPv4 
+		- in future most likely replace IPv4
+	- **Novell IPX**-
+		- used in 1980s and 1990s
+		- part of Novell Network and used internetworking protocol
+	- **AppleTalk**-
+		- networking protocol developed by Apple
+	- **Connectionless Network Service (CLNS)**-
+		- telecommunication protocol that does not need utilisation of existing circuits
+- **IPv4: Example network layer protocol**-
+	- most extensibely used version of IP
+	- it is sole layer 3 protocol utilised to transport user data across the internet
+	- IPv6 is being developed and deployed in certain regions
+	- IPv6 will coexist with 4 and replace it eventually
+	- specifies the services provided by IP and the packet header format and contents
+	- **IPv4 Basic Charactersitics**-
+		- **Connectionless**-
+			- before trasmitting data packets, IPv4 does not create a connection
+			- IP is a connectionalless protocol which means no established link between the sender and the receiver
+			- IP transfers packets to the receiver without alerting them
+			- IP doesnt mind if there isnt a connection; its all part of the 'best effort' architecture
+			- in a TCP/IP stack, IP and TCP function so well together that if a packet is lost or late, TCP will fix the problem at layer 4 allowing IP to work more effectively at layer 3![[Pasted image 20250929215211.png]]
+		- **Best Effort (unreliable)**-
+			- IPv4 does not employ guarantee-packet delivery operations, which decreases router waiting time
+			- redues bandiwdth that acknowldgement messages would typically consume
+			- means that IP packets are transmitted with no guaranatee of being received
+			- IP has no method of informing the sender if there is an issue with dependability
+			- TCP can be counted on to notify the sender of any delivery issues
+			- ![[Pasted image 20250929215305.png]]
+		- **Media Independent**-
+			- IPv4 is unaffected by the media on which the data is sent
+			- IP is media agnostic
+			- which means it is unconcerned about the actual medium over which the packet is transmitted
+			- wireless, ehternet cable, fibre optic cable and other OSI layer 1 media are likely to be used in internetwork communication
+			- howver, the size of PDU is essential factor to consider
+			- some networks are constrained by media and must impose a max transmission unit (MTU)
+			- MTU is determined by the OSI data connection layer and transmitted to the network layer
+			- ![[Pasted image 20250929215416.png]]
+			- 
+	- 
