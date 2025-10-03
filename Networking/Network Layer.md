@@ -182,4 +182,197 @@
 			- MTU is determined by the OSI data connection layer and transmitted to the network layer
 			- ![[Pasted image 20250929215416.png]]
 			- 
-	- 
+- **IPv4 packet: Packaging the PDU**-
+	- transport layer segment or datagram is encapsulated or packaged in IPv4 so that it may be sent to the target host by the network
+	- from the moment the packet leaves the network layer of the originating host until it arrives at the network layer of the destination host it is encapuslated in IPv4
+	- layer-by-layer encapsulation approach allows services at distinct tiers to grow and scale without affecting other layers
+	- current network layer protocols (IPv4 and IPv6) or any new protocol created in the future may easily package transport layer portions
+	- routers can implement these distinct network layer protocols to function concurrently over a network to and from the same or separate hosts
+	- these intermediate devices solely take the contents of the packet header that wraps the segment during routing
+	- during the layer procedures, the data part of the packet (encapsulated transport layer PDU) remains unaltered in all situations
+	- **Packet Header Fields**-
+		- *Main headers*
+			- **IP Source Address**-
+				- 32 bit binary value that represents the host that will send the packet
+			- **IP Destination Address**-
+				- 32 bit binary value that represensts the host that will receive the packet
+				- routers use this information to route the packet to the right network
+			- **Time To Live (TTL)**-
+				- packets max hops before being regarded 'lost' or undeliverable are described by the 8 bit TTL field
+				- TTL field is decremeneted by atleast 1 for each router that processes the packet
+				- if the TTL value hits 0, the packet will be discarded
+				- this prevents the internet from being clogged with misplaced packets
+			- **Type of Service (TOS)**-
+				- each of the 8 bits in this field indicate the throughput priority that a router should utilise while processing the packet
+				- a packet holding IP speech data, example takes precedence over one containing streaming music
+				- QoS (Quality of Service) refers to how a router treats a packet from this data
+			- **Protocol**-
+				- when the packet is decapsulated and handed to the transport layer
+				- this 8 bit field identifies the upper layer protocol- TCP, UDP or ICMP- that will receive it
+			- **Flag and Fragment Offset**-
+				- when forwarding a packet from one media to another with a reduced MTU, a router may need to fragment it
+				- when an IPv4 packet fragments, the fragment offeset field in the IP header and the MF flag in the IP header are used to reassemble the packet when it arrives at the destination host
+				- the fragment offset field specififies the order in which the packet fragments should be reassembled
+		- *Other headers*-
+			- **Version**-
+				- IP version 4 or 6
+			- **Internet Header Length (IHL)**-
+				- the length of the header is sent to the router
+				- the length is not always consistent because of changeable values in the options field
+			- **Packet Length**-
+				- this is the datagrams overall length, including the header
+				- a packets minimum length (header without data) is 20 bytes
+				- packets maximum length (data) is 65535 bytes
+			- **Identification**-
+				- the source sent this to aid in the reassembling of anuy pieces
+			- **Header Checksum**-
+				- this information is used to identify the headers length and is verified by each router
+				- each router runs an algorithm, and if the check sum is erronous the packet is considered corrupt and discarded
+				- the header checksum is updated at each hop since the TTL value is altered by each router that processes the packet
+			- **Options**-
+				- a field that is rarely used but can give specific routing functions
+			- **Padding**-
+				- when header data does not terminate on a 32 bit boundary, padding is employed to fill in the gaps
+- **Networks: dividing hosts into groups**-
+	- structure of IPv4 addresses and how networks are dividded into different groups
+	- **Creating common groups**-
+		- large computer networks may be split into internetworks in the same way that cities can be divided into physiucal neighbourhoods
+		- departments and groups that share computers and severs are ideal candidates for breaking the borad network into smaller groups and forming a shared subnetwork or subnet
+		- massive networks were historically split geographically
+		- members of networks may be categoriesd not ust by physical characteristics but by abstract charactersitics such as purpose and ownership
+	- **Grouping hosts geographically**-
+		- grouping computers connected regionally is a cost-effective technique to enhance communications by lowering user overhead, especially if most of the communication is local![[Pasted image 20251002192247.png]]
+	- **Grouping hosts for a specific purpose**-
+		- people on a big network are likely to utilise computers for various purposes
+		- each function for a computer use may require special spftware that takes significant amount of resources
+		- if you have specific purposes like departments using specific things, then creating networks only for those specific department purposes can be decrease network overhead
+		- ![[Pasted image 20251002192414.png]]
+	- **Grouping hosts for ownership**-
+		- another approach is categorising users by ownership of (and access to) information
+		- key issue is security
+		- significantly more challenging to define and limit the duty and access of network staff in a big network
+		- storing more private things in a more secure network than combining it with public records that dont need security
+		- ![[Pasted image 20251002192617.png]]
+	- **Why separate hosts into networks?**-
+		- as communities and networks get larger, challenges arise that can be solved by breaking them into smaller and linked networks
+		- **Challenges Emerging In Computer Network Development**-
+			- **Performance Degradation**-
+				- hosts are talkative gadgets on a netowrk
+				- broadcast information about themselves to the rest of the network
+				- a broadcast is a message delivered from one host to all other hosts of the network with the intent of sharing information and requesting information from other hosts
+				- protocols employ broadcasts as a required valuable element in their communication process
+				- because broadcast traffic consumes precious bandwidth that could otherwise be used to convery productive data, performance quality degrades as the number of users increases
+				- the network is charactersisted as a broadcast domain since broadcasts do not reach beyond the network boundary
+				- below splits into 2 subnets so broadcasts are split into 2 areas, reducing bandwitdh congestion if it was all in the same network
+				- ![[Pasted image 20251002193939.png]]
+			- **Security Issues**-
+				- limited number of trustworthy users in government agencies and research orgs used to make up first IP based network= internet
+				- security was straightforward issue with such limited group of users
+				- orgs and companies can better defend themselves against spies and criminals by separating themselves from bigger networks and concelaing their gadgets from public access
+				- local network manager may control outisde access to smaller network more readily
+				- displays a network with firewalls protecting information while allowing access to the internet
+				- ![[Pasted image 20251002211242.png]]
+			- **Address management and hierarchical addressing**-
+				- network has network address that identifies logical location of the network on a router
+				- IPv4 provides a logical mechanism for keeping track of networks since computer networks are not bound to physical spaces
+				- IPv4 address consists of network bits identifying a logical network address and host bits containing end devices local address
+				- hosts are always in communication with each other so they know where they are
+				- the hosts also communicate with the router to always know if there are new hosts
+				- the hosts communicate to router as well to talk to other networks
+				- router receives from internet and disperes the infomration to correct host addresses
+				- routers serve as general destinations and sorting stations for messages flowing in and out of tiny networks
+				- gateway router is the networks router to send and receive messages from outside the network
+				- network address and host address are two elements of the address
+				- network element of the address directs routers to the general network, while the last router utilises the host portion to transport data within the network
+	- **IP Address Structure**-
+		- network address and host address are two portions of an IPv4 address
+		- each 32 bits long
+		- **Network Element of Address**-
+			- functions similarly to a postal code in that it instructs routers where to look for a networks approximate vicinity
+			- routers only refer to the network component when forwarding packets ebtween networks
+		- **Local Component of Address** 
+			- specifies the target host when the packet arrives at the final router, 
+		- fundamental structure of IPv4 address has 3 octets to the left which is the network octect and final octect to identify the local host
+		- ther percentage of the address that is the network and percentage of host address might differ
+		- ![[Pasted image 20251002212736.png]]
+
+## IPv4 Subnetting Scheme
+- networks may run successfully and efficiently if an appropriate IPv4 addressing scheme is designed implemented and managed
+- **Anatomy of IPv4 Address**-
+	- right addresses must be assigned to these devices for communication to occur between hosts
+	- manaing device addressing and comprehending the IPv4 address tructure and representation is critical
+	- network layer address must be assigned to each deice on the network
+	- the communication packets are also identifiable with the source and destination addresses of the two end systems at this layer
+	- IPv4 layer 3 header contains a 32 bit source address and 32 bit destination address for each packet
+- **IP Address Classes**-
+	- come in only 3 classes
+	- different IP classes and their ranges with their respective network and host portions![[Pasted image 20251003181139.png]]
+	- **CLass A**-
+		- for very large networks
+		- first octet identifies the network, last 3 octets identify hosts
+		- default mask- /8 255.0.0.0
+		- example- 10.0.0.0 - 10.255.255.255
+		- host range per network- 16777214
+		- use case- used by huge organisations or ISPs
+	- **Class B**-
+		- medium networks
+		- first 2 actets identify network and last 2 for hosts
+		- default mask- /16 255.255.0.0
+		- example- 172.16.0.0 - 172.31.255.255
+		- host range per network- 65534
+		- use case- universities, large companies
+	- **Class C**-
+		- small networks
+		- first 3 octects is network and alst is host
+		- default mask- /24 255.255.255.0
+		- example- 192.168.1.0 - 192.168.1.255
+		- host range per network- 254
+		- use case- most home and office lans
+- **Network and Host Portions**-
+	- two portions to IPv4 addresses
+		- **Network Address**-
+			- represented by a fraction of most important bits, or high order bits
+			- network is defined at layer 3 as a collection of hosts with the same bit patterns in the network address component of their addresses
+			- the network component of their addresses has all the same bits
+			- network sections of the two addresses mean hosts with these 2 addresses are a part of the same logical netowrk
+				- 192.168.4.20, 192.168.4.32
+					- 192.168.4 = network portion
+					- .20 / .32 = host portions
+			- although IPv4 host address is defined by all 32 bits, the host part of the address is represented by a variable number of bits
+			- the number of hosts in the entwork is determined by the number of bits utilised in this hot section
+			- the host part in the previous example is the final octet or lowest eight bits
+			- the network part is represented by teh bits for the first 3 octets
+- **Binary to Decimal Conversion**-
+	- eqach byte (octet) is translated into a decimal value between 0 and 255
+	- ![[Pasted image 20251003183446.png]]
+	- ![[Pasted image 20251003184017.png]]
+- **Decimal to Binary Conversion**-
+	- ![[Pasted image 20251003192754.png]]
+- **IPv4 Address Types**-
+	- many IPv4 unicast addresses have been allocated or particular uses
+	- as have the multicast addresses in the IPv4 address range
+	- some of these addresse restrict the functionality or scope of the hosts to which they are given
+	- hosts cannot be allocated to other reserved addresses
+	- some of these reserved addresses will be shown below
+	- **3 Sorts of Addresses in IPv4 Netowrk**-
+		- **Network Address**-
+			- unique address that relates to the network
+			- standard method to refer to  computer network
+			- the network inside the circle bleow for example is referred to as 'the 10.0.0.0' network
+			- network bits for all hosts in the 10.0.0.0 network will be the same![[Pasted image 20251003195543.png]]
+		- **Broadcast Address**-
+			- unique address that is used to convey data to all network hosts
+			- directed broadcast address is IPv4 broadcast address within a network
+			- unlike network addess, this address is used to communicate with all the hosts on a network
+			- each network has its unique address that allows a ginsle packet to connect with all the computers in that network
+			- a host can transmit a single packet addressed to the networks broadcast address to convey data to all hosts in the network
+			- tio connect with all the hosts in this network, use a destination address of 10.0.0.255, the networks broadcast address
+			- broadcast address uis highest- so 255
+			- ![[Pasted image 20251003195715.png]]
+		- **Host Address**-
+			- unicast addresses are allocated to the networks end devices
+			- to deliver a packet to that host, every end device requires a unique unicast address
+			- the values between the network address and the broadcast address can be assigned to the devices in an IPv4 netowkr- called host addresses
+			- between network address 10.0.0.0 and the broadcast address of 10.0.0.255 
+			- this indicates that the hosts in this logical network can have addresses ranging from 10.0.0.1 to 10.0.0.254![[Pasted image 20251003195919.png]]
+		- 
