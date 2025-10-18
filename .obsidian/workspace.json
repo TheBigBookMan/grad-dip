@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "e652894668f25ea1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Cisco IOS Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cisco IOS Overview"
+            }
+          },
+          {
             "id": "2501177f069a9856",
             "type": "leaf",
             "state": {
@@ -50,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,21 +208,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7ceeb044af3775b7",
+  "active": "e652894668f25ea1",
   "lastOpenFiles": [
-    "Networking/Intro to Networks.md",
     "Networking/IPv4 Subnetting Scheme.md",
+    "Networking/Cisco IOS Overview.md",
+    "Pasted image 20251016202354.png",
+    "Pasted image 20251016202104.png",
+    "Pasted image 20251016201924.png",
+    "Pasted image 20251016201630.png",
+    "Pasted image 20251016201550.png",
+    "Pasted image 20251016201407.png",
+    "Pasted image 20251015213705.png",
+    "Pasted image 20251015213533.png",
+    "Pasted image 20251015211533.png",
+    "Pasted image 20251015210253.png",
     "Networking/Network Layer.md",
-    "Pasted image 20251003195919.png",
-    "Pasted image 20251003195715.png",
-    "Pasted image 20251003195543.png",
-    "Pasted image 20251003192754.png",
-    "Pasted image 20251003184017.png",
-    "Pasted image 20251003183446.png",
-    "Pasted image 20251003181139.png",
-    "Pasted image 20251002212736.png",
-    "Pasted image 20251002211242.png",
-    "Pasted image 20251002193939.png",
+    "Networking/Intro to Networks.md",
     "Untitled.md",
     "Human Interaction/HCI Feedback.md",
     "Untitled",
@@ -239,8 +254,6 @@
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
     "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
     "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/README.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/CHANGELOG.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@testing-library/react/node_modules/@testing-library/dom/README.md",
-    "Web Cloud/assignments/Assignment2/frontend/node_modules/@testing-library/react/node_modules/@testing-library/dom/CHANGELOG.md"
+    "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/CHANGELOG.md"
   ]
 }

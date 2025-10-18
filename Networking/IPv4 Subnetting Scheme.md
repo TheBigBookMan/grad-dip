@@ -1,2 +1,378 @@
 - **IPv4 Variable length Subnet Mask (VLSM) Subnetting Scheme**-
-	- 
+	- how to know how many bits of the address represent network portion and how many bits represent the host portion
+	- **Network Address Translsation**-
+		- a process where a router or firewall changes the source or destination IP address in packets as they pass through it
+		- mostly used to let mukltiple devices on a private network share one public IP address
+		- groups local ip addresse into one rather than just having heaps for a same place
+		- it transalates private IP addresses used intoside a network into public addresses for user on the internet
+	- prefix gives you this information
+	- when IPv4 hostname is given it is preceded by prefix value
+	- prefix length is number of bits in the address that make up the network component
+	- length of the prefix is stashed in slash format 172.12.4.0 /24
+		- first 24 bits are network address
+		- host component is remaining 8 bits
+	- each time mask is greater than an octect of 8 then you just half the amount of available hosts and minus - 2 (1 for network address and 1 for broadcast address) to essentially find the range of usable ahosts
+	- ![[Pasted image 20251004100827.png]]
+	- **Subnet mask: Defining the addresses network and host portions**-
+		- prefix and subnet mask are 2 alternative methods of expressing same thing: network part of IP
+		- prefix length expresses the number of bits in the address that make up the network component
+		- in data networks the subnet mask is used to designate the network part for the gadgets
+		- subnet mask is 32 bit nuber that specifies the network component of the address to network devices when using IPv4 address
+		- subnet mask indicates which bits of the IPv4 address are network bits and which bits are host bits by using 1s and 0s
+		- same dotted decimal fomat as the IPv4 address is used for subnet mask
+		- below for 172.16.4.35 /27
+		- ![[Pasted image 20251011141007.png]]
+		- the subnet mask in binary will be continous 1s and 0s (1st left for network and 0s right for host)
+		- mask decimal is just the value determined from the binary (set values based on the binary for readability)
+		- easier to understand written out like if the mask is /28
+			- see the divison of 8, 28 divisble by 3 (=24) with remainder of 4
+			- so we know the first 3 octets are network (because 8 bits (per octect) x 3 = 24)
+			- 255.255.255 - because in binary its continuous 1s with network left so if first 3 octets are network then binary is (11111111.111111111.11111111) = 255.255.255
+			- now we figure out the last octet- so the number of bits in the 32 is 28 so 1111111.11111111.11111111.11110000
+			- so the last octect has 4 binary bits dedicated to the network (first 4 as its continous 1s for network on the left)
+			- convert that to decimal is- 240
+			- so 255.255.255.240
+		- deteremine the network 4th octect we need to find the subnet block size (amount of IPs that can fit in the network)
+			- we have 256 - 240 = 16
+			- so we can have 16 ip addresses in this subnet
+			- look at the address given in the 4th octet and then find the range it is in, this will determine the network address
+		- if subnet mask /18 or something you do the same as above but on the 3rd octet
+		- ![[Pasted image 20251011141820.png]]
+- **Public and Private Addresses**-
+	- **DHCP- Dynamic Host Configuration Protocol**-
+		- network service that automatically gives devices their IP configuration when they connect to a network- so dont have to type IPs manually
+	- most IPv4 host addresses are public addresses intended for use in networks with internet access
+	- specific blocks of addresses are used in networks with limited or no internet connectivity- private addresses
+	- **Private Address Blocks**-
+		- 10.0.0.0 /8 (10.0.0.0 to 10.255.255.255)
+		- 172.16.0.0 /12 (172.16.0.0 t0 172.31.255.255)
+		- 192.168.0.0 /16 (192.168.0.0 to 192.168.255.255)
+		- address blocks in private spaces are reserved ror usage in private networks
+		- outside networkds do not have to utilise these addresses in the same way
+		- private addresses can be used without restriction by hosts who do not require general internet access
+		- other hand- internal networks must still establish network address schemas to ensure that private network hosts utilise unique IP addresses inside their network infrastructure
+- **Networking Version**-
+	- **Unicast**-
+		- unicast sends to one specific IP address
+		- only that one device recieves it
+	- **Broadcast**-
+		- sent to everyone on the local network
+		- every de ice on that network segment sees it
+	- **Multicast**-
+		- sent to a group of subscribed devices
+		- only devices that joined that multicast group receive it
+- **Special Unicast IPv4 Addresses**-
+	- apecial addresses can be issued to hosts that impose limitations on how they interact within the network
+	- **Special Addresses**-
+		- **Default Route**-
+			- 0.0.0.0 is the IPv4 default route
+			- when a more specialised route is unavailablie, this default route acts as a 'catch-all' route
+			- used when a device doesnt have an IP address (like during DHCP discovery)
+			- all addresses in the 0.0.0.0 /8 address block (0.0.0.0 to 0.255.255.255) are reserved when this address is used
+		- **Loopback Address**-
+			- 127.0.0.0 /8 is another reserved address block (127.0.0.0 to 127.255.255.255)
+			- designated for the 127.0.0.1 loopback in IPv4 hosts
+			- the loopback address is a unique identifier host used to route traffic to themselves
+			- loopback address establishses a communication shortcut for TCP/IP applications and services that run on the same device
+			- two services on the same host can skip the lowest levelsof the TCP/IP stack by utilising the loopback address instead of the given IPv4 host address
+			- you may also ping the loopback address to see if local hosts TCP/ip settings are OK
+			- address block 127.0.0.0 /8 (127.0.0.0 to 127.255.255.255) is reserved, even though just the single 127.0.0.1 is used
+			- any address included in this block will return to the local host
+			- this blocks addresses should never be used on any network
+		- **Link-local Addresses**-
+			- IPv4 addresses in the 169.254.0.0 /16 address blocks (169.254.0.0 to 169.254.255.255)
+			- if no configuration is available, the operating system can automatically assign these addresses to the local host
+			- these may be used in a tiny peer-to-peer network or for a host that couldnt retrieve an address froma dynamic host configuration protocol (DHCP) server automatically
+			- IPv4 link local addresses can only be used to communicate with other devices on the same network
+			- a host must not forward a packet with an IPv4 link local destination address to any router and IPv4 TTL for these packets must be set to 1
+			- outside of the local network, link-local addresses do not deliver services
+			- however, many client-server and peer-to-peer programs will operate well with IPv4 link local addresses on the local network
+		- **Test-net Addresses**-
+			- domains are reserved for use in teaching and learning
+			- this is the 192.0.2.0 /24 address block (192.0.2.0 to 192.0.2.255)
+			- these can be used in network demonstrations and documentation
+			- network devices, unlike experimental addresses will accept test-net addresses in their setups
+			- in requests for comments (RFCs) and vendor and protoco ldocumentation, these addresses are frequently used with the domain names example/com or exmaple.net
+			- this blocks addresses should not be visible on the internet
+- **Legacy IPv4 Addressing**-
+	- IPv4 addressing range was separated into 3 classes- A, B, C
+	- each address class represented a network of a defined size
+	- no subnet masks to identify the network and host portions of the addresses at that point in the creation of IP
+	- each of these groups of addresses was allocated address ranges to distinguish between the network sizes
+	- the high-order address might be examend by devices to see how many network bits were utilised to establish the connection
+	- subnet mask was added to the IPv4 addressing system late 80s and early 90s to allow these fixed size networks to be partitioned or subnetted
+	- several of these classifications limitations persisted
+	- most limitations of class-based addressing method have been removed from standards
+	- some relics are in operations today
+	- ![[Pasted image 20251011162105.png]]
+	- **Historic Network Classes**-
+		- unicast ranges addresses were devided into precise sizes by RFC 1700
+		- also defined class D (multicast) and class E (experimental) addresses
+		- **Class A Blocks**-
+			- created to enable massive networks with over 16 million host addresses
+			- IPv4 addresses utilised fixed /8 prefix with the first byte to designate the network address
+			- host addresses were assigned to remaining three octets
+			- all class A addresses had to have a 0 as the most significant bit of the high-order octet to make room for the other address classes
+			- before removing the reserved address blocks, there were only 128 potential class A netowrks, raning from 0.0.0.0 /8 to 127.0.0.0 /8
+		- **Class B Blocks**-
+			- created to meet demands of medium to large scale networks with over 65000 hosts
+			- two high-order octets of a class B IP address were used to specify the network address
+			- remaining two octets were used to provide host address
+			- address space for the following address classes had to be reserved in the same way it had to be reserved for class A
+			- most crucial 2 bits of high-order octet in class B addresses were 10
+			- the address block for class B was constrained from 128.0.0.0 /16 to 191.255.0.0 /16 
+			- because it allocated 25% of the entire ipv4 address space among around 16000 networks class B had a more efficient distribution of addresses than class A
+		- **Class C Blocks**-
+			- most widely available
+			- this address space was created with the goal of providing addresses for small networks of up to 254 hosts
+			- A /24 prefix was used
+			- final octet of a class C networks host addresses were utilised while the 3 high-order octetss were used to signify the network address
+			- class C address blocks used a fixed value of 110 for the three most important bits of the high-order octet to set aside address apce for class D (multicast) and class E (experimental)
+			- address block for class C was constrained to 192.0.00 /16 to 223.255.255.0 /16
+			- supply addresses to 2 million networks despite using 12.5% of total Ipv4 address space
+			- ![[Pasted image 20251011163051.png]]
+		- **Classess Addressing**-
+			- used to describe the existng system
+			- companies or organisaiongs are issued address blocks appropriate for number of hosts in the classess system, regardless of unicast class
+			- other practices associated with this classless addressing scheme, such as employing fixed-size networks, have made IPv4 addressing more realistic
+- **Basic Subnetting**-
+	- an internetworks address range must be separated into networks
+	- a subnet is a pat of these addresses that must be given to each network
+	- a subnetting plan is created using a variety of parameters and methodologies
+	- **Creating Two Subnets**-
+		- below- router A has 2 interfaces connecting 2 networks
+		- you make 2 subnets out of a 192.168.1.0 /24 address block
+		- instead of original 255.255.255.0 mask, you use a subnet masj of 255.255.255.128 to borrow one bit from the host section
+		- the most crucial bit in the final octet is now a network bit rather than a host bit
+		- this bit is used to differentiate the two subnets
+		- this bit is a zero for one of the subnets and a one for the other
+		- ![[Pasted image 20251011183924.png]]
+		- ![[Pasted image 20251011184102.png]]
+		- calculate number of subnets with
+			- 2^n where n - number of bits borrowed
+			- above its 1000000 so 1 bit is borrowed so it is 2^1 = 2 subnets
+		- calcaulate number of hosts per network
+			- 2^n - 2 - where n i the number of bits remaining for hosts
+			- above its 7 bits remaining so 2^7 - 2 = 126 hosts on each subnet 
+	- **Creating 3 Subnets**-
+		- internetwork that requires 3 subnets
+		- 192.168.1.0 /24 address block
+		- only 2 subnets could be created by borrowing a single bit
+		- change subnet mask to 255.255.255.192 and borrow 2 bits to offer extra networks
+		- four subnets will be created using these 2 bit
+		- now have the mask with 11000000
+		- ![[Pasted image 20251011184712.png]]
+		- ![[Pasted image 20251011184725.png]]
+		- caclulate number of subnets 
+			- 2^n where n = bits borrowed- 2^2 = 4 subnets
+		- calculate number of hosts examine last octet
+			- subnet1: 0 = 00000000
+			- subnet 2: 64 = 0100000
+			- subnet 3: 128 = 1000000
+			- subnet 4: 192 = 1100000
+			-  2^n - 2 - where n = number of bits left
+			- 2^6 -2 = 62 hosts
+	- **Creating 6 Subnets**-
+		- ![[Pasted image 20251011185117.png]]
+		- ![[Pasted image 20251011185123.png]]
+		- ![[Pasted image 20251011185131.png]]
+		- calculate
+			- 2^3 = 8
+		- borrow 3 host bits so subnet mask 255.255.255.224 orovides 3 additional network bits
+		- calculate hosts, last octet
+			- 0 = 0000000
+			- 32 = 0010000
+			- 64 = 0100000
+			- 96 = 0110000
+			- 128 = 100000
+			- 160 = 1010000
+			- 191 = 1100000
+			- 224 = 1110000
+			- 2^5 -2 = 30 hosts
+- **Subnetting a subnet- VLSM**-
+	- **VLSM- Variable Length Subnet Mask**-
+		- using different subnet masks (different prefix lengths) within the same network to use IP addresses more efficiently
+	- employing a VLSM is to address efficieny
+	- its a method of addressing that is not based on a class
+	- when utilising standard subnetting to get the ottal number of hosts, each subnet is given the same number of addresses
+	- these fixed size address blocks would be efficient if all subnets had the same number of hosts needs- not alwayst the case
+	- ![[Pasted image 20251011200238.png]]
+	- these bits are taken bits, which are indicated by altering the appropriate subnet mask bits to 1s, indicating that they are now being utiulised as network bits
+	- the masks last octet is represented in binary by 11100000= 224
+	- the /27 notation represents the new mask of 255.255.255.224 which is 27 bits
+	- this causes a lot of unused addresses because not every subnet needed that exact amount of ip addresses
+	- VLSM lets you subnet a subnet
+	- breaking large networks into smaller ones with masks that fit your needs
+	- variable because each subnet ca have its own mask length
+	- breakdown each subnet into a usable amount respective of the amount of addresses required
+	- ![[Pasted image 20251011200744.png]]
+	- subnetting considered depending on the number of hosts and router interfaces and WAN connectivetey
+	- ![[Pasted image 20251011202236.png]]
+	- ![[Pasted image 20251011202319.png]]
+	- ![[Pasted image 20251011202418.png]]
+	-  ![[Pasted image 20251011202639.png]]
+	- ![[Pasted image 20251011202654.png]]
+	- ![[Pasted image 20251011202707.png]]
+	- ![[Pasted image 20251011202721.png]]
+	- ![[Pasted image 20251011202735.png]]
+	- ![[Pasted image 20251011202749.png]]
+	- ![[Pasted image 20251011202802.png]]
+	- ![[Pasted image 20251011202813.png]]
+
+## Internet Protocol v6
+- Internet Engineering Task Force (IETF) concerned about exhaustion of IPv4 network addresses in early 1990s
+- created IPv6 which is now widely used
+- initial purpose for establishing new protocol was to enchance addressing possibilities
+- other considerations were made for creating
+	- improved processing of packets
+	- longevity and increased scalability
+	- mechanisms for determining the quality of service QoS
+	- security that is integrated
+- IPv6 provides following capabilities to deliver benefits
+	- expanding addressing possibilities using a 128 bit hierarchical addressing
+	- simplifying the header format to opstimise packet handling
+	- extension and options for better scalability or longevity and improved packet handling have been upgraded
+	- capabilities for flow-labeling as QoS techniques
+	- authentication and privacy features are required so that security is incorporated
+- IPv6 provides for 2^128 addresses compared to IPv4 2^32
+- ![[Pasted image 20251011205623.png]]
+- **IPv6 Address Format**-
+	- employs eight groups of four hexadecimal numbers separated by colons as opposed to IPv4 which uses dotted-decimal format with each byte ranging from 0 to 255
+	- example- - 2340:0023:AABA:0A01:0055:5054:9ABC:ABB0
+	- **Hexadecimal to Binary**
+	- ![[Pasted image 20251011205905.png]]
+- **IPv6 Address Shortening**-
+	- leading zeros can be omitted
+		- if any spot has 0 at the start then can remove, only leading though
+		- for example, the address listed above **(2340:0023:AABA:0A01:0055:5054:9ABC:ABB0)** can be shortened to **2340:23:AABA:A01:55:5054:9ABC:ABB0**
+	- two colons (::) can be used to denote successive fields of zeros
+		- if all fields in section are 0 then just remove and replace with colon
+		-  for example, **2340:0000:0000:0000:0455:0000:AAAB:1121** can be written as **2340::0455:0000:AAAB:1121.**
+- **IPv6 Interface Identifier**-
+	- often used to identify a hosts network interface in an IPv6 unicast or anycast address
+	- hex value of FFFE is inserted in the middle of the network interface cards MAC address (MAC address is a unique physical address of the network interfac card) to create a 64 bit interface ID
+	- in addition, first bytes seventh bit is flipped to a binary 1 (if the sevent bit is set to 0 it means the MAC address is a burned in MAC address)
+	- the interface ID is then referred to as the updated extended unique identifier 64 (EUI-64)
+	- firt 64 bits of the 128bit address is network prefix and second 64 bits is interface ID
+	- **Interface Id**-
+		- identifies the specific device (similar to host part of IPv4)
+		- IPv6 can generate it from the devices MAC address (the physical address burned into every network card)
+			- rather than making it up like IPv4
+	- for example-
+		- if a network cards MAC address is 00:BB:CC:DD:11:22, the interface ID is 02BBCCFFFEDD1122
+	- This is only on the second half of the full IPv6 (interface ID)
+	- take that MAC address and split in half
+	- add the FFFE in the middle
+	- flip the 7th bit of the first byte to show this address was modified automatically, not just copied straight from hardware
+	- if the first byte is 03 (binary = 00000011)
+	- flip 7th bit (binary = 0000001) = 1
+	- ![[Pasted image 20251011211405.png]]
+	- ![[Pasted image 20251011211417.png]]
+	- ![[Pasted image 20251011211428.png]]
+- **DIfferences Between IPv4 and IPv6**-
+	- **Address Length**
+		- v4- 32 bits
+		- v6- 128 bits
+	- **Address Representation**
+		- v4- four decimal numbers from 0 to 255 separated by periods
+		- v6- eight groups of four hexadecimal digits separated by colons
+	- **Address Types**-
+		- v4- unicast, multicast, broadcast
+		- v6- unicast, multicast. anycast
+	- **Packet Header**-
+		- v4- 20 bytes long
+		- v6- 40 bytes long, but simpler than IPv4 header
+	- **Configuration**-
+		- v4- manual, DHCP
+		- v6- Manual, DHCP, auto-configuration
+	- **IPsec Support**-
+		- v4- optional
+		- v6- built in
+- **Types of IPv6 Addresses**-
+	- **Unicast**-
+		- refers to a single interface
+		- a single host receives packets addresses to a unicast address
+	- **Anycast**-
+		- refers to one or more interfaces
+		- servers that offer the same purpose, for example, can share a single unicast IP address
+		- messages received to the IP address are routed to the closest server
+		- for load balancing, anycast addresses are employed
+		- also known as a one-to-nearest address
+	- **Multicast**-
+		- refers to dynamic collection of hosts
+		- many interfaces receive packets sent to this address
+		- IPv6 multicast addresses serve the same purpose as IPv4 multicast addresses
+		- ipv6 doesnt support broadcast but amulticast to all hosts o nthe network
+- **IPv6 Unicast Address**-
+	- a single interface is represented by a single unicast address
+	- packets directed to a specified network interface will be routed to a unicast address
+	- one-to-one communication
+	- **3 Categories of Unicast Addresses**-
+		- **Global Unicast**-
+			- IPv4 public IP addresses are identical
+			- The Internet Assigned Numbers Authority (IANA) assigns these addresses based on public networks
+			- globally unique and routable across the entire IPv6 internet
+			- usually assigned by your ISP
+			- they have the 2000::/3 prefix (all addresses that begin with binary 001)
+			- internet routable as the name indicates
+			- **2 Elemetns to Global**
+				- **SubnetID**-
+					- 64 bit number
+					- the site prefix (obtained from a Regional Internet Registry) and the subnet ID are stored here (subnets within the site)
+				- **InterfaceID**-
+					- is 64 bit number
+					- usually made up of a portion of the interfaces MAC address
+			- ![[Pasted image 20251011214342.png]]
+		- **Unique Local**-
+			- IPv4 private addresses are identical
+			- used for private internal networks
+			- used inside organisations or homes, not routable on the internet
+			- designed for internal communication between sites (like corporate WANs)
+			- only utilised in private networks and cant be routed across the internet
+			- FD00::/8 is the prefix for these addresses
+			- they arent assigned by an address registrat and arent intended to be forwarded outside their domain
+			- by attaching a randomly generated 40bit hexadecimal string to the prefix, a unique local IPv6 address is createed
+			- as with global, the subnet field and interface ID are produced in the same way
+			- ![[Pasted image 20251011214504.png]]
+		- **Local Link**-
+			- addresses are used to send packets across the local network
+			- packets with these addresses are not forwaded to other subnets by routers
+			- communication only on the same local link (like LAN segment)
+			- every network interface on which the IPv6 protocol is enabled must be issued a link-local address
+			- FE80::/10 is the prefix for these addresses
+			- limited range of travel and can only move inside the network segment to which the hsot is linked
+			- packets bound for a link-local address will not be forwarded to other links by routers
+			- every network itnerface that supports the V6 protoco must be allocated a link-local address
+			- a hosts link local IP address can either be generated automatically or manually specified
+			- typically used for neigbour finding and auto-address configuration and router discovery
+			- every inteface automatically generates one (using its MAC -> EUI-64)
+			- ![[Pasted image 20251011214749.png]]
+	- **IPv6 Multicast Addresses**-
+		- comprable to IPv4 multicast addresses
+		- used to connect with dynamic groups of hosts, such as all of the routers on a given link (1:M distribution)
+		- FF00::/8 is the start of the IPV6 multicast address
+		- following the first eight bits, four flag fields specigy the type of individual multicast addresses
+		- next four bits specify the IPv6 network for which multicast traffic is intended
+		- the scope parameter is sued by routers to decide whether multicast traffic may be transmitted
+		- multicast group ID comprises the remaining 112 bits of the address
+		- some possible scope values
+			- 1: interface-local
+			- 2: linklocal
+			- 4: admin-local
+			- 5: site-local
+			- 8: organisation-local
+			- E: global
+		- for example- multicast addresses beginning with FF02::/16 are supposed to stay on the local connection
+		- ![[Pasted image 20251011215205.png]]
+- **IPv6 Configuration**-
+	- IPv6 routing is not enabled by default on Cisco routers
+	- **Two steps Set up IPv6 on Cisco Router**-
+		1. the IPv6 unicast-routing global configuration command enables IPv6 routing on a Cisco router
+			- this command turns on the IPv6 worlwide and must be the routers initial command
+		2. using the IPv6 address or prefix length (eui-64) command set the IPv6 global unicast address on a interface
+			- if you omit the eui-64 argument you'll have to specify the full address manually
+			- the link-local address will be automatically calcualted once you input this command
+	- ![[Pasted image 20251011215420.png]]
+	- ![[Pasted image 20251011215432.png]]
+	- ![[Pasted image 20251011215454.png]]
+	- ![[Pasted image 20251011215506.png]]
