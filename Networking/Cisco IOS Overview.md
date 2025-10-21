@@ -113,7 +113,7 @@
 			- only the privileged exec mode may access theg global configuration mode and all other mode spceialised onfiguration modes
 			- purpose for viewing system info and entering configuration mode
 	- **Moving between the user Exec and privileged Exec modes**-
-		- 'allow' and 'deactivate' statements switch between user and privieleged EXEC modes in the CLI
+		- 'enable' and 'disable' statements switch between user and privieleged EXEC modes in the CLI
 		- use the 'enable' command to access the privileged EXEC mode
 		- the enable mode is another name for priveleged exec mode
 		- enable commands syntax- 
@@ -128,7 +128,7 @@
 			- the proivielged exec mode is only way to get to global and itnerface ofniguration modes
 			- the CLI congfiguration adjustments are perofmrance form the global configuration that influcnces the devices overall functionality
 			- to enter global configuration mode, command
-				- Router# configure terminal
+				- `Router# configure terminal`
 			- syntax of global configuration mode
 				- Router(config)#
 			- the user can choose etween sub setup modes from global config mode
@@ -395,3 +395,192 @@
 			- distant routers connectivity is checked to determine whetether it is successful
 			- if something goes wrong, attempt to figure out whats wrong
 			- retest until a valid connection to a device is established, then verify all ids
+
+## Packtertracer
+- `ping hostname` 
+	- `ping -n 2 hostname` - pings the IP address 2 amount of times
+	- ping sends a Internet Control Message Protocl (ICMP) packet which has source IP address and destination IP address
+	- ping bypasses many layers of OSI as it is on the lower level (network layer)
+	- because used for testing
+- `arp -a`
+	- Address Resolution Protocol
+	- send the ARP request (as a broadcast- this ist he typce as it goes to all hosts) which asks on the network who has the IP address and to send the MAC address so can make the mapping stored on the local table
+	- stores the mac address mapping to IP address in the table
+	- check ARP cache
+		- a local table that stores the IP-to-MAC mappings
+	- the cache that stores the local MAC accdresses and IP addresses for hosts on same network
+	- this bypasses the need to go to datalink/network layer, straight to physical address layer as on same network and stored on cache ARP
+	- arp request sent once it has found the host machine and the mapping makes connection very fast
+- copper crossover connection cable
+	- for peer to peer (PC to PC) connection directly
+	- no intermediary devices
+	- just end to end
+- FastEthernet0/1 
+	- shasy 0 interface 1
+- `show mac-address-table`
+	- this is only in a switch
+	- shows the mac addresses of the hosts as the packets come into the port
+	- this can be done via pings etc
+	- tells which port the mac address is mapped to
+	- shows the type as well (dynamic- made by calls coming through, static- set on configuration)
+	- turning off a switch the table will restart
+	- HUB
+		- older technology
+		- when send frame into hub
+		- it doesnt have a table so it sends packets out to everyone because it doesnt have saved
+- **Switch**
+	- -dont need to configure IP addresses on switch inteface because they dont require IP addresses, they work on layer 2 data link layer- mac addresses
+- **Router**-
+	- `do show running-config`
+	-  **How to configure router through PC**
+		- `console` connection to connect router from PC
+		- PC (RS232), router (console)
+		- open PC and click Desktop->Terminal->select 'OK'
+		- emulates the terminal for the router
+	- `?` shows command list
+	- `show {command} ?` shows command list options for the specific command
+	- `Router>` the > says we are in `user mode`
+	- `Router#` the # means in privileged exec mode
+	- `enable` enable the privileged exec mode
+	- `show flash`- shows whats on the VRAM
+	- `show running-config`
+		- sows the default configuration in memeory currently
+		- only default if no startupo-config
+	- `show interfaces`
+		- the physical interfaces related to that network
+	- **Basic Router Configuration**
+		- Need to be in global configuration mode to be able to do this
+			- go into privilege exec `enable`
+			- `configure`
+			- Press enter at "Configuring from terminal, memory or network?" (enter is default terminal)
+			- see `Router(config)#` says we are in global config
+			- `exit` go from global to privilege
+		- **Disable DNS Lookup**
+			- `no ip domain-lookup`
+			- `no` at the start will disable
+		- **Router Name**-
+			- `hostname {new-hostname}`
+			- changes the hostname of the router
+			- case sensistive (DO EXACTLY SAME AS SPECIFICATION)
+		- **Privileged EXEC Password (Unencrypted)**-
+			- in global config
+			- starts with `{hostname}(config)#` 
+			- `enable password {new-password}`
+		-  **Privileged EXEC Password (Encrypted)**-
+			- in global config
+			- starts with `{hostname}(config)#` 
+			- `enable secret {new-password}`
+		- **Console access Password**-
+			- need to get into line configuration mode from config mode `{hostname}(config)#`
+			- `line console 0`
+			- starts with `{hostname}(config-line)#`
+			- create a password
+			- `password {new-password}`
+			- exit this is `exit`
+		- **Telnet access password**-
+			- from global config- `{hostname}(config)#`
+			- `line vty 0 15`
+			- numbers 0 to 15 is because can have 16 terminal connections to a router at one time
+			- will see- `{hostname}(config-line)#`
+			- set password `password {new-password}`
+		- **Message of the day (MOTD) banner**-
+			- from `{hostname}(config)#`
+			- `banner motd #{message here}#`
+			- `#` surround the message and make SURE of characters matching specification
+		- **Interface G0/0**-
+			- get into an interface
+			- gigabitethernet conector is usually connected to switch
+			- need to find the right cable that is on the router being performed task on
+			- refer to the table of addresses
+			- in global config- `{hostname}(config)#`
+			- `interface g0/0` - use correc tinterface
+			- makes it go `{hostname}(config-if)#`
+			- add an IP address
+				- the ip addresa nds subnet mask on the table for that router/interface
+				- `ip address {ip-address} {subnet-mask}`
+				- sets the ip addres son that interfface
+			- activate the interface
+				- `no shutdown`
+				- shutdown command would shut it down
+		- **INterface S0/0/0**
+			-  serial cable are zigzag (red?) S0/0/0 
+			- `interface s0/0/0`
+			- in `{hostname}(config-if)#`
+				- `ip address {ip-address} {subnet-mask}`
+			- `no shutdown`
+		- **IP address**
+			- in privilege exec mode `{hostname}#`
+			- `show ip interface brief`
+			- shows the assigned IP addresses
+	- **SAVING CONFIGURATION ON ROUTER- SUPER IMPORTANT after every router**
+		- in privilege exec ONLY
+			- `{hostname}#`
+		- `copy running-config startup-config`
+		- press 'enter' when prompted for destination file
+		- can view in `show startup-config`
+- **Configure Host Computers**
+	- go into the PC->Desktop->IP configuration
+	- type in correct numbers in IPv4 address
+	-  type in correct numbers in subnet mask
+		- WILL HAVE DEFAULT SUBNET MASK
+		- NEED TO OVERRIDE WITH CORRECT
+	- type in correct default gateway field aswell
+	- DONT NEED TO SAVE configuration manually
+- **Configure Static Route**
+	- administrator enters the routes
+	- if Exit interface
+		- interface through which traffic will exit the local router
+		- perspective of the router you are implementing to interface from
+		- exit interface on the specific router
+			- this could be the serial (S0/0/0) interface where traffic exits the local router
+		- in config `hostname(config)`
+		- `ip route {destination-route} {subnet} {type} {0/0/0}`
+		- ip route 192.168.3.0 255.255.255.0 serial 0/0/0
+		- **IF THEN NEXT HOP**
+			- in the router with the next hop
+			- then ext router to send to
+			- `ip route {backtrace-network} {subnet-mask} {ip-hop-address}`
+	- next-hop ip address- the enxt IP address of the enxt hop
+		- the next IP destnation after a destination IP address known to that router
+		- IP address of the next router in the path
+	- static route
+		- route to a specific network address
+		- find the destination network address AND subnet mask
+			- the subnet mask should be given but the host IP will be in the range, so need to find the network address
+		- next hop is the IP address of the next router in the path
+			- IP address of the serial (S0/0/0) interface on the next router (this is pointing towards the PC destination) OUTBOUND IP ADDRESS
+			- the interface attached to the destination
+		- **Next hop ip address**
+			- in the router you are asked to do the configuration
+			- in `configure` where seen `{hostname}(config)#`
+			- `ip route {destination-ip} {destination-subnet-mask} {next-hop-ip}`
+	- **NEED TO SAVE AS WELL**
+		- in privilege exec
+			- `{hostname}#`
+		- `copy running-config startup-config`
+		
+	- default statuc route
+		- general route to anywhere 0.0.0.0 0.0.0.0
+		- go into the specified router
+		- go into configure `configure`
+		- see `{hostname}(config)#`
+		- match any traffic into the router (as this is a general route)
+		- need the next-hop address as well
+			- so get the serial S0/0/0 of the interface that is facing the destination IP
+		- `ip route 0.0.0.0 0.0.0.0 {next-hop-ip}`
+	- **NEED TO SAVE AS WELL**
+		- in privilege exec
+			- `{hostname}#`
+		- `copy running-config startup-config`
+
+- **Test end-to-end connectiveitey**
+	- use siumple PDU
+	- **create simple PDU**
+		- in menu bar 
+		- ![[Pasted image 20251021170744.png]]
+	- then select the two devices need to do the ping between
+
+
+- **SEE PROGRESS**-
+	- bottom left- "Check Results" -> "Assessment Items"
+		- close is bottom right

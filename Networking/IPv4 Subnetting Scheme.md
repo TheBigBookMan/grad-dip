@@ -136,6 +136,14 @@
 			- companies or organisaiongs are issued address blocks appropriate for number of hosts in the classess system, regardless of unicast class
 			- other practices associated with this classless addressing scheme, such as employing fixed-size networks, have made IPv4 addressing more realistic
 - **Basic Subnetting**-
+	- **Figure out network address**
+		- AND operator
+		- match the IP and mask and compare bits
+			- 1 + 1 = 1
+			- 1 + 0 = 0
+			- 0 + 1 = 0
+			- 0 + 0 = 0
+		- new address is the network address
 	- an internetworks address range must be separated into networks
 	- a subnet is a pat of these addresses that must be given to each network
 	- a subnetting plan is created using a variety of parameters and methodologies
