@@ -1,0 +1,82 @@
+- connects many higher layer services respponsible for data packaging and communicates between the service and the host to transfer data over the media
+- **Two function**-
+	- allows top layers to use tactics like framing to gain access to the media
+	- uses techniques like MAC and error detection to govern how data are deposited on and recieved from the medium
+- data exchange layer manages exchangong frames through ap hysical networks medium between devices (devices talking at layer 2)
+	- the process includes
+		- encapsulating the packet into a frame
+		- putting the frame on the media
+		- receiving the frame from the media
+		- decapsulating the frame back into a packet
+- How a router that receives a packet decapsulates the frame and then sends a packet in a new frame suited for the medium of that next hop section
+	- accepting the frame from a medium
+	- decapsulating the frame into a packet
+	- creating a new frame that is suitable for the following medium
+	- the packet inside the new frame is sent across the physical networks next segment
+- **Connceeting upper layer services to the media**-
+	- data connection layer serves as link between the software operations in the layers above it and the hardware in the pjysical layer beneath it
+	- ![[Pasted image 20251026185744.png]]
+	- **Datalink divided 2 layers**
+		- an upper sublayer that works on the process for the network layer protocols
+		- a lower sublayer that works on the hardware side of things to make sure media access processes are working
+	- **Header/Packet/Trailer**-
+		- a packet is encapsulated into a frame
+	- **2 Common link sublayers**
+		- **Logical Link Control**-
+			- frames the network layer packet and identifies the network layer protocol
+			- inserts infomration into the frame that identifies the frames network layer protocol
+			- multiple layer 3 procotols, such as IP and IPX can share the same network interface and media with this information
+		- **Media Access Control**-
+			- addresses the frame and amrks the beginning and end of the frame
+			- data link layer addressing and delimitation are provided by MAC based on the physical signalling needs of the medium and the kind of data link layer application in use
+			- MAC method utilised to get the frame on and off the media
+			- during single communication, different MAC systems may be necessary to transport data cross several different media
+			- ![[Pasted image 20251026190211.png]]
+			- data link layer protocols explain how network devices can access network media and transmit fraemes in variety of network contexts
+			- **MAC Methods**-
+				- methods for controlling the placement of frames on media
+				- data link layer specifies rules for accessing various media
+				- MAC Solutions
+					- **Media Sharing**-
+						- whether and how nodes share media
+						- multiple nodes in some network topologies share the same media
+						- several devices may be attempting to send and receive data cross the network media at any given mmoment
+						- two fundamental access control methods
+							- **Contention-based systme**
+								- any device with data to send can use contention based approaches to try access the media
+								- non-deterministic 
+								- these solutions emply a carrier sense multiple access (CSMA) mechanism to aviod full media misunderstnading
+								- contention absed MAC is used  in ethernet and wireless entworks
+								- characteristics:
+									- stations can transmit at any time
+									- collisions exist
+									- mechanisms exist to resolve contention
+										- CSMA/CD for ethernet networks
+										- CSMA/CA for 802.11 wireless networks
+									- example:
+										- ethernet
+										- wireless
+								- all nodes contend for the usage of the medium in a contention-based system
+							- **Controlled-access system**
+								- in a controlled access system, each node has its own set of instructions on using the media
+								- ![[Pasted image 20251026190820.png]]
+								- network devices take turns when eomplying the restricte access strategy
+								- also known as deterministic
+								- if a device does not requireaccess to the mediun the chance to do so is passed to the next in line
+								- no other device can instlal a frame on the media until the frame has arrived at the target device
+								- because a device must wait for its turn before using the mediua, deterministic appraoches can be wasteful
+								- characatersitcs:
+									- at any one moment, only one station is transmitting
+									- devices that wish to transmit must wait in line
+									- there are no collisions
+									- token passing is used in several netorks
+								- examples:
+									- token ring
+									- fiber sitributed dat ainterface FDDI
+						- 
+					- **Topology**-
+						- how the data link layer sees the connections between nodes
+	- **Binary**-
+		- frame is encoded into a signal at physical layer
+- **MAC for non-shared media**-
+	- 

@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "53bf2b29eae9aa3d",
+        "id": "0256a26d64c86206",
         "type": "tabs",
         "children": [
           {
-            "id": "08c29e7dea09d28a",
+            "id": "348f9e2b5d364791",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Intro to Networks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro to Networks"
+            }
+          },
+          {
+            "id": "7ceeb044af3775b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +36,7 @@
             }
           },
           {
-            "id": "9516a07fa4713eee",
+            "id": "e652894668f25ea1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,6 +47,34 @@
               },
               "icon": "lucide-file",
               "title": "Cisco IOS Overview"
+            }
+          },
+          {
+            "id": "2501177f069a9856",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Network Layer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Network Layer"
+            }
+          },
+          {
+            "id": "f3f0af1b8c6c05d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/DataLink Layer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DataLink Layer"
             }
           }
         ],
@@ -110,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Skill Builder/AIP/AI Practitioner.md",
+                "file": "Human Interaction/Interaction with Direct Devices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +162,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for AI Practitioner"
+              "title": "Backlinks for Interaction with Direct Devices"
             }
           },
           {
@@ -180,53 +222,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9516a07fa4713eee",
+  "active": "7ceeb044af3775b7",
   "lastOpenFiles": [
-    "Pasted image 20251021170744.png",
-    "Networking/IPv4 Subnetting Scheme.md",
+    "Networking/DataLink Layer.md",
     "Networking/Cisco IOS Overview.md",
-    "Cyber Security/Intro to Cyber Security.md",
+    "Networking/IPv4 Subnetting Scheme.md",
+    "Networking/Network Layer.md",
+    "Networking/Intro to Networks.md",
+    "Pasted image 20251026190820.png",
+    "Pasted image 20251026190211.png",
+    "Pasted image 20251026185744.png",
+    "Pasted image 20251021170744.png",
     "Pasted image 20251016202354.png",
     "Pasted image 20251016202104.png",
     "Pasted image 20251016201924.png",
     "Pasted image 20251016201630.png",
     "Pasted image 20251016201550.png",
     "Pasted image 20251016201407.png",
-    "Pasted image 20251015213705.png",
-    "Pasted image 20251015213533.png",
-    "Pasted image 20251015211533.png",
-    "Pasted image 20251015210253.png",
-    "Cyber Security/Security Controls.md",
-    "Web Cloud/assignments/assignment1/pages/index.html",
-    "Web Cloud/assignments/assignment1/pages/guessPassword.html",
-    "Web Cloud/assignments/assignment1/pages/aboutMe.html",
-    "Web Cloud/assignments/assignment1/css/main.css",
-    "Web Cloud/assignments/assignment1/assets/professional.mp4",
-    "Web Cloud/assignments/assignment1/pages",
-    "Web Cloud/assignments/assignment1/Dockerfile",
-    "Web Cloud/assignments/assignment1/css",
-    "Web Cloud/assignments/assignment1/assets",
-    "Web Cloud/assignments/assignment1.zip",
-    "Web Cloud/Web Programming.md",
-    "Web Cloud/React.md",
-    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
+    "Untitled.md",
+    "Human Interaction/HCI Feedback.md",
+    "Untitled",
+    "Human Interaction/HCI Tasks and Models.md",
+    "Human Interaction/Experiment Design and Data Analysis.md",
+    "Human Interaction/Interaction with Direct Devices.md",
+    "Human Interaction/Interaction with Indirect Devices.md",
+    "Human Interaction/Intro to Human Computer Interaction.md",
     "Web Cloud/Cloud Platforms.md",
     "Web Cloud/Cloud Foundation.md",
+    "Web Cloud/Web Programming.md",
     "Web Cloud/Backend Development.md",
-    "Untitled.md",
-    "Human Interaction/Intro to Human Computer Interaction.md",
-    "Human Interaction/Interaction with Indirect Devices.md",
-    "Human Interaction/Interaction with Direct Devices.md",
-    "Human Interaction/HCI Tasks and Models.md",
-    "Human Interaction/HCI Feedback.md",
-    "Human Interaction/Experiment Design and Data Analysis.md",
-    "Cyber Security/Web Application Security.md",
-    "Cyber Security/Risk Management.md",
-    "Cyber Security/Cryptography.md",
-    "Cyber Security/Cyberlaw, BCP, Incident Response and Access Control.md",
-    "A.md",
-    "AWS Skill Builder/AIP/AI Practitioner.md",
-    "AWS Skill Builder/CP/Architecture.md",
-    "AWS Skill Builder/CP/Services.md"
+    "Web Cloud/React.md",
+    "Web Cloud/Intro to Cloud Repo and Virtualisation.md",
+    "Human Interaction/assignments/assignment3/BenSmerd-22072922.docx",
+    "Human Interaction/assignments/assignment3-22072922.zip",
+    "Human Interaction/assignments/assignment3 2",
+    "Human Interaction/assignments/assignment3.zip",
+    "Human Interaction/assignments/assignment3/dependent_variable/error.py",
+    "Human Interaction/assignments/assignment3/dependent_variable/time.py",
+    "Human Interaction/assignments/assignment3/dependent_variable/task.py",
+    "Human Interaction/assignments/assignment3/dependent_variable",
+    "Human Interaction/assignments/assignment3/learning_effects/bubble_anova.py",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/seaborn-0.13.2.dist-info/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_extra/README.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/sklearn/externals/array_api_compat/README.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/scipy/fft/_pocketfft/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/numpy/random/LICENSE.md",
+    "Human Interaction/assignments/assignment3/myenv/lib/python3.13/site-packages/pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+    "Web Cloud/assignments/Assignment2/frontend/node_modules/csso/node_modules/css-tree/README.md"
   ]
 }
